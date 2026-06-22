@@ -4,7 +4,7 @@ import Nav from './Components/Shared/Nav';
 
 const Root = () => {
     return (
-        <div className='bg-zinc-400 h-screen '>
+        <div className=' h-screen '>
             <Nav></Nav>
             <Outlet></Outlet>
         </div>
