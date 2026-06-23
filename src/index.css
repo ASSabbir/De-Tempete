@@ -18,3 +18,25 @@
     background: #4AC3DD;
     background: linear-gradient(269deg, rgba(74, 195, 221, 1) 0%, rgba(16, 29, 67, 1) 100%);
 }
+.glow-sweep {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 255, 0.4),
+    rgba(0, 140, 255, 0.7),
+    rgba(0, 255, 255, 0.4),
+    transparent
+  );
+  filter: blur(12px);
+  transition: left 0.6s ease;
+}
+
+/* hover animation trigger */
+.group:hover .glow-sweep {
+  left: 150%;
+}
