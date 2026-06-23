@@ -14,7 +14,7 @@
 }
 
 .gradient {
-    color: white;
+    
     background: #4AC3DD;
     background: linear-gradient(269deg, rgba(74, 195, 221, 1) 0%, rgba(16, 29, 67, 1) 100%);
 }
