@@ -3,27 +3,27 @@ import logo from "/src/asstes/Images/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273
 const steps = [
   {
     title: "Step 01",
-    desc: "Choose your business activity and legal structure aligned with Saudi regulations",
+    desc: "Choose your business activity and company type (LLC, FZ, branch, etc.)",
   },
   {
     title: "Step 02",
-    desc: "Obtain MISA investment license for foreign ownership approval",
+    desc: "Reserve a trade name and obtain initial approvals",
   },
   {
     title: "Step 03",
-    desc: "Reserve trade name and finalize incorporation and Articles of Association",
+    desc: "Submit incorporation documents (passport, ID, business plan, tenancy contract)",
   },
   {
     title: "Step 04",
-    desc: "Register company with Ministry of Commerce and obtain Commercial Registration",
+    desc: "Sign lease and sponsorship agreements (if Mainland)",
   },
   {
     title: "Step 05",
-    desc: "Complete post-license registrations on Qiwa, GOSI, Zakat, and Absher",
+    desc: "Obtain your trade license from DED or the Free Zone Authority",
   },
   {
     title: "Step 06",
-    desc: "Open corporate bank account and process employee visas and Iqama",
+    desc: "Apply for visas and open a corporate bank account",
   },
 ];
 
@@ -39,23 +39,25 @@ const positions = [
 
 const ProcessStep = () => {
   return (
-    <section className="bg-[#ffffff] overflow-hidden">
+    <section className="bg-[#F8F8F8] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Heading */}
         <div className="max-w-3xl mb-24">
           <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight">
             Step-By-Step Process For
             <br />
-            Saudi Arabia <span className="font-bold">Company Registration</span>
+            UAE <span className="font-bold">Company Registration</span>
           </h2>
 
           <p className="text-gray-600 mt-6 text-lg">
-            Setting up a business in the KSA involves a few streamlined steps
+            Setting up a business in the UAE involves a few streamlined steps
           </p>
         </div>
 
         {/* Desktop Version */}
         <div className="hidden lg:block relative h-[650px]">
+
           {/* Road SVG */}
           <svg
             viewBox="0 170 1200 400"
@@ -84,7 +86,11 @@ const ProcessStep = () => {
             >
               {/* Icon */}
               <div className="w-20 h-20 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
-                <img src={logo} alt="" className="w-10 h-10 object-contain" />
+                <img
+                  src={logo}
+                  alt=""
+                  className="w-10 h-10 object-contain"
+                />
               </div>
 
               {/* Step */}
@@ -93,19 +99,27 @@ const ProcessStep = () => {
               </h3>
 
               {/* Description */}
-              <p className=" text-gray-700 text-md">{step.desc}</p>
+              <p className=" text-gray-700 text-md">
+                {step.desc}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Mobile Version */}
         <div className="lg:hidden space-y-10">
+
           {steps.map((step, index) => (
             <div key={index} className="flex gap-5">
+
               {/* Left Line */}
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 rounded-full bg-white shadow border flex items-center justify-center">
-                  <img src={logo} alt="" className="w-8 h-8 object-contain" />
+                  <img
+                    src={logo}
+                    alt=""
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
 
                 {index !== steps.length - 1 && (
@@ -119,11 +133,16 @@ const ProcessStep = () => {
                   {step.title}
                 </h3>
 
-                <p className="text-gray-700 mt-3 leading-7">{step.desc}</p>
+                <p className="text-gray-700 mt-3 leading-7">
+                  {step.desc}
+                </p>
               </div>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );
