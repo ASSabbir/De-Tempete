@@ -3,73 +3,97 @@ import logo from "/src/asstes/Images/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273
 const steps = [
   {
     title: "Step 01",
-    desc: "Choose your business activity and legal structure aligned with Saudi regulations",
+    desc: "Choose your business structure (Limited Company, LLP, Sole Trader, etc.)",
   },
   {
     title: "Step 02",
-    desc: "Obtain MISA investment license for foreign ownership approval",
+    desc: "Conduct a company name availability check and reserve your preferred name",
   },
   {
     title: "Step 03",
-    desc: "Reserve trade name and finalize incorporation and Articles of Association",
+    desc: "Secure a UK registered office address, either physical or virtual",
   },
   {
     title: "Step 04",
-    desc: "Register company with Ministry of Commerce and obtain Commercial Registration",
+    desc: "Appoint directors, shareholders, and identify People with Significant Control (PSC)",
   },
   {
     title: "Step 05",
-    desc: "Complete post-license registrations on Qiwa, GOSI, Zakat, and Absher",
+    desc: "Prepare the Memorandum and Articles of Association for incorporation",
   },
   {
     title: "Step 06",
-    desc: "Open corporate bank account and process employee visas and Iqama",
+    desc: "Register the company with Companies House and receive the Certificate of Incorporation",
+  },
+  {
+    title: "Step 07",
+    desc: "Open a UK business bank account and set up financial operations",
+  },
+  {
+    title: "Step 08",
+    desc: "Register for Corporation Tax, VAT, and PAYE with HMRC where applicable",
+  },
+  {
+    title: "Step 09",
+    desc: "Ensure ongoing compliance through annual filings, confirmation statements, and tax submissions",
   },
 ];
 
 const positions = [
-  "left-[5%] top-[-15px]",
-  "left-1/2 -translate-x-1/2 top-[-15px]",
-  "right-[5%] top-[-15px]",
+  // Row 1
+  "left-[8%] top-[35px]",
+  "left-1/2 -translate-x-1/2 top-[35px]",
+  "right-[10%] top-[35px]",
 
-  "left-[5%] top-[360px]",
-  "left-1/2 -translate-x-1/2 top-[360px]",
-  "right-[5%] top-[360px]",
+  // Row 2 
+  "left-[8%] top-[370px]",
+  "left-1/2 -translate-x-1/2 top-[370px]",
+  "right-[10%] top-[370px]",
+
+  // Row 3
+  "left-[8%] top-[710px]",
+  "left-1/2 -translate-x-1/2 top-[710px]",
+  "right-[8.5%] top-[710px]", 
 ];
 
 const ProcessStep = () => {
   return (
-    <section className="bg-[#ffffff] overflow-hidden">
+    <section className="bg-[#ffffff] overflow-hidden mt-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="max-w-3xl mb-24">
           <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight">
             Step-By-Step Process For
             <br />
-            Saudi Arabia <span className="font-bold">Company Registration</span>
+            UK <span className="font-bold">Company Registration</span>
           </h2>
 
           <p className="text-gray-600 mt-6 text-lg">
-            Setting up a business in the KSA involves a few streamlined steps
+            Setting up a business in the United Kingdom involves a few
+            streamlined steps
           </p>
         </div>
 
         {/* Desktop Version */}
-        <div className="hidden lg:block relative h-[650px]">
+        <div className="hidden lg:block relative h-[1500px]">
           {/* Road SVG */}
           <svg
-            viewBox="0 170 1200 400"
+            viewBox="0 40 1200 1600"
             className="absolute inset-0 w-full h-full"
           >
             <path
               d="
-                M150 80
-                H1050
-                A90 90 0 0 1 1050 260
-                H150
-                A90 90 0 0 0 150 440
-                H1050
-              "
+      M150 120
+      H1050
+      A90 90 0 0 1 1050 300
+      H150
+      A90 90 0 0 0 150 480
+      H1050
+      A90 90 0 0 1 1050 660
+      H150
+      A90 90 0 0 0 150 840
+      H1050
+    "
               stroke="#58D3EC"
               strokeWidth="4"
               fill="none"

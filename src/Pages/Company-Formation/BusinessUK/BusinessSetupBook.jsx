@@ -7,7 +7,7 @@ const BusinessSetupBook = () => {
           {/* Left Side - Book Image */}
           <div className="flex justify-center">
             <img
-              src="/src/asstes/Images/KSA-Brochure-2048x1374.webp"
+              src="/src/asstes/Images/UK-Business-guide-1024x682.webp"
               alt="Business Setup Guide"
               className="w-full max-w-[550px] object-contain"
             />
@@ -17,7 +17,7 @@ const BusinessSetupBook = () => {
           <div className="max-w-xl">
             <h2 className="text-[#14224A] leading-tight">
               <span className="block text-5xl font-light">
-                The KSA
+                The UK
               </span>
 
               <span className="block text-6xl font-bold">
@@ -30,16 +30,16 @@ const BusinessSetupBook = () => {
             </h2>
 
             <p className="mt-8 text-xl text-[#4B5563] leading-9">
-              Your quick guide to starting and growing a business in the KSA.
+              Your quick guide to starting and growing a business in the UK.
             </p>
 
             <div className=" text-[#14224A] text-lg">
               <p className="font-bold">
-                The KSA Business Setup Guide 2026
+                The UK Business Setup Guide 2026
               </p>
 
               <p>
-                <span className="font-bold">Download</span> our Full KSA
+                <span className="font-bold">Download</span> our Full UK
                 Business Setup Guide/publication (PDF) for complete details.
               </p>
             </div>

@@ -8,17 +8,17 @@ const ReadyToStublish = () => {
         </h2>
 
         <h3 className="text-4xl md:text-5xl font-light mt-2">
-          Your Presence In The KSA?
+          Your Presence In The USA?
         </h3>
 
         <p className="mt-8 text-lg leading-8 text-gray-100 max-w-3xl mx-auto">
-          Whether you're launching a startup or expanding globally, our KSA
+          Whether you're launching a startup or expanding globally, our USA
           business setup consultants ensure your company is fully compliant
           and ready to grow.
         </p>
 
         <button className="mt-10 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
-          Start Your KSA Business Today
+          Start Your USA Business Today
         </button>
       </div>
 

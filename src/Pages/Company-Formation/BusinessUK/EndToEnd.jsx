@@ -4,61 +4,109 @@ const steps = [
   {
     number: "1",
     step: "Step 01",
-    title: "MISA Investment License & Company Registration",
+    title: "Company Registration with Companies House",
     points: [
-      "LLC, JSC, branch, and representative office setup",
-      "MISA investment license and initial approvals",
-      "Commercial Registration (CR) with Ministry of Commerce",
+      "Company name availability check",
+      "Preparation of incorporation documents (MOA & AOA)",
+      "Director, shareholder & PSC setup",
+      "Online filing with Companies House",
+      "Certificate of Incorporation issued",
     ],
   },
   {
     number: "2",
     step: "Step 02",
-    title: "Office Selection & Lease Assistance",
+    title: "Business Structure Consultation",
     points: [
-      "Mainland and Free Zone office solutions",
-      "Physical offices, flexi-desks, and virtual setups",
-      "Lease agreement and Ejari support",
+      "Evaluation of Sole Trader, Ltd, LLP & Partnership options",
+      "Tax and liability comparison",
+      "Advice based on business goals & growth plans",
+      "Guidance for UK & non-UK residents",
+      "Compliance implications explained clearly",
     ],
   },
   {
     number: "3",
     step: "Step 03",
-    title: "Investor & Employee Visa Processing",
+    title: "Registered Office & Virtual Address Services",
     points: [
-      "Investor and employee Iqama applications",
-      "Visa processing through Qiwa and Absher",
-      "Medical tests, Emirates ID, and renewals support",
+      "UK registered office address for Companies House & HMRC",
+      "Director service address to protect personal privacy",
+      "Mail receipt, scanning & forwarding",
+      "Address compliance management",
+      "Annual renewal support",
     ],
   },
   {
     number: "4",
     step: "Step 04",
-    title: "Corporate Bank Account Opening",
+    title: "UK Business Bank Account Assistance",
     points: [
-      "Saudi bank selection based on business activity",
-      "Documentation preparation and compliance checks",
-      "End-to-end bank coordination until activation",
+      "Guidance on traditional banks & fintech options",
+      "Support for non-UK resident founders",
+      "Documentation preparation & verification",
+      "Application assistance & follow-ups",
+      "Faster account approval process",
     ],
   },
   {
     number: "5",
     step: "Step 05",
-    title: "Accounting, Zakat, & Tax Registration",
+    title: "Accounting & Bookkeeping Services",
     points: [
-      "Bookkeeping and financial reporting",
-      "Zakat and tax registration and filings",
-      "CFO advisory and compliance management",
+      "Day-to-day bookkeeping",
+      "Expense & invoice management",
+      "Bank reconciliation",
+      "Financial reporting",
+      "Year-end accounts preparation",
     ],
   },
   {
     number: "6",
     step: "Step 06",
-    title: "Trademark & IP Protection",
+    title: "Corporation Tax, VAT & PAYE Registration",
     points: [
-      "Company name and trademark registration",
-      "Intellectual property filing in Saudi Arabia",
-      "Renewal and brand protection support",
+      "Corporation Tax registration with HMRC",
+      "VAT registration (mandatory or voluntary)",
+      "PAYE & payroll setup for employees",
+      "Tax threshold assessment",
+      "Ongoing tax compliance guidance",
+    ],
+  },
+  {
+    number: "7",
+    step: "Step 07",
+    title: "Ongoing Compliance & Filing Support",
+    points: [
+      "Annual accounts filing",
+      "Confirmation statement submission",
+      "CT600 Corporation Tax returns",
+      "VAT returns & deadlines management",
+      "HMRC & Companies House compliance monitoring",
+    ],
+  },
+  {
+    number: "8",
+    step: "Step 08",
+    title: "Virtual Office & Mail Forwarding Solutions",
+    points: [
+      "Professional UK business address",
+      "Mail scanning or physical forwarding worldwide",
+      "Dedicated business contact handling",
+      "Enhanced business credibility",
+      "Flexible service packages",
+    ],
+  },
+  {
+    number: "9",
+    step: "Step 09",
+    title: "Licensing & Regulatory Guidance",
+    points: [
+      "Identification of required licenses & permits",
+      "Industry-specific compliance checks",
+      "FCA & regulated activity guidance (where applicable)",
+      "Support with gov.uk licence applications",
+      "Risk reduction & compliance assurance",
     ],
   },
 ];
@@ -74,7 +122,7 @@ const EndToEnd = () => {
           <h3 className="text-white text-2xl font-medium max-w-4xl leading-relaxed">
             At <span className="italic font-bold">de tempête</span>, we manage
             the full process — ensuring fast approval and full compliance with
-            KSA’s <span className="font-bold">business laws.</span>
+            UK’s <span className="font-bold">business laws.</span>
           </h3>
 
           <button className="border-2 border-white text-white px-10 py-4 rounded-2xl hover:bg-white hover:text-[#081B57] duration-300">
@@ -93,7 +141,7 @@ const EndToEnd = () => {
           <p className="mt-2 text-[#1f2a50] text-xl">
             <span className="font-bold italic">de tempête</span> provides
             complete company formation and financial management services in the
-            KSA.
+            UK.
           </p>
         </div>
 
