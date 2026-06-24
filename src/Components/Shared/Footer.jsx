@@ -46,7 +46,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-5 pt-52 pb-10">
         {/* Logo */}
         <div className="text-center">
-          <img src="/src/asstes/images/Mask-group-scaled.webp" alt="Logo" className="h-16 mx-auto mb-6" /> 
+          <img src="/src/asstes/images/logo1.webp" alt="Logo" className="h-16 mx-auto mb-6" /> 
 
           <p className="text-gray-300"> 
             Global Accounting Outsourcing and Business Advisory firm with

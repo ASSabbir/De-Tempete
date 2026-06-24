@@ -1,95 +1,81 @@
-const features = [
-  {
-    title: "1- Strategic Location",
-    desc: "Connects Asia, Africa, and Europe with global access to 70% of the world’s population.",
-    bg: "bg-[#57C9E3]",
-  },
-  {
-    title: "2- Vision 2030 Growth",
-    desc: "Diversifying into tourism, technology, logistics, renewable energy, and manufacturing.",
-    bg: "bg-white",
-  },
-  {
-    title: "3- Advanced Infrastructure",
-    desc: "World-class ports, airports, and industrial cities supporting seamless trade.",
-    bg: "bg-[#57C9E3]",
-  },
-  {
-    title: "4- Investor Reforms",
-    desc: "100% foreign ownership and simplified digital setup via MISA.",
-    bg: "bg-white",
-  },
-  {
-    title: "5- Tax Benefits & Incentives",
-    desc: "Low corporate taxes, no personal income tax, and special economic zone advantages.",
-    bg: "bg-[#57C9E3]",
-  },
-  {
-    title: "6- Economic Stability",
-    desc: "Strong G20 economy, skilled workforce, and secure business environment.",
-    bg: "bg-white",
-  },
-];
-
 const Why_Business = () => {
   return (
-    <section className="py-24 bg-[#f7f7f7]">
-      <div className="max-w-7xl mx-auto px-5">
+    <section className="bg-[#F5F5F5] py-20">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* Heading */}
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-[#081B57] leading-tight">
-            <span className="block text-5xl md:text-6xl font-light">
-              Why Start A
-            </span>
-
-            <span className="block text-5xl md:text-6xl font-bold mt-2">
-              Business In The KSA?
-            </span>
+        {/* Left Content */}
+        <div>
+          <h2 className="text-[#14224A] text-5xl font-light leading-tight">
+            Why Start A
+            <br />
+            <span className="font-bold">Business In The UK?</span>
           </h2>
 
-          <p className="mt-10 text-[#2B3557] text-lg ">
-            Saudi Arabia is rapidly emerging as one of the world's most attractive
-            investment and business destinations under Vision 2030. With a strong
-            and diversified economy, investor-friendly reforms, and massive
-            government-backed development projects, the Kingdom offers exceptional
-            opportunities for entrepreneurs, startups, and international companies
-            looking to expand in the Middle East. Strategically located at the
-            crossroads of Asia, Europe, and Africa, Saudi Arabia provides access
-            to key global markets, advanced infrastructure, growing digital
-            transformation, and a highly competitive business environment. From
-            foreign investment support to expanding sectors such as technology,
-            tourism, construction, healthcare, and e-commerce, the Kingdom is
-            creating long-term opportunities for sustainable business growth and
-            international expansion.
+          <p className="mt-8 text-[#39425B] text-lg text-justify leading-8">
+            The United Kingdom remains one of the world's leading destinations
+            for entrepreneurs, startups, and international businesses due to
+            its strong legal framework, stable economy, and globally recognized
+            business environment. With access to international markets,
+            advanced financial systems, and a highly developed digital and
+            professional services sector, the UK provides excellent
+            opportunities for business growth and expansion across multiple
+            industries. The country is known for its transparent regulations,
+            investor confidence, innovation-driven economy, and strong support
+            for startups and foreign investment. From technology and
+            e-commerce to consulting, finance, healthcare, and retail, the UK
+            offers a competitive and scalable environment for companies
+            looking to establish a credible global presence and achieve
+            long-term success.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-24">
+        {/* Right Cards */}
+        <div className="grid grid-cols-2 gap-5">
 
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className={`${item.bg}
-              rounded-[0px_0px_25px_25px]
-              shadow-sm
-              min-h-[230px]
-              px-5 py-4
-              transition-all duration-300
-              hover:-translate-y-2`}
-            >
-              <h3 className="text-[#081B57] text-3xl font-bold leading-snug">
-                {item.title}
-              </h3>
+          {/* Card 1 */}
+          <div className="bg-cyan-400 rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+            <h3 className="text-[#14224A] text-3xl font-medium">
+              24-Hour
+              <br />
+              <span className="text-lg font-normal">
+                Online Company Registration
+              </span>
+            </h3>
+          </div>
 
-              <p className="text-[#1F2A4D] text-xl leading-9">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+          {/* Card 2 */}
+          <div className="bg-white rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+            <h3 className="text-[#14224A] text-3xl font-medium">
+              Global
+              <br />
+              <span className="text-lg font-normal">
+                Market Access from the UK
+              </span>
+            </h3>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+            <h3 className="text-[#14224A] text-3xl font-medium">
+              19%
+              <br />
+              <span className="text-lg font-normal">
+                Starting Corporation Tax
+              </span>
+            </h3>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-cyan-400 rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+            <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
+              World-Class Banking &
+              <br />
+              Financial Stability
+            </h3>
+          </div>
 
         </div>
+
       </div>
     </section>
   );

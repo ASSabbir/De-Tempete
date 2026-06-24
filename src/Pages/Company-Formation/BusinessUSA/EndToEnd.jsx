@@ -4,61 +4,34 @@ const steps = [
   {
     number: "1",
     step: "Step 01",
-    title: "MISA Investment License & Company Registration",
+    title: "Company Formation Support",
     points: [
-      "LLC, JSC, branch, and representative office setup",
-      "MISA investment license and initial approvals",
-      "Commercial Registration (CR) with Ministry of Commerce",
+      "LLC & Delaware C-Corp registration",
+      "EIN application assistance",
+      "Registered agent coordination",
+      "Formation document preparation",
     ],
   },
   {
     number: "2",
     step: "Step 02",
-    title: "Office Selection & Lease Assistance",
+    title: "Banking & Payment Support",
     points: [
-      "Mainland and Free Zone office solutions",
-      "Physical offices, flexi-desks, and virtual setups",
-      "Lease agreement and Ejari support",
+      "Stripe readiness guidance",
+      "Business banking assistance",
+      "Multi-currency setup support",
+      "Banking documentation assistance",
     ],
   },
   {
     number: "3",
     step: "Step 03",
-    title: "Investor & Employee Visa Processing",
+    title: "Tax & Compliance Support",
     points: [
-      "Investor and employee Iqama applications",
-      "Visa processing through Qiwa and Absher",
-      "Medical tests, Emirates ID, and renewals support",
-    ],
-  },
-  {
-    number: "4",
-    step: "Step 04",
-    title: "Corporate Bank Account Opening",
-    points: [
-      "Saudi bank selection based on business activity",
-      "Documentation preparation and compliance checks",
-      "End-to-end bank coordination until activation",
-    ],
-  },
-  {
-    number: "5",
-    step: "Step 05",
-    title: "Accounting, Zakat, & Tax Registration",
-    points: [
-      "Bookkeeping and financial reporting",
-      "Zakat and tax registration and filings",
-      "CFO advisory and compliance management",
-    ],
-  },
-  {
-    number: "6",
-    step: "Step 06",
-    title: "Trademark & IP Protection",
-    points: [
-      "Company name and trademark registration",
-      "Intellectual property filing in Saudi Arabia",
-      "Renewal and brand protection support",
+      "Form 5472 preparation support",
+      "Annual filing guidance",
+      "Federal compliance assistance",
+      "Cross-border advisory support",
     ],
   },
 ];
@@ -93,7 +66,7 @@ const EndToEnd = () => {
           <p className="mt-2 text-[#1f2a50] text-xl">
             <span className="font-bold italic">de tempête</span> provides
             complete company formation and financial management services in the
-            KSA.
+            USA.
           </p>
         </div>
 
