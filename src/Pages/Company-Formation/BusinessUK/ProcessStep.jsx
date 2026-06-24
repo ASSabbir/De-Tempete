@@ -41,19 +41,19 @@ const steps = [
 
 const positions = [
   // Row 1
-  "left-[8%] top-[35px]",
-  "left-1/2 -translate-x-1/2 top-[35px]",
-  "right-[10%] top-[35px]",
+  "left-[5%] top-[40px]",
+  "left-1/2 -translate-x-1/2 top-[40px]",
+  "right-[5%] top-[40px]",
 
   // Row 2 
-  "left-[8%] top-[370px]",
-  "left-1/2 -translate-x-1/2 top-[370px]",
-  "right-[10%] top-[370px]",
+  "left-[5%] top-[410px]",
+  "left-1/2 -translate-x-1/2 top-[410px]",
+  "right-[5%] top-[410px]",
 
   // Row 3
-  "left-[8%] top-[710px]",
-  "left-1/2 -translate-x-1/2 top-[710px]",
-  "right-[8.5%] top-[710px]", 
+  "left-[5%] top-[780px]",
+  "left-1/2 -translate-x-1/2 top-[780px]",
+  "right-[5%] top-[780px]", 
 ];
 
 const ProcessStep = () => {
@@ -61,7 +61,7 @@ const ProcessStep = () => {
     <section className="bg-[#ffffff] overflow-hidden mt-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="max-w-3xl mb-24">
+        <div className="max-w-3xl mb-10">
           <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight">
             Step-By-Step Process For
             <br />
@@ -75,11 +75,11 @@ const ProcessStep = () => {
         </div>
 
         {/* Desktop Version */}
-        <div className="hidden lg:block relative h-[1500px]">
+        <div className="hidden lg:block relative h-[1050px]">
           {/* Road SVG */}
           <svg
             viewBox="0 40 1200 1600"
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full"
           >
             <path
               d="

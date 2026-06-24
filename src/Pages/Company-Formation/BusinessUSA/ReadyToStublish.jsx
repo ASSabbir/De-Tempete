@@ -17,7 +17,7 @@ const ReadyToStublish = () => {
           and ready to grow.
         </p>
 
-        <button className="mt-10 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
+        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
           Start Your USA Business Today
         </button>
       </div>

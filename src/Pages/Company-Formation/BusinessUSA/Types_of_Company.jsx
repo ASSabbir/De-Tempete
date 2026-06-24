@@ -42,7 +42,7 @@ const Types_of_Company = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#F5F5F5] pb-24">
+    <section className="bg-[#ecebeb] py-24">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">

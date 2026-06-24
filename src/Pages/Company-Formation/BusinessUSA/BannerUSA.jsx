@@ -1,6 +1,6 @@
 const BannerUSA = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden py-40">
       {/* Background Image */}
       <img
         src="/src/asstes/Images/New folder/Business-set-up-in-USA.webp"
@@ -9,7 +9,7 @@ const BannerUSA = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#0d2f67]/65"></div>
+      <div className="absolute inset-0 bg-[#0d2f67]/65"></div> 
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-5">
