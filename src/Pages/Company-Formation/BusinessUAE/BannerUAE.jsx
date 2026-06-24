@@ -9,7 +9,7 @@ const BannerUAE = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#0d2f67]/60"></div>
+      <div className="absolute inset-0 bg-dark-blue/80"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center px-5">
