@@ -5,7 +5,7 @@ import Footer from './Components/Shared/Footer';
 
 const Root = () => {
     return (
-        <div className=' h-screen '>
+        <div className=' h-screen font-dmSans '>
             <Nav></Nav>
             <Outlet></Outlet>
             <Footer></Footer>
