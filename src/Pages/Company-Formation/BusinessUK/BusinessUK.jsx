@@ -1,4 +1,4 @@
-import BannerKSA from './BannerKSA';
+import BannerUK from './BannerUK';
 import Why_Business from './Why_Business';
 import Types_of_Company from './Types_of_Company';
 import BusinessSetupBook from './BusinessSetupBook';
@@ -7,10 +7,10 @@ import EndToEnd from './EndToEnd';
 import ProcessStep from './ProcessStep';
 
 
-const BusinessKSA = () => {
+const BusinessUK = () => {
     return (
         <div>
-            <BannerKSA></BannerKSA>
+            <BannerUK></BannerUK>
             <Why_Business></Why_Business>
             <Types_of_Company></Types_of_Company>
             <ProcessStep></ProcessStep>
@@ -21,4 +21,4 @@ const BusinessKSA = () => {
     );
 };
 
-export default BusinessKSA; 
+export default BusinessUK; 
