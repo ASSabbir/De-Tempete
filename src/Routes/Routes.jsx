@@ -12,12 +12,12 @@ import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
     path: "/",
     element: <Root></Root>,
     children:[
-      {path:"/" , element :<Home></Home>},
+      {path:"/" , element :<Home></Home>}, 
       {path:"/business-setup/uae" , element :<BusinessUAE></BusinessUAE>},
       {path:"/business-setup/ksa" , element :<BusinessKSA></BusinessKSA>},
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
-      {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
+      {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
     ]
   }
 ]);
