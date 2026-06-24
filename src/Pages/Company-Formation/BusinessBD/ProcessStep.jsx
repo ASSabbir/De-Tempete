@@ -39,12 +39,12 @@ const positions = [
 
 const ProcessStep = () => {
   return (
-    <section className="bg-[#F8F8F8] overflow-hidden">
+    <section className="bg-[#F8F8F8] overflow-hidden ">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         {/* Heading */}
         <div className="max-w-3xl mb-24">
-          <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight">
+          <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight mt-20">
             Step-By-Step Process For
             <br />
             Bangladesh <span className="font-bold">Company Registration</span>

@@ -39,7 +39,7 @@ const positions = [
 
 const ProcessStep = () => {
   return (
-    <section className="bg-[#F8F8F8] overflow-hidden">
+    <section className="bg-[#F8F8F8] overflow-hidden py-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

@@ -67,10 +67,10 @@ const EndToEnd = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-[#f7f7f7] pb-24">
+    <section className="bg-[#f7f7f7] py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Banner */}
-        <div className="bg-[#081B57] rounded-2xl px-10 py-4 flex flex-col lg:flex-row justify-between items-center gap-8 mb-18">
+        <div className="bg-[#081B57] rounded-2xl px-10 flex flex-col lg:flex-row justify-between items-center gap-8 mb-18">
           <h3 className="text-white text-2xl font-medium max-w-4xl leading-relaxed">
             At <span className="italic font-bold">de tempête</span>, we manage
             the full process — ensuring fast approval and full compliance with
