@@ -8,6 +8,7 @@ import BusinessKSA from "../Pages/Company-Formation/BusinessKSA/BusinessKSA";
 import BusinessBD from "../Pages/Company-Formation/BusinessBD/BusinessBD";
 import BusinessUK from "../Pages/Company-Formation/BusinessUK/BusinessUK";
 import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
+import ContactUs from "../Pages/Contact/ContactUs";
 
 //BD Services Pages
 import Market_Expansion from "../Pages/Services/BDService/Market_Expansion/Market_Expansion";
