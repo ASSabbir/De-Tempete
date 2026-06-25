@@ -39,7 +39,7 @@ const services = {
     { label: "Industry-Specific Accounting Solutions", path: "/services/uk/industry" },
   ],
   Bangladesh: [
-    { label: "Market Expansion & Setup Advisory", path: "/services/bd/market-expansion" }, 
+    { label: "Market Expansion & Setup Advisory", path: "/services/bd/market-expansion" },
     { label: "Regulatory & ISO Compliance", path: "/services/bd/regulatory" },
     { label: "Finance & Accounting", path: "/services/bd/finance" },
     { label: "Taxation", path: "/services/bd/taxation" },
@@ -60,9 +60,36 @@ const services = {
   ],
 };
 
+const resourceSections = {
+  COMPANY: [
+    { label: "About", path: "/about" },
+    { label: "E-brochure", path: "/resource/e-brochure" },
+    { label: "News & Events", path: "/resource/news-events" },
+    { label: "Contact", path: "/contact" },
+    { label: "Blogs", path: "/resource/blogs" },
+  ],
+  PUBLICATIONS: [
+    { label: "UAE", path: "/publications/uae" },
+    { label: "KSA", path: "/publications/ksa" },
+    { label: "UK", path: "/publications/uk" },
+    { label: "Bangladesh", path: "/publications/bangladesh" },
+  ],
+  LIBRARY: [
+    { label: "UAE", path: "/library/uae" },
+    { label: "KSA", path: "/library/ksa" },
+    { label: "UK", path: "/library/uk" },
+    { label: "Bangladesh", path: "/library/bangladesh" },
+  ],
+  FORMS: [
+    { label: "UAE", path: "/forms/uae" },
+    { label: "KSA", path: "/forms/ksa" },
+    { label: "UK", path: "/forms/uk" },
+    { label: "Bangladesh", path: "/forms/bangladesh" },
+  ],
+};
+
 const navLinks = [
   { label: "About", path: "/about" },
-  { label: "Resource", path: "/resource", hasDropdown: true },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -73,7 +100,11 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
-  const [activeServiceRegion, setActiveServiceRegion] = useState("UAE");
+const [activeServiceRegion, setActiveServiceRegion] = useState("UAE");
+  const [resourceOpen, setResourceOpen] = useState(false);
+  const [mobileResourceOpen, setMobileResourceOpen] = useState(false);
+  const resourceRef = useRef(null);
+  const resourceTimeout = useRef(null);
 
   const servicesRef = useRef(null);
   const companyRef = useRef(null);
@@ -101,7 +132,7 @@ export default function Nav() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* Logo */}
@@ -235,21 +266,72 @@ export default function Nav() {
               </div>
             </div>
 
-            {/* Other Nav Links */}
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass}`}
+             {/* About */}
+            <Link
+              to="/about"
+              className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass}`}
+            >
+              About
+            </Link>
+
+            {/* Resource Mega Menu */}
+            <div
+              ref={resourceRef}
+              className="static"
+              onMouseEnter={() => handleEnter(setResourceOpen, resourceTimeout)}
+              onMouseLeave={() => handleLeave(setResourceOpen, resourceTimeout)}
+            >
+              <button
+                className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass} ${resourceOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
-                {link.label}
-                {link.hasDropdown && (
-                  <svg className="w-3.5 h-3.5 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </Link>
-            ))}
+                Resource
+                <svg
+                  className={`w-3.5 h-3.5 mt-0.5 transition-transform duration-200 ${resourceOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+
+              <div
+                className={`absolute mt-2 rounded-2xl overflow-hidden shadow-2xl transition-all duration-200 origin-top ${resourceOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"}`}
+                style={{ background: "#0d1e4a", top: "100%", left: 0, right: 0 }}
+              >
+                <div className="p-6 grid grid-cols-4 gap-8">
+                  {Object.entries(resourceSections).map(([section, links]) => (
+                    <div key={section}>
+                      <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-3 pb-2 border-b border-white/10">
+                        {section}
+                      </h4>
+                      <ul className="space-y-1">
+                        {links.map((item) => (
+                          <li key={item.path}>
+                            <Link
+                              to={item.path}
+                              onClick={() => setResourceOpen(false)}
+                              className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-sm text-white/60 hover:text-white hover:bg-white/10 transition-colors duration-150 group"
+                            >
+                              <span className="w-1 h-1 rounded-full bg-[#1a9fd4] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass}`}
+            >
+              Contact
+            </Link>
 
             {/* CTA */}
             <Link
@@ -350,6 +432,45 @@ export default function Nav() {
                   >
                     {item.label}
                   </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+         {/* Mobile Resource */}
+          <div>
+            <button
+              onClick={() => setMobileResourceOpen(!mobileResourceOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+            >
+              Resource
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${mobileResourceOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileResourceOpen ? "max-h-[800px]" : "max-h-0"}`}>
+              <div className="px-4 pb-3 grid grid-cols-2 gap-x-4 gap-y-3">
+                {Object.entries(resourceSections).map(([section, links]) => (
+                  <div key={section}>
+                    <h4 className="text-white/40 text-[10px] font-bold tracking-widest uppercase mb-1.5">
+                      {section}
+                    </h4>
+                    {links.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setMobileOpen(false)}
+                        className="block px-2 py-1.5 text-sm text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
