@@ -6,6 +6,7 @@ const links = [
   { to: '/library', label: '📚 Library' },
   { to: '/publications', label: '📄 Publications' },
   { to: '/forms', label: '📋 Forms' },
+  { to: '/leads', label: '📥 Downloads' },
 ];
 
 const linkBase = {

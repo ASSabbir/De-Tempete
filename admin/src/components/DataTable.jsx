@@ -32,14 +32,18 @@ const DataTable = memo(function DataTable({ columns, data, onEdit, onDelete }) {
                 </td>
               ))}
               <td style={{ padding: '12px 16px', textAlign: 'right', whiteSpace: 'nowrap' }}>
-                <button onClick={() => onEdit(row)}
-                  style={{ marginRight: 8, padding: '6px 14px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
-                  Edit
-                </button>
-                <button onClick={() => onDelete(row._id)}
-                  style={{ padding: '6px 14px', background: '#dc2626', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
-                  Delete
-                </button>
+                {onEdit && (
+                  <button onClick={() => onEdit(row)}
+                    style={{ marginRight: 8, padding: '6px 14px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
+                    Edit
+                  </button>
+                )}
+                {onDelete && (
+                  <button onClick={() => onDelete(row._id)}
+                    style={{ padding: '6px 14px', background: '#dc2626', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
+                    Delete
+                  </button>
+                )}
               </td>
             </tr>
           ))}
