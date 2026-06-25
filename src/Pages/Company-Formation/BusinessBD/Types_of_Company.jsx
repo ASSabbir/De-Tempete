@@ -3,37 +3,38 @@ import { useState } from "react";
 const companyData = [
   {
     id: 1,
-    title: "Free Zone Company",
+    title: "Private Limited Company",
     number: "1",
     points: [
-      "100% foreign ownership",
-      "0% corporate tax on eligible income",
-      "Office or flexi-desk required in the selected free zone",
-      "Can sponsor residence visas",
-      "Suitable for trading, consulting, and digital services",
+      "Separate legal entity under Companies Act, 1994",
+      "Minimum 2 shareholders and 2 directors",
+      "Allowed to generate revenue locally",
+      "Suitable for long-term operations and scaling",
+      "Best for trading, services, and hiring locally",
     ],
   },
   {
     id: 2,
-    title: "Mainland (Onshore) Company",
+    title: "Branch Office",
     number: "2",
     points: [
-      "Full access to UAE and free-zone markets",
-      "May require a local sponsor for some activities (many now allow 100% foreign ownership)",
-      "Must lease physical office space",
-      "Eligible for investor and employee visas",
-      "Subject to UAE VAT and corporate tax rules",
+      "Extension of foreign parent company",
+      "Requires BIDA approval",
+      "Activities limited to approved scope",
+      "Parent company holds full responsibility",
+      "Ideal for projects or controlled operations",
     ],
   },
   {
     id: 3,
-    title: "Offshore Company",
+    title: "Liaison (Representative) Office",
     number: "3",
     points: [
-      "100% foreign ownership",
-      "No local office or residency visa",
-      "Ideal for international trading, asset holding, or tax-efficient structuring",
-      "Quick setup (1–4 weeks) and high confidentiality",
+      "No revenue generation allowed",
+      "Used for market research and coordination",
+      "Operates as a cost center",
+      "Suitable for early-stage market entry",
+      "Limited operational scope",
     ],
   },
 ];
@@ -42,18 +43,18 @@ const Types_of_Company = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#F5F5F5] pb-24">
+    <section className="bg-[#ededed] py-24">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
           <h2 className="text-5xl text-[#14224A] font-light">
             Types of Company{" "}
-            <span className="font-bold">Structures in UAE</span>
+            <span className="font-bold">Structures in Bangladesh</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
-            There are three main options for company formation in the UAE,
-            depending on your business goals and target markets.
+          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
+            Choose the right structure based on your business goals,
+            control requirements, and operational scope.
           </p>
         </div>
 
@@ -102,7 +103,7 @@ const Types_of_Company = () => {
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className=" text-white text-lg">
+                  <ul className="space-y-4 text-white text-lg leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

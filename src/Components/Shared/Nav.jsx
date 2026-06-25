@@ -39,7 +39,7 @@ const services = {
     { label: "Industry-Specific Accounting Solutions", path: "/services/uk/industry" },
   ],
   Bangladesh: [
-    { label: "Market Expansion & Setup Advisory", path: "/services/bd/market-expansion" },
+    { label: "Market Expansion & Setup Advisory", path: "/services/bd/market-expansion" }, 
     { label: "Regulatory & ISO Compliance", path: "/services/bd/regulatory" },
     { label: "Finance & Accounting", path: "/services/bd/finance" },
     { label: "Taxation", path: "/services/bd/taxation" },

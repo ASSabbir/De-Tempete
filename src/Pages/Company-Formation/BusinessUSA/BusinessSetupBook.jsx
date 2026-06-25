@@ -17,7 +17,7 @@ const BusinessSetupBook = () => {
           <div className="max-w-xl">
             <h2 className="text-[#14224A] leading-tight">
               <span className="block text-5xl font-light">
-                The KSA
+                The USA
               </span>
 
               <span className="block text-6xl font-bold">
@@ -30,16 +30,16 @@ const BusinessSetupBook = () => {
             </h2>
 
             <p className="mt-8 text-xl text-[#4B5563] leading-9">
-              Your quick guide to starting and growing a business in the KSA.
+              Your quick guide to starting and growing a business in the USA.
             </p>
 
             <div className=" text-[#14224A] text-lg">
               <p className="font-bold">
-                The KSA Business Setup Guide 2026
+                The USA Business Setup Guide 2026
               </p>
 
               <p>
-                <span className="font-bold">Download</span> our Full KSA
+                <span className="font-bold">Download</span> our Full USA
                 Business Setup Guide/publication (PDF) for complete details.
               </p>
             </div>

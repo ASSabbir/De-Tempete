@@ -73,7 +73,7 @@ const EndToEnd = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-[#f7f7f7] pb-24">
+    <section className="bg-[#ebebeb] py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Top Banner */}
