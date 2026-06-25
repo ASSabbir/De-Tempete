@@ -3,6 +3,9 @@ import Root from "../Root";
 import Home from "../Pages/Home/Home";
 import BusinessUAE from "../Pages/Company-Formation/BusinessUAE/BusinessUAE";
 import BusinessKSA from "../Pages/Company-Formation/BusinessKSA/BusinessKSA";
+import BusinessBD from "../Pages/Company-Formation/BusinessBD/BusinessBD";
+import BusinessUK from "../Pages/Company-Formation/BusinessUK/BusinessUK";
+import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
 
 // Library
 import UAELibrary from "../Pages/Library/UAELibrary";
@@ -31,24 +34,27 @@ import BDForms from "../Pages/Forms/BDForms";
       {path:"/" , element :<Home></Home>},
       {path:"/business-setup/uae" , element :<BusinessUAE></BusinessUAE>},
       {path:"/business-setup/ksa" , element :<BusinessKSA></BusinessKSA>},
+      {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
+      {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
+      {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
       // Library
-      { path: "library/uae", element: <UAELibrary /> },
-      { path: "library/ksa", element: <KSALibrary /> },
-      { path: "library/uk", element: <UKLibrary /> },
-      { path: "library/bangladesh", element: <BDLibrary /> },
+      { path: "/library/uae", element: <UAELibrary /> },
+      { path: "/library/ksa", element: <KSALibrary /> },
+      { path: "/library/uk", element: <UKLibrary /> },
+      { path: "/library/bangladesh", element: <BDLibrary /> },
 
       // Publications
-      { path: "publications/uae", element: <UAEPublications /> },
-      { path: "publications/ksa", element: <KSAPublications /> },
-      { path: "publications/uk", element: <UKPublications /> },
-      { path: "publications/bangladesh", element: <BDPublications /> },
+      { path: "/publications/uae", element: <UAEPublications /> },
+      { path: "/publications/ksa", element: <KSAPublications /> },
+      { path: "/publications/uk", element: <UKPublications /> },
+      { path: "/publications/bangladesh", element: <BDPublications /> },
 
       // Forms
-      { path: "forms/uae", element: <UAEForms /> },
-      { path: "forms/ksa", element: <KSAForms /> },
-      { path: "forms/uk", element: <UKForms /> },
-      { path: "forms/bangladesh", element: <BDForms /> },
-    ]
+      { path: "/forms/uae", element: <UAEForms /> },
+      { path: "/forms/ksa", element: <KSAForms /> },
+      { path: "/forms/uk", element: <UKForms /> },
+      { path: "/forms/bangladesh", element: <BDForms /> },
+     ]
   }
 ]);
 
