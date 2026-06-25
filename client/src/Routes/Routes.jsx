@@ -38,6 +38,8 @@ import UAEForms from "../Pages/Forms/UAEForms";
 import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
+import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
+import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
 
 
 
@@ -79,7 +81,11 @@ import BDForms from "../Pages/Forms/BDForms";
       { path: "/forms/uae", element: <UAEForms /> },
       { path: "/forms/ksa", element: <KSAForms /> },
       { path: "/forms/uk", element: <UKForms /> },
-      { path: "/forms/bangladesh", element: <BDForms /> },
+      { path: "forms/bangladesh", element: <BDForms /> },
+
+      // News & Events
+      { path: "news-events", element: <NewsEventsPage /> },
+      { path: "news-events/:slug", element: <NewsEventDetail /> },
 
     ]
   }

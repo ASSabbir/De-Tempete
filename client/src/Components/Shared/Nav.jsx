@@ -101,7 +101,7 @@ const resourceSections = {
   COMPANY: [
     { label: "About", path: "/about" },
     { label: "E-brochure", path: "/resource/e-brochure" },
-    { label: "News & Events", path: "/resource/news-events" },
+    { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
     { label: "Blogs", path: "/resource/blogs" },
   ],
