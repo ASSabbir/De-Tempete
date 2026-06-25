@@ -6,6 +6,7 @@ import BusinessKSA from "../Pages/Company-Formation/BusinessKSA/BusinessKSA";
 import BusinessBD from "../Pages/Company-Formation/BusinessBD/BusinessBD";
 import BusinessUK from "../Pages/Company-Formation/BusinessUK/BusinessUK";
 import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
+import ContactUs from "../Pages/Contact/ContactUs";
 
  const Routes = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
+      {path:"/contact" , element :<ContactUs></ContactUs>},
     ]
   }
 ]);

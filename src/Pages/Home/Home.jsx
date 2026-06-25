@@ -5,6 +5,7 @@ import WhatWeDo from './Whatwedo';
 import ReadyToStublish from './ReadyToStublish';
 import HireBased from './HireBased';
 import Resources from './Resources';
+import Awards from './Awards';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <ReadyToStublish></ReadyToStublish>
             <HireBased></HireBased>
             <Resources></Resources>
+            <Awards></Awards>
             <div className='h-screen'></div>
         
         </div>

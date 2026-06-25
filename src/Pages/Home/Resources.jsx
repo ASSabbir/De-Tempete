@@ -63,52 +63,43 @@ export default function Resources() {
                 </h2>
 
                 {/* Cards grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <div className="grid grid-cols-1 bg-dark-blue sm:grid-cols-3  overflow-hidden ">
                     {cards.map((card, i) => (
                         <div
                             key={card.number}
-                            className={`group relative  flex flex-col ${i < cards.length - 1 ? "sm:border-r border-b sm:border-b-0 border-gray-200" : ""}`}
-                            style={{ minHeight: "480px" }}
+                            className={`group relative overflow-hidden flex flex-col ${i < cards.length - 1 ? "sm:border-r border-b sm:border-b-0 border-gray-200" : ""}`}
+                            style={{ minHeight: "560px" }}
                         >
                             {/* ── Image area (top half) ── */}
                             <div
-                                className="relative flex-none "
-                                style={{ height: "500px", background: "#1a2744" }}
+                                className="relative flex-none  "
+                                
                             >
                                 {/* Replace the div below background color with your image */}
-                                {card.image ? (
-                                    <img
-                                        src={card.image}
-                                        alt={card.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                ) : (
-                                    /* Placeholder — remove once you add images */
-                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0d1e4a] to-[#1a3a6b]">
-                                        <span className="text-white/20 text-6xl font-black">{card.number}</span>
-                                    </div>
-                                )}
+                                <div className="">
+                                    {card.image ? (
+                                        <img
+                                            src={card.image}
+                                            alt={card.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-130"
+                                        />
+                                    ) : (
+                                        /* Placeholder — remove once you add images */
+                                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0d1e4a] to-[#1a3a6b]">
+                                            <span className="text-white/20 text-6xl font-black">{card.number}</span>
+                                        </div>
+                                    )}
+                                </div>
                                 <div
-                                    className="absolute flex-1 flex flex-col gap-4 p-7 lg:p-8"
-                                    style={{ background: "#0d1e4a" }}
-                                >
-                                    {/* Hover overlay — rises from bottom */}
-                                    <div
-                                        className="absolute inset-0 z-0 transition-all duration-500 ease-out"
-                                        style={{
-                                            background: "linear-gradient(135deg, #1a9fd4cc, #0d7faacc)",
-                                            clipPath: "inset(100% 0 0 0)",
-                                        }}
-                                    
-                                    />
+                                    className="absolute flex-1 h-150 bg-dark-blue/80  top-90 z-20 flex group-hover:-translate-y-90 duration-500  flex-col gap-4 p-7 lg:p-8"
 
-                                    {/* Overlay via Tailwind group-hover — covers full card */}
-                                    <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-none"
-                                        style={{ background: "linear-gradient(135deg, #1a9fd4e0, #0d7faa)" }}
-                                    />
+                                >
+
+
+
 
                                     {/* Content */}
-                                    <div className="relative z-10 flex flex-col gap-4 h-full">
+                                    <div className=" z-10  flex flex-col gap-4 ">
                                         {/* Number + Title */}
                                         <div>
                                             <span className="text-white/50 text-sm font-semibold tracking-widest group-hover:text-white/80 transition-colors duration-300">
