@@ -3,37 +3,56 @@ import { useState } from "react";
 const companyData = [
   {
     id: 1,
-    title: "Free Zone Company",
+    title: "Limited Liability Company (LLC)",
     number: "1",
     points: [
-      "100% foreign ownership",
-      "0% corporate tax on eligible income",
-      "Office or flexi-desk required in the selected free zone",
-      "Can sponsor residence visas",
-      "Suitable for trading, consulting, and digital services",
+      "Most preferred structure for foreign investors",
+      "Can be 100% foreign-owned (subject to activity approval by MISA)",
+      "Limited liability protection for shareholders",
+      "Simple setup and management process",
+      "Suitable for small to medium-sized enterprises",
     ],
   },
   {
     id: 2,
-    title: "Mainland (Onshore) Company",
+    title: "Joint Stock Company (JSC)",
     number: "2",
     points: [
-      "Full access to UAE and free-zone markets",
-      "May require a local sponsor for some activities (many now allow 100% foreign ownership)",
-      "Must lease physical office space",
-      "Eligible for investor and employee visas",
-      "Subject to UAE VAT and corporate tax rules",
+      "Ideal for large-scale or public ventures",
+      "Requires minimum two shareholders",
+      "Can issue shares and list on Tadawul (Saudi Stock Exchange)",
+      "Higher regulatory compliance standards",
     ],
   },
   {
     id: 3,
-    title: "Offshore Company",
+    title: "Foreign Branch Office",
     number: "3",
     points: [
-      "100% foreign ownership",
-      "No local office or residency visa",
-      "Ideal for international trading, asset holding, or tax-efficient structuring",
-      "Quick setup (1–4 weeks) and high confidentiality",
+      "Allows a foreign company to operate under its parent brand",
+      "Activities must match those approved in the MISA license",
+      "Must appoint a local representative in Saudi Arabia",
+      "Full ownership retained by the parent company",
+    ],
+  },
+  {
+    id: 4,
+    title: "Representative Office",
+    number: "4",
+    points: [
+      "Non-commercial entity (cannot generate revenue)",
+      "Primarily for market research, promotion, or feasibility studies",
+      "Acts as a liaison between the parent company and Saudi clients",
+    ],
+  },
+  {
+    id: 5,
+    title: "Sole Establishment",
+    number: "5",
+    points: [
+      "Owned by one individual",
+      "Generally limited to Saudi or GCC nationals",
+      "Simpler registration but full personal liability applies",
     ],
   },
 ];
@@ -42,18 +61,22 @@ const Types_of_Company = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#eeeeee] py-24">
+    <section className="bg-[#e9e9e9] py-24">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
           <h2 className="text-5xl text-[#14224A] font-light">
             Types of Company{" "}
-            <span className="font-bold">Structures in UAE</span>
+            <span className="font-bold">
+              Business Entities in Saudi Arabia
+            </span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
-            There are three main options for company formation in the UAE,
-            depending on your business goals and target markets.
+          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
+            Saudi Arabia offers multiple company structures to suit different
+            investment goals and ownership models. Each entity type is regulated
+            under the Saudi Companies Law and approved through the Ministry of
+            Investment (MISA).
           </p>
         </div>
 
@@ -89,7 +112,7 @@ const Types_of_Company = () => {
 
           {/* Right Card */}
           <div className="lg:col-span-8">
-            <div className="bg-[#071B55] rounded-2xl p-10 md:p-5 relative min-h-[380px] shadow-xl">
+            <div className="bg-[#071B55] rounded-2xl p-10 relative min-h-[400px] shadow-xl">
               <div className="flex gap-8">
                 {/* Number */}
                 <h1 className="text-[#58CDE7] text-8xl font-bold leading-none">
@@ -102,7 +125,7 @@ const Types_of_Company = () => {
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className=" text-white text-lg">
+                  <ul className="space-y-4 text-white text-lg leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

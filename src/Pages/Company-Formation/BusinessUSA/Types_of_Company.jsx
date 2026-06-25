@@ -3,37 +3,37 @@ import { useState } from "react";
 const companyData = [
   {
     id: 1,
-    title: "Free Zone Company",
+    title: "LLC (Limited Liability Company)",
     number: "1",
     points: [
-      "100% foreign ownership",
-      "0% corporate tax on eligible income",
-      "Office or flexi-desk required in the selected free zone",
-      "Can sponsor residence visas",
-      "Suitable for trading, consulting, and digital services",
+      "100% foreign ownership permitted",
+      "Pass-through taxation structure",
+      "Lower compliance burden",
+      "Suitable for small businesses & e-commerce",
     ],
   },
   {
     id: 2,
-    title: "Mainland (Onshore) Company",
+    title: "C-Corporation (C-Corp)",
     number: "2",
     points: [
-      "Full access to UAE and free-zone markets",
-      "May require a local sponsor for some activities (many now allow 100% foreign ownership)",
-      "Must lease physical office space",
-      "Eligible for investor and employee visas",
-      "Subject to UAE VAT and corporate tax rules",
+      "Preferred for VC & investors",
+      "21% federal corporate taxation",
+      "Suitable for startups & fundraising",
+      "Supports stock options & equity distribution",
     ],
   },
   {
     id: 3,
-    title: "Offshore Company",
+    title: "Non-Resident Business Setup",
     number: "3",
     points: [
-      "100% foreign ownership",
-      "No local office or residency visa",
-      "Ideal for international trading, asset holding, or tax-efficient structuring",
-      "Quick setup (1–4 weeks) and high confidentiality",
+      "No local shareholder or sponsor required",
+      "Remote company formation available",
+      "No U.S. residency or visa requirement",
+      "Access to Stripe, PayPal & USD banking",
+      "Suitable for international entrepreneurs",
+      "Flexible setup for global online businesses",
     ],
   },
 ];
@@ -42,17 +42,17 @@ const Types_of_Company = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#eeeeee] py-24">
+    <section className="bg-[#ecebeb] py-24">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
           <h2 className="text-5xl text-[#14224A] font-light">
             Types of Company{" "}
-            <span className="font-bold">Structures in UAE</span>
+            <span className="font-bold">Structures in USA</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
-            There are three main options for company formation in the UAE,
+          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
+            There are three main options for company formation in the USA,
             depending on your business goals and target markets.
           </p>
         </div>
@@ -70,9 +70,7 @@ const Types_of_Company = () => {
                     key={company.id}
                     onClick={() => setActiveTab(index)}
                     className={`relative block text-left text-2xl transition duration-300 ${
-                      activeTab === index
-                        ? "text-[#58CDE7]"
-                        : "text-[#14224A]"
+                      activeTab === index ? "text-[#58CDE7]" : "text-[#14224A]"
                     }`}
                   >
                     {/* Active Indicator */}
@@ -89,7 +87,7 @@ const Types_of_Company = () => {
 
           {/* Right Card */}
           <div className="lg:col-span-8">
-            <div className="bg-[#071B55] rounded-2xl p-10 md:p-5 relative min-h-[380px] shadow-xl">
+            <div className="bg-[#071B55] rounded-2xl p-10 relative min-h-[400px] shadow-xl">
               <div className="flex gap-8">
                 {/* Number */}
                 <h1 className="text-[#58CDE7] text-8xl font-bold leading-none">
@@ -102,7 +100,7 @@ const Types_of_Company = () => {
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className=" text-white text-lg">
+                  <ul className="space-y-4 text-white text-lg leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

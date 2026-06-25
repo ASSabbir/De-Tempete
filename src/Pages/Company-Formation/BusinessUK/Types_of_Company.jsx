@@ -3,37 +3,62 @@ import { useState } from "react";
 const companyData = [
   {
     id: 1,
-    title: "Free Zone Company",
+    title: "Sole Trader",
     number: "1",
     points: [
-      "100% foreign ownership",
-      "0% corporate tax on eligible income",
-      "Office or flexi-desk required in the selected free zone",
-      "Can sponsor residence visas",
-      "Suitable for trading, consulting, and digital services",
+      "Easiest and most cost-effective structure",
+      "Owned and operated by one individual",
+      "Full control over profits",
+      "Personally liable for business debts",
+      "Taxed through Self Assessment (Income Tax + National Insurance)",
+      "Ideal for freelancers and small businesses",
     ],
   },
   {
     id: 2,
-    title: "Mainland (Onshore) Company",
+    title: "Partnership",
     number: "2",
     points: [
-      "Full access to UAE and free-zone markets",
-      "May require a local sponsor for some activities (many now allow 100% foreign ownership)",
-      "Must lease physical office space",
-      "Eligible for investor and employee visas",
-      "Subject to UAE VAT and corporate tax rules",
+      "Two or more individuals share ownership",
+      "Simple setup with shared profits",
+      "Partners are jointly liable for debts",
+      "Each partner files their own tax return",
+      "Suitable for small teams or family businesses",
     ],
   },
   {
     id: 3,
-    title: "Offshore Company",
+    title: "Limited Liability Partnership (LLP)",
     number: "3",
     points: [
-      "100% foreign ownership",
-      "No local office or residency visa",
-      "Ideal for international trading, asset holding, or tax-efficient structuring",
-      "Quick setup (1–4 weeks) and high confidentiality",
+      "Hybrid of partnership and limited company",
+      "Members have limited liability",
+      "Registered with Companies House",
+      "Profits taxed at member level, not the LLP",
+      "Popular for professional services and consulting firms",
+    ],
+  },
+  {
+    id: 4,
+    title: "Private Limited Company (Ltd)",
+    number: "4",
+    points: [
+      "Separate legal entity from owners",
+      "Shareholders’ liability limited to investment",
+      "Pays Corporation Tax on profits",
+      "Strong credibility with banks and clients",
+      "Most popular structure for startups and SMEs",
+    ],
+  },
+  {
+    id: 5,
+    title: "Public Limited Company (PLC)",
+    number: "5",
+    points: [
+      "Can offer shares to the public",
+      "Requires minimum £50,000 share capital",
+      "Highly regulated",
+      "Suitable for large businesses and public investment",
     ],
   },
 ];
@@ -42,18 +67,18 @@ const Types_of_Company = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[#eeeeee] py-24">
+    <section className="bg-[#eaeaea] py-24">
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
           <h2 className="text-5xl text-[#14224A] font-light">
-            Types of Company{" "}
-            <span className="font-bold">Structures in UAE</span>
+            Types of Company Structures in <span className="font-bold">UK</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
-            There are three main options for company formation in the UAE,
-            depending on your business goals and target markets.
+          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
+            The UK offers multiple business structures depending on ownership,
+            liability, and tax planning needs. Choosing the right structure is
+            critical for long-term compliance and growth.
           </p>
         </div>
 
@@ -70,9 +95,7 @@ const Types_of_Company = () => {
                     key={company.id}
                     onClick={() => setActiveTab(index)}
                     className={`relative block text-left text-2xl transition duration-300 ${
-                      activeTab === index
-                        ? "text-[#58CDE7]"
-                        : "text-[#14224A]"
+                      activeTab === index ? "text-[#58CDE7]" : "text-[#14224A]"
                     }`}
                   >
                     {/* Active Indicator */}
@@ -89,7 +112,7 @@ const Types_of_Company = () => {
 
           {/* Right Card */}
           <div className="lg:col-span-8">
-            <div className="bg-[#071B55] rounded-2xl p-10 md:p-5 relative min-h-[380px] shadow-xl">
+            <div className="bg-[#071B55] rounded-2xl p-10 relative min-h-[400px] shadow-xl">
               <div className="flex gap-8">
                 {/* Number */}
                 <h1 className="text-[#58CDE7] text-8xl font-bold leading-none">
@@ -102,7 +125,7 @@ const Types_of_Company = () => {
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className=" text-white text-lg">
+                  <ul className="space-y-4 text-white text-lg leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}
