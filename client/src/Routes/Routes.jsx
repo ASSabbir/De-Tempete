@@ -52,6 +52,7 @@ import BDForms from "../Pages/Forms/BDForms";
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
+      {path:"/contact" , element :<ContactUs></ContactUs>},
 
 
       // Duplicate routes for BD Services

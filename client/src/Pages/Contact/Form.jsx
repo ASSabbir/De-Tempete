@@ -127,7 +127,7 @@ export default function Form() {
         {/* ── Office Cards ── */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-16 lg:mb-20">
           {offices.map((office) => (
-            <div key={office.name} className="flex px-[3vw] flex-col gap-3">
+            <div key={office.name} className="flex p-[3vw] duration-300 hover:shadow-xl flex-col gap-3">
               {/* Flag circle */}
               
               <img className="w-30  rounded-full " src={office.flag} alt="" />

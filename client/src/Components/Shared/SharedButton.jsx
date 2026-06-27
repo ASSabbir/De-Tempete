@@ -10,7 +10,7 @@ const SharedButton = ({ text }) => {
             position: relative;
             padding: 10px 20px;
             border-radius: 7px;
-            border: 1px solid rgb(61, 106, 255);
+            border: 1px solid #4AC4DE;
             font-size: 14px;
             text-transform: uppercase;
             font-weight: 600;
@@ -24,12 +24,12 @@ const SharedButton = ({ text }) => {
           }
 
           .shared-btn:hover {
-            background: rgb(61, 106, 255);
-            box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+            background: linear-gradient( 90deg,#14497D 0%, #2774A0 50%,#4AC4DE 100%);
+            box-shadow: 0 0 20px 2px rgba(0, 142, 236, 0.815);
           }
 
           .shared-btn:hover::before {
-            animation: sh02 0.5s linear;
+            animation: sh02 0.6s linear;
           }
 
           .shared-btn::before {
@@ -52,7 +52,7 @@ const SharedButton = ({ text }) => {
               left: 0%;
             }
             50% {
-              opacity: 1;
+              opacity: 60%;
             }
             to {
               opacity: 0;
