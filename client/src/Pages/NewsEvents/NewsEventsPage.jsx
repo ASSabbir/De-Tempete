@@ -30,6 +30,7 @@ export default function NewsEventsPage() {
     }
   }, []);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchItems(page); }, [page, fetchItems]);
 
   return (
