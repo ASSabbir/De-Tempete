@@ -1,6 +1,59 @@
 import React, { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
+import { LuChartNoAxesCombined } from "react-icons/lu";
+
+const businessData = [
+  {
+    title: "Private Limited Company",
+    image:
+      "/src/asstes/Images/servics/Bd/freepik__corporate-companies-bandgladesh-flag-website-image__46804.webp",
+    items: [
+      "100% foreign ownership allowed",
+      "Full Bangladesh market access",
+      "Mandatory office and local directors",
+      "Taxable as per Bangladesh corporate regulations",
+      "VAT registration support",
+    ],
+  },
+  {
+    title: "Branch Office",
+    image:
+      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp ",
+    items: [
+      "Linked to parent company",
+      "Limited liability in Bangladesh",
+      "Business activities restricted",
+      "Registration with Bangladesh Bank & RJSC",
+      "VAT and tax compliance assistance",
+    ],
+  },
+  {
+    title: "Representative Office",
+    image:
+      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46795.webp",
+    items: [
+      "Non-commercial operations only",
+      "No local revenue generation",
+      "Quick setup process",
+      "Ideal for market research and liaison functions",
+    ],
+  },
+];
+
+{
+  /* Go-To-Market Strategy */
+}
+import {
+  LuBadgeDollarSign,
+  LuChartColumnBig,
+  LuScale,
+  LuBookOpen,
+  LuMegaphone,
+  LuHandCoins,
+} from "react-icons/lu";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -57,7 +110,7 @@ const Market_Expansion = () => {
   ];
 
   return (
-    <div className="w-full"> 
+    <div className="w-full">
       {/* Hero Section */}
       <section className="pt-40 pb-24 relative min-h-screen flex items-center justify-center text-white overflow-hidden">
         {/* Background Image */}
@@ -168,62 +221,77 @@ const Market_Expansion = () => {
       </section>
 
       {/* Business Setup & Registration */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Business Setup & Registration
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-5xl font-bold text-[#13264d]">
+              Business Setup &{" "}
+              <span className="font-extrabold">Registration</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Navigate the registration process smoothly with our comprehensive
-              guidance and support services tailored to your business needs.
+
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-[#2D7EF7] text-white font-semibold text-sm">
+              Simplified Business Setup & Structure Guidance
+            </div>
+
+            <p className="mt-7 text-lg text-gray-600 leading-8">
+              From company incorporation to licensing, we simplify every stage
+              of your Bangladesh business setup. Our experts help you select the
+              right business structure — Private Limited, Branch, or
+              Representative Office — based on ownership goals, industry, and
+              operational needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Private Limited Company",
-                items: [
-                  "Company registration & incorporation",
-                  "Memorandum & Articles of Association",
-                  "Tax ID registration & registration",
-                  "Offshore company setup options",
-                ],
-              },
-              {
-                title: "Proprietorship",
-                items: [
-                  "Trade license registration",
-                  "Tax identification number",
-                  "Regulatory compliance setup",
-                  "Business bank account opening",
-                ],
-              },
-              {
-                title: "Sole Proprietorship",
-                items: [
-                  "Business registration assistance",
-                  "License & regulatory filings",
-                  "Compliance documentation",
-                  "Bank account opening support",
-                ],
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+          {/* Cards */}
+
+          <div className="grid lg:grid-cols-3 gap-8 mt-16">
+            {businessData.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200 hover:-translate-y-2 hover:shadow-2xl duration-300"
+              >
+                {/* Image */}
+
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src={item.image}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+
+                  {/* Overlay */}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+
+                  {/* Icon */}
+
+                  <div className="absolute bottom-6 left-6">
+                    <div className="w-16 h-16 rounded-xl bg-cyan-400 flex items-center justify-center shadow-lg">
+                      <FaBuilding className="text-white text-3xl" />
+                    </div>
+                  </div>
+
+                  {/* Title */}
+
+                  <h3 className="absolute bottom-8 left-28 text-white text-3xl font-bold">
                     {item.title}
                   </h3>
-                  <ul className="space-y-3">
-                    {item.items.map((subitem, sidx) => (
+                </div>
+
+                {/* Content */}
+
+                <div className="p-8">
+                  <ul className="space-y-5">
+                    {item.items.map((text, i) => (
                       <li
-                        key={sidx}
-                        className="flex items-start gap-3 text-gray-700 text-sm"
+                        key={i}
+                        className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <span className="text-cyan-500 mt-1">✓</span>
-                        <span>{subitem}</span>
+                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 flex-shrink-0" />
+
+                        <span>{text}</span>
                       </li>
                     ))}
                   </ul>
@@ -232,52 +300,107 @@ const Market_Expansion = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-cyan-500 text-white rounded font-semibold hover:bg-cyan-600 transition">
-              Explore Registration Options
+          {/* Bottom Text */}
+
+          <div className="text-center mt-16">
+            <p className="text-gray-500 text-lg">
+              We manage end-to-end documentation, government coordination, and
+              licensing so you can focus on growth, not paperwork.
+            </p>
+
+            <button className="mt-8 inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+              Explore Complete Business Setup Service Guide
+              <FaArrowRight />
             </button>
           </div>
         </div>
       </section>
 
-      {/* Go-To-Market Strategy */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Go-To-Market Strategy & Business Model Localization
+      {/* ================= Go-To-Market Strategy ================= */}
+
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
+              <span className="font-bold">Go-To-Market</span> Strategy &
+              <span className="font-semibold">
+                {" "}
+                Business Model Localisation
+              </span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Develop a comprehensive market entry strategy tailored to
-              Bangladesh's unique business landscape and regulatory environment.
+
+            <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
+              Success in Bangladesh requires more than just registration. We
+              help tailor your business model, pricing and operations to align
+              with local culture, consumer behavior and regulatory requirements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Features */}
+
+          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
             {[
-              { title: "Market & Competitive Analysis", icon: "◆" },
-              { title: "Market Entry & Go-to-Market", icon: "◆" },
-              { title: "Business & Operational Excellence", icon: "◆" },
-              { title: "Risk & Regulatory Assessment", icon: "◆" },
-              { title: "Local Localization Strategy", icon: "◆" },
-              { title: "Launch Sequencing", icon: "◆" },
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-lg">
-                <div className="text-cyan-400 text-3xl mb-4">
-                  {feature.icon}
+              {
+                icon: LuBadgeDollarSign,
+                title: "Target Market & Competitive Analysis",
+                desc: "Evaluate market size, trends, demand potential and competitive positioning.",
+              },
+              {
+                icon: LuChartColumnBig,
+                title: "Financial & ROI Modelling",
+                desc: "Detailed financial projections, pricing models and investment return analysis.",
+              },
+              {
+                icon: LuScale,
+                title: "Regulatory & Operational Readiness",
+                desc: "Ensure compliance with Bangladesh regulations and operational requirements.",
+                highlight: true,
+              },
+              {
+                icon: LuBookOpen,
+                title: "Risk & Sensitivity Assessment",
+                desc: "Identify potential business risks, mitigation strategies and scenario planning.",
+              },
+              {
+                icon: LuMegaphone,
+                title: "Business Model Localisation",
+                desc: "Adapt products, pricing and business structure for Bangladesh market behavior.",
+              },
+              {
+                icon: LuHandCoins,
+                title: "Launch Roadmap",
+                desc: "Define launch phases, KPIs, milestones and sustainable market rollout strategy.",
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className={`rounded-3xl transition-all duration-300 ${
+                    item.highlight
+                      ? "bg-white shadow-2xl p-10 hover:-translate-y-2"
+                      : "hover:bg-white hover:shadow-xl p-4"
+                  }`}
+                >
+                  <Icon className="text-5xl text-slate-500 mb-6" />
+
+                  <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-500 text-xl leading-9">{item.desc}</p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">
-                  {feature.title}
-                </h3>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Export Readiness */}
       <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-9xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               Export Readiness, Trade
@@ -292,15 +415,23 @@ const Market_Expansion = () => {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-0">
+          <div className="max-w-5xl  mx-auto space-y-0">
             {exportReadinessItems.map((item, idx) => (
-              <div key={idx} className="border border-gray-200">
+              <div
+                key={idx}
+                className="border border-gray-200 rounded-lg overflow-hidden my-4"
+              >
                 <button
                   onClick={() => toggleAccordion(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-cyan-500 font-bold">☑</span>
+                    <img
+                      src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
+                      alt="check"
+                      className="w-5 h-5 object-contain flex-shrink-0"
+                    />
+
                     <span className="font-semibold text-gray-900">
                       {item.title}
                     </span>
@@ -322,96 +453,153 @@ const Market_Expansion = () => {
         </div>
       </section>
 
-      {/* Bank Account Opening Assistance */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Bank Account Opening Assistance
-              </h2>
-              <p className="text-gray-600 mb-6 text-sm">
-                Expert guidance in establishing corporate bank accounts with
-                premier Bangladesh banks, ensuring compliance with all
-                regulatory requirements.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "End-to-end bank account setup",
-                  "Document preparation & coordination",
-                  "Banking relationship management",
-                ].map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-3 text-gray-700 text-sm"
-                  >
-                    <span className="text-cyan-500">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-slate-700 to-slate-800 h-64 rounded-lg"></div>
-          </div>
-        </div>
-      </section>
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 space-y-28">
+          {/* ===================== Bank Account Opening ===================== */}
 
-      {/* Trademark Registration & IP Protection */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-slate-700 to-slate-800 h-64 rounded-lg"></div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image */}
+
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Trademark Registration & IP Protection
+              <img
+                src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
+                alt="Bank Account Opening"
+                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+              />
+            </div>
+
+            {/* Content */}
+
+            <div>
+              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                <span className="font-bold">Bank Account</span>
+                <br />
+                <span className="font-bold">Opening</span> Assistance
               </h2>
-              <p className="text-gray-600 mb-6 text-sm">
-                Expert guidance in establishing corporate bank accounts with
-                premier Bangladesh banks, ensuring compliance with all
-                regulatory requirements.
+
+              <p className="mt-8 text-xl leading-9 text-gray-500">
+                Coordinate with leading local and international banks for
+                account opening, compliance documentation, and end-to-end
+                activation support.
               </p>
-              <ul className="space-y-3">
+
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+                Our team handles:
+              </h4>
+
+              <div className="space-y-5">
+                {[
+                  "Local & international bank coordination",
+                  "Documentation & KYC support",
+                  "Account activation guidance",
+                  "Smooth & fast onboarding",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+
+                    <span className="text-gray-600 text-lg">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ===================== Trademark ===================== */}
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
+
+            <div>
+              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                <span className="font-bold">Trademark</span>
+                <span> Registration & IP</span>
+                <br />
+                Protection
+              </h2>
+
+              <p className="mt-8 text-xl leading-9 text-gray-500">
+                Secure your brand, logo and products with trademark and
+                intellectual property registration in Bangladesh. Our experts
+                assist with searches, filing, copyright advisory and renewal
+                support.
+              </p>
+
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+                Our support includes:
+              </h4>
+
+              <div className="space-y-5">
                 {[
                   "Trademark & patent registration",
-                  "IP portfolio development",
-                  "Brand IP consultation & strategy",
-                ].map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-3 text-gray-700 text-sm"
-                  >
-                    <span className="text-cyan-500">✓</span>
-                    {item}
-                  </li>
+                  "Copyright advisory & protection",
+                  "Brand & logo security",
+                  "Renewal & compliance support",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+
+                    <span className="text-gray-600 text-lg">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+            </div>
+
+            {/* Image */}
+
+            <div>
+              <img
+                src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                alt="Trademark Registration"
+                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Investor Visa */}
-      <section className="py-20 px-6 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-2">
-              Investor Visa & UAE Residency Support
+
+      {/* ================= Investor Visa ================= */}
+
+      <section className="bg-[#16244B] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+
+          <div className="text-center max-w-5xl mx-auto">
+            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+              <span className="font-bold">Investor Visa</span> &
+              <span className="font-bold"> UAE Residency</span> Support
             </h2>
-            <p className="text-gray-300 text-sm">
-              For Investment Attractiveness and Business Mobility
+
+            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+              For foreign investors and key employees, we provide guidance on
+              Bangladesh investor visas, work permits, residency processes and
+              compliance documentation.
             </p>
+
+            <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          {/* Cards */}
+
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
             {[
-              "Investor & Work Visaship",
-              "Residency & Immigration Support",
-              "Digitalization Documentation Support",
-              "Investor Support Package",
-            ].map((item, idx) => (
-              <div key={idx} className="bg-slate-800 p-6 rounded-lg">
-                <div className="text-cyan-400 text-3xl mb-4">◆</div>
-                <p className="font-semibold text-sm">{item}</p>
+              "Investor & Work Visa Guidance",
+              "Residency & Compliance Support",
+              "Application Documentation Help",
+              "Smooth Approval Process",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
+              >
+                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                  <LuChartNoAxesCombined className="text-white text-5xl" />
+                </div>
+
+                <h3 className="mt-10 text-2xl font-medium text-white leading-relaxed">
+                  {item}
+                </h3>
               </div>
             ))}
           </div>
@@ -419,38 +607,61 @@ const Market_Expansion = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900">
-              Why Choose Our Expansion Advisory Service?
+      {/* ================= Why Choose Us ================= */}
+
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+
+          <div className="text-center">
+            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+              Why Choose Our
+              <span className="font-bold"> Expansion Advisory Service?</span>
             </h2>
+
+            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Cards */}
+
+          <div className="grid lg:grid-cols-2 gap-6 mt-20">
             {[
               {
-                title: "Proven Market Experience",
-                desc: "Decade-long expertise in Bangladesh market dynamics and regulatory landscape",
+                title: "Proven Multi-Market Experience",
+                desc: "Leverage our years of experience helping businesses successfully enter and operate in multiple countries, including Bangladesh.",
               },
               {
-                title: "Global Legal Expertise",
-                desc: "International best practices combined with local regulatory knowledge",
+                title: "Global & Local Expertise",
+                desc: "Benefit from our combined knowledge of international best practices and deep understanding of the Bangladesh business environment.",
               },
               {
-                title: "Customized Solutions",
-                desc: "Tailored strategies aligned with your unique business requirements",
+                title: "Complete Setup Support",
+                desc: "From company registration to operational launch, we manage every step so you can focus on business growth.",
               },
               {
-                title: "Integrated Support",
-                desc: "End-to-end services covering all aspects of business expansion",
+                title: "In-Depth Bangladesh Insights",
+                desc: "Access valuable insights into local regulations, banking, taxation and market dynamics for confident decision-making.",
               },
-            ].map((item, idx) => (
-              <div key={idx} className="p-8 border-l-4 border-cyan-500">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-6 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Icon */}
+
+                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center flex-shrink-0">
+                  <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
+                </div>
+
+                {/* Content */}
+
+                <div>
+                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-500 text-lg leading-8">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -458,119 +669,180 @@ const Market_Expansion = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+      {/* ================= CTA Section ================= */}
+
+      <section className="bg-[#16244B] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* ================= Left Content ================= */}
+
             <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Start Your Bangladesh Expansion Today
+              <h2 className="text-5xl leading-tight font-light text-white">
+                Start Your Bangladesh
+                <br />
+                Expansion
+                <span className="font-bold"> Today</span>
               </h2>
-              <p className="text-gray-300 mb-8 text-sm">
-                Ready to establish your business presence in Bangladesh? Our
-                expert team is here to guide you through every step of the
-                expansion process.
+
+              <p className="mt-8 text-cyan-400 text-2xl font-semibold leading-9 max-w-xl">
+                Get expert guidance, avoid delays and establish your Bangladesh
+                presence with complete confidence.
               </p>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Personalized expansion strategy",
-                  "Regulatory & compliance guidance",
-                  "Market entry support & facilitation",
-                  "Ongoing advisory & support",
-                ].map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-3 text-gray-200 text-sm"
-                  >
-                    <span className="text-cyan-400">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <button className="px-8 py-3 bg-cyan-500 text-white rounded font-semibold hover:bg-cyan-600 transition">
-                Get a Free Consultation
-              </button>
+
+              {/* Commitment Card */}
+
+              <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Our Commitment
+                </h3>
+
+                <div className="space-y-5">
+                  {[
+                    "Free initial consultation — no obligation",
+                    "Complete confidentiality & secure handling",
+                    "Bangladesh regulatory & market experts",
+                    "Practical, tailored advice for your business",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-4">
+                      <FaCircleCheck className="text-cyan-400 text-xl" />
+
+                      <span className="text-gray-200 text-lg">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="bg-white rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Book a Free Consultation
-              </h3>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded text-gray-900 text-sm"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-4 py-2 border border-gray-300 rounded text-gray-900 text-sm"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full px-4 py-2 border border-gray-300 rounded text-gray-900 text-sm"
-                />
-                <textarea
-                  placeholder="Message"
-                  rows="3"
-                  className="w-full px-4 py-2 border border-gray-300 rounded text-gray-900 text-sm"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full px-4 py-3 bg-cyan-500 text-white rounded font-semibold hover:bg-cyan-600 transition text-sm"
-                >
-                  Submit
-                </button>
-              </form>
+
+            {/* ================= Form ================= */}
+
+            <div>
+              <div className="bg-white rounded-3xl shadow-2xl p-10">
+                <h3 className="text-4xl font-bold text-[#16244B] mb-8">
+                  Book a Free Consultation
+                </h3>
+
+                <form className="space-y-6">
+                  <div>
+                    <label className="block mb-2 font-medium text-gray-700">
+                      Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block mb-2 font-medium text-gray-700">
+                      Email
+                    </label>
+
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block mb-2 font-medium text-gray-700">
+                      Message
+                    </label>
+
+                    <textarea
+                      rows={5}
+                      placeholder="Write your message..."
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Blog Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900">Recent Blogs</h2>
+      {/* ================= Recent Blogs ================= */}
+
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
+              Recent
+              <span className="font-bold"> Blogs</span>
+            </h2>
+
+            <div className="w-24 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Blog Cards */}
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {[
               {
                 id: 1,
-                title: "How to Start a Business Expansion in Bangladesh",
-                excerpt:
-                  "Discover the essential steps and strategies for successfully expanding your business into Bangladesh market.",
+                image: "/src/asstes/Images/New folder/council-tax.webp",
+                title:
+                  "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+                desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
               },
               {
                 id: 2,
-                title: "Understanding Tax Compliance in Bangladesh",
-                excerpt:
-                  "Navigate Bangladesh's tax landscape with comprehensive compliance guide covering corporate tax and regulations.",
+                image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+                title: "Self-Assessment Tax Return Process for Businesses",
+                desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
               },
               {
                 id: 3,
+                image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
                 title:
-                  "Why Bangladesh is the New Business Hub in Southeast Asia",
-                excerpt:
-                  "Learn why Bangladesh emerges as Southeast Asia's fastest-growing economy with emerging opportunities.",
+                  "The Role & Benefits of a Virtual CFO in Modern Businesses",
+                desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
               },
             ].map((blog) => (
               <div
                 key={blog.id}
-                className="bg-gray-50 rounded-lg overflow-hidden"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
               >
-                <div className="h-48 bg-gradient-to-br from-cyan-500 to-slate-700"></div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
+                {/* Image */}
+
+                <div className="overflow-hidden">
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 duration-500"
+                  />
+                </div>
+
+                {/* Content */}
+
+                <div className="p-7">
+                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-cyan-500 transition">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">{blog.excerpt}</p>
+
+                  <p className="text-gray-500 text-lg leading-8 mb-8">
+                    {blog.desc}
+                  </p>
+
                   <a
                     href={`/blog/${blog.id}`}
-                    className="text-cyan-500 font-semibold text-sm hover:text-cyan-600"
+                    className="inline-flex items-center gap-2 text-cyan-500 font-semibold hover:gap-4 duration-300"
                   >
                     Read More
+                    <FaArrowRight />
                   </a>
                 </div>
               </div>
