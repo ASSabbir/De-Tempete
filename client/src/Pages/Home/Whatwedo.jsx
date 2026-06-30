@@ -1,4 +1,4 @@
-import logo from '../../asstes/Images/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273ut9dda1za2jyf75s0.webp'
+import logo from "../../asstes/Images/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273ut9dda1za2jyf75s0.webp";
 const cards = [
   {
     title: "Business Setup Services",
@@ -22,20 +22,19 @@ const cards = [
   },
 ];
 
-
 export default function WhatWeDo() {
   return (
     <section className="bg-white w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-4">
             What We <span className="font-extrabold">Do?</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Comprehensive business solutions designed to help you launch, manage, and scale
-            your business with confidence across global markets.
+            Comprehensive business solutions designed to help you launch,
+            manage, and scale your business with confidence across global
+            markets.
           </p>
         </div>
 
@@ -47,7 +46,7 @@ export default function WhatWeDo() {
               className="group relative rounded-2xl border border-gray-200 bg-white p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-[#1a9fd4]/30 cursor-pointer"
             >
               {/* Top accent line on hover */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-0 rounded-full bg-gradient-to-r from-[#22d3ee] to-[#0d1e4a] transition-all duration-300 group-hover:w-1/2" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-0 rounded-full bg-linear-to-r from-[#22d3ee] to-[#0d1e4a] transition-all duration-300 group-hover:w-1/2" />
 
               {/* Icon */}
               <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
@@ -66,7 +65,6 @@ export default function WhatWeDo() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

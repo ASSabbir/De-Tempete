@@ -23,7 +23,7 @@ const PageHero = ({
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           {titleLine1}
           <br />
-          <span className="text-[#4AC4DE]">{titleHighlight}</span>
+          <span className="text-light-blue">{titleHighlight}</span>
           <br />
           {titleLine3}
         </h1>
@@ -32,7 +32,7 @@ const PageHero = ({
           {description}
         </p>
 
-        <button className="mt-10 border-2 border-white rounded-md px-8 py-3 font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+        <button className="mt-10 border-2 border-white rounded-md px-8 py-3 font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
           {buttonText} →
         </button>
       </div>

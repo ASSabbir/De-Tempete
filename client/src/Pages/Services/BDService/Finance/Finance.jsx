@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { BarChart3, PieChart, TrendingUp, Award } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
+
+import { FaCheckCircle, FaArrowRight,  } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { ShieldCheck, Users, DollarSign } from "lucide-react";
 
@@ -29,11 +29,9 @@ const AnimatedCounter = ({ end, duration = 2000 }) => {
 };
 
 const Finance = () => {
-  const [expandedItem, setExpandedItem] = useState(null);
+  
 
-  const toggleAccordion = (index) => {
-    setExpandedItem(expandedItem === index ? null : index);
-  };
+
 
   const servicesData = [
     {
@@ -133,7 +131,7 @@ const Finance = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Finance & Accounting
             <br />
-            <span className="text-[#4AC4DE]">
+            <span className="text-light-blue">
               Accurate Financials. Clear Insights.
             </span>
             <br />
@@ -148,7 +146,7 @@ const Finance = () => {
             financial visibility, so you can focus on growth.
           </p>
 
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
             Book a Consultation
           </button>
         </div>
@@ -261,7 +259,7 @@ const Finance = () => {
                   "Investor readiness & due diligence support",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-[#4AC4DE] text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
                 ))}
@@ -273,7 +271,7 @@ const Finance = () => {
               <img
                 src="/src/asstes/Images/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp"
                 alt="Financial Governance"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
@@ -306,7 +304,7 @@ const Finance = () => {
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
                 >
                   <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
-                    <Icon className="text-[#4AC4DE] text-4xl" />
+                    <Icon className="text-light-blue text-4xl" />
                   </div>
 
                   <h3 className="text-2xl font-bold text-[#16244b] mb-4">
@@ -331,7 +329,7 @@ const Finance = () => {
             <h2 className="text-5xl font-bold text-[#16244b]">
               Why Choose Our Finance & Accounting Services
             </h2>
-            <div className="w-28 h-1 bg-[#4AC4DE] rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           {/* Features Grid */}
@@ -364,9 +362,9 @@ const Finance = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
+                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#4AC4DE] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
                   <FaCheckCircle className="text-white text-xl" />
                 </div>
 
@@ -387,7 +385,7 @@ const Finance = () => {
           {/* Heading */}
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-white">What You Gain</h2>
-            <div className="w-24 h-1 bg-[#4AC4DE] rounded-full mx-auto mt-8"></div>
+            <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           {/* Benefits Grid */}
@@ -397,7 +395,7 @@ const Finance = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-[#4AC4DE] rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="text-white text-3xl" />
                 </div>
 
@@ -422,7 +420,7 @@ const Finance = () => {
                 <span className="font-bold">Today</span>
               </h2>
 
-              <p className="mt-8 text-[#4AC4DE] text-2xl font-semibold leading-9 max-w-xl">
+              <p className="mt-8 text-light-blue text-2xl font-semibold leading-9 max-w-xl">
                 Whether you need full finance outsourcing, project support, or
                 advisory services, we can streamline your accounting and
                 financial management in Bangladesh.
@@ -442,7 +440,7 @@ const Finance = () => {
                     "Practical, customized solutions for your business",
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-4">
-                      <FaCircleCheck className="text-[#4AC4DE] text-xl" />
+                      <FaCircleCheck className="text-light-blue text-xl" />
                       <span className="text-gray-200 text-lg">{item}</span>
                     </div>
                   ))}
@@ -465,7 +463,7 @@ const Finance = () => {
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
 
@@ -476,7 +474,7 @@ const Finance = () => {
                     <input
                       type="email"
                       placeholder="Email Address"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
 
@@ -487,11 +485,11 @@ const Finance = () => {
                     <textarea
                       rows={5}
                       placeholder="Write your message..."
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
                     />
                   </div>
 
-                  <button className="w-full bg-[#4AC4DE] hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300">
+                  <button className="w-full bg-light-blue hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300">
                     Send
                   </button>
                 </div>

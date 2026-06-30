@@ -18,8 +18,7 @@ const BannerUK = () => {
         </h1>
 
         <h2 className="text-3xl md:text-5xl font-light mb-8">
-          Start Your Company with{" "}
-          <span className="italic">de tempête</span>
+          Start Your Company with <span className="italic">de tempête</span>
         </h2>
 
         {/* Categories */}
@@ -44,7 +43,7 @@ const BannerUK = () => {
         </div>
 
         {/* Button */}
-        <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+        <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
           Start Now
         </button>
       </div>
