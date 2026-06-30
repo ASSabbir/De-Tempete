@@ -135,7 +135,7 @@ const Market_Expansion = () => {
         <div className="absolute inset-0 bg-[#0E1937]/80"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold  tracking-tight">
             Enter UK Business Market
             <br />
@@ -236,7 +236,7 @@ const Market_Expansion = () => {
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
@@ -333,7 +333,7 @@ const Market_Expansion = () => {
       {/* ================= Go-To-Market Strategy ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
@@ -469,23 +469,23 @@ const Market_Expansion = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-28">
+        <div className="max-w-[1600px] mx-auto px-6 space-y-28">
           {/* ===================== Bank Account Opening ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/Dubai-bank.webp"
                 alt="Bank Account Opening"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
 
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
@@ -522,10 +522,10 @@ const Market_Expansion = () => {
 
           {/* ===================== Trademark ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
@@ -560,11 +560,11 @@ const Market_Expansion = () => {
 
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                 alt="Trademark Registration"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
@@ -576,7 +576,7 @@ const Market_Expansion = () => {
       {/* ================= Investor Visa ================= */}
 
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-5xl mx-auto">
@@ -687,7 +687,7 @@ const Market_Expansion = () => {
       {/* ================= CTA Section ================= */}
 
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* ================= Left Content ================= */}
 
@@ -789,7 +789,7 @@ const Market_Expansion = () => {
       {/* ================= Recent Blogs ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center mb-20">

@@ -1,7 +1,7 @@
 // File: Bookkeeping_Financial_Management.jsx
 import React, { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
@@ -38,7 +38,7 @@ const Bookkeeping_Financial_Management = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Stay On Top Of Your Finances.
             <br />
@@ -56,38 +56,73 @@ const Bookkeeping_Financial_Management = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-2">
+<section className="bg-[#F5F6F8] py-10">
+        <div className="max-w-8xl mx-auto px-30">
           <div className="grid lg:grid-cols-5 gap-10 items-center">
+            {/* Heading */}
             <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">Why Choose Us?</h2>
+              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
+                Why Choose Us?
+              </h2>
             </div>
+
+            {/* Stat 1 */}
             <div className="flex items-center gap-5">
               <CalendarDays size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={0} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Years of Experience</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={9} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Years of Experience
+                </p>
               </div>
             </div>
+
+            {/* Stat 2 */}
             <div className="flex items-center gap-5">
               <Globe size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={0} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Countries Covered</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={20} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Countries Covered
+                </p>
               </div>
             </div>
+
+            {/* Stat 3 */}
             <div className="flex items-center gap-5">
               <Handshake size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={943} duration={2500} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Clients Served</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={30000} duration={3000} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Clients Served
+                </p>
               </div>
             </div>
+
+            {/* Stat 4 */}
             <div className="flex items-center gap-5">
               <Medal size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={3} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Awards Received</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={120} duration={2500} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Awards Received
+                </p>
               </div>
             </div>
           </div>
@@ -96,9 +131,13 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* Accurate & Timely Bookkeeping */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="h-[300px] bg-gradient-to-br from-slate-100 to-slate-300 rounded-3xl"></div>
-          <div>
+         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+         <img
+            src="/src/asstes/Images/New folder/Bookkeeping-for-Nonprofits.webp"
+            alt="Accurate & Timely Bookkeeping"
+            className="w-full h-full object-cover rounded-3xl shadow-lg"
+          />
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Accurate & Timely</span><br />Bookkeeping
             </h2>
@@ -125,8 +164,8 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* Reconcile Accounts */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Reconcile Accounts</span> Without Stress
             </h2>
@@ -149,9 +188,9 @@ const Bookkeeping_Financial_Management = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
+            src="/src/asstes/Images/New folder/Reconcile Accounts.webp"
             alt="Reconcile Accounts"
-            className="w-full h-[380px] object-cover rounded-3xl shadow-lg"
+            className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
@@ -173,13 +212,13 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* Management Accounts */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+            src="/src/asstes/Images/New folder/Management Accounts Preparation.webp"
             alt="Management Accounts"
-            className="w-full h-[300px] object-cover rounded-3xl shadow-lg"
+            className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
-          <div>
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Management Accounts</span><br />Preparation
             </h2>
@@ -206,7 +245,7 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* Accounts Payable & Receivable */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
               Accounts Payable & <span className="font-bold">Receivable Management</span>
@@ -235,7 +274,7 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
               Why Choose Our <span className="font-bold">Bookkeeping & Financial Management Services</span>
@@ -256,7 +295,7 @@ const Bookkeeping_Financial_Management = () => {
 
       {/* CTA */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl leading-tight font-light text-white">
@@ -297,13 +336,34 @@ const Bookkeeping_Financial_Management = () => {
         </div>
       </section>
 
-      {/* Blogs (empty placeholder per screenshot — cards not loaded) */}
+     {/* Blogs */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
               Recent <span className="font-bold">Blogs</span>
             </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+            {[
+              { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to" },
+              { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity", desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process," },
+              { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role and Benefits of a Virtual CFO in Modern Businesses", desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual" },
+            ].map((blog) => (
+              <div key={blog.id} className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                <div className="overflow-hidden">
+                  <img src={blog.image} alt={blog.title} className="w-full h-64 object-cover group-hover:scale-105 duration-500" />
+                </div>
+                <div className="p-7">
+                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-cyan-500 transition">{blog.title}</h3>
+                  <p className="text-gray-500 text-lg leading-8 mb-8">{blog.desc}</p>
+                  <a href={`/blog/${blog.id}`} className="inline-flex items-center gap-2 text-cyan-500 font-semibold hover:gap-4 duration-300">
+                    Read More <FaArrowRight />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

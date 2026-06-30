@@ -61,7 +61,7 @@ const Business_Advisory = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Strategic Business
             <br />
@@ -80,38 +80,73 @@ const Business_Advisory = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-2">
+<section className="bg-[#F5F6F8] py-10">
+        <div className="max-w-8xl mx-auto px-30">
           <div className="grid lg:grid-cols-5 gap-10 items-center">
+            {/* Heading */}
             <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">Why Choose Us?</h2>
+              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
+                Why Choose Us?
+              </h2>
             </div>
+
+            {/* Stat 1 */}
             <div className="flex items-center gap-5">
               <CalendarDays size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={9} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Years of Experience</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={9} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Years of Experience
+                </p>
               </div>
             </div>
+
+            {/* Stat 2 */}
             <div className="flex items-center gap-5">
               <Globe size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={20} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Countries Covered</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={20} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Countries Covered
+                </p>
               </div>
             </div>
+
+            {/* Stat 3 */}
             <div className="flex items-center gap-5">
               <Handshake size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={30000} duration={3000} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Clients Served</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={30000} duration={3000} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Clients Served
+                </p>
               </div>
             </div>
+
+            {/* Stat 4 */}
             <div className="flex items-center gap-5">
               <Medal size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={120} duration={2500} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Awards Received</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={120} duration={2500} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Awards Received
+                </p>
               </div>
             </div>
           </div>
@@ -120,9 +155,9 @@ const Business_Advisory = () => {
 
       {/* Company Formation Opening */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="h-[300px] bg-gradient-to-br from-slate-100 to-slate-300 rounded-3xl"></div>
-          <div>
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="h-full min-h-[300px] bg-gradient-to-br from-slate-100 to-slate-300 rounded-3xl"></div>
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Company Formation</span><br />
               <span className="font-bold">Opening</span> & Business Setup
@@ -162,7 +197,7 @@ const Business_Advisory = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 mt-16">
+        <div className="max-w-[1600px] mx-auto px-6 grid md:grid-cols-4 gap-10 mt-16">
           {valuationCards.map((c, i) => {
             const Icon = c.icon;
             return (
@@ -220,8 +255,8 @@ const Business_Advisory = () => {
 
       {/* Exit Strategy */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Exit Strategy</span> & Succession<br />Planning Heading
             </h2>
@@ -245,14 +280,14 @@ const Business_Advisory = () => {
           <img
             src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
             alt="Exit Strategy"
-            className="w-full h-[380px] object-cover rounded-3xl shadow-lg"
+            className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
 
       {/* Financial Strategy & Growth Consulting */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
               Financial Strategy & <span className="font-bold">Growth Consulting</span>
@@ -281,7 +316,7 @@ const Business_Advisory = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl font-light text-[#16244b] leading-tight">
               Why Choose Our <span className="font-bold">Business Advisory & Consultancy Services</span>
@@ -302,7 +337,7 @@ const Business_Advisory = () => {
 
       {/* CTA */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl leading-tight font-light text-white">
@@ -344,7 +379,7 @@ const Business_Advisory = () => {
 
       {/* Blogs */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
               Recent <span className="font-bold">Blogs</span>

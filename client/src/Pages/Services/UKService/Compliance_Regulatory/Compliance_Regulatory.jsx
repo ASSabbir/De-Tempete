@@ -99,7 +99,7 @@ const Compliance_Regulatory = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Stay Compliant. Stay Confident.
             <br />
@@ -122,38 +122,73 @@ const Compliance_Regulatory = () => {
       </section>
 
       {/* Stats */}
-      <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-2">
+<section className="bg-[#F5F6F8] py-10">
+        <div className="max-w-8xl mx-auto px-30">
           <div className="grid lg:grid-cols-5 gap-10 items-center">
+            {/* Heading */}
             <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">Why Choose Us?</h2>
+              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
+                Why Choose Us?
+              </h2>
             </div>
+
+            {/* Stat 1 */}
             <div className="flex items-center gap-5">
               <CalendarDays size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={0} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Years of Experience</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={9} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Years of Experience
+                </p>
               </div>
             </div>
+
+            {/* Stat 2 */}
             <div className="flex items-center gap-5">
               <Globe size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={0} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Countries Covered</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={20} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Countries Covered
+                </p>
               </div>
             </div>
+
+            {/* Stat 3 */}
             <div className="flex items-center gap-5">
               <Handshake size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={1027} duration={2500} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Clients Served</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={30000} duration={3000} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Clients Served
+                </p>
               </div>
             </div>
+
+            {/* Stat 4 */}
             <div className="flex items-center gap-5">
               <Medal size={70} className="text-[#14224A] stroke-[1.2]" />
+
               <div>
-                <h3 className="text-[#14224A] text-4xl font-bold"><AnimatedCounter end={4} />+</h3>
-                <p className="text-[#14224A] text-xl font-medium">Awards Received</p>
+                <h3 className="text-[#14224A] text-4xl font-bold">
+                  <AnimatedCounter end={120} duration={2500} />+
+                </h3>
+
+                <p className="text-[#14224A] text-xl font-medium">
+                  Awards Received
+                </p>
               </div>
             </div>
           </div>
@@ -191,7 +226,7 @@ const Compliance_Regulatory = () => {
 
       {/* Company Accounts */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-5xl font-bold text-[#13264d]">
               Company Accounts <span className="font-extrabold">Preparation & Filing</span>
@@ -230,7 +265,7 @@ const Compliance_Regulatory = () => {
 
       {/* Corporation Tax CT600 */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
               <span className="font-bold">Corporation Tax</span> (CT600) Filing
@@ -259,9 +294,13 @@ const Compliance_Regulatory = () => {
 
       {/* Self Assessment */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="h-64 bg-gradient-to-r from-[#caa07a] to-[#3a3a3a] rounded-2xl"></div>
-          <div>
+       <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <img
+            src="/src/asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp"
+            alt="Self-Assessment Tax Returns"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />
+          <div className="flex flex-col justify-center">
             <h2 className="text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Self-Assessment</span><br />Tax Returns
             </h2>
@@ -284,8 +323,8 @@ const Compliance_Regulatory = () => {
 
       {/* VAT */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">VAT Registration</span> & MTD-Compliant Filing
             </h2>
@@ -304,23 +343,21 @@ const Compliance_Regulatory = () => {
               ))}
             </div>
           </div>
-          <img
-            src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
+         <img
+            src="/src/asstes/Images/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp"
             alt="VAT Filing"
-            className="w-full h-[380px] object-cover rounded-3xl shadow-lg"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
       </section>
 
       {/* ACSP */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <img
-            src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch"><img
+            src="/src/asstes/Images/servics/ACSP-Identity.webp"
             alt="ACSP Verification"
-            className="w-full h-[380px] object-cover rounded-3xl shadow-lg"
-          />
-          <div>
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">ACSP Identity</span> Verification
             </h2>
@@ -347,8 +384,8 @@ const Compliance_Regulatory = () => {
 
       {/* Payroll */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Payroll Services</span><br />(PAYE & RTI Compliance)
             </h2>
@@ -366,16 +403,24 @@ const Compliance_Regulatory = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="h-[380px] bg-gradient-to-r from-gray-700 to-gray-900 rounded-3xl shadow-lg"></div>
+         </div>
+          <img
+            src="/src/asstes/Images/servics/Payroll-Services.webp"
+            alt="Payroll Services"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />
         </div>
       </section>
 
       {/* Pension Auto-Enrolment */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="h-[300px] bg-gradient-to-r from-gray-200 to-gray-400 rounded-3xl shadow-lg"></div>
-          <div>
+        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+         <img
+            src="/src/asstes/Images/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp"
+            alt="Pension Auto-Enrolment Compliance"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />
+          <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Pension Auto-Enrolment</span><br />Compliance
             </h2>
@@ -432,7 +477,7 @@ const Compliance_Regulatory = () => {
 
       {/* NI Contributions */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
               National Insurance <span className="font-bold">Contributions Assessment</span>
@@ -460,7 +505,7 @@ const Compliance_Regulatory = () => {
 
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
               Why Choose Our <span className="font-bold">UK Compliance Advisory</span>
@@ -481,7 +526,7 @@ const Compliance_Regulatory = () => {
 
       {/* CTA */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl leading-tight font-light text-white">
@@ -536,7 +581,7 @@ const Compliance_Regulatory = () => {
 
       {/* Blogs */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
               Recent <span className="font-bold">Blogs</span>
