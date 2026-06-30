@@ -3,6 +3,7 @@ import { Link } from "react-router";
 const services = [
   {
     title: "Virtual CFO",
+    path:'/virtual-cfo',
     description: "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, and Bangladesh.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -15,6 +16,7 @@ const services = [
   },
   {
     title: "Business Valuation",
+    path:'/business-valuation',
     description: "Unlock your company's true worth with precise business valuation services for global markets.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -29,6 +31,7 @@ const services = [
   },
   {
     title: "Tax Advisory",
+    path:'/Tax-Advisory',
     description: "Maximize savings and stay compliant with smart tax advisory and planning in the UK, UAE, KSA, and Bangladesh.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -42,6 +45,7 @@ const services = [
   },
   {
     title: "Bookkeeping",
+    path:'/bookkeeping',
     description: "Streamline accounting and maintain accurate bookkeeping for transparent financial records.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -57,6 +61,7 @@ const services = [
   },
   {
     title: "HR & Payroll",
+    path:'/hr-payroll',
     description: "Simplify operations with seamless HR management and payroll services for multi-country compliance.",
     highlight: true,
     icon: (
@@ -73,6 +78,7 @@ const services = [
   },
   {
     title: "Investment Readiness",
+    path:'/investment-readiness',
     description: "Prepare for funding and growth with structured investment readiness solutions worldwide.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -87,6 +93,7 @@ const services = [
   },
   {
     title: "Due Diligence",
+    path:'/due-diligence',
     description: "Secure deals and partnerships with thorough financial due diligence for cross-border transactions.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -100,6 +107,7 @@ const services = [
   },
   {
     title: "Post Investment Monitoring",
+    path:'/post-investment-monitoring',
     description: "Track performance and ensure value creation with continuous post-investment monitoring globally.",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" stroke="#0d1e4a" strokeWidth="1.5">
@@ -126,7 +134,8 @@ export default function HireBased() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  rounded-2xl ">
           {services.map((s, i) => (
-            <div
+            <a
+              href={s.path}
               key={s.title}
               className={`group relative flex flex-col gap-4 p-7 hover:shadow-xl lg:p-9 transition-all duration-300 cursor-pointer
                 `}
@@ -144,7 +153,7 @@ export default function HireBased() {
                 <h3 className="text-[#0d1e4a] font-bold text-base sm:text-lg mb-2">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{s.description}</p>
               </div>
-            </div>
+            </a>
           ))}
 
           {/* CTA cell — 9th cell */}

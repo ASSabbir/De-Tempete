@@ -8,7 +8,7 @@ import BusinessKSA from "../Pages/Company-Formation/BusinessKSA/BusinessKSA";
 import BusinessBD from "../Pages/Company-Formation/BusinessBD/BusinessBD";
 import BusinessUK from "../Pages/Company-Formation/BusinessUK/BusinessUK";
 import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
-import ContactUs from "../Pages/Contact/ContactUs";
+
 
 //BD Services Pages
 import Market_Expansion from "../Pages/Services/BDService/Market_Expansion/Market_Expansion";
@@ -38,6 +38,18 @@ import UAEForms from "../Pages/Forms/UAEForms";
 import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
+import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
+import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
+import ContactUs from "../Pages/Contact/ContactUs";
+import VirtualCFO from "../Pages/Home/Expertise/VirtualCfo/VirtualCFO";
+import BusinessValuation from "../Pages/Home/Expertise/Business/BusinessValuation";
+import TaxAdvisory from "../Pages/Home/Expertise/Tax/TaxAdvisory";
+import Bookkeeping from "../Pages/Home/Expertise/Bookkeeping/Bookkeeping";
+import HRandPayroll from "../Pages/Home/Expertise/HR/HRandPayroll";
+import POstInvestment from "../Pages/Home/Expertise/Post/POstInvestment";
+import Due from "../Pages/Home/Expertise/Due/Due";
+import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentReadiness";
+
 
 
 
@@ -52,7 +64,17 @@ import BDForms from "../Pages/Forms/BDForms";
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
-      {path:"/contact" , element :<ContactUs></ContactUs>},
+      {path:"/contact" , element : <ContactUs></ContactUs> },
+
+      // Hire Based On Expertise routes 
+      {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
+      {path:"/business-valuation" , element : <BusinessValuation></BusinessValuation> },
+      {path:"/Tax-Advisory" , element : <TaxAdvisory></TaxAdvisory> },
+      {path:"/bookkeeping" , element : <Bookkeeping></Bookkeeping> },
+      {path:"/hr-payroll" , element : <HRandPayroll></HRandPayroll> },
+      {path:"/investment-readiness" , element : <InvestmentReadiness></InvestmentReadiness> },
+      {path:"/due-diligence" , element : <Due></Due> },
+      {path:"/post-investment-monitoring" , element : <POstInvestment></POstInvestment> },
 
 
       // Duplicate routes for BD Services
@@ -80,7 +102,11 @@ import BDForms from "../Pages/Forms/BDForms";
       { path: "/forms/uae", element: <UAEForms /> },
       { path: "/forms/ksa", element: <KSAForms /> },
       { path: "/forms/uk", element: <UKForms /> },
-      { path: "/forms/bangladesh", element: <BDForms /> },
+      { path: "forms/bangladesh", element: <BDForms /> },
+
+      // News & Events
+      { path: "/news-events", element: <NewsEventsPage /> },
+      { path: "/news-events/:slug", element: <NewsEventDetail /> },
 
     ]
   }

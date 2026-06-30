@@ -7,6 +7,7 @@ import Library from './pages/Library';
 import Publications from './pages/Publications';
 import Forms from './pages/Forms';
 import Leads from './pages/Leads';
+import NewsEvents from './pages/NewsEvents';
 
 function ProtectedLayout() {
   const { admin } = useAuth();
@@ -21,6 +22,7 @@ function ProtectedLayout() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/forms" element={<Forms />} />
           <Route path="/leads" element={<Leads />} />
+          <Route path="/news-events" element={<NewsEvents />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

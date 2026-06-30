@@ -20,19 +20,20 @@ export default function Leads() {
   const [pages, setPages] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const fetchItems = useCallback(async (pg = page) => {
-    setLoading(true);
-    try {
-      const { data } = await API.get(`/leads/admin/all?page=${pg}&limit=30`);
-      setItems(data.items);
-      setTotal(data.total);
-      setPages(data.pages);
-    } finally {
-      setLoading(false);
-    }
-  }, [page]);
+const fetchItems = useCallback(async (pg) => {
+  setLoading(true);
+  try {
+    const { data } = await API.get(`/leads/admin/all?page=${pg}&limit=30`);
+    setItems(data.items);
+    setTotal(data.total);
+    setPages(data.pages);
+  } finally {
+    setLoading(false);
+  }
+}, []);
 
-  useEffect(() => { fetchItems(page); }, [page]);
+// eslint-disable-next-line react-hooks/set-state-in-effect
+useEffect(() => { fetchItems(page); }, [page, fetchItems]);
 
   return (
     <div>

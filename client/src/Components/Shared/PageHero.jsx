@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 import heroImg from '../../asstes/images/de-tempete.webp';
-
-export default function PageHero({ tag, title }) {
+export default function PageHero({ tag, title, subtitle, cta }) {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
 
@@ -80,6 +80,20 @@ export default function PageHero({ tag, title }) {
             }}>
               {title}
             </h1>
+            {subtitle && (
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, marginTop: 20, maxWidth: 560 }}>
+                {subtitle}
+              </p>
+            )}
+            {cta && (
+              <Link to={cta.to} style={{
+                display: 'inline-block', marginTop: 28, padding: '13px 30px',
+                border: '1.5px solid #fff', color: '#fff', textDecoration: 'none',
+                borderRadius: 6, fontWeight: 700, fontSize: 14,
+              }}>
+                {cta.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>
