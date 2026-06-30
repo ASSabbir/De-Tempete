@@ -15,6 +15,10 @@ import UKMarketExpansion from "../Pages/Services/UKService/Market_Expansion/Mark
 import Compliance_Regulatory from "../Pages/Services/UKService/Compliance_Regulatory/Compliance_Regulatory";
 import Bookkeeping_Financial_Management from "../Pages/Services/UKService/Bookkeeping_Financial_Management/Bookkeeping_Financial_Management";
 import Tax_Planning_Advisory from "../Pages/Services/UKService/Tax_Planning_Advisory/Tax_Planning_Advisory";
+import Virtual_CFO_Outsourced_Accounting from "../Pages/Services/UKService/Virtual_CFO_Outsourced_Accounting/Virtual_CFO_Outsourced_Accounting";
+import UKTechnology from "../Pages/Services/UKService/Technology/Technology";
+import Industry_Specific_Accounting_Solutions from "../Pages/Services/UKService/Industry_Specific_Accounting_Solutions/Industry_Specific_Accounting_Solutions";
+import Business_Advisory from "../Pages/Services/UKService/Business_Advisory/Business_Advisory";
 
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
@@ -95,9 +99,25 @@ const Routes = createBrowserRouter([
         path: "/services/uk/bookkeeping",
         element: <Bookkeeping_Financial_Management></Bookkeeping_Financial_Management>,
       },
-      {
+       {
         path: "/services/uk/tax-planning",
         element: <Tax_Planning_Advisory></Tax_Planning_Advisory>,
+      },
+      {
+        path: "/services/uk/virtual-cfo",
+        element: <Virtual_CFO_Outsourced_Accounting></Virtual_CFO_Outsourced_Accounting>,
+      },
+      {
+        path: "/services/uk/mtd",
+        element: <UKTechnology></UKTechnology>,
+      },
+      {
+        path: "/services/uk/industry",
+        element: <Industry_Specific_Accounting_Solutions></Industry_Specific_Accounting_Solutions>,
+      },
+      {
+        path: "/services/uk/business-advisory",
+        element: <Business_Advisory></Business_Advisory>,
       },
 
 

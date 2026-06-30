@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
@@ -130,7 +130,7 @@ const Market_Expansion = () => {
             <br />
             Establish Your Business Presence
             <br />
-            <span className="text-[#4AC4DE]">In Bangladesh The Right Way</span>
+            <span className="text-light-blue">In Bangladesh The Right Way</span>
           </h1>
 
           <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
@@ -140,7 +140,7 @@ const Market_Expansion = () => {
             registration to market entry.
           </p>
 
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
             Get a Consultation
           </button>
         </div>
@@ -263,7 +263,7 @@ const Market_Expansion = () => {
 
                   {/* Overlay */}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
 
                   {/* Icon */}
 
@@ -289,7 +289,7 @@ const Market_Expansion = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 flex-shrink-0" />
+                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 shrink-0" />
 
                         <span>{text}</span>
                       </li>
@@ -308,7 +308,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -429,7 +429,7 @@ const Market_Expansion = () => {
                     <img
                       src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
                       alt="check"
-                      className="w-5 h-5 object-contain flex-shrink-0"
+                      className="w-5 h-5 object-contain shrink-0"
                     />
 
                     <span className="font-semibold text-gray-900">
@@ -464,7 +464,7 @@ const Market_Expansion = () => {
               <img
                 src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
                 alt="Bank Account Opening"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
             </div>
 
@@ -495,7 +495,7 @@ const Market_Expansion = () => {
                   "Smooth & fast onboarding",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -536,7 +536,7 @@ const Market_Expansion = () => {
                   "Renewal & compliance support",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -550,7 +550,7 @@ const Market_Expansion = () => {
               <img
                 src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                 alt="Trademark Registration"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
@@ -649,7 +649,7 @@ const Market_Expansion = () => {
               >
                 {/* Icon */}
 
-                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
                   <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
                 </div>
 
@@ -800,13 +800,15 @@ const Market_Expansion = () => {
               },
               {
                 id: 2,
-                image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+                image:
+                  "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
                 title: "Self-Assessment Tax Return Process for Businesses",
                 desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
               },
               {
                 id: 3,
-                image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+                image:
+                  "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
                 title:
                   "The Role & Benefits of a Virtual CFO in Modern Businesses",
                 desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",

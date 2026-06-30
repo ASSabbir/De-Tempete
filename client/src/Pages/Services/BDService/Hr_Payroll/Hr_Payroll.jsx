@@ -97,7 +97,7 @@ const Hr_Payroll = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Streamline Your HR & Payroll
             <br />
-            <span className="text-[#4AC4DE]">Solutions In Bangladesh</span>
+            <span className="text-light-blue">Solutions In Bangladesh</span>
           </h1>
 
           <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
@@ -110,7 +110,7 @@ const Hr_Payroll = () => {
             business while we handle your HR operations efficiently.
           </p>
 
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
             Book a Consultation
           </button>
         </div>
@@ -219,7 +219,7 @@ const Hr_Payroll = () => {
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
                 >
                   <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
-                    <Icon className="text-[#4AC4DE] text-4xl" />
+                    <Icon className="text-light-blue text-4xl" />
                   </div>
 
                   <h3 className="text-2xl font-bold text-[#16244b] mb-4">
@@ -242,7 +242,7 @@ const Hr_Payroll = () => {
           {/* Heading */}
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-white">What You Gain</h2>
-            <div className="w-24 h-1 bg-[#4AC4DE] rounded-full mx-auto mt-8"></div>
+            <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           {/* Benefits Grid */}
@@ -252,7 +252,7 @@ const Hr_Payroll = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-[#4AC4DE] rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="text-white text-3xl" />
                 </div>
 
@@ -273,7 +273,7 @@ const Hr_Payroll = () => {
             <h2 className="text-5xl font-bold text-[#16244b]">
               Why Choose Our HR & Payroll
             </h2>
-            <div className="w-28 h-1 bg-[#4AC4DE] rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           {/* Features Grid */}
@@ -306,9 +306,9 @@ const Hr_Payroll = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
+                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#4AC4DE] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
                   <FaCheckCircle className="text-white text-xl" />
                 </div>
 
@@ -360,7 +360,7 @@ const Hr_Payroll = () => {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
 
@@ -371,7 +371,7 @@ const Hr_Payroll = () => {
                     <input
                       type="email"
                       placeholder="Email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
 
@@ -382,11 +382,11 @@ const Hr_Payroll = () => {
                     <textarea
                       rows={5}
                       placeholder=""
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-[#4AC4DE]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
                     />
                   </div>
 
-                  <button className="w-full bg-[#4AC4DE] hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300">
+                  <button className="w-full bg-light-blue hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300">
                     Send
                   </button>
                 </div>

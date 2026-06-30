@@ -135,11 +135,11 @@ const Market_Expansion = () => {
         <div className="absolute inset-0 bg-[#0E1937]/80"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold  tracking-tight">
             Enter UK Business Market
             <br />
-            <span className="text-[#4AC4DE]">Strategic Setup & Expansion</span>
+            <span className="text-light-blue">Strategic Setup & Expansion</span>
             <br />
             <span className="font-normal">Advisory For Growing Companies</span>
           </h1>
@@ -154,7 +154,7 @@ const Market_Expansion = () => {
             business expansion.
           </p>
 
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
             Book a Consultation
           </button>
         </div>
@@ -236,7 +236,7 @@ const Market_Expansion = () => {
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
@@ -277,7 +277,7 @@ const Market_Expansion = () => {
 
                   {/* Overlay */}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
 
                   {/* Icon */}
 
@@ -303,7 +303,7 @@ const Market_Expansion = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 flex-shrink-0" />
+                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 shrink-0" />
 
                         <span>{text}</span>
                       </li>
@@ -322,7 +322,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -333,7 +333,7 @@ const Market_Expansion = () => {
       {/* ================= Go-To-Market Strategy ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
@@ -392,11 +392,13 @@ const Market_Expansion = () => {
               const Icon = item.icon;
 
               return (
-                <div className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
-    item.highlight
-      ? "hover:-translate-y-2 hover:shadow-2xl"
-      : "hover:-translate-y-1 hover:shadow-lg"
-  }`}>
+                <div
+                  className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
+                    item.highlight
+                      ? "hover:-translate-y-2 hover:shadow-2xl"
+                      : "hover:-translate-y-1 hover:shadow-lg"
+                  }`}
+                >
                   <Icon className="text-5xl text-slate-500 mb-6" />
 
                   <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
@@ -444,7 +446,7 @@ const Market_Expansion = () => {
                     <img
                       src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
                       alt="check"
-                      className="w-5 h-5 object-contain flex-shrink-0"
+                      className="w-5 h-5 object-contain shrink-0"
                     />
 
                     <span className="font-semibold text-gray-900">
@@ -469,23 +471,23 @@ const Market_Expansion = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-28">
+        <div className="max-w-[1600px] mx-auto px-6 space-y-28">
           {/* ===================== Bank Account Opening ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/Dubai-bank.webp"
                 alt="Bank Account Opening"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
 
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
@@ -511,7 +513,7 @@ const Market_Expansion = () => {
                   "Compliance onboarding preparation",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -522,10 +524,10 @@ const Market_Expansion = () => {
 
           {/* ===================== Trademark ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
@@ -550,7 +552,7 @@ const Market_Expansion = () => {
                   "IP renewal and protection strategy",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -560,11 +562,11 @@ const Market_Expansion = () => {
 
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                 alt="Trademark Registration"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
@@ -576,7 +578,7 @@ const Market_Expansion = () => {
       {/* ================= Investor Visa ================= */}
 
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-5xl mx-auto">
@@ -624,7 +626,7 @@ const Market_Expansion = () => {
       {/* ================= Why Choose Us ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1300px] mx-auto ">
+        <div className="max-w-325 mx-auto ">
           {/* Heading */}
 
           <div className="text-center">
@@ -638,7 +640,7 @@ const Market_Expansion = () => {
 
           {/* Cards */}
 
-          <div className="max-w-[1280px] grid lg:grid-cols-2 gap-6 mt-20">
+          <div className="max-w-7xl grid lg:grid-cols-2 gap-6 mt-20">
             {[
               {
                 title: "Accurate and up-to-date financial records",
@@ -664,7 +666,7 @@ const Market_Expansion = () => {
               >
                 {/* Icon */}
 
-                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
                   <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
                 </div>
 
@@ -687,7 +689,7 @@ const Market_Expansion = () => {
       {/* ================= CTA Section ================= */}
 
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* ================= Left Content ================= */}
 
@@ -789,7 +791,7 @@ const Market_Expansion = () => {
       {/* ================= Recent Blogs ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center mb-20">

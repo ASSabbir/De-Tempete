@@ -1,10 +1,11 @@
 const ReadyToStublish = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#081B57] to-[#57D3EB] py-24">
+    <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] py-24">
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-          Your Trusted Partner for Global Accounting, Compliance & Business Formation.
+          Your Trusted Partner for Global Accounting, Compliance & Business
+          Formation.
         </h2>
 
 
@@ -14,25 +15,29 @@ const ReadyToStublish = () => {
       </div>
 
       {/* Bottom Marquee */}
-<div className="relative h-auto mt-20 left-0 w-full overflow-hidden pointer-events-none">
-  <div className="marquee-track">
-    <div className="marquee-content">
-      <span>
-        10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
-        10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
-      </span>
+      <div className="relative h-auto mt-20 left-0 w-full overflow-hidden pointer-events-none">
+        <div className="marquee-track">
+          <div className="marquee-content">
+            <span>
+              10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10
+              YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 10 YEARS OF
+              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10 YEARS OF
+              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
+            </span>
 
-      <span>
-        10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
-        10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
-      </span>
-    </div>
-  </div>
-</div>
+            <span>
+              10 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 . 10
+              YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 10 YEARS OF
+              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016 10 YEARS OF
+              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2016
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* Animation */}
       <style>
-  {`
+        {`
     .marquee-track {
       width: 100%;
       overflow: hidden;
@@ -68,7 +73,7 @@ const ReadyToStublish = () => {
       }
     }
   `}
-</style>
+      </style>
     </section>
   );
 };
