@@ -8,7 +8,8 @@ const ReadyToStublish = () => {
           Formation.
         </h2>
 
-        <button className="mt-10 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
+
+        <button className="mt-10 border-2 border-white hover:border-light-blue hover:text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-light-blue  cursor-pointer duration-300">
           Get Started Now
         </button>
       </div>
