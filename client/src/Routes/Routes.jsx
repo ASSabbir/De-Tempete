@@ -9,9 +9,13 @@ import BusinessBD from "../Pages/Company-Formation/BusinessBD/BusinessBD";
 import BusinessUK from "../Pages/Company-Formation/BusinessUK/BusinessUK";
 import BusinessUSA from "../Pages/Company-Formation/BusinessUSA/BusinessUSA";
 
-
 //BD Services Pages
 import Market_Expansion from "../Pages/Services/BDService/Market_Expansion/Market_Expansion";
+import UKMarketExpansion from "../Pages/Services/UKService/Market_Expansion/Market_Expansion";
+import Compliance_Regulatory from "../Pages/Services/UKService/Compliance_Regulatory/Compliance_Regulatory";
+import Bookkeeping_Financial_Management from "../Pages/Services/UKService/Bookkeeping_Financial_Management/Bookkeeping_Financial_Management";
+import Tax_Planning_Advisory from "../Pages/Services/UKService/Tax_Planning_Advisory/Tax_Planning_Advisory";
+
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
 import Taxation from "../Pages/Services/BDService/Taxation/Taxation";
@@ -19,7 +23,6 @@ import HR_Payroll from "../Pages/Services/BDService/HR_Payroll/HR_Payroll";
 import Training from "../Pages/Services/BDService/Training/Training";
 import Investment from "../Pages/Services/BDService/Investment/Investment";
 import Technology from "../Pages/Services/BDService/Technology/Technology";
-
 
 // Library
 import UAELibrary from "../Pages/Library/UAELibrary";
@@ -51,9 +54,7 @@ import Due from "../Pages/Home/Expertise/Due/Due";
 import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentReadiness";
 
 
-
-
- const Routes = createBrowserRouter([
+const Routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
@@ -78,14 +79,36 @@ import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentRe
 
 
       // Duplicate routes for BD Services
-      {path:"/services/bd/market-expansion" , element :<Market_Expansion></Market_Expansion>},
-      {path:"/services/bd/regulatory" , element :<Regulatory></Regulatory>},
-      {path:"/services/bd/finance" , element :<Finance></Finance>},
-      {path:"/services/bd/taxation" , element :<Taxation></Taxation>},
-      {path:"/services/bd/hr-payroll" , element :<HR_Payroll></HR_Payroll>},
-       {path:"/services/bd/training" , element :<Training></Training>},
-       {path:"/services/bd/investment" , element :<Investment></Investment>},
-      {path:"/services/bd/technology" , element :<Technology></Technology>},
+      {
+        path: "/services/bd/market-expansion",
+        element: <Market_Expansion></Market_Expansion>,
+      },
+      {
+        path: "/services/uk/market-expansion",
+        element: <UKMarketExpansion></UKMarketExpansion>,
+      },
+      {
+        path: "/services/uk/compliance",
+        element: <Compliance_Regulatory></Compliance_Regulatory>,
+      },
+      {
+        path: "/services/uk/bookkeeping",
+        element: <Bookkeeping_Financial_Management></Bookkeeping_Financial_Management>,
+      },
+      {
+        path: "/services/uk/tax-planning",
+        element: <Tax_Planning_Advisory></Tax_Planning_Advisory>,
+      },
+
+
+      { path: "/services/bd/regulatory", element: <Regulatory></Regulatory> },
+      { path: "/services/bd/finance", element: <Finance></Finance> },
+      { path: "/services/bd/taxation", element: <Taxation></Taxation> },
+      { path: "/services/bd/hr-payroll", element: <HR_Payroll></HR_Payroll> },
+      { path: "/services/bd/training", element: <Training></Training> },
+      { path: "/services/bd/investment", element: <Investment></Investment> },
+      { path: "/services/bd/technology", element: <Technology></Technology> },
+
       // Library
       { path: "/library/uae", element: <UAELibrary /> },
       { path: "/library/ksa", element: <KSALibrary /> },
@@ -112,4 +135,4 @@ import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentRe
   }
 ]);
 
- export default Routes;
+export default Routes;

@@ -7,38 +7,45 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 
 const businessData = [
   {
-    title: "Private Limited Company",
+    title: "Company Formation",
     image:
       "/src/asstes/Images/servics/Bd/freepik__corporate-companies-bandgladesh-flag-website-image__46804.webp",
     items: [
-      "100% foreign ownership allowed",
-      "Full Bangladesh market access",
-      "Mandatory office and local directors",
-      "Taxable as per Bangladesh corporate regulations",
-      "VAT registration support",
+      "UK Limited Company setup support",
+      "Companies House registration guidance",
+      "Business structure advisory",
+      "Company name registration",
+      "Incorporation documentation support",
+      "Startup setup planning",
+      "Expansion-focused structuring",
     ],
   },
   {
-    title: "Branch Office",
+    title: "HMRC Registrations",
     image:
-      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp ",
+      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp",
     items: [
-      "Linked to parent company",
-      "Limited liability in Bangladesh",
-      "Business activities restricted",
-      "Registration with Bangladesh Bank & RJSC",
-      "VAT and tax compliance assistance",
+      "Corporation Tax registration guidance",
+      "VAT registration preparation",
+      "PAYE registration support",
+      "HMRC compliance assistance",
+      "Tax setup coordination",
+      "Registration planning support",
+      "Operational readiness guidance",
     ],
   },
   {
-    title: "Representative Office",
+    title: "International Business Structuring",
     image:
       "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46795.webp",
     items: [
-      "Non-commercial operations only",
-      "No local revenue generation",
-      "Quick setup process",
-      "Ideal for market research and liaison functions",
+      "Non-resident founder guidance",
+      "Shareholder structuring support",
+      "Director & PSC planning",
+      "International ownership advisory",
+      "Compliance preparation support",
+      "UK expansion planning",
+      "Long-term scalability guidance",
     ],
   },
 ];
@@ -87,32 +94,36 @@ const Market_Expansion = () => {
 
   const exportReadinessItems = [
     {
-      title: "Export Readiness Assessment",
-      description: "Align business operations and supply chain for compliance",
-    },
-    {
-      title: "Trade Regulations Guidance",
+      title: "Corporation Tax Registration Guidance",
       description:
-        "Navigate Bangladesh export controls, customs, and compliance obligations",
+        "Support for understanding Corporation Tax registration requirements after incorporation.",
     },
     {
-      title: "Risk Management & Due Diligence",
-      description: "Safeguard operations against partner and logistics risks",
+      title: "VAT Registration Preparation",
+      description:
+        "Guidance regarding VAT registration applicability and operational readiness preparation.",
     },
     {
-      title: "Documentation & Logistics Optimization",
-      description: "Streamline invoices, customs, and shipping processes",
+      title: "PAYE Employer Registration Support",
+      description:
+        "Preparation guidance for businesses planning payroll setup and employee onboarding.",
     },
     {
-      title: "Sustainable Export Systems",
-      description: "Build scalable, compliant trade operations",
+      title: "Director & PSC Structuring Guidance",
+      description:
+        "Support regarding ownership structures, directorship responsibilities, and PSC compliance considerations.",
+    },
+    {
+      title: "Identity Verification Preparation",
+      description:
+        "Guidance regarding Companies House identity verification requirements for directors and PSCs.",
     },
   ];
 
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="pt-40 pb-24 relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+      <section className="pt-40 pb-24 relative h-screen flex items-center justify-center text-white overflow-hidden">
         {/* Background Image */}
         <img
           src="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
@@ -121,34 +132,37 @@ const Market_Expansion = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
+        <div className="absolute inset-0 bg-[#0E1937]/80"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Expand With Confidence
+          <h1 className="text-5xl md:text-7xl font-bold  tracking-tight">
+            Enter UK Business Market
             <br />
-            Establish Your Business Presence
+            <span className="text-[#4AC4DE]">Strategic Setup & Expansion</span>
             <br />
-            <span className="text-[#4AC4DE]">In Bangladesh The Right Way</span>
+            <span className="font-normal">Advisory For Growing Companies</span>
           </h1>
 
-          <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
-            Bangladesh is one of the world's fastest-growing economies. Our
-            expert team helps international companies establish their business
-            presence in Bangladesh with confidence, supporting every step from
-            registration to market entry.
+          <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-8 overflow-visible">
+            <span className="inline-block">The UK</span> is one of the world's
+            leading destinations for startups, investors, consultants, and
+            international businesses due to its strong economy, transparent
+            regulations, and global business connectivity. de tempête supports
+            businesses with UK company formation, market entry planning,
+            compliance guidance, and operational setup support for smooth
+            business expansion.
           </p>
 
           <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
-            Get a Consultation
+            Book a Consultation
           </button>
         </div>
       </section>
 
       {/* Stats */}
       <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-2">
+        <div className="max-w-8xl mx-auto px-30">
           <div className="grid lg:grid-cols-5 gap-10 items-center">
             {/* Heading */}
             <div>
@@ -231,16 +245,16 @@ const Market_Expansion = () => {
               <span className="font-extrabold">Registration</span>
             </h2>
 
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-[#2D7EF7] text-white font-semibold text-sm">
-              Simplified Business Setup & Structure Guidance
+            <div className="inline-block mt-5 px-5 py-1 rounded text-cyan-400  text-lg">
+              UK Company Formation & Setup Services
             </div>
 
             <p className="mt-7 text-lg text-gray-600 leading-8">
-              From company incorporation to licensing, we simplify every stage
-              of your Bangladesh business setup. Our experts help you select the
-              right business structure — Private Limited, Branch, or
-              Representative Office — based on ownership goals, industry, and
-              operational needs.
+              Starting a business in the UK requires proper structuring, tax
+              registration, and compliance preparation from the beginning. de
+              tempête supports startups, SMEs, and international businesses with
+              UK company formation and operational setup guidance for smooth
+              market entry.
             </p>
           </div>
 
@@ -331,9 +345,11 @@ const Market_Expansion = () => {
             </h2>
 
             <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
-              Success in Bangladesh requires more than just registration. We
-              help tailor your business model, pricing and operations to align
-              with local culture, consumer behavior and regulatory requirements.
+              Businesses entering the UK market must align operations, pricing,
+              and business structures with local regulations and market
+              expectations. de tempête supports businesses with UK market entry,
+              localisation planning, and operational setup advisory for smoother
+              expansion.
             </p>
           </div>
 
@@ -343,47 +359,44 @@ const Market_Expansion = () => {
             {[
               {
                 icon: LuBadgeDollarSign,
-                title: "Target Market & Competitive Analysis",
-                desc: "Evaluate market size, trends, demand potential and competitive positioning.",
+                title: "Business Activity & SIC Code Advisory",
+                desc: "Guidance for selecting suitable SIC codes aligned with business activities and operational objectives.",
               },
               {
                 icon: LuChartColumnBig,
-                title: "Financial & ROI Modelling",
-                desc: "Detailed financial projections, pricing models and investment return analysis.",
+                title: "Financial & Operational Planning",
+                desc: "Evaluate startup requirements, operational readiness, and long-term business sustainability.",
               },
               {
                 icon: LuScale,
-                title: "Regulatory & Operational Readiness",
-                desc: "Ensure compliance with Bangladesh regulations and operational requirements.",
+                title: "Compliance & Operational Readiness",
+                desc: "Prepare business operations while understanding UK compliance obligations and reporting expectations.",
                 highlight: true,
               },
               {
                 icon: LuBookOpen,
-                title: "Risk & Sensitivity Assessment",
-                desc: "Identify potential business risks, mitigation strategies and scenario planning.",
+                title: "Risk & Administrative Assessment",
+                desc: "Identify operational risks, documentation gaps, and structural considerations before business expansion.",
               },
               {
                 icon: LuMegaphone,
                 title: "Business Model Localisation",
-                desc: "Adapt products, pricing and business structure for Bangladesh market behavior.",
+                desc: "Adapt services, communication strategies, and operational structures to UK market standards.",
               },
               {
                 icon: LuHandCoins,
-                title: "Launch Roadmap",
-                desc: "Define launch phases, KPIs, milestones and sustainable market rollout strategy.",
+                title: "Partnership & Commercial Planning",
+                desc: "Explore supplier coordination, strategic partnerships, and commercial collaboration opportunities.",
               },
             ].map((item, index) => {
               const Icon = item.icon;
 
               return (
-                <div
-                  key={index}
-                  className={`rounded-3xl transition-all duration-300 ${
-                    item.highlight
-                      ? "bg-white shadow-2xl p-10 hover:-translate-y-2"
-                      : "hover:bg-white hover:shadow-xl p-4"
-                  }`}
-                >
+                <div className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
+    item.highlight
+      ? "hover:-translate-y-2 hover:shadow-2xl"
+      : "hover:-translate-y-1 hover:shadow-lg"
+  }`}>
                   <Icon className="text-5xl text-slate-500 mb-6" />
 
                   <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
@@ -403,15 +416,17 @@ const Market_Expansion = () => {
         <div className="max-w-9xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
-              Export Readiness, Trade
+              UK Compliance & Tax
             </h2>
             <p className="text-gray-600 text-lg font-semibold">
-              Compliance & Logistics Advisory
+              Registration Advisory
             </p>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
-              For smooth exports of merchandise and products from Bangladesh,
-              obtain trade compliance and logistics advisory to ensure
-              consistent growth and scalability.
+              Businesses operating in the UK must maintain proper registrations
+              and compliance readiness to reduce administrative delays and
+              operational risks. de tempête supports businesses with
+              registration, compliance coordination, and operational setup
+              guidance.
             </p>
           </div>
 
@@ -462,7 +477,7 @@ const Market_Expansion = () => {
 
             <div>
               <img
-                src="/src/asstes/Images/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
+                src="/src/asstes/Images/servics/Dubai-bank.webp"
                 alt="Bank Account Opening"
                 className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
               />
@@ -478,9 +493,9 @@ const Market_Expansion = () => {
               </h2>
 
               <p className="mt-8 text-xl leading-9 text-gray-500">
-                Coordinate with leading local and international banks for
-                account opening, compliance documentation, and end-to-end
-                activation support.
+                Opening a UK business bank account often requires demonstrable
+                operational clarity, ownership transparency, and compliance
+                readiness depending on the business structure and activities.
               </p>
 
               <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
@@ -489,10 +504,11 @@ const Market_Expansion = () => {
 
               <div className="space-y-5">
                 {[
-                  "Local & international bank coordination",
-                  "Documentation & KYC support",
-                  "Account activation guidance",
-                  "Smooth & fast onboarding",
+                  "Business banking preparation guidance",
+                  "Operational clarification support",
+                  "Documentation readiness assistance",
+                  "Overseas founder banking support",
+                  "Compliance onboarding preparation",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
@@ -518,10 +534,9 @@ const Market_Expansion = () => {
               </h2>
 
               <p className="mt-8 text-xl leading-9 text-gray-500">
-                Secure your brand, logo and products with trademark and
-                intellectual property registration in Bangladesh. Our experts
-                assist with searches, filing, copyright advisory and renewal
-                support.
+                We assist in trademark and intellectual property registration
+                through the UAE Ministry of Economy — ensuring your brand, logo
+                and products are legally safeguarded.
               </p>
 
               <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
@@ -530,10 +545,9 @@ const Market_Expansion = () => {
 
               <div className="space-y-5">
                 {[
-                  "Trademark & patent registration",
-                  "Copyright advisory & protection",
-                  "Brand & logo security",
-                  "Renewal & compliance support",
+                  "Trademark search and registration",
+                  "Patent and copyright advisory",
+                  "IP renewal and protection strategy",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
@@ -572,11 +586,11 @@ const Market_Expansion = () => {
             </h2>
 
             <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
-              For foreign investors and key employees, we provide guidance on
-              Bangladesh investor visas, work permits, residency processes and
-              compliance documentation.
+              Secure your place in the UAE with seamless investor and residency
+              visa assistance. de tempête manages all documentation and
+              applications to ensure smooth visa processing for investors,
+              employees, and dependents.
             </p>
-
             <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
           </div>
 
@@ -584,10 +598,10 @@ const Market_Expansion = () => {
 
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
             {[
-              "Investor & Work Visa Guidance",
-              "Residency & Compliance Support",
-              "Application Documentation Help",
-              "Smooth Approval Process",
+              "Investor & Partner Visa Processing",
+              "Dependent Visa Sponsorship",
+              "Emirates ID & Medical Coordination",
+              "Visa Renewals And Compliance",
             ].map((item, index) => (
               <div
                 key={index}
@@ -610,13 +624,13 @@ const Market_Expansion = () => {
       {/* ================= Why Choose Us ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1300px] mx-auto ">
           {/* Heading */}
 
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
               Why Choose Our
-              <span className="font-bold"> Expansion Advisory Service?</span>
+              <span className="font-bold"> UAE Market Expansion Advisory</span>
             </h2>
 
             <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
@@ -624,23 +638,24 @@ const Market_Expansion = () => {
 
           {/* Cards */}
 
-          <div className="grid lg:grid-cols-2 gap-6 mt-20">
+          <div className="max-w-[1280px] grid lg:grid-cols-2 gap-6 mt-20">
             {[
               {
-                title: "Proven Multi-Market Experience",
-                desc: "Leverage our years of experience helping businesses successfully enter and operate in multiple countries, including Bangladesh.",
+                title: "Accurate and up-to-date financial records",
+                desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
               },
               {
-                title: "Global & Local Expertise",
-                desc: "Benefit from our combined knowledge of international best practices and deep understanding of the Bangladesh business environment.",
+                title: "End-to-end support — from setup to residency",
+                desc: "Deep knowledge of UAE business, legal & banking landscape.",
               },
               {
-                title: "Complete Setup Support",
-                desc: "From company registration to operational launch, we manage every step so you can focus on business growth.",
+                title:
+                  "Tailored solutions for startups, SMEs & global investors",
+                desc: "Deep knowledge of UAE business, legal & banking landscape.",
               },
               {
-                title: "In-Depth Bangladesh Insights",
-                desc: "Access valuable insights into local regulations, banking, taxation and market dynamics for confident decision-making.",
+                title: "Transparent processes and ongoing compliance focus",
+                desc: "Deep knowledge of UAE business, legal & banking landscape.",
               },
             ].map((item, index) => (
               <div
@@ -678,17 +693,16 @@ const Market_Expansion = () => {
 
             <div>
               <h2 className="text-5xl leading-tight font-light text-white">
-                Start Your Bangladesh
+                Start Your UAE
                 <br />
                 Expansion
                 <span className="font-bold"> Today</span>
               </h2>
 
               <p className="mt-8 text-cyan-400 text-2xl font-semibold leading-9 max-w-xl">
-                Get expert guidance, avoid delays and establish your Bangladesh
-                presence with complete confidence.
+                Get expert guidance, avoid costly delays, and build your UAE
+                presence with confidence.
               </p>
-
               {/* Commitment Card */}
 
               <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
@@ -698,10 +712,10 @@ const Market_Expansion = () => {
 
                 <div className="space-y-5">
                   {[
-                    "Free initial consultation — no obligation",
-                    "Complete confidentiality & secure handling",
-                    "Bangladesh regulatory & market experts",
-                    "Practical, tailored advice for your business",
+                    "Free initial tax consultation — no obligation",
+                    "100% confidentiality and secure handling of data",
+                    "Region-specific tax experts",
+                    "Transparent and practical advice tailored to your needs",
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-4">
                       <FaCircleCheck className="text-cyan-400 text-xl" />
@@ -800,13 +814,15 @@ const Market_Expansion = () => {
               },
               {
                 id: 2,
-                image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+                image:
+                  "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
                 title: "Self-Assessment Tax Return Process for Businesses",
                 desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
               },
               {
                 id: 3,
-                image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+                image:
+                  "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
                 title:
                   "The Role & Benefits of a Virtual CFO in Modern Businesses",
                 desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
