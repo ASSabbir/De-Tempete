@@ -97,7 +97,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-[#f8f9fc] w-full py-16 lg:py-24">
+    <section className="bg-gray-100 w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}

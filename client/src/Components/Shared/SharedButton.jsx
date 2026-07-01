@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SharedButton = ({ text }) => {
+const SharedButton = ({ text,path }) => {
   return (
     <>
       <style>
@@ -67,7 +67,7 @@ const SharedButton = ({ text }) => {
       </style>
 
       <div>
-        <a href="/">
+        <a href={path || '/'}>
           <button className="shared-btn ">
             {text || "Contact Us"}
           </button>

@@ -1,6 +1,6 @@
-import { FaMoneyBillAlt } from "react-icons/fa"; 
-import { FaUsers } from "react-icons/fa"; 
-import { FaUser } from "react-icons/fa"; 
+import { FaMoneyBillAlt } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -9,39 +9,42 @@ import { BsGraphUpArrow } from "react-icons/bs";
 
 const stats = [
   {
-    value: 35,
+    value: 40,
     suffix: "%",
-    label: "Strategic Focus",
-    desc: "Average profit increase with proper CFO guidance",
+    label: "Operational Efficiency",
+    desc: "Improving workflows, reducing manual effort, and streamlining HR operations.",
     icon: <BsGraphUpArrow />,
   },
   {
-    value: 75,
+    value: 35,
     suffix: "%",
-    label: "Cost-Effective",
-    desc: "Savings vs hiring a full-time CFO",
+    label: "Compliance & Risk Control",
+    desc: "Ensuring adherence to labor laws, payroll regulations, and documentation standards.",
     icon: <FaMoneyBillAlt />,
   },
   {
-    value: 10,
+    value: 20,
     suffix: "%",
-    label: "Expert Team",
-    desc: "Years of combined financial expertise",
+    label: "Employee Experience",
+    desc: "Enhancing transparency, satisfaction, and workforce management systems.",
     icon: <FaUsers />,
   },
   {
-    value: 500,
+    value: 10,
     suffix: "+",
-    label: "Growth Focus",
-    desc: "Businesses scaled successfully",
+    label: "Strategic HR Support",
+    desc: "Aligning HR processes with long-term business growth and scalability.",
     icon: <FaUser />,
   },
 ];
 
 const bullets = [
-  "Optimize cash flow and manage financial risks",
-  "Enhance profitability with data-driven decisions",
-  "Collaborate closely with your leadership team",
+  "Attendance & Leave Management",
+  "Onboarding & Offboarding",
+  "HR Policy Development",
+  "Benefits & Compensation Structuring",
+  "Performance Support",
+  "Regulatory Compliance",
 ];
 
 function useCountUp(target, duration = 1600, start = false) {
@@ -90,7 +93,7 @@ function StatCard({ stat, index, start }) {
   );
 }
 
-export default function CFOAdvantage() {
+export default function HrAdvantage() {
   const [started, setStarted] = useState(false);
   const sectionRef = useRef(null);
 
@@ -125,7 +128,9 @@ export default function CFOAdvantage() {
                 className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold text-white/80"
                 style={{ border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)" }}
               >
-                The Virtual CFO Advantage
+                Performance Focus
+
+
               </span>
             </motion.div>
 
@@ -137,8 +142,9 @@ export default function CFOAdvantage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl sm:text-4xl lg:text-5xl text-white font-normal leading-tight"
             >
-              A Virtual CFO<br />
-              Bridges <span className="font-extrabold">That Gap</span>
+              What We
+              <br />
+              <span className="font-extrabold">Handle For You</span>
             </motion.h2>
 
             {/* Description */}
@@ -149,8 +155,7 @@ export default function CFOAdvantage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-white/60 text-sm sm:text-base leading-relaxed max-w-md"
             >
-              Get strategic financial management on a flexible, part-time, or project basis.
-              You get the same executive-level expertise at a fraction of the cost.
+             We manage the essential HR functions that keep your workforce structured, compliant, and efficient. From employee lifecycle management to policy and performance support, our approach ensures smooth day-to-day operations without adding administrative burden to your business.
             </motion.p>
 
             {/* Bullets */}
