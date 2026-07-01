@@ -66,13 +66,13 @@ const Technology = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Making Tax Digital & Cloud
             <br />
-            <span className="text-[#4AC4DE]">Accounting For UK Businesses</span>
+            <span className="text-light-blue">Accounting For UK Businesses</span>
           </h1>
           <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
             At de tempête, we help UK businesses manage accounting, VAT submissions, and digital bookkeeping through
             HMRC-compliant cloud accounting systems designed for modern business operations.
           </p>
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue] hover:text-black duration-300">
             Book a Consultation
           </button>
         </div>

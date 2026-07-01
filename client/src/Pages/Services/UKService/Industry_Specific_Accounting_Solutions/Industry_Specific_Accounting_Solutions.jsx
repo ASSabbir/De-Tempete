@@ -193,7 +193,7 @@ const Industry_Specific_Accounting_Solutions = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Industry-Specific Accounting
             <br />
-            <span className="text-[#4AC4DE]">Solutions In The UK</span>
+            <span className="text-light-blue">Solutions In The UK</span>
           </h1>
           <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
             Different industries require different financial strategies. Generic
@@ -201,7 +201,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             structures, or compliance complexities. We deliver tailored
             accounting solutions built specifically for your sector.
           </p>
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
+          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
             Book a Consultation
           </button>
         </div>
@@ -297,7 +297,7 @@ const Industry_Specific_Accounting_Solutions = () => {
                 "Industry benchmarks for performance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -369,7 +369,7 @@ const Industry_Specific_Accounting_Solutions = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
                       ✦
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -442,7 +442,7 @@ const Industry_Specific_Accounting_Solutions = () => {
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <LuChartNoAxesCombined className="text-cyan-400 text-2xl flex-shrink-0" />
+                  <LuChartNoAxesCombined className="text-cyan-400 text-2xl shrink-0" />
                   <h3 className="text-lg font-bold text-[#16244b]">
                     {item.title}
                   </h3>
