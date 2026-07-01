@@ -7,6 +7,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 import tableau from "/src/asstes/Images/New folder/9-1.webp";
 import sage from "/src/asstes/Images/New folder/3-2.webp";
@@ -44,8 +45,6 @@ const AnimatedCounter = ({ end, duration = 2000 }) => {
 };
 
 const Investment = () => {
-
-
   const servicesData = [
     {
       title: "Investment Advisory & Facilitation in Bangladesh",
@@ -95,17 +94,37 @@ const Investment = () => {
       <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
-        heading={<>Expand Through Strategic <br /><span className="text-light-blue">Partnerships in Bangladesh</span></>}
-        description={<>Unlock growth opportunities with investment and partnership facilitation services in Bangladesh. <strong>de tempête</strong> connects businesses with the right investors, partners, and market opportunities, helping you expand, collaborate, and scale with confidence in Bangladesh's growing economy.</>}
+        heading={
+          <>
+            Expand Through Strategic <br />
+            <span className="text-light-blue">Partnerships in Bangladesh</span>
+          </>
+        }
+        description={
+          <>
+            Unlock growth opportunities with investment and partnership
+            facilitation services in Bangladesh. <strong>de tempête</strong>{" "}
+            connects businesses with the right investors, partners, and market
+            opportunities, helping you expand, collaborate, and scale with
+            confidence in Bangladesh's growing economy.
+          </>
+        }
         ctaText="Request Consultation"
       />
 
-      <StatsSection stats={[
-        { icon: BarChart3, end: 9, label: "Years of Experience" },
-        { icon: PieChart, end: 20, label: "Countries Covered" },
-        { icon: TrendingUp, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: BarChart3, end: 9, label: "Years of Experience" },
+          { icon: PieChart, end: 20, label: "Countries Covered" },
+          {
+            icon: TrendingUp,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* What We Offer Section */}
       <section className="py-24 bg-[#f8fbff]">
@@ -233,7 +252,13 @@ const Investment = () => {
       </section>
 
       <ConsultationCTA
-        heading={<>Grow Your Business In<br /><span className="font-bold">Bangladesh Today</span></>}
+        heading={
+          <>
+            Grow Your Business In
+            <br />
+            <span className="font-bold">Bangladesh Today</span>
+          </>
+        }
         subheading="Get expert guidance, connect with the right partners, and expand your business with confidence."
         commitmentTitle="Why Partner With Us"
         commitmentItems={[
@@ -245,11 +270,30 @@ const Investment = () => {
         ]}
       />
 
-<RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties." },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses", desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements." },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role & Benefits of a Virtual CFO in Modern Businesses", desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making." },
-      ]} />
+      <RecentBlogs
+        blogs={[
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
+        ]}
+      />
 
       {/* Technological Partner Section */}
 

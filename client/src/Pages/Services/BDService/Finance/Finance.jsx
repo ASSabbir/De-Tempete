@@ -1,6 +1,6 @@
 // Finance.jsx
 import { BarChart3, PieChart, TrendingUp, Award } from "lucide-react";
-import { FaCheckCircle} from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { ShieldCheck, Users, DollarSign } from "lucide-react";
 
@@ -8,17 +8,63 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const servicesData = [
-  { title: "Accounting & Bookkeeping", icon: BarChart3, description: "We manage day-to-day bookkeeping, ledger updates, and financial record-keeping to ensure accurate, organized, and compliant accounts." },
-  { title: "Financial Reporting & Compliance", icon: ShieldCheck, description: "Preparation of monthly, quarterly, and annual financial statements with IFRS alignment, regulatory reporting, and audit-ready documentation." },
-  { title: "Budgeting, Forecasting & Cash Flow", icon: DollarSign, description: "We develop budgets, cash flow projections, and financial forecasts to support better planning and informed decision-making." },
-  { title: "Accounts Payable & Receivable", icon: Users, description: "Efficient management of invoices, vendor payments, receivables tracking, and reconciliations to maintain healthy cash flow." },
-  { title: "Financial Analysis & Management Insights", icon: PieChart, description: "Clear profitability analysis, KPI tracking, and performance reviews that provide actionable financial insights for sustainable growth." },
-  { title: "Internal Controls & Process Optimization", icon: TrendingUp, description: "We design and strengthen internal controls, approval workflows, and reporting structures to minimize risk and improve accuracy and efficiency." },
-  { title: "Cash Flow Management", icon: BarChart3, description: "We design and strengthen financial controls, approval workflows, and operating structures to minimize risk, improve accuracy, and enhance operational efficiency." },
-  { title: "Audit Support & Preparation", icon: ShieldCheck, description: "We support internal and external audits by preparing schedules, organizing documentation, and ensuring smooth audit completion." },
-  { title: "Accounting Software & ERP Guidance", icon: TrendingUp, description: "Digital accounting set up and support. We help you choose, implement, and optimize systems like QuickBooks, Xero, SAP, Tally, or customized ERP solutions based on your business size and needs." },
+  {
+    title: "Accounting & Bookkeeping",
+    icon: BarChart3,
+    description:
+      "We manage day-to-day bookkeeping, ledger updates, and financial record-keeping to ensure accurate, organized, and compliant accounts.",
+  },
+  {
+    title: "Financial Reporting & Compliance",
+    icon: ShieldCheck,
+    description:
+      "Preparation of monthly, quarterly, and annual financial statements with IFRS alignment, regulatory reporting, and audit-ready documentation.",
+  },
+  {
+    title: "Budgeting, Forecasting & Cash Flow",
+    icon: DollarSign,
+    description:
+      "We develop budgets, cash flow projections, and financial forecasts to support better planning and informed decision-making.",
+  },
+  {
+    title: "Accounts Payable & Receivable",
+    icon: Users,
+    description:
+      "Efficient management of invoices, vendor payments, receivables tracking, and reconciliations to maintain healthy cash flow.",
+  },
+  {
+    title: "Financial Analysis & Management Insights",
+    icon: PieChart,
+    description:
+      "Clear profitability analysis, KPI tracking, and performance reviews that provide actionable financial insights for sustainable growth.",
+  },
+  {
+    title: "Internal Controls & Process Optimization",
+    icon: TrendingUp,
+    description:
+      "We design and strengthen internal controls, approval workflows, and reporting structures to minimize risk and improve accuracy and efficiency.",
+  },
+  {
+    title: "Cash Flow Management",
+    icon: BarChart3,
+    description:
+      "We design and strengthen financial controls, approval workflows, and operating structures to minimize risk, improve accuracy, and enhance operational efficiency.",
+  },
+  {
+    title: "Audit Support & Preparation",
+    icon: ShieldCheck,
+    description:
+      "We support internal and external audits by preparing schedules, organizing documentation, and ensuring smooth audit completion.",
+  },
+  {
+    title: "Accounting Software & ERP Guidance",
+    icon: TrendingUp,
+    description:
+      "Digital accounting set up and support. We help you choose, implement, and optimize systems like QuickBooks, Xero, SAP, Tally, or customized ERP solutions based on your business size and needs.",
+  },
 ];
 
 const benefitsData = [
@@ -39,7 +85,9 @@ const Finance = () => {
           <>
             Finance & Accounting
             <br />
-            <span className="text-light-blue">Accurate Financials. Clear Insights.</span>
+            <span className="text-light-blue">
+              Accurate Financials. Clear Insights.
+            </span>
             <br />
             Better Decisions.
           </>
@@ -51,7 +99,12 @@ const Finance = () => {
         stats={[
           { icon: BarChart3, end: 9, label: "Years of Experience" },
           { icon: PieChart, end: 20, label: "Countries Covered" },
-          { icon: TrendingUp, end: 30000, duration: 3000, label: "Clients Served" },
+          {
+            icon: TrendingUp,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
           { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
         ]}
       />
@@ -107,7 +160,9 @@ const Finance = () => {
       <section className="py-24 bg-[#f8fbff]">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-5xl font-bold text-[#13264d] mb-4">What We Do</h2>
+            <h2 className="text-5xl font-bold text-[#13264d] mb-4">
+              What We Do
+            </h2>
             <p className="text-lg text-gray-600 leading-8">
               We provide comprehensive accounting and finance services for
               Bangladeshi businesses, including both standalone and retainer
@@ -118,12 +173,19 @@ const Finance = () => {
             {servicesData.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100">
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
+                >
                   <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
                     <Icon className="text-light-blue text-4xl" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">{service.title}</h3>
-                  <p className="text-gray-600 text-lg leading-7">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-7">
+                    {service.description}
+                  </p>
                 </div>
               );
             })}
@@ -135,23 +197,48 @@ const Finance = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">Why Choose Our Finance & Accounting Services</h2>
+            <h2 className="text-5xl font-bold text-[#16244b]">
+              Why Choose Our Finance & Accounting Services
+            </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {[
-              { title: "Expert Bangladesh Financial Knowledge", desc: "Deep understanding of local regulations, taxation, and reporting expectations across Bangladesh's business landscape." },
-              { title: "Accurate & Timely Records", desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data." },
-              { title: "Strategic Financial Insights", desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making." },
-              { title: "Scalable Accounting Solutions", desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function." },
-              { title: "Seamless Tech Integration", desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works." },
-              { title: "Trusted Long-Term Partner", desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business." },
+              {
+                title: "Expert Bangladesh Financial Knowledge",
+                desc: "Deep understanding of local regulations, taxation, and reporting expectations across Bangladesh's business landscape.",
+              },
+              {
+                title: "Accurate & Timely Records",
+                desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data.",
+              },
+              {
+                title: "Strategic Financial Insights",
+                desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making.",
+              },
+              {
+                title: "Scalable Accounting Solutions",
+                desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function.",
+              },
+              {
+                title: "Seamless Tech Integration",
+                desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works.",
+              },
+              {
+                title: "Trusted Long-Term Partner",
+                desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business.",
+              },
             ].map((feature, index) => (
-              <div key={index} className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300">
+              <div
+                key={index}
+                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
+              >
                 <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
                   <FaCheckCircle className="text-white text-xl" />
                 </div>
-                <h3 className="text-xl font-bold text-[#16244b] mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-[#16244b] mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600 leading-7">{feature.desc}</p>
               </div>
             ))}
@@ -168,11 +255,16 @@ const Finance = () => {
           </div>
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
             {benefitsData.map((benefit, index) => (
-              <div key={index} className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div
+                key={index}
+                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="text-white text-3xl" />
                 </div>
-                <h3 className="text-xl font-semibold text-white leading-snug">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold text-white leading-snug">
+                  {benefit.title}
+                </h3>
               </div>
             ))}
           </div>
@@ -180,7 +272,13 @@ const Finance = () => {
       </section>
 
       <ConsultationCTA
-        heading={<>Get Started<br /><span className="font-bold">Today</span></>}
+        heading={
+          <>
+            Get Started
+            <br />
+            <span className="font-bold">Today</span>
+          </>
+        }
         subheading="Whether you need full finance outsourcing, project support, or advisory services, we can streamline your accounting and financial management in Bangladesh."
         commitmentItems={[
           "Free initial consultation — no obligation",
@@ -192,9 +290,26 @@ const Finance = () => {
 
       <RecentBlogs
         blogs={[
-          { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties." },
-          { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses", desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements." },
-          { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role & Benefits of a Virtual CFO in Modern Businesses", desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making." },
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
         ]}
       />
     </div>

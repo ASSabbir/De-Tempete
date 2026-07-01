@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BarChart3, PieChart, TrendingUp, Award } from "lucide-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ShieldCheck, DollarSign } from "lucide-react";
@@ -6,6 +6,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -83,19 +84,42 @@ const Hr_Payroll = () => {
 
   return (
     <div className="w-full">
-       <HeroSection
+      <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
-        heading={<>Streamline Your HR & Payroll<br /><span className="text-light-blue">Solutions In Bangladesh</span></>}
-        description={<>Managing HR and payroll in Bangladesh involves dealing with evolving labor laws, tax regulations, and administrative complexities. <strong>de tempête</strong> provides <strong>end-to-end HR and payroll services</strong> that simplify workforce management, ensure compliance with Bangladesh labor laws, and deliver accurate payroll processing. Focus on growing your business while we handle your HR operations efficiently.</>}
+        heading={
+          <>
+            Streamline Your HR & Payroll
+            <br />
+            <span className="text-light-blue">Solutions In Bangladesh</span>
+          </>
+        }
+        description={
+          <>
+            Managing HR and payroll in Bangladesh involves dealing with evolving
+            labor laws, tax regulations, and administrative complexities.{" "}
+            <strong>de tempête</strong> provides{" "}
+            <strong>end-to-end HR and payroll services</strong> that simplify
+            workforce management, ensure compliance with Bangladesh labor laws,
+            and deliver accurate payroll processing. Focus on growing your
+            business while we handle your HR operations efficiently.
+          </>
+        }
       />
 
-      <StatsSection stats={[
-        { icon: BarChart3, end: 9, label: "Years of Experience" },
-        { icon: PieChart, end: 20, label: "Countries Covered" },
-        { icon: TrendingUp, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: BarChart3, end: 9, label: "Years of Experience" },
+          { icon: PieChart, end: 20, label: "Countries Covered" },
+          {
+            icon: TrendingUp,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* What We Offer Section */}
       <section className="py-24 bg-[#f8fbff]">
@@ -231,15 +255,39 @@ const Hr_Payroll = () => {
       </section>
 
       <ConsultationCTA
-        heading={<>Streamline Your HR &<br />Payroll <span className="font-bold">Today</span></>}
+        heading={
+          <>
+            Streamline Your HR &<br />
+            Payroll <span className="font-bold">Today</span>
+          </>
+        }
         subheading="Let us handle your HR and payroll complexities so you can focus on growth. Contact us for customised HR solutions tailored to your Bangladesh operations."
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties." },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses", desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements." },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role & Benefits of a Virtual CFO in Modern Businesses", desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making." },
-      ]} />
+      <RecentBlogs
+        blogs={[
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
+        ]}
+      />
     </div>
   );
 };

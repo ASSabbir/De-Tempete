@@ -15,12 +15,13 @@ import {
   LuHouse,
   LuUtensils,
   LuBriefcase,
-  LuChartNoAxesCombined
+  LuChartNoAxesCombined,
 } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const industries = [
   {
@@ -168,19 +169,32 @@ const Industry_Specific_Accounting_Solutions = () => {
 
   return (
     <div className="w-full">
-     <HeroSection
+      <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Industry-Specific Accounting Solutions"
-        heading={<>Industry-Specific Accounting<br /><span className="text-light-blue">Solutions In The UK</span></>}
+        heading={
+          <>
+            Industry-Specific Accounting
+            <br />
+            <span className="text-light-blue">Solutions In The UK</span>
+          </>
+        }
         description="Different industries require different financial strategies. Generic accounting does not address industry regulations, margins, tax structures, or compliance complexities. We deliver tailored accounting solutions built specifically for your sector."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 0, label: "Years of Experience" },
-        { icon: Globe, end: 0, label: "Countries Covered" },
-        { icon: Handshake, end: 910, duration: 2500, label: "Clients Served" },
-        { icon: Medal, end: 3, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 0, label: "Years of Experience" },
+          { icon: Globe, end: 0, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 910,
+            duration: 2500,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 3, label: "Awards Received" },
+        ]}
+      />
 
       {/* Why Industry Expertise Matters */}
       <section className="py-20 bg-white">
@@ -373,7 +387,18 @@ const Industry_Specific_Accounting_Solutions = () => {
       </section>
 
       <ConsultationCTA
-        heading={<>Get Accounting That<br />Understands <span className="font-bold">Your<br />Industry</span></>}
+        heading={
+          <>
+            Get Accounting That
+            <br />
+            Understands{" "}
+            <span className="font-bold">
+              Your
+              <br />
+              Industry
+            </span>
+          </>
+        }
         subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
         highlightText="Your business deserves financial expertise designed for your sector — not generic solutions."
       />

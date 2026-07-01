@@ -6,6 +6,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const whyChoose = [
   { title: "Accurate, timely, and compliant bookkeeping" },
@@ -21,16 +22,29 @@ const Bookkeeping_Financial_Management = () => {
       <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bookkeeping & Financial Management"
-        heading={<>Stay On Top Of Your Finances.<br /><span className="text-light-blue">Make Every Decision Count.</span></>}
+        heading={
+          <>
+            Stay On Top Of Your Finances.
+            <br />
+            <span className="text-light-blue">Make Every Decision Count.</span>
+          </>
+        }
         description="Efficient bookkeeping and financial management are the backbone of every successful business. Whether you're a growing SME or an established company, our services ensure accurate records, clear insights, and data-driven decisions, so you can focus on growth, not paperwork."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Accurate & Timely Bookkeeping */}
       <section className="py-20 bg-white">
@@ -247,17 +261,19 @@ const Bookkeeping_Financial_Management = () => {
         </div>
       </section>
 
-     <ConsultationCTA
-        heading={<>Take Control Of Your<br />Finances <span className="font-bold">Today</span></>}
+      <ConsultationCTA
+        heading={
+          <>
+            Take Control Of Your
+            <br />
+            Finances <span className="font-bold">Today</span>
+          </>
+        }
         bodyText="Professional bookkeeping and financial management are just a click away. Reduce errors, save time, and gain complete clarity on your business finances."
         highlightText="Talk to Our Financial Experts"
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to" },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity", desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process," },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role and Benefits of a Virtual CFO in Modern Businesses", desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual" },
-      ]} />
+      <RecentBlogs blogs={blogPosts} />
     </div>
   );
 };

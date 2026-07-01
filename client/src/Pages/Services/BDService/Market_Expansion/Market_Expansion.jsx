@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
@@ -8,8 +8,9 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
-const businessData = [ 
+const businessData = [
   {
     title: "Private Limited Company",
     image:
@@ -118,17 +119,32 @@ const Market_Expansion = () => {
       <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
-        heading={<>Expand With Confidence<br />Establish Your Business Presence<br /><span className="text-light-blue">In Bangladesh The Right Way</span></>}
+        heading={
+          <>
+            Expand With Confidence
+            <br />
+            Establish Your Business Presence
+            <br />
+            <span className="text-light-blue">In Bangladesh The Right Way</span>
+          </>
+        }
         description="Bangladesh is one of the world's fastest-growing economies. Our expert team helps international companies establish their business presence in Bangladesh with confidence, supporting every step from registration to market entry."
         ctaText="Get a Consultation"
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -582,7 +598,13 @@ const Market_Expansion = () => {
       {/* ================= CTA Section ================= */}
 
       <ConsultationCTA
-        heading={<>Start Your Bangladesh<br />Expansion<span className="font-bold"> Today</span></>}
+        heading={
+          <>
+            Start Your Bangladesh
+            <br />
+            Expansion<span className="font-bold"> Today</span>
+          </>
+        }
         subheading="Get expert guidance, avoid delays and establish your Bangladesh presence with complete confidence."
         commitmentItems={[
           "Free initial consultation — no obligation",
@@ -595,11 +617,30 @@ const Market_Expansion = () => {
       {/* Blog Section */}
       {/* ================= Recent Blogs ================= */}
 
-     <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties." },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses", desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements." },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role & Benefits of a Virtual CFO in Modern Businesses", desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making." },
-      ]} />
+      <RecentBlogs
+        blogs={[
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
+        ]}
+      />
     </div>
   );
 };
