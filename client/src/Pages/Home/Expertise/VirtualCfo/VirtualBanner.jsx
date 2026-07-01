@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import img1 from '../../../../asstes/Images/Home/freepik__virtual-cfo__20675.webp'
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 
@@ -100,7 +99,7 @@ function StatItem({ icon, value, suffix, label, start }) {
 }
 
 
-const VirtualBanner = () => {
+const VirtualBanner = ({img,text}) => {
     const [started, setStarted] = useState(false);
       const sectionRef = useRef(null);
     
@@ -121,7 +120,7 @@ const VirtualBanner = () => {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `url('${img1}')`,
+                        backgroundImage: `url('${img}')`,
                     }}
                 />
 
@@ -146,7 +145,7 @@ const VirtualBanner = () => {
                             custom={0}
                             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight"
                         >
-                            Your Strategic Virtual<br />CFO Partner
+                            {text[0]}
                         </motion.h1>
 
                         {/* Subtitle */}
@@ -158,8 +157,7 @@ const VirtualBanner = () => {
                             custom={0.15}
                             className="text-[#1a9fd4] font-semibold text-base sm:text-lg leading-snug"
                         >
-                            Empowering Growth with Expert Financial<br className="hidden sm:block" />
-                            Leadership — Virtually
+                             {text[1]}
                         </motion.p>
 
                         {/* Description */}
@@ -171,9 +169,7 @@ const VirtualBanner = () => {
                             custom={0.3}
                             className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md"
                         >
-                            Get access to professional CFO expertise without the overhead cost of a full-time hire.
-                            Our virtual CFO services help you make smarter financial decisions, improve profitability,
-                            and scale confidently.
+                             {text[2]}
                         </motion.p>
 
                         {/* CTA Button */}
@@ -189,7 +185,7 @@ const VirtualBanner = () => {
                                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-sm text-white transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 hover:-translate-y-0.5 w-fit"
                                 style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)", border: "1px solid rgba(255,255,255,0.15)" }}
                             >
-                                Book An Appointment With CFO
+                                 {text[3]}
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>

@@ -11,12 +11,12 @@ const regions = [
     flag: uae,
     shortName: "UAE",
     description:
-      "Navigating business finances in the UAE requires expertise in VAT, compliance, and free zone regulations. Our Virtual CFOs help you manage cash flow, ensure audit readiness, and plan strategically for expansion, whether you operate in mainland or free zone.",
+      "Our experts guide you through corporate tax, VAT, and compliance frameworks — ensuring seamless operations in both mainland and free zones.",
     focusAreas: [
-      "VAT compliance",
-      "Budgeting & forecasting",
-      "Free zone accounting",
-      "Corporate tax planning",
+      "Corporate tax compliance",
+      "Free zone tax strategy",
+      "VAT filing",
+      "Audit readiness",
     ],
   },
   {
@@ -25,12 +25,12 @@ const regions = [
     flag: ksa,
     shortName: "KSA",
     description:
-      "With Vision 2030 driving rapid business transformation, Saudi companies need strong financial leadership. Our Virtual CFOs specialize in ZATCA compliance, VAT, and capital structuring to support your growth and ensure full financial transparency.",
+      "Navigate ZATCA regulations and optimize your tax structure to align with Saudi Vision 2030.",
     focusAreas: [
-      "ZATCA & VAT compliance",
-      "Cost control",
-      "Cash flow optimization",
-      "Investment readiness",
+      "ZATCA compliance",
+      "Transfer pricing",
+      "VAT planning",
+      "Corporate tax strategy",
     ],
   },
   {
@@ -39,12 +39,12 @@ const regions = [
     flag: bd,
     shortName: "Bangladesh",
     description:
-      "For growing businesses in Bangladesh, access to strategic financial management can transform operations. Our Virtual CFOs help you optimize budgets, manage tax obligations, and build long-term profitability — all without the cost of an in-house CFO.",
+      "We help local businesses ensure full tax compliance and identify strategic savings in a complex tax environment.",
     focusAreas: [
-      "Tax & regulatory compliance",
-      "Financial forecasting",
-      "Investment planning",
-      "Business performance analysis",
+      "Corporate tax filing",
+      "Cross-border advisory",
+      "Withholding tax",
+      "Tax efficiency",
     ],
   },
   {
@@ -53,17 +53,17 @@ const regions = [
     flag: uk,
     shortName: "UK",
     description:
-      "Stay ahead in one of the world’s most competitive business markets. Our UK-based Virtual CFOs help startups and SMEs manage cash flow, meet HMRC requirements, and drive strategic growth through real-time financial insights and planning.",
+      "Stay ahead of HMRC regulations and manage your business taxes strategically to enhance profitability and compliance.",
     focusAreas: [
       "HMRC compliance",
-      "Strategic planning",
-      "Profit optimization",
-      "Financial reporting (FRS)",
+      "VAT planning",
+      "Corporate tax planning",
+      "Audit & filing",
     ],
   },
 ];
 
-export default function HireCFORegion() {
+export default function HireTaxRegion() {
   const [active, setActive] = useState("uae");
 
   const current = regions.find((r) => r.id === active);
@@ -75,7 +75,7 @@ export default function HireCFORegion() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-4">
-            Hire A Virtual CFO <span className="font-extrabold">In Your Region</span>
+            Tax Advisory <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Our Virtual CFO services are available worldwide, but we understand every market operates
@@ -117,7 +117,7 @@ export default function HireCFORegion() {
 
             {/* Title */}
             <h3 className="text-2xl sm:text-3xl lg:text-4xl text-[#0d1e4a] font-normal">
-              Virtual CFO Services In{" "}
+              Tax Advisory Services In{" "}
               <span className="font-extrabold">{current.shortName}</span>
             </h3>
 
