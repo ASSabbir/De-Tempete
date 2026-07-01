@@ -27,6 +27,14 @@ import Branding_Growth from "../Pages/Services/UAEService/Branding_Growth/Brandi
 import Technology_UAE from "../Pages/Services/UAEService/Technology_UAE/Technology_UAE";
 import UAEInvestment from "../Pages/Services/UAEService/Investment/Investment";
 import Business_Advisory from "../Pages/Services/UKService/Business_Advisory/Business_Advisory";
+import KSAMarketExpansionSetupAdvisory from "../Pages/Services/KSAService/Market_Expansion_Setup_Advisory/Market_Expansion_Setup_Advisory";
+import KSARegulatoryCompliance from "../Pages/Services/KSAService/Regulatory_Compliance/Regulatory_Compliance";
+import KSAFinanceAccounting from "../Pages/Services/KSAService/Finance_Accounting/Finance_Accounting";
+import KSATaxation from "../Pages/Services/KSAService/Taxation_KSA/Taxation_KSA";
+import KSAHRPayrollSolutions from "../Pages/Services/KSAService/HR_Payroll_Solutions/HR_Payroll_Solutions";
+import KSABrandingGrowth from "../Pages/Services/KSAService/Branding_Growth/Branding_Growth";
+import KSATechnology from "../Pages/Services/KSAService/Technology/Technology";
+import KSAInvestment from "../Pages/Services/KSAService/Investment/Investment";
 
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
@@ -79,7 +87,7 @@ const Routes = createBrowserRouter([
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
       {path:"/contact" , element : <ContactUs></ContactUs> },
 
-      // Hire Based On Expertise routes 
+      // Hire Based On Expertise routes
       {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
       {path:"/business-valuation" , element : <BusinessValuation></BusinessValuation> },
       {path:"/Tax-Advisory" , element : <TaxAdvisory></TaxAdvisory> },
@@ -158,9 +166,41 @@ const Routes = createBrowserRouter([
         path: "/services/uae/investment",
         element: <UAEInvestment></UAEInvestment>,
       },
-      {
+       {
         path: "/services/bd/regulatory",
         element: <Business_Advisory></Business_Advisory>,
+      },
+      {
+        path: "/services/ksa/market-expansion",
+        element: <KSAMarketExpansionSetupAdvisory></KSAMarketExpansionSetupAdvisory>,
+      },
+      {
+        path: "/services/ksa/regulatory",
+        element: <KSARegulatoryCompliance></KSARegulatoryCompliance>,
+      },
+      {
+        path: "/services/ksa/finance",
+        element: <KSAFinanceAccounting></KSAFinanceAccounting>,
+      },
+      {
+        path: "/services/ksa/taxation",
+        element: <KSATaxation></KSATaxation>,
+      },
+      {
+        path: "/services/ksa/hr-payroll",
+        element: <KSAHRPayrollSolutions></KSAHRPayrollSolutions>,
+      },
+      {
+        path: "/services/ksa/branding",
+        element: <KSABrandingGrowth></KSABrandingGrowth>,
+      },
+      {
+        path: "/services/ksa/automation",
+        element: <KSATechnology></KSATechnology>,
+      },
+      {
+        path: "/services/ksa/investment",
+        element: <KSAInvestment></KSAInvestment>,
       },
 
 
