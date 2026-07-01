@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { CalendarDays, Globe, Handshake, Medal, ChevronDown } from "lucide-react";
+import {
+  CalendarDays,
+  Globe,
+  Handshake,
+  Medal,
+  ChevronDown,
+} from "lucide-react";
 import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { LuChartNoAxesCombined } from "react-icons/lu";
@@ -7,6 +13,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const businessData = [
   {
@@ -107,16 +114,31 @@ const Market_Expansion = () => {
         alt="Bangladesh Business Setup"
         minHeight="h-screen"
         overlay="bg-[#0E1937]/80"
-        heading={<>Enter UK Business Market<br /><span className="text-light-blue">Strategic Setup & Expansion</span><br /><span className="font-normal">Advisory For Growing Companies</span></>}
+        heading={
+          <>
+            Enter UK Business Market
+            <br />
+            <span className="text-light-blue">Strategic Setup & Expansion</span>
+            <br />
+            <span className="font-normal">Advisory For Growing Companies</span>
+          </>
+        }
         description="The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. de tempête supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -569,17 +591,47 @@ const Market_Expansion = () => {
         </div>
       </section>
 
-    <ConsultationCTA
-        heading={<>Start Your UAE<br />Expansion<span className="font-bold"> Today</span></>}
+      <ConsultationCTA
+        heading={
+          <>
+            Start Your UAE
+            <br />
+            Expansion<span className="font-bold"> Today</span>
+          </>
+        }
         subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
-        commitmentItems={["Free initial tax consultation — no obligation", "100% confidentiality and secure handling of data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
+        commitmentItems={[
+          "Free initial tax consultation — no obligation",
+          "100% confidentiality and secure handling of data",
+          "Region-specific tax experts",
+          "Transparent and practical advice tailored to your needs",
+        ]}
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties." },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses", desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements." },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role & Benefits of a Virtual CFO in Modern Businesses", desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making." },
-      ]} />
+      <RecentBlogs
+        blogs={[
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
+        ]}
+      />
     </div>
   );
 };

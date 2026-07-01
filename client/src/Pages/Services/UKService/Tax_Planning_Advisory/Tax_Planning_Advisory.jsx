@@ -6,6 +6,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const whyChoose = [
   "Tailored tax planning for individuals and businesses",
@@ -18,19 +19,34 @@ const whyChoose = [
 const Tax_Planning_Advisory = () => {
   return (
     <div className="w-full">
-     <HeroSection
+      <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Tax Planning & Advisory"
-        heading={<>Smart Tax Planning.<br /><span className="text-light-blue">Stronger Financial Outcomes.</span></>}
+        heading={
+          <>
+            Smart Tax Planning.
+            <br />
+            <span className="text-light-blue">
+              Stronger Financial Outcomes.
+            </span>
+          </>
+        }
         description="From corporate tax strategy to personal tax optimisation, our Tax Planning & Advisory services ensure full compliance, reduced liabilities, and a clear roadmap for long-term financial efficiency. Whether you're a business, investor, or individual, we help you navigate complex tax regulations with clarity and confidence."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Corporate Tax Planning */}
       <section className="py-20 bg-white">
@@ -219,17 +235,19 @@ const Tax_Planning_Advisory = () => {
         </div>
       </section>
 
-    <ConsultationCTA
-        heading={<>Plan Smarter. Save<br />More. <span className="font-bold">Stay Compliant.</span></>}
+      <ConsultationCTA
+        heading={
+          <>
+            Plan Smarter. Save
+            <br />
+            More. <span className="font-bold">Stay Compliant.</span>
+          </>
+        }
         bodyText="Get expert tax guidance designed to protect your income, assets, and long-term financial goals."
         highlightText="Speak to Our Tax Experts"
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to" },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity", desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process," },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role and Benefits of a Virtual CFO in Modern Businesses", desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual" },
-      ]} />
+      <RecentBlogs blogs={blogPosts} />
     </div>
   );
 };

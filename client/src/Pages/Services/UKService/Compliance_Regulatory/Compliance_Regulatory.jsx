@@ -18,6 +18,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const accountsCards = [
   {
@@ -146,19 +147,48 @@ const Compliance_Regulatory = () => {
 
   return (
     <div className="w-full">
-    <HeroSection
+      <HeroSection
         bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="UK Compliance"
-        heading={<>Stay Compliant. Stay Confident.<br /><span className="text-light-blue">We Simplify UK Financial &</span><br />Regulatory Obligations.</>}
-        description={<>The UK regulatory landscape is complex, covering HMRC filings to payroll compliance, VAT rules, and CIS regulations. Whether you're a startup, SME, contractor, or growing business, our Compliance & Regulatory Services ensure accuracy, transparency, and full statutory compliance with zero hassle.<br /><br /><span className="text-lg md:text-xl text-gray-300">We handle the paperwork, deadlines, and reporting, so you stay focused on running your business.</span></>}
+        heading={
+          <>
+            Stay Compliant. Stay Confident.
+            <br />
+            <span className="text-light-blue">We Simplify UK Financial &</span>
+            <br />
+            Regulatory Obligations.
+          </>
+        }
+        description={
+          <>
+            The UK regulatory landscape is complex, covering HMRC filings to
+            payroll compliance, VAT rules, and CIS regulations. Whether you're a
+            startup, SME, contractor, or growing business, our Compliance &
+            Regulatory Services ensure accuracy, transparency, and full
+            statutory compliance with zero hassle.
+            <br />
+            <br />
+            <span className="text-lg md:text-xl text-gray-300">
+              We handle the paperwork, deadlines, and reporting, so you stay
+              focused on running your business.
+            </span>
+          </>
+        }
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Problem Statement */}
       <section className="py-24 bg-white">
@@ -563,16 +593,23 @@ const Compliance_Regulatory = () => {
       </section>
 
       <ConsultationCTA
-        heading={<>Start Your UAE<br />Expansion <span className="font-bold">Today</span></>}
+        heading={
+          <>
+            Start Your UAE
+            <br />
+            Expansion <span className="font-bold">Today</span>
+          </>
+        }
         subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
-        commitmentItems={["Free initial tax consultation — no obligation", "100% confidentiality and secure handling of data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
+        commitmentItems={[
+          "Free initial tax consultation — no obligation",
+          "100% confidentiality and secure handling of data",
+          "Region-specific tax experts",
+          "Transparent and practical advice tailored to your needs",
+        ]}
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to" },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity", desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process," },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role and Benefits of a Virtual CFO in Modern Businesses", desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual" },
-      ]} />
+      <RecentBlogs blogs={blogPosts} />
     </div>
   );
 };

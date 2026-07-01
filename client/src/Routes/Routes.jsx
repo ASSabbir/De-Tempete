@@ -62,6 +62,9 @@ import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
 import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
+import CouncilTaxArrangementPlan from "../Pages/Blog/CouncilTaxArrangementPlan";
+import SelfAssessmentTaxReturnProcess from "../Pages/Blog/SelfAssessmentTaxReturnProcess";
+import VirtualCFORoleBenefits from "../Pages/Blog/VirtualCFORoleBenefits";
 import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
 import ContactUs from "../Pages/Contact/ContactUs";
 import VirtualCFO from "../Pages/Home/Expertise/VirtualCfo/VirtualCFO";
@@ -233,6 +236,9 @@ const Routes = createBrowserRouter([
       // News & Events
       { path: "/news-events", element: <NewsEventsPage /> },
       { path: "/news-events/:slug", element: <NewsEventDetail /> },
+      { path: "/blog/council-tax-arrangement-plan", element: <CouncilTaxArrangementPlan /> },
+      { path: "/blog/self-assessment-tax-return-process", element: <SelfAssessmentTaxReturnProcess /> },
+      { path: "/blog/virtual-cfo-role-benefits", element: <VirtualCFORoleBenefits /> },
 
     ]
   }
