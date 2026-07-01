@@ -3,8 +3,8 @@ import { Link } from "react-router";
 const services = [
   {
     title: "Virtual CFO",
-    description:
-      "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, and Bangladesh.",
+    path:'/virtual-cfo',
+    description: "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, and Bangladesh.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -34,8 +34,8 @@ const services = [
   },
   {
     title: "Business Valuation",
-    description:
-      "Unlock your company's true worth with precise business valuation services for global markets.",
+    path:'/business-valuation',
+    description: "Unlock your company's true worth with precise business valuation services for global markets.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -89,8 +89,8 @@ const services = [
   },
   {
     title: "Tax Advisory",
-    description:
-      "Maximize savings and stay compliant with smart tax advisory and planning in the UK, UAE, KSA, and Bangladesh.",
+    path:'/Tax-Advisory',
+    description: "Maximize savings and stay compliant with smart tax advisory and planning in the UK, UAE, KSA, and Bangladesh.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -116,8 +116,8 @@ const services = [
   },
   {
     title: "Bookkeeping",
-    description:
-      "Streamline accounting and maintain accurate bookkeeping for transparent financial records.",
+    path:'/bookkeeping',
+    description: "Streamline accounting and maintain accurate bookkeeping for transparent financial records.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -157,8 +157,8 @@ const services = [
   },
   {
     title: "HR & Payroll",
-    description:
-      "Simplify operations with seamless HR management and payroll services for multi-country compliance.",
+    path:'/hr-payroll',
+    description: "Simplify operations with seamless HR management and payroll services for multi-country compliance.",
     highlight: true,
     icon: (
       <svg
@@ -194,8 +194,8 @@ const services = [
   },
   {
     title: "Investment Readiness",
-    description:
-      "Prepare for funding and growth with structured investment readiness solutions worldwide.",
+    path:'/investment-readiness',
+    description: "Prepare for funding and growth with structured investment readiness solutions worldwide.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -233,8 +233,8 @@ const services = [
   },
   {
     title: "Due Diligence",
-    description:
-      "Secure deals and partnerships with thorough financial due diligence for cross-border transactions.",
+    path:'/due-diligence',
+    description: "Secure deals and partnerships with thorough financial due diligence for cross-border transactions.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -278,8 +278,8 @@ const services = [
   },
   {
     title: "Post Investment Monitoring",
-    description:
-      "Track performance and ensure value creation with continuous post-investment monitoring globally.",
+    path:'/post-investment-monitoring',
+    description: "Track performance and ensure value creation with continuous post-investment monitoring globally.",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -333,7 +333,8 @@ export default function HireBased() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  rounded-2xl ">
           {services.map((s, i) => (
-            <div
+            <a
+              href={s.path}
               key={s.title}
               className={`group relative flex flex-col gap-4 p-7 hover:shadow-xl lg:p-9 transition-all duration-300 cursor-pointer
                 `}
@@ -357,7 +358,7 @@ export default function HireBased() {
                   {s.description}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
 
           {/* CTA cell — 9th cell */}
