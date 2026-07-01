@@ -15,6 +15,26 @@ import UKMarketExpansion from "../Pages/Services/UKService/Market_Expansion/Mark
 import Compliance_Regulatory from "../Pages/Services/UKService/Compliance_Regulatory/Compliance_Regulatory";
 import Bookkeeping_Financial_Management from "../Pages/Services/UKService/Bookkeeping_Financial_Management/Bookkeeping_Financial_Management";
 import Tax_Planning_Advisory from "../Pages/Services/UKService/Tax_Planning_Advisory/Tax_Planning_Advisory";
+import Virtual_CFO_Outsourced_Accounting from "../Pages/Services/UKService/Virtual_CFO_Outsourced_Accounting/Virtual_CFO_Outsourced_Accounting";
+import UKTechnology from "../Pages/Services/UKService/Technology/Technology";
+import Industry_Specific_Accounting_Solutions from "../Pages/Services/UKService/Industry_Specific_Accounting_Solutions/Industry_Specific_Accounting_Solutions";
+import Market_Expansion_Setup_Advisory from "../Pages/Services/UAEService/Market_Expansion_Setup_Advisory/Market_Expansion_Setup_Advisory";
+import Regulatory_Compliance from "../Pages/Services/UAEService/Regulatory_Compliance/Regulatory_Compliance";
+import Finance_Accounting from "../Pages/Services/UAEService/Finance_Accounting/Finance_Accounting";
+import Taxation_UAE from "../Pages/Services/UAEService/Taxation_UAE/Taxation_UAE";
+import HR_Payroll_Solutions from "../Pages/Services/UAEService/HR_Payroll_Solutions/HR_Payroll_Solutions";
+import Branding_Growth from "../Pages/Services/UAEService/Branding_Growth/Branding_Growth";
+import Technology_UAE from "../Pages/Services/UAEService/Technology_UAE/Technology_UAE";
+import UAEInvestment from "../Pages/Services/UAEService/Investment/Investment";
+import Business_Advisory from "../Pages/Services/UKService/Business_Advisory/Business_Advisory";
+import KSAMarketExpansionSetupAdvisory from "../Pages/Services/KSAService/Market_Expansion_Setup_Advisory/Market_Expansion_Setup_Advisory";
+import KSARegulatoryCompliance from "../Pages/Services/KSAService/Regulatory_Compliance/Regulatory_Compliance";
+import KSAFinanceAccounting from "../Pages/Services/KSAService/Finance_Accounting/Finance_Accounting";
+import KSATaxation from "../Pages/Services/KSAService/Taxation_KSA/Taxation_KSA";
+import KSAHRPayrollSolutions from "../Pages/Services/KSAService/HR_Payroll_Solutions/HR_Payroll_Solutions";
+import KSABrandingGrowth from "../Pages/Services/KSAService/Branding_Growth/Branding_Growth";
+import KSATechnology from "../Pages/Services/KSAService/Technology/Technology";
+import KSAInvestment from "../Pages/Services/KSAService/Investment/Investment";
 
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
@@ -42,6 +62,9 @@ import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
 import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
+import CouncilTaxArrangementPlan from "../Pages/Blog/CouncilTaxArrangementPlan";
+import SelfAssessmentTaxReturnProcess from "../Pages/Blog/SelfAssessmentTaxReturnProcess";
+import VirtualCFORoleBenefits from "../Pages/Blog/VirtualCFORoleBenefits";
 import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
 import ContactUs from "../Pages/Contact/ContactUs";
 import VirtualCFO from "../Pages/Home/Expertise/VirtualCfo/VirtualCFO";
@@ -67,7 +90,7 @@ const Routes = createBrowserRouter([
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
       {path:"/contact" , element : <ContactUs></ContactUs> },
 
-      // Hire Based On Expertise routes 
+      // Hire Based On Expertise routes
       {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
       {path:"/business-valuation" , element : <BusinessValuation></BusinessValuation> },
       {path:"/Tax-Advisory" , element : <TaxAdvisory></TaxAdvisory> },
@@ -88,16 +111,99 @@ const Routes = createBrowserRouter([
         element: <UKMarketExpansion></UKMarketExpansion>,
       },
       {
-        path: "/services/uk/compliance",
+        path: "/services/uk/compliances",
         element: <Compliance_Regulatory></Compliance_Regulatory>,
       },
       {
         path: "/services/uk/bookkeeping",
         element: <Bookkeeping_Financial_Management></Bookkeeping_Financial_Management>,
       },
-      {
+       {
         path: "/services/uk/tax-planning",
         element: <Tax_Planning_Advisory></Tax_Planning_Advisory>,
+      },
+      {
+        path: "/services/uk/virtual-cfo",
+        element: <Virtual_CFO_Outsourced_Accounting></Virtual_CFO_Outsourced_Accounting>,
+      },
+      {
+        path: "/services/uk/mtd",
+        element: <UKTechnology></UKTechnology>,
+      },
+      {
+        path: "/services-uk/industry-specific-accounting-solutions",
+        element: <Industry_Specific_Accounting_Solutions></Industry_Specific_Accounting_Solutions>,
+      },
+
+
+
+      {
+        path: "/services/uae/market-expansion",
+        element: <Market_Expansion_Setup_Advisory></Market_Expansion_Setup_Advisory>,
+      },
+      {
+        path: "/services/uk/compliance",
+        element: <Regulatory_Compliance></Regulatory_Compliance>,
+      },
+      {
+        path: "/services/uae/finance",
+        element: <Finance_Accounting></Finance_Accounting>,
+      },
+      {
+        path: "/services/uae/taxation",
+        element: <Taxation_UAE></Taxation_UAE>,
+      },
+      {
+        path: "/services/uae/hr-payroll",
+        element: <HR_Payroll_Solutions></HR_Payroll_Solutions>,
+      },
+      {
+        path: "/services/uae/branding",
+        element: <Branding_Growth></Branding_Growth>,
+      },
+      {
+        path: "/services/uae/e-invoicing",
+        element: <Technology_UAE></Technology_UAE>,
+      },
+      {
+        path: "/services/uae/investment",
+        element: <UAEInvestment></UAEInvestment>,
+      },
+       {
+        path: "/services/bd/regulatory",
+        element: <Business_Advisory></Business_Advisory>,
+      },
+      {
+        path: "/services/ksa/market-expansion",
+        element: <KSAMarketExpansionSetupAdvisory></KSAMarketExpansionSetupAdvisory>,
+      },
+      {
+        path: "/services/ksa/regulatory",
+        element: <KSARegulatoryCompliance></KSARegulatoryCompliance>,
+      },
+      {
+        path: "/services/ksa/finance",
+        element: <KSAFinanceAccounting></KSAFinanceAccounting>,
+      },
+      {
+        path: "/services/ksa/taxation",
+        element: <KSATaxation></KSATaxation>,
+      },
+      {
+        path: "/services/ksa/hr-payroll",
+        element: <KSAHRPayrollSolutions></KSAHRPayrollSolutions>,
+      },
+      {
+        path: "/services/ksa/branding",
+        element: <KSABrandingGrowth></KSABrandingGrowth>,
+      },
+      {
+        path: "/services/ksa/automation",
+        element: <KSATechnology></KSATechnology>,
+      },
+      {
+        path: "/services/ksa/investment",
+        element: <KSAInvestment></KSAInvestment>,
       },
 
 
@@ -130,6 +236,9 @@ const Routes = createBrowserRouter([
       // News & Events
       { path: "/news-events", element: <NewsEventsPage /> },
       { path: "/news-events/:slug", element: <NewsEventDetail /> },
+      { path: "/blog/council-tax-arrangement-plan", element: <CouncilTaxArrangementPlan /> },
+      { path: "/blog/self-assessment-tax-return-process", element: <SelfAssessmentTaxReturnProcess /> },
+      { path: "/blog/virtual-cfo-role-benefits", element: <VirtualCFORoleBenefits /> },
 
     ]
   }

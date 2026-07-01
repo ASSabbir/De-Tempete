@@ -1,9 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
-import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
+import {
+  CalendarDays,
+  Globe,
+  Handshake,
+  Medal,
+  ChevronDown,
+} from "lucide-react";
 import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { LuChartNoAxesCombined } from "react-icons/lu";
+import { HeroSection } from "@/Components/Shared/HeroSection";
+import { StatsSection } from "@/Components/Shared/StatsSection";
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
+import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 
 const businessData = [
   {
@@ -62,29 +72,6 @@ import {
   LuHandCoins,
 } from "react-icons/lu";
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return count;
-};
-
 const Market_Expansion = () => {
   const [expandedItem, setExpandedItem] = useState(null);
 
@@ -122,121 +109,40 @@ const Market_Expansion = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="pt-40 pb-24 relative h-screen flex items-center justify-center text-white overflow-hidden">
-        {/* Background Image */}
-        <img
-          src="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
-          alt="Bangladesh Business Setup"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0E1937]/80"></div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold  tracking-tight">
+      <HeroSection
+        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        alt="Bangladesh Business Setup"
+        minHeight="h-screen"
+        overlay="bg-[#0E1937]/80"
+        heading={
+          <>
             Enter UK Business Market
             <br />
-            <span className="text-[#4AC4DE]">Strategic Setup & Expansion</span>
+            <span className="text-light-blue">Strategic Setup & Expansion</span>
             <br />
             <span className="font-normal">Advisory For Growing Companies</span>
-          </h1>
+          </>
+        }
+        description="The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. de tempête supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion."
+      />
 
-          <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-8 overflow-visible">
-            <span className="inline-block">The UK</span> is one of the world's
-            leading destinations for startups, investors, consultants, and
-            international businesses due to its strong economy, transparent
-            regulations, and global business connectivity. de tempête supports
-            businesses with UK company formation, market entry planning,
-            compliance guidance, and operational setup support for smooth
-            business expansion.
-          </p>
-
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-[#4AC4DE] hover:border-[#4AC4DE] hover:text-black duration-300">
-            Book a Consultation
-          </button>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-30">
-          <div className="grid lg:grid-cols-5 gap-10 items-center">
-            {/* Heading */}
-            <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
-                Why Choose Us?
-              </h2>
-            </div>
-
-            {/* Stat 1 */}
-            <div className="flex items-center gap-5">
-              <CalendarDays size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={9} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Years of Experience
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 2 */}
-            <div className="flex items-center gap-5">
-              <Globe size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={20} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Countries Covered
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 3 */}
-            <div className="flex items-center gap-5">
-              <Handshake size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={30000} duration={3000} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Clients Served
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 4 */}
-            <div className="flex items-center gap-5">
-              <Medal size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={120} duration={2500} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Awards Received
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StatsSection
+        stats={[
+          { icon: CalendarDays, end: 9, label: "Years of Experience" },
+          { icon: Globe, end: 20, label: "Countries Covered" },
+          {
+            icon: Handshake,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
@@ -277,7 +183,7 @@ const Market_Expansion = () => {
 
                   {/* Overlay */}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
 
                   {/* Icon */}
 
@@ -303,7 +209,7 @@ const Market_Expansion = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 flex-shrink-0" />
+                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 shrink-0" />
 
                         <span>{text}</span>
                       </li>
@@ -322,7 +228,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -333,7 +239,7 @@ const Market_Expansion = () => {
       {/* ================= Go-To-Market Strategy ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
@@ -392,11 +298,13 @@ const Market_Expansion = () => {
               const Icon = item.icon;
 
               return (
-                <div className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
-    item.highlight
-      ? "hover:-translate-y-2 hover:shadow-2xl"
-      : "hover:-translate-y-1 hover:shadow-lg"
-  }`}>
+                <div
+                  className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
+                    item.highlight
+                      ? "hover:-translate-y-2 hover:shadow-2xl"
+                      : "hover:-translate-y-1 hover:shadow-lg"
+                  }`}
+                >
                   <Icon className="text-5xl text-slate-500 mb-6" />
 
                   <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
@@ -444,7 +352,7 @@ const Market_Expansion = () => {
                     <img
                       src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
                       alt="check"
-                      className="w-5 h-5 object-contain flex-shrink-0"
+                      className="w-5 h-5 object-contain shrink-0"
                     />
 
                     <span className="font-semibold text-gray-900">
@@ -469,23 +377,23 @@ const Market_Expansion = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-28">
+        <div className="max-w-[1600px] mx-auto px-6 space-y-28">
           {/* ===================== Bank Account Opening ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/Dubai-bank.webp"
                 alt="Bank Account Opening"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
 
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
@@ -511,7 +419,7 @@ const Market_Expansion = () => {
                   "Compliance onboarding preparation",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -522,10 +430,10 @@ const Market_Expansion = () => {
 
           {/* ===================== Trademark ===================== */}
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             {/* Content */}
 
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
@@ -550,7 +458,7 @@ const Market_Expansion = () => {
                   "IP renewal and protection strategy",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl flex-shrink-0" />
+                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -560,11 +468,11 @@ const Market_Expansion = () => {
 
             {/* Image */}
 
-            <div>
+            <div className="h-full">
               <img
                 src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                 alt="Trademark Registration"
-                className="w-full h-[430px] object-cover rounded-3xl shadow-lg"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
@@ -576,7 +484,7 @@ const Market_Expansion = () => {
       {/* ================= Investor Visa ================= */}
 
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[1600px] mx-auto px-6">
           {/* Heading */}
 
           <div className="text-center max-w-5xl mx-auto">
@@ -624,7 +532,7 @@ const Market_Expansion = () => {
       {/* ================= Why Choose Us ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1300px] mx-auto ">
+        <div className="max-w-325 mx-auto ">
           {/* Heading */}
 
           <div className="text-center">
@@ -638,7 +546,7 @@ const Market_Expansion = () => {
 
           {/* Cards */}
 
-          <div className="max-w-[1280px] grid lg:grid-cols-2 gap-6 mt-20">
+          <div className="max-w-7xl grid lg:grid-cols-2 gap-6 mt-20">
             {[
               {
                 title: "Accurate and up-to-date financial records",
@@ -664,7 +572,7 @@ const Market_Expansion = () => {
               >
                 {/* Icon */}
 
-                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
                   <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
                 </div>
 
@@ -683,189 +591,47 @@ const Market_Expansion = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* ================= CTA Section ================= */}
+      <ConsultationCTA
+        heading={
+          <>
+            Start Your UAE
+            <br />
+            Expansion<span className="font-bold"> Today</span>
+          </>
+        }
+        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        commitmentItems={[
+          "Free initial tax consultation — no obligation",
+          "100% confidentiality and secure handling of data",
+          "Region-specific tax experts",
+          "Transparent and practical advice tailored to your needs",
+        ]}
+      />
 
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* ================= Left Content ================= */}
-
-            <div>
-              <h2 className="text-5xl leading-tight font-light text-white">
-                Start Your UAE
-                <br />
-                Expansion
-                <span className="font-bold"> Today</span>
-              </h2>
-
-              <p className="mt-8 text-cyan-400 text-2xl font-semibold leading-9 max-w-xl">
-                Get expert guidance, avoid costly delays, and build your UAE
-                presence with confidence.
-              </p>
-              {/* Commitment Card */}
-
-              <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  Our Commitment
-                </h3>
-
-                <div className="space-y-5">
-                  {[
-                    "Free initial tax consultation — no obligation",
-                    "100% confidentiality and secure handling of data",
-                    "Region-specific tax experts",
-                    "Transparent and practical advice tailored to your needs",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <FaCircleCheck className="text-cyan-400 text-xl" />
-
-                      <span className="text-gray-200 text-lg">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* ================= Form ================= */}
-
-            <div>
-              <div className="bg-white rounded-3xl shadow-2xl p-10">
-                <h3 className="text-4xl font-bold text-[#16244B] mb-8">
-                  Book a Free Consultation
-                </h3>
-
-                <form className="space-y-6">
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Name
-                    </label>
-
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Email
-                    </label>
-
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Message
-                    </label>
-
-                    <textarea
-                      rows={5}
-                      placeholder="Write your message..."
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300"
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      {/* ================= Recent Blogs ================= */}
-
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
-              Recent
-              <span className="font-bold"> Blogs</span>
-            </h2>
-
-            <div className="w-24 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
-          </div>
-
-          {/* Blog Cards */}
-
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            {[
-              {
-                id: 1,
-                image: "/src/asstes/Images/New folder/council-tax.webp",
-                title:
-                  "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-                desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-              },
-              {
-                id: 2,
-                image:
-                  "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
-                title: "Self-Assessment Tax Return Process for Businesses",
-                desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-              },
-              {
-                id: 3,
-                image:
-                  "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
-                title:
-                  "The Role & Benefits of a Virtual CFO in Modern Businesses",
-                desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-              },
-            ].map((blog) => (
-              <div
-                key={blog.id}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
-              >
-                {/* Image */}
-
-                <div className="overflow-hidden">
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 duration-500"
-                  />
-                </div>
-
-                {/* Content */}
-
-                <div className="p-7">
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-cyan-500 transition">
-                    {blog.title}
-                  </h3>
-
-                  <p className="text-gray-500 text-lg leading-8 mb-8">
-                    {blog.desc}
-                  </p>
-
-                  <a
-                    href={`/blog/${blog.id}`}
-                    className="inline-flex items-center gap-2 text-cyan-500 font-semibold hover:gap-4 duration-300"
-                  >
-                    Read More
-                    <FaArrowRight />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <RecentBlogs
+        blogs={[
+          {
+            id: 1,
+            image: "/src/asstes/Images/New folder/council-tax.webp",
+            title:
+              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
+            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
+          },
+          {
+            id: 2,
+            image:
+              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+            title: "Self-Assessment Tax Return Process for Businesses",
+            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
+          },
+          {
+            id: 3,
+            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
+            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
+          },
+        ]}
+      />
     </div>
   );
 };

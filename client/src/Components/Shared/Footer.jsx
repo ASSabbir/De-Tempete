@@ -21,7 +21,7 @@ const Footer = () => {
       {/* Newsletter */}
       <div className="max-w-7xl mx-auto px-5">
         <div className="absolute left-1/2 -translate-x-1/2 -top-20 w-full max-w-7xl">
-          <div className="bg-gradient-to-r from-[#0A1B57] to-[#57D3EB] rounded-xl p-8 flex flex-col lg:flex-row items-center justify-between gap-8 border border-cyan-400">
+          <div className="bg-linear-to-r from-[#0A1B57] to-[#57D3EB] rounded-xl p-8 flex flex-col lg:flex-row items-center justify-between gap-8 border border-cyan-400">
             <h2 className="text-2xl md:text-4xl font-bold max-w-3xl">
               Sign up for our newsletter to get update information, news,
               insights or promotions.
@@ -46,9 +46,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-5 pt-52 pb-10">
         {/* Logo */}
         <div className="text-center">
-          <img src="/src/asstes/images/logo1.webp" alt="Logo" className="h-16 mx-auto mb-6" /> 
+          <img
+            src="/src/asstes/images/logo1.webp"
+            alt="Logo"
+            className="h-16 mx-auto mb-6"
+          />
 
-          <p className="text-gray-300"> 
+          <p className="text-gray-300">
             Global Accounting Outsourcing and Business Advisory firm with
             experienced and certified professionals.
           </p>
@@ -162,7 +166,7 @@ const Footer = () => {
           )}
         </div>
 
-        {/* Copyright */} 
+        {/* Copyright */}
         <div className="text-center text-gray-300 pt-4">
           Copyright © 2026 <span className="italic">de tempête</span>. All
           rights reserved.
