@@ -5,7 +5,7 @@ import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 
-const businessData = [
+const businessData = [ 
   {
     title: "Private Limited Company",
     image:
