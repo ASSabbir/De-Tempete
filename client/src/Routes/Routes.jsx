@@ -77,7 +77,7 @@ import Due from "../Pages/Home/Expertise/Due/Due";
 import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentReadiness";
 
 
-const Routes = createBrowserRouter([
+const Routes = createBrowserRouter([ 
   {
     path: "/",
     element: <Root></Root>,
