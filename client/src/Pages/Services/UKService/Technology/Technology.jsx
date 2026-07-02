@@ -5,7 +5,17 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
+import tableau from "/src/asstes/Images/New folder/9-1.webp";
+import sage from "/src/asstes/Images/New folder/3-2.webp";
+import a from "/src/asstes/Images/New folder/11-1.webp";
+import b from "/src/asstes/Images/New folder/12-1-934x1024.webp";
+import c from "/src/asstes/Images/New folder/7-2.webp";
+import d from "/src/asstes/Images/New folder/8.webp";
+import e from "/src/asstes/Images/New folder/13-1.webp";
+import f from "/src/asstes/Images/New folder/6-1.webp";
+import g from "/src/asstes/Images/New folder/2.webp";
 
+const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const softwareSolutions = [
   { title: "Digital Record Keeping", desc: "Maintain organised digital financial records for HMRC compliance." },
@@ -37,7 +47,7 @@ const whyChoose = [
   { title: "Reliable Ongoing Support", desc: "Continuous assistance for smoother operations." },
 ];
 
-const partners = ["QuickBooks", "Tableau", "Sage", "Zoho Books", "TallyPrime", "Taxcalc"];
+
 
 const Technology = () => {
   return (
@@ -159,17 +169,42 @@ const Technology = () => {
         ]}
       />
 
-      {/* Technological Partner */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light text-[#16244b] mb-16">
+     {/* Technological Partner */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className=" mx-auto px-6">
+          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-10 items-center justify-items-center opacity-80">
-            {partners.map((p, i) => (
-              <span key={i} className="text-gray-500 font-semibold text-lg">{p}</span>
-            ))}
+
+          <div className="overflow-hidden">
+            <div
+              className="flex items-center"
+              style={{
+                animation: "scrollLeft 35s linear infinite",
+              }}
+            >
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={index} className="shrink-0 ">
+                  <img
+                    src={logo}
+                    alt="Partner"
+                    className="h-45 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
         </div>
       </section>
     </div>
