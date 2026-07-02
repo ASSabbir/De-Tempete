@@ -10,10 +10,8 @@ import {
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import {
   LuChartNoAxesCombined,
-  LuFileText,
-  LuCalculator,
-  LuShieldCheck,
 } from "react-icons/lu";
+import { FaFileInvoice, FaCalculator, FaShieldAlt } from "react-icons/fa";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
@@ -49,7 +47,7 @@ const accountsCards = [
 
 const ctFeatures = [
   {
-    icon: LuCalculator,
+    icon: FaCalculator,
     title: "Accurate Tax Calculation & Adjustments",
     desc: "We compute your corporation tax liability and apply all allowable deductions to minimise tax due.",
   },
@@ -59,22 +57,22 @@ const ctFeatures = [
     desc: "Claim eligible asset allowances to reduce taxable profits and maximise savings.",
   },
   {
-    icon: LuFileText,
+    icon: FaFileInvoice,
     title: "Digital Submission to HMRC",
     desc: "End-to-end online filing of your CT600 submission, error-free and on time.",
   },
   {
-    icon: LuShieldCheck,
+    icon: FaShieldAlt,
     title: "Clear Review to Avoid Tax Risks",
     desc: "Every submission is carefully reviewed to prevent errors, penalties, or HMRC queries.",
   },
   {
-    icon: LuFileText,
+    icon: FaFileInvoice,
     title: "Expert Advisory on Tax Planning",
     desc: "Practical guidance on tax-saving strategies and future planning to keep your business compliant.",
   },
   {
-    icon: LuShieldCheck,
+    icon: FaShieldAlt,
     title: "Handling HMRC Queries & Notices",
     desc: "We liaise with HMRC on your behalf to resolve queries or notices effectively.",
   },
@@ -139,6 +137,7 @@ const whyChoose = [
   "Transparent and fixed pricing",
   "Zero missed deadlines, zero penalties",
 ];
+const LuShieldCheck = FaShieldAlt;
 
 const Compliance_Regulatory = () => {
   const [expandedItem, setExpandedItem] = useState(null);

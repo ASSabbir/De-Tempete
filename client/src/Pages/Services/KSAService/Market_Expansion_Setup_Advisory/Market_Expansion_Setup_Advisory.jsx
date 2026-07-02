@@ -204,7 +204,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 <div className="p-6 grid grid-cols-2 gap-3">
                   {c.points.map((p, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <FaCheckCircle className="text-cyan-400 mt-1 flex-shrink-0" />
+                      <FaCheckCircle className="text-cyan-400 mt-1 shrink-0" />
                       <span className="text-gray-600 text-sm">{p}</span>
                     </div>
                   ))}
@@ -302,7 +302,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "End-to-end account activation",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -338,7 +338,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "Brand protection within the Saudi market",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -381,7 +381,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "Residency compliance & documentation",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}

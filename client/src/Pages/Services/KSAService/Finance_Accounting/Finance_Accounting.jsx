@@ -160,7 +160,7 @@ const Finance_Accounting = () => {
             <div className="space-y-3 mt-8">
               {handleTags.map((t, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{t}</span>
                 </div>
               ))}
@@ -196,7 +196,7 @@ const Finance_Accounting = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {bookkeepingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -224,7 +224,7 @@ const Finance_Accounting = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {reportingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -266,7 +266,7 @@ const Finance_Accounting = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {systemsPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -335,7 +335,7 @@ const Finance_Accounting = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className={`rounded-lg py-6 px-4 text-white font-medium ${i === 3 ? "bg-[#4AC4DE] text-[#16244b]" : "bg-[#37456B]"}`}
+                className={`rounded-lg py-6 px-4 text-white font-medium ${i === 3 ? "bg-light-blue text-[#16244b]" : "bg-[#37456B]"}`}
               >
                 {g}
               </div>

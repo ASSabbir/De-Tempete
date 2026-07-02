@@ -150,7 +150,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {payrollPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -191,7 +191,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {qiwaPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -221,7 +221,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {empDocPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
