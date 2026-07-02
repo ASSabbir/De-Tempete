@@ -47,7 +47,7 @@ const ReadyToStublish = () => {
     .marquee-content {
       display: flex;
       width: max-content;
-      animation: marquee 100s linear infinite;
+      animation: marquee 30000s linear infinite;
     }
 
     .marquee-content span {

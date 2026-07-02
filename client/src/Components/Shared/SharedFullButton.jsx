@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SharedFullButton = ({ text,link }) => {
+const SharedFullButton = ({ text,path }) => {
   return (
     <>
       <style>
@@ -68,7 +68,7 @@ const SharedFullButton = ({ text,link }) => {
       </style>
 
       <div>
-        <a href={`${link  || '/'}`}>
+        <a href={`${path  || '/'}`}>
           <button className="shared-btn2 ">
             {text || "Contact Us"}
           </button>
