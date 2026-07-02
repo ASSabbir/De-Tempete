@@ -62,6 +62,21 @@ const bprItems = [
   },
 ];
 
+const financeAdvisoryItems = [
+  {
+    title: "M&A Advisory",
+    desc: "Support for mergers, acquisitions, and joint ventures, including valuation and negotiations.",
+  },
+  {
+    title: "Fundraising Readiness",
+    desc: "Prepare businesses for investor meetings, pitch decks, and funding strategies.",
+  },
+  {
+    title: "Financial Planning & Strategy",
+    desc: "Build sustainable financial models, cash flow projections, and ROI assessments.",
+  },
+];
+
 const whyChoose = [
   {
     title: "Market Expertise",
@@ -183,10 +198,36 @@ const Investment = () => {
 
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-10 mt-16">
             {bprItems.map((item, index) => (
-              <div
-                key={index}
-                className={`text-center ${index === 2 ? "bg-white shadow-xl rounded-2xl py-6" : ""}`}
-              >
+              <div key={index} className="text-center">
+                <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+       {/* Corporate Finance Advisory */}
+      <section className="py-20 bg-white">
+        <div className="max-w-[1600px] mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#16244b]">
+              Corporate Finance Advisory, M&A Support & Fundraising Readiness
+            </h2>
+            <p className="mt-4 text-gray-600 font-semibold">
+              Drive Growth with Expert Financial Guidance
+            </p>
+            <p className="mt-4 text-gray-500 leading-7">
+              Our corporate finance advisory services guide investors and businesses through mergers, acquisitions, fundraising, and strategic growth initiatives. We help you make data-driven decisions to secure funding, optimize valuations, and achieve sustainable growth.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-10 mt-16">
+            {financeAdvisoryItems.map((item, index) => (
+              <div key={index} className="text-center">
                 <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}

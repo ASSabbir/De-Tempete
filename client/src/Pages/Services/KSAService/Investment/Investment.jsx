@@ -155,7 +155,7 @@ const Investment = () => {
           <div className="grid lg:grid-cols-3 gap-x-10 gap-y-12 max-w-4xl mx-auto">
             {handleCards.map((c, i) => (
               <div key={i} className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center shrink-0">
                   <c.icon className="text-cyan-500 text-2xl" />
                 </div>
                 <h3 className="text-[#16244b] font-semibold text-sm">
@@ -191,7 +191,7 @@ const Investment = () => {
             <div className="space-y-3 mt-6">
               {investmentPlanningPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -234,7 +234,7 @@ const Investment = () => {
             <div className="space-y-3 mt-6">
               {strategicPartnershipPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}

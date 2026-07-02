@@ -6,6 +6,15 @@ import {
   Handshake,
   Medal,
   ChevronDown,
+  Building2,
+  LineChart,
+  Blocks,
+  BookOpenText,
+  Megaphone,
+  HandCoins,
+  ShoppingBag,
+  Sparkles,
+  Briefcase,
 } from "lucide-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
@@ -34,39 +43,72 @@ const AnimatedCounter = ({ end, duration = 2000 }) => {
 
 const sectors = [
   {
+    icon: Building2,
+    title: "Real Estate",
+    desc: "Brand positioning and marketing strategies tailored to UAE property developers and agencies.",
+  },
+  {
+    icon: LineChart,
+    title: "Fintech",
+    desc: "Trust-driven branding and market positioning for finance, payments, and digital banking solutions.",
+  },
+  {
+    icon: Blocks,
+    title: "Web3 & Blockchain",
+    desc: "Clear narrative building and growth strategy for blockchain, tokenized assets, and Web3 platforms.",
+  },
+  {
+    icon: BookOpenText,
     title: "Modest Fashion Id",
     desc: "Entity development, product positioning, and campaign direction for modestwear brands.",
   },
   {
+    icon: Megaphone,
     title: "Lifestyle & Consumer Brands",
     desc: "Market-fit insights, digital presence planning, and expansion strategies for lifestyle products.",
   },
   {
+    icon: HandCoins,
     title: "Hospitality & F&B",
     desc: "Brand identity, menu storytelling, and launch marketing for restaurants, cafes, and hotels.",
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-commerce & D2C",
+    desc: "Conversion-focused online branding and digital optimization for scalable D2C businesses.",
+  },
+  {
+    icon: Sparkles,
+    title: "Beauty & Wellness",
+    desc: "Brand differentiation, creator partnerships, and content guidance for clinics and beauty brands.",
+  },
+  {
+    icon: Briefcase,
+    title: "Professional Services",
+    desc: "Strong brand positioning and digital visibility strategies for consultants and service-led businesses.",
   },
 ];
 
 const marketingItems = [
   {
     title: "Brand Strategy & Identity",
-    desc: "Define your brand's positioning, tone, and visual identity for lasting market impact.",
+    desc: "Brand narrative, tone of voice, value positioning & visual direction.",
   },
   {
     title: "Digital Marketing Roadmap",
-    desc: "A structured digital plan mapping channels, timelines, and growth milestones.",
+    desc: "SEO, content strategy, performance planning & channel optimization.",
   },
   {
     title: "Social Media Campaigns",
-    desc: "Platform-specific campaigns designed to grow reach and engagement.",
+    desc: "Concept creation, campaign management & ad performance tracking.",
   },
   {
     title: "Content Creation & Copywriting",
-    desc: "On-brand content and copy that resonates with your target audience.",
+    desc: "High-conversion messaging tailored to UAE markets.",
   },
   {
     title: "Website & Funnel Optimization",
-    desc: "Optimize your website and conversion funnels for measurable results.",
+    desc: "User experience improvements that boost conversions and lead quality.",
   },
 ];
 
@@ -195,7 +237,7 @@ const Branding_Growth = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp"
+            src="/src/asstes/Images/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp"
             alt="Build Strong Strategic Alliances"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -217,6 +259,7 @@ const Branding_Growth = () => {
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
             {sectors.map((item, index) => (
               <div key={index}>
+                <item.icon className="text-cyan-500 mb-3" size={32} strokeWidth={1.5} />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>

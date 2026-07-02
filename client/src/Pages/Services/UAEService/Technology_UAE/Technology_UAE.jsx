@@ -1,25 +1,25 @@
 // File: Technology_UAE.jsx
-import { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuSparkles, LuChartNoAxesCombined } from "react-icons/lu";
+import { HeroSection } from "@/Components/Shared/HeroSection";
+import { StatsSection } from "@/Components/Shared/StatsSection";
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [end, duration]);
-  return count;
-};
+import tableau from "/src/asstes/Images/New folder/9-1.webp";
+import sage from "/src/asstes/Images/New folder/3-2.webp";
+import a from "/src/asstes/Images/New folder/11-1.webp";
+import b from "/src/asstes/Images/New folder/12-1-934x1024.webp";
+import c from "/src/asstes/Images/New folder/7-2.webp";
+import d from "/src/asstes/Images/New folder/8.webp";
+import e from "/src/asstes/Images/New folder/13-1.webp";
+import f from "/src/asstes/Images/New folder/6-1.webp";
+import g from "/src/asstes/Images/New folder/2.webp";
+
+const logos = [tableau, sage, a, b, c, d, e, f, g];
+
+
+
 
 const industries = [
   "Retail & E-commerce",
@@ -86,96 +86,24 @@ const processSteps = [
   },
 ];
 
-const partners = ["QuickBooks", "Taxcalc"];
+
 
 const Technology_UAE = () => {
   return (
     <div className="w-full">
-      {/* Hero */}
-      <section className="pt-40 pb-24 relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-        <img
-          src="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
-          alt="UAE E-Invoicing Solutions"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            UAE E-Invoicing Solutions With
-            <br />
-            <span className="text-light-blue">Zoho & Odoo</span>
-          </h1>
-          <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
-            Stay compliant with upcoming UAE e-invoicing regulations with de
-            tempête's certified Zoho and Odoo implementation services. We help
-            businesses automate invoicing, configure VAT-ready systems,
-            integrate with the Peppol-based framework, and meet FTA compliance
-            requirements through bilingual invoice templates, secure workflows,
-            and ongoing support tailored for SMEs, startups, and enterprise
-            businesses.
-          </p>
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
-            Book a Consultation
-          </button>
-        </div>
-      </section>
+       <HeroSection
+        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        alt="UAE E-Invoicing Solutions"
+        heading={<>UAE E-Invoicing Solutions With<br /><span className="text-light-blue">Zoho & Odoo</span></>}
+        description="Stay compliant with upcoming UAE e-invoicing regulations with de tempête's certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses."
+      />
 
-      {/* Stats */}
-      <section className="bg-[#F5F6F8] py-10">
-        <div className="max-w-8xl mx-auto px-30">
-          <div className="grid lg:grid-cols-5 gap-10 items-center">
-            <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
-                Why Choose Us?
-              </h2>
-            </div>
-            <div className="flex items-center gap-5">
-              <CalendarDays size={70} className="text-[#14224A] stroke-[1.2]" />
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={0} />+
-                </h3>
-                <p className="text-[#14224A] text-xl font-medium">
-                  Years of Experience
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Globe size={70} className="text-[#14224A] stroke-[1.2]" />
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={0} />+
-                </h3>
-                <p className="text-[#14224A] text-xl font-medium">
-                  Countries Covered
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Handshake size={70} className="text-[#14224A] stroke-[1.2]" />
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={935} duration={2500} />+
-                </h3>
-                <p className="text-[#14224A] text-xl font-medium">
-                  Clients Served
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Medal size={70} className="text-[#14224A] stroke-[1.2]" />
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={3} />+
-                </h3>
-                <p className="text-[#14224A] text-xl font-medium">
-                  Awards Received
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StatsSection stats={[
+        { icon: CalendarDays, end: 0, label: "Years of Experience" },
+        { icon: Globe, end: 0, label: "Countries Covered" },
+        { icon: Handshake, end: 935, duration: 2500, label: "Clients Served" },
+        { icon: Medal, end: 3, label: "Awards Received" },
+      ]} />
 
       {/* What Is E-Invoicing */}
       <section className="py-20 bg-white">
@@ -204,7 +132,7 @@ const Technology_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp"
+            src="/src/asstes/Images/servics/Zoho.jpg"
             alt="Zoho E-Invoicing Solutions In UAE"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -382,102 +310,48 @@ const Technology_UAE = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl leading-tight font-light text-white">
-                Get UAE E-Invoicing
-                <br />
-                Ready <span className="font-bold">Today</span>
-              </h2>
-              <p className="mt-8 text-cyan-400 text-lg font-semibold leading-9 max-w-xl">
-                Serving Dubai - Abu Dhabi - Sharjah - Ajman - Ras Al Khaimah -
-                Fujairah - Umm Al Quwain
-              </p>
-              <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  Our Commitment
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    "Free initial consultation — no obligation",
-                    "100% confidentiality and secure handling of FTA data",
-                    "Region-specific tax experts",
-                    "Transparent and practical advice tailored to your needs",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
-                      <span className="text-gray-200">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div className="bg-white rounded-3xl shadow-2xl p-10">
-                <h3 className="text-4xl font-bold text-[#16244B] mb-8">
-                  Book a Free Consultation
-                </h3>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      placeholder="Write your message..."
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300"
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ConsultationCTA
+        heading={<>Get UAE E-Invoicing<br />Ready <span className="font-bold">Today</span></>}
+        subheading="Serving Dubai - Abu Dhabi - Sharjah - Ajman - Ras Al Khaimah - Fujairah - Umm Al Quwain"
+        commitmentItems={["Free initial consultation — no obligation", "100% confidentiality and secure handling of FTA data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
+      />
 
       {/* Technological Partner */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light text-[#16244b] mb-16">
+      <section className="py-24 bg-white overflow-hidden">
+        <div className=" mx-auto px-6">
+          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>
-          <div className="flex justify-center gap-20 items-center opacity-80">
-            {partners.map((p, i) => (
-              <span key={i} className="text-gray-500 font-semibold text-lg">
-                {p}
-              </span>
-            ))}
+
+          <div className="overflow-hidden">
+            <div
+              className="flex items-center"
+              style={{
+                animation: "scrollLeft 35s linear infinite",
+              }}
+            >
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={index} className="shrink-0 ">
+                  <img
+                    src={logo}
+                    alt="Partner"
+                    className="h-45 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
         </div>
       </section>
     </div>
