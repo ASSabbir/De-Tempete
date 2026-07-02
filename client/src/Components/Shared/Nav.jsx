@@ -100,7 +100,7 @@ const services = {
 const resourceSections = {
   COMPANY: [
     { label: "About", path: "/about" },
-    { label: "E-brochure", path: "/resource/e-brochure" },
+    { label: "E-brochure", path: "https://drive.google.com/file/d/1XFM7Aa3OPQNjXvA47v6mwKX67uM6Oq6O/view?pli=1" },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
     { label: "Blogs", path: "/resource/blogs" },

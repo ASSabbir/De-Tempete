@@ -42,7 +42,7 @@ const coreCards = [
   {
     title: "Accounting",
     image:
-      "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      "/src/asstes/Images/servics/Accounting.jpg",
     items: [
       "VAT-compliant accounting",
       "Chart of accounts setup",
@@ -53,7 +53,7 @@ const coreCards = [
   {
     title: "Bookkeeping",
     image:
-      "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
+      "/src/asstes/Images/servics/Bookkeeping.jpg",
     items: [
       "Monthly transaction updates",
       "Expense & income categorization",
@@ -65,7 +65,7 @@ const coreCards = [
   {
     title: "Financial Reporting",
     image:
-      "/src/asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp",
+      "/src/asstes/Images/servics/Financial.webp",
     items: [
       "Monthly management reports",
       "P&L, Balance Sheet, Cash Flow",

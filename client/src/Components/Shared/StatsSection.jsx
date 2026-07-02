@@ -1,9 +1,9 @@
 // shared/StatsSection.jsx
 import { AnimatedCounter } from "./AnimatedCounter";
 
-export const StatsSection = ({ stats }) => (
-  <section className="bg-[#F5F6F8] py-10">
-    <div className="max-w-[1600px] mx-auto px-6">
+export const StatsSection = ({ stats, bgColor = "bg-[#F5F6F8]", maxWidth = "max-w-[1600px]" }) => (
+  <section className={`${bgColor} py-10`}>
+    <div className={`${maxWidth} mx-auto px-6`}>
       <div className="grid lg:grid-cols-5 gap-10 items-center">
         <div>
           <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">Why Choose Us?</h2>

@@ -8,6 +8,7 @@ export const ConsultationCTA = ({
   commitmentItems = [],
   highlightText,
   bodyText,
+  commitmentTitleOnly = false,
 }) => (
   <section className="bg-[#16244B] py-24">
     <div className="max-w-[1600px] mx-auto px-6">
@@ -28,19 +29,19 @@ export const ConsultationCTA = ({
           {highlightText && !bodyText && (
             <p className="mt-4 text-cyan-400 font-bold text-lg">{highlightText}</p>
           )}
-          {commitmentItems.length > 0 && (
+           {(commitmentItems.length > 0 || commitmentTitleOnly) && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
-              <h3 className="text-xl font-bold text-white mb-4">
-                {commitmentTitle}
-              </h3>
+              <h3 className="text-xl font-bold text-white mb-4">{commitmentTitle}</h3>
+              {commitmentItems.length > 0 && (
               <div className="space-y-3">
                 {commitmentItems.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
                     <span className="text-gray-200">{item}</span>
                   </div>
-                ))}
+               ))}
               </div>
+              )}
             </div>
           )}
         </div>

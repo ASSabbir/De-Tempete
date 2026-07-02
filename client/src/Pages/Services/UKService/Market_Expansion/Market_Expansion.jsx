@@ -19,7 +19,7 @@ const businessData = [
   {
     title: "Company Formation",
     image:
-      "/src/asstes/Images/servics/Bd/freepik__corporate-companies-bandgladesh-flag-website-image__46804.webp",
+      "/src/asstes/Images/servics/UK/company-formation.webp",
     items: [
       "UK Limited Company setup support",
       "Companies House registration guidance",
@@ -33,7 +33,7 @@ const businessData = [
   {
     title: "HMRC Registrations",
     image:
-      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp",
+      "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
     items: [
       "Corporation Tax registration guidance",
       "VAT registration preparation",
@@ -47,7 +47,7 @@ const businessData = [
   {
     title: "International Business Structuring",
     image:
-      "/src/asstes/Images/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46795.webp",
+      "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
     items: [
       "Non-resident founder guidance",
       "Shareholder structuring support",

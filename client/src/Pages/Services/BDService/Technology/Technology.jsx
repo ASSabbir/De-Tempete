@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import { BarChart3, PieChart, TrendingUp, Award } from "lucide-react";
-
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import {
@@ -10,6 +8,9 @@ import {
   FiBarChart2,
   FiRepeat,
 } from "react-icons/fi";
+import { HeroSection } from "@/Components/Shared/HeroSection";
+import { StatsSection } from "@/Components/Shared/StatsSection";
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
 const automationFeatures = [
   {
@@ -63,29 +64,6 @@ import f from "/src/asstes/Images/New folder/6-1.webp";
 import g from "/src/asstes/Images/New folder/2.webp";
 
 const logos = [tableau, sage, a, b, c, d, e, f, g];
-
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return count;
-};
 
 const Technology = () => {
   const servicesData = [
@@ -146,112 +124,42 @@ const Technology = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="pt-40 pb-24 relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-        {/* Background Image */}
-        <img
-          src="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
-          alt="Bangladesh Business Setup"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0d2f67]/70"></div>
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+      <HeroSection
+        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        alt="Bangladesh Business Setup"
+        heading={
+          <>
             Expand Through Strategic <br />
             <span className="text-light-blue">Partnerships in Bangladesh</span>
-          </h1>
-
-          <p className="max-w-4xl mx-auto mt-8 text-lg md:text-2xl text-gray-200 leading-relaxed">
+          </>
+        }
+        description={
+          <>
             Unlock growth opportunities with investment and partnership
             facilitation services in Bangladesh. <strong>de tempête</strong>{" "}
             connects businesses with the right investors, partners, and market
             opportunities, helping you expand, collaborate, and scale with
-            confidence in Bangladesh’s growing economy.
-          </p>
+            confidence in Bangladesh's growing economy.
+          </>
+        }
+        ctaText="Request Consultation"
+      />
 
-          <button className="mt-12 border-2 border-white rounded-xl px-10 py-4 text-xl font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
-            Request Consultation
-          </button>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-white py-10">
-        <div className="max-w-9xl mx-auto px-6">
-          <div className="grid lg:grid-cols-5 gap-10 items-center">
-            {/* Heading */}
-            <div>
-              <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">
-                Why Choose Us?
-              </h2>
-            </div>
-
-            {/* Stat 1 */}
-            <div className="flex items-center gap-5">
-              <BarChart3 size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={9} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Years of Experience
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 2 */}
-            <div className="flex items-center gap-5">
-              <PieChart size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={20} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Countries Covered
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 3 */}
-            <div className="flex items-center gap-5">
-              <TrendingUp size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={30000} duration={3000} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Clients Served
-                </p>
-              </div>
-            </div>
-
-            {/* Stat 4 */}
-            <div className="flex items-center gap-5">
-              <Award size={70} className="text-[#14224A] stroke-[1.2]" />
-
-              <div>
-                <h3 className="text-[#14224A] text-4xl font-bold">
-                  <AnimatedCounter end={120} duration={2500} />+
-                </h3>
-
-                <p className="text-[#14224A] text-xl font-medium">
-                  Awards Received
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <StatsSection
+        bgColor="bg-white"
+        maxWidth="max-w-9xl"
+        stats={[
+          { icon: BarChart3, end: 9, label: "Years of Experience" },
+          { icon: PieChart, end: 20, label: "Countries Covered" },
+          {
+            icon: TrendingUp,
+            end: 30000,
+            duration: 3000,
+            label: "Clients Served",
+          },
+          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
+        ]}
+      />
       {/* ===================== What We Offer ===================== */}
 
       <section className="py-24 bg-white">
@@ -390,7 +298,7 @@ const Technology = () => {
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="w-8 h-8 bg-light-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 bg-light-blue rounded-lg flex items-center justify-center shrink-0">
                     <benefit.icon className="text-white text-xl" />
                   </div>
 
@@ -456,7 +364,7 @@ const Technology = () => {
                 className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center shrink-0">
                     <FaCheckCircle className="text-white text-xl" />
                   </div>
 
@@ -473,91 +381,22 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Get Started Section */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div>
-              <h2 className="text-5xl leading-tight font-light text-white">
-                Transform Your Business with
-                <br />
-                <span className="font-bold">Systems Smart Technology</span>
-              </h2>
-
-              {/* Commitment Card */}
-              <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  Our Commitment
-                </h3>
-
-                <div className="">
-                  {[
-                    "Free initial consultation — no obligation",
-                    "Tailored digital & technology solutions",
-                    "Scalable and automation-ready systems",
-                    "Expert support and strategic guidance",
-                    "Transparent and efficient process",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <FaCircleCheck className="text-light-blue text-xl shrink-0" />
-                      <span className="text-gray-200 text-lg">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div>
-              <div className="bg-white rounded-3xl shadow-2xl p-10">
-                <h3 className="text-4xl font-bold text-[#16244B] mb-8">
-                  Book a Free Consultation
-                </h3>
-
-                <div className="space-y-6">
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      placeholder=""
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
-                    />
-                  </div>
-
-                  <button className="w-full bg-light-blue hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300">
-                    Send
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ConsultationCTA
+        heading={
+          <>
+            Transform Your Business with
+            <br />
+            <span className="font-bold">Systems Smart Technology</span>
+          </>
+        }
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Tailored digital & technology solutions",
+          "Scalable and automation-ready systems",
+          "Expert support and strategic guidance",
+          "Transparent and efficient process",
+        ]}
+      />
 
       {/* Technological Partner Section */}
 

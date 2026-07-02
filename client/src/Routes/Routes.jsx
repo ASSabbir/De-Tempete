@@ -35,6 +35,7 @@ import KSAHRPayrollSolutions from "../Pages/Services/KSAService/HR_Payroll_Solut
 import KSABrandingGrowth from "../Pages/Services/KSAService/Branding_Growth/Branding_Growth";
 import KSATechnology from "../Pages/Services/KSAService/Technology/Technology";
 import KSAInvestment from "../Pages/Services/KSAService/Investment/Investment";
+import UKBusiness_Advisory from "../Pages/Services/UKService/Business_Advisory/Business_Advisory";
 
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
@@ -78,12 +79,16 @@ import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentRe
 import About from "../Pages/About/About";
 
 
-const Routes = createBrowserRouter([
+const Routes = createBrowserRouter([ 
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+   children:[
+      // ===== HOME =====
       {path:"/" , element :<Home></Home>},
+      {path:"/contact" , element : <ContactUs></ContactUs> },
+
+      // ===== BUSINESS SETUP =====
       {path:"/business-setup/uae" , element :<BusinessUAE></BusinessUAE>},
       {path:"/business-setup/ksa" , element :<BusinessKSA></BusinessKSA>},
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
@@ -92,7 +97,7 @@ const Routes = createBrowserRouter([
       {path:"/contact" , element : <ContactUs></ContactUs> },
       {path:"/about" , element : <About></About> },
 
-      // Hire Based On Expertise routes
+      // ===== HIRE BASED ON EXPERTISE =====
       {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
       {path:"/business-valuation" , element : <BusinessValuation></BusinessValuation> },
       {path:"/Tax-Advisory" , element : <TaxAdvisory></TaxAdvisory> },
@@ -102,113 +107,39 @@ const Routes = createBrowserRouter([
       {path:"/due-diligence" , element : <Due></Due> },
       {path:"/post-investment-monitoring" , element : <POstInvestment></POstInvestment> },
 
+      // ===== SERVICES: UAE =====
+      { path: "/services/uae/market-expansion", element: <Market_Expansion_Setup_Advisory></Market_Expansion_Setup_Advisory> },
+      { path: "/services/uae/finance", element: <Finance_Accounting></Finance_Accounting> },
+      { path: "/services/uae/taxation", element: <Taxation_UAE></Taxation_UAE> },
+      { path: "/services/uae/hr-payroll", element: <HR_Payroll_Solutions></HR_Payroll_Solutions> },
+      { path: "/services/uae/branding", element: <Branding_Growth></Branding_Growth> },
+      { path: "/services/uae/e-invoicing", element: <Technology_UAE></Technology_UAE> },
+      { path: "/services/uae/investment", element: <UAEInvestment></UAEInvestment> },
+{ path: "/services/uae/regulatory", element: <Regulatory_Compliance></Regulatory_Compliance> },
+      // ===== SERVICES: KSA =====
+      { path: "/services/ksa/market-expansion", element: <KSAMarketExpansionSetupAdvisory></KSAMarketExpansionSetupAdvisory> },
+      { path: "/services/ksa/regulatory", element: <KSARegulatoryCompliance></KSARegulatoryCompliance> },
+      { path: "/services/ksa/finance", element: <KSAFinanceAccounting></KSAFinanceAccounting> },
+      { path: "/services/ksa/taxation", element: <KSATaxation></KSATaxation> },
+      { path: "/services/ksa/hr-payroll", element: <KSAHRPayrollSolutions></KSAHRPayrollSolutions> },
+      { path: "/services/ksa/branding", element: <KSABrandingGrowth></KSABrandingGrowth> },
+      { path: "/services/ksa/automation", element: <KSATechnology></KSATechnology> },
+      { path: "/services/ksa/investment", element: <KSAInvestment></KSAInvestment> },
 
-      // Duplicate routes for BD Services
-      {
-        path: "/services/bd/market-expansion",
-        element: <Market_Expansion></Market_Expansion>,
-      },
-      {
-        path: "/services/uk/market-expansion",
-        element: <UKMarketExpansion></UKMarketExpansion>,
-      },
-      {
-        path: "/services/uk/compliances",
-        element: <Compliance_Regulatory></Compliance_Regulatory>,
-      },
-      {
-        path: "/services/uk/bookkeeping",
-        element: <Bookkeeping_Financial_Management></Bookkeeping_Financial_Management>,
-      },
-       {
-        path: "/services/uk/tax-planning",
-        element: <Tax_Planning_Advisory></Tax_Planning_Advisory>,
-      },
-      {
-        path: "/services/uk/virtual-cfo",
-        element: <Virtual_CFO_Outsourced_Accounting></Virtual_CFO_Outsourced_Accounting>,
-      },
-      {
-        path: "/services/uk/mtd",
-        element: <UKTechnology></UKTechnology>,
-      },
-      {
-        path: "/services-uk/industry-specific-accounting-solutions",
-        element: <Industry_Specific_Accounting_Solutions></Industry_Specific_Accounting_Solutions>,
-      },
+      // ===== SERVICES: UK =====
+      { path: "/services/uk/market-expansion", element: <UKMarketExpansion></UKMarketExpansion> },
+      { path: "/services/uk/compliance", element: <Compliance_Regulatory></Compliance_Regulatory> },
 
+      { path: "/services/uk/bookkeeping", element: <Bookkeeping_Financial_Management></Bookkeeping_Financial_Management> },
+      { path: "/services/uk/tax-planning", element: <Tax_Planning_Advisory></Tax_Planning_Advisory> },
+      { path: "/services/uk/virtual-cfo", element: <Virtual_CFO_Outsourced_Accounting></Virtual_CFO_Outsourced_Accounting> },
+      { path: "/services/uk/mtd", element: <UKTechnology></UKTechnology> },
+      { path: "/services/uk/business-advisory", element: <UKBusiness_Advisory /> },
+      { path: "/services/uk/industry", element: <Industry_Specific_Accounting_Solutions></Industry_Specific_Accounting_Solutions> },
 
-
-      {
-        path: "/services/uae/market-expansion",
-        element: <Market_Expansion_Setup_Advisory></Market_Expansion_Setup_Advisory>,
-      },
-      {
-        path: "/services/uk/compliance",
-        element: <Regulatory_Compliance></Regulatory_Compliance>,
-      },
-      {
-        path: "/services/uae/finance",
-        element: <Finance_Accounting></Finance_Accounting>,
-      },
-      {
-        path: "/services/uae/taxation",
-        element: <Taxation_UAE></Taxation_UAE>,
-      },
-      {
-        path: "/services/uae/hr-payroll",
-        element: <HR_Payroll_Solutions></HR_Payroll_Solutions>,
-      },
-      {
-        path: "/services/uae/branding",
-        element: <Branding_Growth></Branding_Growth>,
-      },
-      {
-        path: "/services/uae/e-invoicing",
-        element: <Technology_UAE></Technology_UAE>,
-      },
-      {
-        path: "/services/uae/investment",
-        element: <UAEInvestment></UAEInvestment>,
-      },
-       {
-        path: "/services/bd/regulatory",
-        element: <Business_Advisory></Business_Advisory>,
-      },
-      {
-        path: "/services/ksa/market-expansion",
-        element: <KSAMarketExpansionSetupAdvisory></KSAMarketExpansionSetupAdvisory>,
-      },
-      {
-        path: "/services/ksa/regulatory",
-        element: <KSARegulatoryCompliance></KSARegulatoryCompliance>,
-      },
-      {
-        path: "/services/ksa/finance",
-        element: <KSAFinanceAccounting></KSAFinanceAccounting>,
-      },
-      {
-        path: "/services/ksa/taxation",
-        element: <KSATaxation></KSATaxation>,
-      },
-      {
-        path: "/services/ksa/hr-payroll",
-        element: <KSAHRPayrollSolutions></KSAHRPayrollSolutions>,
-      },
-      {
-        path: "/services/ksa/branding",
-        element: <KSABrandingGrowth></KSABrandingGrowth>,
-      },
-      {
-        path: "/services/ksa/automation",
-        element: <KSATechnology></KSATechnology>,
-      },
-      {
-        path: "/services/ksa/investment",
-        element: <KSAInvestment></KSAInvestment>,
-      },
-
-
+      // ===== SERVICES: BD =====
+      { path: "/services/bd/market-expansion", element: <Market_Expansion></Market_Expansion> },
+      { path: "/services/bd/regulatory", element: <Business_Advisory></Business_Advisory> },
       { path: "/services/bd/regulatory", element: <Regulatory></Regulatory> },
       { path: "/services/bd/finance", element: <Finance></Finance> },
       { path: "/services/bd/taxation", element: <Taxation></Taxation> },
@@ -217,31 +148,32 @@ const Routes = createBrowserRouter([
       { path: "/services/bd/investment", element: <Investment></Investment> },
       { path: "/services/bd/technology", element: <Technology></Technology> },
 
-      // Library
+      // ===== LIBRARY =====
       { path: "/library/uae", element: <UAELibrary /> },
       { path: "/library/ksa", element: <KSALibrary /> },
       { path: "/library/uk", element: <UKLibrary /> },
       { path: "/library/bangladesh", element: <BDLibrary /> },
 
-      // Publications
+      // ===== PUBLICATIONS =====
       { path: "/publications/uae", element: <UAEPublications /> },
       { path: "/publications/ksa", element: <KSAPublications /> },
       { path: "/publications/uk", element: <UKPublications /> },
       { path: "/publications/bangladesh", element: <BDPublications /> },
 
-      // Forms
+      // ===== FORMS =====
       { path: "/forms/uae", element: <UAEForms /> },
       { path: "/forms/ksa", element: <KSAForms /> },
       { path: "/forms/uk", element: <UKForms /> },
       { path: "forms/bangladesh", element: <BDForms /> },
 
-      // News & Events
+      // ===== NEWS & EVENTS =====
       { path: "/news-events", element: <NewsEventsPage /> },
       { path: "/news-events/:slug", element: <NewsEventDetail /> },
+
+      // ===== BLOG =====
       { path: "/blog/council-tax-arrangement-plan", element: <CouncilTaxArrangementPlan /> },
       { path: "/blog/self-assessment-tax-return-process", element: <SelfAssessmentTaxReturnProcess /> },
       { path: "/blog/virtual-cfo-role-benefits", element: <VirtualCFORoleBenefits /> },
-
     ]
   }
 ]);

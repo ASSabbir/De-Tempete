@@ -125,7 +125,7 @@ const Taxation_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/freepik__tax-return-image-for-website-section-no-text__26470.webp"
+            src="/src/asstes/Images/servics/1775737113368.jpg"
             alt="Excise Tax Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />

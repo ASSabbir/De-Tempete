@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
 import { FaCheckCircle } from "react-icons/fa";
-import { LuChartNoAxesCombined, LuCloud } from "react-icons/lu";
+import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
@@ -83,7 +83,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp"
+            src="/src/asstes/Images/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
             alt="About Our HR & Payroll"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -132,7 +132,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp"
+            src="/src/asstes/Images/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp"
             alt="Payroll Processing & HR Outsourcing"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -142,9 +142,11 @@ const HR_Payroll_Solutions = () => {
       {/* EOR / PEO */}
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-          <div className="h-full min-h-75 bg-linear-to-br from-slate-50 to-slate-200 rounded-2xl flex items-center justify-center">
-            <LuCloud className="text-slate-400" size={120} />
-          </div>
+          <img
+            src="/src/asstes/Images/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
+            alt="Employer Of Record (EOR) & PEO Services"
+            className="w-full h-full object-cover rounded-2xl shadow-lg"
+          />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
               Employer Of Record{" "}

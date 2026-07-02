@@ -185,7 +185,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {regComplianceItems.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -227,7 +227,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {isoPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -261,7 +261,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {industryCovers.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -323,7 +323,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {platformSupport.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 flex-shrink-0" />
+                  <FaCheckCircle className="text-cyan-400 shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -353,7 +353,7 @@ const Regulatory_Compliance = () => {
                 key={i}
                 className="bg-white border border-gray-200 rounded-2xl p-8 flex gap-4"
               >
-                <div className="w-10 h-10 bg-cyan-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-cyan-400/20 rounded-lg flex items-center justify-center shrink-0">
                   <FaCheckCircle className="text-cyan-400" />
                 </div>
                 <div>
