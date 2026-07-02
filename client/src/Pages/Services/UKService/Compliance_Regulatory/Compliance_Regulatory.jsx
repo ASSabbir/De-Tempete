@@ -8,9 +8,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
-import {
-  LuChartNoAxesCombined,
-} from "react-icons/lu";
+import { LuChartNoAxesCombined } from "react-icons/lu";
 import { FaFileInvoice, FaCalculator, FaShieldAlt } from "react-icons/fa";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
@@ -21,26 +19,32 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 const accountsCards = [
   {
     title: "Companies House Filing",
+    image: "/src/asstes/Images/servics/UK/freepik__company-formation-in-business-set-up-in-uk-image-f__31544.webp",
     desc: "Ensure all annual accounts are accurately prepared and submitted on time, fully compliant with UK regulations.",
   },
   {
     title: "GAAP-Aligned Accounts",
+    image: "/src/asstes/Images/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp",
     desc: "Produce precise financial statements, balance sheets, and financial reports aligned with accounting standards.",
   },
   {
     title: "Error & Penalty Reduction",
+    image: "/src/asstes/Images/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp",
     desc: "Minimise mistakes, avoid HMRC fines, and stay fully compliant with UK tax and reporting requirements.",
   },
   {
     title: "Transparent Reporting",
+    image: "/src/asstes/Images/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp",
     desc: "Gain clear, actionable insights into your business performance for informed financial decisions.",
   },
   {
     title: "Year-End Adjustments & Reconciliations",
+    image: "/src/asstes/Images/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp",
     desc: "Handle complex year-end adjustments and ensure all financial elements reflect true business numbers.",
   },
   {
     title: "Digital Filing Support",
+    image: "/src/asstes/Images/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp",
     desc: "Submit accounts online via HMRC-approved digital filing platforms, ensuring fast, efficient and secure submission.",
   },
 ];
@@ -247,18 +251,26 @@ const Compliance_Regulatory = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {accountsCards.map((c, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
-              >
-                <h3 className="text-xl font-bold text-[#14224A] mb-3">
-                  {c.title}
-                </h3>
-                <p className="text-gray-500 leading-7">{c.desc}</p>
-              </div>
-            ))}
+        {accountsCards.map((c, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
+          >
+            <div className="relative h-40">
+              <img
+                src={c.image}
+                alt={c.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40" />
+              <h3 className="absolute bottom-4 left-5 text-xl font-bold text-white">
+                {c.title}
+              </h3>
+            </div>
+            <p className="text-gray-500 leading-7 p-6">{c.desc}</p>
           </div>
+        ))}
+      </div>
 
           <div className="text-center mt-16">
             <p className="text-gray-500 text-lg">
