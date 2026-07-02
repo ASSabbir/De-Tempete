@@ -617,30 +617,7 @@ const Market_Expansion = () => {
       {/* Blog Section */}
       {/* ================= Recent Blogs ================= */}
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      <RecentBlogs blogs={blogPosts} />
     </div>
   );
 };

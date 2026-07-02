@@ -403,7 +403,7 @@ const Industry_Specific_Accounting_Solutions = () => {
         highlightText="Your business deserves financial expertise designed for your sector — not generic solutions."
       />
 
-      <RecentBlogs blogs={blogs} />
+      <RecentBlogs blogs={blogPosts} />
     </div>
   );
 };
