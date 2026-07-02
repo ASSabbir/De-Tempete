@@ -76,6 +76,7 @@ import HRandPayroll from "../Pages/Home/Expertise/HR/HRandPayroll";
 import POstInvestment from "../Pages/Home/Expertise/Post/POstInvestment";
 import Due from "../Pages/Home/Expertise/Due/Due";
 import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentReadiness";
+import About from "../Pages/About/About";
 
 
 const Routes = createBrowserRouter([ 
@@ -93,6 +94,8 @@ const Routes = createBrowserRouter([
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
+      {path:"/contact" , element : <ContactUs></ContactUs> },
+      {path:"/about" , element : <About></About> },
 
       // ===== HIRE BASED ON EXPERTISE =====
       {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
