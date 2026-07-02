@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-
+import img from '../../asstes/Images/de-tempete.webp'
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
     visible: (delay = 0) => ({
@@ -99,18 +99,18 @@ function StatItem({ icon, value, suffix, label, start }) {
 }
 
 
-const VirtualBanner = ({img,text}) => {
+const AboutBanner = ({ text }) => {
     const [started, setStarted] = useState(false);
-      const sectionRef = useRef(null);
-    
-      useEffect(() => {
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
         const observer = new IntersectionObserver(
-          ([entry]) => { if (entry.isIntersecting) setStarted(true); },
-          { threshold: 0.3 }
+            ([entry]) => { if (entry.isIntersecting) setStarted(true); },
+            { threshold: 0.3 }
         );
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
-      }, []);
+    }, []);
     return (
         <div ref={sectionRef}>
             <section className="relative w-full overflow-hidden md:h-[80vh]" >
@@ -134,19 +134,7 @@ const VirtualBanner = ({img,text}) => {
 
                 {/* Content */}
                 <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
-                    <div className="w-full lg:w-1/2 py-20 flex flex-col gap-5">
-
-                        {/* Title */}
-                        <motion.h1
-                            variants={fadeLeft}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            custom={0}
-                            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight"
-                        >
-                            {text[0]}
-                        </motion.h1>
+                    <div className="w-full border-l-3 pl-5 border-gray-500 lg:w-3/4  flex flex-col gap-5">
 
                         {/* Subtitle */}
                         <motion.p
@@ -157,8 +145,21 @@ const VirtualBanner = ({img,text}) => {
                             custom={0.15}
                             className="text-[#1a9fd4] font-semibold text-base sm:text-lg leading-snug"
                         >
-                             {text[1]}
+                          // About Us
                         </motion.p>
+                        {/* Title */}
+                        <motion.h1
+                            variants={fadeLeft}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            custom={0}
+                            className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white t"
+                        >
+                             Your Trusted Partner in Accounting, Compliance & Business Growth
+                        </motion.h1>
+
+
 
                         {/* Description */}
                         <motion.p
@@ -169,28 +170,10 @@ const VirtualBanner = ({img,text}) => {
                             custom={0.3}
                             className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md"
                         >
-                             {text[2]}
+                            A finance and accounting outsourcing service provider to meet the growing demand for specialized and professional accounting services
                         </motion.p>
 
-                        {/* CTA Button */}
-                        <motion.div
-                            variants={fadeLeft}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            custom={0.45}
-                        >
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-sm text-white transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 hover:-translate-y-0.5 w-fit"
-                                style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)", border: "1px solid rgba(255,255,255,0.15)" }}
-                            >
-                                 {text[3]}
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
-                        </motion.div>
+
 
                     </div>
                 </div>
@@ -221,4 +204,4 @@ const VirtualBanner = ({img,text}) => {
     );
 }
 
-export default VirtualBanner;
+export default AboutBanner;
