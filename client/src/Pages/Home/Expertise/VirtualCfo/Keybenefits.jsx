@@ -41,7 +41,7 @@ export default function KeyBenefits({benefits,keyBenefittext}) {
               <div className="text-4xl p-2 text-white rounded-xl bg-light-blue">
                 <HiChartBar />
               </div>
-              <p className="text-white  font-semibold text-sm sm:text-base leading-snug">
+              <p className="text-white  font-inter text-sm sm:text-base leading-snug">
                 {text}
               </p>
             </motion.div>
