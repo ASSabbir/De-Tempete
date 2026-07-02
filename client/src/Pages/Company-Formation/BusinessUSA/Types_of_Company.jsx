@@ -87,20 +87,22 @@ const Types_of_Company = () => {
 
           {/* Right Card */}
           <div className="lg:col-span-8">
-            <div className="bg-[#071B55] rounded-2xl p-10 relative min-h-[400px] shadow-xl">
-              <div className="flex gap-8">
+            <div className="bg-[#071B55] rounded-2xl p-6 sm:p-8 lg:p-10 relative shadow-xl min-h-auto lg:min-h-[400px]">
+              <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
                 {/* Number */}
-                <h1 className="text-[#58CDE7] text-8xl font-bold leading-none">
-                  {companyData[activeTab].number}
-                </h1>
+                <div className="flex justify-center md:block">
+                  <h1 className="text-[#58CDE7] text-6xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[130px] font-bold leading-none">
+                    {companyData[activeTab].number}
+                  </h1>
+                </div>
 
                 {/* Content */}
-                <div>
-                  <h3 className="text-white text-5xl font-bold mb-8">
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-8 leading-tight">
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className="space-y-4 text-white text-lg leading-8">
+                  <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-white text-base sm:text-lg lg:text-xl leading-7 lg:leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}
@@ -109,8 +111,8 @@ const Types_of_Company = () => {
               </div>
 
               {/* Button */}
-              <div className="absolute bottom-8 right-8">
-                <button className="bg-white text-[#14224A] px-8 py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300">
+              <div className="mt-8 lg:absolute lg:bottom-8 lg:right-8">
+                <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white transition-all duration-300">
                   Talk to an Expert
                 </button>
               </div>

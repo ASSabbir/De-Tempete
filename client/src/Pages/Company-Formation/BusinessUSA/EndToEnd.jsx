@@ -71,20 +71,20 @@ const EndToEnd = () => {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-12 gap-16 items-start mx-22">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left Steps */}
           <div className="lg:col-span-3">
-            <div className="">
+            <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
               {steps.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveStep(index)}
-                  className={`block text-left w-full px-6 py-5 text-2xl rounded-xl
-                  ${
-                    activeStep === index
-                      ? "bg-[#081B57] text-white"
-                      : "text-[#1f2a50] hover:bg-gray-100"
-                  }`}
+                  className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-lg lg:text-2xl rounded-xl transition-all duration-300
+          ${
+            activeStep === index
+              ? "bg-[#081B57] text-white"
+              : "text-[#1f2a50] hover:bg-gray-100"
+          }`}
                 >
                   {item.step}
                 </button>
@@ -94,25 +94,25 @@ const EndToEnd = () => {
 
           {/* Right Card */}
           <div className="lg:col-span-9">
-            <div className="relative bg-[#EFEFEF] rounded-3xl p-12 shadow-sm">
+            <div className="relative bg-[#EFEFEF] rounded-3xl p-6 sm:p-8 lg:p-12 shadow-sm">
               {/* Triangle */}
-              <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]"></div>
+              <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]" />
 
-              <div className="flex gap-8">
+              <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
                 {/* Number */}
-                <div>
-                  <h1 className="text-[140px] leading-none font-bold text-[#58D3EC]">
+                <div className="flex justify-center md:block">
+                  <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[140px] leading-none font-bold text-[#58D3EC]">
                     {steps[activeStep].number}
                   </h1>
                 </div>
 
                 {/* Text */}
-                <div className="pt-5">
-                  <h3 className="text-5xl font-bold text-[#081B57] mb-5">
+                <div className="flex-1 pt-0 md:pt-5 text-center md:text-left">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#081B57] mb-4 md:mb-5 leading-tight">
                     {steps[activeStep].title}
                   </h3>
 
-                  <ul className=" text-[#1f2a50] text-xl">
+                  <ul className="text-[#1f2a50] text-base sm:text-lg lg:text-xl space-y-2">
                     {steps[activeStep].points.map((point, i) => (
                       <li key={i}>• {point}</li>
                     ))}
