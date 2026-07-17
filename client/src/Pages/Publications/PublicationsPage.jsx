@@ -1,13 +1,16 @@
-// client/src/Pages/Publications/PublicationsPage.jsx
+
 import { useEffect, useState } from 'react';
 import API from '../../api/axios';
 import DownloadButton from '../../Components/Shared/DownloadButton';
 import PageHero from '../../Components/Shared/PageHero';
+import DownloadGateModal from '../../Components/Shared/DownloadGateModal';
 
 export default function PublicationsPage({ region, title }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [selectedResource, setSelectedResource] = useState(null);
 
   useEffect(() => {
     API.get(`/publications?region=${region}`)
@@ -58,13 +61,28 @@ export default function PublicationsPage({ region, title }) {
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0f1f3d', marginBottom: 8, lineHeight: 1.3 }}>{item.title}</h3>
                   <p style={{ fontSize: 13, color: '#9ca3af', marginBottom: 20 }}>File Format: {item.fileFormat}</p>
-                  <DownloadButton resourceType="publication" resourceId={item._id} label="Download Now" />
+                  <button onClick={() => {
+                    setSelectedResource({ type: 'publication', id: item._id });
+                    setShowModal(true);
+                  }} style={{
+                    padding: '10px 20px', background: '#22b8e0', color: '#fff',
+                    border: 'none', borderRadius: 6, cursor: 'pointer', fontWeight: 600, fontSize: 13
+                  }}>
+                    Download Now
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         )}
       </section>
+
+      {showModal && selectedResource && (
+        <DownloadGateModal
+          resource={selectedResource}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 }

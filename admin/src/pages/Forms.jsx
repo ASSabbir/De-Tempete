@@ -49,10 +49,14 @@ export default function Forms() {
     setSaving(true);
     setError('');
     try {
-      if (editing) await API.put(`/forms/${editing}`, form);
-      else await API.post('/forms', form);
+      const { data } = editing ? await API.put(`/forms/${editing}`, form) : await API.post('/forms', form);
+      if (editing) {
+        setItems(p => p.map(i => i._id === editing ? data : i));
+      } else {
+        setItems(p => [data, ...p]);
+      }
       closeModal();
-      fetchItems();
+      setForm(EMPTY);
     } catch (err) {
       setError(err.response?.data?.message || 'Save failed');
     } finally {
@@ -64,7 +68,8 @@ export default function Forms() {
     if (!window.confirm('Delete?')) return;
     try {
       await API.delete(`/forms/${id}`);
-      fetchItems();
+      setItems(p => p.filter(i => i._id !== id));
+      setTotal(t => t - 1);
     } catch {
       alert('Delete failed');
     }

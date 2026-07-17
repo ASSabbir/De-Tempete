@@ -70,14 +70,14 @@ const EndToEnd = () => {
     <section className="bg-[#f7f7f7] py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Banner */}
-        <div className="bg-[#081B57] rounded-2xl px-10 flex flex-col lg:flex-row justify-between items-center gap-8 mb-18">
-          <h3 className="text-white text-2xl font-medium max-w-4xl leading-relaxed">
+        <div className="bg-[#081B57] rounded-2xl px-6 sm:px-8 lg:px-10 py-6 sm:py-8 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 mb-12 md:mb-16 lg:mb-18">
+          <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium max-w-4xl leading-relaxed text-center lg:text-left">
             At <span className="italic font-bold">de tempête</span>, we manage
             the full process — ensuring fast approval and full compliance with
             KSA’s <span className="font-bold">business laws.</span>
           </h3>
 
-          <button className="border-2 border-white text-white px-10 py-4 rounded-2xl hover:bg-white hover:text-[#081B57] duration-300">
+          <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-medium transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 hover:shadow-xl">
             Get Started Now
           </button>
         </div>
@@ -98,57 +98,62 @@ const EndToEnd = () => {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-12 gap-16 items-start mx-22">
-          {/* Left Steps */}
-          <div className="lg:col-span-3">
-            <div className="">
-              {steps.map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveStep(index)}
-                  className={`block text-left w-full px-6 py-5 text-2xl rounded-xl
-                  ${
-                    activeStep === index
-                      ? "bg-[#081B57] text-white"
-                      : "text-[#1f2a50] hover:bg-gray-100"
-                  }`}
-                >
-                  {item.step}
-                </button>
-              ))}
-            </div>
-          </div>
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
 
-          {/* Right Card */}
-          <div className="lg:col-span-9">
-            <div className="relative bg-[#EFEFEF] rounded-3xl p-12 shadow-sm">
-              {/* Triangle */}
-              <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]"></div>
+  {/* Left Steps */}
+  <div className="lg:col-span-3">
+    <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+      {steps.map((item, index) => (
+        <button
+          key={index}
+          onClick={() => setActiveStep(index)}
+          className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-lg lg:text-2xl rounded-xl transition-all duration-300
+          ${
+            activeStep === index
+              ? "bg-[#081B57] text-white"
+              : "text-[#1f2a50] hover:bg-gray-100"
+          }`}
+        >
+          {item.step}
+        </button>
+      ))}
+    </div>
+  </div>
 
-              <div className="flex gap-8">
-                {/* Number */}
-                <div>
-                  <h1 className="text-[140px] leading-none font-bold text-[#58D3EC]">
-                    {steps[activeStep].number}
-                  </h1>
-                </div>
+  {/* Right Card */}
+  <div className="lg:col-span-9">
+    <div className="relative bg-[#EFEFEF] rounded-3xl p-6 sm:p-8 lg:p-12 shadow-sm">
 
-                {/* Text */}
-                <div className="pt-5">
-                  <h3 className="text-5xl font-bold text-[#081B57] mb-5">
-                    {steps[activeStep].title}
-                  </h3>
+      {/* Triangle */}
+      <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]"></div>
 
-                  <ul className=" text-[#1f2a50] text-xl">
-                    {steps[activeStep].points.map((point, i) => (
-                      <li key={i}>• {point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
+
+        {/* Number */}
+        <div className="flex justify-center sm:block">
+          <h1 className="text-6xl sm:text-8xl lg:text-[140px] leading-none font-bold text-[#58D3EC]">
+            {steps[activeStep].number}
+          </h1>
         </div>
+
+        {/* Text */}
+        <div className="flex-1 pt-0 sm:pt-5 text-center sm:text-left">
+          <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#081B57] mb-4 sm:mb-5 leading-tight">
+            {steps[activeStep].title}
+          </h3>
+
+          <ul className="text-[#1f2a50] text-base sm:text-lg lg:text-xl space-y-2">
+            {steps[activeStep].points.map((point, i) => (
+              <li key={i}>• {point}</li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
       </div>
     </section>
   );

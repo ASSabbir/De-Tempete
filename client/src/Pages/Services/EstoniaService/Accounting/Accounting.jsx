@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MarketingExpansion = () => {
+const Accounting = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const MarketingExpansion = () => {
     );
 };
 
-export default MarketingExpansion;
+export default Accounting;
