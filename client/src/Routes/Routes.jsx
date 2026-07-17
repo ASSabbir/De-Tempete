@@ -77,6 +77,15 @@ import POstInvestment from "../Pages/Home/Expertise/Post/POstInvestment";
 import Due from "../Pages/Home/Expertise/Due/Due";
 import InvestmentReadiness from "../Pages/Home/Expertise/Investment/InvestmentReadiness";
 import About from "../Pages/About/About";
+import BusinessEstonia from "../Pages/Company-Formation/BusinessEstonia/BusinessEstonia";
+import CompanyFormation from "../Pages/Services/EstoniaService/CompanyFormation/CompanyFormation";
+import Accounting from "../Pages/Services/EstoniaService/Accounting/Accounting";
+import Tax from "../Pages/Services/EstoniaService/Tax&Vat/Tax";
+import AnnualRepoting from "../Pages/Services/EstoniaService/AnnualRepoting/AnnualRepoting";
+import CFOBussiness from "../Pages/Services/EstoniaService/CFOBussiness/CFOBussiness";
+import ERPDigitalTranformation from "../Pages/Services/EstoniaService/ERPDigitalTranformation/ERPDigitalTranformation";
+import Ecommerce from "../Pages/Services/EstoniaService/Ecomarce/Ecommerce";
+import EUExpansion from "../Pages/Services/EstoniaService/EUExpansion/EUExpansion";
 
 
 const Routes = createBrowserRouter([ 
@@ -94,6 +103,7 @@ const Routes = createBrowserRouter([
       {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
       {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
       {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
+      {path:"/business-setup/estonia" , element :<BusinessEstonia></BusinessEstonia>},
       {path:"/contact" , element : <ContactUs></ContactUs> },
       {path:"/about" , element : <About></About> },
 
@@ -147,6 +157,17 @@ const Routes = createBrowserRouter([
       { path: "/services/bd/training", element: <Training></Training> },
       { path: "/services/bd/investment", element: <Investment></Investment> },
       { path: "/services/bd/technology", element: <Technology></Technology> },
+
+      // ===== SERVICES: EStonia =====
+      { path: "/services/estonia/company-formation", element: <CompanyFormation></CompanyFormation> },
+      { path: "/services/estonia/accounting-bookkeeping", element: <Accounting></Accounting> },
+      { path: "/services/estonia/tax-vat-compliance", element: <Tax></Tax> },
+      { path: "/services/estonia/annual-reporting", element: <AnnualRepoting></AnnualRepoting> },
+      { path: "/services/estonia/cfo-business-advisory", element: <CFOBussiness></CFOBussiness> },
+      { path: "/services/estonia/erp-digital-transformation", element: <ERPDigitalTranformation></ERPDigitalTranformation> },
+      { path: "/services/estonia/ecommerce-saas-accounting", element: <Ecommerce></Ecommerce> },
+      { path: "/services/estonia/eu-expansion", element: <EUExpansion></EUExpansion> },
+      
 
       // ===== LIBRARY =====
       { path: "/library/uae", element: <UAELibrary /> },

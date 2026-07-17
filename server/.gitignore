@@ -72,3 +72,4 @@ coverage/
 # Optional uploads (if exists)
 # =====================
 uploads/
+.vercel
