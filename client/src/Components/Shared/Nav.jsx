@@ -8,6 +8,7 @@ import usaImg from "../../asstes/Images/New folder/Business-set-up-in-USA.webp";
 import ksaImg from "../../asstes/Images/New folder/Business-set-up-in-kSA.webp";
 import bdImg from "../../asstes/Images/New folder/Business-set-up-in-BD.webp";
 import uaeImg from "../../asstes/Images/New folder/Dubai-Business-set-up.webp";
+import ESImg from "../../asstes/Images/Estonia.webp";
 
 const companyFormation = [
   { img: uaeImg, label: "Business Setup in UAE", path: "/business-setup/uae" },
@@ -19,6 +20,7 @@ const companyFormation = [
   },
   { img: ukImg, label: "Business Setup in UK", path: "/business-setup/uk" },
   { img: usaImg, label: "Business Setup in USA", path: "/business-setup/usa" },
+  { img: ESImg, label: "Business Setup in Estonia", path: "/business-setup/estonia" },
 ];
 
 const services = {
@@ -95,6 +97,40 @@ const services = {
     },
     { label: "Investment", path: "/services/ksa/investment" },
   ],
+  Estonia: [
+  {
+    label: "Company Formation & e-Residency",
+    path: "/services/estonia/company-formation",
+  },
+  {
+    label: "Accounting & Bookkeeping",
+    path: "/services/estonia/accounting-bookkeeping",
+  },
+  {
+    label: "Tax & VAT Compliance",
+    path: "/services/estonia/tax-vat-compliance",
+  },
+  {
+    label: "Annual Reporting & Compliance",
+    path: "/services/estonia/annual-reporting",
+  },
+  {
+    label: "CFO & Business Advisory",
+    path: "/services/estonia/cfo-business-advisory",
+  },
+  {
+    label: "ERP & Digital Transformation",
+    path: "/services/estonia/erp-digital-transformation",
+  },
+  {
+    label: "E-commerce & SaaS Accounting",
+    path: "/services/estonia/ecommerce-saas-accounting",
+  },
+  {
+    label: "EU Expansion & International Support",
+    path: "/services/estonia/eu-expansion",
+  },
+],
 };
 
 const resourceSections = {
@@ -103,7 +139,7 @@ const resourceSections = {
     { label: "E-brochure", path: "https://drive.google.com/file/d/1XFM7Aa3OPQNjXvA47v6mwKX67uM6Oq6O/view?pli=1" },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
-    { label: "Blogs", path: "/resource/blogs" },
+    // { label: "Blogs", path: "/resource/blogs" },
   ],
   PUBLICATIONS: [
     { label: "UAE", path: "/publications/uae" },
@@ -212,10 +248,10 @@ export default function Nav() {
 
               {/* Company Formation Dropdown — image cards */}
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 rounded-2xl overflow-hidden shadow-2xl transition-all duration-200  origin-top ${companyOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"}`}
-                style={{ background: "#0d1e4a", width: "1600px" }}
+                className={`absolute top-full left-4/5 xl:left-1/2 w-[70vw] xl:w-[80vw] -translate-x-1/2 mt-2 rounded-2xl overflow-hidden shadow-2xl transition-all   duration-200  origin-top ${companyOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"}`}
+                style={{ background: "#0d1e4a" }}
               >
-                <div className="p-5">
+                <div className="p-5 text-sm xl:text-base">
                   {/* Top row — 4 cards */}
                   <div className="grid grid-cols-4  gap-3 mb-3">
                     {companyFormation.slice(0, 4).map((item) => (
@@ -224,7 +260,7 @@ export default function Nav() {
                         to={item.path}
                         onClick={() => setCompanyOpen(false)}
                         className="relative rounded-xl overflow-hidden group bg-amber-50 cursor-pointer block"
-                        style={{ height: "250px" }}
+                        style={{ height: "clamp(160px, 15vw, 250px)" }}
                       >
                         <img
                           src={item.img}
@@ -249,7 +285,7 @@ export default function Nav() {
                         to={item.path}
                         onClick={() => setCompanyOpen(false)}
                         className="relative rounded-xl overflow-hidden group cursor-pointer block"
-                        style={{ height: "250px" }}
+                        style={{ height: "clamp(160px, 15vw, 250px)" }}
                       >
                         <img
                           src={item.img}
