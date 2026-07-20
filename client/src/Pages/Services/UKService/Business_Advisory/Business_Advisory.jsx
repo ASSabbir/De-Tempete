@@ -19,46 +19,51 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
+import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import strategicAdvisoryImg from '../../../../asstes/Images/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
+import exitStrategyImg from '../../../../asstes/Images/compliance-calendar-img.webp'
+
 
 const valuationCards = [
   {
     icon: LuBuilding2,
     title: "Business Valuation",
-    desc: "Accurate valuation reports based on financial performance, market conditions, and future projections.",
+    desc: "Accurate valuation reports based on financial performance, market position, and future earnings potential.",
   },
   {
     icon: LuTrendingUp,
     title: "Investment Feasibility Analysis",
-    desc: "Evaluate potential investments to ensure profitability and strategic alignment.",
+    desc: "Evaluate potential investments and capital allocation decisions to ensure profitability and strategic fit.",
   },
   {
     icon: LuWallet,
     title: "ROI Forecasting",
-    desc: "Project returns to make confident, data-driven financial decisions.",
+    desc: "Project returns to support confident, data-driven investment and growth decisions.",
   },
   {
     icon: LuFileSearch,
     title: "Investor Readiness Support",
-    desc: "Pitch decks, financial models, and due diligence preparation.",
+    desc: "Pitch decks, financial models, and due diligence preparation for funding rounds and investor conversations.",
   },
 ];
 
 const maItems = [
   {
     title: "M&A Strategy & Due Diligence",
-    desc: "Comprehensive financial and legal checks to minimise risk.",
+    desc: "Comprehensive financial and operational due diligence to identify risk before a deal closes.",
   },
   {
     title: "Deal Structuring & Negotiation",
-    desc: "Support in creating win-win deal structures that protect your interests.",
+    desc: "Support in building deal structures that protect your interests and align incentives on both sides.",
   },
   {
     title: "Business Restructuring Advisory",
-    desc: "Operational, financial, and organisational restructuring for efficiency and growth.",
+    desc: "Operational, financial, and organizational restructuring designed for efficiency and long-term growth.",
   },
   {
     title: "Post-Merger Integration",
-    desc: "Smooth integration of teams, systems, and financial processes.",
+    desc: "Structured integration of teams, systems, and financial processes after a merger or acquisition closes.",
   },
 ];
 
@@ -84,7 +89,7 @@ const financialGrowth = [
 const whyChoose = [
   "Tailored solutions for startups, SMEs & large enterprises",
   "Data-driven insights for confident decision-making",
-  "Full support across formation, valuation, M&A, and exits",
+  "Full support across valuation, M&A, and exit planning",
   "Strong compliance, documentation & financial expertise",
 ];
 
@@ -95,51 +100,46 @@ const Business_Advisory = () => {
 
   return (
     <div className="w-full">
-     <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
-        alt="Business Advisory"
-        heading={<>Strategic Business<br /><span className="text-light-blue">Advisory For Confident Decisions</span><br />& Sustainable Growth</>}
-        description="From formation to expansion, valuation to exit strategies—our advisory solutions help businesses navigate challenges, unlock opportunities, and grow with clarity and confidence."
-      />
+      <SevicsBanner
+        bgImage={bgimg}
+        alt="USA Business Advisory & Strategy Services"
+        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help US businesses navigate major decisions with clarity, data, and expert guidance at every stage."
+        title1={"Strategic Advisory"}
+        title2={"For Every Stage Of Your US Business"}
+      ></SevicsBanner>
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
-
-      {/* Company Formation Opening */}
+      {/* Strategic Business Advisory Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/freepik__company-formation-in-business-set-up-in-uk-image-f__31544.webp"
-            alt="Company Formation Opening & Business Setup"
+            src={strategicAdvisoryImg}
+            alt="Strategic Business Advisory Overview"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
-              <span className="font-bold">Company Formation</span>
+              <span className="font-bold">Strategic Business</span>
               <br />
-              <span className="font-bold">Opening</span> & Business Setup
+              <span className="font-bold">Advisory</span> & Consultancy
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
-              Start Your Business on the Right Foundation
+              Guidance Built Around the Decisions That Matter Most
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-500">
-              We guide startups, SMEs, and investors through every step of
-              company formation, ensuring compliance, efficiency, and the right
-              structure for long-term success.
+              We guide founders, executives, and investors through the
+              business decisions with the highest stakes — from
+              understanding what your company is worth to planning a merger,
+              acquisition, or eventual exit.
             </p>
             <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
               Key Points:
             </h4>
             <div className="space-y-3">
               {[
-                "Entity selection & structuring",
-                "Licensing & registration",
-                "Compliance and documentation",
-                "Market entry advisory",
+                "Business valuation & investment advisory",
+                "Mergers, acquisitions & restructuring support",
+                "Exit strategy & succession planning",
+                "Financial strategy & growth consulting",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
@@ -151,20 +151,21 @@ const Business_Advisory = () => {
         </div>
       </section>
 
-      {/* Business Valuation */}
+      {/* Business Valuation & Investment Advisory */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-4xl leading-tight text-[#16244b] font-light">
             <span className="font-bold">Business Valuation</span> & Investment
-            Advisory Localisation
+            Advisory
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
             Know Your Worth. Make Smarter Investment Decisions.
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-500">
-            Our valuation and investment advisory services help you understand
-            the true financial position of your business, attract investors, and
-            make informed strategic decisions.
+            Our valuation and investment advisory services help you
+            understand the true financial position of your business,
+            attract investors, and make informed strategic decisions backed
+            by data.
           </p>
         </div>
 
@@ -197,7 +198,8 @@ const Business_Advisory = () => {
             </p>
             <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-sm">
               Whether you're merging, acquiring, or restructuring operations,
-              our advisors ensure a smooth, compliant, and strategic transition.
+              our advisors ensure a smooth, compliant, and strategic
+              transition from start to finish.
             </p>
           </div>
 
@@ -235,22 +237,22 @@ const Business_Advisory = () => {
         </div>
       </section>
 
-      {/* Exit Strategy */}
+      {/* Exit Strategy & Succession Planning */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Exit Strategy</span> & Succession
               <br />
-              Planning Heading
+              Planning
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
               Plan Your Exit with Confidence
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-500">
               We help business owners prepare for a successful transition,
-              whether you're selling, retiring, or passing the business to the
-              next generation.
+              whether you're selling, retiring, or passing the business to
+              the next generation of leadership.
             </p>
             <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
               Key Points
@@ -260,7 +262,7 @@ const Business_Advisory = () => {
                 "Exit Strategy Development",
                 "Succession Planning",
                 "Valuation & Deal Advisory",
-                "Legal & Compliance Guidance",
+                "Transition & Handover Guidance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
@@ -270,8 +272,8 @@ const Business_Advisory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/freepik__exit-strategy-succession-planningheading-image-for__79393.webp"
-            alt="Exit Strategy"
+            src={exitStrategyImg}
+            alt="Exit Strategy & Succession Planning"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
         </div>
@@ -292,7 +294,7 @@ const Business_Advisory = () => {
               <br />
               We create actionable financial strategies that enhance
               profitability, strengthen cash flow, and support sustainable
-              business expansion.
+              business expansion across your US operations.
             </p>
             <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
           </div>
@@ -347,15 +349,11 @@ const Business_Advisory = () => {
 
       <ConsultationCTA
         heading={<>Make Smarter Business<br />Decisions <span className="font-bold">Today</span></>}
-        bodyText="Get expert guidance to build, scale, or exit your business with confidence."
+        bodyText="Get expert guidance to value, grow, restructure, or exit your US business with confidence."
         highlightText="Talk to Our Business Advisors"
       />
 
-      <RecentBlogs blogs={[
-        { id: 1, image: "/src/asstes/Images/New folder/council-tax.webp", title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide", desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to" },
-        { id: 2, image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp", title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity", desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process," },
-        { id: 3, image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp", title: "The Role and Benefits of a Virtual CFO in Modern Businesses", desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual" },
-      ]} />
+      
     </div>
   );
 };

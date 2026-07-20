@@ -1,4 +1,4 @@
-// File: Industry_Specific_Accounting_Solutions.jsx
+// File: IndustrySpecificUSA.jsx
 import { useState } from "react";
 import {
   CalendarDays,
@@ -15,6 +15,8 @@ import {
   LuHouse,
   LuUtensils,
   LuBriefcase,
+  LuShip,
+  LuRocket,
   LuChartNoAxesCombined,
 } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
@@ -22,66 +24,60 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
+import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import industryExpertiseImg from '../../../../asstes/Images/servics/UK/Whether-expanding-into.webp'
+
 
 const industries = [
   {
-    icon: LuBuilding,
-    title: "Construction & Contractors",
-    items: [
-      "CIS compliance",
-      "Subcontractor tax management",
-      "Project cost tracking",
-      "Cash flow control for long-term projects",
-    ],
-  },
-  {
     icon: LuShoppingCart,
-    title: "E-commerce & Online Businesses",
+    title: "E-commerce & Amazon Sellers",
     items: [
-      "Multi-channel sales reporting",
-      "VAT for online sellers",
-      "International tax considerations",
-      "Inventory financial management",
+      "Multi-channel sales reconciliation",
+      "Sales tax nexus tracking by state",
+      "Amazon FBA & marketplace fee accounting",
+      "Inventory and COGS management",
     ],
   },
   {
-    icon: LuStethoscope,
-    title: "Healthcare & Medical Professionals",
+    icon: LuRocket,
+    title: "SaaS & Startups",
     items: [
-      "Private practice accounting",
-      "NHS & mixed income structures",
-      "Tax efficiency planning",
-      "Regulatory compliance",
+      "Subscription & recurring revenue accounting",
+      "Deferred revenue recognition",
+      "Investor-ready financial reporting",
+      "Burn rate & runway tracking",
     ],
   },
   {
     icon: LuHouse,
-    title: "Real Estate & Property Investment",
+    title: "Real Estate Investors",
     items: [
-      "Rental income structuring",
-      "Capital gains planning",
-      "Property tax optimisation",
-      "Portfolio financial management",
-    ],
-  },
-  {
-    icon: LuUtensils,
-    title: "Hospitality & Retail",
-    items: [
-      "Margin analysis",
-      "Stock control systems",
-      "Payroll management",
-      "Seasonal cash flow forecasting",
+      "Rental income & expense tracking",
+      "Multi-property portfolio accounting",
+      "Depreciation & capital gains planning",
+      "1031 exchange support coordination",
     ],
   },
   {
     icon: LuBriefcase,
-    title: "Professional Services Firms",
+    title: "Consultants & Agencies",
     items: [
-      "Partner profit allocation",
-      "Time-based revenue tracking",
-      "Advisory growth planning",
-      "Expense management",
+      "Project & client-based revenue tracking",
+      "Contractor & 1099 payment management",
+      "Utilization & profitability analysis",
+      "Cash flow management for service billing",
+    ],
+  },
+  {
+    icon: LuShip,
+    title: "Import/Export Businesses",
+    items: [
+      "Landed cost & customs accounting",
+      "Multi-currency transaction management",
+      "Cross-border compliance coordination",
+      "Supply chain cost tracking",
     ],
   },
 ];
@@ -89,27 +85,27 @@ const industries = [
 const servicesItems = [
   {
     title: "Sector-Specific Bookkeeping",
-    desc: "We manage your bookkeeping with a clear understanding of your industry’s financial structure, revenue patterns, and cost models. From project-based accounting in construction to multi-channel reconciliation for e-commerce businesses, our bookkeeping ensures accurate records, clean audit trails, and real-time financial visibility tailored to your sector.",
+    desc: "We manage your bookkeeping with a clear understanding of your industry's financial structure, revenue patterns, and cost models. From FBA fee reconciliation for e-commerce sellers to deferred revenue tracking for SaaS businesses, our bookkeeping ensures accurate records, clean audit trails, and real-time financial visibility tailored to your sector.",
   },
   {
     title: "Compliance & Regulatory Management",
-    desc: "Every industry operates under specific UK regulations and reporting standards. We ensure your business remains fully compliant with HMRC requirements, industry regulators, and statutory obligations. Our proactive compliance management reduces risk, avoids penalties, and protects your company’s reputation.",
+    desc: "Every industry operates under specific US federal and state regulations and reporting standards. We ensure your business remains fully compliant with IRS requirements, sales tax obligations, and industry-specific reporting rules. Our proactive compliance management reduces risk, avoids penalties, and protects your company's reputation.",
   },
   {
     title: "Tax-Efficient Structuring",
-    desc: "Tax rules vary significantly across industries. We structure your business finances to maximise allowable deductions, optimise VAT positioning, and legally minimise tax exposure. Our goal is to enhance profitability while ensuring full compliance with UK tax legislation.",
+    desc: "Tax rules vary significantly across industries. We structure your business finances to maximize allowable deductions, optimize sales tax positioning, and legally minimize federal and state tax exposure. Our goal is to enhance profitability while ensuring full compliance with US tax legislation.",
   },
   {
     title: "Cash Flow Forecasting",
-    desc: "Different industries experience different cash flow cycles. We develop forward-looking cash flow forecasts based on your sector’s operational patterns, helping you anticipate shortfalls, manage working capital, and maintain financial stability during growth or seasonal fluctuations.",
+    desc: "Different industries experience different cash flow cycles. We develop forward-looking cash flow forecasts based on your sector's operational patterns, helping you anticipate shortfalls, manage working capital, and maintain financial stability during growth or seasonal fluctuations.",
   },
   {
     title: "Business Performance Analysis",
-    desc: "We analyse your financial data against industry benchmarks to measure profitability, cost efficiency, and operational performance. Our insights help you identify weaknesses, improve margins, and make informed strategic decisions backed by real financial evidence.",
+    desc: "We analyze your financial data against industry benchmarks to measure profitability, cost efficiency, and operational performance. Our insights help you identify weaknesses, improve margins, and make informed strategic decisions backed by real financial evidence.",
   },
   {
     title: "Growth & Expansion Advisory",
-    desc: "Whether expanding into new markets, launching new services, or scaling operations, we provide financial guidance aligned with your industry dynamics. From funding preparation to expansion modelling, we ensure your growth plans are financially structured, sustainable, and strategically sound.",
+    desc: "Whether expanding into new states, launching new product lines, or scaling operations, we provide financial guidance aligned with your industry dynamics. From funding preparation to expansion modeling, we ensure your growth plans are financially structured, sustainable, and strategically sound.",
   },
 ];
 
@@ -123,11 +119,11 @@ const frameworks = [
 const benefits = [
   {
     title: "Improved compliance",
-    desc: "Stay aligned with UK regulations and industry standards while minimising legal and financial risks.",
+    desc: "Stay aligned with US federal and state regulations and industry standards while minimizing legal and financial risks.",
   },
   {
     title: "Reduced tax exposure",
-    desc: "Optimise your tax position through efficient structuring and strategic planning.",
+    desc: "Optimize your federal and state tax position through efficient structuring and strategic planning.",
   },
   {
     title: "Better financial forecasting",
@@ -139,62 +135,22 @@ const benefits = [
   },
 ];
 
-const blogs = [
-  {
-    id: 1,
-    image: "/src/asstes/Images/New folder/council-tax.webp",
-    title:
-      "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-    desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-  },
-  {
-    id: 2,
-    image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
-    title:
-      "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-    desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-  },
-  {
-    id: 3,
-    image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
-    title: "The Role and Benefits of a Virtual CFO in Modern Businesses",
-    desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-  },
-];
 
-const Industry_Specific_Accounting_Solutions = () => {
+
+const IndustrySpecificUSA = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
 
   return (
     <div className="w-full">
-      <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
-        alt="Industry-Specific Accounting Solutions"
-        heading={
-          <>
-            Industry-Specific Accounting
-            <br />
-            <span className="text-light-blue">Solutions In The UK</span>
-          </>
-        }
-        description="Different industries require different financial strategies. Generic accounting does not address industry regulations, margins, tax structures, or compliance complexities. We deliver tailored accounting solutions built specifically for your sector."
-      />
-
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 910,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SevicsBanner
+        bgImage={bgimg}
+        alt="USA Industry-Specific Accounting Solutions"
+        description="Get accounting support built around how your business actually operates. From e-commerce and SaaS to real estate, consulting, and import/export, we provide industry-specific accounting solutions that address the unique revenue models, compliance requirements, and cost structures of your sector."
+        title1={"Industry-Specific"}
+        title2={"Accounting Solutions For US Businesses"}
+      ></SevicsBanner>
 
       {/* Why Industry Expertise Matters */}
       <section className="py-20 bg-white">
@@ -223,7 +179,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             <div className="space-y-3">
               {[
                 "Unique regulatory requirements",
-                "Different VAT structures",
+                "Different sales tax structures",
                 "Specific cost models",
                 "Sector-based tax planning opportunities",
                 "Industry benchmarks for performance",
@@ -236,7 +192,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/Whether-expanding-into.webp"
+            src={industryExpertiseImg}
             alt="Why Industry Expertise Matters"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -285,8 +241,8 @@ const Industry_Specific_Accounting_Solutions = () => {
               Include
             </h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
-              Here are professional, UK-market aligned descriptions you can
-              place under each heading
+              Business Compliance USA support tailored to the way each
+              industry actually operates
             </p>
           </div>
 
@@ -329,7 +285,7 @@ const Industry_Specific_Accounting_Solutions = () => {
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-light text-white">
-              Customised Financial <span className="font-bold">Frameworks</span>
+              Customized Financial <span className="font-bold">Frameworks</span>
             </h2>
             <p className="mt-4 text-slate-300">
               We don't apply one-size-fits-all systems. We build financial
@@ -399,13 +355,13 @@ const Industry_Specific_Accounting_Solutions = () => {
             </span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your US presence with confidence."
         highlightText="Your business deserves financial expertise designed for your sector — not generic solutions."
       />
 
-      <RecentBlogs blogs={blogs} />
+      
     </div>
   );
 };
 
-export default Industry_Specific_Accounting_Solutions;
+export default IndustrySpecificUSA;

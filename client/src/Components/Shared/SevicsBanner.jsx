@@ -101,7 +101,7 @@ function StatItem({ icon, value, suffix, label, start }) {
 const SevicsBanner = ({
     bgImage,
     title1,
-   
+   alt,
     title2,
     description,
     buttonText,
@@ -122,7 +122,7 @@ const SevicsBanner = ({
             <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-32 pb-20">
                 <img
                     src={bgImage}
-                    alt="hero background"
+                    alt={alt}
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[#0d1b3e]/75"></div>

@@ -86,6 +86,14 @@ import CFOBussiness from "../Pages/Services/EstoniaService/CFOBussiness/CFOBussi
 import ERPDigitalTranformation from "../Pages/Services/EstoniaService/ERPDigitalTranformation/ERPDigitalTranformation";
 import Ecommerce from "../Pages/Services/EstoniaService/Ecomarce/Ecommerce";
 import EUExpansion from "../Pages/Services/EstoniaService/EUExpansion/EUExpansion";
+import MarketExpansionUSA from "../Pages/Services/USAService/All/MarketExpansionUSA";
+import ComplianceUSA from "../Pages/Services/USAService/All/ComplianceUSA";
+import IndustrySpecificUSA from "../Pages/Services/USAService/All/IndustrySpecificUSA";
+import FinanceUSA from "../Pages/Services/USAService/All/FinanceUSA";
+import TaxPlanningUSA from "../Pages/Services/USAService/All/TaxPlanningUSA";
+import BusinessAdvisoryUSA from "../Pages/Services/USAService/All/BusinessAdvisoryUSA";
+import HRPayrollUSA from "../Pages/Services/USAService/All/HRPayrollUSA";
+import TechnologyUSA from "../Pages/Services/USAService/All/TechnologyUSA";
 
 
 const Routes = createBrowserRouter([ 
@@ -149,7 +157,7 @@ const Routes = createBrowserRouter([
 
       // ===== SERVICES: BD =====
       { path: "/services/bd/market-expansion", element: <Market_Expansion></Market_Expansion> },
-      { path: "/services/bd/regulatory", element: <Business_Advisory></Business_Advisory> },
+      
       { path: "/services/bd/regulatory", element: <Regulatory></Regulatory> },
       { path: "/services/bd/finance", element: <Finance></Finance> },
       { path: "/services/bd/taxation", element: <Taxation></Taxation> },
@@ -168,6 +176,16 @@ const Routes = createBrowserRouter([
       { path: "/services/estonia/erp-digital-transformation", element: <ERPDigitalTranformation></ERPDigitalTranformation> },
       { path: "/services/estonia/ecommerce-saas-accounting", element: <Ecommerce></Ecommerce> },
       { path: "/services/estonia/eu-expansion", element: <EUExpansion></EUExpansion> },
+      
+      // ===== SERVICES: USA =====
+      { path: "/services/usa/market-expansion", element: <MarketExpansionUSA></MarketExpansionUSA> },
+      { path: "/services/usa/compliance", element: <ComplianceUSA></ComplianceUSA> },
+      { path: "/services/usa/finance-accounting", element: <FinanceUSA></FinanceUSA> },
+      { path: "/services/usa/tax-planning", element: <TaxPlanningUSA></TaxPlanningUSA>},
+      { path: "/services/usa/business-advisory", element: <BusinessAdvisoryUSA></BusinessAdvisoryUSA>},
+      { path: "/services/usa/hr-payroll", element: <HRPayrollUSA></HRPayrollUSA> },
+      { path: "/services/usa/technology", element: <TechnologyUSA></TechnologyUSA> },
+      { path: "/services/usa/industry-accounting", element: <IndustrySpecificUSA></IndustrySpecificUSA> },
       
 
       // ===== LIBRARY =====

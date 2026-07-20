@@ -97,6 +97,40 @@ const services = {
     },
     { label: "Investment", path: "/services/ksa/investment" },
   ],
+  USA: [
+  {
+    label: "Market Expansion & Setup Advisory",
+    path: "/services/usa/market-expansion",
+  },
+  {
+    label: "Compliance & Regulatory Services",
+    path: "/services/usa/compliance",
+  },
+  {
+    label: "Finance & Accounting",
+    path: "/services/usa/finance-accounting",
+  },
+  {
+    label: "Tax Planning & Advisory",
+    path: "/services/usa/tax-planning",
+  },
+  {
+    label: "Business Advisory & Strategy",
+    path: "/services/usa/business-advisory",
+  },
+  {
+    label: "HR & Payroll Solutions",
+    path: "/services/usa/hr-payroll",
+  },
+  {
+    label: "Technology",
+    path: "/services/usa/technology",
+  },
+  {
+    label: "Industry-Specific Accounting Solutions",
+    path: "/services/usa/industry-accounting",
+  },
+],
   Estonia: [
   {
     label: "Company Formation & e-Residency",
