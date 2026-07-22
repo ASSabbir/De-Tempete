@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router";
-import logo1 from "../../asstes/Images/logo1.webp";
-import logo2 from "../../asstes/Images/logo2.webp";
+import logo1 from "../../asstes/img_temp/logo1.webp";
+import logo2 from "../../asstes/img_temp/logo2.webp";
 
-import ukImg from "../../asstes/Images/New folder/Business-set-up-in-UK.webp";
-import usaImg from "../../asstes/Images/New folder/Business-set-up-in-USA.webp";
-import ksaImg from "../../asstes/Images/New folder/Business-set-up-in-kSA.webp";
-import bdImg from "../../asstes/Images/New folder/Business-set-up-in-BD.webp";
-import uaeImg from "../../asstes/Images/New folder/Dubai-Business-set-up.webp";
-import ESImg from "../../asstes/Images/Estonia.webp";
+import ukImg from "../../asstes/img_temp/New folder/Business-set-up-in-UK.webp";
+import usaImg from "../../asstes/img_temp/New folder/Business-set-up-in-USA.webp";
+import ksaImg from "../../asstes/img_temp/New folder/Business-set-up-in-kSA.webp";
+import bdImg from "../../asstes/img_temp/New folder/Business-set-up-in-BD.webp";
+import uaeImg from "../../asstes/img_temp/New folder/Dubai-Business-set-up.webp";
+import ESImg from "../../asstes/img_temp/Estonia.webp";
 
 const companyFormation = [
   { img: uaeImg, label: "Business Setup in UAE", path: "/business-setup/uae" },

@@ -107,7 +107,7 @@ const Taxation_KSA = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Taxation KSA"
         heading={
           <>
@@ -136,7 +136,7 @@ const Taxation_KSA = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Tax-Compliance-Regulatory-Support.webp"
+            src="/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp"
             alt="Tax Compliance & Regulatory Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -210,7 +210,7 @@ const Taxation_KSA = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/Branch-of-Foreign-Company-1.webp"
+            src="/src/asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp"
             alt="VAT Advisory"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -220,7 +220,7 @@ const Taxation_KSA = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
             alt="ZATCA Compliance & E-Invoicing Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -289,7 +289,7 @@ const Taxation_KSA = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
             alt="VAT Filing & Tax Documentation Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -299,7 +299,7 @@ const Taxation_KSA = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
             alt="Ongoing Tax Coordination & Regulatory Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

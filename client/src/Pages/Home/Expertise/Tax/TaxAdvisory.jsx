@@ -1,6 +1,6 @@
 import React from 'react';
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
-import img from '../../../../asstes/Images/Home/freepik__expand-__25358-scaled.webp'
+import img from '../../../../asstes/img_temp/Home/freepik__expand-__25358-scaled.webp'
 import WhyTCFO from './WhyTCFO';
 import HireTaxRegion from './HireTaxregion';
 import GetStarted from '../../../../Components/Shared/GetStarted';

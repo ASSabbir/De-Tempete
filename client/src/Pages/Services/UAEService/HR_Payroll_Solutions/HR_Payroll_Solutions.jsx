@@ -53,7 +53,7 @@ const HR_Payroll_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="HR & Payroll Solutions"
         heading={
           <>
@@ -83,7 +83,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src="/src/asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
             alt="About Our HR & Payroll"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -132,7 +132,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp"
+            src="/src/asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp"
             alt="Payroll Processing & HR Outsourcing"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -143,7 +143,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
+            src="/src/asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
             alt="Employer Of Record (EOR) & PEO Services"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -205,7 +205,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
+            src="/src/asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
             alt="Workforce Compliance Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -269,7 +269,7 @@ const HR_Payroll_Solutions = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
@@ -277,14 +277,14 @@ const HR_Payroll_Solutions = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title:
               "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
             desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title:
               "The Role and Benefits of a Virtual CFO in Modern Businesses",
             desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",

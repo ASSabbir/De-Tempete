@@ -86,7 +86,7 @@ const Branding_Growth = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Branding & Growth KSA"
         heading={
           <>
@@ -138,7 +138,7 @@ const Branding_Growth = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp"
             alt="Brand Development & Business Growth Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import uae from '../../../../asstes/Images/Contact/323301.webp'
-import ksa from '../../../../asstes/Images/Contact/5111777.webp'
-import bd from '../../../../asstes/Images/Contact/8362826.webp'
-import uk from '../../../../asstes/Images/Contact/197374.webp'
+import uae from '../../../../asstes/img_temp/Contact/323301.webp'
+import ksa from '../../../../asstes/img_temp/Contact/5111777.webp'
+import bd from '../../../../asstes/img_temp/Contact/8362826.webp'
+import uk from '../../../../asstes/img_temp/Contact/197374.webp'
 const regions = [
   {
     id: "uae",

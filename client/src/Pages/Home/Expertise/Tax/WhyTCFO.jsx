@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp'
 
 const WhyTCFO = () => {
     return (

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 // Flag emojis used as circle flags — replace with your actual flag images if needed
-import uk from '../../asstes/Images/Contact/197374.webp';
-import uae from '../../asstes/Images/Contact/323301.webp';
-import bd from '../../asstes/Images/Contact/8362826.webp';
-import ee from '../../asstes/Images/Contact/ee-circle-01.webp';
-import sa from '../../asstes/Images/Contact/5111777.webp';
+import uk from '../../asstes/img_temp/Contact/197374.webp';
+import uae from '../../asstes/img_temp/Contact/323301.webp';
+import bd from '../../asstes/img_temp/Contact/8362826.webp';
+import ee from '../../asstes/img_temp/Contact/ee-circle-01.webp';
+import sa from '../../asstes/img_temp/Contact/5111777.webp';
 const offices = [
   {
     flag: uk,

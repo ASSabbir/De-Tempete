@@ -51,7 +51,7 @@ const Technology = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Automation and Digital Transformation KSA"
         heading={
           <>

@@ -35,7 +35,7 @@ const Taxation_UAE = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Taxation UAE"
         heading={<>Simplify Your Business<br /><span className="text-light-blue">Taxes In The UAE</span></>}
         description="Expert Corporate Tax, VAT & Transfer Pricing Solutions for Seamless Compliance and Growth"
@@ -52,7 +52,7 @@ const Taxation_UAE = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src="/src/asstes/img_temp/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
             alt="Corporate Tax Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -114,7 +114,7 @@ const Taxation_UAE = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp"
+            src="/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp"
             alt="VAT Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -125,7 +125,7 @@ const Taxation_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/1775737113368.jpg"
+            src="/src/asstes/img_temp/servics/1775737113368.jpg"
             alt="Excise Tax Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -302,7 +302,7 @@ const Taxation_UAE = () => {
             {[
               {
                 id: 1,
-                image: "/src/asstes/Images/New folder/council-tax.webp",
+                image: "/src/asstes/img_temp/New folder/council-tax.webp",
                 title:
                   "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
                 desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
@@ -310,7 +310,7 @@ const Taxation_UAE = () => {
               {
                 id: 2,
                 image:
-                  "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+                  "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
                 title:
                   "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
                 desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
@@ -318,7 +318,7 @@ const Taxation_UAE = () => {
               {
                 id: 3,
                 image:
-                  "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+                  "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
                 title:
                   "The Role and Benefits of a Virtual CFO in Modern Businesses",
                 desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",

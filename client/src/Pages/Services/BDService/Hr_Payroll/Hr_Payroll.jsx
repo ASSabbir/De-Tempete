@@ -85,7 +85,7 @@ const Hr_Payroll = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -268,7 +268,7 @@ const Hr_Payroll = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
@@ -276,13 +276,13 @@ const Hr_Payroll = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title: "Self-Assessment Tax Return Process for Businesses",
             desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
             desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
           },

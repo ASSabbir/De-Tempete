@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import img from '../../asstes/Images/de-tempete.webp'
+import img from '../../asstes/img_temp/de-tempete.webp'
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
     visible: (delay = 0) => ({

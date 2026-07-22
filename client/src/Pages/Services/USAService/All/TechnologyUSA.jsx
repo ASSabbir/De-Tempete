@@ -53,8 +53,8 @@ import {
   FaChartBar,
 } from "react-icons/fa";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import businessAutomationImg from '../../../../asstes/Images/servics/Bd/Business-Process-Automation.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import businessAutomationImg from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
 
 
 

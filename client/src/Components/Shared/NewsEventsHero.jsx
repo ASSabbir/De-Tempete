@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import skylineImg from '../../asstes/images/de-tempete.webp';
+import skylineImg from '../../asstes/img_temp/de-tempete.webp';
 
 export default function NewsEventsHero({ title, subtitle, cta }) {
   const [visible, setVisible] = useState(false);

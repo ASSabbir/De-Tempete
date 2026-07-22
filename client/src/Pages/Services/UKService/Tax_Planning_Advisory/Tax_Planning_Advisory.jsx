@@ -20,7 +20,7 @@ const Tax_Planning_Advisory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Tax Planning & Advisory"
         heading={
           <>
@@ -52,7 +52,7 @@ const Tax_Planning_Advisory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/freepik__corporate-tax-planning-compliance-image-unique-con__88847.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__corporate-tax-planning-compliance-image-unique-con__88847.webp"
             alt="Corporate Tax Planning & Compliance"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -94,7 +94,7 @@ const Tax_Planning_Advisory = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp"
             alt="Personal Tax Planning"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -105,7 +105,7 @@ const Tax_Planning_Advisory = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp"
             alt="Capital Gains Tax Advisory"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -148,7 +148,7 @@ const Tax_Planning_Advisory = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/freepik__inheritance-tax-planning-image-unique-but-clear-co__88850.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__inheritance-tax-planning-image-unique-but-clear-co__88850.webp"
             alt="Inheritance Tax Planning"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -159,7 +159,7 @@ const Tax_Planning_Advisory = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/UK/freepik__rd-tax-credit-claims-image-unique-but-clear-concep__88851.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__rd-tax-credit-claims-image-unique-but-clear-concep__88851.webp"
             alt="R&D Tax Credit Claims"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -202,7 +202,7 @@ const Tax_Planning_Advisory = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/freepik__hmrc-investigation-support-dispute-resolution-imag__88852.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__hmrc-investigation-support-dispute-resolution-imag__88852.webp"
             alt="HMRC Investigation Support & Dispute Resolution"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />

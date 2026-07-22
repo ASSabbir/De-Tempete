@@ -43,7 +43,7 @@ const Technology = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Technology"
         heading={<>Making Tax Digital & Cloud<br /><span className="text-light-blue">Accounting For UK Businesses</span></>}
         description="At de tempête, we help UK businesses manage accounting, VAT submissions, and digital bookkeeping through HMRC-compliant cloud accounting systems designed for modern business operations."
@@ -100,7 +100,7 @@ const Technology = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/Business-Process-Automation.webp"
+            src="/src/asstes/img_temp/servics/UK/Business-Process-Automation.webp"
             alt="Business Process Automation"
             className="w-full h-full object-cover rounded-2xl "
           />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import Form from './Form';
-import Worldmap from '../../asstes/Images/Map.webp';
+import Worldmap from '../../asstes/img_temp/Map.webp';
 
 const ContactUs = () => {
     return (

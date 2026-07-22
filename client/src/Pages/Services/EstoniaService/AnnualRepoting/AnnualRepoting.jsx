@@ -1,9 +1,9 @@
 import React from 'react';
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/Images/report.webp'
-import img2 from '../../../../asstes/Images/images.webp'
-import img3 from '../../../../asstes/Images/compliance-calendar-img.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/report.webp'
+import img2 from '../../../../asstes/img_temp/images.webp'
+import img3 from '../../../../asstes/img_temp/compliance-calendar-img.webp'
 import {
   LuFileCheck2,
   LuShieldCheck,

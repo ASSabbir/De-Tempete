@@ -82,7 +82,7 @@ const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Investment KSA"
         heading="Invest With Confidence."
         description={
@@ -116,7 +116,7 @@ const Investment = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
             alt="Investment & Business Growth Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -198,7 +198,7 @@ const Investment = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
             alt="Investment Planning & Market Opportunity Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -208,7 +208,7 @@ const Investment = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
             alt="Strategic Partnership & Business Expansion Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

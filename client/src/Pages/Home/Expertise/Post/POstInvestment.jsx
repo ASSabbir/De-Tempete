@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../asstes/Images/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92080.webp'
+import img from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92080.webp'
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
 import WhyPost from './WhyPost';
 import SharedButton from '../../../../Components/Shared/SharedButton';

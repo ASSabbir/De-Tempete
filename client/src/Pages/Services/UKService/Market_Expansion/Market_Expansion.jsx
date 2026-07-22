@@ -19,7 +19,7 @@ const businessData = [
   {
     title: "Company Formation",
     image:
-      "/src/asstes/Images/servics/UK/company-formation.webp",
+      "/src/asstes/img_temp/servics/UK/company-formation.webp",
     items: [
       "UK Limited Company setup support",
       "Companies House registration guidance",
@@ -33,7 +33,7 @@ const businessData = [
   {
     title: "HMRC Registrations",
     image:
-      "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
     items: [
       "Corporation Tax registration guidance",
       "VAT registration preparation",
@@ -47,7 +47,7 @@ const businessData = [
   {
     title: "International Business Structuring",
     image:
-      "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
+      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
     items: [
       "Non-resident founder guidance",
       "Shareholder structuring support",
@@ -110,7 +110,7 @@ const Market_Expansion = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
         minHeight="h-screen"
         overlay="bg-[#0E1937]/80"
@@ -350,7 +350,7 @@ const Market_Expansion = () => {
                 >
                   <div className="flex items-center gap-3">
                     <img
-                      src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
+                      src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
                       alt="check"
                       className="w-5 h-5 object-contain shrink-0"
                     />
@@ -385,7 +385,7 @@ const Market_Expansion = () => {
 
             <div className="h-full">
               <img
-                src="/src/asstes/Images/servics/Dubai-bank.webp"
+                src="/src/asstes/img_temp/servics/Dubai-bank.webp"
                 alt="Bank Account Opening"
                 className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
@@ -470,7 +470,7 @@ const Market_Expansion = () => {
 
             <div className="h-full">
               <img
-                src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                 alt="Trademark Registration"
                 className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
@@ -612,7 +612,7 @@ const Market_Expansion = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
@@ -620,13 +620,13 @@ const Market_Expansion = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title: "Self-Assessment Tax Return Process for Businesses",
             desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
             desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
           },

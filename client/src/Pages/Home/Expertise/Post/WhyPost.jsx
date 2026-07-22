@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92088-scaled.webp'
+import img1 from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92088-scaled.webp'
 
 const WhyPost = () => {
   return (

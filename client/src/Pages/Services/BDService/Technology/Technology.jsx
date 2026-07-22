@@ -53,15 +53,15 @@ import {
   FaChartBar,
 } from "react-icons/fa";
 
-import tableau from "/src/asstes/Images/New folder/9-1.webp";
-import sage from "/src/asstes/Images/New folder/3-2.webp";
-import a from "/src/asstes/Images/New folder/11-1.webp";
-import b from "/src/asstes/Images/New folder/12-1-934x1024.webp";
-import c from "/src/asstes/Images/New folder/7-2.webp";
-import d from "/src/asstes/Images/New folder/8.webp";
-import e from "/src/asstes/Images/New folder/13-1.webp";
-import f from "/src/asstes/Images/New folder/6-1.webp";
-import g from "/src/asstes/Images/New folder/2.webp";
+import tableau from "/src/asstes/img_temp/New folder/9-1.webp";
+import sage from "/src/asstes/img_temp/New folder/3-2.webp";
+import a from "/src/asstes/img_temp/New folder/11-1.webp";
+import b from "/src/asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "/src/asstes/img_temp/New folder/7-2.webp";
+import d from "/src/asstes/img_temp/New folder/8.webp";
+import e from "/src/asstes/img_temp/New folder/13-1.webp";
+import f from "/src/asstes/img_temp/New folder/6-1.webp";
+import g from "/src/asstes/img_temp/New folder/2.webp";
 
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
@@ -125,7 +125,7 @@ const Technology = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -270,7 +270,7 @@ const Technology = () => {
 
             <div className="relative overflow-hidden rounded-3xl">
               <img
-                src="/src/asstes/Images/servics/Bd/Business-Process-Automation.webp"
+                src="/src/asstes/img_temp/servics/Bd/Business-Process-Automation.webp"
                 alt="Business Dashboard"
                 className="w-full scale-110 origin-center"
               />

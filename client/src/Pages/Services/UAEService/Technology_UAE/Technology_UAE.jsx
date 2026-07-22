@@ -6,15 +6,15 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
-import tableau from "/src/asstes/Images/New folder/9-1.webp";
-import sage from "/src/asstes/Images/New folder/3-2.webp";
-import a from "/src/asstes/Images/New folder/11-1.webp";
-import b from "/src/asstes/Images/New folder/12-1-934x1024.webp";
-import c from "/src/asstes/Images/New folder/7-2.webp";
-import d from "/src/asstes/Images/New folder/8.webp";
-import e from "/src/asstes/Images/New folder/13-1.webp";
-import f from "/src/asstes/Images/New folder/6-1.webp";
-import g from "/src/asstes/Images/New folder/2.webp";
+import tableau from "/src/asstes/img_temp/New folder/9-1.webp";
+import sage from "/src/asstes/img_temp/New folder/3-2.webp";
+import a from "/src/asstes/img_temp/New folder/11-1.webp";
+import b from "/src/asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "/src/asstes/img_temp/New folder/7-2.webp";
+import d from "/src/asstes/img_temp/New folder/8.webp";
+import e from "/src/asstes/img_temp/New folder/13-1.webp";
+import f from "/src/asstes/img_temp/New folder/6-1.webp";
+import g from "/src/asstes/img_temp/New folder/2.webp";
 
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
@@ -92,7 +92,7 @@ const Technology_UAE = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="UAE E-Invoicing Solutions"
         heading={<>UAE E-Invoicing Solutions With<br /><span className="text-light-blue">Zoho & Odoo</span></>}
         description="Stay compliant with upcoming UAE e-invoicing regulations with de tempête's certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses."
@@ -132,7 +132,7 @@ const Technology_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/Zoho.jpg"
+            src="/src/asstes/img_temp/servics/Zoho.jpg"
             alt="Zoho E-Invoicing Solutions In UAE"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -218,7 +218,7 @@ const Technology_UAE = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp"
+            src="/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp"
             alt="Odoo E-Invoicing Solutions In UAE"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -268,7 +268,7 @@ const Technology_UAE = () => {
                 className="relative h-40 rounded-2xl overflow-hidden group"
               >
                 <img
-                  src="/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp"
+                  src="/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp"
                   className="w-full h-full object-cover group-hover:scale-105 duration-500"
                   alt={item}
                 />

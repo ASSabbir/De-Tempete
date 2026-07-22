@@ -6,7 +6,7 @@ import CFOAdvantage from './CFOadvantage';
 import HireCFORegion from './HireCFOregion';
 import KeyBenefits from './Keybenefits';
 import VIrtualFAQ from './VIrtualFAQ';
-import img1 from '../../../../asstes/Images/Home/freepik__virtual-cfo__20675.webp'
+import img1 from '../../../../asstes/img_temp/Home/freepik__virtual-cfo__20675.webp'
 
 const VirtualCFO = () => {
     const text = ['Your Strategic Virtual CFO Partner', 'Empowering Growth with Expert Financial Leadership — Virtually', 'Get access to professional CFO expertise without the overhead cost of a full-time hire. Our virtual CFO services help you make smarter financial decisions, improve profitability, and scale confidently.', 'Book An Appointment With CFO']

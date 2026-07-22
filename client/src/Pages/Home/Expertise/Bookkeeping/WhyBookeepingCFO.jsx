@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp'
+import img1 from '../../../../asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp'
 
 const WhyBookeepingCFO = () => {
   return (

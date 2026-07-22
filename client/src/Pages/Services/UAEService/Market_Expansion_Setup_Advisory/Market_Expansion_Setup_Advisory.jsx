@@ -43,7 +43,7 @@ const setupTypes = [
   {
     title: "Mainland",
     image:
-      "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
+      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
     items: [
       "100% foreign ownership",
       "Full UAE market access",
@@ -57,7 +57,7 @@ const setupTypes = [
   {
     title: "Free Zone",
     image:
-      "/src/asstes/Images/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp",
+      "/src/asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp",
     items: [
       "0% corporate tax",
       "Full foreign ownership",
@@ -71,7 +71,7 @@ const setupTypes = [
   {
     title: "Offshore",
     image:
-      "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
     items: [
       "Asset Protection",
       "Tax efficiency",
@@ -174,7 +174,7 @@ const Market_Expansion_Setup_Advisory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Market Expansion & Setup Advisory UAE"
         heading={
           <>
@@ -363,7 +363,7 @@ const Market_Expansion_Setup_Advisory = () => {
         <div className="max-w-[1600px] mx-auto px-6 space-y-16">
           <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <img
-              src="/src/asstes/Images/servics/Dubai-bank.webp"
+              src="/src/asstes/img_temp/servics/Dubai-bank.webp"
               alt="Bank Account Opening"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
@@ -422,7 +422,7 @@ const Market_Expansion_Setup_Advisory = () => {
               </div>
             </div>
             <img
-              src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+              src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
               alt="Trademark Registration"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
@@ -518,7 +518,7 @@ const Market_Expansion_Setup_Advisory = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
@@ -526,14 +526,14 @@ const Market_Expansion_Setup_Advisory = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title:
               "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
             desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title:
               "The Role and Benefits of a Virtual CFO in Modern Businesses",
             desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",

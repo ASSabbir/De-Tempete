@@ -20,7 +20,7 @@ const Bookkeeping_Financial_Management = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bookkeeping & Financial Management"
         heading={
           <>
@@ -50,7 +50,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/New folder/Bookkeeping-for-Nonprofits.webp"
+            src="/src/asstes/img_temp/New folder/Bookkeeping-for-Nonprofits.webp"
             alt="Accurate & Timely Bookkeeping"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -122,7 +122,7 @@ const Bookkeeping_Financial_Management = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/New folder/Reconcile Accounts.webp"
+            src="/src/asstes/img_temp/New folder/Reconcile Accounts.webp"
             alt="Reconcile Accounts"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -153,7 +153,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/New folder/Management Accounts Preparation.webp"
+            src="/src/asstes/img_temp/New folder/Management Accounts Preparation.webp"
             alt="Management Accounts"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />

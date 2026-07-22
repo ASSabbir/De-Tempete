@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import API from '../../api/axios';
-import logo from '../../asstes/images/logo1.webp';
+import logo from '../../asstes/img_temp/logo1.webp';
 
 const inputStyle = {
   width: '100%', padding: '15px 18px', background: '#383f52',

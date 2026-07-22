@@ -26,8 +26,8 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/Images/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
 import KeyBenefits from "../../../Home/Expertise/VirtualCfo/Keybenefits";
 const AnimatedCounter = ({ end, duration = 2000 }) => {
     const [count, setCount] = useState(0);

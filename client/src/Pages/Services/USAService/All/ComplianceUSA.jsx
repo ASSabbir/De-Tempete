@@ -18,12 +18,12 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
-import img2 from '../../../../asstes/Images/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
-import img3 from '../../../../asstes/Images/servics/ACSP-Identity.webp'
-import img4 from '../../../../asstes/Images/servics/Payroll-Services.webp'
-import img5 from '../../../../asstes/Images/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
+import img3 from '../../../../asstes/img_temp/servics/ACSP-Identity.webp'
+import img4 from '../../../../asstes/img_temp/servics/Payroll-Services.webp'
+import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
 
 const accountsCards = [
   {

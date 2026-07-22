@@ -22,11 +22,11 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img3 from '../../../../asstes/Images/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
-import img2 from '../../../../asstes/Images/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
-import img1 from '../../../../asstes/Images/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
-import logo from '../../../../asstes/Images/logo.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img3 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
+import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 const AnimatedCounter = ({ end, duration = 2000 }) => {
     const [count, setCount] = useState(0);
     useEffect(() => {
@@ -298,7 +298,7 @@ const MarketExpansionUSA = () => {
                     {/* US Banking */}
                     <div className="grid lg:grid-cols-2 gap-16 items-stretch">
                         <img
-                            src="/src/asstes/Images/servics/Dubai-bank.webp"
+                            src="/src/asstes/img_temp/servics/Dubai-bank.webp"
                             alt="US Business Banking"
                             className="w-full h-full object-cover rounded-2xl shadow-lg"
                         />
@@ -372,7 +372,7 @@ const MarketExpansionUSA = () => {
                         </div>
 
                         <img
-                            src="/src/asstes/Images/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                            src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
                             alt="US Market Expansion"
                             className="w-full h-full object-cover rounded-2xl shadow-lg"
                         />

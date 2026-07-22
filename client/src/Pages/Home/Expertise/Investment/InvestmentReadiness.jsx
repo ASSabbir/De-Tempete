@@ -1,6 +1,6 @@
 import React from 'react';
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
-import img from '../../../../asstes/Images/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92078-scaled.webp'
+import img from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92078-scaled.webp'
 import WhyInvestment from './WhyInvestment';
 import KeyBenefits from '../VirtualCfo/Keybenefits';
 import InvestmentFAQ from './InvestmentFAQ';

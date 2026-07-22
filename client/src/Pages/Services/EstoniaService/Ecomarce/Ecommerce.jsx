@@ -14,15 +14,15 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-import img1 from '../../../../asstes/Images/e-xomarc.webp'
-import img2 from '../../../../asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
+import img1 from '../../../../asstes/img_temp/e-xomarc.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 
 
 const businessData = [
     {
         title: "Company Formation",
         image:
-            "/src/asstes/Images/servics/UK/company-formation.webp",
+            "/src/asstes/img_temp/servics/UK/company-formation.webp",
         items: [
             "UK Limited Company setup support",
             "Companies House registration guidance",
@@ -36,7 +36,7 @@ const businessData = [
     {
         title: "HMRC Registrations",
         image:
-            "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
+            "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
         items: [
             "Corporation Tax registration guidance",
             "VAT registration preparation",
@@ -50,7 +50,7 @@ const businessData = [
     {
         title: "International Business Structuring",
         image:
-            "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
+            "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
         items: [
             "Non-resident founder guidance",
             "Shareholder structuring support",
@@ -75,7 +75,7 @@ import {
     LuHandCoins,
 } from "react-icons/lu";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 
 
 const Ecommerce = () => {
@@ -471,7 +471,7 @@ const Ecommerce = () => {
                                 >
                                     <div className="flex items-center gap-3">
                                         <img
-                                            src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
+                                            src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
                                             alt="check"
                                             className="w-5 h-5 object-contain shrink-0"
                                         />

@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
+import img1 from '../../../../asstes/img_temp/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
 
 const WhyInvestment = () => {
   return (

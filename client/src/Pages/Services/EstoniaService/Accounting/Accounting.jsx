@@ -93,7 +93,7 @@ const Accounting = () => {
   return (
     <div className="w-full">
       
-      <SevicsBanner bgImage={"../../../src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"} alt="Bangladesh Business Setup"
+      <SevicsBanner bgImage={"../../../src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"} alt="Bangladesh Business Setup"
                 description="Estonia is one of Europe's most advanced digital economies, making it easier than ever to establish and manage your business remotely. Whether you're a startup, entrepreneur, or growing international company, our Estonia Company Formation services guide you through every stage—from e-Residency and registration to accounting, taxation, and ongoing compliance—with efficiency, transparency, and confidence."
                 title1={' Build Stronger Financial'}
                 title2={'Operations In Estonia'}
@@ -105,7 +105,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/Images/servics/KSA/Accounting-in-KSA.webp"
+            src="../../../src/asstes/img_temp/servics/KSA/Accounting-in-KSA.webp"
             alt="Reliable Finance & Accounting"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -151,7 +151,7 @@ const Accounting = () => {
             </div>
           </div>
           <img
-            src="../../../src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
+            src="../../../src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
             alt="What We Handle For You"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -161,7 +161,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/Images/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp"
+            src="../../../src/asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp"
             alt="Accounting & Bookkeeping"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -215,7 +215,7 @@ const Accounting = () => {
             </div>
           </div>
           <img
-            src="../../../src/asstes/Images/Home/bv.webp"
+            src="../../../src/asstes/img_temp/Home/bv.webp"
             alt="Financial Reporting & Business Documentation"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -225,7 +225,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/Images/Home/HR-Payroll-Hero-section-1.webp"
+            src="../../../src/asstes/img_temp/Home/HR-Payroll-Hero-section-1.webp"
             alt="Accounting Systems & Financial Process Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -277,7 +277,7 @@ const Accounting = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/VAT.webp"
+            src="/src/asstes/img_temp/servics/KSA/VAT.webp"
             alt="VAT-Ready Financial Record Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -287,7 +287,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
             alt="Business Financial Operations Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

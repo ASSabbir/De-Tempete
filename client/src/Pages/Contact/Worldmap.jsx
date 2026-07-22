@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import worldimg from '../../asstes/Images/world map.png'
+import worldimg from '../../asstes/img_temp/world map.png'
 
 
 const pins = [

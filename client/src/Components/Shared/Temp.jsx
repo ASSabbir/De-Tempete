@@ -1,8 +1,8 @@
-import ukFlag from '../../asstes/Images/New folder/Business-set-up-in-UK.webp'
-import usaFlag from '../../asstes/Images/New folder/Business-set-up-in-USA.webp'
-import ksaFlag from '../../asstes/Images/New folder/Business-set-up-in-kSA.webp'
-import bdFlag from '../../asstes/Images/New folder/Business-set-up-in-BD.webp'
-import uae from '../../asstes/Images/New folder/Dubai-Business-set-up.webp'
+import ukFlag from '../../asstes/img_temp/New folder/Business-set-up-in-UK.webp'
+import usaFlag from '../../asstes/img_temp/New folder/Business-set-up-in-USA.webp'
+import ksaFlag from '../../asstes/img_temp/New folder/Business-set-up-in-kSA.webp'
+import bdFlag from '../../asstes/img_temp/New folder/Business-set-up-in-BD.webp'
+import uae from '../../asstes/img_temp/New folder/Dubai-Business-set-up.webp'
 import { Link } from "react-router";
 
 const companyFormation1 = {

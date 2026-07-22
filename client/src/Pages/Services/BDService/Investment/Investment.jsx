@@ -9,15 +9,15 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 
-import tableau from "/src/asstes/Images/New folder/9-1.webp";
-import sage from "/src/asstes/Images/New folder/3-2.webp";
-import a from "/src/asstes/Images/New folder/11-1.webp";
-import b from "/src/asstes/Images/New folder/12-1-934x1024.webp";
-import c from "/src/asstes/Images/New folder/7-2.webp";
-import d from "/src/asstes/Images/New folder/8.webp";
-import e from "/src/asstes/Images/New folder/13-1.webp";
-import f from "/src/asstes/Images/New folder/6-1.webp";
-import g from "/src/asstes/Images/New folder/2.webp";
+import tableau from "/src/asstes/img_temp/New folder/9-1.webp";
+import sage from "/src/asstes/img_temp/New folder/3-2.webp";
+import a from "/src/asstes/img_temp/New folder/11-1.webp";
+import b from "/src/asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "/src/asstes/img_temp/New folder/7-2.webp";
+import d from "/src/asstes/img_temp/New folder/8.webp";
+import e from "/src/asstes/img_temp/New folder/13-1.webp";
+import f from "/src/asstes/img_temp/New folder/6-1.webp";
+import g from "/src/asstes/img_temp/New folder/2.webp";
 
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
@@ -92,7 +92,7 @@ const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -274,7 +274,7 @@ const Investment = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
@@ -282,13 +282,13 @@ const Investment = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title: "Self-Assessment Tax Return Process for Businesses",
             desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
             desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
           },
