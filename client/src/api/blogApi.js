@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://api.detempete.uk/api';
 
 export const fetchBlogs = (page = 1, limit = 9) =>
   axios.get(`${API_BASE}/blogs`, { params: { page, limit } }).then(res => res.data);
