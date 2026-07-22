@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router";
 
 const SharedFullButton = ({ text,path }) => {
   return (
@@ -68,11 +68,11 @@ const SharedFullButton = ({ text,path }) => {
       </style>
 
       <div>
-        <a href={`${path  || '/'}`}>
+        <Link to={`${path  || '/'}`}>
           <button className="shared-btn2 ">
             {text || "Contact Us"}
           </button>
-        </a>
+        </Link>
       </div>
     </>
   );

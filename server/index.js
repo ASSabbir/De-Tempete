@@ -77,6 +77,7 @@ app.use('/api/publications', publicLimiter, require('./routes/publications'));
 app.use('/api/forms', publicLimiter, require('./routes/forms'));
 app.use('/api/leads', publicLimiter, require('./routes/leads'));
 app.use('/api/news-events', publicLimiter, require('./routes/newsEvents'));
+app.use('/api/blogs', publicLimiter, require('./routes/blogs'));
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 

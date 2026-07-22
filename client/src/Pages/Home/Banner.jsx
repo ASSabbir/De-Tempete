@@ -2,7 +2,7 @@
 import heroVideo from '../../asstes/video/Hero-video.mp4'
 import { useState, useEffect, useRef } from "react";
 import SharedFullButton from '../../Components/Shared/SharedFullButton';
- 
+ import { Link } from "react-router";
 const slides = [
   {
     title: "Fast & Secure ID Verification",
@@ -138,7 +138,7 @@ const Banner = () => {
  
             {/* CTA */}
             <div className='mt-15'>
-              <SharedFullButton text={'Contact Us Now'} link={'/contact'}></SharedFullButton>
+              <SharedFullButton text={'Contact Us Now'} path={'/contact'}></SharedFullButton>
             </div>
           </div>
  

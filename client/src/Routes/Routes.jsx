@@ -63,9 +63,7 @@ import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
 import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
-import CouncilTaxArrangementPlan from "../Pages/Blog/CouncilTaxArrangementPlan";
-import SelfAssessmentTaxReturnProcess from "../Pages/Blog/SelfAssessmentTaxReturnProcess";
-import VirtualCFORoleBenefits from "../Pages/Blog/VirtualCFORoleBenefits";
+
 import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
 import ContactUs from "../Pages/Contact/ContactUs";
 import VirtualCFO from "../Pages/Home/Expertise/VirtualCfo/VirtualCFO";
@@ -86,6 +84,16 @@ import CFOBussiness from "../Pages/Services/EstoniaService/CFOBussiness/CFOBussi
 import ERPDigitalTranformation from "../Pages/Services/EstoniaService/ERPDigitalTranformation/ERPDigitalTranformation";
 import Ecommerce from "../Pages/Services/EstoniaService/Ecomarce/Ecommerce";
 import EUExpansion from "../Pages/Services/EstoniaService/EUExpansion/EUExpansion";
+import MarketExpansionUSA from "../Pages/Services/USAService/All/MarketExpansionUSA";
+import ComplianceUSA from "../Pages/Services/USAService/All/ComplianceUSA";
+import IndustrySpecificUSA from "../Pages/Services/USAService/All/IndustrySpecificUSA";
+import FinanceUSA from "../Pages/Services/USAService/All/FinanceUSA";
+import TaxPlanningUSA from "../Pages/Services/USAService/All/TaxPlanningUSA";
+import BusinessAdvisoryUSA from "../Pages/Services/USAService/All/BusinessAdvisoryUSA";
+import HRPayrollUSA from "../Pages/Services/USAService/All/HRPayrollUSA";
+import TechnologyUSA from "../Pages/Services/USAService/All/TechnologyUSA";
+import BlogList from "../Pages/Blogs/BlogList";
+import BlogSingle from "../Pages/Blogs/BlogSingle";
 
 
 const Routes = createBrowserRouter([ 
@@ -149,7 +157,7 @@ const Routes = createBrowserRouter([
 
       // ===== SERVICES: BD =====
       { path: "/services/bd/market-expansion", element: <Market_Expansion></Market_Expansion> },
-      { path: "/services/bd/regulatory", element: <Business_Advisory></Business_Advisory> },
+      
       { path: "/services/bd/regulatory", element: <Regulatory></Regulatory> },
       { path: "/services/bd/finance", element: <Finance></Finance> },
       { path: "/services/bd/taxation", element: <Taxation></Taxation> },
@@ -157,6 +165,7 @@ const Routes = createBrowserRouter([
       { path: "/services/bd/training", element: <Training></Training> },
       { path: "/services/bd/investment", element: <Investment></Investment> },
       { path: "/services/bd/technology", element: <Technology></Technology> },
+
 
       // ===== SERVICES: EStonia =====
       { path: "/services/estonia/company-formation", element: <CompanyFormation></CompanyFormation> },
@@ -167,6 +176,16 @@ const Routes = createBrowserRouter([
       { path: "/services/estonia/erp-digital-transformation", element: <ERPDigitalTranformation></ERPDigitalTranformation> },
       { path: "/services/estonia/ecommerce-saas-accounting", element: <Ecommerce></Ecommerce> },
       { path: "/services/estonia/eu-expansion", element: <EUExpansion></EUExpansion> },
+      
+      // ===== SERVICES: USA =====
+      { path: "/services/usa/market-expansion", element: <MarketExpansionUSA></MarketExpansionUSA> },
+      { path: "/services/usa/compliance", element: <ComplianceUSA></ComplianceUSA> },
+      { path: "/services/usa/finance-accounting", element: <FinanceUSA></FinanceUSA> },
+      { path: "/services/usa/tax-planning", element: <TaxPlanningUSA></TaxPlanningUSA>},
+      { path: "/services/usa/business-advisory", element: <BusinessAdvisoryUSA></BusinessAdvisoryUSA>},
+      { path: "/services/usa/hr-payroll", element: <HRPayrollUSA></HRPayrollUSA> },
+      { path: "/services/usa/technology", element: <TechnologyUSA></TechnologyUSA> },
+      { path: "/services/usa/industry-accounting", element: <IndustrySpecificUSA></IndustrySpecificUSA> },
       
 
       // ===== LIBRARY =====
@@ -192,9 +211,9 @@ const Routes = createBrowserRouter([
       { path: "/news-events/:slug", element: <NewsEventDetail /> },
 
       // ===== BLOG =====
-      { path: "/blog/council-tax-arrangement-plan", element: <CouncilTaxArrangementPlan /> },
-      { path: "/blog/self-assessment-tax-return-process", element: <SelfAssessmentTaxReturnProcess /> },
-      { path: "/blog/virtual-cfo-role-benefits", element: <VirtualCFORoleBenefits /> },
+      { path: "/blogs", element: <BlogList></BlogList> },
+      { path: "/blogs/:slug", element: <BlogSingle></BlogSingle> },
+      
     ]
   }
 ]);

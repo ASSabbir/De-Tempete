@@ -236,7 +236,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/Whether expanding into.webp"
+            src="/src/asstes/Images/servics/UK/Whether-expanding-into.webp"
             alt="Why Industry Expertise Matters"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />

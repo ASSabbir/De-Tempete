@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import worldimg from '../../asstes/Images/world map.png'
+import worldimg from '../../asstes/Images/Map.webp'
 const stats = [
   {
     icon: (
@@ -52,13 +52,7 @@ const stats = [
   },
 ];
 
-const pins = [
-  { label: "UK", sub: "United Kingdom",    top: "26%", left: "42%"  },
-  { label: "Estonia", sub: "Estonia",      top: "22%", left: "65%"  },
-  { label: "KSA", sub: "Saudi Arabia",     top: "44%", left: "56%"  },
-  { label: "Bangladesh", sub: "Bangladesh",top: "44%", left: "75%"  },
-  { label: "UAE", sub: "United Arab Emirates", top: "55%", left: "59%" },
-];
+
 
 function useCountUp(target, duration = 1800, start = false) {
   const [count, setCount] = useState(0);
@@ -154,7 +148,7 @@ export default function WhyChoose() {
                 management, business automation, valuation, and investment guidance.
               </p>
               <p>
-                With registered presence in the UK, UAE, KSA, and Bangladesh, we empower companies to operate
+                With registered presence in the UK, UAE, KSA, Estonia and Bangladesh, we empower companies to operate
                 efficiently, remain compliant, and grow sustainably across borders.
               </p>
               <p>
@@ -173,27 +167,7 @@ export default function WhyChoose() {
                  <img src={worldimg} alt="" className="" />
              </div>
 
-              {/* Pin markers */}
-              {pins.map((pin) => (
-                <div
-                  key={pin.label}
-                  className="absolute flex flex-col items-center group"
-                  style={{ top: pin.top, left: pin.left, transform: "translate(-50%, -100%)" }}
-                >
-                  {/* Tooltip */}
-                  <div className={`mb-1 ${pin.label=='UAE'?'top-8':'bottom-7'} absolute  bg-white rounded-lg  shadow-lg px-2 py-1 text-center pointer-events-none`}>
-                    <div className="text-[11px] font-bold text-[#0d1e4a] whitespace-nowrap">{pin.label}</div>
-                    <div className="text-[9px] text-gray-400 whitespace-nowrap">{pin.sub}</div>
-                  </div>
-                  {/* Pin icon */}
-                  <svg width="22" height="28" viewBox="0 0 22 28" fill="none">
-                    <path d="M11 0C5.477 0 1 4.477 1 10c0 7.5 10 18 10 18S21 17.5 21 10C21 4.477 16.523 0 11 0z" fill="#2563eb" />
-                    <circle cx="11" cy="10" r="4" fill="white" />
-                  </svg>
-                  {/* Pulse ring */}
-                  <span className="absolute top-[calc(100%-14px)] left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-blue-600 opacity-60 animate-ping" style={{ animationDuration: "2s" }} />
-                </div>
-              ))}
+              
             </div>
           </div>
 

@@ -16,6 +16,7 @@ router.get('/admin/all', protect, async (req, res) => {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(100, parseInt(req.query.limit) || 50);
     const skip = (page - 1) * limit;
+
     const [items, total] = await Promise.all([
       NewsEvent.find().sort({ createdAt: -1 }).skip(skip).limit(limit).lean(),
       NewsEvent.countDocuments(),
@@ -71,9 +72,9 @@ router.get('/:slug', async (req, res) => {
 
 router.post('/', protect, async (req, res) => {
   try {
-    const { title, excerpt, description, coverImage, galleryImages, eventDate } = req.body;
-    if (!title || !excerpt || !description || !coverImage || !eventDate) {
-      return res.status(400).json({ message: 'title, excerpt, description, coverImage, eventDate required' });
+    const { title, description, description2, description3, coverImage, eventDate, eventTime } = req.body;
+    if (!title || !description || !coverImage || !eventDate) {
+      return res.status(400).json({ message: 'title, description, coverImage, eventDate required' });
     }
     let slug = slugify(title);
     let suffix = 1;
@@ -81,8 +82,7 @@ router.post('/', protect, async (req, res) => {
       slug = `${slugify(title)}-${suffix++}`;
     }
     const item = await NewsEvent.create({
-      title, excerpt, description, coverImage, eventDate, slug,
-      galleryImages: Array.isArray(galleryImages) ? galleryImages.filter(Boolean) : [],
+      title, description, description2, description3, coverImage, eventDate, eventTime, slug,
     });
     res.status(201).json(item);
   } catch (err) {
@@ -92,9 +92,8 @@ router.post('/', protect, async (req, res) => {
 
 router.put('/:id', protect, async (req, res) => {
   try {
-    const { title, excerpt, description, coverImage, galleryImages, eventDate, isActive } = req.body;
-    const update = { title, excerpt, description, coverImage, eventDate, isActive };
-    if (Array.isArray(galleryImages)) update.galleryImages = galleryImages.filter(Boolean);
+    const { title, description, description2, description3, coverImage, eventDate, eventTime, isActive } = req.body;
+    const update = { title, description, description2, description3, coverImage, eventDate, eventTime, isActive };
 
     const item = await NewsEvent.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
     if (!item) return res.status(404).json({ message: 'Not found' });

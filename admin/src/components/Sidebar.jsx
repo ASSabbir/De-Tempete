@@ -8,6 +8,7 @@ const links = [
   { to: '/forms', label: '📋 Forms' },
   { to: '/leads', label: '📥 Downloads' },
   { to: '/news-events', label: '📰 News & Events' },
+  { to: '/blogs', label: '📰 Blogs' },
 ];
 
 const linkBase = {

@@ -3,7 +3,7 @@ const cards = [
   {
     title: "Business Setup Services",
     description:
-      "End-to-end company formation and registration across the UK, UAE, KSA, and Bangladesh with full compliance support.",
+      "End-to-end company formation and registration across the UK, UAE, KSA, Estonia and Bangladesh with full compliance support.",
   },
   {
     title: "Accounting & Finance",
