@@ -7,6 +7,26 @@ import PageHero from '../../Components/Shared/PageHero';
 
 const DEBOUNCE = 400;
 
+const RANGE_OPTIONS = [
+  { value: '', label: 'All Time' },
+  { value: '1m', label: 'Last 1 Month' },
+  { value: '3m', label: 'Last 3 Months' },
+  { value: '6m', label: 'Last 6 Months' },
+  { value: '1y', label: 'Last 1 Year' },
+];
+
+const SORT_OPTIONS = [
+  { value: 'newest', label: 'Newest First' },
+  { value: 'oldest', label: 'Oldest First' },
+  { value: 'title-asc', label: 'Title (A–Z)' },
+  { value: 'title-desc', label: 'Title (Z–A)' },
+];
+
+const selectStyle = {
+  padding: '14px 16px', border: '1.5px solid #d1d5db', borderRadius: 8,
+  fontSize: 14, minWidth: 180, cursor: 'pointer', outline: 'none',
+};
+
 export default function LibraryPage({ region, title }) {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
@@ -15,6 +35,10 @@ export default function LibraryPage({ region, title }) {
   const [q, setQ] = useState('');
   const [category, setCategory] = useState('');
   const [categories, setCategories] = useState([]);
+  const [authority, setAuthority] = useState('');
+  const [authorities, setAuthorities] = useState([]);
+  const [range, setRange] = useState('');
+  const [sort, setSort] = useState('newest');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const debounceRef = useRef(null);
@@ -24,16 +48,21 @@ export default function LibraryPage({ region, title }) {
     API.get(`/library/categories?region=${region}`)
       .then(({ data }) => setCategories(data))
       .catch(() => {});
+    API.get('/library/authorities')
+      .then(({ data }) => setAuthorities(data))
+      .catch(() => {});
   }, [region]);
 
-  const fetchItems = useCallback(async (search, cat, pg) => {
+  const fetchItems = useCallback(async (search, cat, auth, rng, srt, pg) => {
     const reqId = ++latestReq.current;
     setLoading(true);
     setError('');
     try {
-      const params = new URLSearchParams({ region, page: pg, limit: 20 });
+      const params = new URLSearchParams({ region, page: pg, limit: 20, sort: srt });
       if (search) params.set('q', search);
       if (cat) params.set('category', cat);
+      if (auth) params.set('authority', auth);
+      if (rng) params.set('range', rng);
       const { data } = await API.get(`/library?${params}`);
       if (reqId !== latestReq.current) return;
       setItems(data.items);
@@ -51,36 +80,91 @@ export default function LibraryPage({ region, title }) {
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       setPage(1);
-      fetchItems(q, category, 1);
+      fetchItems(q, category, authority, range, sort, 1);
     }, DEBOUNCE);
     return () => clearTimeout(debounceRef.current);
-  }, [q, category, fetchItems]);
+  }, [q, category, authority, range, sort, fetchItems]);
 
   const goToPage = useCallback((pg) => {
     setPage(pg);
-    fetchItems(q, category, pg);
-  }, [q, category, fetchItems]);
+    fetchItems(q, category, authority, range, sort, pg);
+  }, [q, category, authority, range, sort, fetchItems]);
+
+  const resetFilters = () => {
+    setQ('');
+    setCategory('');
+    setAuthority('');
+    setRange('');
+    setSort('newest');
+  };
 
   return (
     <div>
       <PageHero tag="Library" title={<>Some Essential Resources<br />For Businesses</>} />
 
-      {/* Content Section */}
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '60px 24px' }}>
         <h2 style={{ textAlign: 'center', fontSize: 40, fontWeight: 300, color: '#0f1f3d', marginBottom: 48 }}>
           {title} <strong style={{ fontWeight: 800 }}>Library</strong>
         </h2>
 
-        <div style={{ display: 'flex', gap: 12, marginBottom: 32, flexWrap: 'wrap' }}>
+        {/* Search + Category + Authority + Sort */}
+        <div style={{ display: 'flex', gap: 12, marginBottom: 16, flexWrap: 'wrap' }}>
           <div style={{ flex: 1, minWidth: 240 }}>
             <SearchBar value={q} onChange={setQ} placeholder="Type to start searching..." />
           </div>
-          <select value={category} onChange={e => setCategory(e.target.value)}
-            style={{ padding: '14px 16px', border: '1.5px solid #d1d5db', borderRadius: 8, fontSize: 14, minWidth: 160, cursor: 'pointer', outline: 'none' }}>
+          <select value={category} onChange={e => setCategory(e.target.value)} style={selectStyle}>
             <option value="">All Categories</option>
             {categories.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
+          <select value={authority} onChange={e => setAuthority(e.target.value)} style={selectStyle}>
+            <option value="">All Authorities</option>
+            {authorities.map(a => <option key={a} value={a}>{a}</option>)}
+          </select>
+          <select value={sort} onChange={e => setSort(e.target.value)} style={selectStyle}>
+            {SORT_OPTIONS.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
+          </select>
         </div>
+
+        {/* Date range quick filters */}
+        <div style={{ display: 'flex', gap: 8, marginBottom: 24, flexWrap: 'wrap', alignItems: 'center' }}>
+          {RANGE_OPTIONS.map((r) => (
+            <button
+              key={r.value || 'all'}
+              onClick={() => setRange(r.value)}
+              style={{
+                padding: '8px 16px',
+                borderRadius: 999,
+                border: '1.5px solid',
+                borderColor: range === r.value ? '#0f1f3d' : '#d1d5db',
+                background: range === r.value ? '#0f1f3d' : '#fff',
+                color: range === r.value ? '#fff' : '#374151',
+                fontSize: 13, fontWeight: 600, cursor: 'pointer',
+                transition: 'all 0.2s',
+              }}
+            >
+              {r.label}
+            </button>
+          ))}
+
+          {(q || category || authority || range || sort !== 'newest') && (
+            <button
+              onClick={resetFilters}
+              style={{
+                marginLeft: 'auto', padding: '8px 16px', borderRadius: 999,
+                border: '1.5px solid #ef4444', background: '#fff', color: '#ef4444',
+                fontSize: 13, fontWeight: 600, cursor: 'pointer',
+              }}
+            >
+              Clear Filters
+            </button>
+          )}
+        </div>
+
+        {!loading && (
+          <p style={{ fontSize: 13, color: '#9ca3af', marginBottom: 16 }}>
+            {total} result{total !== 1 ? 's' : ''} found
+          </p>
+        )}
 
         {error && <div style={{ padding: '14px 20px', background: '#fef2f2', color: '#dc2626', borderRadius: 8, marginBottom: 20 }}>{error}</div>}
 
@@ -91,7 +175,7 @@ export default function LibraryPage({ region, title }) {
             <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>No results found</div>
           ) : items.map((item, idx) => (
             <div key={item._id} style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
               padding: '20px 28px', gap: 24,
               borderBottom: idx < items.length - 1 ? '1px solid #f1f5f9' : 'none',
               transition: 'background 0.15s',
@@ -100,8 +184,18 @@ export default function LibraryPage({ region, title }) {
               onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 15, fontWeight: 600, color: '#1e40af', marginBottom: 4 }}>{item.title}</div>
-                <div style={{ fontSize: 13, color: '#6b7280' }}>Issuing Authority: {item.issuingAuthority}</div>
+                {item.description && (
+                  <p style={{ fontSize: 13, color: '#6b7280', margin: '4px 0 8px', lineHeight: 1.6 }}>
+                    {item.description}
+                  </p>
+                )}
+                <div style={{ fontSize: 13, color: '#6b7280' }}>
+                  Issuing Authority: {item.issuingAuthority === 'Other' && item.customAuthority
+                    ? item.customAuthority
+                    : item.issuingAuthority}
+                </div>
                 <div style={{ fontSize: 13, color: '#6b7280', display: 'flex', gap: 20, marginTop: 2, flexWrap: 'wrap' }}>
+                  <span>Country: {item.region}</span>
                   <span>Category: {item.category}</span>
                   <span>Issue Date: {new Date(item.issueDate).toLocaleDateString('en-US')}</span>
                 </div>

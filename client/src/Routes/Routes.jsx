@@ -63,9 +63,7 @@ import KSAForms from "../Pages/Forms/KSAForms";
 import UKForms from "../Pages/Forms/UKForms";
 import BDForms from "../Pages/Forms/BDForms";
 import NewsEventsPage from "../Pages/NewsEvents/NewsEventsPage";
-import CouncilTaxArrangementPlan from "../Pages/Blog/CouncilTaxArrangementPlan";
-import SelfAssessmentTaxReturnProcess from "../Pages/Blog/SelfAssessmentTaxReturnProcess";
-import VirtualCFORoleBenefits from "../Pages/Blog/VirtualCFORoleBenefits";
+
 import NewsEventDetail from "../Pages/NewsEvents/NewsEventDetail";
 import ContactUs from "../Pages/Contact/ContactUs";
 import VirtualCFO from "../Pages/Home/Expertise/VirtualCfo/VirtualCFO";
@@ -94,6 +92,8 @@ import TaxPlanningUSA from "../Pages/Services/USAService/All/TaxPlanningUSA";
 import BusinessAdvisoryUSA from "../Pages/Services/USAService/All/BusinessAdvisoryUSA";
 import HRPayrollUSA from "../Pages/Services/USAService/All/HRPayrollUSA";
 import TechnologyUSA from "../Pages/Services/USAService/All/TechnologyUSA";
+import BlogList from "../Pages/Blogs/BlogList";
+import BlogSingle from "../Pages/Blogs/BlogSingle";
 
 
 const Routes = createBrowserRouter([ 
@@ -211,9 +211,9 @@ const Routes = createBrowserRouter([
       { path: "/news-events/:slug", element: <NewsEventDetail /> },
 
       // ===== BLOG =====
-      { path: "/blog/council-tax-arrangement-plan", element: <CouncilTaxArrangementPlan /> },
-      { path: "/blog/self-assessment-tax-return-process", element: <SelfAssessmentTaxReturnProcess /> },
-      { path: "/blog/virtual-cfo-role-benefits", element: <VirtualCFORoleBenefits /> },
+      { path: "/blogs", element: <BlogList></BlogList> },
+      { path: "/blogs/:slug", element: <BlogSingle></BlogSingle> },
+      
     ]
   }
 ]);

@@ -4,23 +4,22 @@ import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 
 const EMPTY = {
-  title: '', description: '', description2: '', description3: '',
-  coverImage: '', eventDate: '', eventTime: '', isActive: true,
+  title: '', description: '', title2: '', description2: '',
+  coverImage: '', publishedDate: '', isActive: true,
 };
 
 const columns = [
   { key: 'title', label: 'Title' },
-  { key: 'eventDate', label: 'Date', render: v => v ? new Date(v).toLocaleDateString() : '-' },
-  { key: 'eventTime', label: 'Time' },
+  { key: 'publishedDate', label: 'Published', render: v => v ? new Date(v).toLocaleDateString() : '-' },
   { key: 'slug', label: 'Slug' },
   { key: 'isActive', label: 'Status', render: v => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
 ];
 
 const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1d5db', borderRadius: 8, fontSize: 14, boxSizing: 'border-box' };
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
-const textareaStyle = { ...inputStyle, minHeight: 110, resize: 'vertical', fontFamily: 'inherit' };
+const textareaStyle = { ...inputStyle, minHeight: 140, resize: 'vertical', fontFamily: 'inherit' };
 
-export default function NewsEvents() {
+export default function Blogs() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -36,7 +35,7 @@ export default function NewsEvents() {
   const fetchItems = useCallback(async (pg = page) => {
     setLoading(true);
     try {
-      const { data } = await API.get(`/news-events/admin/all?page=${pg}&limit=20`);
+      const { data } = await API.get(`/blogs/admin/all?page=${pg}&limit=20`);
       setItems(data.items);
       setTotal(data.total);
       setPages(data.pages);
@@ -53,7 +52,7 @@ export default function NewsEvents() {
   const openEdit = (item) => {
     setForm({
       ...item,
-      eventDate: item.eventDate ? new Date(item.eventDate).toISOString().split('T')[0] : '',
+      publishedDate: item.publishedDate ? new Date(item.publishedDate).toISOString().split('T')[0] : '',
     });
     setEditing(item._id);
     setError('');
@@ -85,8 +84,8 @@ export default function NewsEvents() {
     setSaving(true);
     setError('');
     try {
-      if (editing) await API.put(`/news-events/${editing}`, form);
-      else await API.post('/news-events', form);
+      if (editing) await API.put(`/blogs/${editing}`, form);
+      else await API.post('/blogs', form);
       closeModal();
       fetchItems(editing ? page : 1);
       if (!editing) setPage(1);
@@ -98,9 +97,9 @@ export default function NewsEvents() {
   };
 
   const handleDelete = async (id) => {
-    if (!window.confirm('Delete this item?')) return;
+    if (!window.confirm('Delete this blog post?')) return;
     try {
-      await API.delete(`/news-events/${id}`);
+      await API.delete(`/blogs/${id}`);
       fetchItems(page);
     } catch {
       alert('Delete failed');
@@ -110,7 +109,7 @@ export default function NewsEvents() {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d' }}>News & Events ({total})</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d' }}>Blogs ({total})</h2>
         <button onClick={openAdd}
           style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: 'pointer', fontWeight: 600 }}>
           + Add
@@ -140,7 +139,7 @@ export default function NewsEvents() {
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 16 }}>
           <div style={{ background: '#fff', borderRadius: 12, padding: 32, width: '100%', maxWidth: 600, maxHeight: '90vh', overflowY: 'auto' }}>
             <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 24, color: '#0f1f3d' }}>
-              {editing ? 'Edit' : 'Add'} News / Event
+              {editing ? 'Edit' : 'Add'} Blog Post
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
 
@@ -158,40 +157,34 @@ export default function NewsEvents() {
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Title</label>
+              <label style={labelStyle}>Main Title</label>
               <input value={form.title} onChange={e => setForm(p => ({ ...p, title: e.target.value }))} style={inputStyle} />
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Description 1</label>
+              <label style={labelStyle}>Main Description</label>
               <textarea value={form.description} onChange={e => setForm(p => ({ ...p, description: e.target.value }))} style={textareaStyle} />
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Description 2</label>
+              <label style={labelStyle}>Second Title</label>
+              <input value={form.title2} onChange={e => setForm(p => ({ ...p, title2: e.target.value }))} style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Second Description</label>
               <textarea value={form.description2} onChange={e => setForm(p => ({ ...p, description2: e.target.value }))} style={textareaStyle} />
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Description 3</label>
-              <textarea value={form.description3} onChange={e => setForm(p => ({ ...p, description3: e.target.value }))} style={textareaStyle} />
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
-              <div>
-                <label style={labelStyle}>Event Date</label>
-                <input type="date" value={form.eventDate} onChange={e => setForm(p => ({ ...p, eventDate: e.target.value }))} style={inputStyle} />
-              </div>
-              <div>
-                <label style={labelStyle}>Event Time</label>
-                <input type="time" value={form.eventTime} onChange={e => setForm(p => ({ ...p, eventTime: e.target.value }))} style={inputStyle} />
-              </div>
+              <label style={labelStyle}>Published Date</label>
+              <input type="date" value={form.publishedDate} onChange={e => setForm(p => ({ ...p, publishedDate: e.target.value }))} style={inputStyle} />
             </div>
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <input type="checkbox" id="neActive" checked={form.isActive}
+              <input type="checkbox" id="blogActive" checked={form.isActive}
                 onChange={e => setForm(p => ({ ...p, isActive: e.target.checked }))} />
-              <label htmlFor="neActive" style={{ fontSize: 14, cursor: 'pointer' }}>Active</label>
+              <label htmlFor="blogActive" style={{ fontSize: 14, cursor: 'pointer' }}>Active</label>
             </div>
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>

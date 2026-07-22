@@ -173,7 +173,7 @@ const resourceSections = {
     { label: "E-brochure", path: "https://drive.google.com/file/d/1XFM7Aa3OPQNjXvA47v6mwKX67uM6Oq6O/view?pli=1" },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
-    // { label: "Blogs", path: "/resource/blogs" },
+    { label: "Blogs", path: "/blogs" },
   ],
   PUBLICATIONS: [
     { label: "UAE", path: "/publications/uae" },
@@ -200,7 +200,7 @@ const navLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
-export default function Nav() {
+export default function Nav({ openCalculator }) {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
@@ -476,12 +476,13 @@ export default function Nav() {
             </Link>
 
             {/* CTA */}
-            <Link
-              to="/cost-calculator"
+            <button
+            onClick={openCalculator}
+              
               className={`ml-3 px-5 py-2 rounded-lg text-sm font-semibold border-2 transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
             >
               Cost Calculator
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Hamburger */}
@@ -681,13 +682,14 @@ export default function Nav() {
           ))}
 
           <div className="pt-2 pb-2">
-            <Link
-              to="/cost-calculator"
-              onClick={() => setMobileOpen(false)}
+            <button
+              
+              // onClick={() => setMobileOpen(false)}
+              onClick={openCalculator}
               className="block w-full py-3 text-center rounded-lg text-sm font-semibold border-2 border-white text-white hover:bg-white hover:text-[#0d1e4a] transition-all duration-200"
             >
               Cost Calculator
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 const express = require('express');
-const NewsEvent = require('../models/NewsEvent');
+const Blog = require('../models/Blog');
 const { protect } = require('../middleware/auth');
 
 const router = express.Router();
@@ -10,16 +10,15 @@ const slugify = (str) =>
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
 
-// GET /api/news-events/admin/all — protected
+// GET /api/blogs/admin/all — protected
 router.get('/admin/all', protect, async (req, res) => {
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(100, parseInt(req.query.limit) || 50);
     const skip = (page - 1) * limit;
-
     const [items, total] = await Promise.all([
-      NewsEvent.find().sort({ createdAt: -1 }).skip(skip).limit(limit).lean(),
-      NewsEvent.countDocuments(),
+      Blog.find().sort({ createdAt: -1 }).skip(skip).limit(limit).lean(),
+      Blog.countDocuments(),
     ]);
     res.json({ items, total, page, pages: Math.ceil(total / limit) });
   } catch {
@@ -27,7 +26,7 @@ router.get('/admin/all', protect, async (req, res) => {
   }
 });
 
-// GET /api/news-events — public list
+// GET /api/blogs — public list
 router.get('/', async (req, res) => {
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
@@ -36,8 +35,8 @@ router.get('/', async (req, res) => {
     const filter = { isActive: true };
 
     const [items, total] = await Promise.all([
-      NewsEvent.find(filter).sort({ eventDate: -1 }).skip(skip).limit(limit).lean(),
-      NewsEvent.countDocuments(filter),
+      Blog.find(filter).sort({ publishedDate: -1 }).skip(skip).limit(limit).lean(),
+      Blog.countDocuments(filter),
     ]);
     res.set('Cache-Control', 'public, max-age=60');
     res.json({ items, total, page, pages: Math.ceil(total / limit) });
@@ -46,12 +45,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/news-events/recent — for sidebar, excludes current slug
+// GET /api/blogs/recent
 router.get('/recent', async (req, res) => {
   try {
     const filter = { isActive: true };
     if (req.query.exclude) filter.slug = { $ne: req.query.exclude };
-    const items = await NewsEvent.find(filter).sort({ eventDate: -1 }).limit(5).lean();
+    const items = await Blog.find(filter).sort({ publishedDate: -1 }).limit(5).lean();
     res.set('Cache-Control', 'public, max-age=60');
     res.json(items);
   } catch {
@@ -59,10 +58,10 @@ router.get('/recent', async (req, res) => {
   }
 });
 
-// GET /api/news-events/:slug — public single
+// GET /api/blogs/:slug — public single
 router.get('/:slug', async (req, res) => {
   try {
-    const item = await NewsEvent.findOne({ slug: req.params.slug, isActive: true }).lean();
+    const item = await Blog.findOne({ slug: req.params.slug, isActive: true }).lean();
     if (!item) return res.status(404).json({ message: 'Not found' });
     res.json(item);
   } catch {
@@ -72,17 +71,17 @@ router.get('/:slug', async (req, res) => {
 
 router.post('/', protect, async (req, res) => {
   try {
-    const { title, description, description2, description3, coverImage, eventDate, eventTime } = req.body;
-    if (!title || !description || !coverImage || !eventDate) {
-      return res.status(400).json({ message: 'title, description, coverImage, eventDate required' });
+    const { title, description, title2, description2, coverImage, publishedDate } = req.body;
+    if (!title || !description || !coverImage || !publishedDate) {
+      return res.status(400).json({ message: 'title, description, coverImage, publishedDate required' });
     }
     let slug = slugify(title);
     let suffix = 1;
-    while (await NewsEvent.findOne({ slug })) {
+    while (await Blog.findOne({ slug })) {
       slug = `${slugify(title)}-${suffix++}`;
     }
-    const item = await NewsEvent.create({
-      title, description, description2, description3, coverImage, eventDate, eventTime, slug,
+    const item = await Blog.create({
+      title, description, title2, description2, coverImage, publishedDate, slug,
     });
     res.status(201).json(item);
   } catch (err) {
@@ -92,10 +91,10 @@ router.post('/', protect, async (req, res) => {
 
 router.put('/:id', protect, async (req, res) => {
   try {
-    const { title, description, description2, description3, coverImage, eventDate, eventTime, isActive } = req.body;
-    const update = { title, description, description2, description3, coverImage, eventDate, eventTime, isActive };
+    const { title, description, title2, description2, coverImage, publishedDate, isActive } = req.body;
+    const update = { title, description, title2, description2, coverImage, publishedDate, isActive };
 
-    const item = await NewsEvent.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
+    const item = await Blog.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
     if (!item) return res.status(404).json({ message: 'Not found' });
     res.json(item);
   } catch (err) {
@@ -105,7 +104,7 @@ router.put('/:id', protect, async (req, res) => {
 
 router.delete('/:id', protect, async (req, res) => {
   try {
-    const item = await NewsEvent.findByIdAndDelete(req.params.id);
+    const item = await Blog.findByIdAndDelete(req.params.id);
     if (!item) return res.status(404).json({ message: 'Not found' });
     res.json({ message: 'Deleted' });
   } catch {
