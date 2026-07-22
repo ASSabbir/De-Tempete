@@ -40,7 +40,7 @@ import UKBusiness_Advisory from "../Pages/Services/UKService/Business_Advisory/B
 import Regulatory from "../Pages/Services/BDService/Regulatory/Regulatory";
 import Finance from "../Pages/Services/BDService/Finance/Finance";
 import Taxation from "../Pages/Services/BDService/Taxation/Taxation";
-import HR_Payroll from "../Pages/Services/BDService/HR_Payroll/HR_Payroll";
+import HR_Payroll from "../Pages/Services/BDService/Hr_Payroll/Hr_Payroll";
 import Training from "../Pages/Services/BDService/Training/Training";
 import Investment from "../Pages/Services/BDService/Investment/Investment";
 import Technology from "../Pages/Services/BDService/Technology/Technology";
