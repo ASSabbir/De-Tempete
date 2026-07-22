@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/freepik__create-a-hyperrealistic-cinematic-hero-image-repre__92087-scaled.webp'
+import img1 from '../../../../asstes/img_temp/Home/freepik__create-a-hyperrealistic-cinematic-hero-image-repre__92087-scaled.webp'
 
 const WhyDue = () => {
   return (

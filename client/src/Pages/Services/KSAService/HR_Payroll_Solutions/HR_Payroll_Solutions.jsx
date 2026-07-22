@@ -73,7 +73,7 @@ const HR_Payroll_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="HR & Payroll Solutions KSA"
         heading={
           <>
@@ -102,7 +102,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp"
             alt="HR & Payroll Management Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -157,7 +157,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__hr-outsourcing-image-for-website-section__98146.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__hr-outsourcing-image-for-website-section__98146.webp"
             alt="Payroll Processing & Employee Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -167,7 +167,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
             alt="Qiwa, GOSI & Workforce Compliance Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -228,7 +228,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
         </div>

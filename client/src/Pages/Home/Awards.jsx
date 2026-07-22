@@ -1,11 +1,11 @@
 import React from 'react';
-import img1 from '../../asstes/Images/logo1.webp'
-import img2 from '../../asstes/Images/New folder/WhatsApp_Image_2024-11-23_at_15.20.44_9f7b10af-removebg-preview-1-e1736053189510-300x205-1.webp'
-import img3 from '../../asstes/Images/New folder/Acc-1.webp';
-import img4 from '../../asstes/Images/New folder/HM-Revenue.webp';
-import img5 from '../../asstes/Images/New folder/british-high-commission-222x300-1.webp';
-import img6 from '../../asstes/Images/New folder/Companies-House.webp';
-import img7 from '../../asstes/Images/New folder/ACCA-Approved-Employer.webp'
+import img1 from '../../asstes/img_temp/logo1.webp'
+import img2 from '../../asstes/img_temp/New folder/WhatsApp_Image_2024-11-23_at_15.20.44_9f7b10af-removebg-preview-1-e1736053189510-300x205-1.webp'
+import img3 from '../../asstes/img_temp/New folder/Acc-1.webp';
+import img4 from '../../asstes/img_temp/New folder/HM-Revenue.webp';
+import img5 from '../../asstes/img_temp/New folder/british-high-commission-222x300-1.webp';
+import img6 from '../../asstes/img_temp/New folder/Companies-House.webp';
+import img7 from '../../asstes/img_temp/New folder/ACCA-Approved-Employer.webp'
 
 
 const imgall = [img1, img2, img3, img4, img5, img6, img7];

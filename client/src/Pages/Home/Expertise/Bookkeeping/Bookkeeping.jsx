@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../asstes/Images/Home/freepik__the-style-is-candid-image-photography-with-natural__92072-scaled.webp'
+import img from '../../../../asstes/img_temp/Home/freepik__the-style-is-candid-image-photography-with-natural__92072-scaled.webp'
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
 import WhyBookeepingCFO from './WhyBookeepingCFO';
 import SharedButton from '../../../../Components/Shared/SharedButton';

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
-import heroImg from '../../asstes/images/de-tempete.webp';
+import heroImg from '../../asstes/img_temp/de-tempete.webp';
 export default function PageHero({ tag, title, subtitle, cta }) {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);

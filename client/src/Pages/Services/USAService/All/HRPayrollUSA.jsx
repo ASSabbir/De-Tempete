@@ -10,11 +10,11 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import aboutHrImg from '../../../../asstes/Images/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
-import payrollProcessingImg from '../../../../asstes/Images/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
-import multiStatePayrollImg from '../../../../asstes/Images/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
-import hrComplianceImg from '../../../../asstes/Images/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import aboutHrImg from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import payrollProcessingImg from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
+import multiStatePayrollImg from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
+import hrComplianceImg from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {

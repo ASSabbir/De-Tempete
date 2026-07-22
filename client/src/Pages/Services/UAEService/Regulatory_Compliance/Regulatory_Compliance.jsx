@@ -39,7 +39,7 @@ const Regulatory_Compliance = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Regulatory & ISO Compliance"
         heading={
           <>
@@ -69,7 +69,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp"
+            src="/src/asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp"
             alt="Corporate Secretarial Services & Statutory Compliance"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -179,7 +179,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src="/src/asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
             alt="ISO Standards Advisory, Training & Certification Support"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -190,7 +190,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__create-image-for-wesite-section-liquidation-compan__80761.webp"
+            src="/src/asstes/img_temp/servics/freepik__create-image-for-wesite-section-liquidation-compan__80761.webp"
             alt="Liquidation & Company Closure Support"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />

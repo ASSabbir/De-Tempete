@@ -1,19 +1,19 @@
 import { Link } from "react-router";
 
-import img1 from "../../asstes/Images/New folder/2.webp";
-import img2 from "../../asstes/Images/New folder/3-2.webp";
-import img3 from "../../asstes/Images/New folder/4-1.webp";
-import img4 from "../../asstes/Images/New folder/5-1.webp";
-import img5 from "../../asstes/Images/New folder/6-1.webp";
-import img6 from "../../asstes/Images/New folder/7-2.webp";
-import img7 from "../../asstes/Images/New folder/8.webp";
-import img8 from "../../asstes/Images/New folder/9-1.webp";
-import img9 from "../../asstes/Images/New folder/10-2.webp";
-import img10 from "../../asstes/Images/New folder/11-1.webp";
-import img11 from "../../asstes/Images/New folder/12-1-934x1024.webp";
-import img12 from "../../asstes/Images/New folder/13-1.webp";
-import img13 from "../../asstes/Images/New folder/48.webp";
-import img14 from "../../asstes/Images/New folder/49.webp";
+import img1 from "../../asstes/img_temp/New folder/2.webp";
+import img2 from "../../asstes/img_temp/New folder/3-2.webp";
+import img3 from "../../asstes/img_temp/New folder/4-1.webp";
+import img4 from "../../asstes/img_temp/New folder/5-1.webp";
+import img5 from "../../asstes/img_temp/New folder/6-1.webp";
+import img6 from "../../asstes/img_temp/New folder/7-2.webp";
+import img7 from "../../asstes/img_temp/New folder/8.webp";
+import img8 from "../../asstes/img_temp/New folder/9-1.webp";
+import img9 from "../../asstes/img_temp/New folder/10-2.webp";
+import img10 from "../../asstes/img_temp/New folder/11-1.webp";
+import img11 from "../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import img12 from "../../asstes/img_temp/New folder/13-1.webp";
+import img13 from "../../asstes/img_temp/New folder/48.webp";
+import img14 from "../../asstes/img_temp/New folder/49.webp";
 
 const blogs = [
   {

@@ -25,8 +25,8 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import industryExpertiseImg from '../../../../asstes/Images/servics/UK/Whether-expanding-into.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import industryExpertiseImg from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
 
 
 const industries = [

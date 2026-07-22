@@ -142,21 +142,21 @@ const benefits = [
 const blogs = [
   {
     id: 1,
-    image: "/src/asstes/Images/New folder/council-tax.webp",
+    image: "/src/asstes/img_temp/New folder/council-tax.webp",
     title:
       "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
     desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
   },
   {
     id: 2,
-    image: "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+    image: "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
     title:
       "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
     desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
   },
   {
     id: 3,
-    image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+    image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
     title: "The Role and Benefits of a Virtual CFO in Modern Businesses",
     desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
   },
@@ -170,7 +170,7 @@ const Industry_Specific_Accounting_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Industry-Specific Accounting Solutions"
         heading={
           <>
@@ -236,7 +236,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/Whether-expanding-into.webp"
+            src="/src/asstes/img_temp/servics/UK/Whether-expanding-into.webp"
             alt="Why Industry Expertise Matters"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />

@@ -147,7 +147,7 @@ const Compliance_Regulatory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="UK Compliance"
         heading={
           <>
@@ -313,7 +313,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp"
+            src="/src/asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp"
             alt="Self-Assessment Tax Returns"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -370,7 +370,7 @@ const Compliance_Regulatory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp"
+            src="/src/asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp"
             alt="VAT Filing"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -381,7 +381,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/ACSP-Identity.webp"
+            src="/src/asstes/img_temp/servics/ACSP-Identity.webp"
             alt="ACSP Verification"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />{" "}
@@ -440,7 +440,7 @@ const Compliance_Regulatory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/Payroll-Services.webp"
+            src="/src/asstes/img_temp/servics/Payroll-Services.webp"
             alt="Payroll Services"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -451,7 +451,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/Images/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp"
+            src="/src/asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp"
             alt="Pension Auto-Enrolment Compliance"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />

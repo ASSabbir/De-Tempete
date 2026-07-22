@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 
 // Replace these with your actual image imports
-import pub1 from "../../asstes/Images/New folder/Publication.webp";
-import lib1 from "../../asstes/Images/New folder/Library.webp";
-import form1 from "../../asstes/Images/New folder/Forms.webp";
+import pub1 from "../../asstes/img_temp/New folder/Publication.webp";
+import lib1 from "../../asstes/img_temp/New folder/Library.webp";
+import form1 from "../../asstes/img_temp/New folder/Forms.webp";
 
 const cards = [
   {

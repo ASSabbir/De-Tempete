@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/bv.webp'
+import img1 from '../../../../asstes/img_temp/Home/bv.webp'
 import SharedButton from '../../../../Components/Shared/SharedButton';
 
 const WhyPValuation = () => {

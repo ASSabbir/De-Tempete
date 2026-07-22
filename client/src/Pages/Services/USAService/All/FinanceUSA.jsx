@@ -10,7 +10,7 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 
 const servicesData = [
   {
@@ -129,7 +129,7 @@ const FinanceUSA = () => {
             </div>
             <div>
               <img
-                src="/src/asstes/Images/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp"
+                src="/src/asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp"
                 alt="Financial Governance"
                 className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />

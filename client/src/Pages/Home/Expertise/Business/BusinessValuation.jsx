@@ -1,6 +1,6 @@
 import React from 'react';
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
-import img from '../../../../asstes/Images/Home/finalhero.webp'
+import img from '../../../../asstes/img_temp/Home/finalhero.webp'
 import WhyPValuation from './WhyPValuation';
 import BusinessValuationServices from './Businessvaluationservices';
 import BKeyBenefits from './BKeybenefits';

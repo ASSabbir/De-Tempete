@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/Images/Home/HR-Payroll-Hire-based-activity.webp'
+import img1 from '../../../../asstes/img_temp/Home/HR-Payroll-Hire-based-activity.webp'
 
 const WhyHr = () => {
     return (

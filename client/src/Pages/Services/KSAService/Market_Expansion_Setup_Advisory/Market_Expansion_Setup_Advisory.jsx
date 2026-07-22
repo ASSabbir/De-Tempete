@@ -24,7 +24,7 @@ const setupCards = [
       "Enables CR registration process",
       "Suitable for most industries",
     ],
-    img: "/src/asstes/Images/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
+    img: "/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
   },
   {
     title: "Saudi LLC (Limited Liability Company)",
@@ -37,7 +37,7 @@ const setupCards = [
       "Employee visa eligibility",
       "Full regulatory compliance",
     ],
-    img: "/src/asstes/Images/servics/KSA/Financial-Reporting-Document-KSA.webp",
+    img: "/src/asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp",
   },
   {
     title: "Branch of Foreign Company",
@@ -50,7 +50,7 @@ const setupCards = [
       "Limited to parent company activities",
       "Strong for established businesses",
     ],
-    img: "/src/asstes/Images/servics/KSA/Branch-of-Foreign-Company-1.webp",
+    img: "/src/asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp",
   },
   {
     title: "Regional Headquarters (RHQ)",
@@ -63,7 +63,7 @@ const setupCards = [
       "Compliance with RHQ program policies",
       "Long-term strategic presence",
     ],
-    img: "/src/asstes/Images/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
+    img: "/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
   },
 ];
 
@@ -143,7 +143,7 @@ const Market_Expansion_Setup_Advisory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Business Setup KSA"
         heading={
           <>
@@ -277,7 +277,7 @@ const Market_Expansion_Setup_Advisory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/Ksa/Regional-Headquarters-RHQ3.webp"
+            src="/src/asstes/img_temp/servics/Ksa/Regional-Headquarters-RHQ3.webp"
             alt="Bank Account Opening"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -345,7 +345,7 @@ const Market_Expansion_Setup_Advisory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/Ksa/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646 (1).webp"
+            src="/src/asstes/img_temp/servics/Ksa/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646 (1).webp"
             alt="Trademark Registration"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -356,7 +356,7 @@ const Market_Expansion_Setup_Advisory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/Ksa/Investor-Visa-Saudi.webp"
+            src="/src/asstes/img_temp/servics/Ksa/Investor-Visa-Saudi.webp"
             alt="Investor Visa & Residency"
             className="w-full h-80 object-cover rounded-2xl shadow-lg"
           />

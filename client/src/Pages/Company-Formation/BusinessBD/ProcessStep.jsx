@@ -1,4 +1,4 @@
-import logo from "/src/asstes/Images/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273ut9dda1za2jyf75s0.webp";
+import logo from "/src/asstes/img_temp/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv273ut9dda1za2jyf75s0.webp";
 
 const steps = [
   {

@@ -1,8 +1,8 @@
 import React from 'react';
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import img1 from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import { FaCircleCheck } from 'react-icons/fa6';
-import img2 from '../../../../asstes/Images/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
+import img2 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

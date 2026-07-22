@@ -43,7 +43,7 @@ const isoServices = [
 const businessData = [
   {
     title: "Corporate & Statutory Compliance",
-    image: "/src/asstes/Images/servics/Bd/1.webp",
+    image: "/src/asstes/img_temp/servics/Bd/1.webp",
     items: [
       "Company renewals & filing deadlines",
       "Annual returns & ROC filings",
@@ -53,7 +53,7 @@ const businessData = [
   },
   {
     title: "Licensing & Sector-Specific Permissions",
-    image: "/src/asstes/Images/servics/Bd/2.webp",
+    image: "/src/asstes/img_temp/servics/Bd/2.webp",
     items: [
       "Trade licenses & activity permits",
       "Export/Import permissions & customs support",
@@ -63,7 +63,7 @@ const businessData = [
   },
   {
     title: "Reporting & Documentation",
-    image: "/src/asstes/Images/servics/Bd/3.webp",
+    image: "/src/asstes/img_temp/servics/Bd/3.webp",
     items: [
       "Compliance calendars & reminders",
       "Preparation of statutory reports",
@@ -186,7 +186,7 @@ const Regulatory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -224,7 +224,7 @@ Matters Section */}
             {/* Image Placeholder */}
             <div>
               <img
-                src="/src/asstes/Images/servics/Bd/financial-governance.webp"
+                src="/src/asstes/img_temp/servics/Bd/financial-governance.webp"
                 alt="Financial Governance"
                 className="w-full h-150 object-cover rounded-3xl shadow-lg"
               />
@@ -435,7 +435,7 @@ Matters Section */}
                 >
                   <div className="flex items-center gap-3">
                     <img
-                      src="/src/asstes/Images/New folder/imgi_7_admin-ajax.webp"
+                      src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
                       alt="check"
                       className="w-5 h-5 object-contain shrink-0"
                     />
@@ -576,7 +576,7 @@ Matters Section */}
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
@@ -584,13 +584,13 @@ Matters Section */}
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title: "Self-Assessment Tax Return Process for Businesses",
             desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
             desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
           },

@@ -92,7 +92,7 @@ const Finance_Accounting = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Finance & Accounting KSA"
         heading={
           <>
@@ -121,7 +121,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Accounting-in-KSA.webp"
+            src="/src/asstes/img_temp/servics/KSA/Accounting-in-KSA.webp"
             alt="Reliable Finance & Accounting"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -167,7 +167,7 @@ const Finance_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
             alt="What We Handle For You"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -177,7 +177,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp"
+            src="/src/asstes/img_temp/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp"
             alt="Accounting & Bookkeeping"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -231,7 +231,7 @@ const Finance_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/Financial-Reporting-Document-KSA.webp"
+            src="/src/asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp"
             alt="Financial Reporting & Business Documentation"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -241,7 +241,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Accounting-and-finanical-pro-management.webp"
+            src="/src/asstes/img_temp/servics/KSA/Accounting-and-finanical-pro-management.webp"
             alt="Accounting Systems & Financial Process Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -293,7 +293,7 @@ const Finance_Accounting = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/VAT.webp"
+            src="/src/asstes/img_temp/servics/KSA/VAT.webp"
             alt="VAT-Ready Financial Record Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -303,7 +303,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
             alt="Business Financial Operations Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

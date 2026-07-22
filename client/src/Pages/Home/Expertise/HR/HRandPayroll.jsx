@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../asstes/Images/Home/HR-Payroll-Hero-section-1.webp'
+import img from '../../../../asstes/img_temp/Home/HR-Payroll-Hero-section-1.webp'
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
 import WhyHr from './WhyHr';
 import HrAdvantage from './Hradvantage';

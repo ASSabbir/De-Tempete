@@ -7,7 +7,7 @@ const BusinessSetupBook = () => {
           {/* Left Side - Book Image */}
           <div className="flex justify-center">
             <img
-              src="/src/asstes/Images/bd-Business-guide-png.webp"
+              src="/src/asstes/img_temp/bd-Business-guide-png.webp"
               alt="Business Setup Guide"
               className="w-full max-w-[550px] object-contain"
             />

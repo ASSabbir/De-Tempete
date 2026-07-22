@@ -20,9 +20,9 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import strategicAdvisoryImg from '../../../../asstes/Images/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
-import exitStrategyImg from '../../../../asstes/Images/compliance-calendar-img.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import strategicAdvisoryImg from '../../../../asstes/img_temp/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
+import exitStrategyImg from '../../../../asstes/img_temp/compliance-calendar-img.webp'
 
 
 const valuationCards = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../../../asstes/Images/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92084.webp'
+import img from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92084.webp'
 import VirtualBanner from '../VirtualCfo/VirtualBanner';
 import WhyDue from './WhyDue';
 import KeyBenefits from '../VirtualCfo/Keybenefits';

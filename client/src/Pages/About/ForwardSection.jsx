@@ -8,11 +8,11 @@ import {
 import VisionCard from "./VisionCard";
 import StrengthCard from "./StrengthCard";
 
-import aboutImg from "../../asstes/Images/de-tempete.webp"; 
-import img1 from '../../asstes/Images/about/datadualtone.webp'
-import img2 from '../../asstes/Images/about/email-2dualtone.webp'
-import img3 from '../../asstes/Images/about/connectdualtone.webp'
-import img4 from '../../asstes/Images/about/successdualtone.webp'
+import aboutImg from "../../asstes/img_temp/de-tempete.webp"; 
+import img1 from '../../asstes/img_temp/about/datadualtone.webp'
+import img2 from '../../asstes/img_temp/about/email-2dualtone.webp'
+import img3 from '../../asstes/img_temp/about/connectdualtone.webp'
+import img4 from '../../asstes/img_temp/about/successdualtone.webp'
 
 const ForwardSection = () => {
   return (

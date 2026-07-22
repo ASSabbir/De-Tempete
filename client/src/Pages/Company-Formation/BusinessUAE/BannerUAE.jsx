@@ -3,7 +3,7 @@ const BannerUAE = () => {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-white overflow-hidden py-24 md:pt-32">
       {/* Background Image */}
       <img
-        src="/src/asstes/Images/New folder/Dubai-Business-set-up.webp"
+        src="/src/asstes/img_temp/New folder/Dubai-Business-set-up.webp"
         alt="UAE Banner"
         className="absolute inset-0 w-full h-full object-cover scale-105 animate-[zoom_18s_ease-in-out_infinite_alternate]"
       />

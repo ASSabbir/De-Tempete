@@ -8,12 +8,12 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
-import bgimg from '../../../../asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import federalTaxImg from '../../../../asstes/Images/servics/UK/freepik__corporate-tax-planning-compliance-image-unique-con__88847.webp'
-import stateTaxImg from '../../../../asstes/Images/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp'
-import salesTaxImg from '../../../../asstes/Images/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp'
-import reporting1099Img from '../../../../asstes/Images/servics/UK/freepik__inheritance-tax-planning-image-unique-but-clear-co__88850.webp'
-import taxPlanningImg from '../../../../asstes/Images/servics/UK/freepik__hmrc-investigation-support-dispute-resolution-imag__88852.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import federalTaxImg from '../../../../asstes/img_temp/servics/UK/freepik__corporate-tax-planning-compliance-image-unique-con__88847.webp'
+import stateTaxImg from '../../../../asstes/img_temp/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp'
+import salesTaxImg from '../../../../asstes/img_temp/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp'
+import reporting1099Img from '../../../../asstes/img_temp/servics/UK/freepik__inheritance-tax-planning-image-unique-but-clear-co__88850.webp'
+import taxPlanningImg from '../../../../asstes/img_temp/servics/UK/freepik__hmrc-investigation-support-dispute-resolution-imag__88852.webp'
 
 const whyChoose = [
   "Tailored tax strategy for LLCs, C-Corps, and multi-state businesses",

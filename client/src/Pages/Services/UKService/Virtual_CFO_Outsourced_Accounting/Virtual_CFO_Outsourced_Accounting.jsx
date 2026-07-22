@@ -125,7 +125,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Virtual CFO & Outsourced Accounting"
         heading={
           <>
@@ -184,7 +184,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp"
+            src="/src/asstes/img_temp/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp"
             alt="What Is A Virtual CFO"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import worldimg from '../../asstes/Images/Map.webp'
+import worldimg from '../../asstes/img_temp/Map.webp'
 const stats = [
   {
     icon: (

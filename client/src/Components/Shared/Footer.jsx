@@ -49,7 +49,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="text-center">
           <img
-            src="/src/asstes/images/logo1.webp"
+            src="/src/asstes/img_temp/logo1.webp"
             alt="Logo"
             className="h-12 sm:h-16 mx-auto mb-6 transition-transform duration-300 hover:scale-105"
           />

@@ -84,7 +84,7 @@ const Regulatory_Compliance = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
+        bgImage="/src/asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
         heading={
           <>
             Regulatory & ISO Compliance
@@ -113,7 +113,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Regulatory-Compliance-Services-in-Saudi-Arabia.webp"
+            src="/src/asstes/img_temp/servics/KSA/Regulatory-Compliance-Services-in-Saudi-Arabia.webp"
             alt="Trusted Compliance Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -192,7 +192,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src="/src/asstes/img_temp/servics/KSA/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
             alt="Regulatory Compliance Services"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -203,7 +203,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
+            src="/src/asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
             alt="ISO Certification & Process Alignment"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -268,7 +268,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/INdustry-specific.webp"
+            src="/src/asstes/img_temp/servics/KSA/INdustry-specific.webp"
             alt="Industry-Specific Compliance Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -279,7 +279,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/Images/servics/KSA/Modern-office-with-audit-tool.webp"
+            src="/src/asstes/img_temp/servics/KSA/Modern-office-with-audit-tool.webp"
             alt="Risk Monitoring & Operational Compliance Reviews"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -330,7 +330,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/Images/servics/KSA/Government-Platforms-Regulatory-Coordination.webp"
+            src="/src/asstes/img_temp/servics/KSA/Government-Platforms-Regulatory-Coordination.webp"
             alt="Government Platforms & Regulatory Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

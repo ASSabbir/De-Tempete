@@ -31,19 +31,19 @@ const dueDiligenceCards = [
     title: "Financial & Operational Assessment",
     desc: "Analyze financial statements, cash flow, and business performance to ensure investment viability.",
     image:
-      "/src/asstes/Images/servics/UK/Global-business-strategy-in-focus.webp",
+      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
   },
   {
     title: "Risk & Compliance Checks",
     desc: "Evaluate legal, regulatory, and operational risks for informed decision-making.",
     image:
-      "/src/asstes/Images/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
   },
   {
     title: "Post-Investment Monitoring",
     desc: "Track KPIs, profitability, and growth strategies to maintain investment performance.",
     image:
-      "/src/asstes/Images/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp",
+      "/src/asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp",
   },
 ];
 
@@ -100,7 +100,7 @@ const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
         alt="Investment Advisory UAE"
         heading="Invest With Confidence."
         description={
@@ -290,7 +290,7 @@ const Investment = () => {
         blogs={[
           {
             id: 1,
-            image: "/src/asstes/Images/New folder/council-tax.webp",
+            image: "/src/asstes/img_temp/New folder/council-tax.webp",
             title:
               "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
             desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
@@ -298,14 +298,14 @@ const Investment = () => {
           {
             id: 2,
             image:
-              "/src/asstes/Images/New folder/self-assessment-tax-return.webp",
+              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
             title:
               "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
             desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
           },
           {
             id: 3,
-            image: "/src/asstes/Images/New folder/Virtual-CFO-2048x1366.webp",
+            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
             title:
               "The Role and Benefits of a Virtual CFO in Modern Businesses",
             desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",

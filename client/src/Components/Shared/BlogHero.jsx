@@ -2,7 +2,7 @@
 export const BlogHero = ({ title }) => (
   <section className="pt-40 pb-20 relative text-white overflow-hidden">
     <img
-      src="/src/asstes/Images/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+      src="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
       alt={title}
       className="absolute inset-0 w-full h-full object-cover"
     />
