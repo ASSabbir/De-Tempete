@@ -64,7 +64,7 @@ const BlogSingle = () => {
     return (
       <div className="text-center py-32">
         <p className="text-gray-500 mb-6">{error || "Blog post not found."}</p>
-        <Link to="/blogs" className="text-cyan-500 font-semibold">
+        <Link to="/blogs" className="text-light-blue font-semibold">
           ← Back to all blogs
         </Link>
       </div>
@@ -87,7 +87,7 @@ const BlogSingle = () => {
         }}
       >
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-cyan-300 text-sm font-medium mb-3">
+          <p className="text-light-blue text-sm font-medium mb-3">
             {blog.publishedDate
               ? new Date(blog.publishedDate).toLocaleDateString(undefined, {
                   year: "numeric",
@@ -113,7 +113,7 @@ const BlogSingle = () => {
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}
-                    className="text-gray-500 hover:text-cyan-500 transition-colors text-sm"
+                    className="text-gray-500 hover:text-light-blue transition-colors text-sm"
                   >
                     {i + 1}. {item.label}
                   </a>
@@ -157,21 +157,21 @@ const BlogSingle = () => {
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none"
                 />
               </div>
               <div className="grid sm:grid-cols-3 gap-4">
                 <input
                   placeholder="Name"
-                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none"
+                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none"
                 />
                 <input
                   placeholder="Email"
-                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none"
+                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none"
                 />
                 <input
                   placeholder="Website"
-                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none"
+                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none"
                 />
               </div>
               <button
@@ -200,10 +200,10 @@ const BlogSingle = () => {
                   className="w-20 h-20 object-cover rounded-lg shrink-0"
                 />
                 <div>
-                  <h4 className="text-sm font-semibold text-[#16244b] leading-snug group-hover:text-cyan-500 transition-colors line-clamp-2">
+                  <h4 className="text-sm font-semibold text-[#16244b] leading-snug group-hover:text-light-blue transition-colors line-clamp-2">
                     {item.title}
                   </h4>
-                  <span className="text-xs text-cyan-500 font-medium">Read More →</span>
+                  <span className="text-xs text-light-blue font-medium">Read More →</span>
                 </div>
               </Link>
             ))}

@@ -78,7 +78,7 @@ const Bookkeeping_Financial_Management = () => {
               {["Monthly Bookkeeping", "Quarterly Bookkeeping"].map(
                 (item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ),
@@ -115,7 +115,7 @@ const Bookkeeping_Financial_Management = () => {
                 "Detailed Reporting",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -182,7 +182,7 @@ const Bookkeeping_Financial_Management = () => {
                 "Key Metrics & Insights",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -209,7 +209,7 @@ const Bookkeeping_Financial_Management = () => {
               reconciliation, ensuring smooth financial operations and timely
               reporting.
             </p>
-            <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
+            <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mt-20">
@@ -222,7 +222,7 @@ const Bookkeeping_Financial_Management = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
@@ -244,7 +244,7 @@ const Bookkeeping_Financial_Management = () => {
                 Bookkeeping & Financial Management Services
               </span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6 mt-20">
@@ -253,7 +253,7 @@ const Bookkeeping_Financial_Management = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-3xl mx-auto mb-4" />
+                <LuChartNoAxesCombined className="text-light-blue text-3xl mx-auto mb-4" />
                 <p className="text-gray-700 font-semibold">{item.title}</p>
               </div>
             ))}

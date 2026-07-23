@@ -192,13 +192,13 @@ const Compliance_Regulatory = () => {
       {/* Problem Statement */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-cyan-500 font-semibold">
+          <p className="text-light-blue font-semibold">
             PROBLEM STATEMENT 1 "The
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
             UK Compliance Burden
           </h2>
-          <p className="mt-4 text-cyan-500 font-semibold text-lg">
+          <p className="mt-4 text-light-blue font-semibold text-lg">
             Compliance in the UK Isn't Optional — It's Critical.
           </p>
           <p className="mt-6 text-gray-600 leading-8">
@@ -219,7 +219,7 @@ const Compliance_Regulatory = () => {
               "Challenges with pension auto-enrolment compliance",
             ].map((t, i) => (
               <div key={i} className="flex items-start gap-3">
-                <FaCheckCircle className="text-cyan-400 text-lg mt-1 shrink-0" />
+                <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
                 <span className="text-gray-600">{t}</span>
               </div>
             ))}
@@ -265,7 +265,7 @@ const Compliance_Regulatory = () => {
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -334,7 +334,7 @@ const Compliance_Regulatory = () => {
             <div className="space-y-4">
               {selfAssessment.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-2xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-2xl shrink-0" />
                   <span className="text-gray-600 text-lg">{item}</span>
                 </div>
               ))}
@@ -363,7 +363,7 @@ const Compliance_Regulatory = () => {
             <div className="space-y-4">
               {vatFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -403,7 +403,7 @@ const Compliance_Regulatory = () => {
             <div className="space-y-4 mt-6">
               {acspFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -413,7 +413,7 @@ const Compliance_Regulatory = () => {
       </section>
 
       {/* Payroll */}
-      <section className="py-20 bg-white">
+      <section id="uk-payroll" className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -433,7 +433,7 @@ const Compliance_Regulatory = () => {
             <div className="space-y-4">
               {payrollFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -478,7 +478,7 @@ const Compliance_Regulatory = () => {
                 "Ongoing compliance & regulatory updates",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -545,7 +545,7 @@ const Compliance_Regulatory = () => {
               the latest HMRC rules — ensuring every payment is correct and
               compliant.
             </p>
-            <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
+            <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
 
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
@@ -554,7 +554,7 @@ const Compliance_Regulatory = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
@@ -574,7 +574,7 @@ const Compliance_Regulatory = () => {
               Why Choose Our{" "}
               <span className="font-bold">UK Compliance Advisory</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6 mt-20">
@@ -583,7 +583,7 @@ const Compliance_Regulatory = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuShieldCheck className="text-cyan-400 text-3xl mx-auto mb-4" />
+                <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
                 <p className="text-gray-700 font-semibold">{item}</p>
               </div>
             ))}

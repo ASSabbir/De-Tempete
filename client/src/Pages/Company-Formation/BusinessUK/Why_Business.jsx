@@ -33,7 +33,7 @@ const Why_Business = () => {
         <div className="grid grid-cols-2 gap-5">
 
           {/* Card 1 */}
-          <div className="bg-cyan-400 rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-3xl font-medium">
               24-Hour
               <br />
@@ -44,7 +44,7 @@ const Why_Business = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-3xl font-medium">
               Global
               <br />
@@ -66,7 +66,7 @@ const Why_Business = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-cyan-400 rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               World-Class Banking &
               <br />

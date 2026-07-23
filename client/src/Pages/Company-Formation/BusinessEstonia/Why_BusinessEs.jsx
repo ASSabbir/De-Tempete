@@ -2,7 +2,7 @@ const features = [
   {
     title: "1- 0% Tax on Retained Profits",
     desc: "No corporate income tax while profits stay in the company. Tax applies only when dividends are distributed — at 22%.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
     title: "2- 100% Digital & Remote",
@@ -12,7 +12,7 @@ const features = [
   {
     title: "3- Full EU Market Access",
     desc: "One company, 27 EU markets. Invoice, sell, and operate across the Single Market with SEPA banking and EU VAT recognition.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
     title: "4- 100% Foreign Ownership",
@@ -22,7 +22,7 @@ const features = [
   {
     title: "5- Low Setup & Running Costs",
     desc: "€265 state registration fee, €150 e-Residency, and typical first-year costs of €1,000–€3,000 including essential services.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
     title: "6- Proven Startup Ecosystem",
@@ -53,12 +53,12 @@ const Why_BusinessEs = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-24">
+        <div className="grid lg:grid-cols-3 rounded-3xl overflow-hidden md:grid-cols-2 gap-6 mt-24">
           {features.map((item, index) => (
             <div
               key={index}
               className={`${item.bg}
-              rounded-[0px_0px_25px_25px]
+              
               shadow-sm
               min-h-[230px]
               px-5 py-4

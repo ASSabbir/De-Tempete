@@ -4,12 +4,16 @@ import uae from '../../../../asstes/img_temp/Contact/323301.webp'
 import ksa from '../../../../asstes/img_temp/Contact/5111777.webp'
 import bd from '../../../../asstes/img_temp/Contact/8362826.webp'
 import uk from '../../../../asstes/img_temp/Contact/197374.webp'
+import es from '../../../../asstes/img_temp/Contact/ee-circle-01.webp'
+import us from '../../../../asstes/img_temp/Contact/us.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const regions = [
   {
     id: "uae",
-    tab: "UAE (United Arab Emirates)",
+    tab: "UAE ",
     flag: uae,
     shortName: "UAE",
+    path: '/services/uae/taxation',
     description:
       "Our experts guide you through corporate tax, VAT, and compliance frameworks — ensuring seamless operations in both mainland and free zones.",
     focusAreas: [
@@ -24,6 +28,7 @@ const regions = [
     tab: "KSA (Saudi Arabia)",
     flag: ksa,
     shortName: "KSA",
+    path: '/services/ksa/taxation',
     description:
       "Navigate ZATCA regulations and optimize your tax structure to align with Saudi Vision 2030.",
     focusAreas: [
@@ -36,6 +41,7 @@ const regions = [
   {
     id: "bd",
     tab: "Bangladesh",
+    path: '/services/bd/taxation',
     flag: bd,
     shortName: "Bangladesh",
     description:
@@ -51,6 +57,7 @@ const regions = [
     id: "uk",
     tab: "United Kingdom (UK)",
     flag: uk,
+    path: '/services/uk/tax-planning',
     shortName: "UK",
     description:
       "Stay ahead of HMRC regulations and manage your business taxes strategically to enhance profitability and compliance.",
@@ -59,6 +66,36 @@ const regions = [
       "VAT planning",
       "Corporate tax planning",
       "Audit & filing",
+    ],
+  },
+  {
+    id: "usa",
+    tab: "USA (United States)",
+    flag: us,
+    path: '/services/usa/tax-planning',
+    shortName: "USA",
+    description:
+      "Navigate complex federal and state tax regulations with strategic tax planning, ensuring compliance while maximizing tax efficiency and business growth.",
+    focusAreas: [
+      "Federal & state tax compliance",
+      "Sales tax planning",
+      "Corporate tax strategy",
+      "IRS reporting & filings",
+    ],
+  },
+  {
+    id: "estonia",
+    tab: "Estonia",
+    flag: es,
+    shortName: "Estonia",
+    path: '/services/estonia/tax-vat-compliance',
+    description:
+      "Optimize your tax position in Estonia with expert guidance on corporate taxation, VAT compliance, and regulatory reporting to support sustainable business growth.",
+    focusAreas: [
+      "Corporate tax compliance",
+      "VAT planning & reporting",
+      "EU tax regulations",
+      "Annual tax filings",
     ],
   },
 ];
@@ -112,7 +149,7 @@ export default function HireTaxRegion() {
             className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12 flex flex-col items-center text-center gap-5"
           >
             {/* Flag */}
-            
+
             <img src={current.flag} alt="" className="w-22" />
 
             {/* Title */}
@@ -125,9 +162,16 @@ export default function HireTaxRegion() {
             <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-3xl">
               {current.description}
             </p>
+            <div
+                className="w-full rounded-xl flex justify-center p-6 sm:p-8 text-left mt-2"
+
+              >
+                <SharedFullButton text={`Get a Free HR Consultation in ${current.shortName}`} path={current.path}></SharedFullButton>
+
+              </div>
 
             {/* Focus Areas */}
-            <div
+            {/* <div
               className="w-full rounded-xl p-6 sm:p-8 text-left mt-2"
               style={{ background: "linear-gradient(135deg, #e0f7fa, #b2ebf2)" }}
             >
@@ -144,7 +188,8 @@ export default function HireTaxRegion() {
                   </div>
                 ))}
               </div>
-            </div>
+              
+            </div> */}
           </motion.div>
         </AnimatePresence>
 

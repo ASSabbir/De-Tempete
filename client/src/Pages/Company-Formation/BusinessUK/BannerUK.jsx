@@ -1,9 +1,10 @@
+import img1 from '../../../asstes/img_temp/New folder/Business-set-up-in-UK.webp'
 const BannerUK = () => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-white overflow-hidden pt-24 md:pt-32">
       {/* Background Image */}
       <img
-        src="/src/asstes/img_temp/New folder/Business-set-up-in-UK.webp"
+        src={img1}
         alt="UK Banner"
         className="absolute inset-0 w-full h-full object-cover scale-105 animate-[zoom_18s_ease-in-out_infinite_alternate]"
       />

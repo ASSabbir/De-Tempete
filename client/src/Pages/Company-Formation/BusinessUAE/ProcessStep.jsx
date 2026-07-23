@@ -85,7 +85,7 @@ const ProcessStep = () => {
               className={`absolute w-[250px] text-center ${positions[index]}`}
             >
               {/* Icon */}
-              <div className="w-20 h-20 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
+              <div className="w-20 h-20 hover:shadow-2xl hover:scale-105 duration-300 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
                 <img
                   src={logo}
                   alt=""
@@ -123,7 +123,7 @@ const ProcessStep = () => {
                 </div>
 
                 {index !== steps.length - 1 && (
-                  <div className="w-[3px] h-24 bg-cyan-400 mt-2"></div>
+                  <div className="w-[3px] h-24 bg-light-blue mt-2"></div>
                 )}
               </div>
 

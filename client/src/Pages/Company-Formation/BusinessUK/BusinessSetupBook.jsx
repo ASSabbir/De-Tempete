@@ -1,3 +1,4 @@
+import img1 from '../../../asstes/img_temp/UK-Business-guide-1024x682.webp'
 const BusinessSetupBook = () => {
   return (
     <section className="bg-[#ffffff] py-24">
@@ -7,7 +8,7 @@ const BusinessSetupBook = () => {
           {/* Left Side - Book Image */}
           <div className="flex justify-center">
             <img
-              src="/src/asstes/img_temp/UK-Business-guide-1024x682.webp"
+              src={img1}
               alt="Business Setup Guide"
               className="w-full max-w-[550px] object-contain"
             />

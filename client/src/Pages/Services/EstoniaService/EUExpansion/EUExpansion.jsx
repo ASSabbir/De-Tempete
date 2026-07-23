@@ -226,7 +226,7 @@ const EUExpansion = () => {
                                 "Business relocation to Estonia",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                                     <span className="text-gray-600">{item}</span>
                                 </div>
                             ))}
@@ -290,7 +290,7 @@ const EUExpansion = () => {
                             We don't apply one-size-fits-all systems. We build financial
                             structures tailored to your
                         </p>
-                        <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-6"></div>
+                        <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-6"></div>
                     </div>
 
                     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-16">
@@ -299,7 +299,7 @@ const EUExpansion = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-16 h-16 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                                     <LuChartNoAxesCombined className="text-white text-4xl" />
                                 </div>
                                 <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
@@ -323,7 +323,7 @@ const EUExpansion = () => {
                             we provide the strategic support businesses need to expand confidently
                             across Europe through Estonia.
                         </p>
-                        <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+                        <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
@@ -333,7 +333,7 @@ const EUExpansion = () => {
                                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
                                 <div className="flex items-center gap-3 mb-3">
-                                    <LuChartNoAxesCombined className="text-cyan-400 text-2xl shrink-0" />
+                                    <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                                     <h3 className="text-lg font-bold text-[#16244b]">
                                         {item.title}
                                     </h3>
@@ -390,7 +390,7 @@ const EUExpansion = () => {
                                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
+                                        <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
                                             ✦
                                         </div>
                                         <span className="font-semibold text-gray-900">

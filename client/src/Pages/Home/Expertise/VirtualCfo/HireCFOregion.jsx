@@ -4,10 +4,12 @@ import uae from '../../../../asstes/img_temp/Contact/323301.webp'
 import ksa from '../../../../asstes/img_temp/Contact/5111777.webp'
 import bd from '../../../../asstes/img_temp/Contact/8362826.webp'
 import uk from '../../../../asstes/img_temp/Contact/197374.webp'
+import es from '../../../../asstes/img_temp/Contact/ee-circle-01.webp'
+import us from '../../../../asstes/img_temp/Contact/us.webp'
 const regions = [
   {
     id: "uae",
-    tab: "UAE (United Arab Emirates)",
+    tab: "UAE ",
     flag: uae,
     shortName: "UAE",
     description:
@@ -61,6 +63,34 @@ const regions = [
       "Financial reporting (FRS)",
     ],
   },
+  {
+  id: "usa",
+  tab: "USA (United States)",
+  flag: us,
+  shortName: "USA",
+  description:
+    "Managing finances in the United States requires strategic oversight, regulatory compliance, and data-driven decision-making. Our Virtual CFOs help businesses optimize cash flow, improve profitability, ensure financial compliance, and develop growth strategies to scale confidently across the US market.",
+  focusAreas: [
+    "Cash flow management",
+    "Financial planning & forecasting",
+    "Business performance analysis",
+    "Tax strategy & compliance",
+  ],
+},
+{
+  id: "estonia",
+  tab: "Estonia",
+  flag: es,
+  shortName: "Estonia",
+  description:
+    "Estonia's digital-first business environment offers unique opportunities for global entrepreneurs. Our Virtual CFOs help businesses manage financial operations, maintain regulatory compliance, optimize cash flow, and develop scalable strategies to support sustainable growth across Estonia and the European market.",
+  focusAreas: [
+    "e-Residency financial support",
+    "Financial planning & forecasting",
+    "EU compliance & reporting",
+    "Business growth strategy",
+  ],
+},
 ];
 
 export default function HireCFORegion() {

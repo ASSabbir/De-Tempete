@@ -165,13 +165,13 @@ const ComplianceUSA = () => {
       {/* Problem Statement */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-cyan-500 font-semibold">
+          <p className="text-light-blue font-semibold">
             THE COMPLIANCE CHALLENGE
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
             US Compliance Burden
           </h2>
-          <p className="mt-4 text-cyan-500 font-semibold text-lg">
+          <p className="mt-4 text-light-blue font-semibold text-lg">
             US Regulatory Compliance Isn't Optional — It's Critical.
           </p>
           <p className="mt-6 text-gray-600 leading-8">
@@ -193,7 +193,7 @@ const ComplianceUSA = () => {
               "No centralized compliance calendar across jurisdictions",
             ].map((t, i) => (
               <div key={i} className="flex items-start gap-3">
-                <FaCheckCircle className="text-cyan-400 text-lg mt-1 shrink-0" />
+                <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
                 <span className="text-gray-600">{t}</span>
               </div>
             ))}
@@ -299,7 +299,7 @@ const ComplianceUSA = () => {
             <div className="space-y-4">
               {selfAssessment.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-2xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-2xl shrink-0" />
                   <span className="text-gray-600 text-lg">{item}</span>
                 </div>
               ))}
@@ -329,7 +329,7 @@ const ComplianceUSA = () => {
             <div className="space-y-4">
               {vatFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -369,7 +369,7 @@ const ComplianceUSA = () => {
             <div className="space-y-4 mt-6">
               {acspFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -399,7 +399,7 @@ const ComplianceUSA = () => {
             <div className="space-y-4">
               {payrollFeatures.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -444,7 +444,7 @@ const ComplianceUSA = () => {
                 "Ongoing coordination with your federal tax preparer",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-cyan-400 text-xl shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -468,7 +468,7 @@ const ComplianceUSA = () => {
               compliance calendar around the deadline types that matter most
               — so your team always knows what's due, and when.
             </p>
-            <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
+            <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
 
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
@@ -477,7 +477,7 @@ const ComplianceUSA = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
@@ -560,7 +560,7 @@ const ComplianceUSA = () => {
               Why Choose Our{" "}
               <span className="font-bold">USA Compliance Advisory</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6 mt-20">
@@ -569,7 +569,7 @@ const ComplianceUSA = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuShieldCheck className="text-cyan-400 text-3xl mx-auto mb-4" />
+                <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
                 <p className="text-gray-700 font-semibold">{item}</p>
               </div>
             ))}

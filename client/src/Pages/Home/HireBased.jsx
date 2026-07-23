@@ -93,7 +93,7 @@ export default function HireBased() {
               />
 
               {/* Icon */}
-              <div className="transition-transform duration-300 text-light-blue  group-hover:scale-105 t">
+              <div className="transition-transform duration-300 text-[#3C9FC2]  group-hover:scale-105 t">
                 <div className="text-4xl">
                   {s.icon}
                 </div>
@@ -119,7 +119,7 @@ export default function HireBased() {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#1a9fd4] hover:bg-[#1589bb] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 shadow-md hover:shadow-[#1a9fd4]/30 hover:shadow-lg w-fit"
+              className="inline-flex items-center justify-center gap-2 bg-[#3C9FC2] hover:bg-[#1589bb] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 shadow-md hover:shadow-[#1a9fd4]/30 hover:shadow-lg w-fit"
             >
               Contact Now
               <svg

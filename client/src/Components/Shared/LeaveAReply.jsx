@@ -6,19 +6,19 @@ export const LeaveAReply = () => (
     <form className="space-y-5">
       <div>
         <label className="block text-sm font-semibold text-gray-800 mb-2">Comment *</label>
-        <textarea rows={6} className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400" />
+        <textarea rows={6} className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue" />
       </div>
       <div>
         <label className="block text-sm font-semibold text-gray-800 mb-2">Name</label>
-        <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400" />
+        <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue" />
       </div>
       <div>
         <label className="block text-sm font-semibold text-gray-800 mb-2">Email</label>
-        <input type="email" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400" />
+        <input type="email" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue" />
       </div>
       <div>
         <label className="block text-sm font-semibold text-gray-800 mb-2">Website</label>
-        <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400" />
+        <input type="text" className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue" />
       </div>
       <button type="submit" className="bg-[#16244b] hover:bg-[#0d1a38] text-white font-semibold px-8 py-3 rounded-lg transition duration-300">
         Post Comment

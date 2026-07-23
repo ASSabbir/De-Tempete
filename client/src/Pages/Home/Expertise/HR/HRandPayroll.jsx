@@ -12,6 +12,14 @@ const HRandPayroll = () => {
     const text =['Reliable, Compliant, Hassle-Free HR & Payroll Management Services','Empowering Growth with Expert Financial Leadership — Virtually','Simplify workforce management with structured HR processes and accurate payroll systems, ensuring compliance, employee satisfaction, and operational efficiency. ','Get a Free HR Consultation']
     const benefits=['Accurate and error-free payroll processing','Full compliance with local labor laws','Improved employee satisfaction and trust','Reduced administrative workload','Streamlined HR operations and processes','Better workforce management and control']
     const keyBenefittext=['Key Benefits ','Of Choosing Professional HR & Payroll']
+    const commitments = [
+  "Free initial HR & payroll consultation — no obligation",
+  "100% confidential employee and payroll data handling",
+  "Accurate, timely, and fully compliant payroll processing",
+  "Practical HR support tailored to your business needs",
+];
+const title ='Ready to Streamline Your HR & Payroll Operations?'
+const des='From payroll processing to employee compliance, we help you manage your workforce efficiently and with confidence.'
 
     return (
         <div>
@@ -21,7 +29,7 @@ const HRandPayroll = () => {
             <HireHRregion></HireHRregion>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <HRFaq></HRFaq>
-            <GetStarted></GetStarted>
+            <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
             <Awards></Awards>
             
         </div>

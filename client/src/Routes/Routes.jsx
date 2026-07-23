@@ -94,6 +94,8 @@ import HRPayrollUSA from "../Pages/Services/USAService/All/HRPayrollUSA";
 import TechnologyUSA from "../Pages/Services/USAService/All/TechnologyUSA";
 import BlogList from "../Pages/Blogs/BlogList";
 import BlogSingle from "../Pages/Blogs/BlogSingle";
+import PrivacyPolicy from "../../../admin/src/pages/PrivacyPolicy";
+import TermsConditions from "../../../admin/src/pages/TermsConditions";
 
 
 const Routes = createBrowserRouter([ 
@@ -213,6 +215,9 @@ const Routes = createBrowserRouter([
       // ===== BLOG =====
       { path: "/blogs", element: <BlogList></BlogList> },
       { path: "/blogs/:slug", element: <BlogSingle></BlogSingle> },
+
+      { path: "/privacy-policy", element: <PrivacyPolicy></PrivacyPolicy> },
+      { path: "/terms-conditions", element: <TermsConditions></TermsConditions> },
       
     ]
   }

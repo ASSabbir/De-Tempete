@@ -250,7 +250,7 @@ const Ecommerce = () => {
                                     "Cross-border e-commerce accounting",
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-center gap-4">
-                                        <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
+                                        <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
                                         <span className="text-gray-600 text-lg">{item}</span>
                                     </div>
@@ -292,7 +292,7 @@ const Ecommerce = () => {
                                     "Performance and cash flow insights",
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-center gap-4">
-                                        <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
+                                        <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
                                         <span className="text-gray-600 text-lg">{item}</span>
                                     </div>
@@ -334,7 +334,7 @@ const Ecommerce = () => {
                             you need to grow with confidence.
                         </p>
 
-                        <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
+                        <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
                     </div>
 
                     {/* Cards */}
@@ -350,7 +350,7 @@ const Ecommerce = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                                     <LuChartNoAxesCombined className="text-white text-5xl" />
                                 </div>
 
@@ -377,7 +377,7 @@ const Ecommerce = () => {
                             <span className="font-bold"> E-commerce & SaaS Accounting Services</span>
                         </h2>
 
-                        <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+                        <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
                     </div>
 
                     {/* Cards */}
@@ -406,7 +406,7 @@ const Ecommerce = () => {
                                 className="flex items-start gap-6 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
                                 <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                                    <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
+                                    <LuChartNoAxesCombined className="text-light-blue text-3xl" />
                                 </div>
 
                                 <div>

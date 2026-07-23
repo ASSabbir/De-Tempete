@@ -166,7 +166,7 @@ const Taxation_KSA = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-4">
             What We Handle For You
           </h2>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mb-12" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mb-12" />
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
             {handleTags.map((t, i) => (
               <div
@@ -203,7 +203,7 @@ const Taxation_KSA = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {vatAdvisoryPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -248,7 +248,7 @@ const Taxation_KSA = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {zatcaBenefits.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -282,7 +282,7 @@ const Taxation_KSA = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {vatFilingItems.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -319,7 +319,7 @@ const Taxation_KSA = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {ongoingBenefits.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -331,7 +331,7 @@ const Taxation_KSA = () => {
       <section className="py-24 bg-[#16244B]">
         <div className="max-w-[1600px] mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white">What You Gain?</h2>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6 mb-14" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6 mb-14" />
           <div className="grid lg:grid-cols-3 gap-6">
             {gains.map((g, i) => (
               <div
@@ -352,7 +352,7 @@ const Taxation_KSA = () => {
               Why Choose <span className="font-normal italic">de tempête</span>{" "}
               for Taxation Services?
             </h2>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (

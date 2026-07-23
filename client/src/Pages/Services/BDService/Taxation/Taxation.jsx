@@ -166,7 +166,7 @@ const Taxation = () => {
                           key={itemIndex}
                           className="flex items-center gap-3"
                         >
-                          <FaCheckCircle className="text-cyan-500 text-lg shrink-0" />
+                          <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                           <span className="text-gray-600 text-lg">{item}</span>
                         </div>
                       ))}

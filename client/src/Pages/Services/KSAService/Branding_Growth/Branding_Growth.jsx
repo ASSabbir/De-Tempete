@@ -150,7 +150,7 @@ const Branding_Growth = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-4">
             What We Handle For You
           </h2>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mb-12" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mb-12" />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
             {handleTags.map((t, i) => (
               <div
@@ -192,7 +192,7 @@ const Branding_Growth = () => {
               >
                 <button className="w-full px-6 py-4 flex items-center justify-between text-left">
                   <span className="flex items-center gap-3 text-[#16244b] font-semibold text-sm">
-                    <span className="text-cyan-400">◆</span>
+                    <span className="text-light-blue">◆</span>
                     {item}
                   </span>
                   <ChevronDown size={18} className="text-gray-500" />
@@ -220,13 +220,13 @@ const Branding_Growth = () => {
               photoshoots and videos that represent your brand with style and
               clarity.
             </p>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-3 gap-6">
             {photoshootCards.map((c, i) => (
               <div key={i} className="bg-[#37456B] rounded-2xl p-8">
-                <div className="w-12 h-12 bg-cyan-400/20 rounded-lg flex items-center justify-center mb-5">
-                  <span className="text-cyan-400 text-xl">◆</span>
+                <div className="w-12 h-12 bg-light-blue/20 rounded-lg flex items-center justify-center mb-5">
+                  <span className="text-light-blue text-xl">◆</span>
                 </div>
                 <h3 className="text-white font-bold mb-2">{c.title}</h3>
                 <p className="text-gray-300 text-sm leading-6">{c.desc}</p>
@@ -243,7 +243,7 @@ const Branding_Growth = () => {
               Why Choose <span className="font-normal italic">de tempête</span>{" "}
               for Branding & Growth Services
             </h2>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (

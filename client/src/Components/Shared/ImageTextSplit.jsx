@@ -28,7 +28,7 @@ export const ImageTextSplit = ({
         <div className="space-y-3 mt-6">
           {points.map((p, i) => (
             <div key={i} className="flex items-center gap-3">
-              <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+              <FaCheckCircle className="text-light-blue text-lg shrink-0" />
               <span className="text-gray-600">{p}</span>
             </div>
           ))}

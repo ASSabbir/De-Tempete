@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const commitments = [
-  "Free initial tax consultation — no obligation",
-  "100% confidentiality and secure handling of data",
-  "Region-specific tax experts",
-  "Transparent and practical advice tailored to your needs",
-];
 
-export default function GetStarted() {
+
+export default function GetStarted({commitments, title,des}) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) =>
@@ -39,12 +34,12 @@ export default function GetStarted() {
 
             {/* Subtitle */}
             <p className="text-[#1a9fd4] font-semibold text-base sm:text-lg leading-snug">
-              Ready to Simplify Your Taxes and Strengthen Compliance?
+              {title}
             </p>
 
             {/* Description */}
             <p className="text-white/70 text-sm sm:text-base italic leading-relaxed max-w-md">
-              Let's build a tax strategy that protects your business and maximizes efficiency.
+              {des}
             </p>
 
             {/* Commitment card */}

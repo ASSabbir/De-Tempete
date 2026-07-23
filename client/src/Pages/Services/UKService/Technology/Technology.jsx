@@ -72,7 +72,7 @@ const Technology = () => {
           <div className="grid md:grid-cols-4 gap-6 mt-16">
             {softwareSolutions.map((item, i) => (
               <div key={i} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300">
-                <LuSparkles className="text-cyan-400 text-2xl mb-4" />
+                <LuSparkles className="text-light-blue text-2xl mb-4" />
                 <h3 className="text-lg font-bold text-[#14224A] mb-3">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
               </div>
@@ -114,7 +114,7 @@ const Technology = () => {
             <h2 className="text-4xl font-light text-white">
               Smarter Accounting & Business <span className="font-bold">Benefits</span>
             </h2>
-            <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-6"></div>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-6"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-16">
@@ -134,13 +134,13 @@ const Technology = () => {
             <h2 className="text-4xl font-light text-[#16244b]">
               Why Choose Our <span className="font-bold">Technology Services?</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-4 gap-6 mt-16">
             {whyChoose.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-4" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-4" />
                 <h3 className="font-bold text-[#16244b] mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
               </div>

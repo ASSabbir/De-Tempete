@@ -160,7 +160,7 @@ const Technology_UAE = () => {
                 "Migration from legacy systems (Tally, QuickBooks, Zoho to Excel)",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -203,7 +203,7 @@ const Technology_UAE = () => {
                 "Training and post-go-live support for your finance team",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -290,7 +290,7 @@ const Technology_UAE = () => {
               Why Choose Our{" "}
               <span className="font-bold">Technolgy Services</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -299,7 +299,7 @@ const Technology_UAE = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-3" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>

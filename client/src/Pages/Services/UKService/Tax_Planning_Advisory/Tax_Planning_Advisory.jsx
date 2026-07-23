@@ -218,7 +218,7 @@ const Tax_Planning_Advisory = () => {
                 Tax Planning & Advisory Services
               </span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6 mt-20">
@@ -227,7 +227,7 @@ const Tax_Planning_Advisory = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartColumnBig className="text-cyan-400 text-3xl mx-auto mb-4" />
+                <LuChartColumnBig className="text-light-blue text-3xl mx-auto mb-4" />
                 <p className="text-gray-700 font-semibold">{item}</p>
               </div>
             ))}

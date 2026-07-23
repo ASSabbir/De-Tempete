@@ -32,7 +32,7 @@ const Why_Business = () => {
         {/* Right Cards */}
         <div className="grid grid-cols-2 gap-5">
 
-          <div className="bg-cyan-400 rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Large workforce with
               <br />
@@ -40,7 +40,7 @@ const Why_Business = () => {
             </h3>
           </div>
 
-          <div className="bg-white rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Strong growth in
               <br />
@@ -56,7 +56,7 @@ const Why_Business = () => {
             </h3>
           </div>
 
-          <div className="bg-cyan-400 rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Cost-effective operating base
               <br />

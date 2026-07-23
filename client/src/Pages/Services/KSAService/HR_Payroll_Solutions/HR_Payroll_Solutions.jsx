@@ -150,7 +150,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {payrollPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -191,7 +191,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {qiwaPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -221,7 +221,7 @@ const HR_Payroll_Solutions = () => {
             <div className="space-y-3 mt-6">
               {empDocPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -237,7 +237,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-24 bg-[#16244B]">
         <div className="max-w-[1600px] mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white">What You Gain?</h2>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6 mb-14" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6 mb-14" />
           <div className="grid lg:grid-cols-3 gap-6">
             {gains.map((g, i) => (
               <div
@@ -258,7 +258,7 @@ const HR_Payroll_Solutions = () => {
               Why Choose <span className="font-normal italic">de tempête</span>{" "}
               for HR & Payroll Solutions?
             </h2>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (

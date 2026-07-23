@@ -140,7 +140,7 @@ const Investment = () => {
               Due Diligence & Post-{" "}
               <span className="font-bold">Investment Monitoring</span>
             </h2>
-            <p className="mt-4 text-cyan-500 font-semibold">
+            <p className="mt-4 text-light-blue font-semibold">
               Mitigate Risks and Maximize Returns
             </p>
             <p className="mt-4 text-gray-500 leading-7">
@@ -247,7 +247,7 @@ const Investment = () => {
               Why Choose Our{" "}
               <span className="font-bold">Investment Advisory</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
@@ -256,7 +256,7 @@ const Investment = () => {
                 key={index}
                 className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl shrink-0" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}

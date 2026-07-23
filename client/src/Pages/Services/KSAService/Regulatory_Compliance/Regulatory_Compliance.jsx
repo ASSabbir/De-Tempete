@@ -150,7 +150,7 @@ const Regulatory_Compliance = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-4">
             What We Handle For You
           </h2>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mb-12" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mb-12" />
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
             {handleTags.map((t, i) => (
               <div
@@ -185,7 +185,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {regComplianceItems.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -227,7 +227,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {isoPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -261,7 +261,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {industryCovers.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -323,7 +323,7 @@ const Regulatory_Compliance = () => {
             <div className="grid grid-cols-2 gap-3 mt-6">
               {platformSupport.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600 text-sm">{p}</span>
                 </div>
               ))}
@@ -345,7 +345,7 @@ const Regulatory_Compliance = () => {
               Why Businesses <span className="font-normal">Choose</span>{" "}
               <span className="italic font-light">de tempête</span>
             </h2>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {whyChoose.map((f, i) => (
@@ -353,8 +353,8 @@ const Regulatory_Compliance = () => {
                 key={i}
                 className="bg-white border border-gray-200 rounded-2xl p-8 flex gap-4"
               >
-                <div className="w-10 h-10 bg-cyan-400/20 rounded-lg flex items-center justify-center shrink-0">
-                  <FaCheckCircle className="text-cyan-400" />
+                <div className="w-10 h-10 bg-light-blue/20 rounded-lg flex items-center justify-center shrink-0">
+                  <FaCheckCircle className="text-light-blue" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">

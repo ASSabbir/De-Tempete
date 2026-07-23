@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+import img1 from '../../../asstes/img_temp/UAE-Brochure-1024x687.webp'
 const BusinessSetupBook = () => {
   return (
     <section className="bg-[#ffffff] py-24">
@@ -7,7 +9,7 @@ const BusinessSetupBook = () => {
           {/* Left Side - Book Image */}
           <div className="flex justify-center">
             <img
-              src="/src/asstes/img_temp/UAE-Brochure-1024x687.webp"
+              src={img1}
               alt="Business Setup Guide"
               className="w-full max-w-[550px] object-contain"
             />
@@ -45,9 +47,10 @@ const BusinessSetupBook = () => {
             </div>
 
             {/* Download Button */}
+            <Link to={'https://drive.google.com/file/d/1wR0hbrioeHwYQyXwiRgRSygNQ32cIJd0/view'}>
             <button className="mt-12 bg-[#081B57] text-white px-10 py-5 rounded-xl text-lg font-medium hover:bg-[#10297c] transition duration-300 shadow-lg">
               Download Now
-            </button>
+            </button></Link>
           </div>
 
         </div>

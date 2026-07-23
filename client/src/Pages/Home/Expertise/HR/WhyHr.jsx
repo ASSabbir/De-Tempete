@@ -18,8 +18,8 @@ const WhyHr = () => {
                       <p>
                          Managing employees is more than just salaries, it requires structured processes, compliance, and accuracy. Poor HR and payroll management can lead to legal risks, employee dissatisfaction, and operational inefficiencies. 
                       </p>
-                      <p className='font-bold'>
-                       With de tempête, you get:
+                      <p className=''>
+                       With <span className='italic font-black'>de tempête</span>, you get:
                       </p>
                       <p>
                         <ul className='list-disc list-inside'>

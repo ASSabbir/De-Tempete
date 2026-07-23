@@ -18,6 +18,17 @@ const TaxAdvisory = () => {
         "Scale your business with growth-focused financial strategies",
     ];
     const keyBenefittext = ['Key Benefits', 'Of Professional Tax Advisor']
+    const commitments = [
+  "Free initial tax advisory consultation — no obligation",
+  "100% confidential handling of your financial and tax information",
+  "Proactive tax planning to minimize liabilities and maximize savings",
+  "Expert guidance tailored to your business and personal tax needs",
+];
+
+const title = "Ready to Optimize Your Tax Strategy?";
+
+const des =
+  "From strategic tax planning to ongoing compliance, we help you reduce tax risks, maximize efficiency, and make informed financial decisions with confidence.";
     return (
         <div>
             <VirtualBanner img={img} text={text}></VirtualBanner>
@@ -25,7 +36,7 @@ const TaxAdvisory = () => {
             <HireTaxRegion></HireTaxRegion>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <TaxFAQ></TaxFAQ>
-            <GetStarted></GetStarted>
+            <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
             <Awards></Awards>
 
         </div>

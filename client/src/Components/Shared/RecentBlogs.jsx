@@ -16,9 +16,9 @@ export const RecentBlogs = ({ blogs }) => (
               <img src={blog.image} alt={blog.title} className="w-full h-64 object-cover group-hover:scale-105 duration-500" />
             </div>
             <div className="p-7">
-              <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-cyan-500 transition">{blog.title}</h3>
+              <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-light-blue transition">{blog.title}</h3>
               <p className="text-gray-500 text-lg leading-8 mb-8">{blog.desc}</p>
-               <a href={`/blog/${blog.slug}`} className="inline-flex items-center gap-2 text-cyan-500 font-semibold hover:gap-4 duration-300">
+               <a href={`/blog/${blog.slug}`} className="inline-flex items-center gap-2 text-light-blue font-semibold hover:gap-4 duration-300">
                 Read More <FaArrowRight />
               </a>
             </div>
