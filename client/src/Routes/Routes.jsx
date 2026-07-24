@@ -94,8 +94,8 @@ import HRPayrollUSA from "../Pages/Services/USAService/All/HRPayrollUSA";
 import TechnologyUSA from "../Pages/Services/USAService/All/TechnologyUSA";
 import BlogList from "../Pages/Blogs/BlogList";
 import BlogSingle from "../Pages/Blogs/BlogSingle";
-import PrivacyPolicy from "../../../admin/src/pages/PrivacyPolicy";
-import TermsConditions from "../../../admin/src/pages/TermsConditions";
+import PrivacyPolicy from "../Components/Shared/PrivacyPolicy";
+import TermsConditions from "../Components/Shared/TermsConditions";
 
 
 const Routes = createBrowserRouter([ 
