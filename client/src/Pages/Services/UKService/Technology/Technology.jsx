@@ -4,7 +4,10 @@ import { LuSparkles, LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.webp'
+import img2 from '../../../../asstes/img_temp/logo.webp'
 
 
 const softwareSolutions = [
@@ -43,18 +46,13 @@ const Technology = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Technology"
         heading={<>Making Tax Digital & Cloud<br /><span className="text-light-blue">Accounting For UK Businesses</span></>}
         description="At de tempête, we help UK businesses manage accounting, VAT submissions, and digital bookkeeping through HMRC-compliant cloud accounting systems designed for modern business operations."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 9, label: "Years of Experience" },
-        { icon: Globe, end: 20, label: "Countries Covered" },
-        { icon: Handshake, end: 30000, duration: 3000, label: "Clients Served" },
-        { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-      ]} />
+      <SecondSection></SecondSection>
 
       {/* Software Solutions */}
       <section className="py-24 bg-[#F5F6F8]">
@@ -71,10 +69,12 @@ const Technology = () => {
 
           <div className="grid md:grid-cols-4 gap-6 mt-16">
             {softwareSolutions.map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300">
-                <LuSparkles className="text-light-blue text-2xl mb-4" />
-                <h3 className="text-lg font-bold text-[#14224A] mb-3">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+              <div key={i} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 flex flex-col items-center">
+                <div>
+                  <img src={img2} alt="" />
+                </div>
+                <h3 className="text-lg font-bold text-[#14224A] mb-3 mt-2">{item.title}</h3>
+                <p className="text-gray-500 text-sm leading-6 text-center">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -100,7 +100,7 @@ const Technology = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/UK/Business-Process-Automation.webp"
+            src={img1}
             alt="Business Process Automation"
             className="w-full h-full object-cover rounded-2xl "
           />
@@ -160,7 +160,7 @@ const Technology = () => {
       />
 
       {/* Technological Partner */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 text-center">
           <h2 className="text-4xl font-light text-[#16244b] mb-16">
             Technological <span className="font-bold">Partner</span>
@@ -171,7 +171,7 @@ const Technology = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -85,25 +85,23 @@ const processSteps = [
     desc: "Smooth rollout backed by ongoing managed support.",
   },
 ];
-
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp';
+import img1 from '../../../../asstes/img_temp/servics/Zoho.jpg';
+import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp';
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 
 const Technology_UAE = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="UAE E-Invoicing Solutions"
         heading={<>UAE E-Invoicing Solutions With<br /><span className="text-light-blue">Zoho & Odoo</span></>}
         description="Stay compliant with upcoming UAE e-invoicing regulations with de tempête's certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses."
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 0, label: "Years of Experience" },
-        { icon: Globe, end: 0, label: "Countries Covered" },
-        { icon: Handshake, end: 935, duration: 2500, label: "Clients Served" },
-        { icon: Medal, end: 3, label: "Awards Received" },
-      ]} />
+      <SecondSection></SecondSection>
 
       {/* What Is E-Invoicing */}
       <section className="py-20 bg-white">
@@ -132,7 +130,7 @@ const Technology_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/Zoho.jpg"
+            src={img1}
             alt="Zoho E-Invoicing Solutions In UAE"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -218,7 +216,7 @@ const Technology_UAE = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp"
+            src={img2}
             alt="Odoo E-Invoicing Solutions In UAE"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -241,7 +239,7 @@ const Technology_UAE = () => {
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
             {processSteps.map((item, index) => (
               <div key={index}>
-                <LuSparkles className="text-3xl text-slate-500 mb-4" />
+                
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -253,7 +251,7 @@ const Technology_UAE = () => {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-light text-[#16244b]">
@@ -265,22 +263,18 @@ const Technology_UAE = () => {
             {industries.map((item, index) => (
               <div
                 key={index}
-                className="relative h-40 rounded-2xl overflow-hidden group"
+                className="relative h-40 bg- rounded-2xl overflow-hidden group"
               >
-                <img
-                  src="/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp"
-                  className="w-full h-full object-cover group-hover:scale-105 duration-500"
-                  alt={item}
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
-                <h3 className="absolute bottom-4 left-4 text-white font-bold text-sm">
+                
+                
+                <h3 className=" bottom-4 left-4  font-bold text-sm">
                   {item}
                 </h3>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
@@ -318,7 +312,7 @@ const Technology_UAE = () => {
 
       {/* Technological Partner */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className=" mx-auto px-6">
+        <div className=" max-w-7xl mx-auto px-6">
           <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>

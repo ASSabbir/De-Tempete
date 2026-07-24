@@ -22,6 +22,10 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
+import lgo from '../../../../asstes/img_temp/logo.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const industries = [
   {
@@ -170,7 +174,7 @@ const Industry_Specific_Accounting_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Industry-Specific Accounting Solutions"
         heading={
           <>
@@ -182,19 +186,7 @@ const Industry_Specific_Accounting_Solutions = () => {
         description="Different industries require different financial strategies. Generic accounting does not address industry regulations, margins, tax structures, or compliance complexities. We deliver tailored accounting solutions built specifically for your sector."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 910,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Why Industry Expertise Matters */}
       <section className="py-20 bg-white">
@@ -236,7 +228,7 @@ const Industry_Specific_Accounting_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/UK/Whether-expanding-into.webp"
+            src={img1}
             alt="Why Industry Expertise Matters"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -257,7 +249,7 @@ const Industry_Specific_Accounting_Solutions = () => {
               const Icon = item.icon;
               return (
                 <div key={index}>
-                  <Icon className="text-4xl text-slate-500 mb-5" />
+                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full  mb-5" />
                   <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>
@@ -301,8 +293,8 @@ const Industry_Specific_Accounting_Solutions = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                      <img src={lgo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}
@@ -403,7 +395,7 @@ const Industry_Specific_Accounting_Solutions = () => {
         highlightText="Your business deserves financial expertise designed for your sector — not generic solutions."
       />
 
-      <RecentBlogs blogs={blogs} />
+      {/* <RecentBlogs blogs={blogs} /> */}
     </div>
   );
 };

@@ -11,7 +11,7 @@ const SharedButton = ({ text,path }) => {
             padding: 10px 20px;
             border-radius: 7px;
             border: 1px solid #4AC4DE;
-            font-size: 14px;
+            
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 2px;
@@ -68,7 +68,7 @@ const SharedButton = ({ text,path }) => {
 
       <div>
         <a href={path || '/'}>
-          <button className="shared-btn ">
+          <button className="shared-btn text-lg">
             {text || "Contact Us"}
           </button>
         </a>

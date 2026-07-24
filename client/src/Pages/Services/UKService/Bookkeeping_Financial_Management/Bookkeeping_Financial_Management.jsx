@@ -15,12 +15,16 @@ const whyChoose = [
   { title: "Streamlined accounts payable & receivable" },
   { title: "Scalable solutions for SMEs and large enterprises" },
 ];
+import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img2 from '../../../../asstes/img_temp/New folder/Bookkeeping-for-Nonprofits.webp'
+import img3 from '../../../../asstes/img_temp/New folder/Reconcile Accounts.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const Bookkeeping_Financial_Management = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={img1}
         alt="Bookkeeping & Financial Management"
         heading={
           <>
@@ -32,25 +36,13 @@ const Bookkeeping_Financial_Management = () => {
         description="Efficient bookkeeping and financial management are the backbone of every successful business. Whether you're a growing SME or an established company, our services ensure accurate records, clear insights, and data-driven decisions, so you can focus on growth, not paperwork."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+     <SecondSection></SecondSection>
 
       {/* Accurate & Timely Bookkeeping */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/New folder/Bookkeeping-for-Nonprofits.webp"
+            src={img2}
             alt="Accurate & Timely Bookkeeping"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -122,7 +114,7 @@ const Bookkeeping_Financial_Management = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/New folder/Reconcile Accounts.webp"
+            src={img3}
             alt="Reconcile Accounts"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -195,11 +187,11 @@ const Bookkeeping_Financial_Management = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-5xl  leading-tight text-white font-light">
               Accounts Payable &{" "}
               <span className="font-bold">Receivable Management</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
               <span className="font-semibold text-white">
                 Stay on top of who owes you and who you owe.
               </span>{" "}
@@ -238,7 +230,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our{" "}
               <span className="font-bold">
                 Bookkeeping & Financial Management Services
@@ -273,7 +265,7 @@ const Bookkeeping_Financial_Management = () => {
         highlightText="Talk to Our Financial Experts"
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      
     </div>
   );
 };

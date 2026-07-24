@@ -5,7 +5,11 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 
-
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp'
+import img2 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
+import img3 from '../../../../asstes/img_temp/servics/1775737113368.jpg'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const whyChoose = [
   {
     title: "UAE-Focused Expertise",
@@ -35,24 +39,19 @@ const Taxation_UAE = () => {
   return (
     <div className="w-full">
        <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Taxation UAE"
         heading={<>Simplify Your Business<br /><span className="text-light-blue">Taxes In The UAE</span></>}
         description="Expert Corporate Tax, VAT & Transfer Pricing Solutions for Seamless Compliance and Growth"
       />
 
-      <StatsSection stats={[
-        { icon: CalendarDays, end: 0, label: "Years of Experience" },
-        { icon: Globe, end: 0, label: "Countries Covered" },
-        { icon: Handshake, end: 1001, duration: 2500, label: "Clients Served" },
-        { icon: Medal, end: 4, label: "Awards Received" },
-      ]} />
+      <SecondSection></SecondSection>
 
       {/* Corporate Tax Advisory */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src={img1}
             alt="Corporate Tax Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -114,7 +113,7 @@ const Taxation_UAE = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp"
+            src={img2}
             alt="VAT Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -125,7 +124,7 @@ const Taxation_UAE = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/1775737113368.jpg"
+            src={img3}
             alt="Excise Tax Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -289,71 +288,7 @@ const Taxation_UAE = () => {
         </div>
       </section>
 
-      {/* Blogs */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
-              Recent <span className="font-bold">Blogs</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            {[
-              {
-                id: 1,
-                image: "/src/asstes/img_temp/New folder/council-tax.webp",
-                title:
-                  "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-                desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-              },
-              {
-                id: 2,
-                image:
-                  "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-                title:
-                  "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-                desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-              },
-              {
-                id: 3,
-                image:
-                  "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-                title:
-                  "The Role and Benefits of a Virtual CFO in Modern Businesses",
-                desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-              },
-            ].map((blog) => (
-              <div
-                key={blog.id}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 duration-500"
-                  />
-                </div>
-                <div className="p-7">
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-light-blue transition">
-                    {blog.title}
-                  </h3>
-                  <p className="text-gray-500 text-lg leading-8 mb-8">
-                    {blog.desc}
-                  </p>
-                  <a
-                    href={`/blog/${blog.id}`}
-                    className="inline-flex items-center gap-2 text-light-blue font-semibold hover:gap-4 duration-300"
-                  >
-                    Read More <FaArrowRight />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

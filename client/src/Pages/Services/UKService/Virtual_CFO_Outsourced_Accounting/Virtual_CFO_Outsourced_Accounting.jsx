@@ -20,6 +20,10 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const cfoServices = [
   {
@@ -125,7 +129,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Virtual CFO & Outsourced Accounting"
         heading={
           <>
@@ -139,19 +143,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
         description="Strategic financial leadership without the cost of a full-time CFO. Our Virtual CFO and Outsourced Accounting services provide UK businesses with expert financial oversight, reporting accuracy, cash flow control, and growth-focused decision support, all delivered remotely with complete transparency. Whether you're a startup, SME, or scaling enterprise, we become your financial backbone."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* What Is A Virtual CFO */}
       <section className="py-20 bg-white">
@@ -184,7 +176,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp"
+            src={img1}
             alt="What Is A Virtual CFO"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -247,8 +239,8 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                      <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}
@@ -347,7 +339,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
         bodyText="Gain strategic clarity, financial control, and expert insight, without the cost of a full-time CFO."
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      {/* <RecentBlogs blogs={blogPosts} /> */}
     </div>
   );
 };

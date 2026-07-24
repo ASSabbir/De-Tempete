@@ -7,7 +7,9 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
 
@@ -85,7 +87,7 @@ const Hr_Payroll = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -107,19 +109,7 @@ const Hr_Payroll = () => {
         }
       />
 
-      <StatsSection
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* What We Offer Section */}
       <section className="py-24 bg-[#f8fbff]">
@@ -147,9 +137,9 @@ const Hr_Payroll = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
+                  className="bg-white flex flex-col items-center text-center  rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
                 >
-                  <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-xl  bg-[#e0f4ff] flex items-center justify-center mb-6">
                     <Icon className="text-light-blue text-4xl" />
                   </div>
 
@@ -239,8 +229,8 @@ const Hr_Payroll = () => {
                 key={index}
                 className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
-                  <FaCheckCircle className="text-white text-xl" />
+                <div className="w-12 h-12 rounded-lg  flex items-center justify-center mb-6">
+                  <img src={logo} alt="" />
                 </div>
 
                 <h3 className="text-xl font-bold text-[#16244b] mb-3">
@@ -264,30 +254,7 @@ const Hr_Payroll = () => {
         subheading="Let us handle your HR and payroll complexities so you can focus on growth. Contact us for customised HR solutions tailored to your Bangladesh operations."
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

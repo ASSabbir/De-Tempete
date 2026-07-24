@@ -14,12 +14,18 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import img1 from '../../../../asstes/img_temp/servics/UK/company-formation.webp'
+import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
+import img3 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
+import img4 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
+import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 
 const businessData = [
   {
     title: "Company Formation",
     image:
-      "/src/asstes/img_temp/servics/UK/company-formation.webp",
+      img1,
     items: [
       "UK Limited Company setup support",
       "Companies House registration guidance",
@@ -33,7 +39,7 @@ const businessData = [
   {
     title: "HMRC Registrations",
     image:
-      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      img2,
     items: [
       "Corporation Tax registration guidance",
       "VAT registration preparation",
@@ -47,7 +53,7 @@ const businessData = [
   {
     title: "International Business Structuring",
     image:
-      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
+      img3,
     items: [
       "Non-resident founder guidance",
       "Shareholder structuring support",
@@ -71,6 +77,8 @@ import {
   LuMegaphone,
   LuHandCoins,
 } from "react-icons/lu";
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 
 const Market_Expansion = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -110,7 +118,7 @@ const Market_Expansion = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Bangladesh Business Setup"
         minHeight="h-screen"
         overlay="bg-[#0E1937]/80"
@@ -126,19 +134,7 @@ const Market_Expansion = () => {
         description="The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. de tempête supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+     <SecondSection></SecondSection>
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -223,15 +219,12 @@ const Market_Expansion = () => {
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
-              Explore Complete Business Setup Service Guide
-              <FaArrowRight />
-            </button>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/contact'}></SharedFullButton>
           </div>
         </div>
       </section>
@@ -239,10 +232,10 @@ const Market_Expansion = () => {
       {/* ================= Go-To-Market Strategy ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
+        <div className="max-w-[1300px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
+            <h2 className="text-2xl md:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
@@ -250,7 +243,7 @@ const Market_Expansion = () => {
               </span>
             </h2>
 
-            <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
               Businesses entering the UK market must align operations, pricing,
               and business structures with local regulations and market
               expectations. de tempête supports businesses with UK market entry,
@@ -261,7 +254,7 @@ const Market_Expansion = () => {
 
           {/* Features */}
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
+          <div className="grid lg:grid-cols-3  mt-24">
             {[
               {
                 icon: LuBadgeDollarSign,
@@ -305,13 +298,13 @@ const Market_Expansion = () => {
                       : "hover:-translate-y-1 hover:shadow-lg"
                   }`}
                 >
-                  <Icon className="text-5xl text-slate-500 mb-6" />
+                  <Icon className="text-3xl text-white bg-light-blue p-1 rounded-full mb-6" />
 
-                  <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
+                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-xl leading-9">{item.desc}</p>
+                  <p className="text-gray-500 text-lg l">{item.desc}</p>
                 </div>
               );
             })}
@@ -329,7 +322,7 @@ const Market_Expansion = () => {
             <p className="text-gray-600 text-lg font-semibold">
               Registration Advisory
             </p>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-4xl mx-auto text-lg">
               Businesses operating in the UK must maintain proper registrations
               and compliance readiness to reduce administrative delays and
               operational risks. de tempête supports businesses with
@@ -385,7 +378,7 @@ const Market_Expansion = () => {
 
             <div className="h-full">
               <img
-                src="/src/asstes/img_temp/servics/Dubai-bank.webp"
+                src={img4}
                 alt="Bank Account Opening"
                 className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
@@ -470,7 +463,7 @@ const Market_Expansion = () => {
 
             <div className="h-full">
               <img
-                src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                src={img5}
                 alt="Trademark Registration"
                 className="w-full h-full object-cover rounded-3xl shadow-lg"
               />
@@ -488,12 +481,12 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-5xl  leading-tight text-white font-light">
               <span className="font-bold">Investor Visa</span> &
               <span className="font-bold"> UAE Residency</span> Support
             </h2>
 
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-lg text-slate-300 leading-7 max-w-4xl mx-auto">
               Secure your place in the UAE with seamless investor and residency
               visa assistance. de tempête manages all documentation and
               applications to ensure smooth visa processing for investors,
@@ -519,7 +512,7 @@ const Market_Expansion = () => {
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
 
-                <h3 className="mt-10 text-2xl font-medium text-white leading-relaxed">
+                <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -536,7 +529,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our
               <span className="font-bold"> UAE Market Expansion Advisory</span>
             </h2>
@@ -579,11 +572,11 @@ const Market_Expansion = () => {
                 {/* Content */}
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
+                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-lg leading-8">{item.desc}</p>
+                  <p className="text-gray-500 text-lg leading-7">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -608,30 +601,7 @@ const Market_Expansion = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

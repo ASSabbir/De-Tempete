@@ -25,6 +25,10 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -175,7 +179,7 @@ const Branding_Growth = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Branding & Growth"
         heading={
           <>
@@ -191,19 +195,7 @@ const Branding_Growth = () => {
         description="We help UAE businesses elevate their brand, expand strategically, and reach the right audience. From networking support to digital campaigns and content production, our end-to-end Branding & Growth solutions ensure your business thrives in a competitive market."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 943,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
       {/* Strategic Alliances */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
@@ -238,7 +230,7 @@ const Branding_Growth = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp"
+            src={img1}
             alt="Build Strong Strategic Alliances"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -260,7 +252,7 @@ const Branding_Growth = () => {
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
             {sectors.map((item, index) => (
               <div key={index}>
-                <item.icon className="text-light-blue mb-3" size={32} strokeWidth={1.5} />
+                <item.icon className="bg-light-blue text-white p-1 rounded-full mb-3" size={32} strokeWidth={1.5} />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -300,8 +292,8 @@ const Branding_Growth = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                      <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}
@@ -404,32 +396,7 @@ const Branding_Growth = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title:
-              "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-            desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title:
-              "The Role and Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-          },
-        ]}
-      />
+      
     </div>
   );
 };
