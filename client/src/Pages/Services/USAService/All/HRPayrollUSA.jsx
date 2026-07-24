@@ -117,7 +117,7 @@ const HRPayrollUSA = () => {
                 "Reduce errors and operational burden",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ const HRPayrollUSA = () => {
                 "Consistent, compliant payroll no matter where you hire",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -192,7 +192,7 @@ const HRPayrollUSA = () => {
                 "Avoid legal risks and compliance penalties",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -214,7 +214,7 @@ const HRPayrollUSA = () => {
               Why Choose Us For{" "}
               <span className="font-bold">HR & Payroll Solutions?</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -223,7 +223,7 @@ const HRPayrollUSA = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-3" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -234,7 +234,7 @@ const HRPayrollUSA = () => {
               <h3 className="text-xl font-bold text-white mb-4">
                 Get Started Now
               </h3>
-              <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold py-3 rounded-lg transition duration-300">
+              <button className="bg-light-blue hover:bg-light-blue text-black font-semibold py-3 rounded-lg transition duration-300">
                 Book a Consultation
               </button>
             </div>

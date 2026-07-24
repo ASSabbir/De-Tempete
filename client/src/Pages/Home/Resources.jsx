@@ -13,10 +13,10 @@ const cards = [
       "Read our latest business insights, reports, and expert articles.",
     image: pub1, // replace with: pub1
     links: [
-      { label: "UK", path: "/resources/publications/uk" },
-      { label: "UAE", path: "/resources/publications/uae" },
-      { label: "KSA", path: "/resources/publications/ksa" },
-      { label: "Bangladesh", path: "/resources/publications/bd" },
+      { label: "UK", path: "/publications/uk" },
+      { label: "UAE", path: "/publications/uae" },
+      { label: "KSA", path: "/publications/ksa" },
+      { label: "Bangladesh", path: "/publications/bangladesh" },
     ],
   },
   {
@@ -26,10 +26,10 @@ const cards = [
       "Access practical tools, guides, and templates to boost your business efficiency.",
     image: lib1, // replace with: lib1
     links: [
-      { label: "UK", path: "/resources/library/uk" },
-      { label: "UAE", path: "/resources/library/uae" },
-      { label: "KSA", path: "/resources/library/ksa" },
-      { label: "Bangladesh", path: "/resources/library/bd" },
+      { label: "UK", path: "/library/uk" },
+      { label: "UAE", path: "/library/uae" },
+      { label: "KSA", path: "/library/ksa" },
+      { label: "Bangladesh", path: "/library/bangladesh" },
     ],
   },
   {
@@ -39,10 +39,10 @@ const cards = [
       "Download essential compliance, registration, and finance forms instantly.",
     image: form1, // replace with: form1
     links: [
-      { label: "UK", path: "/resources/forms/uk" },
-      { label: "UAE", path: "/resources/forms/uae" },
-      { label: "KSA", path: "/resources/forms/ksa" },
-      { label: "Bangladesh", path: "/resources/forms/bd" },
+      { label: "UK", path: "/forms/uk" },
+      { label: "UAE", path: "/forms/uae" },
+      { label: "KSA", path: "/forms/ksa" },
+      { label: "Bangladesh", path: "/forms/bangladesh" },
     ],
   },
 ];
@@ -125,7 +125,7 @@ export default function Resources() {
                         <Link
                           key={link.path}
                           to={link.path}
-                          className="flex items-center gap-2 text-[#1a9fd4] group-hover:text-white text-sm font-semibold transition-colors duration-300 hover:gap-3 w-fit"
+                          className="flex items-center gap-2 text-[#1a9fd4] group-hover:text-white hover:text-light-blue text-sm font-semibold transition-colors duration-300 hover:gap-3 w-fit"
                         >
                           <ArrowIcon />
                           {link.label}

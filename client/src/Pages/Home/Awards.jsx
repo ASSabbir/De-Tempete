@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../asstes/img_temp/logo1.webp'
+import img1 from '../../asstes/img_temp/logo2.webp'
 import img2 from '../../asstes/img_temp/New folder/WhatsApp_Image_2024-11-23_at_15.20.44_9f7b10af-removebg-preview-1-e1736053189510-300x205-1.webp'
 import img3 from '../../asstes/img_temp/New folder/Acc-1.webp';
 import img4 from '../../asstes/img_temp/New folder/HM-Revenue.webp';

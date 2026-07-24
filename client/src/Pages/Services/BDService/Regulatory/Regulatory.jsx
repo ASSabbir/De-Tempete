@@ -301,7 +301,7 @@ Matters Section */}
                   {/* Icon */}
 
                   <div className="absolute bottom-6 left-6">
-                    <div className="w-16 h-16 rounded-xl bg-cyan-400 flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
                       <FaBuilding className="text-white text-3xl" />
                     </div>
                   </div>
@@ -322,7 +322,7 @@ Matters Section */}
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-xl mt-1 shrink-0" />
 
                         <span>{text}</span>
                       </li>
@@ -342,7 +342,7 @@ Matters Section */}
               requirements.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Legal & Regulatory Updates
               <FaArrowRight />
             </button>

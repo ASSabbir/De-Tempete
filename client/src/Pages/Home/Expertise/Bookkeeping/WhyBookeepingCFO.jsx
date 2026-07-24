@@ -18,8 +18,8 @@ const WhyBookeepingCFO = () => {
             <p>
               Managing finances manually or irregularly can lead to costly errors, compliance issues, and missed growth insights. Professional bookkeeping ensures accuracy, transparency, and data you can trust.
             </p>
-            <p className='font-bold text-dark-blue text-xl'>
-              With de tempête’s experts, you get:
+            <p className='font- text-dark-blue text-xl'>
+              With <span className='italic font-bold'>de tempête’s</span> experts, you get:
             </p>
             <div className='space-y-1'>
               <div className='flex items-center  gap-2'>

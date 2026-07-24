@@ -73,8 +73,10 @@ const Types_of_Company = () => {
           <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
             Saudi Arabia offers multiple company structures to suit different
             investment goals and ownership models. Each entity type is regulated
-            under the Saudi Companies Law and approved through the Ministry of
+            under the <span className="font-bold">Saudi Companies Law</span> and approved through the <span className="font-bold">
+              Ministry of
             Investment (MISA).
+            </span>
           </p>
         </div>
 
@@ -132,7 +134,7 @@ const Types_of_Company = () => {
               </div>
 
               {/* Button */}
-              <div className="mt-8 lg:absolute lg:bottom-8 lg:right-8">
+              <div className="mt-8 flex justify-end">
                 <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300 hover:bg-[#58CDE7] hover:text-white hover:scale-105">
                   Talk to an Expert
                 </button>

@@ -128,8 +128,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               onClick={() => updateField(field.id, opt)}
               className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
                 value === opt
-                  ? "bg-cyan-400 border-cyan-400 text-white"
-                  : "border-gray-200 text-gray-600 hover:border-cyan-300"
+                  ? "bg-light-blue border-light-blue text-white"
+                  : "border-gray-200 text-gray-600 hover:border-light-blue"
               }`}
             >
               {opt}
@@ -150,8 +150,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               onClick={() => toggleMulti(field.id, opt)}
               className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
                 current.includes(opt)
-                  ? "bg-cyan-400 border-cyan-400 text-white"
-                  : "border-gray-200 text-gray-600 hover:border-cyan-300"
+                  ? "bg-light-blue border-light-blue text-white"
+                  : "border-gray-200 text-gray-600 hover:border-light-blue"
               }`}
             >
               {opt}
@@ -168,7 +168,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
           min="0"
           value={value || ""}
           onChange={(e) => updateField(field.id, e.target.value)}
-          className="w-full max-w-xs px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none text-gray-700"
+          className="w-full max-w-xs px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none text-gray-700"
         />
       );
     }
@@ -180,7 +180,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
         value={value || ""}
         placeholder={field.placeholder || ""}
         onChange={(e) => updateField(field.id, e.target.value)}
-        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-400 focus:outline-none text-gray-700"
+        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none text-gray-700"
       />
     );
   };
@@ -217,13 +217,13 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                 <div key={label} className="flex-1 flex items-center">
                   <div
                     className={`w-3 h-3 rounded-full shrink-0 ${
-                      bucketForStep() >= i ? "bg-cyan-400" : "bg-gray-300"
+                      bucketForStep() >= i ? "bg-light-blue" : "bg-gray-300"
                     }`}
                   />
                   {i < progressBuckets.length - 1 && (
                     <div
                       className={`flex-1 h-0.5 mx-1 ${
-                        bucketForStep() > i ? "bg-cyan-400" : "bg-gray-300"
+                        bucketForStep() > i ? "bg-light-blue" : "bg-gray-300"
                       }`}
                     />
                   )}
@@ -255,8 +255,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                     onClick={() => setCountry(c.id)}
                     className={`text-left px-5 py-4 rounded-xl border-2 font-semibold transition-all duration-200 ${
                       country === c.id
-                        ? "border-cyan-400 bg-cyan-50 text-[#16244b]"
-                        : "border-gray-200 text-gray-600 hover:border-cyan-300"
+                        ? "border-light-blue bg-cyan-50 text-[#16244b]"
+                        : "border-gray-200 text-gray-600 hover:border-light-blue"
                     }`}
                   >
                     {c.label}
@@ -297,7 +297,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
           {result && (
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <CheckCircle2 className="text-cyan-400" size={32} />
+                <CheckCircle2 className="text-light-blue" size={32} />
                 <h3 className="text-2xl font-bold text-[#16244b]">
                   Your Estimated Setup Cost
                 </h3>
@@ -313,7 +313,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                   <p className="text-lg font-bold text-[#16244b]">{result.professionalFees}</p>
                 </div>
                 <div className="bg-[#16244B] rounded-xl p-5 text-center">
-                  <p className="text-xs text-cyan-300 font-semibold uppercase mb-2">Total Estimate</p>
+                  <p className="text-xs text-light-blue font-semibold uppercase mb-2">Total Estimate</p>
                   <p className="text-lg font-bold text-white">{result.totalEstimate}</p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                   <h4 className="font-semibold text-[#16244b] mb-3">Services Included</h4>
                   <div className="flex flex-wrap gap-2">
                     {result.servicesIncluded.map((s) => (
-                      <span key={s} className="px-3 py-1.5 bg-cyan-50 text-cyan-700 text-xs font-medium rounded-full">
+                      <span key={s} className="px-3 py-1.5 bg-cyan-50 text-light-blue text-xs font-medium rounded-full">
                         {s}
                       </span>
                     ))}
@@ -375,7 +375,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               type="button"
               onClick={handleNext}
               disabled={!canGoNext() || submitting}
-              className="flex items-center gap-2 bg-cyan-400 hover:bg-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="flex items-center gap-2 bg-light-blue hover:bg-light-blue disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               {submitting ? (
                 <>

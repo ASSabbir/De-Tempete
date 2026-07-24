@@ -143,7 +143,7 @@ export default function EstoniaBusinessServices({
               key={title}
               className="dt-service-card group  text-xl rounded-2xl p-7 bg-gray-100  transition-transform duration-500  hover:shadow-lg hover:shadow-slate-200/70"
             >
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-linear-to-br from-blue-400 to-cyan-400 transition-transform duration-300 group-hover:scale-105">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-linear-to-br from-blue-400 to-light-blue transition-transform duration-300 group-hover:scale-105">
                 <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2.5">{title}</h3>

@@ -76,7 +76,7 @@ const Taxation_UAE = () => {
                 "Tailored strategies for startups, SMEs, and corporates",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -107,7 +107,7 @@ const Taxation_UAE = () => {
                 "Risk reduction and compliance assurance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -149,7 +149,7 @@ const Taxation_UAE = () => {
                 "Reduce liabilities and avoid regulatory issues",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -173,7 +173,7 @@ const Taxation_UAE = () => {
               documentation, and cross-border advisory to optimize your global
               transactions.
             </p>
-            <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mt-16">
@@ -182,7 +182,7 @@ const Taxation_UAE = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-4xl" />
                 </div>
                 <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
@@ -202,7 +202,7 @@ const Taxation_UAE = () => {
               Why Choose Our{" "}
               <span className="font-bold">Taxation Services?</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
@@ -211,7 +211,7 @@ const Taxation_UAE = () => {
                 key={index}
                 className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl shrink-0" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
@@ -234,7 +234,7 @@ const Taxation_UAE = () => {
                 <br />
                 Taxes In The <span className="font-bold">UAE?</span>
               </h2>
-              <p className="mt-8 text-cyan-400 text-xl font-semibold leading-9 max-w-xl">
+              <p className="mt-8 text-light-blue text-xl font-semibold leading-9 max-w-xl">
                 Partner with de tempête and take control of your corporate, VAT,
                 excise, and cross-border tax obligations with confidence.
               </p>
@@ -253,7 +253,7 @@ const Taxation_UAE = () => {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
                   <div>
@@ -263,7 +263,7 @@ const Taxation_UAE = () => {
                     <input
                       type="email"
                       placeholder="Email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                     />
                   </div>
                   <div>
@@ -273,12 +273,12 @@ const Taxation_UAE = () => {
                     <textarea
                       rows={5}
                       placeholder="Write your message..."
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300"
+                    className="w-full bg-light-blue hover:bg-light-blue text-white font-semibold py-4 rounded-lg transition duration-300"
                   >
                     Send
                   </button>
@@ -336,7 +336,7 @@ const Taxation_UAE = () => {
                   />
                 </div>
                 <div className="p-7">
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-cyan-500 transition">
+                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-light-blue transition">
                     {blog.title}
                   </h3>
                   <p className="text-gray-500 text-lg leading-8 mb-8">
@@ -344,7 +344,7 @@ const Taxation_UAE = () => {
                   </p>
                   <a
                     href={`/blog/${blog.id}`}
-                    className="inline-flex items-center gap-2 text-cyan-500 font-semibold hover:gap-4 duration-300"
+                    className="inline-flex items-center gap-2 text-light-blue font-semibold hover:gap-4 duration-300"
                   >
                     Read More <FaArrowRight />
                   </a>

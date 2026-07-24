@@ -1,19 +1,16 @@
 import { Link } from "react-router";
 
-import img1 from "../../asstes/img_temp/New folder/2.webp";
-import img2 from "../../asstes/img_temp/New folder/3-2.webp";
-import img3 from "../../asstes/img_temp/New folder/4-1.webp";
-import img4 from "../../asstes/img_temp/New folder/5-1.webp";
-import img5 from "../../asstes/img_temp/New folder/6-1.webp";
-import img6 from "../../asstes/img_temp/New folder/7-2.webp";
-import img7 from "../../asstes/img_temp/New folder/8.webp";
-import img8 from "../../asstes/img_temp/New folder/9-1.webp";
-import img9 from "../../asstes/img_temp/New folder/10-2.webp";
-import img10 from "../../asstes/img_temp/New folder/11-1.webp";
-import img11 from "../../asstes/img_temp/New folder/12-1-934x1024.webp";
-import img12 from "../../asstes/img_temp/New folder/13-1.webp";
-import img13 from "../../asstes/img_temp/New folder/48.webp";
-import img14 from "../../asstes/img_temp/New folder/49.webp";
+import img1 from "../../asstes/img_temp/New folder/11-1.webp";
+import img2 from "../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import img3 from "../../asstes/img_temp/New folder/10-2.webp";
+import img4 from "../../asstes/img_temp/New folder/9-1.webp";
+import img5 from "../../asstes/img_temp/New folder/8.webp";
+import img6 from "../../asstes/img_temp/New folder/6-1.webp";
+import img7 from "../../asstes/img_temp/New folder/5-1.webp";
+import img8 from "../../asstes/img_temp/New folder/4-1.webp";
+import img9 from "../../asstes/img_temp/New folder/3-2.webp";
+import img10 from "../../asstes/img_temp/New folder/13-1.webp";
+
 
 const blogs = [
   {
@@ -48,11 +45,7 @@ const partners = [
   img7,
   img8,
   img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
+  img10
 ];
 
 // Double the array for seamless loop
@@ -63,8 +56,8 @@ export default function EventBlogPartners() {
     <section className="bg-white w-full py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Latest Event + Blogs ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-20">
-          {/* Latest Event */}
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-20">
+         
           <div>
             <h2 className="text-2xl sm:text-3xl text-[#0d1e4a] font-normal mb-5">
               Latest <span className="font-extrabold">Event</span>
@@ -75,9 +68,7 @@ export default function EventBlogPartners() {
               className="group relative block rounded-2xl overflow-hidden shadow-md"
               style={{ minHeight: "320px" }}
             >
-              {/* Replace this div with your actual event image:
-                  <img src={eventImg} alt="Why Dubai?" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              */}
+              
               <div
                 className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
                 style={{
@@ -97,7 +88,7 @@ export default function EventBlogPartners() {
             </Link>
           </div>
 
-          {/* Our Blogs */}
+          
           <div>
             <h2 className="text-2xl sm:text-3xl text-[#0d1e4a] font-normal mb-5">
               Our <span className="font-extrabold">Blogs</span>
@@ -110,7 +101,7 @@ export default function EventBlogPartners() {
                   to={blog.path}
                   className="group flex gap-4 items-start rounded-xl border border-gray-100 p-4 hover:border-[#1a9fd4]/30 hover:shadow-md transition-all duration-200"
                 >
-                  {/* Replace inner div with: <img src={blog.img} className="w-full h-full object-cover" /> */}
+                  
                   <div
                     className="shrink-0 rounded-lg overflow-hidden"
                     style={{ width: "88px", height: "72px" }}
@@ -143,7 +134,7 @@ export default function EventBlogPartners() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ── Technological Partner ── */}
         <div>

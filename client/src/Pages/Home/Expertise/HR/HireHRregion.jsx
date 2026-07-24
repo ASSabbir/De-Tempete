@@ -4,11 +4,13 @@ import uae from '../../../../asstes/img_temp/Contact/323301.webp'
 import ksa from '../../../../asstes/img_temp/Contact/5111777.webp'
 import bd from '../../../../asstes/img_temp/Contact/8362826.webp'
 import uk from '../../../../asstes/img_temp/Contact/197374.webp'
+import es from '../../../../asstes/img_temp/Contact/ee-circle-01.webp'
+import us from '../../../../asstes/img_temp/Contact/us.webp'
 import SharedButton from '../../../../Components/Shared/SharedFullButton';
 const regions = [
   {
     id: "uae",
-    tab: "UAE (United Arab Emirates)",
+    tab: "UAE ",
     flag: uae,
     shortName: "UAE",
     description:
@@ -41,8 +43,26 @@ const regions = [
     shortName: "UK",
     description:
       "Manage HR and payroll in the UK with systems aligned to HMRC and employment regulations. From payroll processing to compliance, we ensure accuracy, efficiency, and risk-free operations.",
-    path:'/'
+    path:'/services/uk/compliance#uk-payroll'
   },
+  {
+  id: "usa",
+  tab: "USA (United States)",
+  flag: us,
+  shortName: "USA",
+  description:
+    "Simplify HR and payroll management in the United States with solutions designed to meet federal and state employment regulations. We help businesses streamline payroll processing, employee administration, tax reporting, and compliance for efficient workforce management.",
+  path: "/services/usa/hr-payroll",
+},
+{
+  id: "estonia",
+  tab: "Estonia",
+  flag: es,
+  shortName: "Estonia",
+  description:
+    "Manage HR and payroll in Estonia with compliant, efficient solutions tailored to local employment laws and EU regulations. We support payroll processing, employee record management, statutory reporting, and workforce compliance to keep your business running smoothly.",
+  path: "/services/estonia/hr-payroll",
+},
 ];
 
 export default function HireHRregion() {

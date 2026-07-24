@@ -1,4 +1,4 @@
-import Marquee from "react-fast-marquee";
+import * as MarqueeModule from "react-fast-marquee";
 import img1 from '../../asstes/img_temp/about/up/1.png'
 import img2 from '../../asstes/img_temp/about/up/2.png'
 import img3 from '../../asstes/img_temp/about/up/3.jpg'
@@ -31,6 +31,12 @@ import img30 from '../../asstes/img_temp/about/up/30.jpg'
 import img31 from '../../asstes/img_temp/about/up/31.jpg'
 import img32 from '../../asstes/img_temp/about/up/32.png'
 import img33 from '../../asstes/img_temp/about/up/33.png'
+
+
+// Handles both default-export and named-export builds of react-fast-marquee
+// so it works no matter which version is installed / however Vite pre-bundles it.
+const MarqueeLib =
+  MarqueeModule.default || MarqueeModule.Marquee || MarqueeModule;
 
 const ALL_LOGOS = [
   img1, img2, img3, img4, img5, img6, img7, img8,
@@ -70,7 +76,7 @@ function LogoCard({ icon }) {
  */
 function MarqueeRow({ items, direction, speed = 40 }) {
   return (
-    <Marquee
+    <MarqueeLib
       direction={direction}
       speed={speed}
       autoFill
@@ -80,7 +86,7 @@ function MarqueeRow({ items, direction, speed = 40 }) {
       {items.map((icon, i) => (
         <LogoCard key={i} icon={icon} />
       ))}
-    </Marquee>
+    </MarqueeLib>
   );
 }
 

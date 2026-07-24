@@ -95,7 +95,7 @@ const AnnualRepoting = () => {
               Annual Reporting & Post-{" "}
               <span className="font-bold">Formation Compliance</span>
             </h2>
-            <p className="mt-4 text-cyan-500 font-semibold">
+            <p className="mt-4 text-light-blue font-semibold">
               Keep Your Estonian Business Fully Compliant
             </p>
             <p className="mt-4 text-gray-500 leading-7">

@@ -43,10 +43,10 @@ const ProcessStep = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         {/* Heading */}
-        <div className="max-w-3xl mb-24">
+        <div className="max-w-5xl mb-24">
           <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight mt-20">
             Step-By-Step Process For
-            <br />
+            
             Bangladesh <span className="font-bold">Company Registration</span>
           </h2>
 
@@ -84,7 +84,7 @@ const ProcessStep = () => {
               className={`absolute w-[250px] text-center ${positions[index]}`}
             >
               {/* Icon */}
-              <div className="w-20 h-20 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
+              <div className="w-20 h-20 hover:shadow-2xl hover:scale-105 duration-300 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
                 <img src={logo} alt="" className="w-10 h-10 object-contain" />
               </div>
 
@@ -105,12 +105,12 @@ const ProcessStep = () => {
             <div key={index} className="flex gap-5">
               {/* Left Line */}
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 rounded-full bg-white shadow border flex items-center justify-center">
+                <div className="w-16 h-16  rounded-full bg-white shadow border flex items-center justify-center">
                   <img src={logo} alt="" className="w-8 h-8 object-contain" />
                 </div>
 
                 {index !== steps.length - 1 && (
-                  <div className="w-[3px] h-24 bg-cyan-400 mt-2"></div>
+                  <div className="w-[3px] h-24 bg-light-blue mt-2"></div>
                 )}
               </div>
 

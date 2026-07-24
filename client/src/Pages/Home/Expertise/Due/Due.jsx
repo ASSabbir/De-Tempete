@@ -19,6 +19,17 @@ const Due = () => {
         "Build investor trust with transparent financial insights",
     ];
     const keyBenefittext=['Unlock the Right ','Investment Opportunities']
+    const commitments = [
+  "Free initial due diligence consultation — no obligation",
+  "100% confidential handling of all business and financial information",
+  "Comprehensive risk assessment across financial, legal, and operational areas",
+  "Clear, actionable insights to support confident business decisions",
+];
+
+const title = "Ready to Make Confident Business Decisions?";
+
+const des =
+  "Our due diligence experts provide thorough assessments to identify risks, validate opportunities, and give you the clarity needed for successful investments, acquisitions, and strategic partnerships.";
     return (
         <div>
             <VirtualBanner img={img} text={text}></VirtualBanner>
@@ -26,7 +37,7 @@ const Due = () => {
             <DueDiligenceServices></DueDiligenceServices>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <DueFaq></DueFaq>
-            <GetStarted></GetStarted>
+            <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
             <Awards></Awards>
         </div>
     );

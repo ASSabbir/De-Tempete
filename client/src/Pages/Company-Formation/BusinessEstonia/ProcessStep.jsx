@@ -42,15 +42,15 @@ const ProcessStep = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="max-w-3xl mb-24">
+        <div className="max-w-5xl mb-24">
           <h2 className="text-[#000000] text-4xl md:text-6xl font-light leading-tight">
             Step-By-Step Process For
             <br />
-            UAE <span className="font-bold">Company Registration</span>
+            Estonia <span className="font-bold">Company Registration</span>
           </h2>
 
           <p className="text-gray-600 mt-6 text-lg">
-            Setting up a business in the UAE involves a few streamlined steps
+            Setting up a business in the Estonia involves a few streamlined steps
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const ProcessStep = () => {
               className={`absolute w-[250px] text-center ${positions[index]}`}
             >
               {/* Icon */}
-              <div className="w-20 h-20 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
+              <div className="w-20 h-20 hover:shadow-2xl hover:scale-105 duration-200 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">
                 <img
                   src={logo}
                   alt=""
@@ -122,7 +122,7 @@ const ProcessStep = () => {
                 </div>
 
                 {index !== steps.length - 1 && (
-                  <div className="w-[3px] h-24 bg-cyan-400 mt-2"></div>
+                  <div className="w-[3px] h-24 bg-light-blue mt-2"></div>
                 )}
               </div>
 

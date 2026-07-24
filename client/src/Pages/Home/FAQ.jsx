@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 const faqs = [
   {
-    q: "01. How can I register a company in the UK, UAE, KSA, or Bangladesh?",
+    q: "01. How can I register a company in the UK, UAE, KSA, Estonia or Bangladesh?",
     a: "You can register a company by submitting the required documents (ID, proof of address, business plan), choosing your business type, and completing local compliance formalities. We guide you step-by-step to ensure the process is smooth and legally compliant.",
   },
   {
@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "03. How do you help with tax advisory and compliance?",
-    a: "We analyze your financials, identify tax-saving opportunities, prepare filings, and ensure your business complies with local regulations in the UK, UAE, KSA, or Bangladesh — so you minimize liabilities and avoid penalties.",
+    a: "We analyze your financials, identify tax-saving opportunities, prepare filings, and ensure your business complies with local regulations in the UK, UAE, KSA, Estonia or Bangladesh — so you minimize liabilities and avoid penalties.",
   },
   {
     q: "04. How can you prepare my business for investment?",
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "05. Do you handle HR and payroll across multiple countries?",
-    a: "Yes — multi-country HR and payroll require setting up local payroll systems, following labor laws, and automating salary and compliance processes. This ensures employees are paid accurately and legally in each region.",
+    a: "Yes, multi-country HR and payroll require setting up local payroll systems, following labor laws, and automating salary and compliance processes. This ensures employees are paid accurately and legally in each region.",
   },
   {
     q: "06. Are your services suitable for startups and established companies?",

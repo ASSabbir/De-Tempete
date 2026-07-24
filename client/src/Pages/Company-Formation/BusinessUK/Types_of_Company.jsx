@@ -136,7 +136,7 @@ const Types_of_Company = () => {
               </div>
 
               {/* Button */}
-              <div className="mt-8 lg:absolute lg:bottom-8 lg:right-8">
+              <div className="mt-8 flex justify-end">
                 <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300">
                   Talk to an Expert
                 </button>

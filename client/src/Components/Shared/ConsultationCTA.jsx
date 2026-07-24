@@ -18,16 +18,16 @@ export const ConsultationCTA = ({
             {heading}
           </h2>
            {subheading && (
-            <p className="mt-8 text-cyan-400 text-xl font-semibold leading-9 max-w-xl">{subheading}</p>
+            <p className="mt-8 text-light-blue text-xl font-semibold leading-9 max-w-xl">{subheading}</p>
           )}
           {bodyText && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
               <p className="text-gray-200 text-lg">{bodyText}</p>
-              {highlightText && <p className="mt-4 text-cyan-400 font-bold text-lg">{highlightText}</p>}
+              {highlightText && <p className="mt-4 text-light-blue font-bold text-lg">{highlightText}</p>}
             </div>
           )}
           {highlightText && !bodyText && (
-            <p className="mt-4 text-cyan-400 font-bold text-lg">{highlightText}</p>
+            <p className="mt-4 text-light-blue font-bold text-lg">{highlightText}</p>
           )}
            {(commitmentItems.length > 0 || commitmentTitleOnly) && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
@@ -36,7 +36,7 @@ export const ConsultationCTA = ({
               <div className="space-y-3">
                 {commitmentItems.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                     <span className="text-gray-200">{item}</span>
                   </div>
                ))}
@@ -59,7 +59,7 @@ export const ConsultationCTA = ({
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                 />
               </div>
               <div>
@@ -69,7 +69,7 @@ export const ConsultationCTA = ({
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
                 />
               </div>
               <div>
@@ -79,12 +79,12 @@ export const ConsultationCTA = ({
                 <textarea
                   rows={5}
                   placeholder="Write your message..."
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-cyan-400"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-4 rounded-lg transition duration-300"
+                className="w-full bg-light-blue hover:bg-light-blue text-white font-semibold py-4 rounded-lg transition duration-300"
               >
                 Send
               </button>

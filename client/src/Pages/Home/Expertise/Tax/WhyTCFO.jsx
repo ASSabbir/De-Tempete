@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp'
+import img1 from '../../../../asstes/img_temp/New folder/Management Accounts Preparation.webp'
 
 const WhyTCFO = () => {
     return (
@@ -18,8 +18,8 @@ const WhyTCFO = () => {
                       <p>
                          Tax laws are constantly evolving, and missteps can be costly. Whether you’re expanding globally, restructuring, or managing day-to-day compliance, expert tax advisory ensures your business stays compliant while maximizing efficiency.
                       </p>
-                      <p className='font-bold'>
-                        De Tempête’s tax advisors help you:
+                      <p className=''>
+                        <span className='italic font-bold'>de tempête’s</span> tax advisors help you:
                       </p>
                       <p>
                         <ul className='list-disc list-inside'>

@@ -237,7 +237,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6">
-                    <div className="w-14 h-14 rounded-xl bg-cyan-400 flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
                       <FaBuilding className="text-white text-2xl" />
                     </div>
                   </div>
@@ -252,7 +252,7 @@ const Market_Expansion_Setup_Advisory = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-lg mt-1 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
                         <span>{text}</span>
                       </li>
                     ))}
@@ -267,7 +267,7 @@ const Market_Expansion_Setup_Advisory = () => {
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -335,7 +335,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
                       ✦
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -386,7 +386,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   "End-to-end coordination until account activation",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -415,7 +415,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   "IP renewal and protection strategy",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -444,7 +444,7 @@ const Market_Expansion_Setup_Advisory = () => {
               applications for smooth visa processing for investors, employees,
               and dependents. Services include:
             </p>
-            <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-16">
@@ -453,7 +453,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartLine className="text-white text-4xl" />
                 </div>
                 <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
@@ -473,7 +473,7 @@ const Market_Expansion_Setup_Advisory = () => {
               Why Choose Our{" "}
               <span className="font-bold">UAE Market Expansion Advisory</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
@@ -483,7 +483,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                  <LuChartLine className="text-cyan-400 text-2xl" />
+                  <LuChartLine className="text-light-blue text-2xl" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">

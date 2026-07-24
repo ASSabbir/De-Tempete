@@ -202,7 +202,7 @@ const ERPDigitalTranformation = () => {
                                 "Digital Strategy & Change Management",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                                     <span className="text-gray-600">{item}</span>
                                 </div>
                             ))}
@@ -256,7 +256,7 @@ const ERPDigitalTranformation = () => {
                             Why Choose Our{" "}
                             <span className="font-bold">ERP & Digital Transformation Services?</span>
                         </h2>
-                        <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+                        <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -265,7 +265,7 @@ const ERPDigitalTranformation = () => {
                                 key={index}
                                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
-                                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-3" />
+                                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
                                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                                     {item.title}
                                 </h3>
@@ -325,7 +325,7 @@ const ERPDigitalTranformation = () => {
                                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
+                                        <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
                                             ✦
                                         </div>
                                         <span className="font-semibold text-gray-900">

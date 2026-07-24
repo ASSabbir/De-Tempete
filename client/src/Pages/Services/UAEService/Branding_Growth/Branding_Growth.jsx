@@ -231,7 +231,7 @@ const Branding_Growth = () => {
                 "Cross-Industry Collaboration",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -260,7 +260,7 @@ const Branding_Growth = () => {
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
             {sectors.map((item, index) => (
               <div key={index}>
-                <item.icon className="text-cyan-500 mb-3" size={32} strokeWidth={1.5} />
+                <item.icon className="text-light-blue mb-3" size={32} strokeWidth={1.5} />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -300,7 +300,7 @@ const Branding_Growth = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
                       ✦
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -337,7 +337,7 @@ const Branding_Growth = () => {
               market. We help you plan, execute, and deliver premium photoshoots
               and videos that represent your brand with style and clarity.
             </p>
-            <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -346,7 +346,7 @@ const Branding_Growth = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-12 h-12 bg-cyan-400 rounded-xl flex items-center justify-center mb-5">
+                <div className="w-12 h-12 bg-light-blue rounded-xl flex items-center justify-center mb-5">
                   <LuChartNoAxesCombined className="text-white text-2xl" />
                 </div>
                 <h3 className="text-lg font-medium text-white mb-2">
@@ -367,7 +367,7 @@ const Branding_Growth = () => {
               Why Choose Our{" "}
               <span className="font-bold">Branding & Growth Services?</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -376,7 +376,7 @@ const Branding_Growth = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-3" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>

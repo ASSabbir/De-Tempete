@@ -108,8 +108,8 @@ const Technology = () => {
           <div className="grid lg:grid-cols-3 gap-10">
             {cloudCards.map((c, i) => (
               <div key={i} className="text-center">
-                <div className="w-16 h-16 bg-cyan-100 rounded-xl flex items-center justify-center mx-auto mb-5">
-                  <LuChartNoAxesCombined className="text-cyan-500 text-2xl" />
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-5">
+                  <LuChartNoAxesCombined className="text-light-blue text-2xl" />
                 </div>
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {c.title}
@@ -138,7 +138,7 @@ const Technology = () => {
                 key={idx}
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white flex items-center px-5 py-4"
               >
-                <span className="w-8 h-8 bg-cyan-400 rounded-md flex items-center justify-center text-white mr-4">
+                <span className="w-8 h-8 bg-light-blue rounded-md flex items-center justify-center text-white mr-4">
                   ◆
                 </span>
                 <span className="text-[#16244b] font-semibold text-sm flex-1">
@@ -157,7 +157,7 @@ const Technology = () => {
               Why Choose Our{" "}
               <span className="font-normal">Technolgy Services</span>
             </h2>
-            <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {whyChoose.map((f, i) => (

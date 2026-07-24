@@ -155,7 +155,7 @@ export default function VirtualCFOServices() {
         {/* Heading */}
         <div className="mb-10 lg:mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-3">
-            OVirtual CFO <span className="font-extrabold">Services</span>
+            Virtual CFO <span className="font-extrabold">Services</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl">
             <span className="font-bold italic text-[#0d1e4a]">de tempête</span> provide comprehensive

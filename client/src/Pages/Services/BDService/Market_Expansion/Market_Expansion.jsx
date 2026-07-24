@@ -194,7 +194,7 @@ const Market_Expansion = () => {
                   {/* Icon */}
 
                   <div className="absolute bottom-6 left-6">
-                    <div className="w-16 h-16 rounded-xl bg-cyan-400 flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
                       <FaBuilding className="text-white text-3xl" />
                     </div>
                   </div>
@@ -215,7 +215,7 @@ const Market_Expansion = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-cyan-400 text-xl mt-1 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-xl mt-1 shrink-0" />
 
                         <span>{text}</span>
                       </li>
@@ -234,7 +234,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-cyan-400 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -421,7 +421,7 @@ const Market_Expansion = () => {
                   "Smooth & fast onboarding",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
+                    <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -462,7 +462,7 @@ const Market_Expansion = () => {
                   "Renewal & compliance support",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <FaCircleCheck className="text-cyan-400 text-2xl shrink-0" />
+                    <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
                     <span className="text-gray-600 text-lg">{item}</span>
                   </div>
@@ -503,7 +503,7 @@ const Market_Expansion = () => {
               compliance documentation.
             </p>
 
-            <div className="w-44 h-1 bg-cyan-400 rounded-full mx-auto mt-10"></div>
+            <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
 
           {/* Cards */}
@@ -519,7 +519,7 @@ const Market_Expansion = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
 
@@ -545,7 +545,7 @@ const Market_Expansion = () => {
               <span className="font-bold"> Expansion Advisory Service?</span>
             </h2>
 
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           {/* Cards */}
@@ -576,7 +576,7 @@ const Market_Expansion = () => {
                 {/* Icon */}
 
                 <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                  <LuChartNoAxesCombined className="text-cyan-400 text-3xl" />
+                  <LuChartNoAxesCombined className="text-light-blue text-3xl" />
                 </div>
 
                 {/* Content */}

@@ -204,7 +204,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 <div className="p-6 grid grid-cols-2 gap-3">
                   {c.points.map((p, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <FaCheckCircle className="text-cyan-400 mt-1 shrink-0" />
+                      <FaCheckCircle className="text-light-blue mt-1 shrink-0" />
                       <span className="text-gray-600 text-sm">{p}</span>
                     </div>
                   ))}
@@ -218,7 +218,7 @@ const Market_Expansion_Setup_Advisory = () => {
               structured, compliant, and efficient approach, from licensing to
               full operational readiness.
             </p>
-            <button className="bg-cyan-400 hover:bg-cyan-500 text-white font-semibold px-8 py-4 rounded-lg transition duration-300">
+            <button className="bg-light-blue hover:bg-light-blue text-white font-semibold px-8 py-4 rounded-lg transition duration-300">
               Explore Complete Business Setup Service Guide →
             </button>
           </div>
@@ -262,7 +262,7 @@ const Market_Expansion_Setup_Advisory = () => {
               >
                 <button className="w-full px-6 py-4 flex items-center justify-between text-left">
                   <span className="flex items-center gap-3 text-white font-semibold text-sm">
-                    <span className="text-cyan-400">◆</span>
+                    <span className="text-light-blue">◆</span>
                     {item.title}
                   </span>
                   <ChevronDown size={18} className="text-gray-300" />
@@ -302,7 +302,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "End-to-end account activation",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -338,7 +338,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "Brand protection within the Saudi market",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -381,7 +381,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 "Residency compliance & documentation",
               ].map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 shrink-0" />
+                  <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
               ))}
@@ -403,12 +403,12 @@ const Market_Expansion_Setup_Advisory = () => {
             applications to ensure smooth visa processing for investors,
             employees, and dependents.
           </p>
-          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-6" />
+          <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           <div className="grid lg:grid-cols-4 gap-6 mt-14">
             {investorVisaCards.map((c, i) => (
               <div key={i} className="bg-[#37456B] rounded-2xl py-10 px-6">
-                <div className="w-14 h-14 bg-cyan-400/20 rounded-xl flex items-center justify-center mx-auto mb-5">
-                  <c.icon className="text-cyan-400 text-2xl" />
+                <div className="w-14 h-14 bg-light-blue/20 rounded-xl flex items-center justify-center mx-auto mb-5">
+                  <c.icon className="text-light-blue text-2xl" />
                 </div>
                 <h3 className="text-white font-semibold">{c.title}</h3>
               </div>

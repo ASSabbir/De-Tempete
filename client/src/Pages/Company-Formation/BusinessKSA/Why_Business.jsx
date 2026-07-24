@@ -1,31 +1,31 @@
 const features = [
   {
-    title: "1- Strategic Location",
+    title: "1 Strategic Location",
     desc: "Connects Asia, Africa, and Europe with global access to 70% of the world’s population.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
-    title: "2- Vision 2030 Growth",
+    title: "2 Vision 2030 Growth",
     desc: "Diversifying into tourism, technology, logistics, renewable energy, and manufacturing.",
     bg: "bg-white",
   },
   {
-    title: "3- Advanced Infrastructure",
+    title: "3 Advanced Infrastructure",
     desc: "World-class ports, airports, and industrial cities supporting seamless trade.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
-    title: "4- Investor Reforms",
+    title: "4 Investor Reforms",
     desc: "100% foreign ownership and simplified digital setup via MISA.",
     bg: "bg-white",
   },
   {
-    title: "5- Tax Benefits & Incentives",
+    title: "5 Tax Benefits & Incentives",
     desc: "Low corporate taxes, no personal income tax, and special economic zone advantages.",
-    bg: "bg-[#57C9E3]",
+    bg: "bg-[#43ADCD]",
   },
   {
-    title: "6- Economic Stability",
+    title: "6 Economic Stability",
     desc: "Strong G20 economy, skilled workforce, and secure business environment.",
     bg: "bg-white",
   },
@@ -66,18 +66,18 @@ const Why_Business = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-24">
+        <div className="grid lg:grid-cols-3  rounded-4xl overflow-hidden md:grid-cols-2 gap-6 mt-24">
 
           {features.map((item, index) => (
             <div
               key={index}
               className={`${item.bg}
-              rounded-[0px_0px_25px_25px]
-              shadow-sm
+              
+              shadow-sm bg-
               min-h-[230px]
               px-5 py-4
               transition-all duration-300
-              hover:-translate-y-2`}
+              `}
             >
               <h3 className="text-[#081B57] text-3xl font-bold leading-snug">
                 {item.title}

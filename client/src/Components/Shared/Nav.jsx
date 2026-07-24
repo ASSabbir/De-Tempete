@@ -303,7 +303,7 @@ export default function Nav({ openCalculator }) {
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 px-2 py-2">
-                          <span className="block text-white text  text-center bg-linear-to-r from-light-blue to-cyan-800 backdrop-blur-sm rounded-lg py-3  px-2 leading-tight">
+                          <span className="block text-white text  text-center bg-linear-to-r from-light-blue to-light-blue backdrop-blur-sm rounded-lg py-3  px-2 leading-tight">
                             {item.label}
                           </span>
                         </div>
@@ -328,7 +328,7 @@ export default function Nav({ openCalculator }) {
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 px-2 py-2">
-                          <span className="block text-white text  text-center bg-linear-to-r from-light-blue to-cyan-800 backdrop-blur-sm rounded-lg py-3  px-2 leading-tight">
+                          <span className="block text-white text  text-center bg-linear-to-r from-light-blue to-light-blue backdrop-blur-sm rounded-lg py-3  px-2 leading-tight">
                             {item.label}
                           </span>
                         </div>

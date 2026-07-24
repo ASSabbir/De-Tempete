@@ -97,7 +97,7 @@ const Regulatory_Compliance = () => {
                 "Regulatory updates and proactive reminders",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -113,7 +113,7 @@ const Regulatory_Compliance = () => {
             <h2 className="text-4xl font-bold text-white">
               AML (Anti-Money Laundering) Advisory & Compliance
             </h2>
-            <p className="mt-4 text-cyan-400 font-semibold">
+            <p className="mt-4 text-light-blue font-semibold">
               Safeguard your business reputation through strong AML controls.
             </p>
             <p className="mt-4 text-slate-300 leading-7">
@@ -121,7 +121,7 @@ const Regulatory_Compliance = () => {
               businesses develop and maintain robust AML frameworks aligned with
               local and international laws.
             </p>
-            <div className="w-20 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-6 mt-16">
@@ -130,7 +130,7 @@ const Regulatory_Compliance = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-14 h-14 bg-cyan-400 rounded-xl flex items-center justify-center mx-auto">
+                <div className="w-14 h-14 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-3xl" />
                 </div>
                 <h3 className="mt-6 text-sm font-medium text-white leading-relaxed">
@@ -172,7 +172,7 @@ const Regulatory_Compliance = () => {
                 "Continuous improvement and post-certification support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -219,7 +219,7 @@ const Regulatory_Compliance = () => {
                 "Document handover and deregistration",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -236,7 +236,7 @@ const Regulatory_Compliance = () => {
               Why Businesses{" "}
               <span className="font-bold">Choose de tempête</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
@@ -245,7 +245,7 @@ const Regulatory_Compliance = () => {
                 key={index}
                 className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl shrink-0" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}

@@ -64,7 +64,7 @@ const HR_Payroll_Solutions = () => {
         description="Efficient, Compliant, And Hassle-Free Solutions For Payroll, Workforce Management, And Global Hiring."
         ctaText="Book a Consultation"
       />
-      {/* NOTE: original CTA button style differs (bg-cyan-400 solid, not outline). HeroSection uses outline style — verify visually, add ctaVariant prop if mismatch matters. */}
+      {/* NOTE: original CTA button style differs (bg-light-blue solid, not outline). HeroSection uses outline style — verify visually, add ctaVariant prop if mismatch matters. */}
 
       <StatsSection
         stats={[
@@ -125,7 +125,7 @@ const HR_Payroll_Solutions = () => {
                 "Reduce errors and operational burden",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -167,7 +167,7 @@ const HR_Payroll_Solutions = () => {
                 "Quick and compliant onboarding process",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -198,7 +198,7 @@ const HR_Payroll_Solutions = () => {
                 "Avoid legal risks and penalties",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-cyan-400 text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -220,7 +220,7 @@ const HR_Payroll_Solutions = () => {
               Why Choose Us For{" "}
               <span className="font-bold">HR & Payroll Solutions?</span>
             </h2>
-            <div className="w-28 h-1 bg-cyan-400 rounded-full mx-auto mt-8"></div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 mt-16">
@@ -229,7 +229,7 @@ const HR_Payroll_Solutions = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-cyan-400 text-2xl mb-3" />
+                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -240,7 +240,7 @@ const HR_Payroll_Solutions = () => {
               <h3 className="text-xl font-bold text-white mb-4">
                 Get Started Now
               </h3>
-              <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold py-3 rounded-lg transition duration-300">
+              <button className="bg-light-blue hover:bg-light-blue text-black font-semibold py-3 rounded-lg transition duration-300">
                 Book a Consultation
               </button>
             </div>

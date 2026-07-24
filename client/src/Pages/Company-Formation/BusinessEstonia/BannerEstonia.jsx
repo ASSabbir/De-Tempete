@@ -1,3 +1,4 @@
+import img1 from '../../../asstes/img_temp/Estonia.webp'
 import SharedButton from "../../../Components/Shared/SharedButton";
 
 const BannerEstonia = () => {
@@ -5,7 +6,7 @@ const BannerEstonia = () => {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-white overflow-hidden py-24 md:pt-32">
       {/* Background Image */}
       <img
-        src="/src/asstes/img_temp/Estonia.webp"
+        src={img1}
         alt="UAE Banner"
         className="absolute inset-0 w-full h-full object-cover scale-105 animate-[zoom_18s_ease-in-out_infinite_alternate]"
       />
