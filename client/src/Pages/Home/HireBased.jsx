@@ -93,8 +93,8 @@ export default function HireBased() {
               />
 
               {/* Icon */}
-              <div className="transition-transform duration-300 text-[#3C9FC2]  group-hover:scale-105 t">
-                <div className="text-4xl">
+              <div className="transition-transform duration-300 flex   group-hover:scale-105 t">
+                <div className="text-2xl bg-light-blue/10 rounded-sm p-2 text-light-blue">
                   {s.icon}
                 </div>
               </div>

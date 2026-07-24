@@ -1,31 +1,31 @@
 const features = [
   {
-    title: "1 Strategic Location",
+    title: "Strategic Location",
     desc: "Connects Asia, Africa, and Europe with global access to 70% of the world’s population.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "2 Vision 2030 Growth",
+    title: "Vision 2030 Growth",
     desc: "Diversifying into tourism, technology, logistics, renewable energy, and manufacturing.",
     bg: "bg-white",
   },
   {
-    title: "3 Advanced Infrastructure",
+    title: "Advanced Infrastructure",
     desc: "World-class ports, airports, and industrial cities supporting seamless trade.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "4 Investor Reforms",
+    title: "Investor Reforms",
     desc: "100% foreign ownership and simplified digital setup via MISA.",
     bg: "bg-white",
   },
   {
-    title: "5 Tax Benefits & Incentives",
+    title: "Tax Benefits & Incentives",
     desc: "Low corporate taxes, no personal income tax, and special economic zone advantages.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "6 Economic Stability",
+    title: "Economic Stability",
     desc: "Strong G20 economy, skilled workforce, and secure business environment.",
     bg: "bg-white",
   },

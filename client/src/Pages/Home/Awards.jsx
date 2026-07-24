@@ -14,7 +14,7 @@ const Awards = () => {
     return (
         <div className='max-w-7xl py-[3vw] mt-[3vw] mx-auto'>
             <div className='max-w-6xl mx-auto'>
-                <div className='flex w-full justify-between'>
+                <div className='flex flex-col md:flex-row w-full items-center justify-between'>
                     {imgall.map((pic, index) => (
                         <div key={index}>
                             <img src={pic} className='h-20' alt={`Award ${index + 1}`} />

@@ -33,21 +33,7 @@ const BannerEstonia = () => {
 
         {/* Categories */}
         <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 lg:gap-10 mt-8 text-base sm:text-lg md:text-2xl font-semibold tracking-wider">
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            FREE ZONE
-          </span>
-
-          <span className="text-gray-400 hidden sm:block">|</span>
-
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            MAINLAND
-          </span>
-
-          <span className="text-gray-400 hidden sm:block">|</span>
-
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            OFFSHORE
-          </span>
+          
           
         </div>
         <SharedButton text={'Start Now'} path={'/contact'}></SharedButton>
