@@ -5,6 +5,13 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
+import img4 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp'
+import img5 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const handleTags = [
   "VAT Registration Support",
@@ -107,7 +114,7 @@ const Taxation_KSA = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Taxation KSA"
         heading={
           <>
@@ -119,24 +126,12 @@ const Taxation_KSA = () => {
         description="de tempête provides taxation support services in Saudi Arabia, helping businesses maintain VAT compliance, improve tax documentation processes, and manage regulatory requirements with greater operational confidence."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 847,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp"
+            src={img1}
             alt="Tax Compliance & Regulatory Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -210,7 +205,7 @@ const Taxation_KSA = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp"
+            src={img2}
             alt="VAT Advisory"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -220,7 +215,7 @@ const Taxation_KSA = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src={img3}
             alt="ZATCA Compliance & E-Invoicing Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -289,7 +284,7 @@ const Taxation_KSA = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src={img4}
             alt="VAT Filing & Tax Documentation Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -299,7 +294,7 @@ const Taxation_KSA = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp"
+            src={img5}
             alt="Ongoing Tax Coordination & Regulatory Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -385,7 +380,7 @@ const Taxation_KSA = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      {/* <RecentBlogs blogs={blogPosts} /> */}
     </div>
   );
 };

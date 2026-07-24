@@ -26,7 +26,9 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import img3 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
 import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import img4 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
 const AnimatedCounter = ({ end, duration = 2000 }) => {
     const [count, setCount] = useState(0);
     useEffect(() => {
@@ -220,8 +222,8 @@ const MarketExpansionUSA = () => {
                                     />
                                     <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
                                     <div className="absolute bottom-4 left-6">
-                                        <div className="w-14 h-14 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
-                                            <FaBuilding className="text-white text-2xl" />
+                                        <div className="w-14 h-14 rounded-xl bg-white p-2 flex items-center justify-center shadow-lg">
+                                            <img src={logo} alt="" />
                                         </div>
                                     </div>
                                     <h3 className="absolute bottom-5 left-24 text-white text-2xl font-bold">
@@ -273,7 +275,7 @@ const MarketExpansionUSA = () => {
                             const Icon = item.icon;
                             return (
                                 <div key={index}>
-                                    <Icon className="text-4xl bg-light-blue text-white p-2 rounded-sm mb-4" />
+                                    <Icon className="text-4xl bg-light-blue/20 text-light-blue p-2 rounded-sm mb-4" />
 
                                     <h3 className="text-lg font-bold text-[#16244b] mb-2">
                                         {item.title}
@@ -298,7 +300,7 @@ const MarketExpansionUSA = () => {
                     {/* US Banking */}
                     <div className="grid lg:grid-cols-2 gap-16 items-stretch">
                         <img
-                            src="/src/asstes/img_temp/servics/Dubai-bank.webp"
+                            src={img4}
                             alt="US Business Banking"
                             className="w-full h-full object-cover rounded-2xl shadow-lg"
                         />
@@ -372,7 +374,7 @@ const MarketExpansionUSA = () => {
                         </div>
 
                         <img
-                            src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                            src={img5}
                             alt="US Market Expansion"
                             className="w-full h-full object-cover rounded-2xl shadow-lg"
                         />

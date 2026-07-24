@@ -209,7 +209,7 @@ const ComplianceUSA = () => {
               Annual State Compliance{" "}
               <span className="font-extrabold">& Filings</span>
             </h2>
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-[#2D7EF7] text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
               State-by-State Filing Accuracy
             </div>
             <p className="mt-7 text-lg text-gray-600 leading-8">
@@ -241,10 +241,10 @@ const ComplianceUSA = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
+            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">IRS Compliance</span> Coordination
             </h2>
-            <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
               Coordinated IRS compliance that keeps your federal obligations
               on track. Managing IRS correspondence and federal deadlines
               alongside state compliance can be complex, and missed notices
@@ -259,10 +259,10 @@ const ComplianceUSA = () => {
               return (
                 <div
                   key={index}
-                  className="p-4 hover:bg-white hover:shadow-xl rounded-3xl duration-300"
+                  className="p-4  rounded-3xl duration-300"
                 >
-                  <Icon className="text-5xl text-slate-500 mb-6" />
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
+                  <Icon className="text-4xl text-slate-500 mb-6" />
+                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-lg leading-8">{item.desc}</p>

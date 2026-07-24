@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import SharedButton from './SharedButton';
 
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
@@ -136,14 +137,12 @@ const SevicsBanner = ({
 
                     </h1>
 
-                    <p className="max-w-4xl mx-auto mt-6 text-base md:text-xl text-gray-200 leading-relaxed">
+                    <p className="max-w-4xl mx-auto mt-6 mb-10 text-base md:text-xl text-gray-200 leading-relaxed">
                         {description}
                     </p>
 
-                    <Link to={'/contact'}>
-                        <button className="mt-10 border-2 cursor-pointer text-xl border-white rounded-md px-8 py-3 font-semibold hover:bg-light-blue hover:border-light-blue hover:text-black duration-300">
-                            Book a Consultation  →
-                        </button></Link>
+                    
+                        <SharedButton text={'Book a Consultation →'} path={'/contact'}></SharedButton>
                 </div>
             </section>
             <div ref={sectionRef} className="border-b border-gray-100 bg-[#f8f9fc]">

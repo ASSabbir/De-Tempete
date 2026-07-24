@@ -102,35 +102,35 @@ const footerColumns = [
 
 const Footer = () => {
   const officeCards = [
-    {
-      title: "UK ",
-      phone: "+44 7831 848639",
-      address: "115 London Road, Morden, SM4 5HP, UK",
-    },
-    {
-      title: "BANGLADESH ",
-      phone: "+88 0195 333 5155",
-      address:
-        "Bashati Xclusive, Flat - B4, House - 06, Road - 07, Niketon, Dhaka 1212, Bangladesh",
-    },
-    {
-      title: "UAE ",
-      phone: "+971 56 699 4282",
-      address:
-        "Office 601/31, Business Village Block B - Port Saeed - Deira - Dubai - United Arab Emirates",
-    },
-    {
-      title: "ESTONIA ",
-      phone: "+971 56 699 4282",
-      address: "Volume 20/3, Tallinn 13516, Estonia",
-    },
-    {
-      title: "KSA ",
-      phone: "+971 56 699 4282",
-      address:
-        "Office # 303, Al Mohamdia Tower, Custodian of the Two Holy Mosques Road, Al Aqrabiyah City, Al Khobar, Ash Sharqiyah, Saudi Arabia",
-    },
-  ];
+  {
+    title: "UK",
+    phone: "+44 7831 848639",
+    address: "115 London Road, Morden, SM4 5HP, UK",
+  },
+  {
+    title: "BANGLADESH",
+    phone: "+88 0195 333 5155",
+    address:
+      "Bashati Xclusive, Flat - B4, House - 06, Road - 07, Niketon, Dhaka 1212, Bangladesh",
+  },
+  {
+    title: "UAE",
+    phone: "+971 56 699 4282",
+    address:
+      "Office 601/31, Business Village Block B - Port Saeed - Deira - Dubai - United Arab Emirates",
+  },
+  {
+    title: "ESTONIA",
+    phone: "+44 7831 848639",
+    address: "Volume 20/3, Tallinn 13516, Estonia",
+  },
+  {
+    title: "KSA",
+    phone: "+966 55 949 3954",
+    address:
+      "Office # 303, Al Mohamdia Tower, Custodian of the Two Holy Mosques Road, Al Aqrabiyah City, Al Khobar, Ash Sharqiyah, Saudi Arabia",
+  },
+];
 
 
   return (

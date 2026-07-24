@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
  * Accordion-style FAQ for Estonia company formation. Pass your two brand
  * colors in via the `colors` prop — same convention as EstoniaBusinessServices.
  *
- * <EstoniaFAQ colors={{ light: "#eaf1fb", dark: "#0e2a47" }} />
+ * <EstoniaFAQ colors={{ light: "#3C9FC2", dark: "#0e2a47" }} />
  */
 
 const faqs = [
@@ -43,7 +43,7 @@ const faqs = [
 ];
 
 export default function EstoniaFAQ({
-  colors = { light: "#eaf1fb", dark: "#0e2a47" },
+  colors = { light: "#3C9FC2", dark: "#0e2a47" },
 }) {
   const sectionRef = useRef(null);
   const contentRefs = useRef([]);
@@ -171,7 +171,7 @@ export default function EstoniaFAQ({
                     className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center"
                     
                   >
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-light-blue to-light-blue flex items-center justify-center text-white text-sm">
                       ✦
                     </div>
                   </span>

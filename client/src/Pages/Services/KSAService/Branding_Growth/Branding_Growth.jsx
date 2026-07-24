@@ -10,6 +10,10 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const handleTags = [
   "Brand Positioning Support",
@@ -86,7 +90,7 @@ const Branding_Growth = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Branding & Growth KSA"
         heading={
           <>
@@ -99,19 +103,7 @@ const Branding_Growth = () => {
         description="de tempête provides branding and growth solutions in Saudi Arabia, helping businesses improve market visibility, strengthen brand positioning, and support long-term business expansion."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 1010,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 4, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -138,7 +130,7 @@ const Branding_Growth = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp"
+            src={img1}
             alt="Brand Development & Business Growth Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -155,7 +147,7 @@ const Branding_Growth = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-4 px-4 text-center text-white text-sm font-medium"
+                className="bg-[#37456B] rounded-lg py-12 px-4 text-center text-white text-sm font-medium"
               >
                 {t}
               </div>
@@ -225,8 +217,8 @@ const Branding_Growth = () => {
           <div className="grid lg:grid-cols-3 gap-6">
             {photoshootCards.map((c, i) => (
               <div key={i} className="bg-[#37456B] rounded-2xl p-8">
-                <div className="w-12 h-12 bg-light-blue/20 rounded-lg flex items-center justify-center mb-5">
-                  <span className="text-light-blue text-xl">◆</span>
+                <div className="w-12 h-12  rounded-lg flex items-center justify-center mb-5">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-white font-bold mb-2">{c.title}</h3>
                 <p className="text-gray-300 text-sm leading-6">{c.desc}</p>
@@ -276,7 +268,7 @@ const Branding_Growth = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      {/* <RecentBlogs blogs={blogPosts} /> */}
     </div>
   );
 };

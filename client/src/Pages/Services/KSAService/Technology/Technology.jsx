@@ -5,9 +5,12 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 const softwareItems = [
   "System Setup & Custom Configuration",
-  "UAE VAT-Compliant Invoicing & Reporting",
+  "KSA VAT-Compliant Invoicing & Reporting",
   "Chart of Accounts Structuring",
   "Data Import, Migration & Backup",
   "Staff Training & Post-Implementation Support",
@@ -24,14 +27,14 @@ const cloudCards = [
   },
   {
     title: "Compliance & System Risk Review",
-    desc: "Ensure your digital systems follow UAE regulations, maintain data accuracy, and stay free from operational risks.",
+    desc: "Ensure your digital systems follow KSA regulations, maintain data accuracy, and stay free from operational risks.",
   },
 ];
 
 const whyChoose = [
   {
     title: "Expert-Led Technology Advisory",
-    desc: "We bring deep knowledge of cloud accounting, ERP systems, and automation tailored to UAE business needs.",
+    desc: "We bring deep knowledge of cloud accounting, ERP systems, and automation tailored to KSA business needs.",
   },
   {
     title: "End-to-End Implementation",
@@ -42,7 +45,7 @@ const whyChoose = [
     desc: "Your systems are configured around your processes — ensuring smoother operations and faster decision-making.",
   },
   {
-    title: "UAE VAT & Compliance Ready",
+    title: "KSA VAT & Compliance Ready",
     desc: "All setups are aligned with local regulations, so your reporting stays accurate and audit-proof.",
   },
 ];
@@ -51,7 +54,7 @@ const Technology = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Automation and Digital Transformation KSA"
         heading={
           <>
@@ -62,10 +65,10 @@ const Technology = () => {
         }
         description={
           <>
-            Empowering UAE businesses with smarter, faster, and fully automated
+            Empowering KSA businesses with smarter, faster, and fully automated
             financial systems
             <br />
-            <br />
+            
             At de tempête, we help businesses move beyond manual work and
             embrace technology that saves time, reduces errors, and brings
             complete clarity to financial operations. Whether you're a startup
@@ -76,19 +79,7 @@ const Technology = () => {
         }
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 1027,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 4, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
@@ -108,8 +99,8 @@ const Technology = () => {
           <div className="grid lg:grid-cols-3 gap-10">
             {cloudCards.map((c, i) => (
               <div key={i} className="text-center">
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-5">
-                  <LuChartNoAxesCombined className="text-light-blue text-2xl" />
+                <div className="w-16 h-16  rounded-xl flex items-center justify-center mx-auto mb-5">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {c.title}
@@ -129,7 +120,7 @@ const Technology = () => {
             </h2>
             <p className="mt-4 text-gray-500">
               We implement and customize accounting and ERP software so you can
-              operate with precision and stay 100% compliant with UAE standards.
+              operate with precision and stay 100% compliant with KSA standards.
             </p>
           </div>
           <div className="space-y-3">
@@ -138,8 +129,8 @@ const Technology = () => {
                 key={idx}
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white flex items-center px-5 py-4"
               >
-                <span className="w-8 h-8 bg-light-blue rounded-md flex items-center justify-center text-white mr-4">
-                  ◆
+                <span className="w-8 h-8  rounded-md flex items-center justify-center text-white mr-4">
+                  <img src={logo} alt="" />
                 </span>
                 <span className="text-[#16244b] font-semibold text-sm flex-1">
                   {item}
@@ -175,12 +166,12 @@ const Technology = () => {
       <ConsultationCTA
         heading={
           <>
-            Start Your UAE
+            Start Your KSA
             <br />
             Expansion <span className="font-bold">Today</span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your KSA presence with confidence."
         commitmentItems={[
           "Free initial tax consultation — no obligation",
           "100% confidentiality and secure handling of data",
@@ -189,7 +180,7 @@ const Technology = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      
     </div>
   );
 };

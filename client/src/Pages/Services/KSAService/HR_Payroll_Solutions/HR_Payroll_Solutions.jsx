@@ -5,6 +5,12 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__hr-outsourcing-image-for-website-section__98146.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
+import img4 from '../../../../asstes/img_temp/servics/KSA/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const payrollPoints = [
   "Salary processing support",
@@ -73,7 +79,7 @@ const HR_Payroll_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="HR & Payroll Solutions KSA"
         heading={
           <>
@@ -85,24 +91,12 @@ const HR_Payroll_Solutions = () => {
         description="de tempête provides HR and payroll solutions in Saudi Arabia, helping businesses improve workforce management, payroll accuracy, and employee compliance through structured operational support."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 935,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp"
+            src={img1}
             alt="HR & Payroll Management Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -157,7 +151,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__hr-outsourcing-image-for-website-section__98146.webp"
+            src={img2}
             alt="Payroll Processing & Employee Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -167,7 +161,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
+            src={img3}
             alt="Qiwa, GOSI & Workforce Compliance Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -228,7 +222,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
+            src={img4}
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
         </div>
@@ -242,7 +236,7 @@ const HR_Payroll_Solutions = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-6 px-4 text-white font-medium"
+                className="bg-[#37456B] rounded-lg py-12 px-4 text-white font-medium"
               >
                 {g}
               </div>
@@ -290,7 +284,7 @@ const HR_Payroll_Solutions = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      {/* <RecentBlogs blogs={blogPosts} /> */}
     </div>
   );
 };

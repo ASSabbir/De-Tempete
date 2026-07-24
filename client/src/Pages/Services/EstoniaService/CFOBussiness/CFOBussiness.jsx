@@ -22,6 +22,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const cfoServices = [
   {
@@ -350,8 +351,8 @@ const CFOBussiness = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                      <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}

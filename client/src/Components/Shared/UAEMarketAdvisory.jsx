@@ -31,7 +31,7 @@ const UAEMarketAdvisory = () => {
             Why Choose Our UAE Market{" "}
             <span className="font-bold">Expansion Advisory</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-light-blue mx-auto"></div>
         </div>
 
         {/* Grid */}
@@ -42,7 +42,7 @@ const UAEMarketAdvisory = () => {
               className="bg-gray-50 border border-gray-200 rounded-lg p-8"
             >
               <div className="flex gap-4">
-                <BarChart3 className="w-8 h-8 text-blue-400 shrink-0 mt-1" />
+                <BarChart3 className="w-8 h-8 text-light-blue shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {feature.title}
