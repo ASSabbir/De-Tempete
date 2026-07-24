@@ -8,7 +8,12 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
+import img3 from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
+import img4 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -53,7 +58,7 @@ const HR_Payroll_Solutions = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="HR & Payroll Solutions"
         heading={
           <>
@@ -66,24 +71,12 @@ const HR_Payroll_Solutions = () => {
       />
       {/* NOTE: original CTA button style differs (bg-light-blue solid, not outline). HeroSection uses outline style — verify visually, add ctaVariant prop if mismatch matters. */}
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 1114,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 4, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
       {/* About */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src={img1}
             alt="About Our HR & Payroll"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -132,7 +125,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp"
+            src={img2}
             alt="Payroll Processing & HR Outsourcing"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -143,7 +136,7 @@ const HR_Payroll_Solutions = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp"
+            src={img3}
             alt="Employer Of Record (EOR) & PEO Services"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -205,7 +198,7 @@ const HR_Payroll_Solutions = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp"
+            src={img4}
             alt="Workforce Compliance Advisory"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -265,32 +258,7 @@ const HR_Payroll_Solutions = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title:
-              "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-            desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title:
-              "The Role and Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

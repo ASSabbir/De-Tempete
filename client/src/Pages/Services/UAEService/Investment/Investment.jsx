@@ -8,6 +8,11 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
+import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
+import img3 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -31,19 +36,19 @@ const dueDiligenceCards = [
     title: "Financial & Operational Assessment",
     desc: "Analyze financial statements, cash flow, and business performance to ensure investment viability.",
     image:
-      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
+      img1,
   },
   {
     title: "Risk & Compliance Checks",
     desc: "Evaluate legal, regulatory, and operational risks for informed decision-making.",
     image:
-      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      img2,
   },
   {
     title: "Post-Investment Monitoring",
     desc: "Track KPIs, profitability, and growth strategies to maintain investment performance.",
     image:
-      "/src/asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp",
+      img3,
   },
 ];
 
@@ -100,7 +105,7 @@ const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Investment Advisory UAE"
         heading="Invest With Confidence."
         description={
@@ -118,19 +123,7 @@ const Investment = () => {
         ctaText="Get Expert Investment Advice"
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 847,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Due Diligence */}
       <section className="py-24 bg-white">
@@ -286,32 +279,7 @@ const Investment = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title:
-              "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-            desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title:
-              "The Role and Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

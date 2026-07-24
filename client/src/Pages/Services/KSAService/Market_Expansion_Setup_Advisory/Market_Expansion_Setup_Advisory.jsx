@@ -11,6 +11,12 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import img1 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
+import img4 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const setupCards = [
   {
@@ -24,7 +30,7 @@ const setupCards = [
       "Enables CR registration process",
       "Suitable for most industries",
     ],
-    img: "/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
+    img: img1,
   },
   {
     title: "Saudi LLC (Limited Liability Company)",
@@ -37,7 +43,7 @@ const setupCards = [
       "Employee visa eligibility",
       "Full regulatory compliance",
     ],
-    img: "/src/asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp",
+    img: img2,
   },
   {
     title: "Branch of Foreign Company",
@@ -50,7 +56,7 @@ const setupCards = [
       "Limited to parent company activities",
       "Strong for established businesses",
     ],
-    img: "/src/asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp",
+    img: img3,
   },
   {
     title: "Regional Headquarters (RHQ)",
@@ -63,7 +69,7 @@ const setupCards = [
       "Compliance with RHQ program policies",
       "Long-term strategic presence",
     ],
-    img: "/src/asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp",
+    img: img4,
   },
 ];
 
@@ -143,7 +149,7 @@ const Market_Expansion_Setup_Advisory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Business Setup KSA"
         heading={
           <>
@@ -158,19 +164,7 @@ const Market_Expansion_Setup_Advisory = () => {
         ctaText="Enter Saudi with confidence"
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 918,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 3, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -190,7 +184,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 key={i}
                 className="rounded-2xl overflow-hidden shadow-lg border border-gray-100"
               >
-                <div className="relative h-56">
+                <div className="relative h-80">
                   <img
                     src={c.img}
                     alt={c.title}

@@ -7,7 +7,11 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-
+import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import img2 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
+import img3 from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import img4 from '../../../../asstes/img_temp/servics/freepik__create-image-for-wesite-section-liquidation-compan__80761.webp'
 const amlItems = [
   "Risk Assessment And AML Policy Development",
   "KYC (Know Your Customer) Framework Setup",
@@ -39,7 +43,7 @@ const Regulatory_Compliance = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={img1}
         alt="Regulatory & ISO Compliance"
         heading={
           <>
@@ -51,25 +55,13 @@ const Regulatory_Compliance = () => {
         description="At de tempête, we help businesses in the UAE navigate complex regulatory frameworks and international standards, ensuring your operations meet every legal and quality requirement. From company governance to ISO certification and AML compliance, our experts provide end-to-end guidance that keeps your business secure, credible, and future-ready."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 1097,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 4, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Corporate Secretarial */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp"
+            src={img2}
             alt="Corporate Secretarial Services & Statutory Compliance"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -179,7 +171,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src={img3}
             alt="ISO Standards Advisory, Training & Certification Support"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -190,7 +182,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__create-image-for-wesite-section-liquidation-compan__80761.webp"
+            src={img4}
             alt="Liquidation & Company Closure Support"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -227,6 +219,23 @@ const Regulatory_Compliance = () => {
           </div>
         </div>
       </section>
+      <ConsultationCTA
+        heading={
+          <>
+            Start Building Your
+            <br />
+            Business{" "}
+            <span className="font-bold">Compliance Framework Today</span>
+          </>
+        }
+        subheading="Improve regulatory compliance, reduce risks, and strengthen business operations across UAE."
+        commitmentItems={[
+          "Stronger compliance controls",
+          "Reduced operational risks",
+          "Better internal processes",
+          "Higher business credibility",
+        ]}
+      />
 
       {/* Why Businesses Choose */}
       <section className="py-24 bg-white">
@@ -258,25 +267,9 @@ const Regulatory_Compliance = () => {
         </div>
       </section>
 
-      <ConsultationCTA
-        heading={
-          <>
-            Start Building Your
-            <br />
-            Business{" "}
-            <span className="font-bold">Compliance Framework Today</span>
-          </>
-        }
-        subheading="Improve regulatory compliance, reduce risks, and strengthen business operations across UAE."
-        commitmentItems={[
-          "Stronger compliance controls",
-          "Reduced operational risks",
-          "Better internal processes",
-          "Higher business credibility",
-        ]}
-      />
+      
 
-      <RecentBlogs blogs={blogPosts} />
+     
     </div>
   );
 };

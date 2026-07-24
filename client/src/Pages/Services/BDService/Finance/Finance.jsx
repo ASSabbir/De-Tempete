@@ -9,6 +9,10 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import img1 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const servicesData = [
   {
@@ -79,7 +83,7 @@ const Finance = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -95,19 +99,7 @@ const Finance = () => {
         description="Managing finance and accounting in Bangladesh requires local expertise, global standards, and precision. Whether you're a startup, SME, or multinational, our Finance & Accounting services give you reliable records, compliance assurance, and strategic financial visibility, so you can focus on growth."
       />
 
-      <StatsSection
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Financial Governance Section */}
       <section className="py-24 bg-white">
@@ -147,7 +139,7 @@ const Finance = () => {
             </div>
             <div>
               <img
-                src="/src/asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp"
+                src={img1}
                 alt="Financial Governance"
                 className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
@@ -233,8 +225,8 @@ const Finance = () => {
                 key={index}
                 className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
-                  <FaCheckCircle className="text-white text-xl" />
+                <div className="w-12 h-12 rounded-lg  flex items-center justify-center mb-6">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-xl font-bold text-[#16244b] mb-3">
                   {feature.title}
@@ -288,30 +280,7 @@ const Finance = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

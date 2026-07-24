@@ -21,6 +21,17 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import img1 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
+import img3 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
+import img5 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
+// ../../../src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp
+import img4 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+
+
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -43,7 +54,7 @@ const setupTypes = [
   {
     title: "Mainland",
     image:
-      "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
+      img1,
     items: [
       "100% foreign ownership",
       "Full UAE market access",
@@ -57,7 +68,7 @@ const setupTypes = [
   {
     title: "Free Zone",
     image:
-      "/src/asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp",
+      img2,
     items: [
       "0% corporate tax",
       "Full foreign ownership",
@@ -71,7 +82,7 @@ const setupTypes = [
   {
     title: "Offshore",
     image:
-      "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
+      img3,
     items: [
       "Asset Protection",
       "Tax efficiency",
@@ -174,7 +185,7 @@ const Market_Expansion_Setup_Advisory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Market Expansion & Setup Advisory UAE"
         heading={
           <>
@@ -190,19 +201,7 @@ const Market_Expansion_Setup_Advisory = () => {
         description="The UAE continues to stand as the region's most attractive hub for global trade, investment, and innovation. Whether you're an international company entering the GCC market or a local business ready to scale, our Market Expansion & Setup Advisory services help you navigate every step — from strategy to execution, with clarity, compliance and confidence."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -267,7 +266,7 @@ const Market_Expansion_Setup_Advisory = () => {
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-dark-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 cursor-pointer duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -297,7 +296,7 @@ const Market_Expansion_Setup_Advisory = () => {
               const Icon = item.icon;
               return (
                 <div key={index}>
-                  <Icon className="text-4xl text-slate-500 mb-4" />
+                  <Icon className="text-4xl  text-white bg-light-blue p-2 rounded-full mb-4" />
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
@@ -335,8 +334,8 @@ const Market_Expansion_Setup_Advisory = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                      <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}
@@ -363,7 +362,7 @@ const Market_Expansion_Setup_Advisory = () => {
         <div className="max-w-[1600px] mx-auto px-6 space-y-16">
           <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <img
-              src="/src/asstes/img_temp/servics/Dubai-bank.webp"
+              src={img5}
               alt="Bank Account Opening"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
@@ -422,7 +421,7 @@ const Market_Expansion_Setup_Advisory = () => {
               </div>
             </div>
             <img
-              src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+              src={img4}
               alt="Trademark Registration"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
@@ -514,32 +513,7 @@ const Market_Expansion_Setup_Advisory = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title:
-              "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-            desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title:
-              "The Role and Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

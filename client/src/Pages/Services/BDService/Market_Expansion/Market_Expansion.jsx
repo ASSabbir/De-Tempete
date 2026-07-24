@@ -9,12 +9,21 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import img1 from '../../../../asstes/img_temp/servics/Bd/freepik__corporate-companies-bandgladesh-flag-website-image__46804.webp'
+import img2 from '../../../../asstes/img_temp/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp'
+import img3 from '../../../../asstes/img_temp/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46795.webp'
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+
+import img6 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import img5 from '../../../../asstes/img_temp/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const businessData = [
   {
     title: "Private Limited Company",
     image:
-      "/src/asstes/img_temp/servics/Bd/freepik__corporate-companies-bandgladesh-flag-website-image__46804.webp",
+      img1,
     items: [
       "100% foreign ownership allowed",
       "Full Bangladesh market access",
@@ -26,7 +35,7 @@ const businessData = [
   {
     title: "Branch Office",
     image:
-      "/src/asstes/img_temp/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46797.webp ",
+      img2,
     items: [
       "Linked to parent company",
       "Limited liability in Bangladesh",
@@ -38,7 +47,7 @@ const businessData = [
   {
     title: "Representative Office",
     image:
-      "/src/asstes/img_temp/servics/Bd/freepik__private-limited-company-bangladesh-for-company-set__46795.webp",
+     img3,
     items: [
       "Non-commercial operations only",
       "No local revenue generation",
@@ -59,6 +68,8 @@ import {
   LuMegaphone,
   LuHandCoins,
 } from "react-icons/lu";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -117,7 +128,7 @@ const Market_Expansion = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -132,19 +143,7 @@ const Market_Expansion = () => {
         ctaText="Get a Consultation"
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -157,7 +156,7 @@ const Market_Expansion = () => {
               <span className="font-extrabold">Registration</span>
             </h2>
 
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-[#2D7EF7] text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
               Simplified Business Setup & Structure Guidance
             </div>
 
@@ -229,15 +228,12 @@ const Market_Expansion = () => {
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
-              Explore Complete Business Setup Service Guide
-              <FaArrowRight />
-            </button>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'}></SharedFullButton>
           </div>
         </div>
       </section>
@@ -248,7 +244,7 @@ const Market_Expansion = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
+            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
@@ -265,7 +261,7 @@ const Market_Expansion = () => {
 
           {/* Features */}
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
+          <div className="grid lg:grid-cols-3 gap-20 mt-24">
             {[
               {
                 icon: LuBadgeDollarSign,
@@ -304,19 +300,15 @@ const Market_Expansion = () => {
               return (
                 <div
                   key={index}
-                  className={`rounded-3xl transition-all duration-300 ${
-                    item.highlight
-                      ? "bg-white shadow-2xl p-10 hover:-translate-y-2"
-                      : "hover:bg-white hover:shadow-xl p-4"
-                  }`}
+                  className={`rounded-3xl  flex  flex-col  items-center text-center transition-all duration-300 `}
                 >
-                  <Icon className="text-5xl text-slate-500 mb-6" />
+                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full mb-6" />
 
-                  <h3 className="text-3xl font-bold text-[#16244b] leading-snug mb-5">
+                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-xl leading-9">{item.desc}</p>
+                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
                 </div>
               );
             })}
@@ -353,9 +345,9 @@ const Market_Expansion = () => {
                 >
                   <div className="flex items-center gap-3">
                     <img
-                      src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
+                      src={logo}
                       alt="check"
-                      className="w-5 h-5 object-contain shrink-0"
+                      className="w-8  object-contain shrink-0"
                     />
 
                     <span className="font-semibold text-gray-900">
@@ -388,7 +380,7 @@ const Market_Expansion = () => {
 
             <div>
               <img
-                src="/src/asstes/img_temp/servics/Bd/freepik__bangladesh-bank-city-view-blangladesh-flag__46799.webp"
+                src={img5}
                 alt="Bank Account Opening"
                 className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
@@ -474,7 +466,7 @@ const Market_Expansion = () => {
 
             <div>
               <img
-                src="/src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp"
+                src={img6}
                 alt="Trademark Registration"
                 className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />
@@ -492,7 +484,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-5xl  leading-tight text-white font-light">
               <span className="font-bold">Investor Visa</span> &
               <span className="font-bold"> UAE Residency</span> Support
             </h2>
@@ -523,7 +515,7 @@ const Market_Expansion = () => {
                   <LuChartNoAxesCombined className="text-white text-5xl" />
                 </div>
 
-                <h3 className="mt-10 text-2xl font-medium text-white leading-relaxed">
+                <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -540,7 +532,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our
               <span className="font-bold"> Expansion Advisory Service?</span>
             </h2>
@@ -582,7 +574,7 @@ const Market_Expansion = () => {
                 {/* Content */}
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
+                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>
 
@@ -617,30 +609,7 @@ const Market_Expansion = () => {
       {/* Blog Section */}
       {/* ================= Recent Blogs ================= */}
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

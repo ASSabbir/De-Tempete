@@ -17,6 +17,14 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import img1 from '../../../../asstes/img_temp/servics/Bd/1.webp'
+import img2 from '../../../../asstes/img_temp/servics/Bd/2.webp'
+import img3 from '../../../../asstes/img_temp/servics/Bd/3.webp'
+import img4 from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 
 const isoServices = [
   {
@@ -43,7 +51,7 @@ const isoServices = [
 const businessData = [
   {
     title: "Corporate & Statutory Compliance",
-    image: "/src/asstes/img_temp/servics/Bd/1.webp",
+    image: img1,
     items: [
       "Company renewals & filing deadlines",
       "Annual returns & ROC filings",
@@ -53,7 +61,7 @@ const businessData = [
   },
   {
     title: "Licensing & Sector-Specific Permissions",
-    image: "/src/asstes/img_temp/servics/Bd/2.webp",
+    image: img2,
     items: [
       "Trade licenses & activity permits",
       "Export/Import permissions & customs support",
@@ -63,7 +71,7 @@ const businessData = [
   },
   {
     title: "Reporting & Documentation",
-    image: "/src/asstes/img_temp/servics/Bd/3.webp",
+    image: img3,
     items: [
       "Compliance calendars & reminders",
       "Preparation of statutory reports",
@@ -186,7 +194,7 @@ const Regulatory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -200,21 +208,7 @@ const Regulatory = () => {
         description="Doing business in Bangladesh requires adherence to a wide range of regulatory requirements, from corporate governance and statutory filings to quality management and industry certifications. Our Regulatory & ISO Compliance services help you stay compliant, reduce risk, and strengthen operational credibility."
       />
 
-      <StatsSection
-        bgColor="bg-white"
-        maxWidth="max-w-9xl"
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Why Compliance
 Matters Section */}
@@ -224,7 +218,7 @@ Matters Section */}
             {/* Image Placeholder */}
             <div>
               <img
-                src="/src/asstes/img_temp/servics/Bd/financial-governance.webp"
+                src={img4}
                 alt="Financial Governance"
                 className="w-full h-150 object-cover rounded-3xl shadow-lg"
               />
@@ -336,16 +330,14 @@ Matters Section */}
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg mb-10">
               Stay ahead of changes impacting business operations in Bangladesh
               — from tax law updates to labour regulations and environmental
               requirements.
             </p>
 
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
-              Legal & Regulatory Updates
-              <FaArrowRight />
-            </button>
+            
+            <SharedFullButton text={'Legal & Regulatory Updates'}></SharedFullButton>
           </div>
         </div>
       </section>
@@ -357,7 +349,7 @@ Matters Section */}
           {/* Heading */}
 
           <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-5xl md:text-6xl leading-tight text-[#16244b]">
+            <h2 className="text-5xl  leading-tight text-[#16244b]">
               <span className="font-bold">ISO Certification</span>{" "}
               <span className="font-light">& Quality</span>
               <br />
@@ -384,7 +376,7 @@ Matters Section */}
                 >
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-14 h-14 rounded-xl bg-[#eef8ff] flex items-center justify-center shrink-0">
-                      <Icon className="text-[#4CC9F0] text-3xl" />
+                      <Icon className="text-light-blue text-3xl" />
                     </div>
 
                     <h3 className="text-3xl font-bold text-[#16244b]">
@@ -396,7 +388,7 @@ Matters Section */}
                   <div className="space-y-2">
                     {service.items.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-4">
-                        <FaCheckCircle className="text-[#4CC9F0] text-xl mt-1 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-xl mt-1 shrink-0" />
 
                         <p className="text-gray-600 text-lg leading-7">
                           {item}
@@ -435,9 +427,9 @@ Matters Section */}
                 >
                   <div className="flex items-center gap-3">
                     <img
-                      src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
+                      src={logo}
                       alt="check"
-                      className="w-5 h-5 object-contain shrink-0"
+                      className="w-8 object-contain shrink-0"
                     />
 
                     <span className="font-semibold text-gray-900">
@@ -463,7 +455,7 @@ Matters Section */}
 
       {/* What You Gain Section */}
       <section className="bg-[#16244B] py-24">
-        <div className="max-w-8xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-white">What You Gain</h2>
@@ -475,11 +467,11 @@ Matters Section */}
             {benefitsData.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-3 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="bg-[#39446B]/80 border  border-white/10 rounded-2xl py-10 px-3 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-light-blue rounded-xl flex items-center justify-center shrink-0">
-                    <benefit.icon className="text-white text-2xl" />
+                <div className="flex flex-col p-2 text-center items-center gap-4">
+                  <div className="w-12 h-12  rounded-xl flex items-center justify-center shrink-0">
+                    <img src={logo} alt="" />
                   </div>
 
                   <h3 className="text-xl font-semibold text-white leading-snug">
@@ -537,8 +529,8 @@ Matters Section */}
               >
                 {/* Icon + Title */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center shrink-0">
-                    <FaCheckCircle className="text-white text-xl" />
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
+                    <img src={logo} alt="" />
                   </div>
 
                   <h3 className="text-xl font-bold text-[#16244b]">
@@ -572,30 +564,7 @@ Matters Section */}
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

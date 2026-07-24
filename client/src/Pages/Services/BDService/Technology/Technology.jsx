@@ -12,6 +12,7 @@ import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
+import logo from '../../../../asstes/img_temp/logo.webp'
 const automationFeatures = [
   {
     icon: FiFileText,
@@ -53,16 +54,18 @@ import {
   FaChartBar,
 } from "react-icons/fa";
 
-import tableau from "/src/asstes/img_temp/New folder/9-1.webp";
-import sage from "/src/asstes/img_temp/New folder/3-2.webp";
-import a from "/src/asstes/img_temp/New folder/11-1.webp";
-import b from "/src/asstes/img_temp/New folder/12-1-934x1024.webp";
-import c from "/src/asstes/img_temp/New folder/7-2.webp";
-import d from "/src/asstes/img_temp/New folder/8.webp";
-import e from "/src/asstes/img_temp/New folder/13-1.webp";
-import f from "/src/asstes/img_temp/New folder/6-1.webp";
-import g from "/src/asstes/img_temp/New folder/2.webp";
-
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const Technology = () => {
@@ -125,7 +128,7 @@ const Technology = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -145,21 +148,7 @@ const Technology = () => {
         ctaText="Request Consultation"
       />
 
-      <StatsSection
-        bgColor="bg-white"
-        maxWidth="max-w-9xl"
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
       {/* ===================== What We Offer ===================== */}
 
       <section className="py-24 bg-white">
@@ -217,7 +206,7 @@ const Technology = () => {
 
       {/* ===================== Business Process Automation ===================== */}
 
-      <section className="py-12 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
@@ -270,7 +259,7 @@ const Technology = () => {
 
             <div className="relative overflow-hidden rounded-3xl">
               <img
-                src="/src/asstes/img_temp/servics/Bd/Business-Process-Automation.webp"
+                src={img1}
                 alt="Business Dashboard"
                 className="w-full scale-110 origin-center"
               />
@@ -324,7 +313,7 @@ const Technology = () => {
           <div className="text-center mb-20">
             <h2 className="text-6xl text-[#16244b]">
               Why choose our{" "}
-              <span className="text-light-blue font-extrabold">
+              <span className="text-dark-blue font-extrabold">
                 technology services?
               </span>
             </h2>
@@ -364,8 +353,8 @@ const Technology = () => {
                 className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center shrink-0">
-                    <FaCheckCircle className="text-white text-xl" />
+                  <div className="w-12 h-12 rounded-lg  flex items-center justify-center shrink-0">
+                    <img src={logo} alt="" />
                   </div>
 
                   <h3 className="text-xl font-bold text-[#16244b]">
@@ -401,7 +390,7 @@ const Technology = () => {
       {/* Technological Partner Section */}
 
       <section className="pt-15 bg-white overflow-hidden">
-        <div className=" mx-auto px-6">
+        <div className=" mx-auto max-w-7xl px-6">
           <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>

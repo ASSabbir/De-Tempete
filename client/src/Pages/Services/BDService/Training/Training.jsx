@@ -7,6 +7,8 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const servicesData = [
   {
     title: "Corporate Training Programs in Bangladesh",
@@ -55,7 +57,7 @@ const Training = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -84,21 +86,7 @@ const Training = () => {
         ctaText="Request Training Consultation"
       />
 
-      <StatsSection
-        bgColor="bg-white"
-        maxWidth="max-w-9xl"
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* About Our Training & Mentorship Solutions Section */}
       <section className="py-24 bg-white">
@@ -248,32 +236,7 @@ const Training = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title:
-              "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-            desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title:
-              "The Role and Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual CFO.",
-          },
-        ]}
-      />
+      
     </div>
   );
 };

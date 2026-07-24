@@ -9,16 +9,17 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 
-import tableau from "/src/asstes/img_temp/New folder/9-1.webp";
-import sage from "/src/asstes/img_temp/New folder/3-2.webp";
-import a from "/src/asstes/img_temp/New folder/11-1.webp";
-import b from "/src/asstes/img_temp/New folder/12-1-934x1024.webp";
-import c from "/src/asstes/img_temp/New folder/7-2.webp";
-import d from "/src/asstes/img_temp/New folder/8.webp";
-import e from "/src/asstes/img_temp/New folder/13-1.webp";
-import f from "/src/asstes/img_temp/New folder/6-1.webp";
-import g from "/src/asstes/img_temp/New folder/2.webp";
-
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
@@ -92,7 +93,7 @@ const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
@@ -112,19 +113,7 @@ const Investment = () => {
         ctaText="Request Consultation"
       />
 
-      <StatsSection
-        stats={[
-          { icon: BarChart3, end: 9, label: "Years of Experience" },
-          { icon: PieChart, end: 20, label: "Countries Covered" },
-          {
-            icon: TrendingUp,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Award, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* What We Offer Section */}
       <section className="py-24 bg-[#f8fbff]">
@@ -270,35 +259,12 @@ const Investment = () => {
         ]}
       />
 
-      <RecentBlogs
-        blogs={[
-          {
-            id: 1,
-            image: "/src/asstes/img_temp/New folder/council-tax.webp",
-            title:
-              "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-            desc: "Council tax can sometimes become a financial burden. Learn practical ways to create a manageable arrangement plan and avoid unnecessary penalties.",
-          },
-          {
-            id: 2,
-            image:
-              "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-            title: "Self-Assessment Tax Return Process for Businesses",
-            desc: "Understand the self-assessment tax return process with our comprehensive guide covering deadlines, documentation and compliance requirements.",
-          },
-          {
-            id: 3,
-            image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-            title: "The Role & Benefits of a Virtual CFO in Modern Businesses",
-            desc: "Discover how a Virtual CFO helps businesses improve financial planning, cash flow management and strategic decision-making.",
-          },
-        ]}
-      />
+      
 
       {/* Technological Partner Section */}
 
-      <section className="py-24 bg-white overflow-hidden">
-        <div className=" mx-auto px-6">
+      <section className="py-24  bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>

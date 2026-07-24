@@ -17,6 +17,15 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+import img1 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
+import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
+import img3 from '../../../../asstes/img_temp/servics/ACSP-Identity.webp'
+import img4 from '../../../../asstes/img_temp/servics/Payroll-Services.webp'
+import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const accountsCards = [
   {
@@ -147,7 +156,7 @@ const Compliance_Regulatory = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bgimg}
         alt="UK Compliance"
         heading={
           <>
@@ -165,8 +174,8 @@ const Compliance_Regulatory = () => {
             startup, SME, contractor, or growing business, our Compliance &
             Regulatory Services ensure accuracy, transparency, and full
             statutory compliance with zero hassle.
-            <br />
-            <br />
+            
+            
             <span className="text-lg md:text-xl text-gray-300">
               We handle the paperwork, deadlines, and reporting, so you stay
               focused on running your business.
@@ -175,19 +184,7 @@ const Compliance_Regulatory = () => {
         }
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Problem Statement */}
       <section className="py-24 bg-white">
@@ -235,7 +232,7 @@ const Compliance_Regulatory = () => {
               Company Accounts{" "}
               <span className="font-extrabold">Preparation & Filing</span>
             </h2>
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-[#2D7EF7] text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
               HMRC-Approved Annual Accounts
             </div>
             <p className="mt-7 text-lg text-gray-600 leading-8">
@@ -261,26 +258,24 @@ const Compliance_Regulatory = () => {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-light-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 duration-300 shadow-lg">
-              Explore Complete Business Setup Service Guide
-              <FaArrowRight />
-            </button>
+            
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/contact'}></SharedFullButton>
           </div>
         </div>
       </section>
 
       {/* Corporation Tax CT600 */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
+        <div className="max-w-[1300px] mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl leading-tight font-light text-[#16244b]">
+            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Corporation Tax</span> (CT600) Filing
             </h2>
-            <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
               Optimised CT600 filing that minimises tax liability and ensures
               compliance. Corporation Tax filing can be complex and missing
               deadlines can lead to penalties. Our expert team handles your
@@ -295,13 +290,13 @@ const Compliance_Regulatory = () => {
               return (
                 <div
                   key={index}
-                  className="p-4 hover:bg-white hover:shadow-xl rounded-3xl duration-300"
+                  className="p-4 hover:bg-white  rounded-3xl duration-300"
                 >
-                  <Icon className="text-5xl text-slate-500 mb-6" />
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
+                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full mb-6" />
+                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-lg leading-8">{item.desc}</p>
+                  <p className="text-gray-500 text-lg leading-6">{item.desc}</p>
                 </div>
               );
             })}
@@ -313,7 +308,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp"
+            src={img1}
             alt="Self-Assessment Tax Returns"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -370,7 +365,7 @@ const Compliance_Regulatory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp"
+            src={img2}
             alt="VAT Filing"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -381,7 +376,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/ACSP-Identity.webp"
+            src={img3}
             alt="ACSP Verification"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />{" "}
@@ -440,7 +435,7 @@ const Compliance_Regulatory = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/Payroll-Services.webp"
+            src={img4}
             alt="Payroll Services"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -451,7 +446,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp"
+            src={img5}
             alt="Pension Auto-Enrolment Compliance"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
@@ -512,6 +507,7 @@ const Compliance_Regulatory = () => {
                   onClick={() => toggleAccordion(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
+                  <img src={logo} className="w-8" alt="" />
                   <span className="font-semibold text-gray-900">
                     {item.title}
                   </span>
@@ -535,11 +531,11 @@ const Compliance_Regulatory = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-5xl m leading-tight text-white font-light">
               National Insurance{" "}
               <span className="font-bold">Contributions Assessment</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
               Accurate NIC Assessments for Employees, Directors & Self-Employed.
               We calculate and assess National Insurance Contributions based on
               the latest HMRC rules — ensuring every payment is correct and
@@ -570,7 +566,7 @@ const Compliance_Regulatory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our{" "}
               <span className="font-bold">UK Compliance Advisory</span>
             </h2>
@@ -608,7 +604,7 @@ const Compliance_Regulatory = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+     
     </div>
   );
 };
