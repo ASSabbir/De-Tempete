@@ -1,4 +1,4 @@
-import img1 from '../../../asstes/img_temp/KSA-Brochure-2048x1374.webp'
+import img1 from '../../../asstes/img_temp/usa.webp'
 import { Link } from "react-router";
 const BusinessSetupBook = () => {
   return (
