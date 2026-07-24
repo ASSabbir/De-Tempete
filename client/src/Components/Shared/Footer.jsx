@@ -121,7 +121,7 @@ const Footer = () => {
   },
   {
     title: "ESTONIA",
-    phone: "+44 7831 848639",
+    phone: "+372 5781 8653",
     address: "Volume 20/3, Tallinn 13516, Estonia",
   },
   {
@@ -134,10 +134,10 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-[#081B57] text-white mt-24 sm:mt-32 lg:mt-40 relative">      {/* Newsletter */}
+    <footer className="bg-dark-blue text-white mt-24 sm:mt-32 lg:mt-40 relative">      {/* Newsletter */}
       <div className="max-w-7xl mx-auto px-5 pt-25">
         <div className="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:-top-20 w-full max-w-7xl -mt-16 lg:mt-0">
-          <div className="bg-linear-to-r from-[#0A1B57] to-[#57D3EB] rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 border border-light-blue transition-all duration-500 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(74,196,222,0.35)]">
+          <div className="bg-linear-to-r from-dark-blue to-light-blue rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 border border-light-blue transition-all duration-500 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(74,196,222,0.35)]">
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold max-w-3xl text-center lg:text-left">
               Sign up for our newsletter to get update information, news,
               insights or promotions.

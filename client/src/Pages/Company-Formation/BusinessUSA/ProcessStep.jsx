@@ -3,27 +3,31 @@ import logo from "/src/asstes/img_temp/imgi_7_admin-ajax-rezdneyzuk6y7bcoroponv2
 const steps = [
   {
     title: "Step 01",
-    desc: "Choose your business activity and legal structure aligned with Saudi regulations",
+    desc: "Choose your business structure and state.",
   },
   {
     title: "Step 02",
-    desc: "Obtain MISA investment license for foreign ownership approval",
+    desc: "Reserve your company name and appoint a registered agent.",
   },
   {
     title: "Step 03",
-    desc: "Reserve trade name and finalize incorporation and Articles of Association",
+    desc: "File the incorporation documents with the state.",
   },
   {
     title: "Step 04",
-    desc: "Register company with Ministry of Commerce and obtain Commercial Registration",
+    desc: "Prepare the Operating Agreement and company records.",
   },
   {
     title: "Step 05",
-    desc: "Complete post-license registrations on Qiwa, GOSI, Zakat, and Absher",
+    desc: "Apply for your IRS Employer Identification Number (EIN).",
   },
   {
     title: "Step 06",
-    desc: "Open corporate bank account and process employee visas and Iqama",
+    desc: "Open a U.S. business bank account and secure an address.",
+  },
+  {
+    title: "Step 07",
+    desc: "Complete tax setup and ongoing compliance filings.",
   },
 ];
 
@@ -31,8 +35,9 @@ const positions = [
   "left-[5%] top-[-15px]",
   "left-1/2 -translate-x-1/2 top-[-15px]",
   "right-[5%] top-[-15px]",
+  "left-1/2 -translate-x-1/2 top-[170px]",
 
-  "left-[5%] top-[360px]",
+  "left-[5%]  top-[360px]",
   "left-1/2 -translate-x-1/2 top-[360px]",
   "right-[5%] top-[360px]",
 ];

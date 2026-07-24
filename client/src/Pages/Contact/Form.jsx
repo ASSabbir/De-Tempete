@@ -28,7 +28,7 @@ const offices = [
   {
     flag: ee,
     name: "Estonia ",
-    phone: "+44 7831 848639",
+    phone: "+372 5781 8653",
     address: "Volume 20/3, Tallinn 13516, Estonia",
   },
   {

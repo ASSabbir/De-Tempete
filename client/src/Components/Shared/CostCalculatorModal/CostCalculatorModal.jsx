@@ -85,14 +85,9 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
       answers: formData,
       submittedAt: new Date().toISOString(),
     };
-
     try {
-      const res = await fetch(SUBMISSION_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error("Submission failed");
+      await new Promise((resolve) => setTimeout(resolve, 800)); // fake network delay
+      console.log("Demo submission payload:", payload); // remove once backend is live
       setResult(calculateEstimate(country, formData));
     } catch (err) {
       setSubmitError(
@@ -101,6 +96,22 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
     } finally {
       setSubmitting(false);
     }
+
+    // try {
+    //   const res = await fetch(SUBMISSION_ENDPOINT, {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(payload),
+    //   });
+    //   if (!res.ok) throw new Error("Submission failed");
+    //   setResult(calculateEstimate(country, formData));
+    // } catch (err) {
+    //   setSubmitError(
+    //     "We couldn't submit your request right now. Please try again, or contact us directly."
+    //   );
+    // } finally {
+    //   setSubmitting(false);
+    // }
   };
 
   const resetAndClose = () => {

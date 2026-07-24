@@ -1,31 +1,31 @@
 const features = [
   {
-    title: "1- Access to the World's Largest Economy",
+    title: "Access to the World's Largest Economy",
     desc: "Operate within one of the most stable and powerful economies, offering unmatched business opportunities and consumer demand.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "2- Business-Friendly Environment",
+    title: "Business-Friendly Environment",
     desc: "Simple company formation processes, strong legal protections, and a highly supportive entrepreneurial ecosystem.",
     bg: "bg-white",
   },
   {
-    title: "3- Global Market Reach",
+    title: "Global Market Reach",
     desc: "Expand internationally while benefiting from the USA's extensive trade networks and global business reputation.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "4- Strong Banking & Financial System",
+    title: "Strong Banking & Financial System",
     desc: "Access world-class banking, payment processing, investment opportunities, and financial services.",
     bg: "bg-white",
   },
   {
-    title: "5- Ideal for Foreign Entrepreneurs",
+    title: "Ideal for Foreign Entrepreneurs",
     desc: "Non-residents can establish companies remotely and gain access to international clients and investors.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "6- Innovation & Growth Opportunities",
+    title: "Innovation & Growth Opportunities",
     desc: "Home to leading technology hubs, startup ecosystems, and venture capital networks supporting rapid business growth.",
     bg: "bg-white",
   },

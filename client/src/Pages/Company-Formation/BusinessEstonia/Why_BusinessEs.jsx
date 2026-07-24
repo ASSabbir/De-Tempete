@@ -1,31 +1,31 @@
 const features = [
   {
-    title: "1- 0% Tax on Retained Profits",
+    title: "0% Tax on Retained Profits",
     desc: "No corporate income tax while profits stay in the company. Tax applies only when dividends are distributed — at 22%.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "2- 100% Digital & Remote",
+    title: "100% Digital & Remote",
     desc: "Register in as little as one business day and manage everything online with e-Residency — no travel required.",
     bg: "bg-white",
   },
   {
-    title: "3- Full EU Market Access",
+    title: "Full EU Market Access",
     desc: "One company, 27 EU markets. Invoice, sell, and operate across the Single Market with SEPA banking and EU VAT recognition.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "4- 100% Foreign Ownership",
+    title: "100% Foreign Ownership",
     desc: "No local sponsor, partner, or resident director needed. Full control from day one, with share capital starting from €0.01.",
     bg: "bg-white",
   },
   {
-    title: "5- Low Setup & Running Costs",
+    title: "Low Setup & Running Costs",
     desc: "€265 state registration fee, €150 e-Residency, and typical first-year costs of €1,000–€3,000 including essential services.",
     bg: "bg-[#43ADCD]",
   },
   {
-    title: "6- Proven Startup Ecosystem",
+    title: "Proven Startup Ecosystem",
     desc: "The country behind Wise, Skype, and Bolt, offering one of Europe's lowest bureaucratic environments and a world-leading digital infrastructure.",
     bg: "bg-white",
   },

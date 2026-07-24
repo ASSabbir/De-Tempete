@@ -172,7 +172,7 @@ export default function LibraryPage({ region, title }) {
           {loading ? (
             <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
           ) : items.length === 0 ? (
-            <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>No results found</div>
+            <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Coming Soon</div>
           ) : items.map((item, idx) => (
             <div key={item._id} style={{
               display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',

@@ -60,7 +60,7 @@ const Marquee = ({
 
 const ReadyToStublish = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] py-24">
+    <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] pt-24">
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">

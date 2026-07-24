@@ -12,6 +12,7 @@ const placeholderStyle = { color: '#9aa0b3' };
 
 export default function DownloadGateModal({ resource, onClose }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', designation: '' });
+  const [agreed, setAgreed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -28,6 +29,10 @@ export default function DownloadGateModal({ resource, onClose }) {
   const handleSubmit = async () => {
     if (!form.name || !form.email || !form.phone) {
       setError('Name, email and phone are required');
+      return;
+    }
+    if (!agreed) {
+      setError('Please agree to the Terms & Conditions to continue');
       return;
     }
     setLoading(true);
@@ -87,6 +92,7 @@ export default function DownloadGateModal({ resource, onClose }) {
          <style>{`
           .dgm-input::placeholder { color: #6b7280; }
           .dgm-input:focus { outline: none; }
+          .dgm-checkbox { accent-color: #22b8e0; cursor: pointer; }
         `}</style>
 
         <input className="dgm-input" placeholder="Name" value={form.name}
@@ -98,7 +104,7 @@ export default function DownloadGateModal({ resource, onClose }) {
         <input className="dgm-input" placeholder="Phone" value={form.phone}
           style={{ ...inputStyle, background: '#1c2333', border: '1px solid #2d3650', borderRadius: 6, padding: '13px 16px', fontSize: 15, color: '#fff', marginBottom: 12 }}
           onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} />
-        <div style={{ display: 'flex', gap: 10, marginBottom: 0 }}>
+        <div style={{ display: 'flex', gap: 10, marginBottom: 16 }}>
           <input className="dgm-input" placeholder="Company" value={form.company}
             style={{ ...inputStyle, flex: 1, background: '#1c2333', border: '1px solid #2d3650', borderRadius: 6, padding: '13px 16px', fontSize: 15, color: '#fff', marginBottom: 0 }}
             onChange={e => setForm(p => ({ ...p, company: e.target.value }))} />
@@ -107,12 +113,29 @@ export default function DownloadGateModal({ resource, onClose }) {
             onChange={e => setForm(p => ({ ...p, designation: e.target.value }))} />
         </div>
 
-        <button onClick={handleSubmit} disabled={loading} style={{
+        <label style={{
+          display: 'flex', alignItems: 'flex-start', gap: 10,
+          fontSize: 13, color: '#cdd1dc', cursor: 'pointer',
+          marginBottom: 4, lineHeight: 1.5,
+        }}>
+          <input
+            type="checkbox"
+            className="dgm-checkbox"
+            checked={agreed}
+            onChange={e => { setAgreed(e.target.checked); if (error) setError(''); }}
+            style={{ width: 16, height: 16, marginTop: 2, flexShrink: 0 }}
+          />
+          <span>
+            I agree to the <a href="/terms-conditions" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Terms & Conditions</a> and <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Privacy Policy</a>
+          </span>
+        </label>
+
+        <button onClick={handleSubmit} disabled={loading || !agreed} style={{
           width: '100%', padding: '15px', marginTop: 14,
           background: 'linear-gradient(90deg, #38d1e8 0%, #22b8e0 100%)',
           color: '#0a1220', border: 'none',
           borderRadius: 8, fontWeight: 700, fontSize: 16,
-          cursor: loading ? 'not-allowed' : 'pointer', opacity: loading ? 0.7 : 1,
+          cursor: (loading || !agreed) ? 'not-allowed' : 'pointer', opacity: (loading || !agreed) ? 0.5 : 1,
           letterSpacing: 0.2,
         }}>
           {loading ? 'Submitting...' : 'Download Now'}

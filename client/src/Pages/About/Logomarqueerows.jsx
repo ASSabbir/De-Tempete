@@ -32,11 +32,14 @@ import img31 from '../../asstes/img_temp/about/up/31.jpg'
 import img32 from '../../asstes/img_temp/about/up/32.png'
 import img33 from '../../asstes/img_temp/about/up/33.png'
 
-
-// Handles both default-export and named-export builds of react-fast-marquee
-// so it works no matter which version is installed / however Vite pre-bundles it.
+// react-fast-marquee is being double-wrapped by Vite's CJS/ESM interop:
+// MarqueeModule = { default: { default: Marquee } }
+// So we dig through default.default first, then fall back to the other shapes.
 const MarqueeLib =
-  MarqueeModule.default || MarqueeModule.Marquee || MarqueeModule;
+  MarqueeModule.default?.default ||
+  MarqueeModule.default ||
+  MarqueeModule.Marquee ||
+  MarqueeModule;
 
 const ALL_LOGOS = [
   img1, img2, img3, img4, img5, img6, img7, img8,

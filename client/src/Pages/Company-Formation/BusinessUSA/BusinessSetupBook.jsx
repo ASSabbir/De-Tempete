@@ -47,7 +47,7 @@ const BusinessSetupBook = () => {
             </div>
 
             {/* Download Button */}
-            <Link to={'https://docs.google.com/document/d/1v0uyJExfCCLqtt4UAP6f7g5cdGYfQoDH/edit'}>
+            <Link to={'https://drive.google.com/file/d/1A0CCnvfsLW4eBF5bsc7qE0-NaYUixPfd/view'}>
             <button className="mt-12 bg-[#081B57] text-white px-10 py-5 rounded-xl text-lg font-medium hover:bg-[#10297c] transition duration-300 shadow-lg">
               Download Now
             </button></Link>
