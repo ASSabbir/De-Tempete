@@ -23,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
  * everything below reads from these two values only, so swapping the
  * palette doesn't mean hunting through class names.
  *
- * <EstoniaBusinessServices colors={{ light: "#eaf1fb", dark: "#0e2a47" }} />
+ * <EstoniaBusinessServices colors={{ light: "#3C9FC2", dark: "#0e2a47" }} />
  */
 
 const services = [
@@ -77,11 +77,9 @@ const services = [
   },
 ];
 
-export default function EstoniaBusinessServices({
-  colors = { light: "#eaf1fb", dark: "#0e2a47" },
-}) {
+export default function EstoniaBusinessServices() {
   const sectionRef = useRef(null);
-  const cssVars = { "--dt-light": colors.light, "--dt-dark": colors.dark };
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -116,7 +114,7 @@ export default function EstoniaBusinessServices({
   return (
     <section
       ref={sectionRef}
-      style={cssVars}
+      
       className="bg-white py-20 px-6 sm:px-8 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
@@ -143,7 +141,7 @@ export default function EstoniaBusinessServices({
               key={title}
               className="dt-service-card group  text-xl rounded-2xl p-7 bg-gray-100  transition-transform duration-500  hover:shadow-lg hover:shadow-slate-200/70"
             >
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-linear-to-br from-blue-400 to-light-blue transition-transform duration-300 group-hover:scale-105">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-linear-to-br from-light-blue to-light-blue transition-transform duration-300 group-hover:scale-105">
                 <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2.5">{title}</h3>

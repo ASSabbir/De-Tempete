@@ -257,7 +257,7 @@ const IndustrySpecificUSA = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-light-blue to-light-blue flex items-center justify-center text-white text-sm">
                       ✦
                     </div>
                     <span className="font-semibold text-gray-900">

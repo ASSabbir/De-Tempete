@@ -77,12 +77,16 @@ const whyChoose = [
     desc: "Building investment strategies aligned with sustainable expansion goals.",
   },
 ];
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const Investment = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Investment KSA"
         heading="Invest With Confidence."
         description={
@@ -99,24 +103,12 @@ const Investment = () => {
         ctaText="Get Expert Investment Advice"
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src={img1}
             alt="Investment & Business Growth Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -155,8 +147,8 @@ const Investment = () => {
           <div className="grid lg:grid-cols-3 gap-x-10 gap-y-12 max-w-4xl mx-auto">
             {handleCards.map((c, i) => (
               <div key={i} className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-light-blue rounded-xl flex items-center justify-center shrink-0">
-                  <c.icon className="text-light-blue text-2xl" />
+                <div className="w-14 h-14  rounded-xl flex items-center justify-center shrink-0">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-[#16244b] font-semibold text-sm">
                   {c.title}
@@ -198,7 +190,7 @@ const Investment = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src={img1}
             alt="Investment Planning & Market Opportunity Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -208,7 +200,7 @@ const Investment = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp"
+            src={img1}
             alt="Strategic Partnership & Business Expansion Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -251,7 +243,7 @@ const Investment = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-6 px-4 text-white font-medium"
+                className="bg-[#37456B] rounded-lg py-12 px-4 text-white font-medium"
               >
                 {g}
               </div>
@@ -285,12 +277,12 @@ const Investment = () => {
       <ConsultationCTA
         heading={
           <>
-            Start Your UAE
+            Start Your KSA
             <br />
             Expansion <span className="font-bold">Today</span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your KSA presence with confidence."
         commitmentItems={[
           "Free initial tax consultation — no obligation",
           "100% confidentiality and secure handling of data",

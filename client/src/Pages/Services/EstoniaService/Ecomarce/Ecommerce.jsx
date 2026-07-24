@@ -16,7 +16,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import img1 from '../../../../asstes/img_temp/e-xomarc.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
-
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const businessData = [
     {
@@ -471,7 +471,7 @@ const Ecommerce = () => {
                                 >
                                     <div className="flex items-center gap-3">
                                         <img
-                                            src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
+                                            src={logo}
                                             alt="check"
                                             className="w-5 h-5 object-contain shrink-0"
                                         />

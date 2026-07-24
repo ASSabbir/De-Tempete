@@ -9,31 +9,31 @@ import sa from '../../asstes/img_temp/Contact/5111777.webp';
 const offices = [
   {
     flag: uk,
-    name: "UK Office",
+    name: "UK ",
     phone: "+447831848639",
     address: "115 London Road, Morden, SM4 5HP, UK",
   },
   {
     flag: uae,
-    name: "UAE Office",
+    name: "UAE ",
     phone: "+971566994282",
     address: "Office 601/31, Business Village Block B - Port Saeed - Deira - Dubai - United Arab Emirates",
   },
   {
     flag: bd,
-    name: "Bangladesh Office",
+    name: "Bangladesh ",
     phone: "+88 0195 333 5155",
     address: "Bashati Xclusive, Flat - B4, House - 06, Road - 07, Niketon, Dhaka 1212, Bangladesh",
   },
   {
     flag: ee,
-    name: "Estonia Office",
+    name: "Estonia ",
     phone: "+44 7831 848639",
     address: "Volume 20/3, Tallinn 13516, Estonia",
   },
   {
     flag: sa,
-    name: "KSA Office",
+    name: "KSA ",
     phone: "+966 55 949 3954",
     address: "Office # 303, Al Mohamdia Tower, Custodian of the two Holy Mosques Road, Al Aqrabiyah City Al Khobar, Ash Sharqiyah, Saudia Arabia",
   },
@@ -42,7 +42,7 @@ const offices = [
 const socials = [
   {
     label: "Facebook",
-    path: "#",
+    path: "https://www.facebook.com/detempete",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -51,9 +51,15 @@ const socials = [
   },
   {
     label: "Instagram",
-    path: "#",
+    path: "https://www.instagram.com/detempetelimited",
     icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-4 h-4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
         <circle cx="12" cy="12" r="4" />
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
@@ -62,7 +68,7 @@ const socials = [
   },
   {
     label: "Twitter",
-    path: "#",
+    path: "https://x.com/DeTempeteHQ",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -71,7 +77,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    path: "#",
+    path: "https://www.linkedin.com/company/14612088/admin/dashboard/",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -81,7 +87,7 @@ const socials = [
   },
   {
     label: "YouTube",
-    path: "#",
+    path: "https://www.youtube.com/@detempete",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />

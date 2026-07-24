@@ -5,7 +5,16 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-in-KSA.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp'
+import img4 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp'
+import img5 from '../../../../asstes/img_temp/servics/KSA/Accounting-and-finanical-pro-management.webp'
+import img6 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
+import img7 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
 const handleTags = [
   "Accounting & bookkeeping support",
   "Financial report management",
@@ -92,7 +101,7 @@ const Finance_Accounting = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"
+        bgImage={bg}
         alt="Finance & Accounting KSA"
         heading={
           <>
@@ -104,24 +113,12 @@ const Finance_Accounting = () => {
         description="de tempête provides finance and accounting support services in Saudi Arabia, helping businesses maintain organized financial records, improve accounting accuracy, and support smooth day-to-day financial operations."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 9, label: "Years of Experience" },
-          { icon: Globe, end: 20, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 30000,
-            duration: 3000,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 120, duration: 2500, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Accounting-in-KSA.webp"
+            src={img1}
             alt="Reliable Finance & Accounting"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -167,7 +164,7 @@ const Finance_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
+            src={img2}
             alt="What We Handle For You"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -177,7 +174,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp"
+            src={img3}
             alt="Accounting & Bookkeeping"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -231,7 +228,7 @@ const Finance_Accounting = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp"
+            src={img4}
             alt="Financial Reporting & Business Documentation"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -241,7 +238,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Accounting-and-finanical-pro-management.webp"
+            src={img5}
             alt="Accounting Systems & Financial Process Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -293,7 +290,7 @@ const Finance_Accounting = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/VAT.webp"
+            src={img6}
             alt="VAT-Ready Financial Record Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -303,7 +300,7 @@ const Finance_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
+            src={img7}
             alt="Business Financial Operations Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -335,7 +332,7 @@ const Finance_Accounting = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className={`rounded-lg py-6 px-4 text-white font-medium ${i === 3 ? "bg-light-blue text-[#16244b]" : "bg-[#37456B]"}`}
+                className={`rounded-lg py-6 px-4 text-white font-medium bg-[#37456B]`}
               >
                 {g}
               </div>
@@ -356,8 +353,8 @@ const Finance_Accounting = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <div className="w-10 h-10 bg-light-blue/20 rounded-lg flex items-center justify-center mb-4">
-                  <FaCheckCircle className="text-light-blue" />
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
@@ -386,7 +383,7 @@ const Finance_Accounting = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      {/* <RecentBlogs blogs={blogPosts} /> */}
     </div>
   );
 };

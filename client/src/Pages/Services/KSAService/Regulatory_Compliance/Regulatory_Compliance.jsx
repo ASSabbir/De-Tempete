@@ -5,7 +5,15 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-
+import bg from '../../../../asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Regulatory-Compliance-Services-in-Saudi-Arabia.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp'
+import img4 from '../../../../asstes/img_temp/servics/KSA/INdustry-specific.webp'
+import img5 from '../../../../asstes/img_temp/servics/KSA/Modern-office-with-audit-tool.webp'
+import img6 from '../../../../asstes/img_temp/servics/KSA/Government-Platforms-Regulatory-Coordination.webp'
+import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 const handleTags = [
   "Regulatory Compliance Coordination",
   "ISO Documentation Support",
@@ -84,7 +92,7 @@ const Regulatory_Compliance = () => {
   return (
     <div className="w-full">
       <HeroSection
-        bgImage="/src/asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
+        bgImage={bg}
         heading={
           <>
             Regulatory & ISO Compliance
@@ -95,25 +103,13 @@ const Regulatory_Compliance = () => {
         description="de tempête helps businesses across Saudi Arabia strengthen regulatory compliance, operational compliance, and support long-term business growth through structured compliance and ISO support services."
       />
 
-      <StatsSection
-        stats={[
-          { icon: CalendarDays, end: 0, label: "Years of Experience" },
-          { icon: Globe, end: 0, label: "Countries Covered" },
-          {
-            icon: Handshake,
-            end: 1018,
-            duration: 2500,
-            label: "Clients Served",
-          },
-          { icon: Medal, end: 4, label: "Awards Received" },
-        ]}
-      />
+      <SecondSection></SecondSection>
 
       {/* Trusted Compliance Support */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Regulatory-Compliance-Services-in-Saudi-Arabia.webp"
+            src={img1}
             alt="Trusted Compliance Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -155,7 +151,7 @@ const Regulatory_Compliance = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-4 px-4 text-center text-white text-sm font-medium"
+                className="bg-[#37456B] rounded-lg py-10 px-4 text-center text-white text-sm font-medium"
               >
                 {t}
               </div>
@@ -192,7 +188,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp"
+            src={img2}
             alt="Regulatory Compliance Services"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -203,7 +199,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp"
+            src={img3}
             alt="ISO Certification & Process Alignment"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -268,7 +264,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/INdustry-specific.webp"
+            src={img4}
             alt="Industry-Specific Compliance Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -279,7 +275,7 @@ const Regulatory_Compliance = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/Modern-office-with-audit-tool.webp"
+            src={img5}
             alt="Risk Monitoring & Operational Compliance Reviews"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -330,7 +326,7 @@ const Regulatory_Compliance = () => {
             </div>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/Government-Platforms-Regulatory-Coordination.webp"
+            src={img6}
             alt="Government Platforms & Regulatory Coordination"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -343,7 +339,7 @@ const Regulatory_Compliance = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#16244b]">
               Why Businesses <span className="font-normal">Choose</span>{" "}
-              <span className="italic font-light">de tempête</span>
+              <span className="italic font-bold">de tempête</span>
             </h2>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
@@ -353,8 +349,8 @@ const Regulatory_Compliance = () => {
                 key={i}
                 className="bg-white border border-gray-200 rounded-2xl p-8 flex gap-4"
               >
-                <div className="w-10 h-10 bg-light-blue/20 rounded-lg flex items-center justify-center shrink-0">
-                  <FaCheckCircle className="text-light-blue" />
+                <div className="w-10 h-10  rounded-lg flex items-center justify-center shrink-0">
+                  <img src={logo} alt="" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
@@ -385,7 +381,7 @@ const Regulatory_Compliance = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+      
     </div>
   );
 };

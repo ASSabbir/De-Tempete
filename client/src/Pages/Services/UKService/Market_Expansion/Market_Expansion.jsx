@@ -19,6 +19,7 @@ import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-works
 import img3 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
 import img4 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import img6 from '../../../../asstes/img_temp/New folder/imgi_7_admin-ajax.webp'
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 
 const businessData = [
@@ -343,7 +344,7 @@ const Market_Expansion = () => {
                 >
                   <div className="flex items-center gap-3">
                     <img
-                      src="/src/asstes/img_temp/New folder/imgi_7_admin-ajax.webp"
+                      src={img6}
                       alt="check"
                       className="w-5 h-5 object-contain shrink-0"
                     />

@@ -11,7 +11,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-
+import img1 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
 const servicesData = [
   {
     title: "Accounting & Bookkeeping",
@@ -129,7 +129,7 @@ const FinanceUSA = () => {
             </div>
             <div>
               <img
-                src="/src/asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp"
+                src={img1}
                 alt="Financial Governance"
                 className="w-full h-107.5 object-cover rounded-3xl shadow-lg"
               />

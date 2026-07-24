@@ -31,6 +31,7 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 const industries = [
     {
         icon: LuGlobe,
@@ -258,8 +259,8 @@ const EUExpansion = () => {
                         {industries.map((item, index) => {
                             const Icon = item.icon;
                             return (
-                                <div key={index}>
-                                    <Icon className="text-4xl text-white bg-light-blue rounded-sm p-2 mb-5" />
+                                <div key={index} className="flex flex-col items-center text-center">
+                                    <Icon className="text-4xl text-light-blue bg-light-blue/20 rounded-sm p-2 mb-5" />
                                     <h3 className="text-xl font-bold text-[#16244b] mb-4">
                                         {item.title}
                                     </h3>
@@ -390,8 +391,8 @@ const EUExpansion = () => {
                                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-md bg-linear-to-br from-blue-400 to-light-blue flex items-center justify-center text-white text-sm">
-                                            ✦
+                                        <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                                            <img src={logo} alt="" />
                                         </div>
                                         <span className="font-semibold text-gray-900">
                                             {item.title}

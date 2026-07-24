@@ -6,6 +6,15 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
+import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-in-KSA.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp'
+import img3 from '../../../../asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp'
+import img4 from '../../../../asstes/img_temp/Home/bv.webp'
+import img5 from '../../../../asstes/img_temp/Home/HR-Payroll-Hero-section-1.webp'
+import img6 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
+import img7 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const handleTags = [
   "Accounting & bookkeeping support",
@@ -93,7 +102,7 @@ const Accounting = () => {
   return (
     <div className="w-full">
       
-      <SevicsBanner bgImage={"../../../src/asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp"} alt="Bangladesh Business Setup"
+      <SevicsBanner bgImage={bg} alt="Bangladesh Business Setup"
                 description="Estonia is one of Europe's most advanced digital economies, making it easier than ever to establish and manage your business remotely. Whether you're a startup, entrepreneur, or growing international company, our Estonia Company Formation services guide you through every stage—from e-Residency and registration to accounting, taxation, and ongoing compliance—with efficiency, transparency, and confidence."
                 title1={' Build Stronger Financial'}
                 title2={'Operations In Estonia'}
@@ -105,7 +114,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/img_temp/servics/KSA/Accounting-in-KSA.webp"
+            src={img1}
             alt="Reliable Finance & Accounting"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -151,7 +160,7 @@ const Accounting = () => {
             </div>
           </div>
           <img
-            src="../../../src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp"
+            src={img2}
             alt="What We Handle For You"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -161,7 +170,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp"
+            src={img3}
             alt="Accounting & Bookkeeping"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -215,7 +224,7 @@ const Accounting = () => {
             </div>
           </div>
           <img
-            src="../../../src/asstes/img_temp/Home/bv.webp"
+            src={img4}
             alt="Financial Reporting & Business Documentation"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -225,7 +234,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="../../../src/asstes/img_temp/Home/HR-Payroll-Hero-section-1.webp"
+            src={img5}
             alt="Accounting Systems & Financial Process Management"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -277,7 +286,7 @@ const Accounting = () => {
             </p>
           </div>
           <img
-            src="/src/asstes/img_temp/servics/KSA/VAT.webp"
+            src={img6}
             alt="VAT-Ready Financial Record Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -287,7 +296,7 @@ const Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src="/src/asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp"
+            src={img7}
             alt="Business Financial Operations Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -319,7 +328,7 @@ const Accounting = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className={`rounded-lg py-6 px-4 text-white font-medium ${i === 3 ? "bg-light-blue text-[#16244b]" : "bg-[#37456B]"}`}
+                className={`rounded-lg py-12 px-4 text-white font-medium bg-[#37456B]`}
               >
                 {g}
               </div>
@@ -335,13 +344,13 @@ const Accounting = () => {
               Why Choose <span className="font-normal italic">de tempête</span>{" "}
               for Finance & Accounting
             </h2>
-            <div className="w-16 h-0.5 bg-linear-to-br from-blue-400 to-light-blue mx-auto mt-6" />
+            <div className="w-16 h-0.5 bg-linear-to-br from-light-blue to-light-blue mx-auto mt-6" />
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <div className="w-10 h-10 bg-linear-to-br from-blue-400 to-light-blue rounded-lg flex items-center justify-center mb-4">
-                  <FaCheckCircle className="text-white" />
+                <div className="w-10 h-10  rounded-lg flex items-center justify-center mb-4">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
