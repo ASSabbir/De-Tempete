@@ -81,7 +81,7 @@ function StatItem({ icon, value, suffix, label, start }) {
     <div className="flex items-center gap-3 sm:gap-4">
       <div className="shrink-0 opacity-80">{icon}</div>
       <div>
-        <div className="text-2xl sm:text-3xl font-extrabold text-[#0d1e4a] leading-none">
+        <div className="text-2xl 2xl:text-3xl font-extrabold text-[#0d1e4a] leading-none">
           {display}{suffix}
         </div>
         <div className="text-xs sm:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
@@ -141,14 +141,14 @@ export default function WhyChoose() {
               We Simplify <span className="font-extrabold">Business Growth</span>
             </h2>
 
-            <div className="space-y-4 text-[15px] text-gray-600 leading-relaxed">
+            <div className="space-y-4 text-[1vw] text-gray-600 leading-relaxed">
               <p>
                 <span className="font-bold italic text-[#0d1e4a]">de tempête</span> is a global accounting and
                 business advisory firm providing end-to-end business solutions — from company formation to finance
                 management, business automation, valuation, and investment guidance.
               </p>
               <p>
-                With registered presence in the UK, UAE, KSA, Estonia and Bangladesh, we empower companies to operate
+                With registered presence in the UK, UAE, KSA, Estonia, USA and Bangladesh, we empower companies to operate
                 efficiently, remain compliant, and grow sustainably across borders.
               </p>
               <p>

@@ -590,18 +590,18 @@ const Compliance_Regulatory = () => {
       <ConsultationCTA
         heading={
           <>
-            Start Your UAE
+            Start Your UK
             <br />
             Expansion <span className="font-bold">Today</span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
         commitmentItems={[
-          "Free initial tax consultation — no obligation",
-          "100% confidentiality and secure handling of data",
-          "Region-specific tax experts",
-          "Transparent and practical advice tailored to your needs",
-        ]}
+  "Free initial UK compliance consultation — no obligation",
+  "100% confidential handling of your business and regulatory information",
+  "Expert guidance on UK regulatory and statutory compliance",
+  "Practical, transparent support to keep your business fully compliant",
+]}
       />
 
      

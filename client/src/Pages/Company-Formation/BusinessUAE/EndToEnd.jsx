@@ -26,6 +26,17 @@ const steps = [
   {
     number: "3",
     step: "Step 03",
+    title: "Investor & Employee Visa Processing",
+    points: [
+      "Investor, partner, and employment visas",
+      "Emirates ID & medical test coordination",
+      "Visa quota approvals & renewals",
+      "PRO support for immigration processes",
+    ],
+  },
+  {
+    number: "4",
+    step: "Step 04",
     title: "Corporate Bank Account Opening",
     points: [
       "Bank selection based on business activity",
@@ -35,8 +46,8 @@ const steps = [
     ],
   },
   {
-    number: "4",
-    step: "Step 04",
+    number: "5",
+    step: "Step 05",
     title: "Accounting, Tax Registration & CFO Advisory",
     points: [
       "VAT & Corporate Tax registration",
@@ -46,8 +57,8 @@ const steps = [
     ],
   },
   {
-    number: "5",
-    step: "Step 05",
+    number: "6",
+    step: "Step 06",
     title: "Trademark & IP Protection",
     points: [
       "Trademark search & registration",
@@ -56,24 +67,13 @@ const steps = [
       "Renewal & infringement support",
     ],
   },
-  {
-    number: "6",
-    step: "Step 06",
-    title: "Business Growth & Ongoing Compliance",
-    points: [
-      "Annual license renewals",
-      "PRO & visa services",
-      "Regulatory compliance monitoring",
-      "Long-term business advisory support",
-    ],
-  },
 ];
 
 const EndToEnd = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="bg-[#ebebeb] py-14 sm:py-20 lg:py-24">
+    <section className="bg-white py-14 sm:py-20 lg:py-24">
       <style>{`
         @keyframes fadeSlideIn {
           from { opacity: 0; transform: translateY(10px); }
@@ -100,7 +100,7 @@ const EndToEnd = () => {
 
         {/* Heading */}
         <div className="text-center mb-14 sm:mb-20 lg:mb-24 px-2">
-          <h2 className="text-[#081B57] text-3xl sm:text-5xl lg:text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-[3vw] 2xl:text-[2.6rem] font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>

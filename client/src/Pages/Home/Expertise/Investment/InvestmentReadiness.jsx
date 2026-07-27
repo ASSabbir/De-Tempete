@@ -17,6 +17,12 @@ const InvestmentReadiness = () => {
         "Optimize fundraising strategy for long-term business growth",
         "Build investor trust with transparent financial insights",
     ];
+    const commitments = [
+  "Free initial investment readiness consultation — no obligation",
+  "100% confidential handling of all business and financial information",
+  "Investor-focused assessment to strengthen your funding readiness",
+  "Clear, actionable strategies to prepare your business for investment and growth",
+];
     const keyBenefittext=['Unlock the Right ','Investment Opportunities']
     return (
         <div>
@@ -25,7 +31,7 @@ const InvestmentReadiness = () => {
             <InvestmentReadinessServices></InvestmentReadinessServices>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <InvestmentFAQ></InvestmentFAQ>
-            <GetStarted></GetStarted>
+            <GetStarted commitments={commitments}></GetStarted>
             <Awards></Awards>
         </div>
     );

@@ -8,7 +8,7 @@ const WhyPost = () => {
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
+          <h2 className="text-[3vw] 2xl:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
             Why Does Investors Need
             <br className="hidden sm:block" />
             <span className="font-extrabold">Post-Investment Monitoring</span>

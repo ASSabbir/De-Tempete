@@ -73,22 +73,61 @@ function StatCard({ stat, index, start }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="rounded-2xl p-6 flex flex-col gap-3"
-      style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
+      whileHover={{  }}
+      className="group relative rounded-2xl p-6 flex flex-col gap-3 overflow-hidden transition-all duration-500"
+      style={{
+        background: "rgba(255,255,255,0.06)",
+        border: "1px solid rgba(255,255,255,0.08)",
+      }}
     >
+      {/* Animated gradient border glow — appears on hover */}
+      <div
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(34,211,238,0.4), transparent 40%, transparent 60%, rgba(34,211,238,0.3))",
+          padding: "1px",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+        }}
+      />
+
+      {/* Soft cyan bloom in the corner */}
+      <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-400/0 group-hover:bg-cyan-400/20 rounded-full blur-3xl transition-all duration-700 pointer-events-none" />
+
+      {/* Subtle top sheen sweep */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden rounded-2xl">
+        <div
+          className="absolute -inset-x-full top-0 h-full w-1/2 -skew-x-12 bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-[250%] transition-transform duration-1000 ease-out"
+        />
+      </div>
+
       {/* Icon */}
-      <div className="text-3xl text-light-blue">{stat.icon}</div>
+      <div className="relative z-10 text-3xl text-light-blue transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-0.5 w-fit">
+        <div className="absolute inset-0 blur-lg bg-cyan-400/0 group-hover:bg-cyan-400/40 rounded-full transition-all duration-500 -z-10" />
+        {stat.icon}
+      </div>
 
       {/* Number */}
-      <div className="text-3xl sm:text-4xl font-extrabold text-white">
-        {count}{stat.suffix}
+      <div className="relative z-10 text-3xl sm:text-4xl font-extrabold text-white transition-all duration-500 group-hover:tracking-wide">
+        {count}
+        {stat.suffix}
       </div>
 
       {/* Label */}
-      <div className="text-light-blue font-semibold text-sl">{stat.label}</div>
+      <div className="relative z-10 text-light-blue font-semibold text-sl transition-colors duration-500 group-hover:text-cyan-300">
+        {stat.label}
+      </div>
 
       {/* Desc */}
-      <p className="text-white/50 text-xs sm:text-sm leading-relaxed">{stat.desc}</p>
+      <p className="relative z-10 text-white/50 text-xs sm:text-sm leading-relaxed transition-colors duration-500 group-hover:text-white/70">
+        {stat.desc}
+      </p>
+
+      {/* Bottom accent line — grows on hover */}
+      <div className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full bg-linear-to-r from-cyan-400 via-cyan-300 to-transparent transition-all duration-700 ease-out" />
     </motion.div>
   );
 }
@@ -140,7 +179,7 @@ export default function HrAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl text-white font-normal leading-tight"
+              className="text-[3vw] 2xl:text-[2.6rem] text-white font-normal leading-tight"
             >
               What We
               <br />
@@ -155,7 +194,7 @@ export default function HrAdvantage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-white/60 text-sm sm:text-base leading-relaxed max-w-md"
             >
-             We manage the essential HR functions that keep your workforce structured, compliant, and efficient. From employee lifecycle management to policy and performance support, our approach ensures smooth day-to-day operations without adding administrative burden to your business.
+              We manage the essential HR functions that keep your workforce structured, compliant, and efficient. From employee lifecycle management to policy and performance support, our approach ensures smooth day-to-day operations without adding administrative burden to your business.
             </motion.p>
 
             {/* Bullets */}
@@ -166,7 +205,7 @@ export default function HrAdvantage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col gap-3"
             >
-              
+
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-3 text-white/70 text-sm">
                   <svg className="w-5 h-5 shrink-0 text-[#1a9fd4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

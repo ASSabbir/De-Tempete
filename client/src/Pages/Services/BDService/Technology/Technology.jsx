@@ -139,7 +139,7 @@ const Technology = () => {
         description={
           <>
             Unlock growth opportunities with investment and partnership
-            facilitation services in Bangladesh. <strong>de tempête</strong>{" "}
+            facilitation services in Bangladesh. <strong><i>de tempête</i></strong>{" "}
             connects businesses with the right investors, partners, and market
             opportunities, helping you expand, collaborate, and scale with
             confidence in Bangladesh's growing economy.

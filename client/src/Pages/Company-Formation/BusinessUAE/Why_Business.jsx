@@ -5,13 +5,13 @@ const Why_Business = () => {
 
         {/* Left Content */}
         <div>
-          <h2 className="text-[#14224A] text-5xl font-light leading-tight">
+          <h2 className="text-[#14224A] text-[3vw] font-light leading-tight">
             Why Start A
             <br />
             <span className="font-bold">Business In The UAE?</span>
           </h2>
 
-          <p className="mt-8 text-[#39425B] text-lg text-justify">
+          <p className="mt-8 text-[#39425B] text-[1vw] text-justify">
             The United Arab Emirates (UAE) is one of the world's leading
             destinations for entrepreneurs, startups, and international
             investors looking to establish and expand their businesses.
@@ -31,46 +31,45 @@ const Why_Business = () => {
         {/* Right Cards */}
         <div className="grid grid-cols-2 gap-5">
 
-          <div className="bg-[#43ADCD] rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
-            <h3 className="text-[#14224A] text-3xl font-medium">
-              100%
-              <span className="text-lg font-normal">
-                {" "}foreign ownership
-              </span>
-              <br />
-              <span className="text-lg font-normal">
-                in many sectors
-              </span>
-            </h3>
-          </div>
+  <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+    <h3 className="text-[#14224A] text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
+      100%
+      <span className="text-lg font-normal">
+        {" "}foreign ownership
+      </span>
+      <br />
+      <span className="text-lg font-normal">
+        in many sectors
+      </span>
+    </h3>
+  </div>
 
-          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
-            <h3 className="text-[#14224A] text-3xl font-medium">
-              0%
-              <span className="text-lg font-normal">
-                {" "}corporate tax for
-              </span>
-              <br />
-              <span className="text-lg font-normal">
-                qualifying free-zone businesses
-              </span>
-            </h3>
-          </div>
+  <div className="group bg-white hover:bg-[#f0fafd] rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+    <h3 className="text-[#14224A] text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
+      0%
+      <span className="text-lg font-normal">
+        {" "}corporate tax for
+      </span>
+      <br />
+      <span className="text-lg font-normal">
+        qualifying free-zone businesses
+      </span>
+    </h3>
+  </div>
 
-          <div className="bg-white rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
-            <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
-              Simple digital registration and visa processes
-            </h3>
-          </div>
+  <div className="group bg-white hover:bg-[#f0fafd] rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+    <h3 className="text-[#14224A] text-xl font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
+      Simple digital registration and visa processes
+    </h3>
+  </div>
 
-          <div className="bg-[#43ADCD] rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
-            <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
-              Access to global markets and skilled professionals
-            </h3>
-          </div>
+  <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+    <h3 className="text-[#14224A] text-xl font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
+      Access to global markets and skilled professionals
+    </h3>
+  </div>
 
-        </div>
-
+</div>
       </div>
     </section>
   );

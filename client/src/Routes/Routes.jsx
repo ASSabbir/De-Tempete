@@ -96,12 +96,14 @@ import BlogList from "../Pages/Blogs/BlogList";
 import BlogSingle from "../Pages/Blogs/BlogSingle";
 import PrivacyPolicy from "../Components/Shared/PrivacyPolicy";
 import TermsConditions from "../Components/Shared/TermsConditions";
+import NotFound from "./NotFound";
 
 
 const Routes = createBrowserRouter([ 
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <NotFound></NotFound>,
    children:[
       // ===== HOME =====
       {path:"/" , element :<Home></Home>},
@@ -218,6 +220,7 @@ const Routes = createBrowserRouter([
 
       { path: "/privacy-policy", element: <PrivacyPolicy></PrivacyPolicy> },
       { path: "/terms-conditions", element: <TermsConditions></TermsConditions> },
+      
       
     ]
   }

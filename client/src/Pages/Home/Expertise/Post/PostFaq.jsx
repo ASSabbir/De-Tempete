@@ -110,7 +110,7 @@ export default function PostFaq() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading */}
-                <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+                <h2 className="text-center text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
                     Frequently Asked <span className="font-extrabold">Questions</span>
                 </h2>
 

@@ -104,9 +104,9 @@ const Business_Advisory = () => {
       <SevicsBanner
         bgImage={bgimg}
         alt="USA Business Advisory & Strategy Services"
-        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help US businesses navigate major decisions with clarity, data, and expert guidance at every stage."
+        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help UK business navigate major decisions with clarity, data, and expert guidance at every stage."
         title1={"Strategic Advisory"}
-        title2={"For Every Stage Of Your US Business"}
+        title2={"For Every Stage Of Your UK Business"}
       ></SevicsBanner>
 
       {/* Strategic Business Advisory Overview */}
@@ -295,7 +295,7 @@ const Business_Advisory = () => {
               <br />
               We create actionable financial strategies that enhance
               profitability, strengthen cash flow, and support sustainable
-              business expansion across your US operations.
+              business expansion across your UK operations.
             </p>
             <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
@@ -350,7 +350,7 @@ const Business_Advisory = () => {
 
       <ConsultationCTA
         heading={<>Make Smarter Business<br />Decisions <span className="font-bold">Today</span></>}
-        bodyText="Get expert guidance to value, grow, restructure, or exit your US business with confidence."
+        bodyText="Get expert guidance to value, grow, restructure, or exit your UK business with confidence."
         highlightText="Talk to Our Business Advisors"
       />
 

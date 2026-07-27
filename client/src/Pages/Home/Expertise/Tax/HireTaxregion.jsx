@@ -24,18 +24,18 @@ const regions = [
     ],
   },
   {
-    id: "ksa",
-    tab: "KSA (Saudi Arabia)",
-    flag: ksa,
-    shortName: "KSA",
-    path: '/services/ksa/taxation',
+    id: "uk",
+    tab: "UK",
+    flag: uk,
+    path: '/services/uk/tax-planning',
+    shortName: "UK",
     description:
-      "Navigate ZATCA regulations and optimize your tax structure to align with Saudi Vision 2030.",
+      "Stay ahead of HMRC regulations and manage your business taxes strategically to enhance profitability and compliance.",
     focusAreas: [
-      "ZATCA compliance",
-      "Transfer pricing",
+      "HMRC compliance",
       "VAT planning",
-      "Corporate tax strategy",
+      "Corporate tax planning",
+      "Audit & filing",
     ],
   },
   {
@@ -54,23 +54,25 @@ const regions = [
     ],
   },
   {
-    id: "uk",
-    tab: "United Kingdom (UK)",
-    flag: uk,
-    path: '/services/uk/tax-planning',
-    shortName: "UK",
+    id: "ksa",
+    tab: "KSA ",
+    flag: ksa,
+    shortName: "KSA",
+    path: '/services/ksa/taxation',
     description:
-      "Stay ahead of HMRC regulations and manage your business taxes strategically to enhance profitability and compliance.",
+      "Navigate ZATCA regulations and optimize your tax structure to align with Saudi Vision 2030.",
     focusAreas: [
-      "HMRC compliance",
+      "ZATCA compliance",
+      "Transfer pricing",
       "VAT planning",
-      "Corporate tax planning",
-      "Audit & filing",
+      "Corporate tax strategy",
     ],
   },
+  
+  
   {
     id: "usa",
-    tab: "USA (United States)",
+    tab: "USA ",
     flag: us,
     path: '/services/usa/tax-planning',
     shortName: "USA",
@@ -111,7 +113,7 @@ export default function HireTaxRegion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-4">
             Tax Advisory <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -166,7 +168,7 @@ export default function HireTaxRegion() {
                 className="w-full rounded-xl flex justify-center p-6 sm:p-8 text-left mt-2"
 
               >
-                <SharedFullButton text={`Get a Free HR Consultation in ${current.shortName}`} path={current.path}></SharedFullButton>
+                <SharedFullButton text={`Get a Free Tax Consultation in ${current.shortName}`} path={current.path}></SharedFullButton>
 
               </div>
 

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router";
+import SharedButton from "../../Components/Shared/SharedButton";
 
 /**
  * Reusable Marquee component.
@@ -63,22 +64,19 @@ const ReadyToStublish = () => {
     <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] pt-24">
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
-        <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+        <h2 className="text-[4vw] font-bold leading-tight">
           Your Trusted Partner for Global Accounting, Compliance & Business
           Formation.
         </h2>
 
-        <Link to={'/contact'}>
-        <button className="mt-10 border-2 border-white hover:border-light-blue hover:text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-light-blue cursor-pointer duration-300">
-          Get Started Now
-        </button>
-        </Link>
+        
+        <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
       </div>
 
       {/* Bottom Marquee */}
       <div className="relative mt-20 w-full pointer-events-none">
         <Marquee speed={120}>
-          <span className="text-[60px] md:text-[150px] font-extrabold leading-[0.8] text-white/10">
+          <span className="text-[10vw] font-extrabold leading-[0.8] text-white/10">
             9 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017 .
           </span>
         </Marquee>

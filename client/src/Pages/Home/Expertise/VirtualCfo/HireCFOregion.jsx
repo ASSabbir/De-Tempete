@@ -22,19 +22,20 @@ const regions = [
     ],
   },
   {
-    id: "ksa",
-    tab: "KSA (Saudi Arabia)",
-    flag: ksa,
-    shortName: "KSA",
+    id: "uk",
+    tab: "UK",
+    flag: uk,
+    shortName: "UK",
     description:
-      "With Vision 2030 driving rapid business transformation, Saudi companies need strong financial leadership. Our Virtual CFOs specialize in ZATCA compliance, VAT, and capital structuring to support your growth and ensure full financial transparency.",
+      "Stay ahead in one of the world’s most competitive business markets. Our UK-based Virtual CFOs help startups and SMEs manage cash flow, meet HMRC requirements, and drive strategic growth through real-time financial insights and planning.",
     focusAreas: [
-      "ZATCA & VAT compliance",
-      "Cost control",
-      "Cash flow optimization",
-      "Investment readiness",
+      "HMRC compliance",
+      "Strategic planning",
+      "Profit optimization",
+      "Financial reporting (FRS)",
     ],
   },
+  
   {
     id: "bd",
     tab: "Bangladesh",
@@ -50,22 +51,23 @@ const regions = [
     ],
   },
   {
-    id: "uk",
-    tab: "United Kingdom (UK)",
-    flag: uk,
-    shortName: "UK",
+    id: "ksa",
+    tab: "KSA",
+    flag: ksa,
+    shortName: "KSA",
     description:
-      "Stay ahead in one of the world’s most competitive business markets. Our UK-based Virtual CFOs help startups and SMEs manage cash flow, meet HMRC requirements, and drive strategic growth through real-time financial insights and planning.",
+      "With Vision 2030 driving rapid business transformation, Saudi companies need strong financial leadership. Our Virtual CFOs specialize in ZATCA compliance, VAT, and capital structuring to support your growth and ensure full financial transparency.",
     focusAreas: [
-      "HMRC compliance",
-      "Strategic planning",
-      "Profit optimization",
-      "Financial reporting (FRS)",
+      "ZATCA & VAT compliance",
+      "Cost control",
+      "Cash flow optimization",
+      "Investment readiness",
     ],
   },
+  
   {
   id: "usa",
-  tab: "USA (United States)",
+  tab: "USA ",
   flag: us,
   shortName: "USA",
   description:
@@ -104,7 +106,7 @@ export default function HireCFORegion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-4">
             Hire A Virtual CFO <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">

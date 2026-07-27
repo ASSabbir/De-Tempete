@@ -9,7 +9,7 @@ export default function KeyBenefits({benefits,keyBenefittext}) {
 
         {/* Heading */}
         <div className="text-center mb-3">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-snug">
+          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-white font-normal leading-snug">
             <span className="font-extrabold">{keyBenefittext[0]}</span> {keyBenefittext[1]}
           </h2>
         </div>
@@ -41,7 +41,7 @@ export default function KeyBenefits({benefits,keyBenefittext}) {
               <div className="text-4xl p-2 text-white rounded-xl bg-light-blue">
                 <HiChartBar />
               </div>
-              <p className="text-white  font-inter text-sm sm:text-base leading-snug">
+              <p className="text-white  font-inter text-[1vw] leading-snug">
                 {text}
               </p>
             </motion.div>

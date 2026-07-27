@@ -70,7 +70,7 @@ export default function Resources() {
     <section className="bg-white w-full py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-center text-5xl sm:text-7xl lg:text-[7rem] font-black text-[#0d1e4a] tracking-tight leading-none mb-10 lg:mb-14 uppercase">
+        <h2 className="text-center text-[5vw] font-black text-[#0d1e4a] tracking-tight leading-none mb-10 lg:mb-14 uppercase">
           Resources
         </h2>
 

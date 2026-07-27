@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 const faqs = [
   {
-    q: "01. How can I register a company in the UK, UAE, KSA, Estonia or Bangladesh?",
+    q: "01. How can I register a company in the UK, UAE, KSA, Estonia, USA or Bangladesh?",
     a: "You can register a company by submitting the required documents (ID, proof of address, business plan), choosing your business type, and completing local compliance formalities. We guide you step-by-step to ensure the process is smooth and legally compliant.",
   },
   {
@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "03. How do you help with tax advisory and compliance?",
-    a: "We analyze your financials, identify tax-saving opportunities, prepare filings, and ensure your business complies with local regulations in the UK, UAE, KSA, Estonia or Bangladesh — so you minimize liabilities and avoid penalties.",
+    a: "We analyze your financials, identify tax-saving opportunities, prepare filings, and ensure your business complies with local regulations in the UK, UAE, KSA, Estonia, USA or Bangladesh — so you minimize liabilities and avoid penalties.",
   },
   {
     q: "04. How can you prepare my business for investment?",
@@ -44,7 +44,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
         className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-5 text-left group"
       >
         <span
-          className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${
+          className={`text-[1.3vw] font-semibold transition-colors duration-200 ${
             isOpen ? "text-[#0d1e4a]" : "text-[#0d1e4a] group-hover:text-[#1a9fd4]"
           }`}
         >
@@ -81,7 +81,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
           transition: "max-height 0.4s ease",
         }}
       >
-        <p className="px-5 sm:px-7 pb-5 text-sm sm:text-[15px] text-gray-500 leading-relaxed">
+        <p className="px-5 sm:px-7 pb-5 text-[1vw] text-gray-500 leading-relaxed">
           {faq.a}
         </p>
       </div>
@@ -101,7 +101,7 @@ export default function FAQ() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-center text-[3vw] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Frequently Asked <span className="font-extrabold">Questions</span>
         </h2>
 

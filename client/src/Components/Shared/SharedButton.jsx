@@ -68,7 +68,7 @@ const SharedButton = ({ text,path }) => {
 
       <div>
         <a href={path || '/'}>
-          <button className="shared-btn text-lg">
+          <button className="shared-btn text-lg ">
             {text || "Contact Us"}
           </button>
         </a>

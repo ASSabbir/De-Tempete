@@ -479,50 +479,7 @@ const Market_Expansion = () => {
 
       {/* ================= Investor Visa ================= */}
 
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-
-          <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl  leading-tight text-white font-light">
-              <span className="font-bold">Investor Visa</span> &
-              <span className="font-bold"> UAE Residency</span> Support
-            </h2>
-
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
-              For foreign investors and key employees, we provide guidance on
-              Bangladesh investor visas, work permits, residency processes and
-              compliance documentation.
-            </p>
-
-            <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
-          </div>
-
-          {/* Cards */}
-
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
-            {[
-              "Investor & Work Visa Guidance",
-              "Residency & Compliance Support",
-              "Application Documentation Help",
-              "Smooth Approval Process",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
-              >
-                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-5xl" />
-                </div>
-
-                <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
-                  {item}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Why Choose Us */}
       {/* ================= Why Choose Us ================= */}
