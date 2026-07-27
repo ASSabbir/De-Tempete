@@ -7,8 +7,10 @@ const links = [
   { to: '/publications', label: '📄 Publications' },
   { to: '/forms', label: '📋 Forms' },
   { to: '/leads', label: '📥 Downloads' },
+  { to: '/business-setup-leads', label: '📥 Business Setup Downloads' },
   { to: '/news-events', label: '📰 News & Events' },
   { to: '/blogs', label: '📰 Blogs' },
+  
 ];
 
 const linkBase = {

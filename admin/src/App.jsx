@@ -9,6 +9,7 @@ import Forms from './pages/Forms';
 import Leads from './pages/Leads';
 import NewsEvents from './pages/NewsEvents';
 import Blogs from './pages/Blogs';
+import BusinessSetupLeads from './pages/Businesssetupleads';
 
 function ProtectedLayout() {
   const { admin } = useAuth();
@@ -23,6 +24,7 @@ function ProtectedLayout() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/forms" element={<Forms />} />
           <Route path="/leads" element={<Leads />} />
+          <Route path="/business-setup-leads" element={<BusinessSetupLeads />} />
           <Route path="/news-events" element={<NewsEvents />} />
           <Route path="/blogs" element={<Blogs></Blogs>} />
           <Route path="*" element={<Navigate to="/" replace />} />
