@@ -229,7 +229,7 @@ const Ecommerce = () => {
                                 Accounting Solutions
                             </h2>
 
-                            <p className="mt-8 text-xl leading-9 text-gray-500">
+                            <p className="mt-8 text-xl leading-7 text-gray-500">
                                 Running an online business requires accurate financial management across
                                 multiple sales channels and payment platforms. We provide specialized
                                 accounting services for e-commerce businesses, helping you maintain accurate
@@ -272,7 +272,7 @@ const Ecommerce = () => {
                                 Reporting
                             </h2>
 
-                            <p className="mt-8 text-xl leading-9 text-gray-500">
+                            <p className="mt-8 text-xl leading-7 text-gray-500">
                                 SaaS businesses require accounting that reflects recurring revenue models,
                                 subscription billing, and performance metrics. We deliver accounting and
                                 financial reporting solutions that help you manage subscriptions, maintain
@@ -327,7 +327,7 @@ const Ecommerce = () => {
                             <span className="font-bold"> Digital Businesses</span>
                         </h2>
 
-                        <p className="mt-8 text-base text-slate-300 leading-9 max-w-4xl mx-auto">
+                        <p className="mt-8 text-base text-slate-300 leading-7 max-w-4xl mx-auto">
                             Our accounting solutions are designed specifically for e-commerce
                             businesses, SaaS companies, and digital entrepreneurs. We simplify
                             financial management, ensure tax compliance, and provide the insights

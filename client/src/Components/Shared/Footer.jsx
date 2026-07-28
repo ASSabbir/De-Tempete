@@ -55,8 +55,10 @@ const footerColumns = [
     title: "PUBLICATIONS",
     links: [
       { label: "UAE", path: "/publications/uae" },
-      { label: "KSA", path: "/publications/ksa" },
       { label: "UK", path: "/publications/uk" },
+      { label: "KSA", path: "/publications/ksa" },
+      { label: "USA", path: "/publications/usa" },
+      { label: "Estonia", path: "/publications/estonia" },
       { label: "Bangladesh", path: "/publications/bangladesh" },
     ],
   },
@@ -64,8 +66,10 @@ const footerColumns = [
     title: "LIBRARY",
     links: [
       { label: "UAE", path: "/library/uae" },
-      { label: "KSA", path: "/library/ksa" },
       { label: "UK", path: "/library/uk" },
+      { label: "KSA", path: "/library/ksa" },
+      { label: "USA", path: "/library/usa" },
+      { label: "Estonia", path: "/library/estonia" },
       { label: "Bangladesh", path: "/library/bangladesh" },
     ],
   },
@@ -73,10 +77,11 @@ const footerColumns = [
     title: "FORMS",
     links: [
       { label: "UAE", path: "/forms/uae" },
-      { label: "KSA", path: "/forms/ksa" },
       { label: "UK", path: "/forms/uk" },
+      { label: "KSA", path: "/forms/ksa" },
+      { label: "USA", path: "/forms/usa" },
+      { label: "Estonia", path: "/forms/estonia" },
       { label: "Bangladesh", path: "/forms/bangladesh" },
-
     ],
   },
   {
@@ -87,7 +92,6 @@ const footerColumns = [
       { label: "News & Events", path: "/news-events" },
       { label: "Blog", path: "/blogs" },
       { label: "Contact", path: "/contact" },
-
     ],
   },
   {

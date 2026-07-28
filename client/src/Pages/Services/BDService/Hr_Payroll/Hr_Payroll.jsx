@@ -100,7 +100,7 @@ const Hr_Payroll = () => {
           <>
             Managing HR and payroll in Bangladesh involves dealing with evolving
             labor laws, tax regulations, and administrative complexities.{" "}
-            <strong>de tempête</strong> provides{" "}
+            <strong><i>de tempête</i></strong> provides{" "}
             <strong>end-to-end HR and payroll services</strong> that simplify
             workforce management, ensure compliance with Bangladesh labor laws,
             and deliver accurate payroll processing. Focus on growing your
@@ -123,7 +123,7 @@ const Hr_Payroll = () => {
             <p className="text-lg text-gray-600 leading-8">
               Managing employees, payroll, and compliance in Bangladesh can be
               challenging without the right expertise.{" "}
-              <strong>de tempête</strong> offers{" "}
+              <strong><i>de tempête</i></strong> offers{" "}
               <strong>complete HR and payroll solutions</strong> designed to
               streamline operations, minimize risks, and ensure your workforce
               is managed effectively and compliantly.

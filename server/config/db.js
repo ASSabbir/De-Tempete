@@ -3,20 +3,24 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
+      dbName: 'detempete', // <-- change this if you want a different DB name
       serverSelectionTimeoutMS: 5000,
     });
-    console.log('MongoDB connected');
+    console.log(`MongoDB connected (db: ${mongoose.connection.name})`);
 
-    // Force-create any missing indexes (e.g. text index) defined in schemas
+    // Sync indexes in the background — don't block server startup on it.
+    // A slow/large text index rebuild shouldn't delay the server from accepting requests.
     const LibraryItem = require('../models/LibraryItem');
     const Publication = require('../models/Publication');
     const Form = require('../models/Form');
-    await Promise.all([
+
+    Promise.all([
       LibraryItem.syncIndexes(),
       Publication.syncIndexes(),
       Form.syncIndexes(),
-    ]);
-    console.log('Indexes synced');
+    ])
+      .then(() => console.log('Indexes synced'))
+      .catch((err) => console.error('Index sync failed:', err.message));
   } catch (err) {
     console.error('MongoDB connection failed:', err.message);
     process.exit(1);

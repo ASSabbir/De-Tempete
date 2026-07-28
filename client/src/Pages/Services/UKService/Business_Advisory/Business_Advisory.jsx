@@ -104,9 +104,9 @@ const Business_Advisory = () => {
       <SevicsBanner
         bgImage={bgimg}
         alt="USA Business Advisory & Strategy Services"
-        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help US businesses navigate major decisions with clarity, data, and expert guidance at every stage."
+        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help UK business navigate major decisions with clarity, data, and expert guidance at every stage."
         title1={"Strategic Advisory"}
-        title2={"For Every Stage Of Your US Business"}
+        title2={"For Every Stage Of Your UK Business"}
       ></SevicsBanner>
 
       {/* Strategic Business Advisory Overview */}
@@ -284,18 +284,18 @@ const Business_Advisory = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-white font-light">
               Financial Strategy &{" "}
               <span className="font-bold">Growth Consulting</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
               <span className="font-semibold text-white">
                 Build a Financial Strategy That Drives Growth
               </span>
               <br />
               We create actionable financial strategies that enhance
               profitability, strengthen cash flow, and support sustainable
-              business expansion across your US operations.
+              business expansion across your UK operations.
             </p>
             <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
@@ -350,7 +350,7 @@ const Business_Advisory = () => {
 
       <ConsultationCTA
         heading={<>Make Smarter Business<br />Decisions <span className="font-bold">Today</span></>}
-        bodyText="Get expert guidance to value, grow, restructure, or exit your US business with confidence."
+        bodyText="Get expert guidance to value, grow, restructure, or exit your UK business with confidence."
         highlightText="Talk to Our Business Advisors"
       />
 

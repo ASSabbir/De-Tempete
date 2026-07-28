@@ -4,6 +4,8 @@ const { protect } = require('../middleware/auth');
 
 const router = express.Router();
 
+const MAX_IMAGES = 5;
+
 const slugify = (str) =>
   str.toLowerCase().trim()
     .replace(/[^\w\s-]/g, '')
@@ -72,17 +74,22 @@ router.get('/:slug', async (req, res) => {
 
 router.post('/', protect, async (req, res) => {
   try {
-    const { title, description, description2, description3, coverImage, eventDate, eventTime } = req.body;
-    if (!title || !description || !coverImage || !eventDate) {
-      return res.status(400).json({ message: 'title, description, coverImage, eventDate required' });
+    const { title, description, description2, description3, images, eventDate, eventTime } = req.body;
+
+    if (!title || !description || !Array.isArray(images) || images.length === 0 || !eventDate) {
+      return res.status(400).json({ message: 'title, description, images, eventDate required' });
     }
+    if (images.length > MAX_IMAGES) {
+      return res.status(400).json({ message: `Maximum ${MAX_IMAGES} images allowed` });
+    }
+
     let slug = slugify(title);
     let suffix = 1;
     while (await NewsEvent.findOne({ slug })) {
       slug = `${slugify(title)}-${suffix++}`;
     }
     const item = await NewsEvent.create({
-      title, description, description2, description3, coverImage, eventDate, eventTime, slug,
+      title, description, description2, description3, images, eventDate, eventTime, slug,
     });
     res.status(201).json(item);
   } catch (err) {
@@ -92,8 +99,16 @@ router.post('/', protect, async (req, res) => {
 
 router.put('/:id', protect, async (req, res) => {
   try {
-    const { title, description, description2, description3, coverImage, eventDate, eventTime, isActive } = req.body;
-    const update = { title, description, description2, description3, coverImage, eventDate, eventTime, isActive };
+    const { title, description, description2, description3, images, eventDate, eventTime, isActive } = req.body;
+
+    if (images && (!Array.isArray(images) || images.length === 0)) {
+      return res.status(400).json({ message: 'images must have at least 1 item' });
+    }
+    if (images && images.length > MAX_IMAGES) {
+      return res.status(400).json({ message: `Maximum ${MAX_IMAGES} images allowed` });
+    }
+
+    const update = { title, description, description2, description3, images, eventDate, eventTime, isActive };
 
     const item = await NewsEvent.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
     if (!item) return res.status(404).json({ message: 'Not found' });

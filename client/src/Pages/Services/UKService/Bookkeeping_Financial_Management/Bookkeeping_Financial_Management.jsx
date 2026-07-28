@@ -187,7 +187,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl  leading-tight text-white font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-white font-light">
               Accounts Payable &{" "}
               <span className="font-bold">Receivable Management</span>
             </h2>
@@ -230,7 +230,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
+            <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
               Why Choose Our{" "}
               <span className="font-bold">
                 Bookkeeping & Financial Management Services

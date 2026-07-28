@@ -104,7 +104,7 @@ const Investment = () => {
         description={
           <>
             Unlock growth opportunities with investment and partnership
-            facilitation services in Bangladesh. <strong>de tempête</strong>{" "}
+            facilitation services in Bangladesh. <strong><i>de tempête</i></strong>{" "}
             connects businesses with the right investors, partners, and market
             opportunities, helping you expand, collaborate, and scale with
             confidence in Bangladesh's growing economy.
@@ -205,20 +205,28 @@ const Investment = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Strong Market Insights",
-                desc: "Deep understanding of Bangladesh business landscape",
+                title: "In-Depth Market Expertise",
+                desc: "Extensive knowledge of Bangladesh's investment landscape, regulations, and sector-specific opportunities.",
               },
               {
-                title: "Verified Network Access",
-                desc: "Connect with reliable investors and partners",
+                title: "Trusted Local Network",
+                desc: "Access to verified government authorities, investors, financial institutions, and strategic partners.",
               },
               {
-                title: "Strategic Growth Approach",
-                desc: "Focus on long-term, sustainable expansion",
+                title: "End-to-End Investment Support",
+                desc: "Comprehensive assistance from market research and company formation to operational setup and expansion.",
               },
               {
-                title: "Tailored Opportunities",
-                desc: "Solutions aligned with your business goals",
+                title: "Regulatory & Compliance Guidance",
+                desc: "Expert support to navigate legal requirements, licensing, tax regulations, and corporate compliance.",
+              },
+              {
+                title: "Risk Assessment & Due Diligence",
+                desc: "Thorough evaluation of investment opportunities to minimise risks and support informed decisions.",
+              },
+              {
+                title: "Tailored Growth Strategies",
+                desc: "Custom investment solutions designed to align with your business objectives and long-term success.",
               },
             ].map((feature, index) => (
               <div
@@ -259,11 +267,11 @@ const Investment = () => {
         ]}
       />
 
-      
+
 
       {/* Technological Partner Section */}
 
-      <section className="py-24  bg-white overflow-hidden">
+      {/* <section className="py-24  bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
@@ -299,7 +307,7 @@ const Investment = () => {
       }
     `}</style>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -99,7 +99,7 @@ const Banner = () => {
   };
  
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#0d1e4a]">
+    <section className="relative min-h-screen w-full  bg-[#0d1e4a]">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <video className='object-center object-cover h-full w-full' src={heroVideo} autoPlay muted loop></video>
@@ -107,7 +107,7 @@ const Banner = () => {
       </div>
  
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-[6vw] 2xl:px-[1vw] min-h-screen flex items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-28 lg:py-32">
  
           {/* LEFT — Text Slider */}
@@ -125,10 +125,10 @@ const Banner = () => {
                 }`}
                 style={{ transition: "opacity 0.4s ease, transform 0.4s ease" }}
               >
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
+                <h1 className="text-[3vw] font-extrabold text-white leading-tight mb-5">
                   {slides[current].title}
                 </h1>
-                <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-lg">
+                <p className="text-[1vw] text-white/80 leading-relaxed max-w-lg">
                   {slides[current].description}
                 </p>
               </div>
@@ -145,7 +145,7 @@ const Banner = () => {
           {/* RIGHT — Consultation Form */}
           <div className="flex items-center justify-center lg:justify-end">
             <div
-              className="w-full max-w-md rounded-2xl p-6 sm:p-8 shadow-2xl"
+              className="w-full max-w-sm 2xl:max-w-md text-[1vw] rounded-2xl p-6 sm:p-8 shadow-2xl"
               style={{ background: "rgba(13, 30, 74, 0.75)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               <h2 className="text-xl font-bold text-white mb-6">
@@ -168,7 +168,7 @@ const Banner = () => {
                     value={formData[field.name]}
                     onChange={handleChange}
                     required={["name", "email", "phone"].includes(field.name)}
-                    className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-lg  text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200"
                     style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                 ))}
@@ -179,7 +179,7 @@ const Banner = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 rounded-lg text-[1vw] focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
                     style={{
                       background: "rgba(255,255,255,0.08)",
                       border: "1px solid rgba(255,255,255,0.1)",
@@ -202,7 +202,7 @@ const Banner = () => {
  
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-lg text-sm font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110"
+                  className="w-full py-2 xl:py-3.5 rounded-lg  font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110"
                   style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
                 >
                   Request Callback Now

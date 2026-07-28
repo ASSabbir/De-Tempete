@@ -17,7 +17,7 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 import img1 from '../../../../asstes/img_temp/servics/UK/company-formation.webp'
 import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
 import img3 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
-import img4 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
+import img4 from '../../../../asstes/img_temp/servics/ukbank.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
 import img6 from '../../../../asstes/img_temp/New folder/imgi_7_admin-ajax.webp'
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
@@ -135,7 +135,7 @@ const Market_Expansion = () => {
         description="The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. de tempête supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion."
       />
 
-     <SecondSection></SecondSection>
+      <SecondSection></SecondSection>
 
       {/* Business Setup & Registration */}
       <section className="py-24 bg-white">
@@ -143,7 +143,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
               Business Setup &{" "}
               <span className="font-extrabold">Registration</span>
             </h2>
@@ -236,7 +236,7 @@ const Market_Expansion = () => {
         <div className="max-w-[1300px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-5xl  leading-tight font-light text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
@@ -293,15 +293,14 @@ const Market_Expansion = () => {
 
               return (
                 <div
-                  className={`rounded-3xl transition-all duration-300 bg-white p-10 ${
-                    item.highlight
+                  className={`rounded-3xl transition-all duration-300 bg-white p-10 ${item.highlight
                       ? "hover:-translate-y-2 hover:shadow-2xl"
                       : "hover:-translate-y-1 hover:shadow-lg"
-                  }`}
+                    }`}
                 >
-                  <Icon className="text-3xl text-white bg-light-blue p-1 rounded-full mb-6" />
+                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm mb-6" />
 
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
+                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
 
@@ -388,13 +387,13 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div className="flex flex-col justify-center">
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
                 <span className="font-bold">Opening</span> Assistance
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
+              <p className="mt-8 text-xl leading-7 text-gray-500">
                 Opening a UK business bank account often requires demonstrable
                 operational clarity, ownership transparency, and compliance
                 readiness depending on the business structure and activities.
@@ -428,17 +427,15 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div className="flex flex-col justify-center">
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
                 <br />
                 Protection
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
-                We assist in trademark and intellectual property registration
-                through the UAE Ministry of Economy — ensuring your brand, logo
-                and products are legally safeguarded.
+              <p className="mt-8 text-xl leading-7 text-gray-500">
+                We assist in trademark and IP registration through the UK Intellectual Property Office (UKIPO) — ensuring your brand, logo and products are legally protected in the UK.
               </p>
 
               <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
@@ -477,18 +474,18 @@ const Market_Expansion = () => {
 
       {/* ================= Investor Visa ================= */}
 
-      <section className="bg-[#16244B] py-24">
+      {/* <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
-          {/* Heading */}
+      
 
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-5xl  leading-tight text-white font-light">
               <span className="font-bold">Investor Visa</span> &
-              <span className="font-bold"> UAE Residency</span> Support
+              <span className="font-bold"> UK Residency</span> Support
             </h2>
 
             <p className="mt-8 text-lg text-slate-300 leading-7 max-w-4xl mx-auto">
-              Secure your place in the UAE with seamless investor and residency
+              Secure your place in the UK with seamless investor and residency
               visa assistance. de tempête manages all documentation and
               applications to ensure smooth visa processing for investors,
               employees, and dependents.
@@ -496,7 +493,7 @@ const Market_Expansion = () => {
             <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
 
-          {/* Cards */}
+          
 
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
             {[
@@ -520,7 +517,7 @@ const Market_Expansion = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       {/* ================= Why Choose Us ================= */}
@@ -530,9 +527,9 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center">
-            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
+            <h2 className="text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our
-              <span className="font-bold"> UAE Market Expansion Advisory</span>
+              <span className="font-bold"> UK Market Expansion Advisory</span>
             </h2>
 
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
@@ -543,21 +540,20 @@ const Market_Expansion = () => {
           <div className="max-w-7xl grid lg:grid-cols-2 gap-6 mt-20">
             {[
               {
-                title: "Accurate and up-to-date financial records",
-                desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
+                title: "Strategic UK market entry planning",
+                desc: "Develop a structured market entry strategy aligned with your industry, target audience, and business goals.",
               },
               {
-                title: "End-to-end support — from setup to residency",
-                desc: "Deep knowledge of UAE business, legal & banking landscape.",
+                title: "Local market research & competitor analysis",
+                desc: "Gain valuable insights into customer demand, competitors, and market opportunities across the UK.",
               },
               {
-                title:
-                  "Tailored solutions for startups, SMEs & global investors",
-                desc: "Deep knowledge of UAE business, legal & banking landscape.",
+                title: "Sales, partnership & distribution support",
+                desc: "Identify trusted distributors, strategic partners, and sales channels to accelerate business growth.",
               },
               {
-                title: "Transparent processes and ongoing compliance focus",
-                desc: "Deep knowledge of UAE business, legal & banking landscape.",
+                title: "Ongoing expansion & compliance guidance",
+                desc: "Receive continuous support with regulatory requirements, operational scaling, and long-term market success.",
               },
             ].map((item, index) => (
               <div
@@ -588,21 +584,21 @@ const Market_Expansion = () => {
       <ConsultationCTA
         heading={
           <>
-            Start Your UAE
+            Start Your UK
             <br />
             Expansion<span className="font-bold"> Today</span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
         commitmentItems={[
-          "Free initial tax consultation — no obligation",
-          "100% confidentiality and secure handling of data",
-          "Region-specific tax experts",
-          "Transparent and practical advice tailored to your needs",
-        ]}
+  "Free initial UK market expansion consultation — no obligation",
+  "100% confidential handling of your business and market information",
+  "Expert guidance on UK market entry and growth strategies",
+  "Practical, tailored support to help your business expand with confidence",
+]}
       />
 
-      
+
     </div>
   );
 };

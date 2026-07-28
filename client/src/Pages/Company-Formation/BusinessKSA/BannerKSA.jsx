@@ -15,47 +15,50 @@ const BannerKSA = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-[4vw] font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in KSA
         </h1>
 
         {/* Sub Heading */}
-        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-snug">
+        <h2 className="mt-4 text-[2vw] font-light leading-snug">
           Start Your Company with{" "}
-          <span className="italic transition-all duration-300 hover:text-light-blue">
+          <span className="italic transition-all font-bold duration-300 hover:text-light-blue">
             de tempête
           </span>
         </h2>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-7 lg:gap-8 mt-8 text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            LIMITED LIABILITY COMPANY (LLC)
-          </span>
+        <div className=" space-y-8 mt-8 text-[1vw] font-semibold">
+          <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-7 lg:gap-8'>
+            <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+              LIMITED LIABILITY COMPANY (LLC)
+            </span>
 
-          <span className="hidden md:block text-gray-300">|</span>
+            <span className="hidden md:block text-gray-300">|</span>
 
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            JOINT STOCK COMPANY (JSC)
-          </span>
+            <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+              JOINT STOCK COMPANY (JSC)
+            </span>
+          </div>
 
-          <span className="hidden md:block text-gray-300">|</span>
 
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+
+
+          <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-7 lg:gap-8'><span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
             FOREIGN BRANCH OFFICE
           </span>
 
-          <span className="hidden md:block text-gray-300">|</span>
+            <span className="hidden md:block text-gray-300">|</span>
 
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            REPRESENTATIVE OFFICE
-          </span>
+            <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+              REPRESENTATIVE OFFICE
+            </span>
 
-          <span className="hidden md:block text-gray-300">|</span>
+            <span className="hidden md:block text-gray-300">|</span>
 
-          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
-            SOLE ESTABLISHMENT
-          </span>
+            <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+              SOLE ESTABLISHMENT
+            </span></div>
         </div>
 
         {/* Button */}

@@ -14,7 +14,7 @@ const services = [
     title: "Virtual CFO",
     path: "/virtual-cfo",
     description:
-      "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, Estonia and Bangladesh.",
+      "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, Estonia, USA and Bangladesh.",
     icon: <FaUserTie  />,
   },
   {
@@ -28,7 +28,7 @@ const services = [
     title: "Tax Advisory",
     path: "/Tax-Advisory",
     description:
-      "Maximize savings and stay compliant with smart tax advisory and planning in the UK, UAE, KSA, Estonia and Bangladesh.",
+      "Maximize savings and stay compliant with smart tax advisory and planning in the UK, UAE, KSA, Estonia, USA and Bangladesh.",
     icon: <FaFileInvoiceDollar  />,
   },
   {
@@ -74,7 +74,7 @@ export default function HireBased() {
     <section className="  w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Hire Based On <span className="font-extrabold">Expertise</span>
         </h2>
 
@@ -101,10 +101,10 @@ export default function HireBased() {
 
               {/* Text */}
               <div>
-                <h3 className="text-[#0d1e4a] font-bold text-base sm:text-lg mb-2">
+                <h3 className="text-[#0d1e4a] font-bold text-[1.3vw] mb-2">
                   {s.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-500 text-[1vw] leading-relaxed">
                   {s.description}
                 </p>
               </div>

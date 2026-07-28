@@ -143,28 +143,7 @@ const benefits = [
   },
 ];
 
-const blogs = [
-  {
-    id: 1,
-    image: "/src/asstes/img_temp/New folder/council-tax.webp",
-    title:
-      "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-    desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-  },
-  {
-    id: 2,
-    image: "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-    title:
-      "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-    desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-  },
-  {
-    id: 3,
-    image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-    title: "The Role and Benefits of a Virtual CFO in Modern Businesses",
-    desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-  },
-];
+
 
 const Industry_Specific_Accounting_Solutions = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -249,7 +228,7 @@ const Industry_Specific_Accounting_Solutions = () => {
               const Icon = item.icon;
               return (
                 <div key={index}>
-                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full  mb-5" />
+                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm  mb-5" />
                   <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>

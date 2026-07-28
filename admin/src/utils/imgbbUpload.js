@@ -1,5 +1,5 @@
 // File: src/utils/imgbbUpload.js
-const IMGBB_API_KEY = 'e38e9dc29d9eb146f7f84a75c4b9b668';
+const IMGBB_API_KEY = '8cd18d4e8318e322a92f4b4f87d8469b';
 
 export async function uploadToImgBB(file) {
   if (!IMGBB_API_KEY) {

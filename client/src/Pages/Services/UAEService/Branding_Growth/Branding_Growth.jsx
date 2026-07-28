@@ -249,10 +249,10 @@ const Branding_Growth = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
+          <div className="grid lg:grid-cols-3 2xl:gap-6 mt-16">
             {sectors.map((item, index) => (
-              <div key={index}>
-                <item.icon className="bg-light-blue text-white p-1 rounded-full mb-3" size={32} strokeWidth={1.5} />
+              <div key={index} className="hover:bg-white p-7">
+                <item.icon className="bg-light-blue/20 text-light-blue p-1 rounded-sm mb-3" size={32} strokeWidth={1.5} />
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>

@@ -10,6 +10,7 @@ import img1 from '../../../../asstes/img_temp/servics/freepik__create-image-for-
 import img2 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
 import img3 from '../../../../asstes/img_temp/servics/1775737113368.jpg'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import { ConsultationCTA } from "../../../../Components/Shared/ConsultationCTA";
 const whyChoose = [
   {
     title: "UAE-Focused Expertise",
@@ -222,71 +223,26 @@ const Taxation_UAE = () => {
           </div>
         </div>
       </section>
+       <ConsultationCTA
+        heading={
+          <>
+            Ready To Simplify Your{" "}
+            <span className="font-bold">
+              Taxes In The UAE?
+            </span>
+          </>
+        }
+        subheading="Partner with de tempête and take control of your corporate, VAT,
+                excise, and cross-border tax obligations with confidence."
+        commitmentItems={[
+          "Vendor evaluation & negotiation support",
+          "Procurement process setup & optimization",
+          "Contract & supplier performance management",
+          "Day-to-day procurement & operational support",
+        ]}
+      />
 
-      {/* CTA */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl leading-tight font-light text-white">
-                Ready To Simplify Your
-                <br />
-                Taxes In The <span className="font-bold">UAE?</span>
-              </h2>
-              <p className="mt-8 text-light-blue text-xl font-semibold leading-9 max-w-xl">
-                Partner with de tempête and take control of your corporate, VAT,
-                excise, and cross-border tax obligations with confidence.
-              </p>
-            </div>
-
-            <div>
-              <div className="bg-white rounded-3xl shadow-2xl p-10">
-                <h3 className="text-4xl font-bold text-[#16244B] mb-8">
-                  Book a Free Consultation
-                </h3>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue"
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium text-gray-700">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      placeholder="Write your message..."
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none resize-none focus:border-light-blue"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-light-blue hover:bg-light-blue text-white font-semibold py-4 rounded-lg transition duration-300"
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       
     </div>

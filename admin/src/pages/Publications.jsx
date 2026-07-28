@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'USA', "Estonia"];
 const EMPTY = { title: '', fileFormat: 'PDF', imageUrl: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const columns = [
@@ -97,6 +97,13 @@ export default function Publications() {
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
 
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Region</label>
+              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}>
+                {REGIONS.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
             {[
               { key: 'title', label: 'Title' },
               { key: 'fileFormat', label: 'File Format (e.g. PDF)' },
@@ -109,13 +116,7 @@ export default function Publications() {
               </div>
             ))}
 
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Region</label>
-              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
-                style={{ ...inputStyle, cursor: 'pointer' }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
-            </div>
+
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
               <input type="checkbox" id="pubActive" checked={form.isActive}

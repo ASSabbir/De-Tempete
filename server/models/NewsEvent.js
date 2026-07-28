@@ -1,17 +1,25 @@
 const mongoose = require('mongoose');
 
-const newsEventSchema = new mongoose.Schema({
-  title: { type: String, required: true, trim: true, maxlength: 200 },
-  slug: { type: String, required: true, unique: true, trim: true, lowercase: true, maxlength: 220 },
-  description: { type: String, required: true, trim: true },
-  description2: { type: String, trim: true },
-  description3: { type: String, trim: true },
-  coverImage: { type: String, required: true, trim: true, maxlength: 2048 },
-  eventDate: { type: Date, required: true },
-  eventTime: { type: String, trim: true, maxlength: 20 },
-  isActive: { type: Boolean, default: true },
-}, { timestamps: true });
-
-newsEventSchema.index({ isActive: 1, eventDate: -1 });
+const newsEventSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true, trim: true },
+    description: { type: String, required: true },
+    description2: { type: String },
+    description3: { type: String },
+    images: {
+      type: [String],
+      required: true,
+      validate: {
+        validator: (arr) => arr.length > 0 && arr.length <= 5,
+        message: 'images must have between 1 and 5 items',
+      },
+    },
+    eventDate: { type: Date, required: true },
+    eventTime: { type: String },
+    slug: { type: String, required: true, unique: true },
+    isActive: { type: Boolean, default: true },
+  },
+  { timestamps: true }
+);
 
 module.exports = mongoose.model('NewsEvent', newsEventSchema);

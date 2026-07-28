@@ -52,7 +52,7 @@ const Types_of_Company = () => {
             viewport={{ once: true, amount: 0.3 }} className="text-center mb-20">
           <h2
             
-            className="text-5xl text-[#14224A] font-light"
+            className="text-[3vw] 2xl:text-[2.6rem] text-[#14224A] font-light"
           >
             Types of Company <span className="font-bold">Structures in UAE</span>
           </h2>
@@ -103,7 +103,7 @@ const Types_of_Company = () => {
 
                 {/* Content */}
                 <div className="flex-1 text-center sm:text-left">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 sm:mb-8 leading-tight">
+                  <h3 className="text-white text-[3vw] 2xl:text-[2.6rem] font-bold mb-5 sm:mb-8 leading-tight">
                     {companyData[activeTab].title}
                   </h3>
 

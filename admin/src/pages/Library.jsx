@@ -1,13 +1,13 @@
-import { useEffect, useState, } from 'react';
+import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
-const EMPTY = { title: '', issuingAuthority: '', category: '', issueDate: '', downloadUrl: '', region: 'UAE', isActive: true };
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'USA', "Estonia"];
+const EMPTY = { title: '', issuingAuthority: '', customAuthority: '', category: '', issueDate: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const columns = [
   { key: 'title', label: 'Title' },
-  { key: 'issuingAuthority', label: 'Authority' },
+  { key: 'issuingAuthority', label: 'Authority', render: (v, row) => v === 'Other' ? row.customAuthority : v },
   { key: 'category', label: 'Category' },
   { key: 'region', label: 'Region' },
   { key: 'issueDate', label: 'Issue Date', render: (v) => v ? new Date(v).toLocaleDateString() : '-' },
@@ -23,13 +23,14 @@ export default function Library() {
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [authorities, setAuthorities] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [form, setForm] = useState(EMPTY);
   const [editing, setEditing] = useState(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
-const fetchItems = async (pg) => {
+  const fetchItems = async (pg) => {
     setLoading(true);
     try {
       const { data } = await API.get(`/library/admin/all?page=${pg}&limit=20`);
@@ -46,6 +47,12 @@ const fetchItems = async (pg) => {
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchItems(page); }, [page]);
 
+  useEffect(() => {
+    API.get('/library/authorities')
+      .then(({ data }) => setAuthorities(data || []))
+      .catch(() => setAuthorities([]));
+  }, []);
+
   const openAdd = () => { setForm(EMPTY); setEditing(null); setError(''); setShowModal(true); };
   const openEdit = (item) => {
     setForm({ ...item, issueDate: item.issueDate ? new Date(item.issueDate).toISOString().split('T')[0] : '' });
@@ -56,6 +63,14 @@ const fetchItems = async (pg) => {
   const closeModal = () => { setShowModal(false); setError(''); };
 
   const handleSave = async () => {
+    if (!form.issuingAuthority) {
+      setError('Please select an issuing authority');
+      return;
+    }
+    if (form.issuingAuthority === 'Other' && !form.customAuthority) {
+      setError('Please enter the custom authority name');
+      return;
+    }
     setSaving(true);
     setError('');
     try {
@@ -118,9 +133,42 @@ const fetchItems = async (pg) => {
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
 
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Title</label>
+              <input type="text" value={form.title}
+                onChange={e => setForm(p => ({ ...p, title: e.target.value }))}
+                style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Issuing Authority</label>
+              <select
+                value={form.issuingAuthority}
+                onChange={e => setForm(p => ({ ...p, issuingAuthority: e.target.value, customAuthority: e.target.value === 'Other' ? p.customAuthority : '' }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}
+              >
+                <option value="">Select an authority...</option>
+                {authorities.map(a => <option key={a} value={a}>{a}</option>)}
+              </select>
+            </div>
+
+            {form.issuingAuthority === 'Other' && (
+              <div style={{ marginBottom: 16 }}>
+                <label style={labelStyle}>Custom Authority Name</label>
+                <input type="text" value={form.customAuthority}
+                  onChange={e => setForm(p => ({ ...p, customAuthority: e.target.value }))}
+                  style={inputStyle} />
+              </div>
+            )}
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Region</label>
+              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}>
+                {REGIONS.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
+
             {[
-              { key: 'title', label: 'Title', type: 'text' },
-              { key: 'issuingAuthority', label: 'Issuing Authority', type: 'text' },
               { key: 'category', label: 'Category', type: 'text' },
               { key: 'issueDate', label: 'Issue Date', type: 'date' },
               { key: 'downloadUrl', label: 'Download URL', type: 'url' },
@@ -133,13 +181,7 @@ const fetchItems = async (pg) => {
               </div>
             ))}
 
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Region</label>
-              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
-                style={{ ...inputStyle, cursor: 'pointer' }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
-            </div>
+            
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
               <input type="checkbox" id="libActive" checked={form.isActive}

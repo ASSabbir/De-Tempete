@@ -28,7 +28,7 @@ const Bookkeeping = () => {
         <div>
             <VirtualBanner img={img} text={text}></VirtualBanner>
             <WhyBookeepingCFO></WhyBookeepingCFO>
-            <div className=' max-w-7xl mx-auto pb-30' >
+            <div className='px-6 max-w-7xl mx-auto pb-30' >
                 <div className='flex bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
                     <h1 className='text-3xl'>Stay Audit-Ready and Stress-Free With Professionally Managed Books</h1>
                     <SharedButton text={'Start Today'} path={'/contact'}></SharedButton>

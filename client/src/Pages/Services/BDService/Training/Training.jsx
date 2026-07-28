@@ -77,7 +77,7 @@ const Training = () => {
               professional training and mentorship programs in Bangladesh
             </strong>{" "}
             designed to enhance skills, improve productivity, and build
-            long-term organizational capacity. <strong>de tempête</strong>{" "}
+            long-term organizational capacity.<br/> <strong><i>de tempête</i></strong>{" "}
             delivers structured learning solutions tailored to your business
             needs, helping individuals and teams perform better, adapt faster,
             and grow confidently.

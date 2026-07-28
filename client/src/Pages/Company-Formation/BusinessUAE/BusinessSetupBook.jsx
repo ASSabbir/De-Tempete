@@ -1,5 +1,7 @@
 import { Link } from 'react-router';
 import img1 from '../../../asstes/img_temp/UAE-Brochure-1024x687.webp'
+import DownloadButtonGuide from '../../../Components/Shared/DownloadbuttonGuide';
+
 const BusinessSetupBook = () => {
   return (
     <section className="bg-[#ffffff] py-24">
@@ -31,7 +33,7 @@ const BusinessSetupBook = () => {
               </span>
             </h2>
 
-            <p className="mt-8 text-xl text-[#4B5563] leading-9">
+            <p className="mt-8 text-xl text-[#4B5563] leading-7">
               Your quick guide to starting and growing a business in the UAE.
             </p>
 
@@ -47,11 +49,12 @@ const BusinessSetupBook = () => {
             </div>
 
             {/* Download Button */}
-            <Link to={'https://drive.google.com/file/d/1wR0hbrioeHwYQyXwiRgRSygNQ32cIJd0/view'}>
+            <Link to={'http://localhost:5173/business-setup/uae'}>
             <button className="mt-12 bg-[#081B57] text-white px-10 py-5 rounded-xl text-lg font-medium hover:bg-[#10297c] transition duration-300 shadow-lg">
               Download Now
             </button></Link>
           </div>
+          <DownloadButtonGuide guideKey="uae-guide-2026" label="Download Now"></DownloadButtonGuide>
 
         </div>
       </div>

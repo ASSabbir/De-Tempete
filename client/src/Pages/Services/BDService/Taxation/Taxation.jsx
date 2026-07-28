@@ -278,12 +278,12 @@ const Taxation = () => {
       <ConsultationCTA
         heading={
           <>
-            Build Smarter Digital Systems in Bangladesh
+            Build Smarter VAT & Tax Systems in Bangladesh
             <br />
             <span className="font-bold">Today</span>
           </>
         }
-        commitmentTitle="Get expert guidance and transform your business with the right digital and technology solutions."
+        commitmentTitle="Get expert guidance on NBR VAT compliance and digital tax solutions tailored to your business"
         commitmentTitleOnly
       />
 

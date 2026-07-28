@@ -114,10 +114,8 @@ const Reviews = () => {
     <section className="py-24  bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-light-blue font-semibold uppercase tracking-wide text-sm">
-            Testimonials
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mt-3">
+         
+          <h2 className="text-[2.5vw] font-bold text-dark-blue mt-3">
             What our clients say
           </h2>
         </div>

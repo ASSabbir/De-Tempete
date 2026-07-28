@@ -31,7 +31,7 @@ const BusinessSetupBook = () => {
               </span>
             </h2>
 
-            <p className="mt-8 text-xl text-[#4B5563] leading-9">
+            <p className="mt-8 text-xl text-[#4B5563] leading-7">
               Your quick guide to starting and growing a business in the KSA.
             </p>
 

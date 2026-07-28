@@ -18,14 +18,13 @@ const regions = [
     path:'/services/uae/hr-payroll'
   },
   {
-    id: "ksa",
-    tab: "KSA (Saudi Arabia)",
-    flag: ksa,
-    shortName: "KSA",
+    id: "uk",
+    tab: "United Kingdom (UK)",
+    flag: uk,
+    shortName: "UK",
     description:
-      "Streamline HR and payroll in Saudi Arabia with systems aligned to GOSI, Qiwa, and local regulations. We handle payroll processing, workforce documentation, and compliance requirements. Our services ensure smooth operations while reducing administrative and legal risks.",
-      path:'/services/ksa/hr-payroll'
-   
+      "Manage HR and payroll in the UK with systems aligned to HMRC and employment regulations. From payroll processing to compliance, we ensure accuracy, efficiency, and risk-free operations.",
+    path:'/services/uk/compliance#uk-payroll'
   },
   {
     id: "bd",
@@ -37,14 +36,17 @@ const regions = [
     path:'/services/bd/hr-payroll'
   },
   {
-    id: "uk",
-    tab: "United Kingdom (UK)",
-    flag: uk,
-    shortName: "UK",
+    id: "ksa",
+    tab: "KSA (Saudi Arabia)",
+    flag: ksa,
+    shortName: "KSA",
     description:
-      "Manage HR and payroll in the UK with systems aligned to HMRC and employment regulations. From payroll processing to compliance, we ensure accuracy, efficiency, and risk-free operations.",
-    path:'/services/uk/compliance#uk-payroll'
+      "Streamline HR and payroll in Saudi Arabia with systems aligned to GOSI, Qiwa, and local regulations. We handle payroll processing, workforce documentation, and compliance requirements. Our services ensure smooth operations while reducing administrative and legal risks.",
+      path:'/services/ksa/hr-payroll'
+   
   },
+  
+  
   {
   id: "usa",
   tab: "USA (United States)",
@@ -53,16 +55,7 @@ const regions = [
   description:
     "Simplify HR and payroll management in the United States with solutions designed to meet federal and state employment regulations. We help businesses streamline payroll processing, employee administration, tax reporting, and compliance for efficient workforce management.",
   path: "/services/usa/hr-payroll",
-},
-{
-  id: "estonia",
-  tab: "Estonia",
-  flag: es,
-  shortName: "Estonia",
-  description:
-    "Manage HR and payroll in Estonia with compliant, efficient solutions tailored to local employment laws and EU regulations. We support payroll processing, employee record management, statutory reporting, and workforce compliance to keep your business running smoothly.",
-  path: "/services/estonia/hr-payroll",
-},
+}
 ];
 
 export default function HireHRregion() {
@@ -76,7 +69,7 @@ export default function HireHRregion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-4">
            HR & Payroll <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">

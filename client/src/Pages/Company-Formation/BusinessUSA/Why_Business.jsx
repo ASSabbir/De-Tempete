@@ -79,7 +79,7 @@ const Why_Business = () => {
                 {item.title}
               </h3>
 
-              <p className="text-[#1F2A4D] text-xl leading-9">{item.desc}</p>
+              <p className="text-[#1F2A4D] text-xl leading-7">{item.desc}</p>
             </div>
           ))}
         </div>

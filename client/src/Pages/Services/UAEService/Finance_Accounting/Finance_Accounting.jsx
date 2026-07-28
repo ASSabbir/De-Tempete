@@ -459,25 +459,7 @@ const Finance_Accounting = () => {
 
       
 
-      <ConsultationCTA
-        heading={
-          <>
-            Procurement Advisory &{" "}
-            <span className="font-bold">
-              Vendor
-              <br />
-              Management
-            </span>
-          </>
-        }
-        subheading="Optimize your operations with structured procurement systems and effective vendor management."
-        commitmentItems={[
-          "Vendor evaluation & negotiation support",
-          "Procurement process setup & optimization",
-          "Contract & supplier performance management",
-          "Day-to-day procurement & operational support",
-        ]}
-      />
+     
       {/* Why Trust */}
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
@@ -507,7 +489,25 @@ const Finance_Accounting = () => {
           </div>
         </div>
       </section>
-
+ <ConsultationCTA
+        heading={
+          <>
+            Procurement Advisory &{" "}
+            <span className="font-bold">
+              Vendor
+              <br />
+              Management
+            </span>
+          </>
+        }
+        subheading="Optimize your operations with structured procurement systems and effective vendor management."
+        commitmentItems={[
+          "Vendor evaluation & negotiation support",
+          "Procurement process setup & optimization",
+          "Contract & supplier performance management",
+          "Day-to-day procurement & operational support",
+        ]}
+      />
       
     </div>
   );

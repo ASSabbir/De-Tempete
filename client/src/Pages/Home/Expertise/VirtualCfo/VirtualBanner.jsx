@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
 
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
@@ -86,13 +87,13 @@ function StatItem({ icon, value, suffix, label, start }) {
         : count;
 
     return (
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-3 xl:gap-4">
             <div className="shrink-0 opacity-80">{icon}</div>
             <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#0d1e4a] leading-none">
+                <div className="text-[1.5vw] font-extrabold text-[#0d1e4a] leading-none">
                     {display}{suffix}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
+                <div className="text-xs xl:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
             </div>
         </div>
     );
@@ -133,8 +134,8 @@ const VirtualBanner = ({img,text}) => {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
-                    <div className="w-full lg:w-1/2 py-20 flex flex-col gap-5">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
+                    <div className="w-full lg:w-3/4 py-20 flex flex-col gap-5">
 
                         {/* Title */}
                         <motion.h1
@@ -143,7 +144,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0}
-                            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight"
+                            className="text-[3vw] font-extrabold text-white leading-tight"
                         >
                             {text[0]}
                         </motion.h1>
@@ -155,7 +156,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.15}
-                            className="text-[#1a9fd4] font-semibold text-base sm:text-lg leading-snug"
+                            className="text-[#1a9fd4] font-semibold text-[1.3vw] leading-snug"
                         >
                              {text[1]}
                         </motion.p>
@@ -167,7 +168,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.3}
-                            className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md"
+                            className="text-white/75 text-[1vw] leading-relaxed max-w-md"
                         >
                              {text[2]}
                         </motion.p>
@@ -180,16 +181,8 @@ const VirtualBanner = ({img,text}) => {
                             viewport={{ once: true }}
                             custom={0.45}
                         >
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-sm text-white transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 hover:-translate-y-0.5 w-fit"
-                                style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)", border: "1px solid rgba(255,255,255,0.15)" }}
-                            >
-                                 {text[3]}
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
+                            
+                            <SharedFullButton text={text[3]} path={'/contact'}></SharedFullButton>
                         </motion.div>
 
                     </div>

@@ -53,7 +53,7 @@ const Tax_Planning_Advisory = () => {
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Corporate Tax Planning</span>
               <br />& Compliance
             </h2>

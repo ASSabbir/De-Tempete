@@ -233,7 +233,7 @@ const HR_Payroll_Solutions = () => {
               <h3 className="text-xl font-bold text-white mb-4">
                 Get Started Now
               </h3>
-              <button className="bg-light-blue hover:bg-light-blue text-black font-semibold py-3 rounded-lg transition duration-300">
+              <button className="bg-light-blue hover:bg-light-blue text-white font-semibold py-3 rounded-lg transition duration-300">
                 Book a Consultation
               </button>
             </div>

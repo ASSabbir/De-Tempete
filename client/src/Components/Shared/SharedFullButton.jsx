@@ -12,7 +12,7 @@ const SharedFullButton = ({ text,path }) => {
             border-radius: 7px;
             border: 1px solid transparent;
             
-            text-transform: uppercase;
+            
             font-weight: 600;
             letter-spacing: 2px;
             background: linear-gradient( 90deg,#14497D 0%, #2774A0 50%,#4AC4DE 100%);
@@ -69,7 +69,7 @@ const SharedFullButton = ({ text,path }) => {
 
       <div>
         <Link to={`${path  || '/'}`}>
-          <button className="shared-btn2 ">
+          <button className="shared-btn2 text-[1vw]">
             {text || "Contact Us"}
           </button>
         </Link>
