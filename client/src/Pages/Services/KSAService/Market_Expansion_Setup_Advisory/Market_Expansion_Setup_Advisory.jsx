@@ -15,9 +15,9 @@ import img2 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Do
 import img3 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
 import img4 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img5 from '../../../../asstes/img_temp/servics/Ksa/Regional-Headquarters-RHQ3.webp'
-import img6 from '../../../../asstes/img_temp/servics/Ksa/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646 (1).webp'
-import img7 from '../../../../asstes/img_temp/servics/Ksa/Investor-Visa-Saudi.webp'
+import img5 from '../../../../asstes/img_temp/servics/KSA/Regional-Headquarters-RHQ3.webp'
+import img6 from '../../../../asstes/img_temp/servics/KSA/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646 (1).webp'
+import img7 from '../../../../asstes/img_temp/servics/KSA/Investor-Visa-Saudi.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const setupCards = [
