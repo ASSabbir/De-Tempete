@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
+import { uploadToImgBB } from '../utils/imgbbUpload';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
-const EMPTY = { title: '', issuingAuthority: '', downloadUrl: '', region: 'UAE', isActive: true };
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'USA', "Estonia"];
+const EMPTY = { title: '', issuingAuthority: '', coverImage: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const columns = [
   { key: 'title', label: 'Title' },
@@ -23,6 +24,7 @@ export default function Forms() {
   const [form, setForm] = useState(EMPTY);
   const [editing, setEditing] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
 
     const fetchItems = async () => {
@@ -45,7 +47,27 @@ export default function Forms() {
   const openEdit = (item) => { setForm({ ...item }); setEditing(item._id); setError(''); setShowModal(true); };
   const closeModal = () => { setShowModal(false); setError(''); };
 
+  const handleImageChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setError('');
+    try {
+      const url = await uploadToImgBB(file);
+      setForm(p => ({ ...p, coverImage: url }));
+    } catch (err) {
+      setError(err.message || 'Image upload failed');
+    } finally {
+      setUploading(false);
+    }
+  };
+
   const handleSave = async () => {
+    if (!form.coverImage) {
+      setError('Please upload a cover image before saving');
+      return;
+    }
     setSaving(true);
     setError('');
     try {
@@ -54,6 +76,7 @@ export default function Forms() {
         setItems(p => p.map(i => i._id === editing ? data : i));
       } else {
         setItems(p => [data, ...p]);
+        setTotal(t => t + 1);
       }
       closeModal();
       setForm(EMPTY);
@@ -101,6 +124,26 @@ export default function Forms() {
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
 
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Cover Image</label>
+              <input type="file" accept="image/*" onChange={handleImageChange} style={inputStyle} />
+              {uploading && <p style={{ fontSize: 13, color: '#6b7280', marginTop: 6 }}>Uploading...</p>}
+              {form.coverImage && !uploading && (
+                <img
+                  src={form.coverImage}
+                  alt="Cover preview"
+                  style={{ marginTop: 10, width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8 }}
+                />
+              )}
+            </div>
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Region</label>
+              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}>
+                {REGIONS.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
+
             {[
               { key: 'title', label: 'Title' },
               { key: 'issuingAuthority', label: 'Issuing Authority' },
@@ -112,13 +155,7 @@ export default function Forms() {
               </div>
             ))}
 
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Region</label>
-              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
-                style={{ ...inputStyle, cursor: 'pointer' }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
-            </div>
+            
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
               <input type="checkbox" id="frmActive" checked={form.isActive}
@@ -128,8 +165,8 @@ export default function Forms() {
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
               <button onClick={closeModal} style={{ padding: '10px 20px', border: '1px solid #d1d5db', borderRadius: 8, cursor: 'pointer', background: '#fff' }}>Cancel</button>
-              <button onClick={handleSave} disabled={saving}
-                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: saving ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: saving ? 0.7 : 1 }}>
+              <button onClick={handleSave} disabled={saving || uploading}
+                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: (saving || uploading) ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: (saving || uploading) ? 0.7 : 1 }}>
                 {saving ? 'Saving...' : 'Save'}
               </button>
             </div>

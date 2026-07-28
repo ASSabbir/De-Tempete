@@ -287,7 +287,7 @@ const ComplianceUSA = () => {
               <br />
               Compliance Tracking
             </h2>
-            <p className="mt-8 text-xl leading-9 text-gray-500">
+            <p className="mt-8 text-xl leading-7 text-gray-500">
               Coordinated Compliance Tracking for Businesses Operating Across
               State Lines. We monitor filing requirements, deadlines, and
               obligations in every state where you do business — so nothing
@@ -463,7 +463,7 @@ const ComplianceUSA = () => {
               Compliance Calendar{" "}
               <span className="font-bold">Deadline Categories</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
               Every Deadline, Tracked and Categorized. We organize your
               compliance calendar around the deadline types that matter most
               — so your team always knows what's due, and when.

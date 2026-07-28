@@ -189,10 +189,8 @@ const Compliance_Regulatory = () => {
       {/* Problem Statement */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-light-blue font-semibold">
-            PROBLEM STATEMENT 1 "The
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
+          
+          <h2 className="text-4xl 2xl:text-5xl font-bold text-[#14224A] mt-2">
             UK Compliance Burden
           </h2>
           <p className="mt-4 text-light-blue font-semibold text-lg">
@@ -228,7 +226,7 @@ const Compliance_Regulatory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
               Company Accounts{" "}
               <span className="font-extrabold">Preparation & Filing</span>
             </h2>
@@ -272,7 +270,7 @@ const Compliance_Regulatory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1300px] mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Corporation Tax</span> (CT600) Filing
             </h2>
             <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
@@ -292,7 +290,7 @@ const Compliance_Regulatory = () => {
                   key={index}
                   className="p-4 hover:bg-white  rounded-3xl duration-300"
                 >
-                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full mb-6" />
+                  <Icon className="text-4xl text-light-blue bg-light-blue/20  p-2 rounded-sm mb-6" />
                   <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
@@ -313,12 +311,12 @@ const Compliance_Regulatory = () => {
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
-            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Self-Assessment</span>
               <br />
               Tax Returns
             </h2>
-            <p className="mt-8 text-xl leading-9 text-gray-500">
+            <p className="mt-8 text-xl leading-7 text-gray-500">
               Stress-free Self-Assessment Filing for Directors, Self-Employed,
               and High Earners. We handle your filing accurately and meet HMRC
               deadlines without hassle.
@@ -342,7 +340,7 @@ const Compliance_Regulatory = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">VAT Registration</span> &
               MTD-Compliant Filing
             </h2>
@@ -381,7 +379,7 @@ const Compliance_Regulatory = () => {
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />{" "}
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">ACSP Identity</span> Verification
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-500">
@@ -566,7 +564,7 @@ const Compliance_Regulatory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
+            <h2 className="text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our{" "}
               <span className="font-bold">UK Compliance Advisory</span>
             </h2>
@@ -580,7 +578,7 @@ const Compliance_Regulatory = () => {
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
-                <p className="text-gray-700 font-semibold">{item}</p>
+                <p className="text-gray-700 text-lg font-semibold">{item}</p>
               </div>
             ))}
           </div>

@@ -25,6 +25,7 @@ export default function Sidebar() {
     <aside style={{ width: 240, minHeight: '100vh', background: '#0f1f3d', color: '#fff', display: 'flex', flexDirection: 'column', padding: '24px 0', flexShrink: 0 }}>
       <div style={{ padding: '0 24px 24px', borderBottom: '1px solid #1e3a6e' }}>
         <div style={{ fontSize: 18, fontWeight: 700 }}>de tempête</div>
+        
         <div style={{ fontSize: 12, color: '#8ba3c7', marginTop: 4 }}>Admin Panel</div>
       </div>
       <nav style={{ flex: 1, padding: '16px 0' }}>

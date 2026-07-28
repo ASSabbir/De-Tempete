@@ -1,11 +1,11 @@
 const Why_Business = () => {
   return (
     <section className="bg-[#F5F5F5] py-20">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* Left Content */}
         <div>
-          <h2 className="text-[#14224A] text-[3vw] font-light leading-tight">
+          <h2 className="text-[#14224A] text-[3vw] 2xl:text-[2.6rem] font-light leading-tight">
             Why Start A
             <br />
             <span className="font-bold">Business In The UAE?</span>
@@ -31,45 +31,45 @@ const Why_Business = () => {
         {/* Right Cards */}
         <div className="grid grid-cols-2 gap-5">
 
-  <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
-    <h3 className="text-[#14224A] text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
-      100%
-      <span className="text-lg font-normal">
-        {" "}foreign ownership
-      </span>
-      <br />
-      <span className="text-lg font-normal">
-        in many sectors
-      </span>
-    </h3>
-  </div>
+          <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+            <h3 className="text-[#14224A] text-2xl 2xl:text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
+              100%
+              <span className="text-xl md:text-[1.1vw] font-normal">
+                {" "}foreign ownership
+              </span>
+              <br />
+              <span className="text-[1.1vw] font-normal">
+                in many sectors
+              </span>
+            </h3>
+          </div>
 
-  <div className="group bg-white hover:bg-[#f0fafd] rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
-    <h3 className="text-[#14224A] text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
-      0%
-      <span className="text-lg font-normal">
-        {" "}corporate tax for
-      </span>
-      <br />
-      <span className="text-lg font-normal">
-        qualifying free-zone businesses
-      </span>
-    </h3>
-  </div>
+          <div className="group bg-white hover:bg-[#f0fafd] rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+            <h3 className="text-[#14224A] text-2xl 2xl:text-3xl font-medium transition-transform duration-500 group-hover:scale-105">
+              0%
+              <span className="text-[1.1vw] font-normal">
+                {" "}corporate tax for
+              </span>
+              <br />
+              <span className="text-[1.1vw] font-normal">
+                qualifying free-zone businesses
+              </span>
+            </h3>
+          </div>
 
-  <div className="group bg-white hover:bg-[#f0fafd] rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
-    <h3 className="text-[#14224A] text-xl font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
-      Simple digital registration and visa processes
-    </h3>
-  </div>
+          <div className="group bg-white hover:bg-[#f0fafd] rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+            <h3 className="text-[#14224A] text-[1.1vw] font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
+              Simple digital registration and visa processes
+            </h3>
+          </div>
 
-  <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
-    <h3 className="text-[#14224A] text-xl font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
-      Access to global markets and skilled professionals
-    </h3>
-  </div>
+          <div className="group bg-[#43ADCD] hover:bg-[#3a9ab8] rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
+            <h3 className="text-[#14224A] text-[1.1vw] font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
+              Access to global markets and skilled professionals
+            </h3>
+          </div>
 
-</div>
+        </div>
       </div>
     </section>
   );

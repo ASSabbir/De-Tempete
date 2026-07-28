@@ -3,13 +3,23 @@ import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 
+const MAX_IMAGES = 5;
+
 const EMPTY = {
   title: '', description: '', description2: '', description3: '',
-  coverImage: '', eventDate: '', eventTime: '', isActive: true,
+  images: [], eventDate: '', eventTime: '', isActive: true,
 };
 
 const columns = [
   { key: 'title', label: 'Title' },
+  {
+    key: 'images', label: 'Images',
+    render: v => (
+      <span style={{ fontSize: 13, color: '#6b7280' }}>
+        {Array.isArray(v) ? v.length : 0} / {MAX_IMAGES}
+      </span>
+    ),
+  },
   { key: 'eventDate', label: 'Date', render: v => v ? new Date(v).toLocaleDateString() : '-' },
   { key: 'eventTime', label: 'Time' },
   { key: 'slug', label: 'Slug' },
@@ -19,6 +29,13 @@ const columns = [
 const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1d5db', borderRadius: 8, fontSize: 14, boxSizing: 'border-box' };
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
 const textareaStyle = { ...inputStyle, minHeight: 110, resize: 'vertical', fontFamily: 'inherit' };
+
+const TILE_SIZE = 100;
+
+const tileBase = {
+  width: TILE_SIZE, height: TILE_SIZE, borderRadius: 10,
+  position: 'relative', overflow: 'hidden', flexShrink: 0,
+};
 
 export default function NewsEvents() {
   const [items, setItems] = useState([]);
@@ -30,7 +47,7 @@ export default function NewsEvents() {
   const [form, setForm] = useState(EMPTY);
   const [editing, setEditing] = useState(null);
   const [saving, setSaving] = useState(false);
-  const [uploading, setUploading] = useState(false);
+  const [uploadingSlot, setUploadingSlot] = useState(null); // 'new' | index | null
   const [error, setError] = useState('');
 
   const fetchItems = useCallback(async (pg = page) => {
@@ -53,6 +70,7 @@ export default function NewsEvents() {
   const openEdit = (item) => {
     setForm({
       ...item,
+      images: Array.isArray(item.images) ? item.images : (item.coverImage ? [item.coverImage] : []),
       eventDate: item.eventDate ? new Date(item.eventDate).toISOString().split('T')[0] : '',
     });
     setEditing(item._id);
@@ -61,25 +79,52 @@ export default function NewsEvents() {
   };
   const closeModal = () => { setShowModal(false); setError(''); };
 
-  const handleImageChange = async (e) => {
+  const handleAddImage = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    if (form.images.length >= MAX_IMAGES) return;
 
-    setUploading(true);
+    setUploadingSlot('new');
     setError('');
     try {
       const url = await uploadToImgBB(file);
-      setForm(p => ({ ...p, coverImage: url }));
+      setForm(p => ({ ...p, images: [...p.images, url] }));
     } catch (err) {
       setError(err.message || 'Image upload failed');
     } finally {
-      setUploading(false);
+      setUploadingSlot(null);
+      e.target.value = '';
     }
   };
 
+  const handleReplaceImage = async (index, e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingSlot(index);
+    setError('');
+    try {
+      const url = await uploadToImgBB(file);
+      setForm(p => {
+        const next = [...p.images];
+        next[index] = url;
+        return { ...p, images: next };
+      });
+    } catch (err) {
+      setError(err.message || 'Image upload failed');
+    } finally {
+      setUploadingSlot(null);
+      e.target.value = '';
+    }
+  };
+
+  const handleRemoveImage = (index) => {
+    setForm(p => ({ ...p, images: p.images.filter((_, i) => i !== index) }));
+  };
+
   const handleSave = async () => {
-    if (!form.coverImage) {
-      setError('Please upload a cover image before saving');
+    if (!form.images || form.images.length === 0) {
+      setError('Please upload at least one image before saving');
       return;
     }
     setSaving(true);
@@ -144,17 +189,91 @@ export default function NewsEvents() {
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
 
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Cover Image</label>
-              <input type="file" accept="image/*" onChange={handleImageChange} style={inputStyle} />
-              {uploading && <p style={{ fontSize: 13, color: '#6b7280', marginTop: 6 }}>Uploading...</p>}
-              {form.coverImage && !uploading && (
-                <img
-                  src={form.coverImage}
-                  alt="Cover preview"
-                  style={{ marginTop: 10, width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8 }}
-                />
-              )}
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>Images ({form.images.length}/{MAX_IMAGES})</label>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                {form.images.map((url, index) => (
+                  <div key={index} style={{ ...tileBase, border: '1px solid #e5e7eb' }}>
+                    <img
+                      src={url}
+                      alt={`Image ${index + 1}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    />
+
+                    {uploadingSlot === index && (
+                      <div style={{
+                        position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.85)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontSize: 11, fontWeight: 600, color: '#374151',
+                      }}>
+                        Uploading...
+                      </div>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveImage(index)}
+                      title="Remove image"
+                      style={{
+                        position: 'absolute', top: 4, right: 4, width: 20, height: 20,
+                        borderRadius: '50%', background: 'rgba(17,24,39,0.75)', color: '#fff',
+                        border: 'none', cursor: 'pointer', fontSize: 12, lineHeight: 1,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      }}
+                    >
+                      ×
+                    </button>
+
+                    <label
+                      title="Replace image"
+                      style={{
+                        position: 'absolute', bottom: 0, left: 0, right: 0,
+                        background: 'rgba(15,31,61,0.8)', color: '#fff',
+                        fontSize: 11, fontWeight: 600, textAlign: 'center',
+                        padding: '4px 0', cursor: 'pointer',
+                      }}
+                    >
+                      Replace
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleReplaceImage(index, e)}
+                        style={{ display: 'none' }}
+                      />
+                    </label>
+                  </div>
+                ))}
+
+                {form.images.length < MAX_IMAGES && (
+                  <label
+                    style={{
+                      ...tileBase,
+                      border: '2px dashed #d1d5db',
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                      gap: 4, cursor: 'pointer', color: '#6b7280', background: '#f9fafb',
+                    }}
+                  >
+                    {uploadingSlot === 'new' ? (
+                      <span style={{ fontSize: 11, fontWeight: 600 }}>Uploading...</span>
+                    ) : (
+                      <>
+                        <span style={{ fontSize: 22, lineHeight: 1 }}>+</span>
+                        <span style={{ fontSize: 11, fontWeight: 600 }}>Add image</span>
+                      </>
+                    )}
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleAddImage}
+                      style={{ display: 'none' }}
+                      disabled={uploadingSlot === 'new'}
+                    />
+                  </label>
+                )}
+              </div>
+              <p style={{ fontSize: 12, color: '#9ca3af', marginTop: 8 }}>
+                Up to {MAX_IMAGES} images. Click an image to replace it, or use × to remove it.
+              </p>
             </div>
 
             <div style={{ marginBottom: 16 }}>
@@ -196,8 +315,8 @@ export default function NewsEvents() {
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
               <button onClick={closeModal} style={{ padding: '10px 20px', border: '1px solid #d1d5db', borderRadius: 8, cursor: 'pointer', background: '#fff' }}>Cancel</button>
-              <button onClick={handleSave} disabled={saving || uploading}
-                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: (saving || uploading) ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: (saving || uploading) ? 0.7 : 1 }}>
+              <button onClick={handleSave} disabled={saving || uploadingSlot !== null}
+                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: (saving || uploadingSlot !== null) ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: (saving || uploadingSlot !== null) ? 0.7 : 1 }}>
                 {saving ? 'Saving...' : 'Save'}
               </button>
             </div>

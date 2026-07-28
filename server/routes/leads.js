@@ -58,4 +58,15 @@ router.get('/admin/all', protect, async (req, res) => {
   }
 });
 
+// DELETE /api/leads/:id — protected
+router.delete('/:id', protect, async (req, res) => {
+  try {
+    const item = await Lead.findByIdAndDelete(req.params.id);
+    if (!item) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+  } catch {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 module.exports = router;

@@ -44,7 +44,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
         className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-5 text-left group"
       >
         <span
-          className={`text-[1.3vw] font-semibold transition-colors duration-200 ${
+          className={`text-[1.1vw] font-semibold transition-colors duration-200 ${
             isOpen ? "text-[#0d1e4a]" : "text-[#0d1e4a] group-hover:text-[#1a9fd4]"
           }`}
         >

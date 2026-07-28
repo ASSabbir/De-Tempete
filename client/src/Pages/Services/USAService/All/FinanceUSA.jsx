@@ -103,7 +103,7 @@ const FinanceUSA = () => {
                 <br />
                 Readiness
               </h2>
-              <p className="mt-8 text-xl leading-9 text-gray-600 text-justify">
+              <p className="mt-8 text-xl leading-7 text-gray-600 text-justify">
                 A strong financial structure is essential for regulatory
                 compliance, audit transparency, and investor confidence. We
                 establish robust accounting frameworks aligned with IFRS, tax

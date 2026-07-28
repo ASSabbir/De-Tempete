@@ -207,15 +207,15 @@ const Market_Expansion_Setup_Advisory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-4xl  2xl:text-5xl font-bold text-[#13264d]">
               Business Setup &{" "}
               <span className="font-extrabold">Registration</span>
             </h2>
-            <p className="mt-5 text-gray-500 font-semibold">
+            <p className="mt-5 text-lg  2xl:text-lg text-gray-500 font-semibold">
               From entry formation to licensing, we simplify every stage of your
               UAE business setup.
             </p>
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-lg  2xl:text-lg text-gray-600 leading-8">
               Our experts help you choose the right jurisdiction — Mainland,
               Free Zone, or Offshore — based on your ownership goals, industry
               type, and target market.
@@ -291,12 +291,12 @@ const Market_Expansion_Setup_Advisory = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
+          <div className="grid lg:grid-cols-3  mt-16">
             {goToMarket.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index}>
-                  <Icon className="text-4xl  text-white bg-light-blue p-2 rounded-full mb-4" />
+                <div key={index} className="hover:bg-gray-100 p-5">
+                  <Icon className="text-4xl  text-light-blue bg-light-blue/20 p-2 rounded-sm mb-4" />
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>

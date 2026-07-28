@@ -252,7 +252,7 @@ const Market_Expansion = () => {
               </span>
             </h2>
 
-            <p className="mt-8 text-xl text-gray-500 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-gray-500 leading-7 max-w-4xl mx-auto">
               Success in Bangladesh requires more than just registration. We
               help tailor your business model, pricing and operations to align
               with local culture, consumer behavior and regulatory requirements.
@@ -395,7 +395,7 @@ const Market_Expansion = () => {
                 <span className="font-bold">Opening</span> Assistance
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
+              <p className="mt-8 text-xl leading-7 text-gray-500">
                 Coordinate with leading local and international banks for
                 account opening, compliance documentation, and end-to-end
                 activation support.
@@ -435,7 +435,7 @@ const Market_Expansion = () => {
                 Protection
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
+              <p className="mt-8 text-xl leading-7 text-gray-500">
                 Secure your brand, logo and products with trademark and
                 intellectual property registration in Bangladesh. Our experts
                 assist with searches, filing, copyright advisory and renewal

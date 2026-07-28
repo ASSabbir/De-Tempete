@@ -33,7 +33,7 @@ const CompanyFormation = () => {
                                 <br />
                                 Readiness
                             </h2>
-                            <p className="mt-8 text-xl leading-9 text-gray-600 text-justify">
+                            <p className="mt-8 text-xl leading-7 text-gray-600 text-justify">
                                 The OÜ (Private Limited Company) is Estonia's most popular business structure for international entrepreneurs, offering 100% foreign ownership, limited liability, and the flexibility to operate entirely online. With no local sponsor required, minimal capital requirements, and access to the EU Single Market, an OÜ provides a secure, scalable, and tax-efficient foundation for startups, SMEs, and global businesses looking to expand into Europe
                             </p>
                             

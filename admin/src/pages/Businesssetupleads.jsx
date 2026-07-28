@@ -12,6 +12,21 @@ const pageBtnStyle = (disabled) => ({
 
 const LIMIT = 20;
 
+const csvColumns = [
+  { key: 'name', label: 'Name' },
+  { key: 'email', label: 'Email' },
+  { key: 'phone', label: 'Phone' },
+  { key: 'guide', label: 'Guide' },
+  { key: 'createdAt', label: 'Date' },
+];
+
+// Turns a value into a safe CSV cell (quotes it if it contains a comma, quote, or newline).
+const toCsvCell = (value) => {
+  const str = value === null || value === undefined ? '' : String(value);
+  if (/[",\n]/.test(str)) return `"${str.replace(/"/g, '""')}"`;
+  return str;
+};
+
 export default function BusinessSetupLeads() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
@@ -19,6 +34,7 @@ export default function BusinessSetupLeads() {
   const [pages, setPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,16 +52,72 @@ export default function BusinessSetupLeads() {
   const formatDate = (d) =>
     new Date(d).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 
+  const handleExportCSV = async () => {
+    setExporting(true);
+    setError('');
+    try {
+      // pull every page, not just what's on screen
+      let all = [];
+      let pg = 1;
+      let totalPages = 1;
+      do {
+        const { data } = await API.get(`/business-setup-leads/admin/all?page=${pg}&limit=200`);
+        all = all.concat(data.items || []);
+        totalPages = data.pages || 1;
+        pg++;
+      } while (pg <= totalPages);
+
+      const headerRow = csvColumns.map(c => toCsvCell(c.label)).join(',');
+      const dataRows = all.map(row =>
+        csvColumns.map(col => {
+          const raw = col.key === 'createdAt' ? formatDate(row[col.key]) : row[col.key];
+          return toCsvCell(raw ?? '');
+        }).join(',')
+      );
+      const csv = [headerRow, ...dataRows].join('\n');
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `business-setup-leads-${new Date().toISOString().split('T')[0]}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch {
+      setError('Export failed');
+    } finally {
+      setExporting(false);
+    }
+  };
+
   return (
     <div>
-      <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d', marginBottom: 8 }}>
-        Business Setup Downloads
-      </h2>
-      <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 28 }}>
-        {total} total submission{total === 1 ? '' : 's'}
-      </p>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12, marginBottom: 8 }}>
+        <div>
+          <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d', marginBottom: 8 }}>
+            Business Setup Downloads
+          </h2>
+          <p style={{ fontSize: 14, color: '#6b7280' }}>
+            {total} total submission{total === 1 ? '' : 's'}
+          </p>
+        </div>
+        <button
+          onClick={handleExportCSV}
+          disabled={exporting || total === 0}
+          style={{
+            padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none',
+            borderRadius: 8, fontWeight: 600, fontSize: 14,
+            cursor: (exporting || total === 0) ? 'not-allowed' : 'pointer',
+            opacity: (exporting || total === 0) ? 0.6 : 1,
+          }}
+        >
+          {exporting ? 'Preparing CSV...' : '⬇ Export CSV'}
+        </button>
+      </div>
 
-      <div style={cardStyle}>
+      <div style={{ ...cardStyle, marginTop: 20 }}>
         {error && (
           <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>
             {error}

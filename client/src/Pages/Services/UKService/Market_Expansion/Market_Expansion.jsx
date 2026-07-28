@@ -143,7 +143,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
               Business Setup &{" "}
               <span className="font-extrabold">Registration</span>
             </h2>
@@ -236,7 +236,7 @@ const Market_Expansion = () => {
         <div className="max-w-[1300px] mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-5xl  leading-tight font-light text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
@@ -298,9 +298,9 @@ const Market_Expansion = () => {
                       : "hover:-translate-y-1 hover:shadow-lg"
                     }`}
                 >
-                  <Icon className="text-3xl text-white bg-light-blue p-1 rounded-full mb-6" />
+                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm mb-6" />
 
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
+                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
 
@@ -387,13 +387,13 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div className="flex flex-col justify-center">
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
                 <span className="font-bold">Opening</span> Assistance
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
+              <p className="mt-8 text-xl leading-7 text-gray-500">
                 Opening a UK business bank account often requires demonstrable
                 operational clarity, ownership transparency, and compliance
                 readiness depending on the business structure and activities.
@@ -427,14 +427,14 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div className="flex flex-col justify-center">
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
                 <br />
                 Protection
               </h2>
 
-              <p className="mt-8 text-xl leading-9 text-gray-500">
+              <p className="mt-8 text-xl leading-7 text-gray-500">
                 We assist in trademark and IP registration through the UK Intellectual Property Office (UKIPO) — ensuring your brand, logo and products are legally protected in the UK.
               </p>
 
@@ -527,7 +527,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center">
-            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
+            <h2 className="text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our
               <span className="font-bold"> UK Market Expansion Advisory</span>
             </h2>

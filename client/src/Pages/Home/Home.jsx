@@ -8,6 +8,8 @@ import Resources from './Resources';
 import Awards from './Awards';
 import Reviews from './Reviews';
 import FAQ from './FAQ';
+import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+import { blogPosts } from "@/Components/Shared/blogPosts";
 import EventBlogPartners from './Eventblogpartners';
 import SharedButton from '../../Components/Shared/SharedButton';
 
@@ -36,6 +38,7 @@ const Home = () => {
             </div>
             <FAQ></FAQ>
             <EventBlogPartners></EventBlogPartners>
+            <RecentBlogs blogs={blogPosts} />
 
 
         </div>

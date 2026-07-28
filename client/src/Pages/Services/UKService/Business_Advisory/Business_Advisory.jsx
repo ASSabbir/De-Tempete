@@ -284,11 +284,11 @@ const Business_Advisory = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-white font-light">
               Financial Strategy &{" "}
               <span className="font-bold">Growth Consulting</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-9 max-w-4xl mx-auto">
+            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
               <span className="font-semibold text-white">
                 Build a Financial Strategy That Drives Growth
               </span>

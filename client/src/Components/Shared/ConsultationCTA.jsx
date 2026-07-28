@@ -11,14 +11,14 @@ export const ConsultationCTA = ({
   commitmentTitleOnly = false,
 }) => (
   <section className="bg-[#16244B] py-24">
-    <div className="max-w-[1600px] mx-auto px-6">
+    <div className="max-w-[1600px] mx-auto px-6 md:px-20 2xl:px-6">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 className="text-5xl leading-tight font-light text-white">
+          <h2 className="text-4xl  2xl:text-5xl leading-tight font-light text-white">
             {heading}
           </h2>
            {subheading && (
-            <p className="mt-8 text-light-blue text-xl font-semibold leading-9 max-w-xl">{subheading}</p>
+            <p className="mt-8 text-light-blue text-lg  2xl:text-xl font-semibold leading-7 max-w-xl">{subheading}</p>
           )}
           {bodyText && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">

@@ -219,23 +219,7 @@ const Regulatory_Compliance = () => {
           </div>
         </div>
       </section>
-      <ConsultationCTA
-        heading={
-          <>
-            Start Building Your
-            <br />
-            Business{" "}
-            <span className="font-bold">Compliance Framework Today</span>
-          </>
-        }
-        subheading="Improve regulatory compliance, reduce risks, and strengthen business operations across UAE."
-        commitmentItems={[
-          "Stronger compliance controls",
-          "Reduced operational risks",
-          "Better internal processes",
-          "Higher business credibility",
-        ]}
-      />
+      
 
       {/* Why Businesses Choose */}
       <section className="py-24 bg-white">
@@ -266,6 +250,23 @@ const Regulatory_Compliance = () => {
           </div>
         </div>
       </section>
+      <ConsultationCTA
+        heading={
+          <>
+            Start Building Your
+            <br />
+            Business{" "}
+            <span className="font-bold">Compliance Framework Today</span>
+          </>
+        }
+        subheading="Improve regulatory compliance, reduce risks, and strengthen business operations across UAE."
+        commitmentItems={[
+          "Stronger compliance controls",
+          "Reduced operational risks",
+          "Better internal processes",
+          "Higher business credibility",
+        ]}
+      />
 
       
 
