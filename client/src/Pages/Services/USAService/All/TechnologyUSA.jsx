@@ -11,6 +11,16 @@ import {
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const automationFeatures = [
   {
@@ -55,6 +65,7 @@ import {
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import businessAutomationImg from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
+import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 
 
 
@@ -246,6 +257,7 @@ const TechnologyUSA = () => {
           </div>
         </div>
       </section>
+      <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
 
       {/* What You Gain Section */}
       <section className="bg-[#16244B] py-24">
@@ -365,6 +377,45 @@ const TechnologyUSA = () => {
           "Transparent and efficient process",
         ]}
       />
+      {/* Technological Partner Section */}
+
+      <section className="pt-15 bg-white overflow-hidden">
+        <div className=" mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+            Technological <span className="font-bold">Partner</span>
+          </h2>
+
+          <div className="overflow-hidden">
+            <div
+              className="flex items-center"
+              style={{
+                animation: "scrollLeft 35s linear infinite",
+              }}
+            >
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={index} className="shrink-0 ">
+                  <img
+                    src={logo}
+                    alt="Partner"
+                    className="h-60 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
+        </div>
+      </section>
 
       
     </div>

@@ -47,7 +47,7 @@ const UAEMarketAdvisory = () => {
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{feature.description}</p>
+                  <p className="text-gray-600 text-base">{feature.description}</p>
                 </div>
               </div>
             </div>

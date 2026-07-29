@@ -38,7 +38,7 @@ export default function GetStarted({commitments, title,des}) {
             </p>
 
             {/* Description */}
-            <p className="text-white/70 text-sm sm:text-base italic leading-relaxed max-w-md">
+            <p className="text-white/70 text-base sm:text-base italic leading-relaxed max-w-md">
               {des}
             </p>
 
@@ -50,7 +50,7 @@ export default function GetStarted({commitments, title,des}) {
               <h3 className="text-white font-bold text-base">Our Commitment</h3>
               <ul className="flex flex-col gap-3">
                 {commitments.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
+                  <li key={item} className="flex items-start gap-3 text-white/80 text-base leading-relaxed">
                     {/* Teal check circle */}
                     <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center" style={{ background: "#1a9fd4" }}>
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -79,38 +79,38 @@ export default function GetStarted({commitments, title,des}) {
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               {/* Name */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[#0d1e4a] text-sm font-medium">Name</label>
+                <label className="text-[#0d1e4a] text-base font-medium">Name</label>
                 <input
                   type="text" name="name" placeholder="Name"
                   value={form.name} onChange={handleChange} required
-                  className="w-full px-4 py-3 rounded-xl text-sm text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl text-base text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all"
                 />
               </div>
 
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[#0d1e4a] text-sm font-medium">Email</label>
+                <label className="text-[#0d1e4a] text-base font-medium">Email</label>
                 <input
                   type="email" name="email" placeholder="Email"
                   value={form.email} onChange={handleChange} required
-                  className="w-full px-4 py-3 rounded-xl text-sm text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl text-base text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all"
                 />
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-1.5">
-                <label className="text-[#0d1e4a] text-sm font-medium">Message</label>
+                <label className="text-[#0d1e4a] text-base font-medium">Message</label>
                 <textarea
                   name="message" placeholder="Write your message..."
                   rows={5} value={form.message} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl text-sm text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl text-base text-gray-700 placeholder-gray-300 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] focus:border-transparent transition-all resize-none"
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl text-white font-semibold text-sm transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1"
+                className="w-full py-3.5 rounded-xl text-white font-semibold text-base transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1"
                 style={{ background: "linear-gradient(135deg, #1a9fd4, #22d3ee)" }}
               >
                 Send

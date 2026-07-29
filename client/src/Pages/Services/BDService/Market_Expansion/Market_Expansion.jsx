@@ -156,7 +156,7 @@ const Market_Expansion = () => {
               <span className="font-extrabold">Registration</span>
             </h2>
 
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-base">
               Simplified Business Setup & Structure Guidance
             </div>
 
@@ -308,7 +308,7 @@ const Market_Expansion = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               );
             })}
@@ -326,7 +326,7 @@ const Market_Expansion = () => {
             <p className="text-gray-600 text-lg font-semibold">
               Compliance & Logistics Advisory
             </p>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               For smooth exports of merchandise and products from Bangladesh,
               obtain trade compliance and logistics advisory to ensure
               consistent growth and scalability.
@@ -362,7 +362,7 @@ const Market_Expansion = () => {
 
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                    <p className="text-gray-600 text-base">{item.description}</p>
                   </div>
                 )}
               </div>

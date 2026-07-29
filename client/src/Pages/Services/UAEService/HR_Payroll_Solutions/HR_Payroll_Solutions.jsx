@@ -226,7 +226,7 @@ const HR_Payroll_Solutions = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
             <div className="bg-[#16244B] rounded-2xl p-8 flex flex-col justify-center">

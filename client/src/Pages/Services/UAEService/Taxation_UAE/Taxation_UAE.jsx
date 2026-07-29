@@ -216,7 +216,7 @@ const Taxation_UAE = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               </div>
             ))}

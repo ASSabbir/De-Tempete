@@ -122,7 +122,7 @@ function StatCard({ stat, index, start }) {
       </div>
 
       {/* Desc */}
-      <p className="relative z-10 text-white/50 text-xs sm:text-sm leading-relaxed transition-colors duration-500 group-hover:text-white/70">
+      <p className="relative z-10 text-white/50 text-xs sm:text-base leading-relaxed transition-colors duration-500 group-hover:text-white/70">
         {stat.desc}
       </p>
 
@@ -192,7 +192,7 @@ export default function HrAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white/60 text-sm sm:text-base leading-relaxed max-w-md"
+              className="text-white/60 text-base sm:text-base leading-relaxed max-w-md"
             >
               We manage the essential HR functions that keep your workforce structured, compliant, and efficient. From employee lifecycle management to policy and performance support, our approach ensures smooth day-to-day operations without adding administrative burden to your business.
             </motion.p>
@@ -207,7 +207,7 @@ export default function HrAdvantage() {
             >
 
               {bullets.map((b) => (
-                <li key={b} className="flex items-center gap-3 text-white/70 text-sm">
+                <li key={b} className="flex items-center gap-3 text-white/70 text-base">
                   <svg className="w-5 h-5 shrink-0 text-[#1a9fd4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>

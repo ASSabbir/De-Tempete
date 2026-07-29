@@ -262,7 +262,7 @@ export default function Nav({ openCalculator }) {
               onMouseLeave={() => handleLeave(setCompanyOpen, companyTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass} ${companyOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${companyOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Company Formation
                 <svg
@@ -285,7 +285,7 @@ export default function Nav({ openCalculator }) {
                 className={`absolute top-full left-4/5 xl:left-1/2 w-[70vw] xl:w-[80vw] -translate-x-1/2 mt-2 rounded-2xl overflow-hidden shadow-2xl transition-all   duration-200  origin-top ${companyOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"}`}
                 style={{ background: "#0d1e4a" }}
               >
-                <div className="p-5 text-sm xl:text-base">
+                <div className="p-5 text-base xl:text-base">
                   {/* Top row — 4 cards */}
                   <div className="grid grid-cols-4  gap-3 mb-3">
                     {companyFormation.slice(0, 4).map((item) => (
@@ -347,7 +347,7 @@ export default function Nav({ openCalculator }) {
               onMouseLeave={() => handleLeave(setServicesOpen, servicesTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass} ${servicesOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${servicesOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Services
                 <svg
@@ -374,7 +374,7 @@ export default function Nav({ openCalculator }) {
                     <button
                       key={region}
                       onMouseEnter={() => setActiveServiceRegion(region)}
-                      className={`flex-1 py-3.5 text-sm font-semibold transition-colors duration-150 ${activeServiceRegion === region ? "text-white border-b-2 border-[#1a9fd4]" : "text-white/50 hover:text-white/80"}`}
+                      className={`flex-1 py-3.5 text-base font-semibold transition-colors duration-150 ${activeServiceRegion === region ? "text-white border-b-2 border-[#1a9fd4]" : "text-white/50 hover:text-white/80"}`}
                     >
                       {region}
                     </button>
@@ -387,7 +387,7 @@ export default function Nav({ openCalculator }) {
                         key={item.path}
                         to={item.path}
                         onClick={() => setServicesOpen(false)}
-                        className="flex items-center gap-2 py-2 px-3 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 group"
+                        className="flex items-center gap-2 py-2 px-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 group"
                       >
                         <span className="w-1 h-1 rounded-full bg-[#1a9fd4] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                         {item.label}
@@ -401,7 +401,7 @@ export default function Nav({ openCalculator }) {
             {/* About */}
             <Link
               to="/about"
-              className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass}`}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass}`}
             >
               About
             </Link>
@@ -414,7 +414,7 @@ export default function Nav({ openCalculator }) {
               onMouseLeave={() => handleLeave(setResourceOpen, resourceTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass} ${resourceOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${resourceOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Resource
                 <svg
@@ -453,7 +453,7 @@ export default function Nav({ openCalculator }) {
                             <Link
                               to={item.path}
                               onClick={() => setResourceOpen(false)}
-                              className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-sm text-white/60 hover:text-white hover:bg-white/10 transition-colors duration-150 group"
+                              className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-base text-white/60 hover:text-white hover:bg-white/10 transition-colors duration-150 group"
                             >
                               <span className="w-1 h-1 rounded-full bg-[#1a9fd4] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                               {item.label}
@@ -470,7 +470,7 @@ export default function Nav({ openCalculator }) {
             {/* Contact */}
             <Link
               to="/contact"
-              className={`flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${textClass}`}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass}`}
             >
               Contact
             </Link>
@@ -479,7 +479,7 @@ export default function Nav({ openCalculator }) {
             <button
             onClick={openCalculator}
               
-              className={`ml-3 px-5 py-2 rounded-lg text-sm font-semibold border-2 transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
+              className={`ml-3 px-5 py-2 rounded-lg text-base font-semibold border-2 transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
             >
               Cost Calculator
             </button>
@@ -527,7 +527,7 @@ export default function Nav({ openCalculator }) {
           <div>
             <button
               onClick={() => setMobileCompanyOpen(!mobileCompanyOpen)}
-              className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="w-full flex items-center justify-between px-4 py-3 text-base text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
               Company Formation
               <svg
@@ -577,7 +577,7 @@ export default function Nav({ openCalculator }) {
           <div>
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="w-full flex items-center justify-between px-4 py-3 text-base text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
               Services
               <svg
@@ -614,7 +614,7 @@ export default function Nav({ openCalculator }) {
                     key={item.path}
                     to={item.path}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-3 py-2 text-sm text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                    className="block px-3 py-2 text-base text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -627,7 +627,7 @@ export default function Nav({ openCalculator }) {
           <div>
             <button
               onClick={() => setMobileResourceOpen(!mobileResourceOpen)}
-              className="w-full flex items-center justify-between px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="w-full flex items-center justify-between px-4 py-3 text-base text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
               Resource
               <svg
@@ -658,7 +658,7 @@ export default function Nav({ openCalculator }) {
                         key={item.path}
                         to={item.path}
                         onClick={() => setMobileOpen(false)}
-                        className="block px-2 py-1.5 text-sm text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                        className="block px-2 py-1.5 text-base text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -675,7 +675,7 @@ export default function Nav({ openCalculator }) {
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="block px-4 py-3 text-base text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
               {link.label}
             </Link>
@@ -686,7 +686,7 @@ export default function Nav({ openCalculator }) {
               
               // onClick={() => setMobileOpen(false)}
               onClick={openCalculator}
-              className="block w-full py-3 text-center rounded-lg text-sm font-semibold border-2 border-white text-white hover:bg-white hover:text-[#0d1e4a] transition-all duration-200"
+              className="block w-full py-3 text-center rounded-lg text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-[#0d1e4a] transition-all duration-200"
             >
               Cost Calculator
             </button>

@@ -11,7 +11,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
+import img1 from '../../../../asstes/img_temp/servics/usabanner.webp'
 const servicesData = [
   {
     title: "Accounting & Bookkeeping",
@@ -205,8 +205,8 @@ const FinanceUSA = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">
-              Why Choose Our Finance & Accounting Services
+            <h2 className="text-5xl  text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span> Finance & Accounting Services
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
@@ -241,8 +241,8 @@ const FinanceUSA = () => {
                 key={index}
                 className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
-                  <FaCheckCircle className="text-white text-xl" />
+                <div className="w-12 h-12 rounded-lg bg-light-blue/20 flex items-center justify-center mb-6">
+                  <FaCheckCircle className="text-light-blue text-xl" />
                 </div>
                 <h3 className="text-xl font-bold text-[#16244b] mb-3">
                   {feature.title}

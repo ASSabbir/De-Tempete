@@ -1,5 +1,5 @@
 const express = require('express');
-const BusinessSetupLead = require('../models/Businesssetupleads');
+const BusinessSetupLead = require('../models/businessSetupLeads');
 const { protect } = require('../middleware/auth');
 
 const router = express.Router();

@@ -68,6 +68,7 @@ const gains = [
   "Structured Reporting Systems",
   "Reduced Operational Errors",
   "Stronger Business Organization",
+  "Enhanced Decision-Making Confidence",
 ];
 
 const whyChoose = [
@@ -110,7 +111,7 @@ const Finance_Accounting = () => {
             <span className="text-light-blue">Operations In Saudi Arabia</span>
           </>
         }
-        description="de tempête provides finance and accounting support services in Saudi Arabia, helping businesses maintain organized financial records, improve accounting accuracy, and support smooth day-to-day financial operations."
+        description={<><span className="font-bold italic">de tempête</span> provides finance and accounting support services in Saudi Arabia, helping businesses maintain organized financial records, improve accounting accuracy, and support smooth day-to-day financial operations.</>}
       />
 
       <SecondSection></SecondSection>
@@ -139,7 +140,7 @@ const Finance_Accounting = () => {
               sustainable growth and smoother operations.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports companies in Saudi Arabia with finance and accounting
               solutions designed to improve financial organization, maintain
               reporting accuracy, and strengthen operational workflows.
@@ -185,7 +186,7 @@ const Finance_Accounting = () => {
               <span className="font-normal">Services In Saudi Arabia</span>
             </h2>
             <p className="mt-5 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               helps businesses maintain organized accounting systems and
               accurate financial records to support daily business operations
               and long-term financial management.
@@ -194,7 +195,7 @@ const Finance_Accounting = () => {
               {bookkeepingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -213,7 +214,7 @@ const Finance_Accounting = () => {
               Clear financial reporting helps businesses improve visibility,
               maintain organized documentation, and support operational
               decision-making processes.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               provides financial reporting support services in Saudi Arabia to
               help businesses maintain structured financial records and
               organized reporting systems.
@@ -222,7 +223,7 @@ const Finance_Accounting = () => {
               {reportingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -255,7 +256,7 @@ const Finance_Accounting = () => {
               Efficient accounting systems help businesses improve workflow
               management, maintain financial accuracy, and support smoother
               operational processes.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Saudi Arabia with accounting system
               management and financial process coordination designed to improve
               operational efficiency and management.
@@ -264,7 +265,7 @@ const Finance_Accounting = () => {
               {systemsPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -283,7 +284,7 @@ const Finance_Accounting = () => {
             <p className="mt-5 text-gray-500 leading-7">
               Well-maintained accounting records are essential for supporting
               VAT documentation and maintaining organized financial operations.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               helps businesses in Saudi Arabia maintain structured financial
               records and accounting documentation that support VAT readiness
               and operational compliance requirements.
@@ -314,7 +315,7 @@ const Finance_Accounting = () => {
               Reliable finance operations help businesses maintain better
               financial control, improve reporting consistency, and reduce
               operational inefficiencies.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses with organized accounting support that
               strengthens financial workflows and improves overall operational
               management.
@@ -344,8 +345,8 @@ const Finance_Accounting = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose <span className="font-normal italic">de tempête</span>{" "}
+            <h2 className="text-4xl  text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span>{" "}
               for Finance & Accounting
             </h2>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
@@ -359,7 +360,7 @@ const Finance_Accounting = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -374,7 +375,7 @@ const Finance_Accounting = () => {
             Operations <span className="font-bold">In Saudi Arabia</span>
           </>
         }
-        subheading="de tempête helps businesses in Saudi Arabia build stronger and more organized financial operations."
+        subheading={<><span className="font-black italic">de tempête</span> helps businesses in Saudi Arabia build stronger and more organized financial operations.</>}
         commitmentItems={[
           "Organized accounting systems",
           "Accurate financial reporting",

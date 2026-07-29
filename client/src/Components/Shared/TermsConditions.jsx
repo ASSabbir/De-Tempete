@@ -82,7 +82,7 @@ const TermsConditions = () => {
           <p className="mt-4 text-slate-300">
             Please read our terms and conditions
           </p>
-          <p className="mt-1 text-slate-400 text-sm">
+          <p className="mt-1 text-slate-400 text-base">
             V1.1 — Last edited: 20 July 2026
           </p>
         </div>
@@ -98,7 +98,7 @@ const TermsConditions = () => {
                 <a
                   key={s.id}
                   href={`#${s.id}`}
-                  className="block text-sm text-gray-500 hover:text-cyan-500 transition-colors leading-6"
+                  className="block text-base text-gray-500 hover:text-cyan-500 transition-colors leading-6"
                 >
                   {s.label}
                 </a>
@@ -132,7 +132,7 @@ const TermsConditions = () => {
               following expressions have the following meanings:
             </p>
             <div className="overflow-x-auto border border-gray-200 rounded-xl">
-              <table className="w-full text-sm">
+              <table className="w-full text-base">
                 <thead className="bg-[#F5F6F8]">
                   <tr>
                     <th className="text-left p-4 font-bold text-[#16244b]">Expression</th>
@@ -179,7 +179,7 @@ const TermsConditions = () => {
               {businessServices.map((item, i) => (
                 <div key={i} className="flex items-start gap-3 border border-gray-200 rounded-xl p-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <span className="text-gray-600 text-sm leading-6">{item}</span>
+                  <span className="text-gray-600 text-base leading-6">{item}</span>
                 </div>
               ))}
             </div>
@@ -438,7 +438,7 @@ const TermsConditions = () => {
               other means.
             </p>
             <div className="bg-[#F5F6F8] rounded-xl p-6">
-              <p className="text-gray-600 leading-7 text-sm">
+              <p className="text-gray-600 leading-7 text-base">
                 By breaching the provisions above, you may be committing a
                 criminal offence under applicable computer misuse
                 legislation. Any and all such breaches will be reported to
@@ -479,7 +479,7 @@ const TermsConditions = () => {
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {breachActions.map((item, i) => (
                 <div key={i} className="border border-gray-200 rounded-xl p-4">
-                  <p className="text-gray-600 text-sm leading-6">{item}</p>
+                  <p className="text-gray-600 text-base leading-6">{item}</p>
                 </div>
               ))}
             </div>
@@ -502,7 +502,7 @@ const TermsConditions = () => {
               {cookiePurposes.map((item, i) => (
                 <div key={i} className="flex items-start gap-3 border border-gray-200 rounded-xl p-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <span className="text-gray-600 text-sm leading-6">{item}</span>
+                  <span className="text-gray-600 text-base leading-6">{item}</span>
                 </div>
               ))}
             </div>
@@ -566,7 +566,7 @@ const TermsConditions = () => {
               <h4 className="font-bold text-[#16244b] mb-3">
                 Marketing Consent and Data Sharing Acknowledgment
               </h4>
-              <p className="text-gray-600 leading-7 text-sm mb-4">
+              <p className="text-gray-600 leading-7 text-base mb-4">
                 Where you provide Us with your contact information and
                 basic business information (for example, when submitting
                 an enquiry or engaging Our services), We will ask for your
@@ -576,7 +576,7 @@ const TermsConditions = () => {
                 with selected third-party marketing partners, as described
                 in Our Privacy Policy.
               </p>
-              <p className="text-gray-600 leading-7 text-sm">
+              <p className="text-gray-600 leading-7 text-base">
                 Providing this acknowledgment is optional and is not a
                 condition of accessing Our Site or receiving Our services.
                 You may withdraw your acknowledgment at any time using the

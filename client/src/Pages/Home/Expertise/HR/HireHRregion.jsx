@@ -72,7 +72,7 @@ export default function HireHRregion() {
           <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-4">
            HR & Payroll <span className="font-extrabold">In Your Region</span>
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">
             Delivering compliant and efficient HR solutions tailored to your local workforce requirements.
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function HireHRregion() {
             <button
               key={r.id}
               onClick={() => setActive(r.id)}
-              className={`flex-1 min-w-[140px] rounded-xl px-4 py-3.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer 
+              className={`flex-1 min-w-[140px] rounded-xl px-4 py-3.5 text-base font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer 
                 ${active === r.id
                   ? "bg-[#0d1e4a] text-white"
                   : "bg-white text-gray-500 hover:text-[#0d1e4a] hover:bg-gray-50"
@@ -115,7 +115,7 @@ export default function HireHRregion() {
             </h3>
 
             {/* Description */}
-            <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-3xl">
+            <p className="text-gray-500 text-base sm:text-base leading-relaxed max-w-3xl">
               {current.description}
             </p>
 

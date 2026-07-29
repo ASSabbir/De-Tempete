@@ -156,28 +156,7 @@ const benefits = [
     },
 ];
 
-const blogs = [
-    {
-        id: 1,
-        image: "/src/asstes/img_temp/New folder/council-tax.webp",
-        title:
-            "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-        desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-    },
-    {
-        id: 2,
-        image: "/src/asstes/img_temp/New folder/self-assessment-tax-return.webp",
-        title:
-            "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-        desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-    },
-    {
-        id: 3,
-        image: "/src/asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp",
-        title: "The Role and Benefits of a Virtual CFO in Modern Businesses",
-        desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-    },
-];
+
 
 const EUExpansion = () => {
     const [expandedItem, setExpandedItem] = useState(null);
@@ -259,14 +238,14 @@ const EUExpansion = () => {
                         {industries.map((item, index) => {
                             const Icon = item.icon;
                             return (
-                                <div key={index} className="flex flex-col items-center text-center">
+                                <div key={index} className="flex hover:bg-white p-5 rounded-xl hover:shadow-2xl flex-col items-center text-center">
                                     <Icon className="text-4xl text-light-blue bg-light-blue/20 rounded-sm p-2 mb-5" />
                                     <h3 className="text-xl font-bold text-[#16244b] mb-4">
                                         {item.title}
                                     </h3>
                                     <ul className="space-y-2">
                                         {item.items.map((li, i) => (
-                                            <li key={i} className="text-gray-500 text-sm leading-6">
+                                            <li key={i} className="text-gray-500 text-base leading-6">
                                                 - {li}
                                             </li>
                                         ))}
@@ -339,29 +318,14 @@ const EUExpansion = () => {
                                         {item.title}
                                     </h3>
                                 </div>
-                                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <ConsultationCTA
-    heading={
-        <>
-            Build Your
-            <br />
-            <span className="font-bold">European Presence</span>
-        </>
-    }
-    subheading="From market entry and international business structuring to finance, compliance, and ongoing advisory, we help businesses expand into Europe with confidence through Estonia."
-    commitmentItems={[
-        "Free strategic consultation",
-        "Cross-border expansion specialists",
-        "International finance & reporting support",
-        "Long-term partnership for sustainable growth",
-    ]}
-/>
+           
 
             {/* Our Industry-Based Services */}
             <section className="py-20 px-6 bg-white">
@@ -373,7 +337,7 @@ const EUExpansion = () => {
                             Include
                         </h2>
 
-                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
                             Comprehensive support to help businesses expand into the European Union,
                             manage cross-border operations, and establish a strong international
                             presence through Estonia.
@@ -391,7 +355,7 @@ const EUExpansion = () => {
                                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                                        <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
                                             <img src={logo} alt="" />
                                         </div>
                                         <span className="font-semibold text-gray-900">
@@ -405,7 +369,7 @@ const EUExpansion = () => {
                                 </button>
                                 {expandedItem === idx && (
                                     <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                                        <p className="text-gray-600 text-sm">{item.desc}</p>
+                                        <p className="text-gray-600 text-base">{item.desc}</p>
                                     </div>
                                 )}
                             </div>
@@ -413,6 +377,22 @@ const EUExpansion = () => {
                     </div>
                 </div>
             </section>
+             <ConsultationCTA
+    heading={
+        <>
+            Build Your
+            <br />
+            <span className="font-bold">European Presence</span>
+        </>
+    }
+    subheading="From market entry and international business structuring to finance, compliance, and ongoing advisory, we help businesses expand into Europe with confidence through Estonia."
+    commitmentItems={[
+        "Free strategic consultation",
+        "Cross-border expansion specialists",
+        "International finance & reporting support",
+        "Long-term partnership for sustainable growth",
+    ]}
+/>
         </div>
     );
 };

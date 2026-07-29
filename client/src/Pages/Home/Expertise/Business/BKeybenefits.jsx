@@ -45,7 +45,7 @@ export default function BKeyBenefits() {
               }}
               
             >
-              <p className="text-white  font-semibold text-sm sm:text-base leading-snug">
+              <p className="text-white  font-semibold text-base sm:text-base leading-snug">
                 {text}
               </p>
             </motion.div>

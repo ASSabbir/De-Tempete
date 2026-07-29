@@ -194,14 +194,14 @@ const Market_Expansion_Setup_Advisory = () => {
                   />
                   <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
                     <h3 className="text-white text-2xl font-bold">{c.title}</h3>
-                    <p className="text-gray-200 text-sm">{c.desc}</p>
+                    <p className="text-gray-200 text-base">{c.desc}</p>
                   </div>
                 </div>
                 <div className="p-6 grid grid-cols-2 gap-3">
                   {c.points.map((p, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <FaCheckCircle className="text-light-blue mt-1 shrink-0" />
-                      <span className="text-gray-600 text-sm">{p}</span>
+                      <span className="text-gray-600 text-base">{p}</span>
                     </div>
                   ))}
                 </div>
@@ -229,7 +229,7 @@ const Market_Expansion_Setup_Advisory = () => {
               <h3 className="text-lg font-bold text-[#16244b] mb-3">
                 {c.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-6">{c.desc}</p>
+              <p className="text-gray-500 text-base leading-6">{c.desc}</p>
             </div>
           ))}
         </div>
@@ -257,7 +257,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 className="border border-white/10 rounded-lg overflow-hidden bg-[#1c2c5c]"
               >
                 <button className="w-full px-6 py-4 flex items-center justify-between text-left">
-                  <span className="flex items-center gap-3 text-white font-semibold text-sm">
+                  <span className="flex items-center gap-3 text-white font-semibold text-base">
                     <span className="text-light-blue">◆</span>
                     {item.title}
                   </span>
@@ -417,8 +417,8 @@ const Market_Expansion_Setup_Advisory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose Our Saudi Market{" "}
+            <h2 className="text-4xl  text-[#16244b]">
+              Why Choose <span className="italic font-bold">de tempête</span> Saudi Market{" "}
               <span className="font-normal">Expansion Advisory</span>
             </h2>
           </div>
@@ -428,7 +428,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -438,7 +438,7 @@ const Market_Expansion_Setup_Advisory = () => {
       <ConsultationCTA
         heading={
           <>
-            Start Your UAE
+            Start Your KSA
             <br />
             Expansion <span className="font-bold">Today</span>
           </>

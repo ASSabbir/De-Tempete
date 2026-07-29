@@ -74,7 +74,7 @@ const Technology = () => {
                   <img src={img2} alt="" />
                 </div>
                 <h3 className="text-lg font-bold text-[#14224A] mb-3 mt-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-6 text-center">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6 text-center">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -94,7 +94,7 @@ const Technology = () => {
               {automationItems.map((item, i) => (
                 <div key={i}>
                   <h4 className="font-bold text-[#16244b]">{item.title}</h4>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -142,7 +142,7 @@ const Technology = () => {
               <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-4" />
                 <h3 className="font-bold text-[#16244b] mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>

@@ -137,7 +137,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               key={opt}
               type="button"
               onClick={() => updateField(field.id, opt)}
-              className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-lg border text-base font-medium transition-all duration-200 ${
                 value === opt
                   ? "bg-light-blue border-light-blue text-white"
                   : "border-gray-200 text-gray-600 hover:border-light-blue"
@@ -159,7 +159,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               key={opt}
               type="button"
               onClick={() => toggleMulti(field.id, opt)}
-              className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-lg border text-base font-medium transition-all duration-200 ${
                 current.includes(opt)
                   ? "bg-light-blue border-light-blue text-white"
                   : "border-gray-200 text-gray-600 hover:border-light-blue"
@@ -255,7 +255,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               <h3 className="text-xl font-bold text-[#16244b] mb-2">
                 Which country would you like to set up your business in?
               </h3>
-              <p className="text-gray-500 text-sm mb-6">
+              <p className="text-gray-500 text-base mb-6">
                 We'll only show you the questions relevant to your chosen jurisdiction.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -286,7 +286,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               <div className="space-y-8">
                 {visibleFields(currentSection.fields).map((field) => (
                   <div key={field.id}>
-                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                    <label className="block text-base font-semibold text-gray-700 mb-3">
                       {field.label}
                       {field.required && <span className="text-red-400 ml-1">*</span>}
                     </label>
@@ -299,7 +299,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
 
           {/* Submission error */}
           {submitError && (
-            <p className="mt-6 text-sm text-red-500 bg-red-50 border border-red-100 rounded-lg px-4 py-3">
+            <p className="mt-6 text-base text-red-500 bg-red-50 border border-red-100 rounded-lg px-4 py-3">
               {submitError}
             </p>
           )}
@@ -329,7 +329,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-base text-gray-600 mb-6">
                 <span className="font-semibold text-[#16244b]">Estimated Timeline: </span>
                 {result.timeline}
               </p>

@@ -215,10 +215,10 @@ export default function BookkeepingServices() {
               <div className="mb-1 w-fit transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                 {s.icon}
               </div>
-              <h3 className="text-[#0d1e4a] font-bold text-sm sm:text-base leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
+              <h3 className="text-[#0d1e4a] font-bold text-base sm:text-base leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
                 {s.title}
               </h3>
-              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-gray-500 text-xs sm:text-base leading-relaxed">
                 {s.description}
               </p>
             </motion.div>

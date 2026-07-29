@@ -18,50 +18,7 @@ import img1 from '../../../../asstes/img_temp/e-xomarc.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
 
-const businessData = [
-    {
-        title: "Company Formation",
-        image:
-            "/src/asstes/img_temp/servics/UK/company-formation.webp",
-        items: [
-            "UK Limited Company setup support",
-            "Companies House registration guidance",
-            "Business structure advisory",
-            "Company name registration",
-            "Incorporation documentation support",
-            "Startup setup planning",
-            "Expansion-focused structuring",
-        ],
-    },
-    {
-        title: "HMRC Registrations",
-        image:
-            "/src/asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp",
-        items: [
-            "Corporation Tax registration guidance",
-            "VAT registration preparation",
-            "PAYE registration support",
-            "HMRC compliance assistance",
-            "Tax setup coordination",
-            "Registration planning support",
-            "Operational readiness guidance",
-        ],
-    },
-    {
-        title: "International Business Structuring",
-        image:
-            "/src/asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp",
-        items: [
-            "Non-resident founder guidance",
-            "Shareholder structuring support",
-            "Director & PSC planning",
-            "International ownership advisory",
-            "Compliance preparation support",
-            "UK expansion planning",
-            "Long-term scalability guidance",
-        ],
-    },
-];
+
 
 {
     /* Go-To-Market Strategy */
@@ -134,7 +91,7 @@ const Ecommerce = () => {
                 <div className="max-w-[1600px] mx-auto px-6">
                     {/* Heading */}
                     <div className="max-w-5xl mx-auto text-center">
-                        <h2 className="text-4xl md:text-5xl leading-tight font-light text-[#16244b]">
+                        <h2 className="text-4xl 2xl::text-5xl leading-tight font-light text-[#16244b]">
                             <span className="font-bold">Accounting Solutions</span> For
                             <span className="font-semibold"> E-commerce & SaaS Businesses</span>
                         </h2>
@@ -189,9 +146,9 @@ const Ecommerce = () => {
                                 <div
                                     className={`rounded-3xl transition-all duration-300 bg-white p-10  hover:shadow-2xl`}
                                 >
-                                    <Icon className="bg-light-blue p-2 text-white text-4xl rounded-full mb-6" />
+                                    <Icon className="bg-light-blue/20 p-2 text-light-blue text-4xl rounded-sm mb-6" />
 
-                                    <h3 className="text-2xl font-bold text-[#16244b]  mb-5">
+                                    <h3 className="text-xl font-bold text-[#16244b]  mb-5">
                                         {item.title}
                                     </h3>
 
@@ -223,13 +180,13 @@ const Ecommerce = () => {
                         {/* Content */}
 
                         <div className="flex flex-col justify-center">
-                            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                                 <span className="font-bold">E-commerce</span>
                                 <br />
                                 Accounting Solutions
                             </h2>
 
-                            <p className="mt-8 text-xl leading-7 text-gray-500">
+                            <p className="mt-8 text-lg leading-7 text-gray-500">
                                 Running an online business requires accurate financial management across
                                 multiple sales channels and payment platforms. We provide specialized
                                 accounting services for e-commerce businesses, helping you maintain accurate
@@ -241,7 +198,7 @@ const Ecommerce = () => {
                                 Our services include:
                             </h4>
 
-                            <div className="space-y-5">
+                            <div className="space-y-3">
                                 {[
                                     "Amazon seller accounting",
                                     "Shopify accounting support",
@@ -265,14 +222,14 @@ const Ecommerce = () => {
                         {/* Content */}
 
                         <div className="flex flex-col justify-center">
-                            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                                 <span className="font-bold">SaaS Accounting</span>
                                 <span> & Financial</span>
                                 <br />
                                 Reporting
                             </h2>
 
-                            <p className="mt-8 text-xl leading-7 text-gray-500">
+                            <p className="mt-8 text-xlg leading-7 text-gray-500">
                                 SaaS businesses require accounting that reflects recurring revenue models,
                                 subscription billing, and performance metrics. We deliver accounting and
                                 financial reporting solutions that help you manage subscriptions, maintain
@@ -283,7 +240,7 @@ const Ecommerce = () => {
                                 Our support includes:
                             </h4>
 
-                            <div className="space-y-5">
+                            <div className="space-y-3">
                                 {[
                                     "SaaS accounting & reporting",
                                     "Subscription revenue accounting",
@@ -322,7 +279,7 @@ const Ecommerce = () => {
                     {/* Heading */}
 
                     <div className="text-center max-w-5xl mx-auto">
-                        <h2 className="text-4xl md:text-5xl leading-tight text-white font-light">
+                        <h2 className="text-4xl 2xl:text-5xl leading-tight text-white font-light">
                             <span className="font-bold">Specialized Accounting</span> For
                             <span className="font-bold"> Digital Businesses</span>
                         </h2>
@@ -425,22 +382,7 @@ const Ecommerce = () => {
                 </div>
             </section>
 
-            <ConsultationCTA
-                heading={
-                    <>
-                        Ready To Scale Your
-                        <br />
-                        <span className="font-bold">Digital Business?</span>
-                    </>
-                }
-                subheading="Partner with experienced accounting professionals who understand the financial needs of e-commerce stores and SaaS companies operating in Estonia."
-                commitmentItems={[
-                    "Free initial consultation",
-                    "Accurate bookkeeping & financial reporting",
-                    "VAT, tax & compliance support",
-                    "Dedicated long-term accounting advisory",
-                ]}
-            />
+            
             {/* Export Readiness */}
             <section className="py-20 px-6 bg-white">
                 <div className="max-w-9xl mx-auto">
@@ -488,7 +430,7 @@ const Ecommerce = () => {
 
                                 {expandedItem === idx && (
                                     <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                                        <p className="text-gray-600 text-sm">{item.description}</p>
+                                        <p className="text-gray-600 text-base">{item.description}</p>
                                     </div>
                                 )}
                             </div>
@@ -496,7 +438,22 @@ const Ecommerce = () => {
                     </div>
                 </div>
             </section>
-
+<ConsultationCTA
+                heading={
+                    <>
+                        Ready To Scale Your
+                        <br />
+                        <span className="font-bold">Digital Business?</span>
+                    </>
+                }
+                subheading="Partner with experienced accounting professionals who understand the financial needs of e-commerce stores and SaaS companies operating in Estonia."
+                commitmentItems={[
+                    "Free initial consultation",
+                    "Accurate bookkeeping & financial reporting",
+                    "VAT, tax & compliance support",
+                    "Dedicated long-term accounting advisory",
+                ]}
+            />
         </div>
     );
 };

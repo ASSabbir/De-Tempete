@@ -163,7 +163,7 @@ const Technology_UAE = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-gray-500 text-sm">
+            <p className="mt-6 text-gray-500 text-base">
               <span className="font-bold italic text-[#16244b]">
                 Best suited for:
               </span>{" "}
@@ -206,7 +206,7 @@ const Technology_UAE = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-gray-500 text-sm">
+            <p className="mt-6 text-gray-500 text-base">
               <span className="font-bold italic text-[#16244b]">
                 Best suited for:
               </span>{" "}
@@ -243,7 +243,7 @@ const Technology_UAE = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -267,7 +267,7 @@ const Technology_UAE = () => {
               >
                 
                 
-                <h3 className=" bottom-4 left-4  font-bold text-sm">
+                <h3 className=" bottom-4 left-4  font-bold text-base">
                   {item}
                 </h3>
               </div>
@@ -297,7 +297,7 @@ const Technology_UAE = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>

@@ -123,7 +123,7 @@ const Taxation_KSA = () => {
             <span className="text-light-blue">Compliance In Saudi Arabia</span>
           </>
         }
-        description="de tempête provides taxation support services in Saudi Arabia, helping businesses maintain VAT compliance, improve tax documentation processes, and manage regulatory requirements with greater operational confidence."
+        description={<><span className="font-bold italic">de tempête</span> provides taxation support services in Saudi Arabia, helping businesses maintain VAT compliance, improve tax documentation processes, and manage regulatory requirements with greater operational confidence.</>}
       />
 
       <SecondSection></SecondSection>
@@ -147,7 +147,7 @@ const Taxation_KSA = () => {
               regulations.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses across Saudi Arabia with structured taxation
               services designed to improve tax management processes, support VAT
               compliance, and maintain organized regulatory documentation.
@@ -166,7 +166,7 @@ const Taxation_KSA = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-4 px-4 text-center text-white text-sm font-medium"
+                className="bg-[#37456B] rounded-lg py-7 px-4 text-center text-white text-base font-medium"
               >
                 {t}
               </div>
@@ -187,7 +187,7 @@ const Taxation_KSA = () => {
               regulatory compliance.
             </p>
             <p className="mt-3 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses with VAT registration support and tax setup
               coordination designed to improve operational readiness and
               organized tax management systems.
@@ -199,7 +199,7 @@ const Taxation_KSA = () => {
               {vatAdvisoryPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -234,7 +234,7 @@ const Taxation_KSA = () => {
               smoother tax operations.
             </p>
             <p className="mt-3 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses with ZATCA compliance coordination and
               e-invoicing support designed to improve reporting accuracy and
               operational compliance.
@@ -244,7 +244,7 @@ const Taxation_KSA = () => {
               {zatcaBenefits.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -266,7 +266,7 @@ const Taxation_KSA = () => {
               compliance-related risks.
             </p>
             <p className="mt-3 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               provides VAT filing support services in Saudi Arabia to help
               businesses maintain organized tax records and structured reporting
               processes.
@@ -278,7 +278,7 @@ const Taxation_KSA = () => {
               {vatFilingItems.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -304,7 +304,7 @@ const Taxation_KSA = () => {
               <span className="font-normal">Regulatory Support</span>
             </h2>
             <p className="mt-5 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Saudi Arabia with ongoing tax coordination
               and regulatory support to help maintain smoother reporting
               processes, organized reporting activities, and operational tax
@@ -315,7 +315,7 @@ const Taxation_KSA = () => {
               {ongoingBenefits.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -343,8 +343,8 @@ const Taxation_KSA = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose <span className="font-normal italic">de tempête</span>{" "}
+            <h2 className="text-4xl  text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span>{" "}
               for Taxation Services?
             </h2>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
@@ -355,7 +355,7 @@ const Taxation_KSA = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -371,7 +371,7 @@ const Taxation_KSA = () => {
             Framework <span className="font-bold">Today</span>
           </>
         }
-        subheading="de tempête helps businesses in Saudi Arabia improve VAT compliance and maintain organized tax operations."
+        subheading={<><span className="font-black italic">de tempête</span> helps businesses in Saudi Arabia improve VAT compliance and maintain organized tax operations.</>}
         commitmentItems={[
           "Free initial tax consultation — no obligation",
           "100% confidentiality and secure handling of data",

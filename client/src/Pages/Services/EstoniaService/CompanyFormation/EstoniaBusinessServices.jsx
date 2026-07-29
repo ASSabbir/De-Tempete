@@ -139,10 +139,10 @@ export default function EstoniaBusinessServices() {
           {services.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="dt-service-card group  text-xl rounded-2xl p-7 bg-gray-100  transition-transform duration-500  hover:shadow-lg hover:shadow-slate-200/70"
+              className="dt-service-card group  text-xl rounded-2xl p-7 hover:bg-gray-100  transition-transform duration-500  hover:shadow-lg hover:shadow-slate-200/70"
             >
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-linear-to-br from-light-blue to-light-blue transition-transform duration-300 group-hover:scale-105">
-                <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-light-blue/30 transition-transform duration-300 group-hover:scale-105">
+                <Icon className="w-5 h-5 text-light-blue" strokeWidth={1.75} />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2.5">{title}</h3>
               <p className="text-base text-slate-500 leading-relaxed">

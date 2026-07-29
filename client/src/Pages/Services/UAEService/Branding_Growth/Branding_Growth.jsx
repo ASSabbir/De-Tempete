@@ -256,7 +256,7 @@ const Branding_Growth = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -271,10 +271,10 @@ const Branding_Growth = () => {
               Marketing Strategy, Digital{" "}
               <span className="block">Presence & Social Media Campaigns</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm font-semibold">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base font-semibold">
               Build a Strong Digital Footprint That Converts
             </p>
-            <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-base">
               We design marketing strategies that increase brand awareness,
               strengthen trust, and generate measurable results across digital
               and social platforms.
@@ -292,7 +292,7 @@ const Branding_Growth = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
                       <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -306,7 +306,7 @@ const Branding_Growth = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -344,7 +344,7 @@ const Branding_Growth = () => {
                 <h3 className="text-lg font-medium text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-slate-300 text-sm leading-6">{item.desc}</p>
+                <p className="text-slate-300 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -372,7 +372,7 @@ const Branding_Growth = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>

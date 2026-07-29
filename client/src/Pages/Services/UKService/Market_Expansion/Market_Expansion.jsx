@@ -360,7 +360,7 @@ const Market_Expansion = () => {
 
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                    <p className="text-gray-600 text-base">{item.description}</p>
                   </div>
                 )}
               </div>

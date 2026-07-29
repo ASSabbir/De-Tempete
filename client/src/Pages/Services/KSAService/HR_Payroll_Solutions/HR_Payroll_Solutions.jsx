@@ -88,7 +88,7 @@ const HR_Payroll_Solutions = () => {
             <span className="text-light-blue">In The Saudi Arabia</span>
           </>
         }
-        description="de tempête provides HR and payroll solutions in Saudi Arabia, helping businesses improve workforce management, payroll accuracy, and employee compliance through structured operational support."
+        description={<><span className="font-bold italic">de tempête</span> provides HR and payroll solutions in Saudi Arabia, helping businesses improve workforce management, payroll accuracy, and employee compliance through structured operational support.</>}
       />
 
       <SecondSection></SecondSection>
@@ -114,7 +114,7 @@ const HR_Payroll_Solutions = () => {
               day-to-day operations.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses across Saudi Arabia with HR and payroll
               services designed to improve operational efficiency, workforce
               organization, and compliance management.
@@ -133,7 +133,7 @@ const HR_Payroll_Solutions = () => {
             <p className="mt-5 text-gray-500">
               Accurate payroll management helps businesses maintain operational
               consistency and improve employee management processes.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               provides payroll processing support services in Saudi Arabia
               designed to help businesses manage salary operations efficiently
               and maintain organized payroll records.
@@ -174,7 +174,7 @@ const HR_Payroll_Solutions = () => {
             <p className="mt-5 text-gray-500">
               Businesses in Saudi Arabia must maintain workforce compliance
               through proper coordination with platforms such as Qiwa and GOSI.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses with workforce compliance support designed to
               improve employee record management and maintain organized
               operational coordination.
@@ -204,7 +204,7 @@ const HR_Payroll_Solutions = () => {
             <p className="mt-5 text-gray-500">
               Organized HR documentation helps businesses improve workforce
               visibility and maintain structured employee management systems.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Saudi Arabia with HR documentation and
               employee record management designed to improve operational
               organization and administrative efficiency.
@@ -248,8 +248,8 @@ const HR_Payroll_Solutions = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose <span className="font-normal italic">de tempête</span>{" "}
+            <h2 className="text-4xl  text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span>{" "}
               for HR & Payroll Solutions?
             </h2>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
@@ -260,7 +260,7 @@ const HR_Payroll_Solutions = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -275,7 +275,7 @@ const HR_Payroll_Solutions = () => {
             Workforce <span className="font-bold">System</span>
           </>
         }
-        subheading="de tempête helps businesses in Saudi Arabia improve payroll, workforce coordination, and HR operations through structured support systems."
+        subheading={<><span className="font-black italic">de tempête</span> helps businesses in Saudi Arabia improve payroll, workforce coordination, and HR operations through structured support systems.</>}
         commitmentItems={[
           "Payroll management support",
           "Workforce coordination",

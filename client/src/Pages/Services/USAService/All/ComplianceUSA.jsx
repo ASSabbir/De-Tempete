@@ -21,8 +21,8 @@ import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
-import img3 from '../../../../asstes/img_temp/servics/ACSP-Identity.webp'
-import img4 from '../../../../asstes/img_temp/servics/Payroll-Services.webp'
+import img3 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
+import img4 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
 
 const accountsCards = [
@@ -202,17 +202,17 @@ const ComplianceUSA = () => {
       </section>
 
       {/* Annual State Compliance & Filings */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#16244B] text-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-5xl font-bold text-">
               Annual State Compliance{" "}
               <span className="font-extrabold">& Filings</span>
             </h2>
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue  font-semibold text-base">
               State-by-State Filing Accuracy
             </div>
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-lg text-gray-200 leading-8">
               Preparing and filing annual state compliance documents can be
               overwhelming, especially when managing multiple state
               requirements at once. We handle everything from tracking to
@@ -225,12 +225,12 @@ const ComplianceUSA = () => {
             {accountsCards.map((c, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
+                className="bg-[#39446B] border border-white/10  rounded-2xl border p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
               >
-                <h3 className="text-xl font-bold text-[#14224A] mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {c.title}
                 </h3>
-                <p className="text-gray-500 leading-7">{c.desc}</p>
+                <p className="text-gray-400 leading-7">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -253,15 +253,15 @@ const ComplianceUSA = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
+          <div className="grid lg:grid-cols-3  mt-24">
             {ctFeatures.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
-                  className="p-4  rounded-3xl duration-300"
+                  className="2xl:p-16 p-6 hover:bg-gray-200  rounded-3xl duration-300"
                 >
-                  <Icon className="text-4xl text-slate-500 mb-6" />
+                  <Icon className="text-5xl text-light-blue rounded-sm bg-light-blue/20 p-2 mb-6" />
                   <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
@@ -279,7 +279,7 @@ const ComplianceUSA = () => {
           <img
             src={img1}
             alt="Multi-State Compliance Tracking"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-full  object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-5xl leading-tight text-[#16244b] font-light">
@@ -313,7 +313,7 @@ const ComplianceUSA = () => {
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
-              <span className="font-bold">Multi-State Nexus</span>
+              <span className="font-bold">Multi-State Nexus </span>
               Analysis
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-500">
@@ -328,7 +328,7 @@ const ComplianceUSA = () => {
             </h4>
             <div className="space-y-4">
               {vatFeatures.map((item, i) => (
-                <div key={i} className="flex items-center gap-4">
+                <div key={i} className="flex items-center  gap-4">
                   <FaCheckCircle className="text-light-blue text-xl shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
@@ -338,7 +338,7 @@ const ComplianceUSA = () => {
           <img
             src={img2}
             alt="Multi-State Nexus Analysis"
-            className="w-full h-full object-cover object-center rounded-2xl shadow-lg"
+            className="w-full h-full max-h-130 object-cover object-center rounded-2xl "
           />
         </div>
       </section>
@@ -497,7 +497,7 @@ const ComplianceUSA = () => {
               Nexus Determination &{" "}
               <span className="block">Multi-State Filing Obligations</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               Nexus analysis made simple for growing businesses. We review
               your sales, employees, and physical footprint against each
               state's thresholds so your filing obligations are clear and
@@ -525,7 +525,7 @@ const ComplianceUSA = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -533,25 +533,6 @@ const ComplianceUSA = () => {
           </div>
         </div>
       </section>
-
-      
-
-      <ConsultationCTA
-        heading={
-          <>
-            Start Your USA Compliance
-            <br />
-            Journey <span className="font-bold">Today</span>
-          </>
-        }
-        subheading="Get expert guidance, avoid costly penalties, and keep your business fully compliant across every state you operate in."
-        commitmentItems={[
-          "Free initial compliance consultation — no obligation",
-          "100% confidentiality and secure handling of data",
-          "US regulatory compliance experts",
-          "Transparent and practical advice tailored to your needs",
-        ]}
-      />
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
@@ -576,6 +557,26 @@ const ComplianceUSA = () => {
           </div>
         </div>
       </section>
+
+      
+
+      <ConsultationCTA
+        heading={
+          <>
+            Start Your USA Compliance
+            <br />
+            Journey <span className="font-bold">Today</span>
+          </>
+        }
+        subheading="Get expert guidance, avoid costly penalties, and keep your business fully compliant across every state you operate in."
+        commitmentItems={[
+          "Free initial compliance consultation — no obligation",
+          "100% confidentiality and secure handling of data",
+          "US regulatory compliance experts",
+          "Transparent and practical advice tailored to your needs",
+        ]}
+      />
+      
 
       
     </div>

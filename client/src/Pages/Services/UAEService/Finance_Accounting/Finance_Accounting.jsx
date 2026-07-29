@@ -216,7 +216,7 @@ const Finance_Accounting = () => {
                     {item.items.map((text, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-gray-600 leading-6 text-sm"
+                        className="flex items-start gap-3 text-gray-600 leading-6 text-base"
                       >
                         <FaCheckCircle className="text-light-blue text-lg mt-0.5 shrink-0" />
                         <span>{text}</span>
@@ -255,7 +255,7 @@ const Finance_Accounting = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               );
             })}
@@ -271,7 +271,7 @@ const Finance_Accounting = () => {
               Budgeting, Forecasting & Cash{" "}
               <span className="font-bold block">Flow Management</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               We support your financial planning with clear, data-driven
               insights that help you predict performance and maintain liquidity.
             </p>
@@ -288,7 +288,7 @@ const Finance_Accounting = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md flex items-center justify-center text-white text-base">
                       <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -302,7 +302,7 @@ const Finance_Accounting = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -482,7 +482,7 @@ const Finance_Accounting = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               </div>
             ))}

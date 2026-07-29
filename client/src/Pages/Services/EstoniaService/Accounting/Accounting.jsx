@@ -9,9 +9,9 @@ import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-in-KSA.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp'
-import img3 from '../../../../asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp'
-import img4 from '../../../../asstes/img_temp/Home/bv.webp'
-import img5 from '../../../../asstes/img_temp/Home/HR-Payroll-Hero-section-1.webp'
+import img3 from '../../../../asstes/img_temp/Home/freepik__expand-__25358-scaled.webp'
+import img4 from '../../../../asstes/img_temp/Home/freepik__professional-corporate-bookkeeping-setup-stacked-f__92073.webp'
+import img5 from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natural-textures-and-highly-realisti__92084.webp'
 import img6 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
 import img7 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
@@ -69,6 +69,7 @@ const gains = [
   "Structured Reporting Systems",
   "Reduced Operational Errors",
   "Stronger Business Organization",
+  "Enhanced Cash Flow Management",
 ];
 
 const whyChoose = [
@@ -135,7 +136,7 @@ const Accounting = () => {
               sustainable growth and smoother operations.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-light-blue">de tempête</span>{" "}
+              <span className="font-semibold text-light-blue italic">de tempête</span>{" "}
               supports companies in Estonia with finance and accounting
               solutions designed to improve financial organization, maintain
               reporting accuracy, and strengthen operational workflows.
@@ -181,7 +182,7 @@ const Accounting = () => {
               <span className="font-normal">Services In Estonia</span>
             </h2>
             <p className="mt-5 text-gray-500">
-              <span className="font-semibold text-light-blue">de tempête</span>{" "}
+              <span className="font-semibold text-dark-blue italic">de tempête</span>{" "}
               helps businesses maintain organized accounting systems and
               accurate financial records to support daily business operations
               and long-term financial management.
@@ -190,7 +191,7 @@ const Accounting = () => {
               {bookkeepingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -209,7 +210,7 @@ const Accounting = () => {
               Clear financial reporting helps businesses improve visibility,
               maintain organized documentation, and support operational
               decision-making processes.{" "}
-              <span className="font-semibold text-light-blue">de tempête</span>{" "}
+              <span className="font-semibold  text-dark-blue italic">de tempête</span>{" "}
               provides financial reporting support services in Estonia to
               help businesses maintain structured financial records and
               organized reporting systems.
@@ -218,7 +219,7 @@ const Accounting = () => {
               {reportingPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -251,7 +252,7 @@ const Accounting = () => {
               Efficient accounting systems help businesses improve workflow
               management, maintain financial accuracy, and support smoother
               operational processes.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Estonia with accounting system
               management and financial process coordination designed to improve
               operational efficiency and management.
@@ -260,7 +261,7 @@ const Accounting = () => {
               {systemsPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -279,7 +280,7 @@ const Accounting = () => {
             <p className="mt-5 text-gray-500 leading-7">
               Well-maintained accounting records are essential for supporting
               VAT documentation and maintaining organized financial operations.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               helps businesses in Estonia maintain structured financial
               records and accounting documentation that support VAT readiness
               and operational compliance requirements.
@@ -310,7 +311,7 @@ const Accounting = () => {
               Reliable finance operations help businesses maintain better
               financial control, improve reporting consistency, and reduce
               operational inefficiencies.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses with organized accounting support that
               strengthens financial workflows and improves overall operational
               management.
@@ -355,12 +356,29 @@ const Accounting = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      <ConsultationCTA
+  heading={
+    <>
+      Simplify Your
+      <br />
+      <span className="font-bold">Accounting in Estonia</span>
+    </>
+  }
+  subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
+  commitmentItems={[
+    "Free initial consultation — no obligation",
+    "Confidential & GDPR-compliant financial handling",
+    "Experienced Estonia accounting professionals",
+    "Tailored bookkeeping and reporting solutions",
+  ]}
+/>
+
 
       
 

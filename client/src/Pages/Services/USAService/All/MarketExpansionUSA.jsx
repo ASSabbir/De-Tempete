@@ -26,7 +26,7 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import img3 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
 import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
-import img4 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
+import img4 from '../../../../asstes/img_temp/servics/usa.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
 const AnimatedCounter = ({ end, duration = 2000 }) => {
@@ -281,7 +281,7 @@ const MarketExpansionUSA = () => {
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-sm leading-6">
+                                    <p className="text-gray-500 text-base leading-6">
                                         {item.desc}
                                     </p>
                                 </div>
@@ -448,7 +448,7 @@ const MarketExpansionUSA = () => {
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-sm leading-6">
+                                    <p className="text-gray-500 text-base leading-6">
                                         {item.desc}
                                     </p>
                                 </div>
@@ -457,23 +457,6 @@ const MarketExpansionUSA = () => {
                     </div>
                 </div>
             </section>
-
-            <ConsultationCTA
-                heading={
-                    <>
-                        Expand Into the
-                        <br />
-                        <span className="font-bold">United States</span> with Confidence
-                    </>
-                }
-                subheading="Launch your US business with expert guidance on company formation, market entry, banking, compliance, and long-term growth."
-                commitmentItems={[
-                    "Free initial business expansion consultation",
-                    "Expert guidance on LLC & C-Corp formation",
-                    "End-to-end support for US market entry and compliance",
-                    "Tailored strategies for sustainable business growth",
-                ]}
-            />
             <section className="py-20 px-6 bg-[#F5F6F8]">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
@@ -482,7 +465,7 @@ const MarketExpansionUSA = () => {
                             <span className="block">& Cross-Border Expansion Advisory</span>
                         </h2>
 
-                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
                             Successfully expanding into the United States requires careful planning,
                             regulatory compliance, and operational readiness. We help businesses
                             establish compliant structures, streamline cross-border operations, and
@@ -517,7 +500,7 @@ const MarketExpansionUSA = () => {
 
                                 {expandedItem === idx && (
                                     <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                                        <p className="text-gray-600 text-sm">{item.desc}</p>
+                                        <p className="text-gray-600 text-base">{item.desc}</p>
                                     </div>
                                 )}
                             </div>
@@ -525,6 +508,24 @@ const MarketExpansionUSA = () => {
                     </div>
                 </div>
             </section>
+
+            <ConsultationCTA
+                heading={
+                    <>
+                        Expand Into the
+                        <br />
+                        <span className="font-bold">United States</span> with Confidence
+                    </>
+                }
+                subheading="Launch your US business with expert guidance on company formation, market entry, banking, compliance, and long-term growth."
+                commitmentItems={[
+                    "Free initial business expansion consultation",
+                    "Expert guidance on LLC & C-Corp formation",
+                    "End-to-end support for US market entry and compliance",
+                    "Tailored strategies for sustainable business growth",
+                ]}
+            />
+            
 
 
         </div>

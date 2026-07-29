@@ -230,7 +230,7 @@ const Compliance_Regulatory = () => {
               Company Accounts{" "}
               <span className="font-extrabold">Preparation & Filing</span>
             </h2>
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-sm">
+            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-base">
               HMRC-Approved Annual Accounts
             </div>
             <p className="mt-7 text-lg text-gray-600 leading-8">
@@ -488,7 +488,7 @@ const Compliance_Regulatory = () => {
               Construction Industry{" "}
               <span className="block">Scheme (CIS) Returns</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               CIS compliance made simple for subcontractors and contractors. We
               handle verification, deductions, and monthly HMRC submissions so
               your payments are accurate and penalties avoided.
@@ -516,7 +516,7 @@ const Compliance_Regulatory = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>

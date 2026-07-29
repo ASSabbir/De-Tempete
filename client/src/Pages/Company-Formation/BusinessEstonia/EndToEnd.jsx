@@ -122,7 +122,7 @@ const EndToEnd = () => {
                 <button
                   key={index}
                   onClick={() => setActiveStep(index)}
-                  className={`flex-shrink-0 lg:w-full text-left px-5 py-3 sm:px-6 sm:py-4 text-sm sm:text-base lg:text-xl xl:text-2xl rounded-xl transition-all duration-300
+                  className={`flex-shrink-0 lg:w-full text-left px-5 py-3 sm:px-6 sm:py-4 text-base sm:text-base lg:text-xl xl:text-2xl rounded-xl transition-all duration-300
           ${
             activeStep === index
               ? "bg-[#081B57] text-white"

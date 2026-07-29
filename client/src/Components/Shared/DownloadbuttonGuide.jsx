@@ -55,12 +55,12 @@ export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }
             <h2 className="text-2xl font-bold text-white mb-2">
               Access Premium Resource
             </h2>
-            <p className="text-sm text-gray-300 mb-6">
+            <p className="text-base text-gray-300 mb-6">
               Fill the form below to download the guide.
             </p>
 
             {error && (
-              <div className="bg-red-500/15 text-red-300 text-sm rounded-md px-3 py-2 mb-4">
+              <div className="bg-red-500/15 text-red-300 text-base rounded-md px-3 py-2 mb-4">
                 {error}
               </div>
             )}
@@ -70,7 +70,7 @@ export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-sm mb-3 placeholder-gray-400 focus:outline-none"
+              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-base mb-3 placeholder-gray-400 focus:outline-none"
             />
             <input
               name="email"
@@ -78,14 +78,14 @@ export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-sm mb-3 placeholder-gray-400 focus:outline-none"
+              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-base mb-3 placeholder-gray-400 focus:outline-none"
             />
             <input
               name="phone"
               placeholder="Phone"
               value={form.phone}
               onChange={handleChange}
-              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-sm mb-5 placeholder-gray-400 focus:outline-none"
+              className="w-full bg-[#1c2333] border border-[#2d3650] rounded-md px-4 py-3 text-white text-base mb-5 placeholder-gray-400 focus:outline-none"
             />
 
             <label className="flex items-start gap-2 text-xs text-gray-300 mb-5 cursor-pointer leading-relaxed">

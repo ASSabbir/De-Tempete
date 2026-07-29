@@ -100,7 +100,9 @@ const Regulatory_Compliance = () => {
             <span className="text-light-blue">Framework In Saudi Arabia</span>
           </>
         }
-        description="de tempête helps businesses across Saudi Arabia strengthen regulatory compliance, operational compliance, and support long-term business growth through structured compliance and ISO support services."
+        description={
+          <><span className="italic font-bold">de tempête</span> helps businesses across Saudi Arabia strengthen regulatory compliance, operational compliance, and support long-term business growth through structured compliance and ISO support services.</>
+        }
       />
 
       <SecondSection></SecondSection>
@@ -130,7 +132,7 @@ const Regulatory_Compliance = () => {
               sustainable growth.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               provides regulatory and ISO compliance support services in Saudi
               Arabia, helping companies improve operational transparency,
               maintain compliance readiness, and strengthen business credibility
@@ -151,7 +153,7 @@ const Regulatory_Compliance = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-10 px-4 text-center text-white text-sm font-medium"
+                className="bg-[#37456B] rounded-lg py-10 px-4 text-center text-white text-base font-medium"
               >
                 {t}
               </div>
@@ -170,7 +172,7 @@ const Regulatory_Compliance = () => {
               <span className="font-normal">Services In Saudi Arabia</span>
             </h2>
             <p className="mt-5 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Saudi Arabia with structured compliance
               management services to help organizations align with local
               operational and regulatory requirements.
@@ -182,7 +184,7 @@ const Regulatory_Compliance = () => {
               {regComplianceItems.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -224,7 +226,7 @@ const Regulatory_Compliance = () => {
               {isoPoints.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -247,7 +249,7 @@ const Regulatory_Compliance = () => {
             <p className="mt-5 text-gray-500">
               Different industries in Saudi Arabia operate under different
               regulatory expectations.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               helps businesses implement compliance practices based on
               operational and industry-specific requirements.
             </p>
@@ -258,7 +260,7 @@ const Regulatory_Compliance = () => {
               {industryCovers.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -290,7 +292,7 @@ const Regulatory_Compliance = () => {
               Strong compliance management helps businesses reduce operational
               risks, improve accountability, and maintain smoother day-to-day
               operations.{" "}
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses in Saudi Arabia with compliance monitoring and
               operational reviews to identify process gaps, documentation
               weaknesses, and regulatory risks before they impact business
@@ -320,7 +322,7 @@ const Regulatory_Compliance = () => {
               {platformSupport.map((p, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
-                  <span className="text-gray-600 text-sm">{p}</span>
+                  <span className="text-gray-600 text-base">{p}</span>
                 </div>
               ))}
             </div>
@@ -356,7 +358,7 @@ const Regulatory_Compliance = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {f.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{f.desc}</p>
                 </div>
               </div>
             ))}

@@ -139,7 +139,7 @@ export default function Form() {
               <img className="w-30  rounded-full " src={office.flag} alt="" />
 
               {/* Name */}
-              <h3 className="text-[#0d1e4a] font-bold text-sm">{office.name}</h3>
+              <h3 className="text-[#0d1e4a] font-bold text-base">{office.name}</h3>
 
               {/* Phone */}
               <a
@@ -179,8 +179,8 @@ export default function Form() {
                 </svg>
               </div>
               <div>
-                <p className="text-[#0d1e4a] font-semibold text-sm">Email us</p>
-                <a href="mailto:info@detempete.com" className="text-gray-500 text-sm hover:text-[#1a9fd4] transition-colors">
+                <p className="text-[#0d1e4a] font-semibold text-base">Email us</p>
+                <a href="mailto:info@detempete.com" className="text-gray-500 text-base hover:text-[#1a9fd4] transition-colors">
                   info@detempete.com
                 </a>
               </div>
@@ -188,7 +188,7 @@ export default function Form() {
 
             {/* Social */}
             <div>
-              <p className="text-gray-500 text-sm font-medium mb-3">Follow our social network</p>
+              <p className="text-gray-500 text-base font-medium mb-3">Follow our social network</p>
               <div className="flex items-center gap-2">
                 {socials.map((s) => (
                   <a
@@ -228,13 +228,13 @@ export default function Form() {
                   <input
                     type="text" name="name" placeholder="Name"
                     value={formData.name} onChange={handleChange} required
-                    className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                   <input
                     type="text" name="company" placeholder="Company"
                     value={formData.company} onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                 </div>
@@ -244,13 +244,13 @@ export default function Form() {
                   <input
                     type="tel" name="phone" placeholder="Phone"
                     value={formData.phone} onChange={handleChange} required
-                    className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                   <input
                     type="email" name="email" placeholder="Email"
                     value={formData.email} onChange={handleChange} required
-                    className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                 </div>
@@ -259,7 +259,7 @@ export default function Form() {
                 <input
                   type="text" name="subject" placeholder="Subject"
                   value={formData.subject} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
+                  className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                   style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                 />
 
@@ -267,14 +267,14 @@ export default function Form() {
                 <textarea
                   name="message" placeholder="Message" rows={4}
                   value={formData.message} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all resize-none"
                   style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                 />
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1"
+                  className="w-full py-3.5 rounded-xl text-base font-bold text-white flex items-center justify-center gap-2 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1"
                   style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

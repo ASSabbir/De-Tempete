@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
                 <a
                   key={s.id}
                   href={`#${s.id}`}
-                  className="block text-sm text-gray-500 hover:text-cyan-500 transition-colors leading-6"
+                  className="block text-base text-gray-500 hover:text-cyan-500 transition-colors leading-6"
                 >
                   {s.label}
                 </a>
@@ -192,7 +192,7 @@ const PrivacyPolicy = () => {
               ].map((item, i) => (
                 <div key={i} className="border border-gray-200 rounded-xl p-5">
                   <h4 className="font-bold text-[#16244b] mb-1">{item.title}</h4>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -229,7 +229,7 @@ const PrivacyPolicy = () => {
               5. Purposes and Legal Bases of Processing
             </h2>
             <div className="overflow-x-auto border border-gray-200 rounded-xl">
-              <table className="w-full text-sm">
+              <table className="w-full text-base">
                 <thead className="bg-[#F5F6F8]">
                   <tr>
                     <th className="text-left p-4 font-bold text-[#16244b]">Purpose</th>
@@ -412,7 +412,7 @@ const PrivacyPolicy = () => {
                 "The right not to be subject to solely automated decisions producing legal or similarly significant effects",
               ].map((line, i) => (
                 <div key={i} className="border border-gray-200 rounded-xl p-4">
-                  <p className="text-gray-600 text-sm leading-6">{line}</p>
+                  <p className="text-gray-600 text-base leading-6">{line}</p>
                 </div>
               ))}
             </div>

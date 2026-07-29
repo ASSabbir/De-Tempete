@@ -27,7 +27,8 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import industryExpertiseImg from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
-
+import { LuHeartPulse } from "react-icons/lu";
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const industries = [
   {
@@ -78,6 +79,16 @@ const industries = [
       "Multi-currency transaction management",
       "Cross-border compliance coordination",
       "Supply chain cost tracking",
+    ],
+  },
+  {
+    icon: LuHeartPulse,
+    title: "Healthcare & Medical Practices",
+    items: [
+      "Patient billing & revenue tracking",
+      "Insurance reimbursement reconciliation",
+      "Payroll & staff expense management",
+      "Financial reporting & compliance support",
     ],
   },
 ];
@@ -213,13 +224,13 @@ const IndustrySpecificUSA = () => {
               const Icon = item.icon;
               return (
                 <div key={index}>
-                  <Icon className="text-4xl text-slate-500 mb-5" />
+                  <Icon className="text-5xl text-light-blue rounded-sm bg-light-blue/20 p-2 mb-5" />
                   <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
-                      <li key={i} className="text-gray-500 text-sm leading-6">
+                      <li key={i} className="text-gray-500 text-base leading-6">
                         - {li}
                       </li>
                     ))}
@@ -240,7 +251,7 @@ const IndustrySpecificUSA = () => {
               <br />
               Include
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               Business Compliance USA support tailored to the way each
               industry actually operates
             </p>
@@ -257,8 +268,8 @@ const IndustrySpecificUSA = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-light-blue to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
+                      <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
                       {item.title}
@@ -271,7 +282,7 @@ const IndustrySpecificUSA = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -335,7 +346,7 @@ const IndustrySpecificUSA = () => {
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
