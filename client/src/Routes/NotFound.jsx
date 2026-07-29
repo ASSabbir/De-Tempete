@@ -76,7 +76,7 @@ const NotFound = () => {
                 <div className="text-left bg-black/30 border border-white/10 rounded-xl overflow-hidden">
                     <button
                         onClick={() => setShowDetails((s) => !s)}
-                        className="w-full flex items-center justify-between px-5 py-3 text-slate-300 text-sm font-semibold hover:bg-white/5 transition-colors"
+                        className="w-full flex items-center justify-between px-5 py-3 text-slate-300 text-base font-semibold hover:bg-white/5 transition-colors"
                     >
                         <span>Error Details {status ? `(${status})` : ""}</span>
                         <ChevronDown
@@ -89,7 +89,7 @@ const NotFound = () => {
                         <div className="px-5 pb-5 space-y-3">
                             <div>
                                 <p className="text-xs font-semibold text-cyan-400 uppercase mb-1">Message</p>
-                                <p className="text-sm text-slate-200 break-words font-mono">
+                                <p className="text-base text-slate-200 break-words font-mono">
                                     {String(errorMessage)}
                                 </p>
                             </div>
@@ -97,7 +97,7 @@ const NotFound = () => {
                             {statusText && !is404 && (
                                 <div>
                                     <p className="text-xs font-semibold text-cyan-400 uppercase mb-1">Status Text</p>
-                                    <p className="text-sm text-slate-200 font-mono">{statusText}</p>
+                                    <p className="text-base text-slate-200 font-mono">{statusText}</p>
                                 </div>
                             )}
 
@@ -114,7 +114,7 @@ const NotFound = () => {
                 </div>
 
                 {/* Quick links */}
-                <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+                <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-base">
                     <Link to="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">
                         Contact Us
                     </Link>

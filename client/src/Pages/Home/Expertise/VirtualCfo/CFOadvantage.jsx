@@ -119,7 +119,7 @@ function StatCard({ stat, index, start }) {
       </div>
 
       {/* Desc */}
-      <p className="relative z-10 text-white/50 text-xs sm:text-sm leading-relaxed transition-colors duration-500 group-hover:text-white/70">
+      <p className="relative z-10 text-white/50 text-xs sm:text-base leading-relaxed transition-colors duration-500 group-hover:text-white/70">
         {stat.desc}
       </p>
 

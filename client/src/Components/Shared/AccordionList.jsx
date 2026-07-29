@@ -17,7 +17,7 @@ export const AccordionList = ({ items }) => {
           </button>
           {expanded === idx && (
             <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-              <p className="text-gray-600 text-sm">{item.desc || item.description}</p>
+              <p className="text-gray-600 text-base">{item.desc || item.description}</p>
             </div>
           )}
         </div>

@@ -175,7 +175,7 @@ const Footer = () => {
             className="h-12 sm:h-16 mx-auto mb-6 transition-transform duration-300 hover:scale-105"
           />
 
-          <p className="text-gray-300 text-sm sm:text-base px-2">
+          <p className="text-gray-300 text-base sm:text-base px-2">
             Global Accounting Outsourcing and Business Advisory firm with
             experienced and certified professionals.
           </p>
@@ -185,10 +185,10 @@ const Footer = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 mt-14 sm:mt-20 text-center sm:text-left">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="font-bold mb-4 sm:mb-5 text-sm sm:text-base">
+              <h3 className="font-bold mb-4 sm:mb-5 text-base sm:text-base">
                 {column.title}
               </h3>
-              <div className="text-gray-300 text-sm sm:text-base">
+              <div className="text-gray-300 text-base sm:text-base">
                 {column.links.map((link) => (
                   <Link
                     key={link.path}
@@ -214,12 +214,12 @@ const Footer = () => {
                 {office.title}
               </h3>
 
-              <div className="flex gap-3 text-gray-300 mb-4 sm:mb-5 text-sm sm:text-base">
+              <div className="flex gap-3 text-gray-300 mb-4 sm:mb-5 text-base sm:text-base">
                 <IoCallOutline className="text-light-blue mt-1 shrink-0" />
                 <span>{office.phone}</span>
               </div>
 
-              <div className="flex gap-3 text-gray-300 text-sm sm:text-base">
+              <div className="flex gap-3 text-gray-300 text-base sm:text-base">
                 {/* <IoLocationOutline className="text-light-blue mt-1 text-3xl sm:text-4xl shrink-0" /> */}
                 <span>{office.address}</span>
               </div>
@@ -244,7 +244,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-300 pt-4 text-sm sm:text-base">
+        <div className="text-center text-gray-300 pt-4 text-base sm:text-base">
           Copyright © 2026 <span className="italic">de tempête</span>. All
           rights reserved.
         </div>

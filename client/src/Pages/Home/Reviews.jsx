@@ -92,13 +92,13 @@ const ReviewCard = ({ name, role, quote,img }) => (
           fill="currentColor"
         />
       </svg>
-      <p className="text-sm md:text-base italic text-gray-700 leading-relaxed">
+      <p className="text-base md:text-base italic text-gray-700 leading-relaxed">
         {quote}
       </p>
     </div>
 
     <div className="flex items-center gap-3 mt-8">
-      <div className="h-11 w-11 shrink-0 rounded-full  text-white flex items-center justify-center font-semibold text-sm">
+      <div className="h-11 w-11 shrink-0 rounded-full  text-white flex items-center justify-center font-semibold text-base">
         <img src={img} alt="" className="rounded-full" />
       </div>
       <div>

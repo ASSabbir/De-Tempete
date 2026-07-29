@@ -30,6 +30,19 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
 import KeyBenefits from "../../../Home/Expertise/VirtualCfo/Keybenefits";
 import logo from '../../../../asstes/img_temp/logo.webp'
+import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+const logos = [tableau, sage, a, b, c, d, e, f, g];
+
+
 const AnimatedCounter = ({ end, duration = 2000 }) => {
     const [count, setCount] = useState(0);
     useEffect(() => {
@@ -95,26 +108,26 @@ const sectors = [
     },
 ];
 const marketingItems = [
-  {
-    title: "ERP Strategy & Planning",
-    desc: "Assess business requirements, define implementation roadmaps, and select the right ERP solution for your organization.",
-  },
-  {
-    title: "ERP Implementation",
-    desc: "Deploy and configure ERP systems with minimal disruption while ensuring seamless adoption across your business.",
-  },
-  {
-    title: "Business Process Automation",
-    desc: "Automate repetitive workflows to improve efficiency, reduce manual effort, and increase operational productivity.",
-  },
-  {
-    title: "System Integration & Data Migration",
-    desc: "Integrate existing business applications and securely migrate data to create a unified digital ecosystem.",
-  },
-  {
-    title: "Training & Ongoing Support",
-    desc: "Empower your teams with user training, continuous optimization, and dedicated support for long-term ERP success.",
-  },
+    {
+        title: "ERP Strategy & Planning",
+        desc: "Assess business requirements, define implementation roadmaps, and select the right ERP solution for your organization.",
+    },
+    {
+        title: "ERP Implementation",
+        desc: "Deploy and configure ERP systems with minimal disruption while ensuring seamless adoption across your business.",
+    },
+    {
+        title: "Business Process Automation",
+        desc: "Automate repetitive workflows to improve efficiency, reduce manual effort, and increase operational productivity.",
+    },
+    {
+        title: "System Integration & Data Migration",
+        desc: "Integrate existing business applications and securely migrate data to create a unified digital ecosystem.",
+    },
+    {
+        title: "Training & Ongoing Support",
+        desc: "Empower your teams with user training, continuous optimization, and dedicated support for long-term ERP success.",
+    },
 ];
 
 const whyChoose = [
@@ -154,7 +167,7 @@ const benefits = [
 
 const keyBenefittext = [
     "Key Benefits",
-    "of Choosing de tempête ERP & Digital Transformation",
+    <>of Choosing <span className=" italic font-black">de tempête</span> ERP & Digital Transformation</>,
 ];
 
 const ERPDigitalTranformation = () => {
@@ -230,19 +243,20 @@ const ERPDigitalTranformation = () => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
+                    <div className="grid lg:grid-cols-3 gap-x-16 text-5xl gap-y-14 mt-16">
                         {sectors.map((item, index) => (
                             <div key={index}>
-                                <item.icon className=" bg-light-blue p-2 text-white rounded-2xl mb-3" size={32} strokeWidth={1.5} />
-                                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                                <item.icon className=" bg-light-blue/20 p-2 text-light-blue  rounded-sm mb-3" size={42} strokeWidth={1.5} />
+                                <h3 className="text-lg  font-bold text-[#16244b] mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+            <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
 
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
 
@@ -270,13 +284,69 @@ const ERPDigitalTranformation = () => {
                                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
+            
+
+            {/* Marketing Strategy Accordion */}
+            <section className="py-20 px-6 bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-2">
+                            ERP Implementation &
+                            <span className="block">Digital Transformation Solutions</span>
+                        </h2>
+
+                        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base font-semibold">
+                            Transform Operations. Improve Efficiency. Drive Growth.
+                        </p>
+
+                        <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-base">
+                            We help businesses modernize their operations through ERP implementation,
+                            business process automation, system integration, and digital transformation
+                            strategies that improve productivity, enhance collaboration, and enable
+                            smarter, data-driven decision-making.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {marketingItems.map((item, idx) => (
+                            <div
+                                key={idx}
+                                className="border border-gray-200 rounded-lg overflow-hidden bg-white"
+                            >
+                                <button
+                                    onClick={() => toggleAccordion(idx)}
+                                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
+                                            <img src={logo} alt="" />
+                                        </div>
+                                        <span className="font-semibold text-gray-900">
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                    <ChevronDown
+                                        size={20}
+                                        className={`text-gray-600 transition-transform ${expandedItem === idx ? "rotate-180" : ""}`}
+                                    />
+                                </button>
+                                {expandedItem === idx && (
+                                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                                        <p className="text-gray-600 text-base">{item.desc}</p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
             <ConsultationCTA
                 heading={
                     <>
@@ -293,59 +363,43 @@ const ERPDigitalTranformation = () => {
                     "Ongoing training, support, and system enhancement",
                 ]}
             />
+            {/* Technological Partner Section */}
 
-            {/* Marketing Strategy Accordion */}
-            <section className="py-20 px-6 bg-white">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-12">
-  <h2 className="text-4xl font-bold text-gray-900 mb-2">
-    ERP Implementation &
-    <span className="block">Digital Transformation Solutions</span>
-  </h2>
+            <section className="pt-15 bg-white overflow-hidden">
+                <div className=" mx-auto max-w-7xl px-6">
+                    <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+                        Technological <span className="font-bold">Partner</span>
+                    </h2>
 
-  <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm font-semibold">
-    Transform Operations. Improve Efficiency. Drive Growth.
-  </p>
-
-  <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-sm">
-    We help businesses modernize their operations through ERP implementation,
-    business process automation, system integration, and digital transformation
-    strategies that improve productivity, enhance collaboration, and enable
-    smarter, data-driven decision-making.
-  </p>
-</div>
-
-                    <div className="space-y-4">
-                        {marketingItems.map((item, idx) => (
-                            <div
-                                key={idx}
-                                className="border border-gray-200 rounded-lg overflow-hidden bg-white"
-                            >
-                                <button
-                                    onClick={() => toggleAccordion(idx)}
-                                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
-                                           <img src={logo} alt="" />
-                                        </div>
-                                        <span className="font-semibold text-gray-900">
-                                            {item.title}
-                                        </span>
-                                    </div>
-                                    <ChevronDown
-                                        size={20}
-                                        className={`text-gray-600 transition-transform ${expandedItem === idx ? "rotate-180" : ""}`}
+                    <div className="overflow-hidden">
+                        <div
+                            className="flex items-center"
+                            style={{
+                                animation: "scrollLeft 35s linear infinite",
+                            }}
+                        >
+                            {[...logos, ...logos].map((logo, index) => (
+                                <div key={index} className="shrink-0 ">
+                                    <img
+                                        src={logo}
+                                        alt="Partner"
+                                        className="h-60 object-contain"
                                     />
-                                </button>
-                                {expandedItem === idx && (
-                                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                                        <p className="text-gray-600 text-sm">{item.desc}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
+
+                    <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
                 </div>
             </section>
         </div>

@@ -189,7 +189,7 @@ export default function InvestmentReadinessServices() {
               <h3 className="text-[#0d1e4a] font-bold text-base leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
                 {s.title}
               </h3>
-              <p className="text-gray-500 text-base sm:text-sm leading-relaxed">
+              <p className="text-gray-500 text-base sm:text-base leading-relaxed">
                 {s.description}
               </p>
             </motion.div>

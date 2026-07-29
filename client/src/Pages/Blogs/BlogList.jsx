@@ -82,10 +82,10 @@ const BlogList = () => {
                     <h3 className="text-lg font-bold text-[#16244b] leading-snug mb-3 group-hover:text-light-blue transition-colors">
                       {blog.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-6 line-clamp-3">
+                    <p className="text-gray-500 text-base leading-6 line-clamp-3">
                       {blog.description}
                     </p>
-                    <span className="inline-block mt-4 text-light-blue font-semibold text-sm">
+                    <span className="inline-block mt-4 text-light-blue font-semibold text-base">
                       Read More →
                     </span>
                   </div>

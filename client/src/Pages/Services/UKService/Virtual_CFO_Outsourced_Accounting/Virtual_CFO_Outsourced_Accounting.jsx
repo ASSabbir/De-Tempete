@@ -203,7 +203,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                   </h3>
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
-                      <li key={i} className="text-gray-500 text-sm leading-6">
+                      <li key={i} className="text-gray-500 text-base leading-6">
                         - {li}
                       </li>
                     ))}
@@ -222,7 +222,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               Outsourced Accounting <span className="block">Services</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               If managing your internal accounts is time-consuming or
               inefficient, we fully manage your accounting function.
             </p>
@@ -239,7 +239,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
                       <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -253,7 +253,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -316,7 +316,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>

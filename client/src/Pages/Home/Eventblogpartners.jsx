@@ -123,7 +123,7 @@ export default function EventBlogPartners() {
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-[#0d1e4a] text-sm font-bold leading-snug mb-1 group-hover:text-[#1a9fd4] transition-colors duration-200 line-clamp-2">
+                    <h4 className="text-[#0d1e4a] text-base font-bold leading-snug mb-1 group-hover:text-[#1a9fd4] transition-colors duration-200 line-clamp-2">
                       {blog.title}
                     </h4>
                     <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">

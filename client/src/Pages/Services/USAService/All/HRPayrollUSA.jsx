@@ -11,10 +11,10 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import aboutHrImg from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import aboutHrImg from '../../../../asstes/img_temp/Home/freepik__the-style-is-candid-image-photography-with-natural__92081-scaled.webp'
 import payrollProcessingImg from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
-import multiStatePayrollImg from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
-import hrComplianceImg from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
+import multiStatePayrollImg from '../../../../asstes/img_temp/servics/Payroll-Services.webp'
+import hrComplianceImg from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
 
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
@@ -211,8 +211,8 @@ const HRPayrollUSA = () => {
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl font-light text-[#16244b]">
-              Why Choose Us For{" "}
-              <span className="font-bold">HR & Payroll Solutions?</span>
+              Why Choose <span className="italic font-bold">de tempête</span> For{" "}
+              <span className="">HR & Payroll Solutions?</span>
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
@@ -227,14 +227,14 @@ const HRPayrollUSA = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
             <div className="bg-[#16244B] rounded-2xl p-8 flex flex-col justify-center">
               <h3 className="text-xl font-bold text-white mb-4">
                 Get Started Now
               </h3>
-              <button className="bg-light-blue hover:bg-light-blue text-black font-semibold py-3 rounded-lg transition duration-300">
+              <button className="bg-light-blue hover:bg-light-blue text-white font-semibold py-3 rounded-lg transition duration-300">
                 Book a Consultation
               </button>
             </div>

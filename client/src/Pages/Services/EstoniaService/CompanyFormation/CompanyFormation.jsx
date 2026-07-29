@@ -2,13 +2,15 @@ import React from 'react';
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import { FaCircleCheck } from 'react-icons/fa6';
-import img2 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
+import img2 from '../../../../asstes/img_temp/servics/usabanner.webp'
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Search, BadgeCheck, FileStack, ShieldCheck } from "lucide-react";
 import EstoniaBusinessServices from './EstoniaBusinessServices';
 import EstoniaFAQ from './Estoniafaq';
+import EstoniaEResidency from './Estoniaeresidency';
+import { ConsultationCTA } from '../../../../Components/Shared/ConsultationCTA';
  
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,8 +51,26 @@ const CompanyFormation = () => {
                 </div>
             </section>
             <EMTAKCodeSelection></EMTAKCodeSelection>
+            <EstoniaEResidency></EstoniaEResidency>
             <EstoniaBusinessServices></EstoniaBusinessServices>
             <EstoniaFAQ></EstoniaFAQ>
+            <ConsultationCTA
+                    heading={
+                      <>
+                        Get Started
+                        <br />
+                        <span className="font-bold">Today</span>
+                      </>
+                    }
+                    subheading="Whether you need full finance outsourcing, project support, or advisory services, we can streamline your accounting and financial management in Estonia."
+                    commitmentItems={[
+                      "Free initial consultation — no obligation",
+                      "Complete confidentiality & secure handling",
+                      "Professional & certified accounting experts",
+                      "Practical, customized solutions for your business",
+                    ]}
+                  />
+            
 
         </div>
     );
@@ -147,7 +167,7 @@ const features = [
                 strokeWidth={1.5}
               />
               <h3 className="font-semibold text-slate-800 mb-3">{title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
+              <p className="text-base text-slate-500 leading-relaxed">
                 {description}
               </p>
             </div>

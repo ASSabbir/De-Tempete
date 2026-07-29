@@ -93,7 +93,7 @@ function StatItem({ icon, value, suffix, label, start }) {
                 <div className="text-[1.5vw] font-extrabold text-[#0d1e4a] leading-none">
                     {display}{suffix}
                 </div>
-                <div className="text-xs xl:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
+                <div className="text-xs xl:text-base text-gray-500 mt-0.5 font-medium">{label}</div>
             </div>
         </div>
     );

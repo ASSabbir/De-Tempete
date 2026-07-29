@@ -121,7 +121,7 @@ export default function GrowthPartners() {
             <span className="font-extrabold">Our Growth</span> Partners Or
             Strategic Partners
           </h2>
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-slate-500">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-slate-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
           </p>

@@ -106,7 +106,7 @@ export default function Resources() {
                   <div className=" z-10  flex flex-col gap-4 ">
                     {/* Number + Title */}
                     <div>
-                      <span className="text-white/50 text-sm font-semibold tracking-widest group-hover:text-white/80 transition-colors duration-300">
+                      <span className="text-white/50 text-base font-semibold tracking-widest group-hover:text-white/80 transition-colors duration-300">
                         {card.number}
                       </span>
                       <h3 className="text-white text-2xl lg:text-3xl font-extrabold mt-0.5 leading-tight">
@@ -115,7 +115,7 @@ export default function Resources() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                    <p className="text-white/70 text-base leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                       {card.description}
                     </p>
 
@@ -125,7 +125,7 @@ export default function Resources() {
                         <Link
                           key={link.path}
                           to={link.path}
-                          className="flex items-center gap-2 text-[#1a9fd4] group-hover:text-white hover:text-light-blue text-sm font-semibold transition-colors duration-300 hover:gap-3 w-fit"
+                          className="flex items-center gap-2 text-[#1a9fd4] group-hover:text-white hover:text-light-blue text-base font-semibold transition-colors duration-300 hover:gap-3 w-fit"
                         >
                           <ArrowIcon />
                           {link.label}

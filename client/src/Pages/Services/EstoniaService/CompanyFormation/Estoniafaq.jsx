@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Sparkles, ChevronDown } from "lucide-react";
-
+import logo from '../../../../asstes/img_temp/logo.webp'
 gsap.registerPlugin(ScrollTrigger);
 
 /**
@@ -135,16 +135,11 @@ export default function EstoniaFAQ({
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="dt-faq-heading text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
-            Estonia Company Formation,
-            <br className="hidden sm:block" /> Answered
+          <h2 className="dt-faq-heading text-4xl md:text-5xl  text-slate-900 leading-tight mb-4">
+            Frequently Asked <span className="font-bold">Questions</span>
+            
           </h2>
-          <p
-            className="dt-faq-subtitle text-lg md:text-xl font-semibold mb-3"
-            style={{ color: colors.dark }}
-          >
-            Common Questions From Foreign Founders
-          </p>
+          
           <p className="dt-faq-intro text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             Whether you're applying for e-Residency, choosing a structure, or
             opening your first account, here's what founders ask us most
@@ -171,8 +166,8 @@ export default function EstoniaFAQ({
                     className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center"
                     
                   >
-                    <div className="w-8 h-8 rounded-md bg-linear-to-br from-light-blue to-light-blue flex items-center justify-center text-white text-sm">
-                      ✦
+                    <div className="w-10 h-8 rounded-md  flex items-center justify-center text-white text-base">
+                      <img src={logo} alt="" />
                     </div>
                   </span>
                   <span className="flex-1 text-lg md:text-xl font-semibold text-slate-900">

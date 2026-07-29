@@ -236,7 +236,7 @@ const CFOBussiness = () => {
                   </h3>
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
-                      <li key={i} className="text-gray-500 text-sm leading-6">
+                      <li key={i} className="text-gray-500 text-base leading-6">
                         - {li}
                       </li>
                     ))}
@@ -305,7 +305,7 @@ const CFOBussiness = () => {
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -331,10 +331,10 @@ const CFOBussiness = () => {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">
-              Outsourced Accounting <span className="block">Services</span>
+            <h2 className="text-4xl  text-gray-900 mb-2">
+              Frequently Asked  <span className="font-bold">Questions</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
               If managing your internal accounts is time-consuming or
               inefficient, we fully manage your accounting function.
             </p>
@@ -351,7 +351,7 @@ const CFOBussiness = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
                       <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -365,7 +365,7 @@ const CFOBussiness = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -373,6 +373,22 @@ const CFOBussiness = () => {
           </div>
         </div>
       </section>
+      <ConsultationCTA
+  heading={
+    <>
+      Simplify Your
+      <br />
+      <span className="font-bold">Accounting in Estonia</span>
+    </>
+  }
+  subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
+  commitmentItems={[
+    "Free initial consultation — no obligation",
+    "Confidential & GDPR-compliant financial handling",
+    "Experienced Estonia accounting professionals",
+    "Tailored bookkeeping and reporting solutions",
+  ]}
+/>
 
       
     </div>

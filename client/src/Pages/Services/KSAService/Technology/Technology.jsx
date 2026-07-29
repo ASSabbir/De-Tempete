@@ -15,6 +15,17 @@ const softwareItems = [
   "Data Import, Migration & Backup",
   "Staff Training & Post-Implementation Support",
 ];
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+
+const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const cloudCards = [
   {
@@ -69,7 +80,7 @@ const Technology = () => {
             financial systems
             <br />
             
-            At de tempête, we help businesses move beyond manual work and
+            At <span className="italic font-bold">de tempête</span>, we help businesses move beyond manual work and
             embrace technology that saves time, reduces errors, and brings
             complete clarity to financial operations. Whether you're a startup
             or a growing enterprise, our tech-driven solutions streamline your
@@ -105,7 +116,7 @@ const Technology = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {c.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{c.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -132,7 +143,7 @@ const Technology = () => {
                 <span className="w-8 h-8  rounded-md flex items-center justify-center text-white mr-4">
                   <img src={logo} alt="" />
                 </span>
-                <span className="text-[#16244b] font-semibold text-sm flex-1">
+                <span className="text-[#16244b] font-semibold text-base flex-1">
                   {item}
                 </span>
               </div>
@@ -156,7 +167,7 @@ const Technology = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -179,6 +190,45 @@ const Technology = () => {
           "Transparent and practical advice tailored to your needs",
         ]}
       />
+      {/* Technological Partner Section */}
+
+      <section className="pt-15 bg-white overflow-hidden">
+        <div className=" mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+            Technological <span className="font-bold">Partner</span>
+          </h2>
+
+          <div className="overflow-hidden">
+            <div
+              className="flex items-center"
+              style={{
+                animation: "scrollLeft 35s linear infinite",
+              }}
+            >
+              {[...logos, ...logos].map((logo, index) => (
+                <div key={index} className="shrink-0 ">
+                  <img
+                    src={logo}
+                    alt="Partner"
+                    className="h-60 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
+        </div>
+      </section>
 
       
     </div>

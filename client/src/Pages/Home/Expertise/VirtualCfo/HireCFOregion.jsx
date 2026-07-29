@@ -109,7 +109,7 @@ export default function HireCFORegion() {
           <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-4">
             Hire A Virtual CFO <span className="font-extrabold">In Your Region</span>
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">
             Our Virtual CFO services are available worldwide, but we understand every market operates
             differently. Select your region below to see how our experts can help you meet local
             compliance, manage finances efficiently, and accelerate growth.
@@ -122,7 +122,7 @@ export default function HireCFORegion() {
             <button
               key={r.id}
               onClick={() => setActive(r.id)}
-              className={`flex-1 min-w-[140px] rounded-xl px-4 py-3.5 text-sm font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer 
+              className={`flex-1 min-w-[140px] rounded-xl px-4 py-3.5 text-base font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer 
                 ${active === r.id
                   ? "bg-[#0d1e4a] text-white"
                   : "bg-white text-gray-500 hover:text-[#0d1e4a] hover:bg-gray-50"
@@ -154,7 +154,7 @@ export default function HireCFORegion() {
             </h3>
 
             {/* Description */}
-            <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-3xl">
+            <p className="text-gray-500 text-base sm:text-base leading-relaxed max-w-3xl">
               {current.description}
             </p>
 
@@ -163,12 +163,12 @@ export default function HireCFORegion() {
               className="w-full rounded-xl p-6 sm:p-8 text-left mt-2"
               style={{ background: "linear-gradient(135deg, #e0f7fa, #b2ebf2)" }}
             >
-              <p className="text-[#0d1e4a] font-bold text-sm mb-4">
+              <p className="text-[#0d1e4a] font-bold text-base mb-4">
                 Focus Areas<span className="text-gray-500 font-normal">:</span>
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {current.focusAreas.map((area) => (
-                  <div key={area} className="flex items-center gap-2.5 text-sm text-[#0d1e4a] font-medium">
+                  <div key={area} className="flex items-center gap-2.5 text-base text-[#0d1e4a] font-medium">
                     <svg className="w-5 h-5 shrink-0 text-[#1a9fd4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>

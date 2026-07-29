@@ -87,7 +87,7 @@ const BlogSingle = () => {
         }}
       >
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-light-blue text-sm font-medium mb-3">
+          <p className="text-light-blue text-base font-medium mb-3">
             {blog.publishedDate
               ? new Date(blog.publishedDate).toLocaleDateString(undefined, {
                   year: "numeric",
@@ -113,7 +113,7 @@ const BlogSingle = () => {
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}
-                    className="text-gray-500 hover:text-light-blue transition-colors text-sm"
+                    className="text-gray-500 hover:text-light-blue transition-colors text-base"
                   >
                     {i + 1}. {item.label}
                   </a>
@@ -147,12 +147,12 @@ const BlogSingle = () => {
           {/* Leave a Reply */}
           <section id="leave-a-reply" className="scroll-mt-24 border-t border-gray-100 pt-12">
             <h2 className="text-2xl font-bold text-[#16244b] mb-2">Leave a Reply</h2>
-            <p className="text-sm text-gray-400 mb-6">
+            <p className="text-base text-gray-400 mb-6">
               Your email address will not be published. Required fields are marked *
             </p>
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-base font-semibold text-gray-700 mb-2">
                   Comment *
                 </label>
                 <textarea
@@ -200,7 +200,7 @@ const BlogSingle = () => {
                   className="w-20 h-20 object-cover rounded-lg shrink-0"
                 />
                 <div>
-                  <h4 className="text-sm font-semibold text-[#16244b] leading-snug group-hover:text-light-blue transition-colors line-clamp-2">
+                  <h4 className="text-base font-semibold text-[#16244b] leading-snug group-hover:text-light-blue transition-colors line-clamp-2">
                     {item.title}
                   </h4>
                   <span className="text-xs text-light-blue font-medium">Read More →</span>

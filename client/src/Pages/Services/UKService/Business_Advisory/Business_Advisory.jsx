@@ -179,7 +179,7 @@ const Business_Advisory = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-2">
                   {c.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{c.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{c.desc}</p>
               </div>
             );
           })}
@@ -194,10 +194,10 @@ const Business_Advisory = () => {
               Mergers, Acquisitions &{" "}
               <span className="block">Restructuring Support</span>
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm font-semibold">
+            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base font-semibold">
               Strategic Support for M&A and Business Transformation
             </p>
-            <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-base">
               Whether you're merging, acquiring, or restructuring operations,
               our advisors ensure a smooth, compliant, and strategic
               transition from start to finish.
@@ -215,7 +215,7 @@ const Business_Advisory = () => {
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-md flex items-center justify-center text-white text-sm">
+                    <div className="w-8 h-8 rounded-md flex items-center justify-center text-white text-base">
                       <img src={logo} alt="" />
                     </div>
                     <span className="font-semibold text-gray-900">
@@ -229,7 +229,7 @@ const Business_Advisory = () => {
                 </button>
                 {expandedItem === idx && (
                   <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <p className="text-gray-600 text-base">{item.desc}</p>
                   </div>
                 )}
               </div>
@@ -312,7 +312,7 @@ const Business_Advisory = () => {
                 <h3 className="mt-8 text-lg font-bold text-white leading-relaxed">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-slate-300 text-sm leading-6">
+                <p className="mt-3 text-slate-300 text-base leading-6">
                   {item.desc}
                 </p>
               </div>
@@ -341,7 +341,7 @@ const Business_Advisory = () => {
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuChartNoAxesCombined className="text-light-blue text-3xl mx-auto mb-4" />
-                <p className="text-gray-700 font-semibold text-sm">{item}</p>
+                <p className="text-gray-700 font-semibold text-base">{item}</p>
               </div>
             ))}
           </div>

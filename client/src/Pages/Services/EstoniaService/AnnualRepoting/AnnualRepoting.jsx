@@ -12,6 +12,7 @@ import {
   LuTrendingUp,
   LuBriefcase,
 } from "react-icons/lu";
+import { ConsultationCTA } from '../../../../Components/Shared/ConsultationCTA';
 
 const whyChoose = [
   {
@@ -121,7 +122,7 @@ const AnnualRepoting = () => {
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -132,14 +133,14 @@ const AnnualRepoting = () => {
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-light text-[#16244b]">
-               Keep Your Estonia Company{" "}
+              Keep Your Estonia Company{" "}
               <span className="font-bold"> Fully Compliant</span>
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
               Compliance doesn't end after company formation. Our team supports your
-  Estonian business with annual reporting, corporate record maintenance,
-  regulatory monitoring, and ongoing governance services to ensure your company
-  remains compliant, organized, and ready for sustainable growth.
+              Estonian business with annual reporting, corporate record maintenance,
+              regulatory monitoring, and ongoing governance services to ensure your company
+              remains compliant, organized, and ready for sustainable growth.
             </p>
           </div>
 
@@ -152,14 +153,14 @@ const AnnualRepoting = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
-{/* Financial Modelling */}
+      {/* Financial Modelling */}
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
@@ -167,10 +168,10 @@ const AnnualRepoting = () => {
               Business Growth & Operational Support
             </h2>
             <p className="mt-4 text-slate-300 leading-7">
-             Beyond company formation, we help you establish efficient business operations
-  through banking guidance, accounting, tax compliance, and strategic advisory
-  services—providing the support your business needs to grow confidently within
-  the European market.
+              Beyond company formation, we help you establish efficient business operations
+              through banking guidance, accounting, tax compliance, and strategic advisory
+              services—providing the support your business needs to grow confidently within
+              the European market.
             </p>
             <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
@@ -193,34 +194,50 @@ const AnnualRepoting = () => {
         </div>
       </section>
       {/* Why Trust */}
-            <section className="py-24 bg-white">
-              <div className="max-w-[1600px] mx-auto px-6">
-                <div className="text-center">
-                  <h2 className="text-4xl font-light text-[#16244b]">
-                     Why Businesses Choose{" "}
-                    <span className="font-bold">Our Estonia Experts</span>
-                  </h2>
-                  <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-                </div>
-      
-                <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-                  {whyChoose.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                    >
-                      <LuBriefcase className="text-light-blue text-2xl shrink-0" />
-                      <div>
-                        <h3 className="text-lg font-bold text-[#16244b] mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+      <section className="py-24 bg-white">
+        <div className="max-w-[1600px] mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-light text-[#16244b]">
+              Why Businesses Choose{" "}
+              <span className="font-bold italic">de tempête </span>Estonia Experts
+            </h2>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
+            {whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <LuBriefcase className="text-light-blue text-2xl shrink-0" />
+                <div>
+                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               </div>
-            </section>
+            ))}
+          </div>
+        </div>
+      </section>
+      <ConsultationCTA
+        heading={
+          <>
+            Simplify Your
+            <br />
+            <span className="font-bold">Accounting in Estonia</span>
+          </>
+        }
+        subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and annual reporting keep your finances accurate, compliant, and business-ready."
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Confidential & GDPR-compliant financial handling",
+          "Experienced Estonia accounting professionals",
+          "Tailored bookkeeping and reporting solutions",
+        ]}
+      />
 
     </div>
   );

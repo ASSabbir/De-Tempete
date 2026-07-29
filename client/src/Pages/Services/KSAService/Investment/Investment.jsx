@@ -78,7 +78,8 @@ const whyChoose = [
   },
 ];
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
@@ -94,7 +95,7 @@ const Investment = () => {
             <span className="block text-light-blue font-semibold text-xl md:text-2xl mb-4">
               Accelerate Your Investment & Business Growth in Saudi Arabia
             </span>
-            <span className="font-semibold text-white">de tempête</span>{" "}
+            <span className="font-semibold text-white italic">de tempête</span>{" "}
             provides investment support services in Saudi Arabia, helping
             businesses explore market opportunities, strengthen partnerships,
             and support long-term business expansion.
@@ -126,7 +127,7 @@ const Investment = () => {
               support to navigate opportunities effectively.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses across Saudi Arabia with investment and
               business growth solutions designed to improve market positioning,
               strengthen business partnerships, and support sustainable
@@ -150,7 +151,7 @@ const Investment = () => {
                 <div className="w-14 h-14  rounded-xl flex items-center justify-center shrink-0">
                   <img src={logo} alt="" />
                 </div>
-                <h3 className="text-[#16244b] font-semibold text-sm">
+                <h3 className="text-[#16244b] font-semibold text-base">
                   {c.title}
                 </h3>
               </div>
@@ -172,7 +173,7 @@ const Investment = () => {
               outcomes.
             </p>
             <p className="mt-3 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses in Saudi Arabia with investment planning and
               market opportunity services designed to improve expansion
               readiness and support strategic business growth.
@@ -200,7 +201,7 @@ const Investment = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
-            src={img1}
+            src={img2}
             alt="Strategic Partnership & Business Expansion Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
@@ -215,7 +216,7 @@ const Investment = () => {
               potential.
             </p>
             <p className="mt-3 text-gray-500">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               assists businesses in Saudi Arabia with partnership support and
               expansion-focused solutions designed to improve business
               collaboration and support operational growth.
@@ -267,7 +268,7 @@ const Investment = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -291,7 +292,7 @@ const Investment = () => {
         ]}
       />
 
-      <RecentBlogs blogs={blogPosts} />
+     
     </div>
   );
 };

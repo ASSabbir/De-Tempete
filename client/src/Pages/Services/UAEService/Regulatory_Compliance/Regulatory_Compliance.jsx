@@ -125,7 +125,7 @@ const Regulatory_Compliance = () => {
                 <div className="w-14 h-14 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-3xl" />
                 </div>
-                <h3 className="mt-6 text-sm font-medium text-white leading-relaxed">
+                <h3 className="mt-6 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -243,7 +243,7 @@ const Regulatory_Compliance = () => {
                   <h3 className="text-lg font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               </div>
             ))}

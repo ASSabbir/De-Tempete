@@ -45,7 +45,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
                 className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-5 text-left group"
             >
                 <span
-                    className={`text-sm sm:text-base font-semibold transition-colors duration-200 ${isOpen ? "text-[#0d1e4a]" : "text-[#0d1e4a] group-hover:text-[#1a9fd4]"
+                    className={`text-base sm:text-base font-semibold transition-colors duration-200 ${isOpen ? "text-[#0d1e4a]" : "text-[#0d1e4a] group-hover:text-[#1a9fd4]"
                         }`}
                 >
                     {faq.q}
@@ -80,7 +80,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
                     transition: "max-height 0.4s ease",
                 }}
             >
-                <p className="px-5 sm:px-7 pb-5 text-sm sm:text-[15px] text-gray-500 leading-relaxed">
+                <p className="px-5 sm:px-7 pb-5 text-base sm:text-[15px] text-gray-500 leading-relaxed">
                     {faq.a}
                 </p>
             </div>

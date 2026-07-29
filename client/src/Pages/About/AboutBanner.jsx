@@ -92,7 +92,7 @@ function StatItem({ icon, value, suffix, label, start }) {
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#0d1e4a] leading-none">
                     {display}{suffix}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
+                <div className="text-xs sm:text-base text-gray-500 mt-0.5 font-medium">{label}</div>
             </div>
         </div>
     );
@@ -168,7 +168,7 @@ const AboutBanner = ({ text }) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.3}
-                            className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md"
+                            className="text-white/75 text-base sm:text-base leading-relaxed max-w-md"
                         >
                             A finance and accounting outsourcing service provider to meet the growing demand for specialized and professional accounting services
                         </motion.p>

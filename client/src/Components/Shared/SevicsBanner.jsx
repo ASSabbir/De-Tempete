@@ -93,7 +93,7 @@ function StatItem({ icon, value, suffix, label, start }) {
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#0d1e4a] leading-none">
                     {display}{suffix}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-0.5 font-medium">{label}</div>
+                <div className="text-xs sm:text-base text-gray-500 mt-0.5 font-medium">{label}</div>
             </div>
         </div>
     );
@@ -129,7 +129,7 @@ const SevicsBanner = ({
                 <div className="absolute inset-0 bg-[#0d1b3e]/75"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-7xl font-bold leading-tight">
+                    <h1 className="text-4xl 2xl:text-7xl font-bold leading-tight">
                         {title1}
 
                         <br />
@@ -137,7 +137,7 @@ const SevicsBanner = ({
 
                     </h1>
 
-                    <p className="max-w-4xl mx-auto mt-6 mb-10 text-base md:text-xl text-gray-200 leading-relaxed">
+                    <p className="max-w-4xl mx-auto mt-6 mb-10 text-base 2xl:text-xl text-gray-200 leading-relaxed">
                         {description}
                     </p>
 

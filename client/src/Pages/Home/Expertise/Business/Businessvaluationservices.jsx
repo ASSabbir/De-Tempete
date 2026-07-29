@@ -184,12 +184,12 @@ export default function BusinessValuationServices() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[#0d1e4a] font-bold text-sm sm:text-base leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
+              <h3 className="text-[#0d1e4a] font-bold text-base sm:text-base leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
                 {s.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-gray-500 text-xs sm:text-base leading-relaxed">
                 {s.description}
               </p>
             </motion.div>

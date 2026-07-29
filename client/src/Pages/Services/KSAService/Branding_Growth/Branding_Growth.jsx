@@ -12,7 +12,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
-import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-twhy-business-need-virtual-cfo-se__20677.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const handleTags = [
@@ -100,7 +100,7 @@ const Branding_Growth = () => {
             </span>
           </>
         }
-        description="de tempête provides branding and growth solutions in Saudi Arabia, helping businesses improve market visibility, strengthen brand positioning, and support long-term business expansion."
+        description={<><span className="font-bold italic">de tempête</span> provides branding and growth solutions in Saudi Arabia, helping businesses improve market visibility, strengthen brand positioning, and support long-term business expansion.</>}
       />
 
       <SecondSection></SecondSection>
@@ -123,7 +123,7 @@ const Branding_Growth = () => {
               remain competitive in evolving markets.
             </p>
             <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700">de tempête</span>{" "}
+              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
               supports businesses across Saudi Arabia with branding and growth
               services designed to strengthen corporate identity, improve market
               presence, and support sustainable business growth.
@@ -147,7 +147,7 @@ const Branding_Growth = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-12 px-4 text-center text-white text-sm font-medium"
+                className="bg-[#37456B] rounded-lg py-12 px-4 text-center text-white text-base font-medium"
               >
                 {t}
               </div>
@@ -170,11 +170,12 @@ const Branding_Growth = () => {
             <p className="mt-6 text-gray-500 font-semibold">
               Build a Strong Digital Footprint That Converts
             </p>
-            <p className="mt-2 text-gray-500 text-sm">
+            <p className="mt-2 text-gray-500 text-base">
               We design marketing strategies that increase brand awareness,
               strengthen trust, and generate measurable results across digital
               and social platforms.
             </p>
+            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
           <div className="space-y-4">
             {marketingItems.map((item, idx) => (
@@ -183,8 +184,9 @@ const Branding_Growth = () => {
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white"
               >
                 <button className="w-full px-6 py-4 flex items-center justify-between text-left">
-                  <span className="flex items-center gap-3 text-[#16244b] font-semibold text-sm">
-                    <span className="text-light-blue">◆</span>
+                  <span className="flex items-center gap-3 text-[#16244b] font-semibold text-base">
+                    
+                    <img src={logo} className="w-8" alt="" />
                     {item}
                   </span>
                   <ChevronDown size={18} className="text-gray-500" />
@@ -206,7 +208,7 @@ const Branding_Growth = () => {
             <p className="mt-4 text-gray-300">
               Premium Visual Content That Elevates Your Brand
             </p>
-            <p className="mt-2 text-gray-400 text-sm max-w-2xl mx-auto">
+            <p className="mt-2 text-gray-400 text-base max-w-2xl mx-auto">
               Strong visuals build trust, especially in the UAE's fast-paced,
               competitive market. We help you plan, execute, and deliver premium
               photoshoots and videos that represent your brand with style and
@@ -221,7 +223,7 @@ const Branding_Growth = () => {
                   <img src={logo} alt="" />
                 </div>
                 <h3 className="text-white font-bold mb-2">{c.title}</h3>
-                <p className="text-gray-300 text-sm leading-6">{c.desc}</p>
+                <p className="text-gray-300 text-base leading-6">{c.desc}</p>
               </div>
             ))}
           </div>
@@ -231,8 +233,8 @@ const Branding_Growth = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose <span className="font-normal italic">de tempête</span>{" "}
+            <h2 className="text-4xl  text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span>{" "}
               for Branding & Growth Services
             </h2>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
@@ -243,7 +245,7 @@ const Branding_Growth = () => {
                 <h3 className="text-lg font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-6">{f.desc}</p>
+                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -259,7 +261,7 @@ const Branding_Growth = () => {
             Presence <span className="font-bold">Today</span>
           </>
         }
-        subheading="de tempête helps businesses in Saudi Arabia improve brand visibility, market positioning, and long-term business growth."
+        subheading={<><span className="italic font-black">de tempête</span> helps businesses in Saudi Arabia improve brand visibility, market positioning, and long-term business growth.</>}
         commitmentItems={[
           "Brand positioning support",
           "Digital visibility strategies",
