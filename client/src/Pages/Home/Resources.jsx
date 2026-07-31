@@ -17,6 +17,8 @@ const cards = [
       { label: "UAE", path: "/publications/uae" },
       { label: "KSA", path: "/publications/ksa" },
       { label: "Bangladesh", path: "/publications/bangladesh" },
+      { label: "USA", path: "/publications/usa" },
+      { label: "Estonia", path: "/publications/estonia" },
     ],
   },
   {
@@ -30,6 +32,8 @@ const cards = [
       { label: "UAE", path: "/library/uae" },
       { label: "KSA", path: "/library/ksa" },
       { label: "Bangladesh", path: "/library/bangladesh" },
+      { label: "USA", path: "/library/usa" },
+      { label: "Estonia", path: "/library/estonia" },
     ],
   },
   {
@@ -43,6 +47,8 @@ const cards = [
       { label: "UAE", path: "/forms/uae" },
       { label: "KSA", path: "/forms/ksa" },
       { label: "Bangladesh", path: "/forms/bangladesh" },
+      { label: "USA", path: "/forms/usa" },
+      { label: "Estonia", path: "/forms/estonia" },
     ],
   },
 ];

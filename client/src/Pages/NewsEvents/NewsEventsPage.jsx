@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router';
 import API from '../../api/axios';
 import NewsEventsHero from '../../Components/Shared/NewsEventsHero';
+import { stripHtml } from '../../utils/stripHtml';
 
 const CalendarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -64,7 +65,7 @@ export default function NewsEventsPage() {
               }}
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 10px 28px rgba(0,0,0,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <img src={item.coverImage} alt={item.title} loading="lazy"
+                <img src={item.images?.[0]} alt={item.title} loading="lazy"
                   style={{ width: '100%', height: 190, objectFit: 'cover', background: '#f3f4f6' }} />
                 <div style={{ padding: '20px 22px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#0f1f3d', fontSize: 13, marginBottom: 10 }}>
@@ -72,7 +73,7 @@ export default function NewsEventsPage() {
                     {new Date(item.eventDate).toLocaleDateString('en-GB')}
                   </div>
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0f1f3d', marginBottom: 10, lineHeight: 1.3 }}>{item.title}</h3>
-                  <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 18, lineHeight: 1.5, flex: 1 }}>{item.excerpt}</p>
+                  <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 18, lineHeight: 1.5, flex: 1 }}>{stripHtml(item.description, 110)}</p>
                   <Link to={`/news-events/${item.slug}`} style={{
                     display: 'inline-flex', alignItems: 'center', gap: 6, alignSelf: 'flex-start',
                     padding: '9px 18px', background: '#4fd1e8', color: '#0f1f3d', borderRadius: 6,

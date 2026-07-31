@@ -237,29 +237,42 @@ const services = {
 
 const resourceSections = {
   COMPANY: [
+    { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "E-brochure", path: "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7" },
+    {
+      label: "E-brochure",
+      path: "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7",
+    },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
     { label: "Blogs", path: "/blogs" },
   ],
+
   PUBLICATIONS: [
     { label: "UAE", path: "/publications/uae" },
     { label: "KSA", path: "/publications/ksa" },
     { label: "UK", path: "/publications/uk" },
+    { label: "USA", path: "/publications/usa" },
     { label: "Bangladesh", path: "/publications/bangladesh" },
+    { label: "Estonia", path: "/publications/estonia" },
   ],
+
   LIBRARY: [
     { label: "UAE", path: "/library/uae" },
     { label: "KSA", path: "/library/ksa" },
     { label: "UK", path: "/library/uk" },
+    { label: "USA", path: "/library/usa" },
     { label: "Bangladesh", path: "/library/bangladesh" },
+    { label: "Estonia", path: "/library/estonia" },
   ],
+
   FORMS: [
     { label: "UAE", path: "/forms/uae" },
     { label: "KSA", path: "/forms/ksa" },
     { label: "UK", path: "/forms/uk" },
+    { label: "USA", path: "/forms/usa" },
     { label: "Bangladesh", path: "/forms/bangladesh" },
+    { label: "Estonia", path: "/forms/estonia" },
   ],
 };
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { fetchBlogs } from "../../api/blogApi";
+import { stripHtml } from "../../utils/stripHtml";
 
 const BlogList = () => {
   const [items, setItems] = useState([]);
@@ -83,7 +84,7 @@ const BlogList = () => {
                       {blog.title}
                     </h3>
                     <p className="text-gray-500 text-base leading-6 line-clamp-3">
-                      {blog.description}
+                      {stripHtml(blog.description, 140)}
                     </p>
                     <span className="inline-block mt-4 text-light-blue font-semibold text-base">
                       Read More →
