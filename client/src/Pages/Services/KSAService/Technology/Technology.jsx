@@ -113,7 +113,7 @@ const Technology = () => {
                 <div className="w-16 h-16  rounded-xl flex items-center justify-center mx-auto mb-5">
                   <img src={logo} alt="" />
                 </div>
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {c.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{c.desc}</p>
@@ -164,7 +164,7 @@ const Technology = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {whyChoose.map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-[#16244b] mb-3">
+                <h3 className="text-base font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{f.desc}</p>
@@ -174,22 +174,7 @@ const Technology = () => {
         </div>
       </section>
 
-      <ConsultationCTA
-        heading={
-          <>
-            Start Your KSA
-            <br />
-            Expansion <span className="font-bold">Today</span>
-          </>
-        }
-        subheading="Get expert guidance, avoid costly delays, and build your KSA presence with confidence."
-        commitmentItems={[
-          "Free initial tax consultation — no obligation",
-          "100% confidentiality and secure handling of data",
-          "Region-specific tax experts",
-          "Transparent and practical advice tailored to your needs",
-        ]}
-      />
+      
       {/* Technological Partner Section */}
 
       <section className="pt-15 bg-white overflow-hidden">
@@ -229,6 +214,22 @@ const Technology = () => {
     `}</style>
         </div>
       </section>
+      <ConsultationCTA
+        heading={
+          <>
+            Start Your KSA
+            <br />
+            Expansion <span className="font-bold">Today</span>
+          </>
+        }
+        subheading="Get expert guidance, avoid costly delays, and build your KSA presence with confidence."
+        commitmentItems={[
+          "Free initial tax consultation — no obligation",
+          "100% confidentiality and secure handling of data",
+          "Region-specific tax experts",
+          "Transparent and practical advice tailored to your needs",
+        ]}
+      />
 
       
     </div>

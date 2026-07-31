@@ -10,6 +10,15 @@ import Leads from './pages/Leads';
 import NewsEvents from './pages/NewsEvents';
 import Blogs from './pages/Blogs';
 import BusinessSetupLeads from './pages/Businesssetupleads';
+import Users from './pages/Users';
+
+// Guards a single route by role. If the logged-in admin's role isn't in `roles`,
+// bounce back to the dashboard instead of showing the page.
+function RoleRoute({ roles, children }) {
+  const { admin } = useAuth();
+  if (!roles.includes(admin?.role)) return <Navigate to="/" replace />;
+  return children;
+}
 
 function ProtectedLayout() {
   const { admin } = useAuth();
@@ -20,13 +29,14 @@ function ProtectedLayout() {
       <main style={{ flex: 1, padding: 32, minWidth: 0 }}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/forms" element={<Forms />} />
-          <Route path="/leads" element={<Leads />} />
-          <Route path="/business-setup-leads" element={<BusinessSetupLeads />} />
-          <Route path="/news-events" element={<NewsEvents />} />
-          <Route path="/blogs" element={<Blogs></Blogs>} />
+          <Route path="/library" element={<RoleRoute roles={['superadmin', 'resource']}><Library /></RoleRoute>} />
+          <Route path="/publications" element={<RoleRoute roles={['superadmin', 'resource']}><Publications /></RoleRoute>} />
+          <Route path="/forms" element={<RoleRoute roles={['superadmin', 'resource']}><Forms /></RoleRoute>} />
+          <Route path="/leads" element={<RoleRoute roles={['superadmin', 'resource']}><Leads /></RoleRoute>} />
+          <Route path="/business-setup-leads" element={<RoleRoute roles={['superadmin', 'resource']}><BusinessSetupLeads /></RoleRoute>} />
+          <Route path="/news-events" element={<RoleRoute roles={['superadmin', 'news']}><NewsEvents /></RoleRoute>} />
+          <Route path="/blogs" element={<RoleRoute roles={['superadmin', 'blog']}><Blogs /></RoleRoute>} />
+          <Route path="/users" element={<RoleRoute roles={['superadmin']}><Users /></RoleRoute>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

@@ -216,7 +216,7 @@ const ERPDigitalTranformation = () => {
                                 "Digital Strategy & Change Management",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                                    <FaCheckCircle className="text-light-blue text-base shrink-0" />
                                     <span className="text-gray-600">{item}</span>
                                 </div>
                             ))}
@@ -247,7 +247,7 @@ const ERPDigitalTranformation = () => {
                         {sectors.map((item, index) => (
                             <div key={index}>
                                 <item.icon className=" bg-light-blue/20 p-2 text-light-blue  rounded-sm mb-3" size={42} strokeWidth={1.5} />
-                                <h3 className="text-lg  font-bold text-[#16244b] mb-2">
+                                <h3 className="text-base  font-bold text-[#16244b] mb-2">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -281,7 +281,7 @@ const ERPDigitalTranformation = () => {
                                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
                                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                                <h3 className="text-base font-bold text-[#16244b] mb-2">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -347,24 +347,6 @@ const ERPDigitalTranformation = () => {
                     </div>
                 </div>
             </section>
-            <ConsultationCTA
-                heading={
-                    <>
-                        Ready To Build A
-                        <br />
-                        <span className="font-bold">Smarter Business?</span>
-                    </>
-                }
-                subheading="Discover how ERP and digital transformation can simplify operations, connect your teams, and unlock greater efficiency across your organization."
-                commitmentItems={[
-                    "Personalized ERP readiness assessment",
-                    "Expert implementation and migration support",
-                    "Business process optimization and automation",
-                    "Ongoing training, support, and system enhancement",
-                ]}
-            />
-            {/* Technological Partner Section */}
-
             <section className="pt-15 bg-white overflow-hidden">
                 <div className=" mx-auto max-w-7xl px-6">
                     <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
@@ -402,6 +384,25 @@ const ERPDigitalTranformation = () => {
     `}</style>
                 </div>
             </section>
+            <ConsultationCTA
+                heading={
+                    <>
+                        Ready To Build A
+                        <br />
+                        <span className="font-bold">Smarter Business?</span>
+                    </>
+                }
+                subheading="Discover how ERP and digital transformation can simplify operations, connect your teams, and unlock greater efficiency across your organization."
+                commitmentItems={[
+                    "Personalized ERP readiness assessment",
+                    "Expert implementation and migration support",
+                    "Business process optimization and automation",
+                    "Ongoing training, support, and system enhancement",
+                ]}
+            />
+            {/* Technological Partner Section */}
+
+            
         </div>
     );
 };

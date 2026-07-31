@@ -9,7 +9,7 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
+import img1 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
 import img4 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
@@ -118,7 +118,7 @@ const HR_Payroll_Solutions = () => {
                 "Reduce errors and operational burden",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ const HR_Payroll_Solutions = () => {
                 "Quick and compliant onboarding process",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -191,7 +191,7 @@ const HR_Payroll_Solutions = () => {
                 "Avoid legal risks and penalties",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -223,7 +223,7 @@ const HR_Payroll_Solutions = () => {
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>

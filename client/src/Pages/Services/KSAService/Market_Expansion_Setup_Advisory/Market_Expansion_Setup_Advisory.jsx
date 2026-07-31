@@ -18,6 +18,7 @@ import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-p
 import img5 from '../../../../asstes/img_temp/servics/KSA/Regional-Headquarters-RHQ3.webp'
 import img6 from '../../../../asstes/img_temp/servics/KSA/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646 (1).webp'
 import img7 from '../../../../asstes/img_temp/servics/KSA/Investor-Visa-Saudi.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const setupCards = [
@@ -226,7 +227,7 @@ const Market_Expansion_Setup_Advisory = () => {
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-3 gap-12 text-center">
           {marketPositionCards.map((c, i) => (
             <div key={i}>
-              <h3 className="text-lg font-bold text-[#16244b] mb-3">
+              <h3 className="text-base font-bold text-[#16244b] mb-3">
                 {c.title}
               </h3>
               <p className="text-gray-500 text-base leading-6">{c.desc}</p>
@@ -258,7 +259,9 @@ const Market_Expansion_Setup_Advisory = () => {
               >
                 <button className="w-full px-6 py-4 flex items-center justify-between text-left">
                   <span className="flex items-center gap-3 text-white font-semibold text-base">
-                    <span className="text-light-blue">◆</span>
+                    <div className="w-10">
+                      <img src={logo} alt="" />
+                    </div>
                     {item.title}
                   </span>
                   <ChevronDown size={18} className="text-gray-300" />
@@ -425,7 +428,7 @@ const Market_Expansion_Setup_Advisory = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChooseUs.map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-[#16244b] mb-3">
+                <h3 className="text-base font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{f.desc}</p>
@@ -443,7 +446,7 @@ const Market_Expansion_Setup_Advisory = () => {
             Expansion <span className="font-bold">Today</span>
           </>
         }
-        subheading="Get expert guidance, avoid costly delays, and build your UAE presence with confidence."
+        subheading="Get expert guidance, avoid costly delays, and build your KSA presence with confidence."
         commitmentItems={[
           "Free initial tax consultation — no obligation",
           "100% confidentiality and secure handling of data",

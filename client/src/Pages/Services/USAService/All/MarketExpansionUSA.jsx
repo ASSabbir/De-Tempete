@@ -203,7 +203,7 @@ const MarketExpansionUSA = () => {
                             Establish and expand your business in the United States with expert guidance tailored to your goals.
                         </p>
 
-                        <p className="mt-7 text-lg text-gray-600 leading-8">
+                        <p className="mt-7 text-base text-gray-600 leading-8">
                             We help entrepreneurs, startups, and international companies select the right business structure, choose the ideal state for incorporation, obtain an EIN, establish US banking and payment solutions, and build a strong foundation for long-term success in the American market.
                         </p>
                     </div>
@@ -238,7 +238,7 @@ const MarketExpansionUSA = () => {
                                                 key={i}
                                                 className="flex items-start gap-4 text-gray-600 leading-7"
                                             >
-                                                <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
+                                                <FaCheckCircle className="text-light-blue text-base mt-1 shrink-0" />
                                                 <span>{text}</span>
                                             </li>
                                         ))}
@@ -277,7 +277,7 @@ const MarketExpansionUSA = () => {
                                 <div key={index}>
                                     <Icon className="text-4xl bg-light-blue/20 text-light-blue p-2 rounded-sm mb-4" />
 
-                                    <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                                    <h3 className="text-base font-bold text-[#16244b] mb-2">
                                         {item.title}
                                     </h3>
 
@@ -330,7 +330,7 @@ const MarketExpansionUSA = () => {
                                     "Compliance support throughout the process",
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                                        <FaCheckCircle className="text-light-blue text-base shrink-0" />
                                         <span className="text-gray-600">{item}</span>
                                     </div>
                                 ))}
@@ -366,7 +366,7 @@ const MarketExpansionUSA = () => {
                                     "Long-term US expansion planning",
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                                        <FaCheckCircle className="text-light-blue text-base shrink-0" />
                                         <span className="text-gray-600">{item}</span>
                                     </div>
                                 ))}
@@ -412,7 +412,7 @@ const MarketExpansionUSA = () => {
                                     <LuChartLine className="text-white text-4xl" />
                                 </div>
 
-                                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                                     {item}
                                 </h3>
                             </div>
@@ -444,7 +444,7 @@ const MarketExpansionUSA = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                                    <h3 className="text-base font-bold text-[#16244b] mb-2">
                                         {item.title}
                                     </h3>
 

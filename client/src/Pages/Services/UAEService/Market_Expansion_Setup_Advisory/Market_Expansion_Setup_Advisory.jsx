@@ -211,11 +211,11 @@ const Market_Expansion_Setup_Advisory = () => {
               Business Setup &{" "}
               <span className="font-extrabold">Registration</span>
             </h2>
-            <p className="mt-5 text-lg  2xl:text-lg text-gray-500 font-semibold">
+            <p className="mt-5 text-base  2xl:text-base text-gray-500 font-semibold">
               From entry formation to licensing, we simplify every stage of your
               UAE business setup.
             </p>
-            <p className="mt-7 text-lg  2xl:text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-base  2xl:text-base text-gray-600 leading-8">
               Our experts help you choose the right jurisdiction — Mainland,
               Free Zone, or Offshore — based on your ownership goals, industry
               type, and target market.
@@ -251,7 +251,7 @@ const Market_Expansion_Setup_Advisory = () => {
                         key={i}
                         className="flex items-start gap-4 text-gray-600 leading-7"
                       >
-                        <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-base mt-1 shrink-0" />
                         <span>{text}</span>
                       </li>
                     ))}
@@ -262,11 +262,11 @@ const Market_Expansion_Setup_Advisory = () => {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-base">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-dark-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 cursor-pointer duration-300 shadow-lg">
+            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-dark-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-base hover:scale-105 cursor-pointer duration-300 shadow-lg">
               Explore Complete Business Setup Service Guide
               <FaArrowRight />
             </button>
@@ -297,7 +297,7 @@ const Market_Expansion_Setup_Advisory = () => {
               return (
                 <div key={index} className="hover:bg-gray-100 p-5">
                   <Icon className="text-4xl  text-light-blue bg-light-blue/20 p-2 rounded-sm mb-4" />
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -385,7 +385,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   "End-to-end coordination until account activation",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-base shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -414,7 +414,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   "IP renewal and protection strategy",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-base shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ))}
@@ -455,7 +455,7 @@ const Market_Expansion_Setup_Advisory = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartLine className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -485,7 +485,7 @@ const Market_Expansion_Setup_Advisory = () => {
                   <LuChartLine className="text-light-blue text-2xl" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

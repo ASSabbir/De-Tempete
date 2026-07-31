@@ -112,7 +112,7 @@ export default function WhyChoose() {
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 sm:gap-0">
             {/* Why Choose Us label */}
             <div className="sm:pr-8 sm:border-r border-gray-200 shrink-0">
-              <h2 className="text-lg font-bold text-[#0d1e4a] whitespace-nowrap">Why Choose Us?</h2>
+              <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Why Choose Us?</h2>
             </div>
             {/* Stats */}
             <div className="flex flex-wrap gap-6 sm:gap-0 sm:flex-1">

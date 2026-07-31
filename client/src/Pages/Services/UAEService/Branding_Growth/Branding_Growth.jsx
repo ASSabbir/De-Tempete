@@ -223,7 +223,7 @@ const Branding_Growth = () => {
                 "Cross-Industry Collaboration",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -253,7 +253,7 @@ const Branding_Growth = () => {
             {sectors.map((item, index) => (
               <div key={index} className="hover:bg-white p-7">
                 <item.icon className="bg-light-blue/20 text-light-blue p-1 rounded-sm mb-3" size={32} strokeWidth={1.5} />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -341,7 +341,7 @@ const Branding_Growth = () => {
                 <div className="w-12 h-12 bg-light-blue rounded-xl flex items-center justify-center mb-5">
                   <LuChartNoAxesCombined className="text-white text-2xl" />
                 </div>
-                <h3 className="text-lg font-medium text-white mb-2">
+                <h3 className="text-base font-medium text-white mb-2">
                   {item.title}
                 </h3>
                 <p className="text-slate-300 text-base leading-6">{item.desc}</p>
@@ -369,7 +369,7 @@ const Branding_Growth = () => {
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>

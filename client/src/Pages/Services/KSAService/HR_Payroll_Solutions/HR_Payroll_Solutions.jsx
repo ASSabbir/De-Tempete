@@ -257,7 +257,7 @@ const HR_Payroll_Solutions = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {whyChoose.map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-[#16244b] mb-3">
+                <h3 className="text-base font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{f.desc}</p>

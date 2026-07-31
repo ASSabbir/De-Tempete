@@ -8,6 +8,17 @@ import SecondSection from "../../../../Components/Shared/SecondSection";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.webp'
 import img2 from '../../../../asstes/img_temp/logo.webp'
+import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
+import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
+import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
+import a from "../../../../asstes/img_temp/New folder/11-1.webp";
+import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
+import c from "../../../../asstes/img_temp/New folder/7-2.webp";
+import d from "../../../../asstes/img_temp/New folder/8.webp";
+import e from "../../../../asstes/img_temp/New folder/13-1.webp";
+import f from "../../../../asstes/img_temp/New folder/6-1.webp";
+import g from "../../../../asstes/img_temp/New folder/2.webp";
+const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 
 const softwareSolutions = [
@@ -73,13 +84,14 @@ const Technology = () => {
                 <div>
                   <img src={img2} alt="" />
                 </div>
-                <h3 className="text-lg font-bold text-[#14224A] mb-3 mt-2">{item.title}</h3>
+                <h3 className="text-base text-center font-bold text-[#14224A] mb-3 mt-2">{item.title}</h3>
                 <p className="text-gray-500 text-base leading-6 text-center">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      
 
       {/* Business Process Automation */}
       <section className="py-20 bg-white">
@@ -106,6 +118,8 @@ const Technology = () => {
           />
         </div>
       </section>
+       <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
+      
 
       {/* Smarter Accounting & Business Benefits */}
       <section className="bg-[#16244B] py-24">
@@ -120,7 +134,7 @@ const Technology = () => {
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-16">
             {benefits.map((item, index) => (
               <div key={index} className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl">
-                <h3 className="text-lg font-medium text-white leading-relaxed whitespace-pre-line">{item}</h3>
+                <h3 className="text-base font-medium text-white leading-relaxed whitespace-pre-line">{item}</h3>
               </div>
             ))}
           </div>
@@ -148,6 +162,43 @@ const Technology = () => {
           </div>
         </div>
       </section>
+      <section className="pt-15 bg-white overflow-hidden">
+                <div className=" mx-auto max-w-7xl px-6">
+                    <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+                        Technological <span className="font-bold">Partner</span>
+                    </h2>
+
+                    <div className="overflow-hidden">
+                        <div
+                            className="flex items-center"
+                            style={{
+                                animation: "scrollLeft 35s linear infinite",
+                            }}
+                        >
+                            {[...logos, ...logos].map((logo, index) => (
+                                <div key={index} className="shrink-0 ">
+                                    <img
+                                        src={logo}
+                                        alt="Partner"
+                                        className="h-60 object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <style>{`
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    `}</style>
+                </div>
+            </section>
 
        <ConsultationCTA
         heading={<>Start Simplifying Your<br />Accounting With <span className="font-bold">Modern Digital Solutions</span></>}
@@ -159,19 +210,7 @@ const Technology = () => {
         ]}
       />
 
-      {/* Technological Partner */}
-      {/* <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light text-[#16244b] mb-16">
-            Technological <span className="font-bold">Partner</span>
-          </h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-10 items-center justify-items-center opacity-80">
-            {partners.map((p, i) => (
-              <span key={i} className="text-gray-500 font-semibold text-lg">{p}</span>
-            ))}
-          </div>
-        </div>
-      </section> */}
+     
     </div>
   );
 };

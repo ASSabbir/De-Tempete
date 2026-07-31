@@ -2,7 +2,8 @@
 import heroVideo from '../../asstes/video/Hero-video.mp4'
 import { useState, useEffect, useRef } from "react";
 import SharedFullButton from '../../Components/Shared/SharedFullButton';
- import { Link } from "react-router";
+import { gsap } from "gsap";
+import { Link } from "react-router";
 const slides = [
   {
     title: "Fast & Secure ID Verification",
@@ -30,7 +31,7 @@ const slides = [
       "Strategic branding and market expansion services to help you stand out and scale internationally.",
   },
 ];
- 
+
 const services = [
   "Company Formation",
   "Accounting & Bookkeeping",
@@ -41,89 +42,99 @@ const services = [
   "Virtual CFO",
   "Investment Advisory",
 ];
- 
+
 const INTERVAL = 3000;
 
- 
+
 
 const Banner = () => {
- const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
-  const [direction, setDirection] = useState("up"); // "up" | "down"
+  const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
+  const slideRef = useRef(null);
+
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", company: "", designation: "", service: "",
   });
- 
-  const goTo = (index, dir = "up") => {
-    if (animating) return;
-    setDirection(dir);
-    setAnimating(true);
-    setTimeout(() => {
-      setCurrent(index);
-      setAnimating(false);
-    }, 400);
-  };
- 
-  const startInterval = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setCurrent((prev) => {
-        const next = (prev + 1) % slides.length;
-        setDirection("up");
-        setAnimating(true);
-        setTimeout(() => setAnimating(false), 400);
-        return next;
-      });
-    }, INTERVAL);
-  };
- 
+
+
+
   useEffect(() => {
     startInterval();
+
     return () => clearInterval(intervalRef.current);
-  }, []);
- 
-  const handleDotClick = (i) => {
-    const dir = i > current ? "up" : "down";
-    goTo(i, dir);
-    startInterval();
+  }, [current]);
+
+  const animateSlide = (nextIndex) => {
+    if (!slideRef.current) return;
+
+    gsap.to(slideRef.current, {
+      x: -80,
+      opacity: 0,
+      duration: 0.45,
+      ease: "power3.inOut",
+      onComplete: () => {
+        setCurrent(nextIndex);
+
+        gsap.fromTo(
+          slideRef.current,
+          {
+            x: 80,
+            opacity: 0,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.65,
+            ease: "power4.out",
+          }
+        );
+      },
+    });
   };
- 
+
+  const goTo = (index) => {
+    if (index === current) return;
+    animateSlide(index);
+  };
+
+  const startInterval = () => {
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = setInterval(() => {
+      const next = (current + 1) % slides.length;
+      animateSlide(next);
+    }, INTERVAL);
+  };
+
+
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
- 
+
   return (
     <section className="relative min-h-screen w-full  bg-[#0d1e4a]">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <video className='object-center object-cover h-full w-full' src={heroVideo} autoPlay muted loop></video>
-            <div className='bg-dark-blue/80 w-full h-full absolute top-0'></div>
+        <div className='bg-dark-blue/80 w-full h-full absolute top-0'></div>
       </div>
- 
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-[6vw] 2xl:px-[1vw] min-h-screen flex items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-28 lg:py-32">
- 
+
           {/* LEFT — Text Slider */}
           <div className="flex flex-col justify-center">
             {/* Slide text */}
             <div className="relative  min-h-[220px] sm:min-h-[200px]">
               <div
-                key={current}
-                className={`transition-all duration-400 ${
-                  animating
-                    ? direction === "up"
-                      ? "opacity-0 -translate-y-100"
-                      : "opacity-0 translate-y-100"
-                    : "opacity-100 translate-y-0"
-                }`}
-                style={{ transition: "opacity 0.4s ease, transform 0.4s ease" }}
+                ref={slideRef}
+                className="will-change-transform"
               >
                 <h1 className="text-[3vw] font-extrabold text-white leading-tight mb-5">
                   {slides[current].title}
@@ -133,15 +144,15 @@ const Banner = () => {
                 </p>
               </div>
             </div>
- 
-            
- 
+
+
+
             {/* CTA */}
             <div className='mt-15'>
               <SharedFullButton text={'Contact Us Now'} path={'/contact'}></SharedFullButton>
             </div>
           </div>
- 
+
           {/* RIGHT — Consultation Form */}
           <div className="flex items-center justify-center lg:justify-end">
             <div
@@ -151,7 +162,7 @@ const Banner = () => {
               <h2 className="text-xl font-bold text-white mb-6">
                 Free Consultation
               </h2>
- 
+
               <form onSubmit={handleSubmit} className="space-y-3">
                 {[
                   { name: "name", placeholder: "Name", type: "text" },
@@ -172,7 +183,7 @@ const Banner = () => {
                     style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
                 ))}
- 
+
                 {/* Service dropdown */}
                 <div className="relative">
                   <select
@@ -199,7 +210,7 @@ const Banner = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
- 
+
                 <button
                   type="submit"
                   className="w-full py-2 xl:py-3.5 rounded-lg  font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110"
@@ -210,17 +221,12 @@ const Banner = () => {
               </form>
             </div>
           </div>
- 
+
         </div>
       </div>
- 
+
       {/* Progress bar keyframe */}
-      <style>{`
-        @keyframes progressBar {
-          from { transform: scaleX(0); transform-origin: left; }
-          to   { transform: scaleX(1); transform-origin: left; }
-        }
-      `}</style>
+      
     </section>
   );
 }

@@ -39,16 +39,16 @@ const Why_Business = () => {
         {/* Heading */}
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-[#081B57] leading-tight">
-            <span className="block text-5xl md:text-6xl font-light">
+            <span className="block text-5xl 2xl:text-6xl font-light">
               Why Start A
             </span>
 
-            <span className="block text-5xl md:text-6xl font-bold mt-2">
+            <span className="block text-5xl 2xl:text-6xl font-bold mt-2">
               Business In The KSA?
             </span>
           </h2>
 
-          <p className="mt-10 text-[#2B3557] text-lg ">
+          <p className="mt-10 text-[#2B3557] text-base ">
             Saudi Arabia is rapidly emerging as one of the world's most attractive
             investment and business destinations under Vision 2030. With a strong
             and diversified economy, investor-friendly reforms, and massive
@@ -66,24 +66,26 @@ const Why_Business = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid lg:grid-cols-3  rounded-4xl overflow-hidden md:grid-cols-2 gap-6 mt-24">
+        <div className="grid lg:grid-cols-3 pb-10 rounded-4xl overflow-hidden md:grid-cols-2 gap-6 mt-24">
 
           {features.map((item, index) => (
             <div
               key={index}
               className={`${item.bg}
               
-              shadow-sm bg-
+              shadow-sm 
+              bg-
               min-h-[230px]
-              px-5 py-4
+              p-6
               transition-all duration-300
+              hover:shadow-2xl
               `}
             >
-              <h3 className="text-[#081B57] text-3xl font-bold leading-snug">
+              <h3 className="text-[#081B57] text-2xl 2xl:text-3xl font-bold leading-snug">
                 {item.title}
               </h3>
 
-              <p className="text-[#1F2A4D] text-xl leading-7">
+              <p className="text-[#1F2A4D] text-lg 2xl:text-xl leading-7">
                 {item.desc}
               </p>
             </div>

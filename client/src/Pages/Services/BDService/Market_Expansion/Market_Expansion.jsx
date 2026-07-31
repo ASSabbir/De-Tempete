@@ -151,7 +151,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className=" text-4xl 2xl:text-5xl font-bold text-[#13264d]">
               Business Setup &{" "}
               <span className="font-extrabold">Registration</span>
             </h2>
@@ -160,7 +160,7 @@ const Market_Expansion = () => {
               Simplified Business Setup & Structure Guidance
             </div>
 
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-base text-gray-600 leading-8">
               From company incorporation to licensing, we simplify every stage
               of your Bangladesh business setup. Our experts help you select the
               right business structure — Private Limited, Branch, or
@@ -193,14 +193,14 @@ const Market_Expansion = () => {
                   {/* Icon */}
 
                   <div className="absolute bottom-6 left-6">
-                    <div className="w-16 h-16 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
-                      <FaBuilding className="text-white text-3xl" />
+                    <div className="w-10 2xl:w-16 h-10 2xl:h-16 rounded-xl bg-light-blue flex items-center justify-center shadow-lg">
+                      <FaBuilding className="text-white text-xl 2xl:text-3xl" />
                     </div>
                   </div>
 
                   {/* Title */}
 
-                  <h3 className="absolute bottom-8 left-28 text-white text-3xl font-bold">
+                  <h3 className="absolute bottom-8 left-20 2xl:left-28 text-white text-xl 2xl:text-3xl font-bold">
                     {item.title}
                   </h3>
                 </div>
@@ -228,7 +228,7 @@ const Market_Expansion = () => {
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg mb-20">
+            <p className="text-gray-500 text-base mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
@@ -244,7 +244,7 @@ const Market_Expansion = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
+            <h2 className=" text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
@@ -302,7 +302,7 @@ const Market_Expansion = () => {
                   key={index}
                   className={`rounded-3xl  flex  flex-col  items-center text-center transition-all duration-300 `}
                 >
-                  <Icon className="text-4xl text-white bg-light-blue p-2 rounded-full mb-6" />
+                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm mb-6" />
 
                   <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
@@ -323,7 +323,7 @@ const Market_Expansion = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               Export Readiness, Trade
             </h2>
-            <p className="text-gray-600 text-lg font-semibold">
+            <p className="text-gray-600 text-base font-semibold">
               Compliance & Logistics Advisory
             </p>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
@@ -389,7 +389,7 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className=" text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Bank Account</span>
                 <br />
                 <span className="font-bold">Opening</span> Assistance
@@ -401,7 +401,7 @@ const Market_Expansion = () => {
                 activation support.
               </p>
 
-              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                 Our team handles:
               </h4>
 
@@ -415,7 +415,7 @@ const Market_Expansion = () => {
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -428,7 +428,7 @@ const Market_Expansion = () => {
             {/* Content */}
 
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Trademark</span>
                 <span> Registration & IP</span>
                 <br />
@@ -442,7 +442,7 @@ const Market_Expansion = () => {
                 support.
               </p>
 
-              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                 Our support includes:
               </h4>
 
@@ -456,7 +456,7 @@ const Market_Expansion = () => {
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -489,7 +489,7 @@ const Market_Expansion = () => {
           {/* Heading */}
 
           <div className="text-center">
-            <h2 className="text-5xl  font-light text-[#16244b] leading-tight">
+            <h2 className="text-4xl 2xl: text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
               Why Choose Our
               <span className="font-bold"> Expansion Advisory Service?</span>
             </h2>
@@ -535,7 +535,7 @@ const Market_Expansion = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-lg leading-8">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-8">{item.desc}</p>
                 </div>
               </div>
             ))}

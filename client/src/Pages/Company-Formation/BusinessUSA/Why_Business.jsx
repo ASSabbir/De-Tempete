@@ -38,16 +38,16 @@ const Why_Business = () => {
         {/* Heading */}
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-[#081B57] leading-tight">
-            <span className="block text-5xl md:text-6xl font-light">
+            <span className="block text-5xl 2xl:text-6xl font-light">
               Why Start A
             </span>
 
-            <span className="block text-5xl md:text-6xl font-bold mt-2">
+            <span className="block text-5xl 2xl:text-6xl font-bold mt-2">
               Business In The USA?
             </span>
           </h2>
 
-          <p className="mt-10 text-[#2B3557] text-lg">
+          <p className="mt-10 text-[#2B3557] text-base">
             The United States remains one of the world's most attractive
             destinations for entrepreneurs, startups, and international
             investors. With a strong legal framework, advanced infrastructure,
@@ -63,7 +63,7 @@ const Why_Business = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid rounded-3xl overflow-hidden rh lg:grid-cols-3 md:grid-cols-2 gap-6 mt-24">
+        <div className="grid rounded-3xl   rh lg:grid-cols-3 md:grid-cols-2 gap-6 mt-24">
           {features.map((item, index) => (
             <div
               key={index}
@@ -71,15 +71,16 @@ const Why_Business = () => {
               
               shadow-sm
               min-h-[230px]
-              px-5 py-4
+              p-7
+              hover:shadow-2xl
               transition-all duration-300
               `}
             >
-              <h3 className="text-[#081B57] text-3xl font-bold leading-snug">
+              <h3 className="text-[#081B57] text-2xl 2xl:text-3xl font-bold leading-snug">
                 {item.title}
               </h3>
 
-              <p className="text-[#1F2A4D] text-xl leading-7">{item.desc}</p>
+              <p className="text-[#1F2A4D] text-lg 2xl:text-xl leading-7">{item.desc}</p>
             </div>
           ))}
         </div>

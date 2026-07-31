@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const steps = [
   {
@@ -77,14 +78,15 @@ const EndToEnd = () => {
             KSA’s <span className="font-bold">business laws.</span>
           </h3>
 
-          <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-medium transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 hover:shadow-xl">
-            Get Started Now
-          </button>
+          <Link to={'/contact'}>
+            <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-medium transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 hover:shadow-xl">
+              Get Started Now
+            </button></Link>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-[#081B57] text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-5xl 2xl:text-6xl font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>
@@ -98,62 +100,61 @@ const EndToEnd = () => {
         </div>
 
         {/* Content */}
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
 
-  {/* Left Steps */}
-  <div className="lg:col-span-3">
-    <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
-      {steps.map((item, index) => (
-        <button
-          key={index}
-          onClick={() => setActiveStep(index)}
-          className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-lg lg:text-2xl rounded-xl transition-all duration-300
-          ${
-            activeStep === index
-              ? "bg-[#081B57] text-white"
-              : "text-[#1f2a50] hover:bg-gray-100"
-          }`}
-        >
-          {item.step}
-        </button>
-      ))}
-    </div>
-  </div>
+          {/* Left Steps */}
+          <div className="lg:col-span-3">
+            <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2">
+              {steps.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveStep(index)}
+                  className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-base 2xl:text-2xl rounded-xl transition-all duration-300
+          ${activeStep === index
+                      ? "bg-[#081B57] text-white"
+                      : "text-[#1f2a50] hover:bg-gray-100"
+                    }`}
+                >
+                  {item.step}
+                </button>
+              ))}
+            </div>
+          </div>
 
-  {/* Right Card */}
-  <div className="lg:col-span-9">
-    <div className="relative bg-[#EFEFEF] rounded-3xl p-6 sm:p-8 lg:p-12 shadow-sm">
+          {/* Right Card */}
+          <div className="lg:col-span-9">
+            <div className="relative bg-[#EFEFEF] rounded-3xl p-6 sm:p-8 lg:p-12 shadow-sm">
 
-      {/* Triangle */}
-      <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]"></div>
+              {/* Triangle */}
+              <div className="hidden lg:block absolute left-[-60px] top-5 border-t-[35px] border-b-[35px] border-r-[60px] border-t-transparent border-b-transparent border-r-[#EFEFEF]"></div>
 
-      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
 
-        {/* Number */}
-        <div className="flex justify-center sm:block">
-          <h1 className="text-6xl sm:text-8xl lg:text-[140px] leading-none font-bold text-[#58D3EC]">
-            {steps[activeStep].number}
-          </h1>
+                {/* Number */}
+                <div className="flex justify-center sm:block">
+                  <h1 className="text-6xl sm:text-8xl lg:text-[140px] leading-none font-bold text-[#58D3EC]">
+                    {steps[activeStep].number}
+                  </h1>
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 pt-0 sm:pt-5 text-center sm:text-left">
+                  <h3 className="text-2xl sm:text-3xl 2xl:text-5xl font-bold text-[#081B57] mb-4 sm:mb-5 leading-tight">
+                    {steps[activeStep].title}
+                  </h3>
+
+                  <ul className="text-[#1f2a50] text-base sm:text-base 2xl:text-xl space-y-2">
+                    {steps[activeStep].points.map((point, i) => (
+                      <li key={i}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        {/* Text */}
-        <div className="flex-1 pt-0 sm:pt-5 text-center sm:text-left">
-          <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#081B57] mb-4 sm:mb-5 leading-tight">
-            {steps[activeStep].title}
-          </h3>
-
-          <ul className="text-[#1f2a50] text-base sm:text-lg lg:text-xl space-y-2">
-            {steps[activeStep].points.map((point, i) => (
-              <li key={i}>• {point}</li>
-            ))}
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
       </div>
     </section>
   );

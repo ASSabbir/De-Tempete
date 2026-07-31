@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import img1 from '../../../asstes/img_temp/New folder/Dubai-Business-set-up.webp'
+import img1 from '../../../asstes/img_temp/New folder/uae.webp'
 import SharedButton from '../../../Components/Shared/SharedButton';
 const BannerUAE = () => {
   return (
@@ -8,7 +8,7 @@ const BannerUAE = () => {
       <img
         src={img1}
         alt="UAE Banner"
-        className="absolute inset-0 w-full h-full object-cover scale-105 animate-[zoom_18s_ease-in-out_infinite_alternate]"
+        className="absolute inset-0 w-full h-full object-cover scale-105 "
       />
 
       {/* Dark Overlay */}
@@ -62,7 +62,7 @@ const BannerUAE = () => {
 
         {/* Button */}
         
-          <SharedButton text={'Start Now'} path={'/contact'}></SharedButton>
+          <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
       </div>
 
       {/* Custom Animation */}

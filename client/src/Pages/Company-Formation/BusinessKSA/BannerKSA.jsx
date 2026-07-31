@@ -1,4 +1,5 @@
 import img1 from '../../../asstes/img_temp/New folder/Business-set-up-in-kSA.webp'
+import SharedButton from '../../../Components/Shared/SharedButton';
 const BannerKSA = () => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-white overflow-hidden pt-24 md:pt-32">
@@ -28,7 +29,7 @@ const BannerKSA = () => {
         </h2>
 
         {/* Categories */}
-        <div className=" space-y-8 mt-8 text-[1vw] font-semibold">
+        <div className=" mb-10 space-y-8 mt-8 text-[1vw] font-semibold">
           <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-7 lg:gap-8'>
             <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
               LIMITED LIABILITY COMPANY (LLC)
@@ -62,14 +63,7 @@ const BannerKSA = () => {
         </div>
 
         {/* Button */}
-        <button className="group mt-10 md:mt-12 border-2 border-white rounded-xl px-8 md:px-10 py-3 md:py-4 text-lg md:text-xl font-semibold transition-all duration-500 hover:bg-light-blue hover:border-light-blue hover:text-black hover:scale-110 hover:shadow-[0_15px_35px_rgba(255,255,255,0.25)] active:scale-95">
-          <span className="flex items-center gap-2">
-            Start Now
-            <span className="transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </span>
-        </button>
+        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
       </div>
 
       {/* Animations */}

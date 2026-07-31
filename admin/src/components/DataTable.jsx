@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-const DataTable = memo(function DataTable({ columns, data, onEdit, onDelete }) {
+const DataTable = memo(function DataTable({ columns, data, onEdit, onDelete, onPublish }) {
   return (
     <div style={{ overflowX: 'auto' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
@@ -32,6 +32,12 @@ const DataTable = memo(function DataTable({ columns, data, onEdit, onDelete }) {
                 </td>
               ))}
               <td style={{ padding: '12px 16px', textAlign: 'right', whiteSpace: 'nowrap' }}>
+                {onPublish && row.status === 'pending' && (
+                  <button onClick={() => onPublish(row._id)}
+                    style={{ marginRight: 8, padding: '6px 14px', background: '#16a34a', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
+                    Publish
+                  </button>
+                )}
                 {onEdit && (
                   <button onClick={() => onEdit(row)}
                     style={{ marginRight: 8, padding: '6px 14px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>

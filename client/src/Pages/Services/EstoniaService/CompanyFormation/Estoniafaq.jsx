@@ -140,7 +140,7 @@ export default function EstoniaFAQ({
             
           </h2>
           
-          <p className="dt-faq-intro text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="dt-faq-intro text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
             Whether you're applying for e-Residency, choosing a structure, or
             opening your first account, here's what founders ask us most
             before registering their Estonian company.
@@ -170,7 +170,7 @@ export default function EstoniaFAQ({
                       <img src={logo} alt="" />
                     </div>
                   </span>
-                  <span className="flex-1 text-lg md:text-xl font-semibold text-slate-900">
+                  <span className="flex-1 text-base md:text-xl font-semibold text-slate-900">
                     {question}
                   </span>
                   <ChevronDown
@@ -183,7 +183,7 @@ export default function EstoniaFAQ({
                   ref={(el) => (contentRefs.current[index] = el)}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 sm:px-7 pb-6 sm:pb-7 pl-[4.5rem] sm:pl-[5.25rem] text-base md:text-lg text-slate-500 leading-relaxed">
+                  <p className="px-6 sm:px-7 pb-6 sm:pb-7 pl-[4.5rem] sm:pl-[5.25rem] text-base md:text-base text-slate-500 leading-relaxed">
                     {answer}
                   </p>
                 </div>

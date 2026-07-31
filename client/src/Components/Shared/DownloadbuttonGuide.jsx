@@ -42,7 +42,7 @@ export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }
     <>
       <button
         onClick={() => setOpen(true)}
-        className="bg-[#081B57] text-white px-10 py-5 rounded-xl text-lg font-medium hover:bg-[#10297c] transition duration-300 shadow-lg"
+        className="bg-[#081B57] mt-10 text-white px-10 py-5 rounded-xl text-base font-medium hover:bg-[#10297c] transition duration-300 shadow-lg"
       >
         {label}
       </button>

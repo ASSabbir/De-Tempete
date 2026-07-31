@@ -1,4 +1,5 @@
-import img1 from '../../../asstes/img_temp/bd-Business-guide-png.webp'
+import img1 from '../../../asstes/img_temp/bd.webp'
+import DownloadButtonGuide from '../../../Components/Shared/DownloadbuttonGuide';
 const BusinessSetupBook = () => {
   return (
     <section className="bg-[#ffffff] pt-24">
@@ -17,15 +18,15 @@ const BusinessSetupBook = () => {
           {/* Right Side - Content */}
           <div className="max-w-xl">
             <h2 className="text-[#14224A] leading-tight">
-              <span className="block text-5xl font-light">
+              <span className="block text-4xl 2xl:text-5xl font-light">
                 The Bangladesh 
               </span>
 
-              <span className="block text-6xl font-bold">
+              <span className="block text-5xl 2xl:text-6xl font-bold">
                 Business Setup
               </span>
 
-              <span className="block text-5xl font-light">
+              <span className="block text-4xl 2xl:text-5xl font-light">
                 Guide 2026
               </span>
             </h2>
@@ -34,7 +35,7 @@ const BusinessSetupBook = () => {
               Your quick guide to starting and growing a business in the Bangladesh.
             </p>
 
-            <div className=" text-[#14224A] text-lg">
+            <div className=" text-[#14224A] text-base">
               <p className="font-bold">
                 The Bangladesh Business Setup Guide 2026
               </p>
@@ -46,9 +47,8 @@ const BusinessSetupBook = () => {
             </div>
 
             {/* Download Button */}
-            <button className="mt-12 bg-[#081B57] text-white px-10 py-5 rounded-xl text-lg font-medium hover:bg-[#10297c] transition duration-300 shadow-lg">
-              Download Now
-            </button>
+            
+            <DownloadButtonGuide guideKey="bd-guide-2026" label="Download Now"></DownloadButtonGuide>
           </div>
 
         </div>

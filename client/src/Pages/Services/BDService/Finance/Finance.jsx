@@ -106,7 +106,7 @@ const Finance = () => {
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Financial Governance,</span>
                 <br />
                 <span className="font-bold">Controls & Investor</span>
@@ -132,7 +132,7 @@ const Finance = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -152,10 +152,10 @@ const Finance = () => {
       <section className="py-24 bg-[#f8fbff]">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-5xl font-bold text-[#13264d] mb-4">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d] mb-4">
               What We Do
             </h2>
-            <p className="text-lg text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-8">
               We provide comprehensive accounting and finance services for
               Bangladeshi businesses, including both standalone and retainer
               engagement models.
@@ -175,7 +175,7 @@ const Finance = () => {
                   <h3 className="text-2xl font-bold text-[#16244b] mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-7">
+                  <p className="text-gray-600 text-base leading-7">
                     {service.description}
                   </p>
                 </div>
@@ -189,7 +189,7 @@ const Finance = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
               Why Choose Our Finance & Accounting Services
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
@@ -242,7 +242,7 @@ const Finance = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
             <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6">

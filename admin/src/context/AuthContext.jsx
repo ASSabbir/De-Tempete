@@ -6,7 +6,8 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
   const [admin, setAdmin] = useState(() => {
     const name = localStorage.getItem('adminName');
-    return name ? { name } : null;
+    const role = localStorage.getItem('adminRole');
+    return name ? { name, role } : null;
   });
 
   const login = useCallback(async (email, password) => {
@@ -14,7 +15,8 @@ export function AuthProvider({ children }) {
     localStorage.setItem('accessToken', data.accessToken);
     localStorage.setItem('refreshToken', data.refreshToken);
     localStorage.setItem('adminName', data.name);
-    setAdmin({ name: data.name });
+    localStorage.setItem('adminRole', data.role);
+    setAdmin({ name: data.name, role: data.role });
   }, []);
 
   const logout = useCallback(() => {

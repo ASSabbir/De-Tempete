@@ -18,16 +18,16 @@ export const ConsultationCTA = ({
             {heading}
           </h2>
            {subheading && (
-            <p className="mt-8 text-light-blue text-lg  2xl:text-xl font-semibold leading-7 max-w-xl">{subheading}</p>
+            <p className="mt-8 text-light-blue text-base  2xl:text-xl font-semibold leading-7 max-w-xl">{subheading}</p>
           )}
           {bodyText && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
-              <p className="text-gray-200 text-lg">{bodyText}</p>
-              {highlightText && <p className="mt-4 text-light-blue font-bold text-lg">{highlightText}</p>}
+              <p className="text-gray-200 text-base">{bodyText}</p>
+              {highlightText && <p className="mt-4 text-light-blue font-bold text-base">{highlightText}</p>}
             </div>
           )}
           {highlightText && !bodyText && (
-            <p className="mt-4 text-light-blue font-bold text-lg">{highlightText}</p>
+            <p className="mt-4 text-light-blue font-bold text-base">{highlightText}</p>
           )}
            {(commitmentItems.length > 0 || commitmentTitleOnly) && (
             <div className="mt-10 bg-[#37456B] rounded-2xl p-8 max-w-xl">
@@ -36,7 +36,7 @@ export const ConsultationCTA = ({
               <div className="space-y-3">
                 {commitmentItems.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-base shrink-0" />
                     <span className="text-gray-200">{item}</span>
                   </div>
                ))}

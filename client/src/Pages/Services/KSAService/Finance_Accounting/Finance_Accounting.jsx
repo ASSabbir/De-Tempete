@@ -357,7 +357,7 @@ const Finance_Accounting = () => {
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4">
                   <img src={logo} alt="" />
                 </div>
-                <h3 className="text-lg font-bold text-[#16244b] mb-3">
+                <h3 className="text-base font-bold text-[#16244b] mb-3">
                   {f.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{f.desc}</p>

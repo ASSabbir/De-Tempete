@@ -355,7 +355,7 @@ const Regulatory_Compliance = () => {
                   <img src={logo} alt="" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {f.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{f.desc}</p>

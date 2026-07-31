@@ -28,7 +28,7 @@ const PageHero = ({
           {titleLine3}
         </h1>
 
-        <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+        <p className="max-w-3xl mx-auto mt-6 text-base md:text-base text-gray-200 leading-relaxed">
           {description}
         </p>
 

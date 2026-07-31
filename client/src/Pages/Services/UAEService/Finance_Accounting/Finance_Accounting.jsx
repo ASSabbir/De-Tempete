@@ -218,7 +218,7 @@ const Finance_Accounting = () => {
                         key={i}
                         className="flex items-start gap-3 text-gray-600 leading-6 text-base"
                       >
-                        <FaCheckCircle className="text-light-blue text-lg mt-0.5 shrink-0" />
+                        <FaCheckCircle className="text-light-blue text-base mt-0.5 shrink-0" />
                         <span>{text}</span>
                       </li>
                     ))}
@@ -252,7 +252,7 @@ const Finance_Accounting = () => {
               return (
                 <div key={index} className="text-center">
                   <Icon className="text-4xl text-slate-500 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -340,7 +340,7 @@ const Finance_Accounting = () => {
                 "Capital structuring & financial governance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -373,7 +373,7 @@ const Finance_Accounting = () => {
                 "Investor-ready valuation reports",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -415,7 +415,7 @@ const Finance_Accounting = () => {
                 "Day-to-day procurement & operational support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -448,7 +448,7 @@ const Finance_Accounting = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuTrendingUp className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -479,7 +479,7 @@ const Finance_Accounting = () => {
               >
                 <LuBriefcase className="text-light-blue text-2xl shrink-0" />
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://api.detempete.uk/api',
+  baseURL: 'http://localhost:5000/api',
   timeout: 10000,
 });
 
@@ -17,11 +17,20 @@ API.interceptors.response.use(
   (res) => res,
   async (err) => {
     const original = err.config;
+
+    // 403 = token is valid but this role can't access this route.
+    // Refreshing won't change that, so don't retry — just force a clean logout.
+    if (err.response?.status === 403) {
+      localStorage.clear();
+      window.location.href = '/login';
+      return Promise.reject(err);
+    }
+
     if (err.response?.status === 401 && !original._retry) {
       original._retry = true;
       if (!refreshing) {
         refreshing = axios
-          .post('https://api.detempete.uk/api/auth/refresh', {
+          .post('http://localhost:5000/api/auth/refresh', {
             refreshToken: localStorage.getItem('refreshToken'),
           })
           .then(({ data }) => {

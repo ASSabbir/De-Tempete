@@ -152,7 +152,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               What Is A <span className="font-bold">Virtual CFO?</span>
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               A Virtual CFO delivers executive-level financial strategy,
               forecasting, and business planning without the expense of hiring
               an in-house Chief Financial Officer.
@@ -169,7 +169,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                 "Build financial systems for sustainable growth",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -284,7 +284,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -312,7 +312,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-lg font-bold text-[#16244b]">
+                  <h3 className="text-base font-bold text-[#16244b]">
                     {item.title}
                   </h3>
                 </div>

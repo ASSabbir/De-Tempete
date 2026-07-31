@@ -158,7 +158,7 @@ const Investment = () => {
                     alt={item.title}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-5 text-white text-lg font-bold">
+                  <h3 className="absolute bottom-4 left-5 text-white text-base font-bold">
                     {item.title}
                   </h3>
                 </div>
@@ -193,7 +193,7 @@ const Investment = () => {
             {bprItems.map((item, index) => (
               <div key={index} className="text-center">
                 <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -222,7 +222,7 @@ const Investment = () => {
             {financeAdvisoryItems.map((item, index) => (
               <div key={index} className="text-center">
                 <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -251,7 +251,7 @@ const Investment = () => {
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

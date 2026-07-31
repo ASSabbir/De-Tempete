@@ -57,11 +57,11 @@ const Tax_Planning_Advisory = () => {
               <span className="font-bold">Corporate Tax Planning</span>
               <br />& Compliance
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Minimise liabilities, stay compliant, and optimise your overall
               tax position.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We design efficient corporate tax strategies tailored to your
               business structure, industry, and long-term goals. From compliance
               and filing to strategic planning and risk reduction, our experts
@@ -111,10 +111,10 @@ const Tax_Planning_Advisory = () => {
               <br />
               (CGT) Advisory
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Keep more of what you earn.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We help you understand your CGT obligations and implement
               strategies to reduce your overall liability. Whether you're
               selling property, shares, or business assets, our advisors ensure
@@ -133,10 +133,10 @@ const Tax_Planning_Advisory = () => {
               <br />
               Tax Planning
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Secure your assets for the next generation.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Our inheritance tax planning ensures your wealth is transferred
               efficiently and tax-effectively. We create structured plans that
               minimise tax exposure, protect your beneficiaries, and align with
@@ -165,10 +165,10 @@ const Tax_Planning_Advisory = () => {
               <br />
               Credit Claims
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Claim what you're eligible for, without complexity.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We help innovative businesses reclaim a portion of their R&D
               expenditure through eligible tax credits. Our team manages the
               full claim process, documentation, technical justification, and
@@ -187,10 +187,10 @@ const Tax_Planning_Advisory = () => {
               <br />
               Support & Dispute Resolution
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Expert support to resolve disputes quickly and compliantly.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Facing an HMRC investigation can be overwhelming. Our specialists
               handle communication, documentation, and negotiations or
               settlement discussions—ensuring your case is managed

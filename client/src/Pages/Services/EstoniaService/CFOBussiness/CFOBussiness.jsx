@@ -269,7 +269,7 @@ const CFOBussiness = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -301,7 +301,7 @@ const CFOBussiness = () => {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-lg font-bold text-[#16244b]">
+                  <h3 className="text-base font-bold text-[#16244b]">
                     {item.title}
                   </h3>
                 </div>

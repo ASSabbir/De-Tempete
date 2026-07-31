@@ -76,7 +76,7 @@ const Taxation_UAE = () => {
                 "Tailored strategies for startups, SMEs, and corporates",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -107,7 +107,7 @@ const Taxation_UAE = () => {
                 "Risk reduction and compliance assurance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -149,7 +149,7 @@ const Taxation_UAE = () => {
                 "Reduce liabilities and avoid regulatory issues",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -185,7 +185,7 @@ const Taxation_UAE = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -213,7 +213,7 @@ const Taxation_UAE = () => {
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

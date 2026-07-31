@@ -1,4 +1,5 @@
 import img1 from '../../../asstes/img_temp/New folder/Business-set-up-in-USA.webp'
+import SharedButton from '../../../Components/Shared/SharedButton';
 const BannerUSA = () => {
   return (
 <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-32 md:pt-40 lg:pt-48 pb-24 md:pb-32">      {/* Background Image */} 
@@ -14,12 +15,12 @@ const BannerUSA = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in USA
         </h1>
 
         {/* Sub Heading */}
-        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-snug">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-light leading-snug">
           Start Your Company with{" "}
           <span className="italic transition-all duration-300 hover:text-light-blue">
             de tempête
@@ -27,7 +28,7 @@ const BannerUSA = () => {
         </h2>
 
         {/* Description */}
-        <p className="max-w-5xl mx-auto mt-6 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-100">
+        <p className="max-w-5xl mx-auto mt-6 text-base sm:text-base md:text-xl 2xl:text-2xl leading-relaxed text-gray-100">
           Launch your business in the United States with structured company
           formation, compliance support, and operational guidance tailored for
           international founders.
@@ -41,7 +42,7 @@ const BannerUSA = () => {
         </p>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 mt-8 text-base sm:text-lg md:text-2xl font-semibold tracking-wider">
+        <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 mt-8 text-base sm:text-base 2xl:text-2xl font-semibold tracking-wider">
           <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
             LLC
           </span>
@@ -60,14 +61,7 @@ const BannerUSA = () => {
         </div>
 
         {/* Button */}
-        <button className="group mt-10 md:mt-12 border-2 border-white rounded-xl px-8 md:px-10 py-3 md:py-4 text-lg md:text-xl font-semibold transition-all duration-500 hover:bg-light-blue hover:border-light-blue hover:text-black hover:scale-110 hover:shadow-[0_15px_35px_rgba(255,255,255,0.25)] active:scale-95">
-          <span className="flex items-center gap-2">
-            Start Now
-            <span className="transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </span>
-        </button>
+        <SharedButton  text={'Start Now →'} path={'/contact'}></SharedButton>
       </div>
 
       {/* Custom Animations */}

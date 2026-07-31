@@ -52,7 +52,7 @@ const Types_of_Company = () => {
             <span className="font-bold">Structures in Bangladesh</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
+          <p className="mt-5 text-gray-600 text-base max-w-4xl mx-auto leading-8">
             Choose the right structure based on your business goals, control
             requirements, and operational scope.
           </p>
@@ -99,11 +99,11 @@ const Types_of_Company = () => {
 
                 {/* Content */}
                 <div className="flex-1 text-center sm:text-left">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 sm:mb-8 leading-tight">
+                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-bold mb-5 sm:mb-8 leading-tight">
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-white text-base sm:text-lg lg:text-xl leading-7 lg:leading-8">
+                  <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-white text-base sm:text-base 2xl:text-xl leading-7 lg:leading-8">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

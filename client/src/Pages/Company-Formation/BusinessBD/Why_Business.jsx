@@ -11,7 +11,7 @@ const Why_Business = () => {
             <span className="font-bold">Business In Bangladesh?</span>
           </h2>
 
-          <p className="mt-8 text-[#39425B] text-lg text-justify">
+          <p className="mt-8 text-[#39425B] text-base text-justify">
             Bangladesh is one of South Asia’s fastest-growing emerging markets,
             offering strong opportunities for entrepreneurs, investors, and
             international businesses across manufacturing, trading, technology,
@@ -32,7 +32,7 @@ const Why_Business = () => {
         {/* Right Cards */}
         <div className="grid grid-cols-2 gap-5">
 
-          <div className="bg-light-blue rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue hover:shadow-2xl duration-300 rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center ">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Large workforce with
               <br />
@@ -40,7 +40,7 @@ const Why_Business = () => {
             </h3>
           </div>
 
-          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-tr-3xl hover:shadow-2xl duration-300 p-10 h-56 flex items-center justify-center text-center ">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Strong growth in
               <br />
@@ -48,7 +48,7 @@ const Why_Business = () => {
             </h3>
           </div>
 
-          <div className="bg-white rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-bl-3xl hover:shadow-2xl duration-300 p-10 h-56 flex items-center justify-center text-center ">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Expanding outsourcing and
               <br />
@@ -56,7 +56,7 @@ const Why_Business = () => {
             </h3>
           </div>
 
-          <div className="bg-light-blue rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-br-3xl hover:shadow-2xl duration-300 p-10 h-56 flex items-center justify-center text-center ">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               Cost-effective operating base
               <br />

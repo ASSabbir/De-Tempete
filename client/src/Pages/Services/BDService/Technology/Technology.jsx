@@ -156,12 +156,12 @@ const Technology = () => {
           {/* Heading */}
 
           <div className="max-w-5xl mx-auto text-center mb-16">
-            <h2 className="text-5xl leading-tight text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b]">
               <span className="font-light">Software Solutions For</span>{" "}
               <span className="font-bold">Businesses</span>
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-4xl mx-auto">
+            <p className="mt-6 text-base leading-8 text-gray-600 max-w-4xl mx-auto">
               We help businesses implement and optimize modern software
               solutions, including cloud accounting platforms, workflow systems,
               and operational tools that improve efficiency and reduce manual
@@ -183,7 +183,7 @@ const Technology = () => {
                   {/* Icon */}
 
                   <div className="mb-8">
-                    <Icon className="text-light-blue text-5xl" />
+                    <Icon className="text-light-blue text-4xl 2xl:text-5xl" />
                   </div>
 
                   {/* Title */}
@@ -194,7 +194,7 @@ const Technology = () => {
 
                   {/* Description */}
 
-                  <p className="text-gray-600 text-lg leading-8">
+                  <p className="text-gray-600 text-base leading-8">
                     {service.description}
                   </p>
                 </div>
@@ -212,13 +212,13 @@ const Technology = () => {
             {/* Left Content */}
 
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] mb-4">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] mb-4">
                 <span className="font-light">Business Process</span>
                 <br />
                 <span className="font-bold">Automation</span>
               </h2>
 
-              <p className="text-lg leading-8 text-gray-600 mb-6 max-w-xl">
+              <p className="text-base leading-8 text-gray-600 mb-6 max-w-xl">
                 We help businesses eliminate repetitive work, automate everyday
                 operations, and improve productivity through intelligent digital
                 workflows and cloud-based business solutions.
@@ -245,7 +245,7 @@ const Technology = () => {
                           {item.title}
                         </h3>
 
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 text-base">
                           {item.description}
                         </p>
                       </div>
@@ -273,7 +273,7 @@ const Technology = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">
               Continuous Support
             </h2>
             <div className="w-30 h-0.5 bg-light-blue rounded-full mx-auto mt-8"></div>
@@ -311,7 +311,7 @@ const Technology = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-6xl text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-6xl text-[#16244b]">
               Why choose our{" "}
               <span className="text-dark-blue font-extrabold">
                 technology services?
@@ -369,29 +369,9 @@ const Technology = () => {
           </div>
         </div>
       </section>
-
-      <ConsultationCTA
-        heading={
-          <>
-            Transform Your Business with
-            <br />
-            <span className="font-bold">Systems Smart Technology</span>
-          </>
-        }
-        commitmentItems={[
-          "Free initial consultation — no obligation",
-          "Tailored digital & technology solutions",
-          "Scalable and automation-ready systems",
-          "Expert support and strategic guidance",
-          "Transparent and efficient process",
-        ]}
-      />
-
-      {/* Technological Partner Section */}
-
       <section className="pt-15 bg-white overflow-hidden">
         <div className=" mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+          <h2 className="text-center text-4xl 2xl:text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>
 
@@ -426,6 +406,27 @@ const Technology = () => {
     `}</style>
         </div>
       </section>
+
+      <ConsultationCTA
+        heading={
+          <>
+            Transform Your Business with
+            <br />
+            <span className="font-bold">Systems Smart Technology</span>
+          </>
+        }
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Tailored digital & technology solutions",
+          "Scalable and automation-ready systems",
+          "Expert support and strategic guidance",
+          "Transparent and efficient process",
+        ]}
+      />
+
+      {/* Technological Partner Section */}
+
+      
     </div>
   );
 };
