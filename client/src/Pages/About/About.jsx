@@ -5,6 +5,7 @@ import TrustedPartner from './TrustedPartner';
 import GrowthPartners from './Growthpartners';
 import LogoMarqueeRows from './Logomarqueerows';
 import SharedButton from '../../Components/Shared/SharedButton';
+import LastSection from './LastSection';
 
 const About = () => {
     return (
@@ -23,6 +24,7 @@ const About = () => {
                 <span className="font-extrabold">Trusted</span> Clients
             </h2>
             <LogoMarqueeRows></LogoMarqueeRows>
+            <LastSection></LastSection>
         </div>
     );
 };

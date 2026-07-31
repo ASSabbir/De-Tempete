@@ -97,6 +97,12 @@ import BlogSingle from "../Pages/Blogs/BlogSingle";
 import PrivacyPolicy from "../Components/Shared/PrivacyPolicy";
 import TermsConditions from "../Components/Shared/TermsConditions";
 import NotFound from "./NotFound";
+import USALibrary from "../Pages/Library/USALibrary";
+import EstoniaLibrary from "../Pages/Library/EstoniaLibrary";
+import USAPublications from "../Pages/Publications/USAPublications";
+import EstoniaPublications from "../Pages/Publications/EstoniaPublications";
+import EstoniaForms from "../Pages/Forms/EstoniaForms";
+import USAForms from "../Pages/Forms/USAForms";
 
 
 const Routes = createBrowserRouter([ 
@@ -196,19 +202,25 @@ const Routes = createBrowserRouter([
       { path: "/library/uae", element: <UAELibrary /> },
       { path: "/library/ksa", element: <KSALibrary /> },
       { path: "/library/uk", element: <UKLibrary /> },
+      { path: "/library/usa", element: <USALibrary></USALibrary> },
       { path: "/library/bangladesh", element: <BDLibrary /> },
+      { path: "/library/estonia", element: <EstoniaLibrary></EstoniaLibrary> },
 
       // ===== PUBLICATIONS =====
       { path: "/publications/uae", element: <UAEPublications /> },
       { path: "/publications/ksa", element: <KSAPublications /> },
       { path: "/publications/uk", element: <UKPublications /> },
       { path: "/publications/bangladesh", element: <BDPublications /> },
+      { path: "/publications/usa", element: <USAPublications></USAPublications>},
+      { path: "/publications/estonia", element: <EstoniaPublications></EstoniaPublications> },
 
       // ===== FORMS =====
       { path: "/forms/uae", element: <UAEForms /> },
       { path: "/forms/ksa", element: <KSAForms /> },
       { path: "/forms/uk", element: <UKForms /> },
       { path: "forms/bangladesh", element: <BDForms /> },
+      { path: "forms/estonia", element: <EstoniaForms></EstoniaForms> },
+      { path: "forms/usa", element: <USAForms></USAForms> },
 
       // ===== NEWS & EVENTS =====
       { path: "/news-events", element: <NewsEventsPage /> },

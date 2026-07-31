@@ -3,6 +3,7 @@ import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
+import RichTextEditor from '../components/RichTextEditor';
 
 const MAX_IMAGES = 5;
 
@@ -39,7 +40,6 @@ const columns = [
 
 const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1d5db', borderRadius: 8, fontSize: 14, boxSizing: 'border-box' };
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
-const textareaStyle = { ...inputStyle, minHeight: 110, resize: 'vertical', fontFamily: 'inherit' };
 
 const TILE_SIZE = 100;
 const tileBase = { width: TILE_SIZE, height: TILE_SIZE, borderRadius: 10, position: 'relative', overflow: 'hidden', flexShrink: 0 };
@@ -137,6 +137,7 @@ export default function NewsEvents() {
     }
     setSaving(true);
     setError('');
+    
     try {
       if (editing) await API.put(`/news-events/${editing}`, form);
       else await API.post('/news-events', form);
@@ -212,7 +213,7 @@ export default function NewsEvents() {
 
       {showModal && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 16 }}>
-          <div style={{ background: '#fff', borderRadius: 12, padding: 32, width: '100%', maxWidth: 600, maxHeight: '90vh', overflowY: 'auto' }}>
+          <div style={{ background: '#fff', borderRadius: 12, padding: 32, width: '100%', maxWidth: 640, maxHeight: '90vh', overflowY: 'auto' }}>
             <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 24, color: '#0f1f3d' }}>
               {editing ? 'Edit' : 'Add'} News / Event
             </h3>
@@ -267,17 +268,32 @@ export default function NewsEvents() {
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Description 1</label>
-              <textarea value={form.description} onChange={e => setForm(p => ({ ...p, description: e.target.value }))} style={textareaStyle} />
+              <RichTextEditor
+                key={`${editing || 'new'}-d1`}
+                value={form.description}
+                onChange={html => setForm(p => ({ ...p, description: html }))}
+                placeholder="Write the first section..."
+              />
             </div>
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Description 2</label>
-              <textarea value={form.description2} onChange={e => setForm(p => ({ ...p, description2: e.target.value }))} style={textareaStyle} />
+              <RichTextEditor
+                key={`${editing || 'new'}-d2`}
+                value={form.description2}
+                onChange={html => setForm(p => ({ ...p, description2: html }))}
+                placeholder="Write the second section..."
+              />
             </div>
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Description 3</label>
-              <textarea value={form.description3} onChange={e => setForm(p => ({ ...p, description3: e.target.value }))} style={textareaStyle} />
+              <RichTextEditor
+                key={`${editing || 'new'}-d3`}
+                value={form.description3}
+                onChange={html => setForm(p => ({ ...p, description3: html }))}
+                placeholder="Write the third section..."
+              />
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>

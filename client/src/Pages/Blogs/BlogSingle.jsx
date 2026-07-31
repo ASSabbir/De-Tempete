@@ -2,36 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import { fetchBlogBySlug, fetchRecentBlogs } from "../../api/blogApi";
 
-// Turns your "blank line = new paragraph, '- ' = bullet" convention
-// into rendered JSX blocks.
-const renderRichText = (text) => {
-  if (!text) return null;
-  const blocks = text.split(/\n\s*\n/);
-
-  return blocks.map((block, i) => {
-    const lines = block.split("\n").filter(Boolean);
-    const isBulletBlock = lines.every((l) => l.trim().startsWith("- "));
-
-    if (isBulletBlock) {
-      return (
-        <ul key={i} className="list-disc pl-6 space-y-2 mb-6">
-          {lines.map((l, j) => (
-            <li key={j} className="text-gray-600 leading-7">
-              {l.trim().replace(/^- /, "")}
-            </li>
-          ))}
-        </ul>
-      );
-    }
-
-    return (
-      <p key={i} className="text-gray-600 leading-8 mb-6">
-        {block.trim()}
-      </p>
-    );
-  });
-};
-
 const BlogSingle = () => {
   const { slug } = useParams();
   const [blog, setBlog] = useState(null);
@@ -132,7 +102,7 @@ const BlogSingle = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-[#16244b] mb-6">
               {blog.title}
             </h2>
-            {renderRichText(blog.description)}
+            <div className="rich-content" dangerouslySetInnerHTML={{ __html: blog.description || '' }} />
           </section>
 
           {blog.title2 && (
@@ -140,7 +110,7 @@ const BlogSingle = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-[#16244b] mb-6">
                 {blog.title2}
               </h2>
-              {renderRichText(blog.description2)}
+              <div className="rich-content" dangerouslySetInnerHTML={{ __html: blog.description2 || '' }} />
             </section>
           )}
 
@@ -210,6 +180,69 @@ const BlogSingle = () => {
           </div>
         </aside>
       </div>
+
+      <style>{`
+        .rich-content { font-size: 16px; color: #4b5563; line-height: 1.8; }
+        .rich-content p { margin: 0 0 20px; }
+        .rich-content h2 { font-size: 22px; font-weight: 700; color: #16244b; margin: 24px 0 12px; }
+        .rich-content h3 { font-size: 19px; font-weight: 700; color: #16244b; margin: 20px 0 10px; }
+
+        /* Custom diamond bullets instead of default browser dots — Tailwind's
+           preflight resets ul/ol to list-style:none app-wide, so we build our own. */
+        .rich-content ul {
+          list-style: none;
+          margin: 0 0 20px;
+          padding: 0;
+        }
+        .rich-content ul li {
+          position: relative;
+          padding-left: 26px;
+          margin-bottom: 10px;
+        }
+        .rich-content ul li::before {
+          content: '';
+          position: absolute;
+          left: 4px;
+          top: 9px;
+          width: 8px;
+          height: 8px;
+          background: #4fd1e8;
+          transform: rotate(45deg);
+          border-radius: 2px;
+        }
+
+        /* Custom numbered badges for ordered lists */
+        .rich-content ol {
+          list-style: none;
+          counter-reset: rc-counter;
+          margin: 0 0 20px;
+          padding: 0;
+        }
+        .rich-content ol li {
+          counter-increment: rc-counter;
+          position: relative;
+          padding-left: 32px;
+          margin-bottom: 10px;
+        }
+        .rich-content ol li::before {
+          content: counter(rc-counter);
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 21px;
+          height: 21px;
+          line-height: 21px;
+          text-align: center;
+          background: #16244b;
+          color: #fff;
+          border-radius: 50%;
+          font-size: 11px;
+          font-weight: 700;
+        }
+
+        .rich-content blockquote { border-left: 3px solid #4fd1e8; margin: 20px 0; padding: 4px 0 4px 18px; color: #6b7280; font-style: italic; }
+        .rich-content strong { font-weight: 700; color: #16244b; }
+      `}</style>
     </div>
   );
 };

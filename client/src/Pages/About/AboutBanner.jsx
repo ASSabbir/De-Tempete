@@ -136,17 +136,7 @@ const AboutBanner = ({ text }) => {
                 <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
                     <div className="w-full border-l-3 pl-5 border-gray-500 lg:w-3/4  flex flex-col gap-5">
 
-                        {/* Subtitle */}
-                        <motion.p
-                            variants={fadeLeft}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            custom={0.15}
-                            className="text-[#1a9fd4] font-semibold text-base sm:text-base leading-snug"
-                        >
-                          // About Us
-                        </motion.p>
+                        
                         {/* Title */}
                         <motion.h1
                             variants={fadeLeft}
@@ -154,7 +144,7 @@ const AboutBanner = ({ text }) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0}
-                            className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white t"
+                            className="text-3xl sm:text-4xl 2xl:text-6xl font-extrabold text-white t"
                         >
                              Your Trusted Partner in Accounting, Compliance & Business Growth
                         </motion.h1>

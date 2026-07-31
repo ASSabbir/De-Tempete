@@ -13,6 +13,7 @@ import img1 from '../../asstes/img_temp/about/datadualtone.webp'
 import img2 from '../../asstes/img_temp/about/email-2dualtone.webp'
 import img3 from '../../asstes/img_temp/about/connectdualtone.webp'
 import img4 from '../../asstes/img_temp/about/successdualtone.webp'
+import SharedFullButton from "../../Components/Shared/SharedFullButton";
 
 const ForwardSection = () => {
   return (
@@ -27,7 +28,7 @@ const ForwardSection = () => {
 
           <div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-10">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-dark-blue mb-10">
               What Drives Us <span className="text-dark-blue">Forward</span>
             </h2>
 
@@ -71,11 +72,11 @@ const ForwardSection = () => {
 
           <div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-8">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-dark-blue mb-8">
               Our Key <span className="font-extrabold">Strength</span>
             </h2>
 
-            <p className="text-gray-600 leading-8">
+            <p className="text-gray-600 mb-10 leading-8">
               At <span className="font-semibold italic">de tempête</span>, we
               understand that every business is unique, and so are its
               financial and operational needs. Our mission is to provide
@@ -84,9 +85,8 @@ const ForwardSection = () => {
               compliance, and business setup.
             </p>
 
-            <button className="mt-10 px-8 py-3 rounded-lg bg-dark-blue text-white hover:bg-light-blue transition-all duration-300">
-              Discover More
-            </button>
+            
+            <SharedFullButton text={'Discover More'} path={'/contact'}></SharedFullButton>
 
           </div>
 
