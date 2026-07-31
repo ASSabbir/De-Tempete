@@ -327,23 +327,23 @@ export default function Nav({ openCalculator }) {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             {scrolled ? (
-              <img src={logo2} className="h-16" alt="logo" />
+              <img src={logo2} className="h-12 2xl:h-14" alt="logo" />
             ) : (
-              <img src={logo1} className="h-14" alt="logo" />
+              <img src={logo1} className="h-12 2xl:h-14" alt="logo" />
             )}
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden text-sm lg:flex items-center gap-1">
             {/* Company Formation Mega Menu */}
             <div
               ref={companyRef}
-              className="relative"
+              className="relative "
               onMouseEnter={() => handleEnter(setCompanyOpen, companyTimeout)}
               onMouseLeave={() => handleLeave(setCompanyOpen, companyTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${companyOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md 2xl:text-lg font-medium transition-colors duration-200 ${textClass} ${companyOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Company Formation
                 <svg
@@ -428,7 +428,7 @@ export default function Nav({ openCalculator }) {
               onMouseLeave={() => handleLeave(setServicesOpen, servicesTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${servicesOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md 2xl:text-lg font-medium transition-colors duration-200 ${textClass} ${servicesOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Services
                 <svg
@@ -482,7 +482,7 @@ export default function Nav({ openCalculator }) {
             {/* About */}
             <Link
               to="/about"
-              className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass}`}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md 2xl:text-lg font-medium transition-colors duration-200 ${textClass}`}
             >
               About
             </Link>
@@ -495,7 +495,7 @@ export default function Nav({ openCalculator }) {
               onMouseLeave={() => handleLeave(setResourceOpen, resourceTimeout)}
             >
               <button
-                className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass} ${resourceOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
+                className={`flex items-center gap-1 px-4 py-2 rounded-md 2xl:text-lg font-medium transition-colors duration-200 ${textClass} ${resourceOpen ? (scrolled ? "bg-gray-100 text-[#0d1e4a]" : "bg-white/10 text-white") : ""}`}
               >
                 Resource
                 <svg
@@ -551,7 +551,7 @@ export default function Nav({ openCalculator }) {
             {/* Contact */}
             <Link
               to="/contact"
-              className={`flex items-center gap-1 px-4 py-2 rounded-md text-base font-medium transition-colors duration-200 ${textClass}`}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md 2xl:text-lg font-medium transition-colors duration-200 ${textClass}`}
             >
               Contact
             </Link>
@@ -560,7 +560,7 @@ export default function Nav({ openCalculator }) {
             <button
             onClick={openCalculator}
               
-              className={`ml-3 px-5 py-2 rounded-lg text-base font-semibold border-2 transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
+              className={`ml-3 px-5 py-2 rounded-lg 2xl:text-lg font-semibold border-[1px] transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
             >
               Cost Calculator
             </button>

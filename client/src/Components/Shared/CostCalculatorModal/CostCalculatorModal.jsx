@@ -8,10 +8,7 @@ import {
   contactFields,
   progressBuckets,
 } from "./countryQuestions";
-import { calculateEstimate } from "./calculateEstimate";
-
-// TODO: point this at your real backend endpoint
-const SUBMISSION_ENDPOINT = "/api/business-setup-calculator/submit";
+import API from "../../../api/axios";
 
 const CostCalculatorModal = ({ isOpen, onClose }) => {
   const [country, setCountry] = useState(null);
@@ -19,7 +16,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
-  const [result, setResult] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
 
   if (!isOpen) return null;
 
@@ -77,41 +74,43 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
     setStepIndex((s) => s - 1);
   };
 
+  // Turns the raw formData into a [{label, value}] list using the actual
+  // question labels the user saw, for a readable email — not just field ids.
+  const buildReadableAnswers = () => {
+    const rows = [];
+    allSteps.forEach((section) => {
+      visibleFields(section.fields).forEach((field) => {
+        const raw = formData[field.id];
+        if (raw === undefined || raw === "" || raw === null) return;
+        const value = Array.isArray(raw) ? raw.join(", ") : String(raw);
+        rows.push({ label: field.label, value });
+      });
+    });
+    return rows;
+  };
+
   const handleSubmit = async () => {
     setSubmitting(true);
     setSubmitError(null);
-    const payload = {
-      country,
-      answers: formData,
-      submittedAt: new Date().toISOString(),
-    };
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800)); // fake network delay
-      console.log("Demo submission payload:", payload); // remove once backend is live
-      setResult(calculateEstimate(country, formData));
+      const countryLabel = countryOptions.find((c) => c.id === country)?.label || country;
+      await API.post("/business-setup-calculator", {
+        country: countryLabel,
+        name: formData.contact_full_name,
+        email: formData.contact_email,
+        phone: formData.contact_phone,
+        answers: formData,
+        readableAnswers: buildReadableAnswers(),
+      });
+      setSubmitted(true);
     } catch (err) {
       setSubmitError(
+        err.response?.data?.message ||
         "We couldn't submit your request right now. Please try again, or contact us directly."
       );
     } finally {
       setSubmitting(false);
     }
-
-    // try {
-    //   const res = await fetch(SUBMISSION_ENDPOINT, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(payload),
-    //   });
-    //   if (!res.ok) throw new Error("Submission failed");
-    //   setResult(calculateEstimate(country, formData));
-    // } catch (err) {
-    //   setSubmitError(
-    //     "We couldn't submit your request right now. Please try again, or contact us directly."
-    //   );
-    // } finally {
-    //   setSubmitting(false);
-    // }
   };
 
   const resetAndClose = () => {
@@ -121,7 +120,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
       setCountry(null);
       setStepIndex(0);
       setFormData({});
-      setResult(null);
+      setSubmitted(false);
       setSubmitError(null);
     }, 200);
   };
@@ -196,6 +195,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
     );
   };
 
+  const isLastStep = stepIndex === allSteps.length;
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
@@ -221,7 +222,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Progress indicator */}
-        {!result && (
+        {!submitted && (
           <div className="px-6 pt-5 pb-2 bg-[#F5F6F8] border-b border-gray-100">
             <div className="flex items-center justify-between">
               {progressBuckets.map((label, i) => (
@@ -250,7 +251,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
         {/* Body */}
         <div className="px-6 py-8 overflow-y-auto flex-1">
           {/* Step 0: Country selection */}
-          {!result && stepIndex === 0 && (
+          {!submitted && stepIndex === 0 && (
             <div>
               <h3 className="text-xl font-bold text-[#16244b] mb-2">
                 Which country would you like to set up your business in?
@@ -278,7 +279,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
           )}
 
           {/* Steps 1..N: question sections */}
-          {!result && stepIndex > 0 && currentSection && (
+          {!submitted && stepIndex > 0 && currentSection && (
             <div>
               <h3 className="text-xl font-bold text-[#16244b] mb-6">
                 {currentSection.title}
@@ -304,75 +305,23 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
             </p>
           )}
 
-          {/* Result screen */}
-          {result && (
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <CheckCircle2 className="text-light-blue" size={32} />
-                <h3 className="text-2xl font-bold text-[#16244b]">
-                  Your Estimated Setup Cost
-                </h3>
-              </div>
-
-              <div className="grid sm:grid-cols-3 gap-4 mb-8">
-                <div className="bg-[#F5F6F8] rounded-xl p-5 text-center">
-                  <p className="text-xs text-gray-500 font-semibold uppercase mb-2">Government Fees</p>
-                  <p className="text-base font-bold text-[#16244b]">{result.govtFees}</p>
-                </div>
-                <div className="bg-[#F5F6F8] rounded-xl p-5 text-center">
-                  <p className="text-xs text-gray-500 font-semibold uppercase mb-2">Professional Fees</p>
-                  <p className="text-base font-bold text-[#16244b]">{result.professionalFees}</p>
-                </div>
-                <div className="bg-[#16244B] rounded-xl p-5 text-center">
-                  <p className="text-xs text-light-blue font-semibold uppercase mb-2">Total Estimate</p>
-                  <p className="text-base font-bold text-white">{result.totalEstimate}</p>
-                </div>
-              </div>
-
-              <p className="text-base text-gray-600 mb-6">
-                <span className="font-semibold text-[#16244b]">Estimated Timeline: </span>
-                {result.timeline}
-              </p>
-
-              {result.servicesIncluded.length > 0 && (
-                <div className="mb-6">
-                  <h4 className="font-semibold text-[#16244b] mb-3">Services Included</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {result.servicesIncluded.map((s) => (
-                      <span key={s} className="px-3 py-1.5 bg-cyan-50 text-light-blue text-xs font-medium rounded-full">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {result.optionalServices.length > 0 && (
-                <div className="mb-6">
-                  <h4 className="font-semibold text-[#16244b] mb-3">Optional Services</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {result.optionalServices.map((s) => (
-                      <span key={s} className="px-3 py-1.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <p className="text-xs text-gray-400 leading-6 mt-8 border-t border-gray-100 pt-6">
-                This estimate is based on the information provided and is intended for
-                preliminary guidance only. Final fees may vary depending on the selected
-                jurisdiction, business activity, ownership structure, government charges,
-                regulatory approvals, office requirements, visa requirements and document
-                review.
+          {/* Thank-you screen */}
+          {submitted && (
+            <div className="flex flex-col items-center text-center py-10">
+              <CheckCircle2 className="text-light-blue mb-5" size={56} />
+              <h3 className="text-2xl font-bold text-[#16244b] mb-3">
+                Thank you!
+              </h3>
+              <p className="text-gray-600 text-base max-w-md">
+                We've received your request. Our team will review your details
+                and reach you shortly.
               </p>
             </div>
           )}
         </div>
 
         {/* Footer / Navigation */}
-        {!result && (
+        {!submitted && (
           <div className="flex items-center justify-between px-6 py-5 border-t border-gray-100">
             <button
               type="button"
@@ -392,8 +341,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                 <>
                   <Loader2 size={18} className="animate-spin" /> Submitting...
                 </>
-              ) : stepIndex === allSteps.length ? (
-                "Get My Estimate"
+              ) : isLastStep ? (
+                "Submit"
               ) : (
                 <>
                   Next <ChevronRight size={18} />
@@ -403,7 +352,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
           </div>
         )}
 
-        {result && (
+        {submitted && (
           <div className="flex items-center justify-end px-6 py-5 border-t border-gray-100">
             <button
               type="button"

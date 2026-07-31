@@ -83,88 +83,177 @@ export default function Users() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d' }}>Users ({admins.length})</h2>
-        <button onClick={() => { setShowCreate(p => !p); setMsg(''); setErrMsg(''); }}
-          style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: 'pointer', fontWeight: 600 }}>
-          {showCreate ? 'Cancel' : '+ Create User'}
-        </button>
-      </div>
+  {/* Header */}
+  <div className="mb-6 flex items-center justify-between">
+    <h2 className="text-3xl font-bold text-slate-900">
+      Users ({admins.length})
+    </h2>
 
-      {showCreate && (
-        <div style={{ background: '#fff', borderRadius: 12, padding: 28, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', maxWidth: 480, marginBottom: 28 }}>
-          <h3 style={{ fontSize: 16, fontWeight: 700, color: '#0f1f3d', marginBottom: 20 }}>Create New User</h3>
+    <button
+      onClick={() => {
+        setShowCreate((p) => !p);
+        setMsg("");
+        setErrMsg("");
+      }}
+      className="rounded-lg bg-slate-900 px-5 py-2.5 font-semibold text-white transition hover:bg-slate-800"
+    >
+      {showCreate ? "Cancel" : "+ Create User"}
+    </button>
+  </div>
 
-          {msg && <div style={{ background: '#f0fdf4', color: '#16a34a', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{msg}</div>}
-          {errMsg && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{errMsg}</div>}
+  {/* Create User Form */}
+  {showCreate && (
+    <div className="mb-7 max-w-lg rounded-xl border border-gray-200 bg-white p-7 shadow-sm">
+      <h3 className="mb-5 text-lg font-bold text-slate-900">
+        Create New User
+      </h3>
 
-          <div style={{ marginBottom: 16 }}>
-            <label style={labelStyle}>Name</label>
-            <input value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} style={inputStyle} />
-          </div>
-          <div style={{ marginBottom: 16 }}>
-            <label style={labelStyle}>Email</label>
-            <input type="email" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} style={inputStyle} />
-          </div>
-          <div style={{ marginBottom: 16 }}>
-            <label style={labelStyle}>Password (min 8 chars)</label>
-            <input type="password" value={form.password} onChange={e => setForm(p => ({ ...p, password: e.target.value }))} style={inputStyle} />
-          </div>
-          <div style={{ marginBottom: 20 }}>
-            <label style={labelStyle}>Role</label>
-            <select value={form.role} onChange={e => setForm(p => ({ ...p, role: e.target.value }))}
-              style={{ ...inputStyle, cursor: 'pointer' }}>
-              {roles.filter(r => r !== 'superadmin').map(r => (
-                <option key={r} value={r}>{roleLabels[r] || r}</option>
-              ))}
-            </select>
-          </div>
-
-          <button onClick={handleCreate} disabled={creating}
-            style={{ padding: '10px 24px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: creating ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: creating ? 0.7 : 1 }}>
-            {creating ? 'Creating...' : 'Create User'}
-          </button>
+      {msg && (
+        <div className="mb-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-600">
+          {msg}
         </div>
       )}
 
-      <div style={{ background: '#fff', borderRadius: 12, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
-        {loading ? (
-          <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
-        ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
-            <thead>
-              <tr style={{ background: '#f8fafc', borderBottom: '2px solid #e2e8f0' }}>
-                <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 600, color: '#374151' }}>Name</th>
-                <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 600, color: '#374151' }}>Email</th>
-                <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 600, color: '#374151' }}>Role</th>
-                <th style={{ padding: '12px 16px', textAlign: 'right', fontWeight: 600, color: '#374151' }}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {admins.map((a) => (
-                <tr key={a._id} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                  <td style={{ padding: '12px 16px', color: '#4b5563' }}>{a.name}</td>
-                  <td style={{ padding: '12px 16px', color: '#4b5563' }}>{a.email}</td>
-                  <td style={{ padding: '12px 16px' }}>
-                    <span style={{
-                      padding: '3px 10px', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#fff',
-                      background: roleBadgeColor[a.role] || '#6b7280',
-                    }}>
-                      {roleLabels[a.role] || a.role}
-                    </span>
-                  </td>
-                  <td style={{ padding: '12px 16px', textAlign: 'right' }}>
-                    <button onClick={() => handleDelete(a._id)}
-                      style={{ padding: '6px 14px', background: '#dc2626', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', fontSize: 13 }}>
-                      Remove
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+      {errMsg && (
+        <div className="mb-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
+          {errMsg}
+        </div>
+      )}
+
+      <div className="mb-4">
+        <label className={labelStyle}>Name</label>
+        <input
+          value={form.name}
+          onChange={(e) =>
+            setForm((p) => ({ ...p, name: e.target.value }))
+          }
+          className={inputStyle}
+        />
       </div>
+
+      <div className="mb-4">
+        <label className={labelStyle}>Email</label>
+        <input
+          type="email"
+          value={form.email}
+          onChange={(e) =>
+            setForm((p) => ({ ...p, email: e.target.value }))
+          }
+          className={inputStyle}
+        />
+      </div>
+
+      <div className="mb-4">
+        <label className={labelStyle}>Password (min 8 chars)</label>
+        <input
+          type="password"
+          value={form.password}
+          onChange={(e) =>
+            setForm((p) => ({ ...p, password: e.target.value }))
+          }
+          className={inputStyle}
+        />
+      </div>
+
+      <div className="mb-5">
+        <label className={labelStyle}>Role</label>
+        <select
+          value={form.role}
+          onChange={(e) =>
+            setForm((p) => ({ ...p, role: e.target.value }))
+          }
+          className={inputStyle}
+        >
+          {roles
+            .filter((r) => r !== "superadmin")
+            .map((r) => (
+              <option key={r} value={r}>
+                {roleLabels[r] || r}
+              </option>
+            ))}
+        </select>
+      </div>
+
+      <button
+        onClick={handleCreate}
+        disabled={creating}
+        className={`rounded-lg px-6 py-2.5 font-semibold text-white transition ${
+          creating
+            ? "cursor-not-allowed bg-slate-400"
+            : "bg-slate-900 hover:bg-slate-800"
+        }`}
+      >
+        {creating ? "Creating..." : "Create User"}
+      </button>
     </div>
+  )}
+
+  {/* Table */}
+  <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+    {loading ? (
+      <div className="py-16 text-center text-gray-400">
+        Loading...
+      </div>
+    ) : (
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
+          <thead className="border-b-2 border-gray-200 bg-gray-50">
+            <tr>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Name
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Email
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Role
+              </th>
+              <th className="px-4 py-3 text-right font-semibold text-gray-700">
+                Actions
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {admins.map((a) => (
+              <tr
+                key={a._id}
+                className="border-b border-gray-100 hover:bg-gray-50"
+              >
+                <td className="px-4 py-3 text-gray-600">
+                  {a.name}
+                </td>
+
+                <td className="px-4 py-3 text-gray-600">
+                  {a.email}
+                </td>
+
+                <td className="px-4 py-3">
+                  <span
+                    className="rounded-full px-3 py-1 text-xs font-semibold text-white"
+                    style={{
+                      background: roleBadgeColor[a.role] || "#34cf23",
+                    }}
+                  >
+                    {roleLabels[a.role] || a.role}
+                  </span>
+                </td>
+
+                <td className="px-4 py-3 text-right">
+                  <button
+                    onClick={() => handleDelete(a._id)}
+                    className="rounded-md bg-red-600 px-4 py-1.5 text-sm text-white transition hover:bg-red-700"
+                  >
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </div>
+</div>
   );
 }

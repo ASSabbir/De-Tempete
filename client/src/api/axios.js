@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://api.detempete.uk/api',
+  baseURL: 'http://localhost:5000/api',
   timeout: 10000,
 });
 
-// https://api.detempete.uk/api
+// http://localhost:5000/api
+
 
 export default API;

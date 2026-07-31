@@ -1,9 +1,10 @@
-
 import heroVideo from '../../asstes/video/Hero-video.mp4'
 import { useState, useEffect, useRef } from "react";
 import SharedFullButton from '../../Components/Shared/SharedFullButton';
 import { gsap } from "gsap";
 import { Link } from "react-router";
+import API from '../../api/axios';
+
 const slides = [
   {
     title: "Fast & Secure ID Verification",
@@ -45,18 +46,17 @@ const services = [
 
 const INTERVAL = 3000;
 
-
+const EMPTY_FORM = { name: "", email: "", phone: "", company: "", designation: "", service: "" };
 
 const Banner = () => {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
   const slideRef = useRef(null);
 
-  const [formData, setFormData] = useState({
-    name: "", email: "", phone: "", company: "", designation: "", service: "",
-  });
-
-
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     startInterval();
@@ -111,9 +111,23 @@ const Banner = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    if (!formData.name || !formData.email || !formData.phone) {
+      setError("Name, email and phone are required");
+      return;
+    }
+    setSubmitting(true);
+    setError("");
+    try {
+      await API.post('/contact', { ...formData, source: 'Homepage Hero — Free Consultation' });
+      setSubmitted(true);
+      setFormData(EMPTY_FORM);
+    } catch (err) {
+      setError(err.response?.data?.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -163,62 +177,82 @@ const Banner = () => {
                 Free Consultation
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
-                {[
-                  { name: "name", placeholder: "Name", type: "text" },
-                  { name: "email", placeholder: "Email", type: "email" },
-                  { name: "phone", placeholder: "Phone", type: "tel" },
-                  { name: "company", placeholder: "Company", type: "text" },
-                  { name: "designation", placeholder: "Designation", type: "text" },
-                ].map((field) => (
-                  <input
-                    key={field.name}
-                    type={field.type}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    value={formData[field.name]}
-                    onChange={handleChange}
-                    required={["name", "email", "phone"].includes(field.name)}
-                    className="w-full px-4 py-3 rounded-lg  text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200"
-                    style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
-                  />
-                ))}
-
-                {/* Service dropdown */}
-                <div className="relative">
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-[1vw] focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
-                    style={{
-                      background: "rgba(255,255,255,0.08)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                      color: formData.service ? "white" : "rgba(255,255,255,0.5)",
-                    }}
+              {submitted ? (
+                <div className="text-center py-8">
+                  <p className="text-white font-semibold text-lg mb-2">Thank you!</p>
+                  <p className="text-white/70 text-sm">We've received your request and will be in touch shortly.</p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-6 text-[#1a9fd4] font-semibold text-sm underline"
                   >
-                    <option value="" disabled style={{ background: "#0d1e4a", color: "white" }}>
-                      What Services Are You Looking?
-                    </option>
-                    {services.map((s) => (
-                      <option key={s} value={s} style={{ background: "#0d1e4a", color: "white" }}>
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                    Submit another request
+                  </button>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  {error && (
+                    <div className="text-red-300 bg-red-500/10 border border-red-400/30 rounded-lg px-4 py-2 text-sm">
+                      {error}
+                    </div>
+                  )}
 
-                <button
-                  type="submit"
-                  className="w-full py-2 xl:py-3.5 rounded-lg  font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110"
-                  style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
-                >
-                  Request Callback Now
-                </button>
-              </form>
+                  {[
+                    { name: "name", placeholder: "Name", type: "text" },
+                    { name: "email", placeholder: "Email", type: "email" },
+                    { name: "phone", placeholder: "Phone", type: "tel" },
+                    { name: "company", placeholder: "Company", type: "text" },
+                    { name: "designation", placeholder: "Designation", type: "text" },
+                  ].map((field) => (
+                    <input
+                      key={field.name}
+                      type={field.type}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      value={formData[field.name]}
+                      onChange={handleChange}
+                      required={["name", "email", "phone"].includes(field.name)}
+                      className="w-full px-4 py-3 rounded-lg  text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200"
+                      style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
+                    />
+                  ))}
+
+                  {/* Service dropdown */}
+                  <div className="relative">
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg text-[1vw] focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
+                      style={{
+                        background: "rgba(255,255,255,0.08)",
+                        border: "1px solid rgba(255,255,255,0.1)",
+                        color: formData.service ? "white" : "rgba(255,255,255,0.5)",
+                      }}
+                    >
+                      <option value="" disabled style={{ background: "#0d1e4a", color: "white" }}>
+                        What Services Are You Looking?
+                      </option>
+                      {services.map((s) => (
+                        <option key={s} value={s} style={{ background: "#0d1e4a", color: "white" }}>
+                          {s}
+                        </option>
+                      ))}
+                    </select>
+                    <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-2 xl:py-3.5 rounded-lg  font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed"
+                    style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
+                  >
+                    {submitting ? 'Sending...' : 'Request Callback Now'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 

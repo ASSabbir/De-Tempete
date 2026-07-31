@@ -64,7 +64,7 @@ const Home = () => {
             </div>
             <FAQ></FAQ>
             <EventBlogPartners></EventBlogPartners>
-            <RecentBlogs blogs={blogPosts} />
+            {/* <RecentBlogs blogs={blogPosts} /> */}
 
 
         </div>
