@@ -225,7 +225,7 @@ Matters Section */}
             </div>
             {/* Content */}
             <div>
-              <h2 className="text-5xl text-[#16244b] font-light">
+              <h2 className="text-4xl 2xl:text-5xl text-[#16244b] font-light">
                 <span className="font-bold">Why Compliance</span>
                 <br />
                 Matters
@@ -246,7 +246,7 @@ Matters Section */}
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -261,11 +261,11 @@ Matters Section */}
           {/* Heading */}
 
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-[#13264d]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
               Regulatory Compliance Services
             </h2>
 
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-base text-gray-600 leading-8">
               We provide end-to-end support for all regulatory requirements in
               Bangladesh, tailored to your industry and business model.
             </p>
@@ -330,14 +330,14 @@ Matters Section */}
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg mb-10">
+            <p className="text-gray-500 text-base mb-10">
               Stay ahead of changes impacting business operations in Bangladesh
               — from tax law updates to labour regulations and environmental
               requirements.
             </p>
 
             
-            <SharedFullButton text={'Legal & Regulatory Updates'}></SharedFullButton>
+            <SharedFullButton text={'Legal & Regulatory Updates'} path={'/library/bangladesh'}></SharedFullButton>
           </div>
         </div>
       </section>
@@ -349,14 +349,14 @@ Matters Section */}
           {/* Heading */}
 
           <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-5xl  leading-tight text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl  leading-tight text-[#16244b]">
               <span className="font-bold">ISO Certification</span>{" "}
               <span className="font-light">& Quality</span>
               <br />
               <span className="font-light">Standards</span>
             </h2>
 
-            <p className="mt-8 text-lg text-gray-500 leading-8">
+            <p className="mt-8 text-base text-gray-500 leading-8">
               Achieving ISO certification builds trust with your partners,
               clients, and stakeholders. We assist you with every stage of
               implementation, documentation, and certification.
@@ -390,7 +390,7 @@ Matters Section */}
                       <div key={idx} className="flex items-start gap-4">
                         <FaCheckCircle className="text-light-blue text-xl mt-1 shrink-0" />
 
-                        <p className="text-gray-600 text-lg leading-7">
+                        <p className="text-gray-600 text-base leading-7">
                           {item}
                         </p>
                       </div>
@@ -410,7 +410,7 @@ Matters Section */}
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               How We Work
             </h2>
-            <p className="text-gray-600 text-lg font-semibold">
+            <p className="text-gray-600 text-base font-semibold">
               We breakdown compliance into practical, manageable steps
             </p>
           </div>
@@ -458,7 +458,7 @@ Matters Section */}
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
@@ -489,7 +489,7 @@ Matters Section */}
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
               Why Choose Our Regulatory & ISO compliance Services
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>

@@ -49,10 +49,10 @@ const TaxPlanningUSA = () => {
               <span className="font-bold">Federal Tax Preparation</span>
               <br />(LLC / C-Corp)
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Accurate federal filings built around your entity structure.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We prepare and coordinate federal tax filings tailored to your
               business structure, whether you operate as an LLC or C-Corp.
               From entity-specific deductions to filing deadlines, our team
@@ -103,10 +103,10 @@ const TaxPlanningUSA = () => {
               <br />
               Registration & Filing
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Stay ahead of sales tax obligations in every state you sell into.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We help you understand where you need to register for sales
               tax and manage the full filing process from there. Whether
               you're selling physical goods, digital products, or services,
@@ -126,10 +126,10 @@ const TaxPlanningUSA = () => {
               <br />
               Reporting Support
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Accurate contractor reporting, filed on time.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Our 1099 reporting support ensures every contractor and
               vendor payment is tracked, categorized, and reported correctly
               to the IRS. We manage form preparation, recipient distribution,
@@ -159,10 +159,10 @@ const TaxPlanningUSA = () => {
               <br />
               & Advisory
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Plan ahead, not just at filing time.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We work with you throughout the year, not just at tax season,
               to build a proactive tax strategy for your business. From
               estimated payment planning to entity structure reviews and

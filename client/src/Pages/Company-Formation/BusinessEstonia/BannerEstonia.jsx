@@ -17,14 +17,14 @@ const BannerEstonia = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-4xl sm:text-5xl md:text-5xl 2xl:text-7xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in Estonia
         </h1>
 
         {/* Sub Heading */}
         <h2 className="mt-4 text-2xl sm:text-3xl font-light leading-snug">
           Start Your Company with{" "}
-          <span className="italic transition-all duration-300 text-light-blue">
+          <span className="italic transition-all font-bold duration-300 text-light-blue">
             de tempête
           </span>
         </h2>
@@ -32,11 +32,11 @@ const BannerEstonia = () => {
         
 
         {/* Categories */}
-        <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 lg:gap-10 mt-8 text-base sm:text-lg md:text-2xl font-semibold tracking-wider">
+        <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 lg:gap-10 mt-8 text-base sm:text-base md:text-2xl font-semibold tracking-wider">
           
           
         </div>
-        <SharedButton text={'Start Now'} path={'/contact'}></SharedButton>
+        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
 
         
       </div>

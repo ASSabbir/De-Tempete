@@ -116,11 +116,11 @@ const Hr_Payroll = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-5xl font-bold text-[#13264d] mb-4">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d] mb-4">
               What We Offer
             </h2>
 
-            <p className="text-lg text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-8">
               Managing employees, payroll, and compliance in Bangladesh can be
               challenging without the right expertise.{" "}
               <strong><i>de tempête</i></strong> offers{" "}
@@ -147,7 +147,7 @@ const Hr_Payroll = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 text-lg leading-7">
+                  <p className="text-gray-600 text-base leading-7">
                     {service.description}
                   </p>
                 </div>
@@ -162,7 +162,7 @@ const Hr_Payroll = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
             <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
@@ -191,7 +191,7 @@ const Hr_Payroll = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
               Why Choose Our HR & Payroll
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>

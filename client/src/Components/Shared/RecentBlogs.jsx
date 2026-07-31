@@ -5,7 +5,7 @@ export const RecentBlogs = ({ blogs }) => (
   <section className="py-24 bg-white">
     <div className="max-w-[1600px] mx-auto px-6">
       <div className="text-center mb-20">
-        <h2 className="text-5xl md:text-6xl font-light text-[#16244b]">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#16244b]">
           Recent <span className="font-bold">Blogs</span>
         </h2>
       </div>
@@ -17,7 +17,7 @@ export const RecentBlogs = ({ blogs }) => (
             </div>
             <div className="p-7">
               <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-4 group-hover:text-light-blue transition">{blog.title}</h3>
-              <p className="text-gray-500 text-lg leading-8 mb-8">{blog.desc}</p>
+              <p className="text-gray-500 text-base leading-8 mb-8">{blog.desc}</p>
                <a href={`/blog/${blog.slug}`} className="inline-flex items-center gap-2 text-light-blue font-semibold hover:gap-4 duration-300">
                 Read More <FaArrowRight />
               </a>

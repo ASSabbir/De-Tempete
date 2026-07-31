@@ -11,8 +11,10 @@ const publicationSchema = new mongoose.Schema({
     default: 'UAE',
   },
   isActive: { type: Boolean, default: true },
+  status: { type: String, enum: ['pending', 'published'], default: 'pending' },
 }, { timestamps: true });
 
 publicationSchema.index({ region: 1, isActive: 1 });
+publicationSchema.index({ status: 1 });
 
 module.exports = mongoose.model('Publication', publicationSchema);

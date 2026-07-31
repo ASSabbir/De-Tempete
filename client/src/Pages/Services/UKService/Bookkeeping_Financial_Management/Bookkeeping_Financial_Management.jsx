@@ -18,6 +18,7 @@ const whyChoose = [
 import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img2 from '../../../../asstes/img_temp/New folder/Bookkeeping-for-Nonprofits.webp'
 import img3 from '../../../../asstes/img_temp/New folder/Reconcile Accounts.webp'
+import img4 from '../../../../asstes/img_temp/New folder/Management Accounts Preparation.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const Bookkeeping_Financial_Management = () => {
@@ -52,11 +53,11 @@ const Bookkeeping_Financial_Management = () => {
               <br />
               Bookkeeping
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Keep your financial records up-to-date with precision and
               consistency.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Our monthly and quarterly bookkeeping services ensure that every
               transaction, invoice, and expense is recorded accurately. From
               tracking income and expenses to categorizing accounts and
@@ -70,7 +71,7 @@ const Bookkeeping_Financial_Management = () => {
               {["Monthly Bookkeeping", "Quarterly Bookkeeping"].map(
                 (item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                    <FaCheckCircle className="text-light-blue text-base shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </div>
                 ),
@@ -88,10 +89,10 @@ const Bookkeeping_Financial_Management = () => {
               <span className="font-bold">Reconcile Accounts</span> Without
               Stress
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Ensure your bank statements and books always match.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Bank reconciliation identifies discrepancies between your bank
               statements and internal records, preventing errors and fraud. Our
               team reviews every transaction, resolves inconsistencies, and
@@ -107,7 +108,7 @@ const Bookkeeping_Financial_Management = () => {
                 "Detailed Reporting",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -127,7 +128,7 @@ const Bookkeeping_Financial_Management = () => {
           <h2 className="text-4xl font-light text-[#16244b]">
             <span className="font-bold">Cash Flow Forecasting</span> & Budgeting
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-500">
+          <p className="mt-6 text-base leading-8 text-gray-500">
             <span className="font-semibold">
               Predict cash inflows and outflows to make smarter financial
               decisions.
@@ -145,7 +146,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
-            src="/src/asstes/img_temp/New folder/Management Accounts Preparation.webp"
+            src={img4}
             alt="Management Accounts"
             className="w-full h-full object-cover rounded-3xl shadow-lg"
           />
@@ -155,10 +156,10 @@ const Bookkeeping_Financial_Management = () => {
               <br />
               Preparation
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Turn data into actionable insights with management accounts.
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               Management accounts provide a clear snapshot of your business
               performance. We prepare accurate reports, including profit & loss
               statements, balance sheets, and KPI analysis—enabling you to make
@@ -174,7 +175,7 @@ const Bookkeeping_Financial_Management = () => {
                 "Key Metrics & Insights",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}

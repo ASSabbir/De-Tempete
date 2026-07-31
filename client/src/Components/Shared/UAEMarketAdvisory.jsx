@@ -44,7 +44,7 @@ const UAEMarketAdvisory = () => {
               <div className="flex gap-4">
                 <BarChart3 className="w-8 h-8 text-light-blue shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  <h3 className="text-base font-bold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-base">{feature.description}</p>

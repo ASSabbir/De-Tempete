@@ -93,7 +93,7 @@ const Taxation = () => {
             </span>
           </>
         }
-        description="de tempête provides taxation and compliance support services in Bangladesh, helping businesses manage tax obligations, maintain accurate financial records, and reduce regulatory risks through structured tax solutions."
+        description={<><span className="font-bold italic">de tempête</span> provides taxation and compliance support services in Bangladesh, helping businesses manage tax obligations, maintain accurate financial records, and reduce regulatory risks through structured tax solutions.</>}
         ctaText="Request Consultation"
       />
 
@@ -103,11 +103,11 @@ const Taxation = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Heading */}
           <div className="text-center max-w-4xl mx-auto mb-24">
-            <h2 className="text-5xl font-bold text-[#16244b] mb-6">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b] mb-6">
               Our Taxation Services In Bangladesh
             </h2>
-            <p className="text-lg text-gray-600 leading-8 mb-4">
-              de tempête delivers reliable and compliant taxation services in
+            <p className="text-base text-gray-600 leading-8 mb-4">
+              <span className="italic font-bold">de tempête</span> delivers reliable and compliant taxation services in
               Bangladesh, helping businesses navigate the country's evolving tax
               framework with confidence. Our approach is aligned with the
               regulations of the National Board of Revenue (NBR), ensuring
@@ -116,11 +116,11 @@ const Taxation = () => {
               compliance and reporting, we support businesses in maintaining
               structured, audit-ready financial records.
             </p>
-            <p className="text-lg text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-8">
               We help reduce tax-related risks, improve reporting accuracy, and
               streamline tax processes so your operations remain smooth and
               fully compliant. With a focus on clarity, efficiency, and
-              long-term financial stability, de tempête ensures your business
+              long-term financial stability, <span className="italic font-bold">de tempête</span> ensures your business
               stays aligned with Bangladesh's regulatory requirements while
               supporting sustainable growth.
             </p>
@@ -146,10 +146,10 @@ const Taxation = () => {
 
                   {/* Content */}
                   <div>
-                    <h3 className="text-4xl font-bold text-[#16244b]">
+                    <h3 className="text-4xl mb-3 font-bold text-[#16244b]">
                       {service.title}
                     </h3>
-                    <p className="text-lg text-gray-600 mb-8">
+                    <p className="text-base text-gray-600 mb-8">
                       {service.description}
                     </p>
                     <div className="space-y-1">
@@ -158,8 +158,8 @@ const Taxation = () => {
                           key={itemIndex}
                           className="flex items-center gap-3"
                         >
-                          <FaCheckCircle className="text-light-blue text-lg shrink-0" />
-                          <span className="text-gray-600 text-lg">{item}</span>
+                          <FaCheckCircle className="text-light-blue text-base shrink-0" />
+                          <span className="text-gray-600 text-base">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -181,13 +181,41 @@ const Taxation = () => {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Our Services Section */}
-      <section className="pb-24 bg-white">
+      {/* What You Gain Section */}
+      <section className="bg-[#16244B] py-24">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
+            <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
+            {benefitsData.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="text-white text-3xl" />
+                </div>
+
+                <h3 className="text-xl font-semibold text-white leading-snug">
+                  {benefit.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Services Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-20">
+            <h2 className="text-4xl 2xl:text-5xl text-[#16244b]">
               Why Choose Our{" "}
               <span className="text-light-blue font-extrabold">Taxation</span>{" "}
               Service?
@@ -246,34 +274,7 @@ const Taxation = () => {
         </div>
       </section>
 
-      {/* What You Gain Section */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
-            <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
-            {benefitsData.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
-                </div>
-
-                <h3 className="text-xl font-semibold text-white leading-snug">
-                  {benefit.title}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <ConsultationCTA
         heading={

@@ -117,7 +117,7 @@ const HRPayrollUSA = () => {
                 "Reduce errors and operational burden",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ const HRPayrollUSA = () => {
                 "Consistent, compliant payroll no matter where you hire",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -192,7 +192,7 @@ const HRPayrollUSA = () => {
                 "Avoid legal risks and compliance penalties",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -224,7 +224,7 @@ const HRPayrollUSA = () => {
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>

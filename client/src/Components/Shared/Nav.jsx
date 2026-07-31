@@ -29,14 +29,36 @@ const services = {
       label: "Market Expansion & Setup Advisory",
       path: "/services/uae/market-expansion",
     },
-    { label: "Regulatory & ISO Compliance", path: "/services/uae/regulatory" },
-    { label: "Finance & Accounting", path: "/services/uae/finance" },
-    { label: "Taxation", path: "/services/uae/taxation" },
-    { label: "HR & Payroll Solutions", path: "/services/uae/hr-payroll" },
-    { label: "Branding & Growth", path: "/services/uae/branding" },
-    { label: "E-Invoicing", path: "/services/uae/e-invoicing" },
-    { label: "Investment", path: "/services/uae/investment" },
+    {
+      label: "Regulatory & ISO Compliance",
+      path: "/services/uae/regulatory",
+    },
+    {
+      label: "Finance & Accounting",
+      path: "/services/uae/finance",
+    },
+    {
+      label: "Tax Planning & Advisory",
+      path: "/services/uae/taxation",
+    },
+    {
+      label: "HR & Payroll Solutions",
+      path: "/services/uae/hr-payroll",
+    },
+    {
+      label: "Branding & Growth",
+      path: "/services/uae/branding",
+    },
+    {
+      label: "E-Invoicing",
+      path: "/services/uae/e-invoicing",
+    },
+    {
+      label: "Investment & Partnership Facilitation",
+      path: "/services/uae/investment",
+    },
   ],
+
   UK: [
     {
       label: "Market Expansion & Setup Advisory",
@@ -50,127 +72,173 @@ const services = {
       label: "Bookkeeping & Financial Management",
       path: "/services/uk/bookkeeping",
     },
-    { label: "Tax Planning & Advisory", path: "/services/uk/tax-planning" },
-    { label: "Business Advisory", path: "/services/uk/business-advisory" },
+    {
+      label: "Tax Planning & Advisory",
+      path: "/services/uk/tax-planning",
+    },
+    {
+      label: "Business Advisory",
+      path: "/services/uk/business-advisory",
+    },
     {
       label: "Virtual CFO & Outsourced Accounting",
       path: "/services/uk/virtual-cfo",
     },
-    { label: "Making Tax Digital (MTD)", path: "/services/uk/mtd" },
+    {
+      label: "Making Tax Digital (MTD)",
+      path: "/services/uk/mtd",
+    },
     {
       label: "Industry-Specific Accounting Solutions",
       path: "/services/uk/industry",
     },
   ],
+
   Bangladesh: [
     {
       label: "Market Expansion & Setup Advisory",
       path: "/services/bd/market-expansion",
     },
-    { label: "Regulatory & ISO Compliance", path: "/services/bd/regulatory" },
-    { label: "Finance & Accounting", path: "/services/bd/finance" },
-    { label: "Taxation", path: "/services/bd/taxation" },
-    { label: "HR & Payroll Solutions", path: "/services/bd/hr-payroll" },
+    {
+      label: "Regulatory & ISO Compliance",
+      path: "/services/bd/regulatory",
+    },
+    {
+      label: "Finance & Accounting",
+      path: "/services/bd/finance",
+    },
+    {
+      label: "Tax Planning & Advisory",
+      path: "/services/bd/taxation",
+    },
+    {
+      label: "HR & Payroll Solutions",
+      path: "/services/bd/hr-payroll",
+    },
     {
       label: "Training, Mentorship & Capacity Building",
       path: "/services/bd/training",
     },
     {
+      label: "Technology and Automation",
+      path: "/services/bd/technology",
+    },
+    {
       label: "Investment & Partnership Facilitation",
       path: "/services/bd/investment",
     },
-    { label: "Technology and Automation", path: "/services/bd/technology" },
   ],
+
   KSA: [
     {
       label: "Market Expansion & Setup Advisory",
       path: "/services/ksa/market-expansion",
     },
-    { label: "Regulatory & ISO Compliance", path: "/services/ksa/regulatory" },
-    { label: "Finance & Accounting", path: "/services/ksa/finance" },
-    { label: "Taxation", path: "/services/ksa/taxation" },
-    { label: "HR & Payroll Solutions", path: "/services/ksa/hr-payroll" },
-    { label: "Branding & Growth", path: "/services/ksa/branding" },
     {
-      label: "Automation and Digital Transformation",
-      path: "/services/ksa/automation",
+      label: "Regulatory & ISO Compliance",
+      path: "/services/ksa/regulatory",
     },
-    { label: "Investment", path: "/services/ksa/investment" },
+    {
+      label: "Finance & Accounting",
+      path: "/services/ksa/finance",
+    },
+    {
+      label: "Tax Planning & Advisory",
+      path: "/services/ksa/taxation",
+    },
+    {
+      label: "HR & Payroll Solutions",
+      path: "/services/ksa/hr-payroll",
+    },
+    {
+      label: "Training, Mentorship & Capacity Building",
+      path: "/services/ksa/training",
+    },
+    {
+      label: "Technology and Automation",
+      path: "/services/ksa/technology",
+    },
+    {
+      label: "Investment & Partnership Facilitation",
+      path: "/services/ksa/investment",
+    },
   ],
+
   USA: [
-  {
-    label: "Market Expansion & Setup Advisory",
-    path: "/services/usa/market-expansion",
-  },
-  {
-    label: "Compliance & Regulatory Services",
-    path: "/services/usa/compliance",
-  },
-  {
-    label: "Finance & Accounting",
-    path: "/services/usa/finance-accounting",
-  },
-  {
-    label: "Tax Planning & Advisory",
-    path: "/services/usa/tax-planning",
-  },
-  {
-    label: "Business Advisory & Strategy",
-    path: "/services/usa/business-advisory",
-  },
-  {
-    label: "HR & Payroll Solutions",
-    path: "/services/usa/hr-payroll",
-  },
-  {
-    label: "Technology",
-    path: "/services/usa/technology",
-  },
-  {
-    label: "Industry-Specific Accounting Solutions",
-    path: "/services/usa/industry-accounting",
-  },
-],
+    {
+      label: "Market Expansion & Setup Advisory",
+      path: "/services/usa/market-expansion",
+    },
+    {
+      label: "Compliance & Regulatory Services",
+      path: "/services/usa/compliance",
+    },
+    {
+      label: "Finance & Accounting",
+      path: "/services/usa/finance-accounting",
+    },
+    {
+      label: "Tax Planning & Advisory",
+      path: "/services/usa/tax-planning",
+    },
+    {
+      label: "Business Advisory & Strategy",
+      path: "/services/usa/business-advisory",
+    },
+    {
+      label: "HR & Payroll Solutions",
+      path: "/services/usa/hr-payroll",
+    },
+    {
+      label: "Technology and Automation",
+      path: "/services/usa/technology",
+    },
+    {
+      label: "Industry-Specific Accounting Solutions",
+      path: "/services/usa/industry-accounting",
+    },
+  ],
+
   Estonia: [
-  {
-    label: "Company Formation & e-Residency",
-    path: "/services/estonia/company-formation",
-  },
-  {
-    label: "Accounting & Bookkeeping",
-    path: "/services/estonia/accounting-bookkeeping",
-  },
-  {
-    label: "Tax & VAT Compliance",
-    path: "/services/estonia/tax-vat-compliance",
-  },
-  {
-    label: "Annual Reporting & Compliance",
-    path: "/services/estonia/annual-reporting",
-  },
-  {
-    label: "CFO & Business Advisory",
-    path: "/services/estonia/cfo-business-advisory",
-  },
-  {
-    label: "ERP & Digital Transformation",
-    path: "/services/estonia/erp-digital-transformation",
-  },
-  {
-    label: "E-commerce & SaaS Accounting",
-    path: "/services/estonia/ecommerce-saas-accounting",
-  },
-  {
-    label: "EU Expansion & International Support",
-    path: "/services/estonia/eu-expansion",
-  },
-],
+    {
+      label: "Company Formation & e-Residency",
+      path: "/services/estonia/company-formation",
+    },
+    {
+      label: "Accounting & Bookkeeping",
+      path: "/services/estonia/accounting-bookkeeping",
+    },
+    {
+      label: "Tax & VAT Compliance",
+      path: "/services/estonia/tax-vat-compliance",
+    },
+    {
+      label: "Annual Reporting & Compliance",
+      path: "/services/estonia/annual-reporting",
+    },
+    {
+      label: "Virtual CFO & Business Advisory",
+      path: "/services/estonia/cfo-business-advisory",
+    },
+    {
+      label: "ERP & Digital Transformation",
+      path: "/services/estonia/erp-digital-transformation",
+    },
+    {
+      label: "E-commerce & SaaS Accounting",
+      path: "/services/estonia/ecommerce-saas-accounting",
+    },
+    {
+      label: "EU Expansion & International Support",
+      path: "/services/estonia/eu-expansion",
+    },
+  ],
 };
 
 const resourceSections = {
   COMPANY: [
     { label: "About", path: "/about" },
-    { label: "E-brochure", path: "https://drive.google.com/file/d/1XFM7Aa3OPQNjXvA47v6mwKX67uM6Oq6O/view?pli=1" },
+    { label: "E-brochure", path: "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7" },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
     { label: "Blogs", path: "/blogs" },

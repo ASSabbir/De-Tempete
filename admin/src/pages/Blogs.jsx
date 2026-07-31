@@ -2,16 +2,27 @@ import { useEffect, useState, useCallback } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
+import { useAuth } from '../context/AuthContext';
 
 const EMPTY = {
   title: '', description: '', title2: '', description2: '',
   coverImage: '', publishedDate: '', isActive: true,
 };
 
+const statusBadge = (status) => (
+  <span style={{
+    padding: '3px 10px', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#fff',
+    background: status === 'published' ? '#16a34a' : '#d97706',
+  }}>
+    {status === 'published' ? 'Published' : 'Pending'}
+  </span>
+);
+
 const columns = [
   { key: 'title', label: 'Title' },
   { key: 'publishedDate', label: 'Published', render: v => v ? new Date(v).toLocaleDateString() : '-' },
   { key: 'slug', label: 'Slug' },
+  { key: 'status', label: 'Approval', render: statusBadge },
   { key: 'isActive', label: 'Status', render: v => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
 ];
 
@@ -20,6 +31,7 @@ const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#3
 const textareaStyle = { ...inputStyle, minHeight: 140, resize: 'vertical', fontFamily: 'inherit' };
 
 export default function Blogs() {
+  const { admin } = useAuth();
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -106,6 +118,15 @@ export default function Blogs() {
     }
   };
 
+  const handlePublish = async (id) => {
+    try {
+      await API.patch(`/blogs/${id}/status`, { status: 'published' });
+      fetchItems(page);
+    } catch {
+      alert('Publish failed');
+    }
+  };
+
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
@@ -116,11 +137,23 @@ export default function Blogs() {
         </button>
       </div>
 
+      {admin?.role !== 'superadmin' && (
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af', borderRadius: 8, padding: '10px 16px', marginBottom: 20, fontSize: 13 }}>
+          New items and edits go to Super Admin for approval before they appear on the live site.
+        </div>
+      )}
+
       <div style={{ background: '#fff', borderRadius: 12, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
         {loading ? (
           <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
         ) : (
-          <DataTable columns={columns} data={items} onEdit={openEdit} onDelete={handleDelete} />
+          <DataTable
+            columns={columns}
+            data={items}
+            onEdit={openEdit}
+            onDelete={handleDelete}
+            onPublish={admin?.role === 'superadmin' ? handlePublish : undefined}
+          />
         )}
       </div>
 
@@ -148,11 +181,7 @@ export default function Blogs() {
               <input type="file" accept="image/*" onChange={handleImageChange} style={inputStyle} />
               {uploading && <p style={{ fontSize: 13, color: '#6b7280', marginTop: 6 }}>Uploading...</p>}
               {form.coverImage && !uploading && (
-                <img
-                  src={form.coverImage}
-                  alt="Cover preview"
-                  style={{ marginTop: 10, width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8 }}
-                />
+                <img src={form.coverImage} alt="Cover preview" style={{ marginTop: 10, width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8 }} />
               )}
             </div>
 

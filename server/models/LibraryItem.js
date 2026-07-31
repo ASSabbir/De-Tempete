@@ -19,7 +19,7 @@ const libraryItemSchema = new mongoose.Schema({
     enum: AUTHORITY_OPTIONS,
     maxlength: 150,
   },
-  customAuthority: { type: String, trim: true, maxlength: 150 }, // used only when issuingAuthority === 'Other'
+  customAuthority: { type: String, trim: true, maxlength: 150 },
   category: { type: String, required: true, trim: true, maxlength: 100 },
   issueDate: { type: Date, required: true },
   downloadUrl: { type: String, required: true, trim: true, maxlength: 2048 },
@@ -29,11 +29,13 @@ const libraryItemSchema = new mongoose.Schema({
     default: 'UAE',
   },
   isActive: { type: Boolean, default: true },
+  status: { type: String, enum: ['pending', 'published'], default: 'pending' },
 }, { timestamps: true });
 
 libraryItemSchema.index({ region: 1, isActive: 1, issueDate: -1 });
 libraryItemSchema.index({ region: 1, category: 1 });
 libraryItemSchema.index({ region: 1, issuingAuthority: 1 });
+libraryItemSchema.index({ status: 1 });
 
 libraryItemSchema.statics.AUTHORITY_OPTIONS = AUTHORITY_OPTIONS;
 

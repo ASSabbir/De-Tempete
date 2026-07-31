@@ -158,7 +158,7 @@ const Technology_UAE = () => {
                 "Migration from legacy systems (Tally, QuickBooks, Zoho to Excel)",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -201,7 +201,7 @@ const Technology_UAE = () => {
                 "Training and post-go-live support for your finance team",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -240,7 +240,7 @@ const Technology_UAE = () => {
             {processSteps.map((item, index) => (
               <div key={index}>
                 
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -294,7 +294,7 @@ const Technology_UAE = () => {
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -303,13 +303,6 @@ const Technology_UAE = () => {
           </div>
         </div>
       </section>
-
-      <ConsultationCTA
-        heading={<>Get UAE E-Invoicing<br />Ready <span className="font-bold">Today</span></>}
-        subheading="Serving Dubai - Abu Dhabi - Sharjah - Ajman - Ras Al Khaimah - Fujairah - Umm Al Quwain"
-        commitmentItems={["Free initial consultation — no obligation", "100% confidentiality and secure handling of FTA data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
-      />
-
       {/* Technological Partner */}
       <section className="py-24 bg-white overflow-hidden">
         <div className=" max-w-7xl mx-auto px-6">
@@ -348,6 +341,14 @@ const Technology_UAE = () => {
     `}</style>
         </div>
       </section>
+
+      <ConsultationCTA
+        heading={<>Get UAE E-Invoicing<br />Ready <span className="font-bold">Today</span></>}
+        subheading="Serving Dubai - Abu Dhabi - Sharjah - Ajman - Ras Al Khaimah - Fujairah - Umm Al Quwain"
+        commitmentItems={["Free initial consultation — no obligation", "100% confidentiality and secure handling of FTA data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
+      />
+
+      
     </div>
   );
 };

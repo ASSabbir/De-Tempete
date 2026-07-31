@@ -176,7 +176,7 @@ const Compliance_Regulatory = () => {
             statutory compliance with zero hassle.
             
             
-            <span className="text-lg md:text-xl text-gray-300">
+            <span className="text-base md:text-xl text-gray-300">
               We handle the paperwork, deadlines, and reporting, so you stay
               focused on running your business.
             </span>
@@ -193,7 +193,7 @@ const Compliance_Regulatory = () => {
           <h2 className="text-4xl 2xl:text-5xl font-bold text-[#14224A] mt-2">
             UK Compliance Burden
           </h2>
-          <p className="mt-4 text-light-blue font-semibold text-lg">
+          <p className="mt-4 text-light-blue font-semibold text-base">
             Compliance in the UK Isn't Optional — It's Critical.
           </p>
           <p className="mt-6 text-gray-600 leading-8">
@@ -214,7 +214,7 @@ const Compliance_Regulatory = () => {
               "Challenges with pension auto-enrolment compliance",
             ].map((t, i) => (
               <div key={i} className="flex items-start gap-3">
-                <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
+                <FaCheckCircle className="text-light-blue text-base mt-1 shrink-0" />
                 <span className="text-gray-600">{t}</span>
               </div>
             ))}
@@ -233,7 +233,7 @@ const Compliance_Regulatory = () => {
             <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-base">
               HMRC-Approved Annual Accounts
             </div>
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-base text-gray-600 leading-8">
               Preparing and filing annual accounts can be stressful, especially
               when managing UK reporting standards. We handle everything from
               bookkeeping to submissions, so your accounts are accurate,
@@ -256,7 +256,7 @@ const Compliance_Regulatory = () => {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg mb-20">
+            <p className="text-gray-500 text-base mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
@@ -273,7 +273,7 @@ const Compliance_Regulatory = () => {
             <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Corporation Tax</span> (CT600) Filing
             </h2>
-            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
+            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
               Optimised CT600 filing that minimises tax liability and ensures
               compliance. Corporation Tax filing can be complex and missing
               deadlines can lead to penalties. Our expert team handles your
@@ -294,7 +294,7 @@ const Compliance_Regulatory = () => {
                   <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-lg leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
                 </div>
               );
             })}
@@ -321,14 +321,14 @@ const Compliance_Regulatory = () => {
               and High Earners. We handle your filing accurately and meet HMRC
               deadlines without hassle.
             </p>
-            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
               Perfect for:
             </h4>
             <div className="space-y-4">
               {selfAssessment.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <FaCheckCircle className="text-light-blue text-2xl shrink-0" />
-                  <span className="text-gray-600 text-lg">{item}</span>
+                  <span className="text-gray-600 text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -344,7 +344,7 @@ const Compliance_Regulatory = () => {
               <span className="font-bold">VAT Registration</span> &
               MTD-Compliant Filing
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               MTD-Compliant VAT Filing That Keeps You Penalty-Free. Navigating
               UK VAT rules, including Making Tax Digital (MTD), requires
               accuracy and proper software integration. We manage VAT
@@ -382,13 +382,13 @@ const Compliance_Regulatory = () => {
             <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">ACSP Identity</span> Verification
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               The ACSP verifies the identity of company officers before
               submitting filings to Companies House. Individuals that must be
               verified include — Company directors, Persons with Significant
               Control (PSC), Company Formation applicants.
             </p>
-            <p className="mt-4 text-lg leading-8 text-gray-500">
+            <p className="mt-4 text-base leading-8 text-gray-500">
               As an HMRC-registered agent and a Companies House Authorised
               Corporate Service Provider, we ensure every person is real and
               legally accountable for the business.
@@ -414,7 +414,7 @@ const Compliance_Regulatory = () => {
               <br />
               (PAYE & RTI Compliance)
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               Accurate, Timely Payroll Processing Fully Compliant with PAYE &
               RTI. Payroll mistakes lead to employee dissatisfaction and HMRC
               issues. We run your payroll flawlessly, every week or month, while
@@ -454,7 +454,7 @@ const Compliance_Regulatory = () => {
               <br />
               Compliance
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               Ensure Your Business Meets All Auto-Enrolment Legal Requirements.
               Auto-enrolment is a legal requirement for UK employers. We manage
               your full pension compliance cycle from setup to ongoing
@@ -578,7 +578,7 @@ const Compliance_Regulatory = () => {
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
-                <p className="text-gray-700 text-lg font-semibold">{item}</p>
+                <p className="text-gray-700 text-base font-semibold">{item}</p>
               </div>
             ))}
           </div>

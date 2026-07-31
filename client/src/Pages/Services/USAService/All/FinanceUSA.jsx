@@ -122,7 +122,7 @@ const FinanceUSA = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -145,7 +145,7 @@ const FinanceUSA = () => {
             <h2 className="text-5xl font-bold text-[#13264d] mb-4">
               What We Do
             </h2>
-            <p className="text-lg text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-8">
               We provide comprehensive accounting and finance services for
               USAi businesses, including both standalone and retainer
               engagement models.
@@ -165,7 +165,7 @@ const FinanceUSA = () => {
                   <h3 className="text-2xl font-bold text-[#16244b] mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-7">
+                  <p className="text-gray-600 text-base leading-7">
                     {service.description}
                   </p>
                 </div>

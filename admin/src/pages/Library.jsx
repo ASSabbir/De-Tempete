@@ -1,9 +1,19 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
+import { useAuth } from '../context/AuthContext';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'USA', "Estonia"];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
 const EMPTY = { title: '', issuingAuthority: '', customAuthority: '', category: '', issueDate: '', downloadUrl: '', region: 'UAE', isActive: true };
+
+const statusBadge = (status) => (
+  <span style={{
+    padding: '3px 10px', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#fff',
+    background: status === 'published' ? '#16a34a' : '#d97706',
+  }}>
+    {status === 'published' ? 'Published' : 'Pending'}
+  </span>
+);
 
 const columns = [
   { key: 'title', label: 'Title' },
@@ -11,6 +21,7 @@ const columns = [
   { key: 'category', label: 'Category' },
   { key: 'region', label: 'Region' },
   { key: 'issueDate', label: 'Issue Date', render: (v) => v ? new Date(v).toLocaleDateString() : '-' },
+  { key: 'status', label: 'Approval', render: statusBadge },
   { key: 'isActive', label: 'Status', render: (v) => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
 ];
 
@@ -18,6 +29,7 @@ const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
 
 export default function Library() {
+  const { admin } = useAuth();
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -96,6 +108,15 @@ export default function Library() {
     }
   };
 
+  const handlePublish = async (id) => {
+    try {
+      await API.patch(`/library/${id}/status`, { status: 'published' });
+      fetchItems(page);
+    } catch {
+      alert('Publish failed');
+    }
+  };
+
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
@@ -106,11 +127,23 @@ export default function Library() {
         </button>
       </div>
 
+      {admin?.role !== 'superadmin' && (
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af', borderRadius: 8, padding: '10px 16px', marginBottom: 20, fontSize: 13 }}>
+          New items and edits go to Super Admin for approval before they appear on the live site.
+        </div>
+      )}
+
       <div style={{ background: '#fff', borderRadius: 12, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
         {loading ? (
           <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
         ) : (
-          <DataTable columns={columns} data={items} onEdit={openEdit} onDelete={handleDelete} />
+          <DataTable
+            columns={columns}
+            data={items}
+            onEdit={openEdit}
+            onDelete={handleDelete}
+            onPublish={admin?.role === 'superadmin' ? handlePublish : undefined}
+          />
         )}
       </div>
 
@@ -160,13 +193,6 @@ export default function Library() {
                   style={inputStyle} />
               </div>
             )}
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Region</label>
-              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
-                style={{ ...inputStyle, cursor: 'pointer' }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
-            </div>
 
             {[
               { key: 'category', label: 'Category', type: 'text' },
@@ -181,7 +207,13 @@ export default function Library() {
               </div>
             ))}
 
-            
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Region</label>
+              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}>
+                {REGIONS.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
               <input type="checkbox" id="libActive" checked={form.isActive}

@@ -23,9 +23,9 @@ const Home = () => {
             <HireBased></HireBased>
             <Resources></Resources>
 
-            <div className='bg-gray-100 py-30 py-20'>
+            <div className='bg-gray-50 pt-30'>
                 <div className=' max-w-7xl mx-auto'>
-                    <h1 className='text-[1vw] text-[#0d1e4a] font-normal  text-center mb-10'>Testimonial</h1>
+                    <h1 className='text-6xl font-bold text-[#0d1e4a]   text-center mb-10'>Testimonial</h1>
                     <Reviews></Reviews>
                 </div>
             </div>

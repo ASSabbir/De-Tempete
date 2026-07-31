@@ -50,7 +50,7 @@ const ProcessStep = () => {
             UAE <span className="font-bold">Company Registration</span>
           </h2>
 
-          <p className="text-gray-600 mt-6 text-lg">
+          <p className="text-gray-600 mt-6 text-base">
             Setting up a business in the UAE involves a few streamlined steps
           </p>
         </div>

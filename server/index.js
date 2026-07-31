@@ -26,7 +26,6 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
-const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/db');
 
 connectDB().then(() => autoSeedAdmin());
@@ -60,25 +59,18 @@ app.use((req, _res, next) => {
   next();
 });
 
-const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 20,
-  message: { message: 'Too many requests, try again later' },
-});
-
-const publicLimiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 120,
-});
-
-app.use('/api/auth', authLimiter, require('./routes/auth'));
-app.use('/api/library', publicLimiter, require('./routes/library'));
-app.use('/api/publications', publicLimiter, require('./routes/publications'));
-app.use('/api/forms', publicLimiter, require('./routes/forms'));
-app.use('/api/leads', publicLimiter, require('./routes/leads'));
-app.use('/api/news-events', publicLimiter, require('./routes/newsEvents'));
-app.use('/api/blogs', publicLimiter, require('./routes/blogs'));
-app.use('/api/business-setup-leads', publicLimiter, require('./routes/Businesssetupleads'));
+// Rate limiting now lives inside each route file, applied only to the routes
+// that need it (public unauthenticated endpoints, login/refresh). Protected
+// admin routes are gated by a valid JWT already and are never rate-limited
+// here, so multiple admins working at once don't hit 429s.
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/library', require('./routes/library'));
+app.use('/api/publications', require('./routes/publications'));
+app.use('/api/forms', require('./routes/forms'));
+app.use('/api/leads', require('./routes/leads'));
+app.use('/api/news-events', require('./routes/newsEvents'));
+app.use('/api/blogs', require('./routes/blogs'));
+app.use('/api/business-setup-leads', require('./routes/Businesssetupleads'));
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 

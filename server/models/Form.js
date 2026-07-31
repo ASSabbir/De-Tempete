@@ -10,8 +10,10 @@ const formSchema = new mongoose.Schema({
     default: 'UAE',
   },
   isActive: { type: Boolean, default: true },
+  status: { type: String, enum: ['pending', 'published'], default: 'pending' },
 }, { timestamps: true });
 
 formSchema.index({ region: 1, isActive: 1 });
+formSchema.index({ status: 1 });
 
 module.exports = mongoose.model('Form', formSchema);

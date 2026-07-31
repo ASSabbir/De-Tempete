@@ -84,7 +84,7 @@ const EndToEnd = () => {
 
         {/* Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-[#081B57] text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-5xl 2xk:text-6xl font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>
@@ -106,7 +106,7 @@ const EndToEnd = () => {
                 <button
                   key={index}
                   onClick={() => setActiveStep(index)}
-                  className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-lg lg:text-2xl rounded-xl transition-all duration-300
+                  className={`flex-shrink-0 lg:w-full text-left px-5 sm:px-6 py-3 sm:py-5 text-base sm:text-base 2xl:text-2xl rounded-xl transition-all duration-300
           ${
             activeStep === index
               ? "bg-[#081B57] text-white"
@@ -135,11 +135,11 @@ const EndToEnd = () => {
 
                 {/* Text */}
                 <div className="flex-1 pt-0 sm:pt-5 text-center sm:text-left">
-                  <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#081B57] mb-4 sm:mb-5 leading-tight">
+                  <h3 className="text-2xl sm:text-4xl 2xl:text-5xl font-bold text-[#081B57] mb-4 sm:mb-5 leading-tight">
                     {steps[activeStep].title}
                   </h3>
 
-                  <ul className="text-[#1f2a50] text-base sm:text-lg lg:text-xl space-y-2">
+                  <ul className="text-[#1f2a50] text-base sm:text-base lg:text-xl space-y-2">
                     {steps[activeStep].points.map((point, i) => (
                       <li key={i}>• {point}</li>
                     ))}

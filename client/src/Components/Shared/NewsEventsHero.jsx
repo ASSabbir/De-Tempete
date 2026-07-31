@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import skylineImg from '../../asstes/img_temp/de-tempete.webp';
+import SharedFullButton from './SharedFullButton';
 
 export default function NewsEventsHero({ title, subtitle, cta }) {
   const [visible, setVisible] = useState(false);
@@ -70,18 +71,7 @@ export default function NewsEventsHero({ title, subtitle, cta }) {
             opacity: visible ? 1 : 0,
             transition: 'transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s, opacity 0.7s ease 0.24s',
           }}>
-            <Link to={cta.to} style={{
-              display: 'inline-block',
-              padding: '14px 34px',
-              border: '1.5px solid #fff',
-              color: '#fff',
-              textDecoration: 'none',
-              borderRadius: 6,
-              fontWeight: 700,
-              fontSize: 15,
-            }}>
-              {cta.label}
-            </Link>
+            <SharedFullButton text={'Start Now'} path={'/contact'}></SharedFullButton>
           </div>
         )}
       </div>

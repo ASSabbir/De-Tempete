@@ -57,7 +57,7 @@ const Types_of_Company = () => {
             Types of Company <span className="font-bold">Structures in UAE</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="mt-5 text-gray-600 text-base max-w-3xl mx-auto">
             There are three main options for company formation in the UAE,
             depending on your business goals and target markets.
           </p>
@@ -107,7 +107,7 @@ const Types_of_Company = () => {
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className="text-white text-base sm:text-lg lg:text-xl space-y-2">
+                  <ul className="text-white text-base sm:text-base lg:text-xl space-y-2">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

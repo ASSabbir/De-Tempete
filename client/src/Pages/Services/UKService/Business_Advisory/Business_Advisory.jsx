@@ -123,10 +123,10 @@ const Business_Advisory = () => {
               <br />
               <span className="font-bold">Advisory</span> & Consultancy
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Guidance Built Around the Decisions That Matter Most
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We guide founders, executives, and investors through the
               business decisions with the highest stakes — from
               understanding what your company is worth to planning a merger,
@@ -143,7 +143,7 @@ const Business_Advisory = () => {
                 "Financial strategy & growth consulting",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -159,10 +159,10 @@ const Business_Advisory = () => {
             <span className="font-bold">Business Valuation</span> & Investment
             Advisory
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+          <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
             Know Your Worth. Make Smarter Investment Decisions.
           </p>
-          <p className="mt-3 text-lg leading-8 text-gray-500">
+          <p className="mt-3 text-base leading-8 text-gray-500">
             Our valuation and investment advisory services help you
             understand the true financial position of your business,
             attract investors, and make informed strategic decisions backed
@@ -176,7 +176,7 @@ const Business_Advisory = () => {
             return (
               <div key={i} className="text-center">
                 <Icon className="text-4xl text-slate-500 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {c.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{c.desc}</p>
@@ -247,10 +247,10 @@ const Business_Advisory = () => {
               <br />
               Planning
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500 font-semibold">
+            <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Plan Your Exit with Confidence
             </p>
-            <p className="mt-3 text-lg leading-8 text-gray-500">
+            <p className="mt-3 text-base leading-8 text-gray-500">
               We help business owners prepare for a successful transition,
               whether you're selling, retiring, or passing the business to
               the next generation of leadership.
@@ -266,7 +266,7 @@ const Business_Advisory = () => {
                 "Transition & Handover Guidance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -309,7 +309,7 @@ const Business_Advisory = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuChartNoAxesCombined className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-bold text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-bold text-white leading-relaxed">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-slate-300 text-base leading-6">

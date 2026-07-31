@@ -11,7 +11,7 @@ const Why_Business = () => {
             <span className="font-bold">Business In The UK?</span>
           </h2>
 
-          <p className="mt-8 text-[#39425B] text-lg text-justify leading-8">
+          <p className="mt-8 text-[#39425B] text-base text-justify leading-7">
             The United Kingdom remains one of the world's leading destinations
             for entrepreneurs, startups, and international businesses due to
             its strong legal framework, stable economy, and globally recognized
@@ -33,40 +33,40 @@ const Why_Business = () => {
         <div className="grid grid-cols-2 gap-5">
 
           {/* Card 1 */}
-          <div className="bg-light-blue rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-tl-3xl p-10 h-56 flex items-center justify-center text-center hover:shadow-2xl duration-300">
             <h3 className="text-[#14224A] text-3xl font-medium">
               24-Hour
               <br />
-              <span className="text-lg font-normal">
+              <span className="text-base font-normal">
                 Online Company Registration
               </span>
             </h3>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-tr-3xl p-10 h-56 flex items-center justify-center text-center hover:shadow-2xl duration-300">
             <h3 className="text-[#14224A] text-3xl font-medium">
               Global
               <br />
-              <span className="text-lg font-normal">
+              <span className="text-base font-normal">
                 Market Access from the UK
               </span>
             </h3>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-white rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center hover:shadow-2xl duration-300">
             <h3 className="text-[#14224A] text-3xl font-medium">
               19%
               <br />
-              <span className="text-lg font-normal">
+              <span className="text-base font-normal">
                 Starting Corporation Tax
               </span>
             </h3>
           </div>
 
           {/* Card 4 */}
-          <div className="bg-light-blue rounded-br-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl">
+          <div className="bg-light-blue rounded-br-3xl p-10 h-56 flex items-center justify-center text-center hover:shadow-2xl duration-300">
             <h3 className="text-[#14224A] text-xl font-medium leading-relaxed">
               World-Class Banking &
               <br />

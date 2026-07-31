@@ -186,7 +186,7 @@ const Ecommerce = () => {
                                 Accounting Solutions
                             </h2>
 
-                            <p className="mt-8 text-lg leading-7 text-gray-500">
+                            <p className="mt-8 text-base leading-7 text-gray-500">
                                 Running an online business requires accurate financial management across
                                 multiple sales channels and payment platforms. We provide specialized
                                 accounting services for e-commerce businesses, helping you maintain accurate
@@ -194,7 +194,7 @@ const Ecommerce = () => {
                                 sustainable growth.
                             </p>
 
-                            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+                            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                                 Our services include:
                             </h4>
 
@@ -209,7 +209,7 @@ const Ecommerce = () => {
                                     <div key={index} className="flex items-center gap-4">
                                         <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                                        <span className="text-gray-600 text-lg">{item}</span>
+                                        <span className="text-gray-600 text-base">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -236,7 +236,7 @@ const Ecommerce = () => {
                                 compliance, and make informed business decisions as your company grows.
                             </p>
 
-                            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+                            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                                 Our support includes:
                             </h4>
 
@@ -251,7 +251,7 @@ const Ecommerce = () => {
                                     <div key={index} className="flex items-center gap-4">
                                         <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                                        <span className="text-gray-600 text-lg">{item}</span>
+                                        <span className="text-gray-600 text-base">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -371,7 +371,7 @@ const Ecommerce = () => {
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-lg leading-8">
+                                    <p className="text-gray-500 text-base leading-8">
                                         {item.desc}
                                     </p>
                                 </div>

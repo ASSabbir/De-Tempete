@@ -18,8 +18,11 @@ const newsEventSchema = new mongoose.Schema(
     eventTime: { type: String },
     slug: { type: String, required: true, unique: true },
     isActive: { type: Boolean, default: true },
+    status: { type: String, enum: ['pending', 'published'], default: 'pending' },
   },
   { timestamps: true }
 );
+
+newsEventSchema.index({ status: 1 });
 
 module.exports = mongoose.model('NewsEvent', newsEventSchema);

@@ -89,7 +89,7 @@ const Regulatory_Compliance = () => {
                 "Regulatory updates and proactive reminders",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -164,7 +164,7 @@ const Regulatory_Compliance = () => {
                 "Continuous improvement and post-certification support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -211,7 +211,7 @@ const Regulatory_Compliance = () => {
                 "Document handover and deregistration",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-lg shrink-0" />
+                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
                   <span className="text-gray-600">{item}</span>
                 </div>
               ))}
@@ -240,7 +240,7 @@ const Regulatory_Compliance = () => {
               >
                 <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

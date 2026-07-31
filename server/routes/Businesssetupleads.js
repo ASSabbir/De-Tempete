@@ -1,19 +1,18 @@
 const express = require('express');
 const BusinessSetupLead = require('../models/businessSetupLeads');
-const { protect } = require('../middleware/auth');
+const { protect, authorize } = require('../middleware/auth');
+const { publicLimiter } = require('../middleware/rateLimit');
 
 const router = express.Router();
 
-// One entry per country guide. Add a new line here whenever a new guide goes live —
-// no schema or route changes needed, the frontend just passes the matching guideKey.
 const GUIDES = {
   'uae-guide-2026': 'https://drive.google.com/file/d/1wR0hbrioeHwYQyXwiRgRSygNQ32cIJd0/view',
   // 'ksa-guide-2026': 'https://drive.google.com/...',
   // 'usa-guide-2026': 'https://drive.google.com/...',
 };
 
-// POST /api/business-setup-leads — public, saves the lead, returns the file link
-router.post('/', async (req, res) => {
+// POST /api/business-setup-leads — public, rate-limited to prevent form spam
+router.post('/', publicLimiter, async (req, res) => {
   try {
     const { name, email, phone, guide } = req.body;
 
@@ -34,8 +33,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET /api/business-setup-leads/admin/all — protected, for the admin panel
-router.get('/admin/all', protect, async (req, res) => {
+// GET /api/business-setup-leads/admin/all — protected, never rate-limited
+router.get('/admin/all', protect, authorize('superadmin', 'resource'), async (req, res) => {
   try {
     const page = Math.max(1, parseInt(req.query.page) || 1);
     const limit = Math.min(100, parseInt(req.query.limit) || 50);

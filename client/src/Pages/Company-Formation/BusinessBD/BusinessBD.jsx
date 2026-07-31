@@ -10,6 +10,7 @@ import ProcessStep from './ProcessStep';
 const BusinessBD = () => {
     return (
         <div>
+            
             <BannerBD></BannerBD>
             <Why_Business></Why_Business>
             <Types_of_Company></Types_of_Company>

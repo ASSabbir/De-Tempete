@@ -210,7 +210,7 @@ const Footer = () => {
               key={index}
               className="bg-[#2D3C75] rounded-xl p-6 transition-all duration-300 hover:bg-[#374a8f] hover:-translate-y-1 hover:shadow-lg hover:shadow-light-blue/10"
             >
-              <h3 className="font-bold text-lg sm:text-xl mb-4 sm:mb-5">
+              <h3 className="font-bold text-base sm:text-xl mb-4 sm:mb-5">
                 {office.title}
               </h3>
 

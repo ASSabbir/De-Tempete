@@ -89,7 +89,7 @@ const EstoniaEResidency = () => {
           <span className="text-light-blue">with e-Residency</span>
         </h2>
 
-        <p className="ee-subtitle text-white/70 max-w-2xl mx-auto mb-16 leading-relaxed text-lg">
+        <p className="ee-subtitle text-white/70 max-w-2xl mx-auto mb-16 leading-relaxed text-base">
           Launch and run an EU company 100% online — no physical presence required.
         </p>
 
@@ -100,7 +100,7 @@ const EstoniaEResidency = () => {
               className="ee-card group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-lightext-light-blue/40 transition duration-300"
             >
               
-              <h3 className="font-semibold text-white text-lg mb-3">
+              <h3 className="font-semibold text-white text-base mb-3">
                 {title}
               </h3>
               <p className="text-base text-white/60 leading-relaxed">

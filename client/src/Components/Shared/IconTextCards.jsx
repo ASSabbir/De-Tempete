@@ -6,7 +6,7 @@ export const IconTextCards = ({ items, columns = "lg:grid-cols-3", Icon }) => (
       return (
         <div key={i} className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
           {ItemIcon && <ItemIcon className="text-light-blue text-2xl mb-3" />}
-          <h3 className="text-lg font-bold text-[#16244b] mb-2">{item.title}</h3>
+          <h3 className="text-base font-bold text-[#16244b] mb-2">{item.title}</h3>
           {item.desc && <p className="text-gray-500 text-base leading-6">{item.desc}</p>}
         </div>
       );

@@ -100,11 +100,11 @@ const Types_of_Company = () => {
         <div className="text-center mb-20">
           <h2 className="text-5xl text-[#14224A] font-light">
             Types of Company{" "}
-            <span className="font-bold">Structures in USA</span>
+            <span className="font-bold">Structures in Estonia</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg max-w-4xl mx-auto leading-8">
-            There are three main options for company formation in the USA,
+          <p className="mt-5 text-gray-600 text-base max-w-4xl mx-auto leading-8">
+            There are three main options for company formation in the Estonia,
             depending on your business goals and target markets.
           </p>
         </div>
@@ -116,7 +116,7 @@ const Types_of_Company = () => {
               {/* Main Vertical Line */}
               <div className="absolute left-0 top-0 h-full w-[1px] bg-gray-300"></div>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {companyData.map((company, index) => (
                   <button
                     key={company.id}
@@ -150,11 +150,11 @@ const Types_of_Company = () => {
 
                 {/* Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-8 leading-tight">
+                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-bold mb-5 md:mb-8 leading-tight">
                     {companyData[activeTab].title}
                   </h3>
 
-                  <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-white text-base sm:text-lg lg:text-xl leading-7 lg:leading-8">
+                  <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-white text-base sm:text-base 2xl:text-xl leading-7 lg:leading-7">
                     {companyData[activeTab].points.map((point, index) => (
                       <li key={index}>• {point}</li>
                     ))}

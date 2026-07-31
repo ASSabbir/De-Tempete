@@ -9,7 +9,7 @@ const TrustedPartner = () => {
 
         
 
-        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
+        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-base font-medium hover:bg-white hover:text-[#081B57] duration-300">
           Get Started Now
         </button>
       </div>

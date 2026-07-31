@@ -10,11 +10,13 @@ const blogSchema = new mongoose.Schema(
     publishedDate: { type: Date, required: true },
     slug: { type: String, required: true, unique: true },
     isActive: { type: Boolean, default: true },
+    status: { type: String, enum: ['pending', 'published'], default: 'pending' },
   },
   { timestamps: true }
 );
 
 blogSchema.index({ slug: 1 });
 blogSchema.index({ isActive: 1, publishedDate: -1 });
+blogSchema.index({ status: 1 });
 
 module.exports = mongoose.model('Blog', blogSchema);

@@ -148,11 +148,11 @@ const Market_Expansion = () => {
               <span className="font-extrabold">Registration</span>
             </h2>
 
-            <div className="inline-block mt-5 px-5 py-1 rounded text-light-blue  text-lg">
+            <div className="inline-block mt-5 px-5 py-1 rounded text-light-blue  text-base">
               UK Company Formation & Setup Services
             </div>
 
-            <p className="mt-7 text-lg text-gray-600 leading-8">
+            <p className="mt-7 text-base text-gray-600 leading-8">
               Starting a business in the UK requires proper structuring, tax
               registration, and compliance preparation from the beginning. de
               tempête supports startups, SMEs, and international businesses with
@@ -220,7 +220,7 @@ const Market_Expansion = () => {
           {/* Bottom Text */}
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-lg mb-20">
+            <p className="text-gray-500 text-base mb-20">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
@@ -244,7 +244,7 @@ const Market_Expansion = () => {
               </span>
             </h2>
 
-            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
+            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
               Businesses entering the UK market must align operations, pricing,
               and business structures with local regulations and market
               expectations. de tempête supports businesses with UK market entry,
@@ -304,7 +304,7 @@ const Market_Expansion = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-lg l">{item.desc}</p>
+                  <p className="text-gray-500 text-base l">{item.desc}</p>
                 </div>
               );
             })}
@@ -319,10 +319,10 @@ const Market_Expansion = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               UK Compliance & Tax
             </h2>
-            <p className="text-gray-600 text-lg font-semibold">
+            <p className="text-gray-600 text-base font-semibold">
               Registration Advisory
             </p>
-            <p className="text-gray-500 mt-4 max-w-4xl mx-auto text-lg">
+            <p className="text-gray-500 mt-4 max-w-4xl mx-auto text-base">
               Businesses operating in the UK must maintain proper registrations
               and compliance readiness to reduce administrative delays and
               operational risks. de tempête supports businesses with
@@ -399,7 +399,7 @@ const Market_Expansion = () => {
                 readiness depending on the business structure and activities.
               </p>
 
-              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                 Our team handles:
               </h4>
 
@@ -414,7 +414,7 @@ const Market_Expansion = () => {
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -438,7 +438,7 @@ const Market_Expansion = () => {
                 We assist in trademark and IP registration through the UK Intellectual Property Office (UKIPO) — ensuring your brand, logo and products are legally protected in the UK.
               </p>
 
-              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+              <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
                 Our support includes:
               </h4>
 
@@ -451,7 +451,7 @@ const Market_Expansion = () => {
                   <div key={index} className="flex items-center gap-4">
                     <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
 
-                    <span className="text-gray-600 text-lg">{item}</span>
+                    <span className="text-gray-600 text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -484,7 +484,7 @@ const Market_Expansion = () => {
               <span className="font-bold"> UK Residency</span> Support
             </h2>
 
-            <p className="mt-8 text-lg text-slate-300 leading-7 max-w-4xl mx-auto">
+            <p className="mt-8 text-base text-slate-300 leading-7 max-w-4xl mx-auto">
               Secure your place in the UK with seamless investor and residency
               visa assistance. de tempête manages all documentation and
               applications to ensure smooth visa processing for investors,
@@ -573,7 +573,7 @@ const Market_Expansion = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-lg leading-7">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-7">{item.desc}</p>
                 </div>
               </div>
             ))}

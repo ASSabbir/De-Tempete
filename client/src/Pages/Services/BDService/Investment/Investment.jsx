@@ -125,7 +125,7 @@ const Investment = () => {
               <span className="text-light-blue">Solutions</span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-8">
               Entering new markets or scaling operations requires the right
               connections and strategy. Our investment and partnership
               facilitation services in Bangladesh help businesses identify
@@ -151,7 +151,7 @@ const Investment = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 text-lg leading-7">
+                  <p className="text-gray-600 text-base leading-7">
                     {service.description}
                   </p>
                 </div>
@@ -166,7 +166,7 @@ const Investment = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
             <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
@@ -195,7 +195,7 @@ const Investment = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
               Why Choose us for Investment in Bangladesh?
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
@@ -273,7 +273,7 @@ const Investment = () => {
 
       {/* <section className="py-24  bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+          <h2 className="text-center text-4xl 2xl:text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>
 

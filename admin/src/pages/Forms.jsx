@@ -1,15 +1,25 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
-import { uploadToImgBB } from '../utils/imgbbUpload';
+import { useAuth } from '../context/AuthContext';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'USA', "Estonia"];
-const EMPTY = { title: '', issuingAuthority: '', coverImage: '', downloadUrl: '', region: 'UAE', isActive: true };
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
+const EMPTY = { title: '', issuingAuthority: '', downloadUrl: '', region: 'UAE', isActive: true };
+
+const statusBadge = (status) => (
+  <span style={{
+    padding: '3px 10px', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#fff',
+    background: status === 'published' ? '#16a34a' : '#d97706',
+  }}>
+    {status === 'published' ? 'Published' : 'Pending'}
+  </span>
+);
 
 const columns = [
   { key: 'title', label: 'Title' },
   { key: 'issuingAuthority', label: 'Authority' },
   { key: 'region', label: 'Region' },
+  { key: 'status', label: 'Approval', render: statusBadge },
   { key: 'isActive', label: 'Status', render: (v) => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
 ];
 
@@ -17,6 +27,7 @@ const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
 
 export default function Forms() {
+  const { admin } = useAuth();
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -24,10 +35,9 @@ export default function Forms() {
   const [form, setForm] = useState(EMPTY);
   const [editing, setEditing] = useState(null);
   const [saving, setSaving] = useState(false);
-  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
 
-    const fetchItems = async () => {
+  const fetchItems = async () => {
     setLoading(true);
     try {
       const { data } = await API.get('/forms/admin/all');
@@ -47,27 +57,7 @@ export default function Forms() {
   const openEdit = (item) => { setForm({ ...item }); setEditing(item._id); setError(''); setShowModal(true); };
   const closeModal = () => { setShowModal(false); setError(''); };
 
-  const handleImageChange = async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setUploading(true);
-    setError('');
-    try {
-      const url = await uploadToImgBB(file);
-      setForm(p => ({ ...p, coverImage: url }));
-    } catch (err) {
-      setError(err.message || 'Image upload failed');
-    } finally {
-      setUploading(false);
-    }
-  };
-
   const handleSave = async () => {
-    if (!form.coverImage) {
-      setError('Please upload a cover image before saving');
-      return;
-    }
     setSaving(true);
     setError('');
     try {
@@ -98,6 +88,15 @@ export default function Forms() {
     }
   };
 
+  const handlePublish = async (id) => {
+    try {
+      const { data } = await API.patch(`/forms/${id}/status`, { status: 'published' });
+      setItems(p => p.map(i => i._id === id ? data : i));
+    } catch {
+      alert('Publish failed');
+    }
+  };
+
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
@@ -108,11 +107,23 @@ export default function Forms() {
         </button>
       </div>
 
+      {admin?.role !== 'superadmin' && (
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af', borderRadius: 8, padding: '10px 16px', marginBottom: 20, fontSize: 13 }}>
+          New items and edits go to Super Admin for approval before they appear on the live site.
+        </div>
+      )}
+
       <div style={{ background: '#fff', borderRadius: 12, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
         {loading ? (
           <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
         ) : (
-          <DataTable columns={columns} data={items} onEdit={openEdit} onDelete={handleDelete} />
+          <DataTable
+            columns={columns}
+            data={items}
+            onEdit={openEdit}
+            onDelete={handleDelete}
+            onPublish={admin?.role === 'superadmin' ? handlePublish : undefined}
+          />
         )}
       </div>
 
@@ -123,26 +134,6 @@ export default function Forms() {
               {editing ? 'Edit' : 'Add'} Form
             </h3>
             {error && <div style={{ background: '#fef2f2', color: '#dc2626', padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14 }}>{error}</div>}
-
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Cover Image</label>
-              <input type="file" accept="image/*" onChange={handleImageChange} style={inputStyle} />
-              {uploading && <p style={{ fontSize: 13, color: '#6b7280', marginTop: 6 }}>Uploading...</p>}
-              {form.coverImage && !uploading && (
-                <img
-                  src={form.coverImage}
-                  alt="Cover preview"
-                  style={{ marginTop: 10, width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8 }}
-                />
-              )}
-            </div>
-            <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Region</label>
-              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
-                style={{ ...inputStyle, cursor: 'pointer' }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
-            </div>
 
             {[
               { key: 'title', label: 'Title' },
@@ -155,7 +146,13 @@ export default function Forms() {
               </div>
             ))}
 
-            
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Region</label>
+              <select value={form.region} onChange={e => setForm(p => ({ ...p, region: e.target.value }))}
+                style={{ ...inputStyle, cursor: 'pointer' }}>
+                {REGIONS.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>
               <input type="checkbox" id="frmActive" checked={form.isActive}
@@ -165,8 +162,8 @@ export default function Forms() {
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
               <button onClick={closeModal} style={{ padding: '10px 20px', border: '1px solid #d1d5db', borderRadius: 8, cursor: 'pointer', background: '#fff' }}>Cancel</button>
-              <button onClick={handleSave} disabled={saving || uploading}
-                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: (saving || uploading) ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: (saving || uploading) ? 0.7 : 1 }}>
+              <button onClick={handleSave} disabled={saving}
+                style={{ padding: '10px 20px', background: '#0f1f3d', color: '#fff', border: 'none', borderRadius: 8, cursor: saving ? 'not-allowed' : 'pointer', fontWeight: 600, opacity: saving ? 0.7 : 1 }}>
                 {saving ? 'Saving...' : 'Save'}
               </button>
             </div>

@@ -4,6 +4,8 @@ import Why_BusinessEs from './Why_BusinessEs';
 import Types_of_Company from './Types_of_Company';
 import ProcessStep from './ProcessStep';
 import EndToEnd from './EndToEnd';
+import BusinessSetupBook from './BusinessSetupBook';
+import ReadyToStublish from './ReadyToStublish';
 
 const BusinessEstonia = () => {
     return (
@@ -13,6 +15,8 @@ const BusinessEstonia = () => {
             <Types_of_Company></Types_of_Company>
             <ProcessStep></ProcessStep>
             <EndToEnd></EndToEnd>
+            <ReadyToStublish></ReadyToStublish>
+            <BusinessSetupBook></BusinessSetupBook>
             
         </div>
     );

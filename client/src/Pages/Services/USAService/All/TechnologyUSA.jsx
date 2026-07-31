@@ -149,7 +149,7 @@ const TechnologyUSA = () => {
               <span className="font-bold">Businesses</span>
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-4xl mx-auto">
+            <p className="mt-6 text-base leading-8 text-gray-600 max-w-4xl mx-auto">
               We help businesses implement and optimize modern software
               solutions, including cloud accounting platforms, ERP systems,
               and operational tools that improve efficiency and reduce
@@ -184,7 +184,7 @@ const TechnologyUSA = () => {
 
                   {/* Description */}
 
-                  <p className="text-gray-600 text-lg leading-8">
+                  <p className="text-gray-600 text-base leading-8">
                     {service.description}
                   </p>
                 </div>
@@ -208,7 +208,7 @@ const TechnologyUSA = () => {
                 <span className="font-bold">Automation</span>
               </h2>
 
-              <p className="text-lg leading-8 text-gray-600 mb-6 max-w-xl">
+              <p className="text-base leading-8 text-gray-600 mb-6 max-w-xl">
                 We help businesses eliminate repetitive work, automate everyday
                 operations, and improve productivity through intelligent digital
                 workflows and cloud-based business solutions.
@@ -235,7 +235,7 @@ const TechnologyUSA = () => {
                           {item.title}
                         </h3>
 
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 text-base">
                           {item.description}
                         </p>
                       </div>
@@ -361,22 +361,7 @@ const TechnologyUSA = () => {
         </div>
       </section>
 
-      <ConsultationCTA
-        heading={
-          <>
-            Transform Your Business with
-            <br />
-            <span className="font-bold">Systems Smart Technology</span>
-          </>
-        }
-        commitmentItems={[
-          "Free initial consultation — no obligation",
-          "Tailored digital & technology solutions",
-          "Scalable and automation-ready systems",
-          "Expert support and strategic guidance",
-          "Transparent and efficient process",
-        ]}
-      />
+      
       {/* Technological Partner Section */}
 
       <section className="pt-15 bg-white overflow-hidden">
@@ -416,7 +401,22 @@ const TechnologyUSA = () => {
     `}</style>
         </div>
       </section>
-
+<ConsultationCTA
+        heading={
+          <>
+            Transform Your Business with
+            <br />
+            <span className="font-bold">Systems Smart Technology</span>
+          </>
+        }
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Tailored digital & technology solutions",
+          "Scalable and automation-ready systems",
+          "Expert support and strategic guidance",
+          "Transparent and efficient process",
+        ]}
+      />
       
     </div>
   );

@@ -171,7 +171,7 @@ const ComplianceUSA = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
             US Compliance Burden
           </h2>
-          <p className="mt-4 text-light-blue font-semibold text-lg">
+          <p className="mt-4 text-light-blue font-semibold text-base">
             US Regulatory Compliance Isn't Optional — It's Critical.
           </p>
           <p className="mt-6 text-gray-600 leading-8">
@@ -193,7 +193,7 @@ const ComplianceUSA = () => {
               "No centralized compliance calendar across jurisdictions",
             ].map((t, i) => (
               <div key={i} className="flex items-start gap-3">
-                <FaCheckCircle className="text-light-blue text-lg mt-1 shrink-0" />
+                <FaCheckCircle className="text-light-blue text-base mt-1 shrink-0" />
                 <span className="text-gray-600">{t}</span>
               </div>
             ))}
@@ -212,7 +212,7 @@ const ComplianceUSA = () => {
             <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue  font-semibold text-base">
               State-by-State Filing Accuracy
             </div>
-            <p className="mt-7 text-lg text-gray-200 leading-8">
+            <p className="mt-7 text-base text-gray-200 leading-8">
               Preparing and filing annual state compliance documents can be
               overwhelming, especially when managing multiple state
               requirements at once. We handle everything from tracking to
@@ -244,7 +244,7 @@ const ComplianceUSA = () => {
             <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">IRS Compliance</span> Coordination
             </h2>
-            <p className="mt-8 text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
+            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
               Coordinated IRS compliance that keeps your federal obligations
               on track. Managing IRS correspondence and federal deadlines
               alongside state compliance can be complex, and missed notices
@@ -265,7 +265,7 @@ const ComplianceUSA = () => {
                   <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-lg leading-8">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-8">{item.desc}</p>
                 </div>
               );
             })}
@@ -293,14 +293,14 @@ const ComplianceUSA = () => {
               obligations in every state where you do business — so nothing
               falls through the cracks.
             </p>
-            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-lg">
+            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
               Perfect for:
             </h4>
             <div className="space-y-4">
               {selfAssessment.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <FaCheckCircle className="text-light-blue text-2xl shrink-0" />
-                  <span className="text-gray-600 text-lg">{item}</span>
+                  <span className="text-gray-600 text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -316,7 +316,7 @@ const ComplianceUSA = () => {
               <span className="font-bold">Multi-State Nexus </span>
               Analysis
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               Clear Nexus Analysis That Keeps You Ahead of New Obligations.
               Determining where your business has created nexus — whether
               through sales, employees, or physical presence — requires
@@ -355,13 +355,13 @@ const ComplianceUSA = () => {
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Compliance Calendar</span> Setup
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               A single, centralized calendar covering every state and
               federal deadline your business is responsible for — annual
               reports, franchise tax, IRS filings, and registered agent
               renewals.
             </p>
-            <p className="mt-4 text-lg leading-8 text-gray-500">
+            <p className="mt-4 text-base leading-8 text-gray-500">
               As your compliance partner, we build and maintain this
               calendar so every deadline is tracked, flagged in advance, and
               never missed.
@@ -387,7 +387,7 @@ const ComplianceUSA = () => {
               <br />
               & Entity Maintenance
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               Reliable Registered Agent Coverage in Every State You Operate.
               Missed legal notices can lead to default judgments or loss of
               good standing. We provide registered agent coverage and
@@ -427,7 +427,7 @@ const ComplianceUSA = () => {
               <br />
               & Deadline Monitoring
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-gray-500">
               Stay Ahead of Every IRS Deadline and Notice. Federal
               correspondence and estimated payment deadlines require prompt
               attention. We monitor, flag, and coordinate response to IRS

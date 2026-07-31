@@ -66,7 +66,7 @@ const AccountingSoftwareImplementation = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-[#081B57] mt-3 leading-tight">
             Accounting Software Implementation Service
           </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+          <p className="mt-6 text-base text-gray-600 leading-relaxed">
             From choosing the right platform to getting your team fully trained on it —
             we handle the entire setup so your accounting software works for you from day one.
           </p>
@@ -93,24 +93,7 @@ const AccountingSoftwareImplementation = () => {
         </div>
 
         {/* Compliance checks */}
-        <div className="mt-16 bg-[#16244B] rounded-3xl p-10 md:p-12">
-          <h3 className="text-white text-2xl font-bold mb-8">
-            Compliance checks built in
-          </h3>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {complianceChecks.map((check) => (
-              <div key={check.title} className="flex gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#57D3EB] text-[#081B57] flex items-center justify-center shrink-0 mt-0.5">
-                  <CheckIcon />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold mb-1">{check.title}</h4>
-                  <p className="text-base text-white/70 leading-relaxed">{check.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* CTA */}
         <div className="mt-14 text-center">

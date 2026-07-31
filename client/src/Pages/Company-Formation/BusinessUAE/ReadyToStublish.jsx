@@ -11,13 +11,13 @@ const ReadyToStublish = () => {
           Your Presence In The UAE?
         </h3>
 
-        <p className="mt-8 text-lg leading-8 text-gray-100 max-w-3xl mx-auto">
+        <p className="mt-8 text-base leading-8 text-gray-100 max-w-3xl mx-auto">
           Whether you're launching a startup or expanding globally, our UAE
           business setup consultants ensure your company is fully compliant and
           ready to grow.
         </p>
 
-        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-white hover:text-[#081B57] duration-300">
+        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-base font-medium hover:bg-white hover:text-[#081B57] duration-300">
           Start Your UAE Business Today
         </button>
       </div>

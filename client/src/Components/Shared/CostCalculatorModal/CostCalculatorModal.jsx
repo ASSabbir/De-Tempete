@@ -208,7 +208,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
       <div className="relative bg-white w-full max-w-3xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-[#16244B]">
-          <h2 className="text-white font-bold text-lg md:text-xl">
+          <h2 className="text-white font-bold text-base md:text-xl">
             Business Setup Cost Calculator
           </h2>
           <button
@@ -317,15 +317,15 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
               <div className="grid sm:grid-cols-3 gap-4 mb-8">
                 <div className="bg-[#F5F6F8] rounded-xl p-5 text-center">
                   <p className="text-xs text-gray-500 font-semibold uppercase mb-2">Government Fees</p>
-                  <p className="text-lg font-bold text-[#16244b]">{result.govtFees}</p>
+                  <p className="text-base font-bold text-[#16244b]">{result.govtFees}</p>
                 </div>
                 <div className="bg-[#F5F6F8] rounded-xl p-5 text-center">
                   <p className="text-xs text-gray-500 font-semibold uppercase mb-2">Professional Fees</p>
-                  <p className="text-lg font-bold text-[#16244b]">{result.professionalFees}</p>
+                  <p className="text-base font-bold text-[#16244b]">{result.professionalFees}</p>
                 </div>
                 <div className="bg-[#16244B] rounded-xl p-5 text-center">
                   <p className="text-xs text-light-blue font-semibold uppercase mb-2">Total Estimate</p>
-                  <p className="text-lg font-bold text-white">{result.totalEstimate}</p>
+                  <p className="text-base font-bold text-white">{result.totalEstimate}</p>
                 </div>
               </div>
 

@@ -117,7 +117,7 @@ const AnnualRepoting = () => {
                     alt={item.title}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-5 text-white text-lg font-bold">
+                  <h3 className="absolute bottom-4 left-5 text-white text-base font-bold">
                     {item.title}
                   </h3>
                 </div>
@@ -150,7 +150,7 @@ const AnnualRepoting = () => {
               return (
                 <div key={index} className="text-center">
                   <Icon className="text-4xl text-slate-500 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>
@@ -185,7 +185,7 @@ const AnnualRepoting = () => {
                 <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
                   <LuTrendingUp className="text-white text-4xl" />
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-white leading-relaxed">
+                <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -212,7 +212,7 @@ const AnnualRepoting = () => {
               >
                 <LuBriefcase className="text-light-blue text-2xl shrink-0" />
                 <div>
-                  <h3 className="text-lg font-bold text-[#16244b] mb-2">
+                  <h3 className="text-base font-bold text-[#16244b] mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 text-base leading-6">{item.desc}</p>

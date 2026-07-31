@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
+import { useAuth } from '../context/AuthContext';
 
 const MAX_IMAGES = 5;
 
@@ -9,6 +10,15 @@ const EMPTY = {
   title: '', description: '', description2: '', description3: '',
   images: [], eventDate: '', eventTime: '', isActive: true,
 };
+
+const statusBadge = (status) => (
+  <span style={{
+    padding: '3px 10px', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#fff',
+    background: status === 'published' ? '#16a34a' : '#d97706',
+  }}>
+    {status === 'published' ? 'Published' : 'Pending'}
+  </span>
+);
 
 const columns = [
   { key: 'title', label: 'Title' },
@@ -23,6 +33,7 @@ const columns = [
   { key: 'eventDate', label: 'Date', render: v => v ? new Date(v).toLocaleDateString() : '-' },
   { key: 'eventTime', label: 'Time' },
   { key: 'slug', label: 'Slug' },
+  { key: 'status', label: 'Approval', render: statusBadge },
   { key: 'isActive', label: 'Status', render: v => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
 ];
 
@@ -31,13 +42,10 @@ const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#3
 const textareaStyle = { ...inputStyle, minHeight: 110, resize: 'vertical', fontFamily: 'inherit' };
 
 const TILE_SIZE = 100;
-
-const tileBase = {
-  width: TILE_SIZE, height: TILE_SIZE, borderRadius: 10,
-  position: 'relative', overflow: 'hidden', flexShrink: 0,
-};
+const tileBase = { width: TILE_SIZE, height: TILE_SIZE, borderRadius: 10, position: 'relative', overflow: 'hidden', flexShrink: 0 };
 
 export default function NewsEvents() {
+  const { admin } = useAuth();
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -47,7 +55,7 @@ export default function NewsEvents() {
   const [form, setForm] = useState(EMPTY);
   const [editing, setEditing] = useState(null);
   const [saving, setSaving] = useState(false);
-  const [uploadingSlot, setUploadingSlot] = useState(null); // 'new' | index | null
+  const [uploadingSlot, setUploadingSlot] = useState(null);
   const [error, setError] = useState('');
 
   const fetchItems = useCallback(async (pg = page) => {
@@ -152,6 +160,15 @@ export default function NewsEvents() {
     }
   };
 
+  const handlePublish = async (id) => {
+    try {
+      await API.patch(`/news-events/${id}/status`, { status: 'published' });
+      fetchItems(page);
+    } catch {
+      alert('Publish failed');
+    }
+  };
+
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
@@ -162,11 +179,23 @@ export default function NewsEvents() {
         </button>
       </div>
 
+      {admin?.role !== 'superadmin' && (
+        <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af', borderRadius: 8, padding: '10px 16px', marginBottom: 20, fontSize: 13 }}>
+          New items and edits go to Super Admin for approval before they appear on the live site.
+        </div>
+      )}
+
       <div style={{ background: '#fff', borderRadius: 12, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
         {loading ? (
           <div style={{ padding: 60, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
         ) : (
-          <DataTable columns={columns} data={items} onEdit={openEdit} onDelete={handleDelete} />
+          <DataTable
+            columns={columns}
+            data={items}
+            onEdit={openEdit}
+            onDelete={handleDelete}
+            onPublish={admin?.role === 'superadmin' ? handlePublish : undefined}
+          />
         )}
       </div>
 
@@ -194,65 +223,26 @@ export default function NewsEvents() {
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 {form.images.map((url, index) => (
                   <div key={index} style={{ ...tileBase, border: '1px solid #e5e7eb' }}>
-                    <img
-                      src={url}
-                      alt={`Image ${index + 1}`}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    />
-
+                    <img src={url} alt={`Image ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     {uploadingSlot === index && (
-                      <div style={{
-                        position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.85)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: 11, fontWeight: 600, color: '#374151',
-                      }}>
+                      <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 600, color: '#374151' }}>
                         Uploading...
                       </div>
                     )}
-
-                    <button
-                      type="button"
-                      onClick={() => handleRemoveImage(index)}
-                      title="Remove image"
-                      style={{
-                        position: 'absolute', top: 4, right: 4, width: 20, height: 20,
-                        borderRadius: '50%', background: 'rgba(17,24,39,0.75)', color: '#fff',
-                        border: 'none', cursor: 'pointer', fontSize: 12, lineHeight: 1,
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      }}
-                    >
+                    <button type="button" onClick={() => handleRemoveImage(index)} title="Remove image"
+                      style={{ position: 'absolute', top: 4, right: 4, width: 20, height: 20, borderRadius: '50%', background: 'rgba(17,24,39,0.75)', color: '#fff', border: 'none', cursor: 'pointer', fontSize: 12, lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       ×
                     </button>
-
-                    <label
-                      title="Replace image"
-                      style={{
-                        position: 'absolute', bottom: 0, left: 0, right: 0,
-                        background: 'rgba(15,31,61,0.8)', color: '#fff',
-                        fontSize: 11, fontWeight: 600, textAlign: 'center',
-                        padding: '4px 0', cursor: 'pointer',
-                      }}
-                    >
+                    <label title="Replace image"
+                      style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'rgba(15,31,61,0.8)', color: '#fff', fontSize: 11, fontWeight: 600, textAlign: 'center', padding: '4px 0', cursor: 'pointer' }}>
                       Replace
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={(e) => handleReplaceImage(index, e)}
-                        style={{ display: 'none' }}
-                      />
+                      <input type="file" accept="image/*" onChange={(e) => handleReplaceImage(index, e)} style={{ display: 'none' }} />
                     </label>
                   </div>
                 ))}
 
                 {form.images.length < MAX_IMAGES && (
-                  <label
-                    style={{
-                      ...tileBase,
-                      border: '2px dashed #d1d5db',
-                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                      gap: 4, cursor: 'pointer', color: '#6b7280', background: '#f9fafb',
-                    }}
-                  >
+                  <label style={{ ...tileBase, border: '2px dashed #d1d5db', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer', color: '#6b7280', background: '#f9fafb' }}>
                     {uploadingSlot === 'new' ? (
                       <span style={{ fontSize: 11, fontWeight: 600 }}>Uploading...</span>
                     ) : (
@@ -261,13 +251,7 @@ export default function NewsEvents() {
                         <span style={{ fontSize: 11, fontWeight: 600 }}>Add image</span>
                       </>
                     )}
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleAddImage}
-                      style={{ display: 'none' }}
-                      disabled={uploadingSlot === 'new'}
-                    />
+                    <input type="file" accept="image/*" onChange={handleAddImage} style={{ display: 'none' }} disabled={uploadingSlot === 'new'} />
                   </label>
                 )}
               </div>

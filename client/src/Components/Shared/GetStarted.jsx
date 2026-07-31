@@ -33,7 +33,7 @@ export default function GetStarted({commitments, title,des}) {
             </h2>
 
             {/* Subtitle */}
-            <p className="text-[#1a9fd4] font-semibold text-base sm:text-lg leading-snug">
+            <p className="text-[#1a9fd4] font-semibold text-base sm:text-base leading-snug">
               {title}
             </p>
 

@@ -8,6 +8,7 @@ import ProcessStep from './ProcessStep';
 
 
 const BusinessUK = () => {
+    
     return (
         <div>
             <BannerUK></BannerUK>
