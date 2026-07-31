@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
+
 
 const STAT_CONFIG = {
   library: { endpoint: '/library/admin/all', label: 'Library Items', color: '#3b82f6' },
@@ -54,37 +56,89 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h2 style={{ fontSize: 24, fontWeight: 700, color: '#0f1f3d', marginBottom: 8 }}>Dashboard</h2>
-      <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 28 }}>
+      <style>{`
+      .hourglass {
+        font-size: 2rem;
+        display: inline-flex;
+        animation: flipHourglass 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      @keyframes flipHourglass {
+        0%, 45% {
+          transform: rotate(0deg);
+        }
+
+        50%, 95% {
+          transform: rotate(180deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    `}</style>
+      <h2 className="text-3xl font-bold text-slate-900 mb-2">
+        Dashboard
+      </h2>
+
+      <p className="text-sm text-gray-500 mb-7">
         Welcome back, {admin?.name}.
       </p>
 
-      {admin?.role === 'superadmin' && totalPending > 0 && (
-        <div style={{
-          background: '#fffbeb', border: '1px solid #fde68a', color: '#92400e',
-          borderRadius: 10, padding: '14px 18px', marginBottom: 28, fontSize: 14, fontWeight: 600,
-        }}>
-          ⏳ {totalPending} item{totalPending === 1 ? '' : 's'} waiting for your approval across all sections
+      {admin?.role === "superadmin" && totalPending > 0 && (
+        <div className="mb-7 flex items-center gap-3 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3">
+          <div className="hourglass">⌛</div>
+
+          <p className="text-xl font-medium text-amber-800">
+            <span className="text-red-500">{totalPending}</span>{" "}
+            item{totalPending === 1 ? "" : "s"} waiting for your approval across all sections
+          </p>
         </div>
       )}
 
       {loading ? (
-        <div style={{ padding: 40, textAlign: 'center', color: '#9ca3af' }}>Loading...</div>
+        <div className="py-10 text-center text-gray-400">
+          Loading...
+        </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(keys.length, 3)}, 1fr)`, gap: 20 }}>
+        <div
+          className="grid gap-5"
+          style={{
+            gridTemplateColumns: `repeat(${Math.min(keys.length, 3)}, minmax(0, 1fr))`,
+          }}
+        >
           {keys.map((key) => {
             const { label, color } = STAT_CONFIG[key];
             const pendingCount = pending[key];
+
+
             return (
-              <div key={key} style={{ background: '#fff', borderRadius: 12, padding: 28, boxShadow: '0 1px 8px rgba(0,0,0,0.06)', borderLeft: `4px solid ${color}` }}>
-                <div style={{ fontSize: 36, fontWeight: 700, color }}>{stats[key] ?? 0}</div>
-                <div style={{ fontSize: 14, color: '#6b7280', marginTop: 4 }}>{label}</div>
-                {admin?.role === 'superadmin' && pendingCount > 0 && (
-                  <div style={{ fontSize: 12, color: '#d97706', marginTop: 8, fontWeight: 600 }}>
-                    {pendingCount} pending approval
+              <Link
+                to={`/${key === 'newsEvents' ? 'news-events' : key}`}
+                key={key}
+                className="rounded-tr-2xl rounded-br-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md"
+                style={{ borderLeft: `4px solid ${color}` }}
+              >
+                <h3
+                  className="text-4xl font-bold"
+                  style={{ color }}
+                >
+                  {stats[key] ?? 0}
+                </h3>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  {label}
+                </p>
+
+                {admin?.role === "superadmin" && pendingCount > 0 && (
+                  <div className='flex'>
+                    <p className="mt-3 text-xl font-semibold rounded-2xl text-red-500   ">
+                      {pendingCount} pending approval
+                    </p>
                   </div>
                 )}
-              </div>
+              </Link>
             );
           })}
         </div>
