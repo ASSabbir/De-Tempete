@@ -15,7 +15,6 @@ const blogSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-blogSchema.index({ slug: 1 });
 blogSchema.index({ isActive: 1, publishedDate: -1 });
 blogSchema.index({ status: 1 });
 
