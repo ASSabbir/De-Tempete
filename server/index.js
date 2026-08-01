@@ -72,7 +72,7 @@ app.use('/api/news-events', require('./routes/newsEvents'));
 app.use('/api/blogs', require('./routes/blogs'));
 app.use('/api/business-setup-leads', require('./routes/Businesssetupleads'));
 app.use('/api/contact', require('./routes/contact'));
-app.use('/api/business-setup-calculator', require('./routes/Businesssetupcalculator'));
+app.use('/api/business-setup-calculator', require('./routes/BusinessSetupCalculator'));
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 
