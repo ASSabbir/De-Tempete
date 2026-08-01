@@ -150,10 +150,10 @@ const Banner = () => {
                 ref={slideRef}
                 className="will-change-transform"
               >
-                <h1 className="text-[3vw] font-extrabold text-white leading-tight mb-5">
+                <h1 className=" text-3xl md:text-[3vw] font-extrabold text-white leading-tight mb-5">
                   {slides[current].title}
                 </h1>
-                <p className="text-[1vw] text-white/80 leading-relaxed max-w-lg">
+                <p className="text-xl md:text-[1vw] text-white/80 leading-relaxed max-w-lg">
                   {slides[current].description}
                 </p>
               </div>
