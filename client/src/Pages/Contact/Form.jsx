@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API from "../../api/axios";
 
 // Flag emojis used as circle flags — replace with your actual flag images if needed
 import uk from '../../asstes/img_temp/Contact/197374.webp';
@@ -113,17 +114,34 @@ function PinIcon() {
   );
 }
 
+const EMPTY_FORM = { name: "", email: "", message: "" };
+
 export default function Form() {
-  const [formData, setFormData] = useState({
-    name: "", company: "", phone: "", email: "", subject: "", message: "",
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) =>
     setFormData((p) => ({ ...p, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted:", formData);
+    if (!formData.name || !formData.email) {
+      setError("Name and email are required");
+      return;
+    }
+    setSubmitting(true);
+    setError("");
+    try {
+      await API.post("/contact", { ...formData, source: "Contact Page" });
+      setSubmitted(true);
+      setFormData(EMPTY_FORM);
+    } catch (err) {
+      setError(err.response?.data?.message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -135,7 +153,7 @@ export default function Form() {
           {offices.map((office) => (
             <div key={office.name} className="flex p-[3vw] duration-300 hover:shadow-xl flex-col gap-3">
               {/* Flag circle */}
-              
+
               <img className="w-30  rounded-full " src={office.flag} alt="" />
 
               {/* Name */}
@@ -204,15 +222,11 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Right — Free Consultation Form */}
+          {/* Right — Contact Form (Name / Email / Message only) */}
           <div
             className="relative rounded-2xl overflow-hidden shadow-xl"
             style={{ background: "#0d1e4a" }}
           >
-            {/* BG image — uncomment and replace src when ready */}
-            {/* <img src={formBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" /> */}
-
-            {/* Placeholder bg pattern */}
             <div className="absolute inset-0 opacity-10 pointer-events-none"
               style={{
                 backgroundImage: `radial-gradient(circle at 70% 60%, #1a9fd4 0%, transparent 60%)`,
@@ -220,69 +234,61 @@ export default function Form() {
             />
 
             <div className="relative z-10 p-6 sm:p-8">
-              <h3 className="text-white font-bold text-xl mb-5">Free Consultation</h3>
+              <h3 className="text-white font-bold text-xl mb-5">Send Us a Message</h3>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                {/* Row 1 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {submitted ? (
+                <div className="text-center py-10">
+                  <p className="text-white font-semibold text-lg mb-2">Thank you!</p>
+                  <p className="text-white/70 text-sm">We've received your message and will be in touch shortly.</p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-6 text-[#1a9fd4] font-semibold text-sm underline"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                  {error && (
+                    <div className="text-red-300 bg-red-500/10 border border-red-400/30 rounded-lg px-4 py-2 text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <input
                     type="text" name="name" placeholder="Name"
                     value={formData.name} onChange={handleChange} required
                     className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
-                  <input
-                    type="text" name="company" placeholder="Company"
-                    value={formData.company} onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
-                    style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-                  />
-                </div>
 
-                {/* Row 2 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
-                    type="tel" name="phone" placeholder="Phone"
-                    value={formData.phone} onChange={handleChange} required
-                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
-                    style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-                  />
                   <input
                     type="email" name="email" placeholder="Email"
                     value={formData.email} onChange={handleChange} required
                     className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
                     style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
                   />
-                </div>
 
-                {/* Subject */}
-                <input
-                  type="text" name="subject" placeholder="Subject"
-                  value={formData.subject} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all"
-                  style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-                />
+                  <textarea
+                    name="message" placeholder="Message" rows={5}
+                    value={formData.message} onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all resize-none"
+                    style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+                  />
 
-                {/* Message */}
-                <textarea
-                  name="message" placeholder="Message" rows={4}
-                  value={formData.message} onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-base text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all resize-none"
-                  style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-                />
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-xl text-base font-bold text-white flex items-center justify-center gap-2 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1"
-                  style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  Send Message
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-3.5 rounded-xl text-base font-bold text-white flex items-center justify-center gap-2 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-[#1a9fd4]/30 mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
+                    style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    {submitting ? "Sending..." : "Send Message"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 
