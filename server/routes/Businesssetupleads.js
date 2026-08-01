@@ -1,5 +1,5 @@
 const express = require('express');
-const BusinessSetupLead = require('../models/businesssetupleads');
+const BusinessSetupLead = require('../models/businessSetupLeads');
 const { protect, authorize } = require('../middleware/auth');
 const { publicLimiter } = require('../middleware/rateLimit');
 
