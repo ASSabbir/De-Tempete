@@ -3,7 +3,7 @@ import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
-import RichTextEditor from '../components/RichTextEditor';
+import RichTextEditor from '../components/ssss';
 
 const MAX_IMAGES = 5;
 
