@@ -122,12 +122,12 @@ export default function Users() {
 
       <div className="mb-4">
         <label className={labelStyle}>Name</label>
-        <input
+        <input 
           value={form.name}
           onChange={(e) =>
             setForm((p) => ({ ...p, name: e.target.value }))
           }
-          className={inputStyle}
+          style={inputStyle}
         />
       </div>
 
@@ -139,7 +139,7 @@ export default function Users() {
           onChange={(e) =>
             setForm((p) => ({ ...p, email: e.target.value }))
           }
-          className={inputStyle}
+          style={inputStyle}
         />
       </div>
 
@@ -151,7 +151,7 @@ export default function Users() {
           onChange={(e) =>
             setForm((p) => ({ ...p, password: e.target.value }))
           }
-          className={inputStyle}
+          style={inputStyle}
         />
       </div>
 
@@ -162,7 +162,7 @@ export default function Users() {
           onChange={(e) =>
             setForm((p) => ({ ...p, role: e.target.value }))
           }
-          className={inputStyle}
+          style={inputStyle}
         >
           {roles
             .filter((r) => r !== "superadmin")
