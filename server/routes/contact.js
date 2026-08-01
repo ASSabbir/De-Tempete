@@ -1,5 +1,5 @@
 const express = require('express');
-const ContactSubmission = require('../models/ContactSubmission');
+const ContactSubmission = require('../models/Contactsubmission');
 const resend = require('../utils/resend');
 const { protect, authorize } = require('../middleware/auth');
 const { publicLimiter } = require('../middleware/rateLimit');
