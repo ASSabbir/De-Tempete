@@ -117,7 +117,7 @@ export default function HireTaxRegion() {
             Tax Advisory <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Our Virtual CFO services are available worldwide, but we understand every market operates
+            Our Tax Advisory services are available worldwide, but we understand every market operates
             differently. Select your region below to see how our experts can help you meet local
             compliance, manage finances efficiently, and accelerate growth.
           </p>

@@ -167,7 +167,7 @@ export default function BusinessValuationServices() {
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -176,7 +176,7 @@ export default function BusinessValuationServices() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="group flex flex-col gap-3"
+              className="group flex flex-col gap-3 hover:bg-gray-100 p-10 duration-200 rounded-xl"
             >
               {/* Icon */}
               <div className="transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1 w-fit mb-1">
