@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import Nav from './Components/Shared/Nav';
 import Footer from './Components/Shared/Footer';
 import CostCalculatorModal from './Components/Shared/CostCalculatorModal/CostCalculatorModal';
+import ScrollManager from './Components/Shared/ScrollManager';
 
 const Root = () => {
     const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -12,6 +13,7 @@ const Root = () => {
 
     return (
         <div className=' h-screen font-dmSans '>
+            <ScrollManager />
             <Nav openCalculator={openCalculator}></Nav>
             <Outlet></Outlet>
             <Footer></Footer>

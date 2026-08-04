@@ -115,7 +115,7 @@ const Reviews = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
          
-          <h2 className="text-[2.5vw] 2xl:text-3xl font-bold text-dark-blue mt-3">
+          <h2 className="text-2xl 2xl:text-[2.5vw] 2xl:text-3xl font-bold text-dark-blue mt-3">
             What our clients say
           </h2>
         </div>
@@ -132,8 +132,8 @@ const Reviews = () => {
           modules={[Autoplay, Pagination]}
           className="!pb-14 reviews-swiper"
         >
-          {reviews.map((review) => (
-            <SwiperSlide key={review.name} className="h-auto py-2">
+          {reviews.map((review,index) => (
+            <SwiperSlide key={index} className="h-auto py-2">
               <ReviewCard {...review} />
             </SwiperSlide>
           ))}

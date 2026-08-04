@@ -123,7 +123,7 @@ const stats = [
         ),
         value: 9,
         suffix: "+",
-        label: "Years of Experience",
+        label: "Years of Legacy",
     },
     {
         icon: (
@@ -133,7 +133,7 @@ const stats = [
                 <path d="M6 24h36M24 6a28 10 0 0 1 0 36M24 6a28 10 0 0 0 0 36" strokeLinejoin="round" />
             </svg>
         ),
-        value: 20,
+        value: 50,
         suffix: "+",
         label: "Countries Covered",
     },
@@ -145,7 +145,7 @@ const stats = [
                 <path d="M10 42c0-4 6.268-7 14-7s14 3 14 7" strokeLinecap="round" />
             </svg>
         ),
-        value: 30000,
+        value: 700,
         suffix: "+",
         label: "Clients Served",
     },
@@ -157,9 +157,9 @@ const stats = [
                 <path d="M10 42h28" strokeLinecap="round" />
             </svg>
         ),
-        value: 120,
+        value: 3000,
         suffix: "+",
-        label: "Awards Received",
+        label: "Projects Completed",
     },
 ];
 

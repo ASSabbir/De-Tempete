@@ -103,7 +103,7 @@ const Regulatory_Compliance = () => {
       </section>
 
       {/* AML */}
-      <section className="bg-[#16244B] py-24">
+      {/* <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-white">
@@ -136,7 +136,7 @@ const Regulatory_Compliance = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ISO Standards */}
       <section className="py-20 bg-white">

@@ -150,10 +150,10 @@ const Banner = () => {
                 ref={slideRef}
                 className="will-change-transform"
               >
-                <h1 className=" text-3xl md:text-[3vw] font-extrabold text-white leading-tight mb-5">
+                <h1 className=" text-3xl 2xl:text-[3vw] font-extrabold text-white leading-tight mb-5">
                   {slides[current].title}
                 </h1>
-                <p className="text-xl md:text-[1vw] text-white/80 leading-relaxed max-w-lg">
+                <p className="text-xl 2xl:text-[1vw] text-white/80 leading-relaxed max-w-lg">
                   {slides[current].description}
                 </p>
               </div>
@@ -170,7 +170,7 @@ const Banner = () => {
           {/* RIGHT — Consultation Form */}
           <div className="flex items-center justify-center lg:justify-end">
             <div
-              className="w-full max-w-sm 2xl:max-w-md text-[1vw] rounded-2xl p-6 sm:p-8 shadow-2xl"
+              className="w-full max-w-sm 2xl:max-w-md text-sm 2xl:text-[1vw] rounded-2xl p-6 sm:p-8 shadow-2xl"
               style={{ background: "rgba(13, 30, 74, 0.75)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               <h2 className="text-xl font-bold text-white mb-6">
@@ -222,7 +222,7 @@ const Banner = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg text-[1vw] focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
+                      className="w-full px-4 py-3 rounded-lg text-sm 2xl:text-[1vw] focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 appearance-none cursor-pointer"
                       style={{
                         background: "rgba(255,255,255,0.08)",
                         border: "1px solid rgba(255,255,255,0.1)",

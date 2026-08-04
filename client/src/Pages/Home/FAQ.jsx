@@ -44,7 +44,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
         className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-5 text-left group"
       >
         <span
-          className={`text-[1.1vw] font-semibold transition-colors duration-200 ${
+          className={`text-sm 2xl:text-[1.1vw] font-semibold transition-colors duration-200 ${
             isOpen ? "text-[#0d1e4a]" : "text-[#0d1e4a] group-hover:text-[#1a9fd4]"
           }`}
         >
@@ -81,7 +81,7 @@ function FAQItem({ faq, index, isOpen, onToggle }) {
           transition: "max-height 0.4s ease",
         }}
       >
-        <p className="px-5 sm:px-7 pb-5 text-[1vw] text-gray-500 leading-relaxed">
+        <p className="px-5 sm:px-7 pb-5 text-sm 2xl:text-[1vw] text-gray-500 leading-relaxed">
           {faq.a}
         </p>
       </div>
@@ -101,7 +101,7 @@ export default function FAQ() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
-        <h2 className="text-center text-[3vw] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-center text-2xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Frequently Asked <span className="font-extrabold">Questions</span>
         </h2>
 

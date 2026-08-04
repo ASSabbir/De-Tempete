@@ -23,7 +23,7 @@ const stats = [
         ),
         value: 9,
         suffix: "+",
-        label: "Years of Experience",
+        label: "Years of Legacy",
     },
     {
         icon: (
@@ -33,7 +33,7 @@ const stats = [
                 <path d="M6 24h36M24 6a28 10 0 0 1 0 36M24 6a28 10 0 0 0 0 36" strokeLinejoin="round" />
             </svg>
         ),
-        value: 20,
+        value: 50,
         suffix: "+",
         label: "Countries Covered",
     },
@@ -45,7 +45,7 @@ const stats = [
                 <path d="M10 42c0-4 6.268-7 14-7s14 3 14 7" strokeLinecap="round" />
             </svg>
         ),
-        value: 30000,
+        value: 700,
         suffix: "+",
         label: "Clients Served",
     },
@@ -57,9 +57,9 @@ const stats = [
                 <path d="M10 42h28" strokeLinecap="round" />
             </svg>
         ),
-        value: 120,
+        value: 3000,
         suffix: "+",
-        label: "Awards Received",
+        label: "Projects Completed",
     },
 ];
 
@@ -90,7 +90,7 @@ function StatItem({ icon, value, suffix, label, start }) {
         <div className="flex items-center gap-3 xl:gap-4">
             <div className="shrink-0 opacity-80">{icon}</div>
             <div>
-                <div className="text-[1.5vw] font-extrabold text-[#0d1e4a] leading-none">
+                <div className="text-xl 2xl:text-[1.5vw] font-extrabold text-[#0d1e4a] leading-none">
                     {display}{suffix}
                 </div>
                 <div className="text-xs xl:text-base text-gray-500 mt-0.5 font-medium">{label}</div>
@@ -144,7 +144,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0}
-                            className="text-[3vw] font-extrabold text-white leading-tight"
+                            className="text-2xl lg:text-4xl 2xl:text-[3vw] font-extrabold text-white leading-tight"
                         >
                             {text[0]}
                         </motion.h1>
@@ -156,7 +156,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.15}
-                            className="text-[#1a9fd4] font-semibold text-[1.3vw] leading-snug"
+                            className="text-[#1a9fd4] font-semibold text-sm 2xl:text-[1.3vw] leading-snug"
                         >
                              {text[1]}
                         </motion.p>
@@ -168,7 +168,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.3}
-                            className="text-white/75 text-[1vw] leading-relaxed max-w-md"
+                            className="text-white/75 text-[10px] md:text-sm 2xl:text-[1vw] leading-relaxed max-w-md"
                         >
                              {text[2]}
                         </motion.p>
@@ -180,6 +180,7 @@ const VirtualBanner = ({img,text}) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.45}
+                            className='mt-5'
                         >
                             
                             <SharedFullButton text={text[3]} path={'/contact'}></SharedFullButton>

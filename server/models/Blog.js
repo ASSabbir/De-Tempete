@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const blogSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, trim: true },
+    shortDescription: { type: String, trim: true, maxlength: 220 },
     description: { type: String, required: true },
     title2: { type: String, trim: true },
     description2: { type: String },

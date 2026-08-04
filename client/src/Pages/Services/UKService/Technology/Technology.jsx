@@ -20,7 +20,44 @@ import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
-
+const ukFeatures = [
+  {
+    title: "Software selection",
+    description: "Xero, QuickBooks, Sage, FreeAgent — matched to your business size and workflow.",
+  },
+  {
+    title: "Chart of accounts setup",
+    description: "UK GAAP / FRS 102 compliant structure from day one.",
+  },
+  {
+    title: "MTD VAT configuration",
+    description: "Making Tax Digital (MTD) VAT set up and connected correctly.",
+  },
+  {
+    title: "Bank feed integration",
+    description: "Live bank feeds with an efficient reconciliation process.",
+  },
+  {
+    title: "Payroll module setup",
+    description: "RTI submissions and pension auto-enrolment configured.",
+  },
+  {
+    title: "Data migration",
+    description: "Opening balances and historical transactions migrated from your legacy system.",
+  },
+  {
+    title: "User access controls",
+    description: "Roles, permissions, and approval workflows configured for your team.",
+  },
+  {
+    title: "Staff training & handover",
+    description: "Hands-on software training with complete handover documentation.",
+  },
+  {
+    title: "Compliance validation",
+    description: "VAT scheme validation, HMRC MTD API testing, and Companies House compatibility checks.",
+  },
+];
 const softwareSolutions = [
   { title: "Digital Record Keeping", desc: "Maintain organised digital financial records for HMRC compliance." },
   { title: "VAT Filing Support", desc: "Simplify VAT submissions with MTD-compatible systems." },
@@ -118,7 +155,7 @@ const Technology = () => {
           />
         </div>
       </section>
-       <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
+       <AccountingSoftwareImplementation features={ukFeatures}></AccountingSoftwareImplementation>
       
 
       {/* Smarter Accounting & Business Benefits */}

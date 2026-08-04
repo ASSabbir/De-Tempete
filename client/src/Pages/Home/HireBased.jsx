@@ -9,6 +9,7 @@ import {
   FaSearchDollar,
   FaChartPie,
 } from "react-icons/fa";
+import { FaShieldAlt } from "react-icons/fa";
 const services = [
   {
     title: "Virtual CFO",
@@ -67,6 +68,13 @@ const services = [
       "Track performance and ensure value creation with continuous post-investment monitoring globally.",
     icon: <FaChartPie  />,
   },
+  {
+    title: "UAE AML Compliance Services",
+    path: "/aml-compliance",
+    description:
+      "End-to-end UAE AML compliance solutions, from goAML registration and KYC to risk assessments, audits, and regulatory reporting.",
+    icon: <FaShieldAlt  />,
+  },
 ];
 
 export default function HireBased() {
@@ -74,7 +82,7 @@ export default function HireBased() {
     <section className="  w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-2xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Hire Based On <span className="font-extrabold">Expertise</span>
         </h2>
 
@@ -101,42 +109,17 @@ export default function HireBased() {
 
               {/* Text */}
               <div>
-                <h3 className="text-[#0d1e4a] font-bold text-[1.3vw] mb-2">
+                <h3 className="text-[#0d1e4a] font-bold text-sm 2xl:text-[1.3vw] mb-2">
                   {s.title}
                 </h3>
-                <p className="text-gray-500 text-[1vw] leading-relaxed">
+                <p className="text-gray-500 text-sm 2xl:text-[1vw] leading-relaxed">
                   {s.description}
                 </p>
               </div>
             </a>
           ))}
 
-          {/* CTA cell — 9th cell */}
-          <div className="bg-white flex flex-col justify-center gap-4 p-7 lg:p-9">
-            <p className="text-gray-400 text-base leading-relaxed">
-              Get tailored financial and company formation guidance from our
-              experienced advisors.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#3C9FC2] hover:bg-[#1589bb] text-white font-semibold px-6 py-3 rounded-xl text-base transition-all duration-200 shadow-md hover:shadow-[#1a9fd4]/30 hover:shadow-lg w-fit"
-            >
-              Contact Now
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </div>
+          
         </div>
       </div>
     </section>
