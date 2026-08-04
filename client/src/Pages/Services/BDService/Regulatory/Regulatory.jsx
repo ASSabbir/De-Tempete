@@ -220,7 +220,7 @@ Matters Section */}
               <img
                 src={img4}
                 alt="Financial Governance"
-                className="w-full h-150 object-cover rounded-3xl shadow-lg"
+                className="w-full h-100 object-cover rounded-3xl shadow-lg"
               />
             </div>
             {/* Content */}
@@ -231,14 +231,14 @@ Matters Section */}
                 Matters
               </h2>
 
-              <p className="mt-8 text-xl text-gray-600 text-justify">
+              <p className="mt-3 text-xl text-gray-600 text-justify">
                 Non-compliance can lead to fines, operational delays, and
                 reputational damage. Whether you’re a local startup, an
                 international investor, or a multinational enterprise, we help
                 you:
               </p>
 
-              <div className="mt-10 space-y-5">
+              <div className="mt-3 space-y-5">
                 {[
                   "Understand Bangladesh’s regulatory landscape",
                   "Achieve ISO and industry certifications",

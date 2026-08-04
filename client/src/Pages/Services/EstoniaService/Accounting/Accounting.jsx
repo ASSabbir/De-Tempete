@@ -145,7 +145,7 @@ const Accounting = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -168,7 +168,7 @@ const Accounting = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
             src={img3}
@@ -199,7 +199,7 @@ const Accounting = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-bold text-[#16244b]">
@@ -232,7 +232,7 @@ const Accounting = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
             src={img5}
@@ -269,7 +269,7 @@ const Accounting = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -289,12 +289,12 @@ const Accounting = () => {
           <img
             src={img6}
             alt="VAT-Ready Financial Record Support"
-            className="w-full h-96 object-cover rounded-2xl shadow-lg"
+            className="w-full h-78 object-cover rounded-2xl shadow-lg"
           />
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <img
             src={img7}
@@ -341,8 +341,8 @@ const Accounting = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Choose <span className="font-normal italic">de tempête</span>{" "}
+            <h2 className="text-4xl font-normal text-[#16244b]">
+              Why Choose <span className="font-bold italic">de tempête</span>{" "}
               for Finance & Accounting
             </h2>
             <div className="w-16 h-0.5 bg-linear-to-br from-light-blue to-light-blue mx-auto mt-6" />

@@ -196,7 +196,7 @@ const TechnologyUSA = () => {
 
       {/* ===================== Business Process Automation ===================== */}
 
-      <section className="py-12 bg-white">
+      <section className=" bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
@@ -259,50 +259,14 @@ const TechnologyUSA = () => {
       </section>
       <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
 
-      {/* What You Gain Section */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">
-              Continuous Support
-            </h2>
-            <div className="w-30 h-0.5 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4 w-full">
-            {benefitsData.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-8 h-8 bg-light-blue rounded-lg flex items-center justify-center shrink-0">
-                    <benefit.icon className="text-white text-xl" />
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white">
-                    {benefit.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-300 leading-7 text-base">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Why Choose Our Services Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-dark-blue">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-6xl text-[#16244b]">
+            <h2 className="text-5xl text-white">
               Why choose our{" "}
               <span className="text-light-blue font-extrabold">
                 technology services?
@@ -341,20 +305,20 @@ const TechnologyUSA = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
+                className="bg-gray-700/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center shrink-0">
                     <FaCheckCircle className="text-white text-xl" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#16244b]">
+                  <h3 className="text-xl font-bold text-white">
                     {feature.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
+                <p className="text-gray-400 leading-7">{feature.desc}</p>
               </div>
             ))}
           </div>

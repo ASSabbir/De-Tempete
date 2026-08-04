@@ -60,7 +60,7 @@ const Technology = () => {
         bgImage={bgimg}
         alt="Technology"
         heading={<>Making Tax Digital & Cloud<br /><span className="text-light-blue">Accounting For UK Businesses</span></>}
-        description="At de tempête, we help UK businesses manage accounting, VAT submissions, and digital bookkeeping through HMRC-compliant cloud accounting systems designed for modern business operations."
+        description={<>At <span className="font-bold italic">de tempête</span>, we help UK businesses manage accounting, VAT submissions, and digital bookkeeping through <br/> HMRC-compliant cloud accounting systems designed for modern business operations.</>}
       />
 
       <SecondSection></SecondSection>

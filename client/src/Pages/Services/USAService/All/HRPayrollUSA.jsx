@@ -71,7 +71,7 @@ const HRPayrollUSA = () => {
 
       {/* About */}
       <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={aboutHrImg}
             alt="About Our HR & Payroll"
@@ -94,10 +94,10 @@ const HRPayrollUSA = () => {
       </section>
 
       {/* Payroll Processing & HR Outsourcing */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#16244b]">
+            <h2 className="text-4xl font-bold text-[#16244b]">
               Payroll Processing &{" "}
               <span className="font-light">HR Outsourcing</span>
             </h2>

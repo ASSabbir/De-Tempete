@@ -30,6 +30,9 @@ import logo from '../../../../asstes/img_temp/logo.webp'
 import img5 from '../../../../asstes/img_temp/servics/Dubai-bank.webp'
 // ../../../src/asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp
 import img4 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import { Link } from "react-router";
+import SharedButton from "../../../../Components/Shared/SharedButton";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 
 
 
@@ -262,20 +265,17 @@ const Market_Expansion_Setup_Advisory = () => {
           </div>
 
           <div className="text-center mt-16">
-            <p className="text-gray-500 text-base">
+            <p className="text-gray-500 text-base mb-5">
               We manage end-to-end documentation, government coordination, and
               licensing so you can focus on growth, not paperwork.
             </p>
-            <button className="mt-8 inline-flex items-center gap-3 bg-linear-to-r from-dark-blue to-light-blue text-white px-10 py-4 rounded-xl font-semibold text-base hover:scale-105 cursor-pointer duration-300 shadow-lg">
-              Explore Complete Business Setup Service Guide
-              <FaArrowRight />
-            </button>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/uae'}></SharedFullButton>
           </div>
         </div>
       </section>
 
       {/* Go-To-Market Strategy */}
-      <section className="py-24 bg-white">
+      <section className="pb-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-light text-[#16244b]">

@@ -6,7 +6,7 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
+import img1 from '../../../../asstes/img_temp/servics/KSA/445569.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
 import img3 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
 import img4 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-excise-tax-advisor__80770.webp'
@@ -166,7 +166,7 @@ const Taxation_KSA = () => {
             {handleTags.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-7 px-4 text-center text-white text-base font-medium"
+                className="bg-[#37456B] rounded-lg py-12 px-4 text-center text-white text-base font-medium"
               >
                 {t}
               </div>

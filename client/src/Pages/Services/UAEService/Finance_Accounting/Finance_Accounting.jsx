@@ -25,8 +25,8 @@ import img1 from '../../../../asstes/img_temp/servics/Accounting.jpg'
 import img2 from '../../../../asstes/img_temp/servics/Bookkeeping.jpg'
 import img3 from '../../../../asstes/img_temp/servics/Financial.webp'
 import img4 from '../../../../asstes/img_temp/servics/UK/freepik__virtual-cfo-image-for-website__36106.webp'
-import img5 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
-import img6 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
+import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
+import img6 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import logo from '../../../../asstes/img_temp/logo.webp'
@@ -200,7 +200,7 @@ const Finance_Accounting = () => {
                 key={index}
                 className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200 hover:-translate-y-2 hover:shadow-2xl duration-300"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-82 overflow-hidden">
                   <img
                     src={item.image}
                     className="w-full h-full object-cover"
@@ -317,7 +317,7 @@ const Finance_Accounting = () => {
           <img
             src={img4}
             alt="Virtual CFO Services"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -350,7 +350,7 @@ const Finance_Accounting = () => {
       </section>
 
       {/* Business Valuation */}
-      <section className="py-12 bg-white">
+      <section className="pb-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -382,18 +382,18 @@ const Finance_Accounting = () => {
           <img
             src={img5}
             alt="Business Valuation"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover rounded-2xl shadow-lg"
           />
         </div>
       </section>
 
       {/* Procurement Advisory */}
-      <section className="py-12 bg-white">
+      <section className="pb-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img6}
             alt="Procurement Advisory & Vendor Management"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">

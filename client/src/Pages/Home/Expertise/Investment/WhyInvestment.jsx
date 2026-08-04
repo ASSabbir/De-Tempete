@@ -19,7 +19,7 @@ const WhyInvestment = () => {
               Raising investment is challenging,  investors see hundreds of pitches and only back businesses that are fully prepared. Investment readiness ensures your business is organized, financially clear, and attractive to the right investors.
             </p>
             <p className='font-bold text-dark-blue text-xl'>
-              De Tempête guides you to:
+              <span className='font-bold italic'>De Tempête</span> guides you to:
             </p>
             <div className='space-y-1'>
               <div className='flex items-center  gap-2'>

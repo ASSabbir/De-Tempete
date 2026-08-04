@@ -87,7 +87,7 @@ const processSteps = [
 ];
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp';
 import img1 from '../../../../asstes/img_temp/servics/Zoho.jpg';
-import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp';
+import img2 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp';
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 
@@ -98,7 +98,7 @@ const Technology_UAE = () => {
         bgImage={bgimg}
         alt="UAE E-Invoicing Solutions"
         heading={<>UAE E-Invoicing Solutions With<br /><span className="text-light-blue">Zoho & Odoo</span></>}
-        description="Stay compliant with upcoming UAE e-invoicing regulations with de tempête's certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses."
+        description={<>Stay compliant with upcoming UAE e-invoicing regulations with <span className="font-bold italic">de tempête</span>'s certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses.</>}
       />
 
       <SecondSection></SecondSection>

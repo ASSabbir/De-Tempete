@@ -10,6 +10,7 @@ import  { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
+import GetStarted from '../../../../Components/Shared/GetStarted';
 
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
@@ -107,6 +108,18 @@ function StatItem({ icon, value, suffix, label, start }) {
     );
 }
 const BusinessValuation = () => {
+const commitments = [
+  "Free initial business valuation consultation — no obligation",
+  "100% confidential financial and business information handling",
+  "Accurate, data-driven valuation reports you can trust",
+  "Expert insights to support investment, fundraising, mergers, and strategic decisions",
+];
+
+const title = "Ready to Discover Your Business’s True Value?";
+
+const des =
+  "Whether you're raising investment, planning a merger or acquisition, preparing for a sale, or making strategic decisions, our business valuation services deliver accurate, reliable, and actionable insights with confidence.";
+
    
     return (
         <div>
@@ -115,6 +128,7 @@ const BusinessValuation = () => {
             <BusinessValuationServices></BusinessValuationServices>
             <BKeyBenefits></BKeyBenefits>
             <BFAQ></BFAQ>
+             <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
             <Awards></Awards>
         </div>
     );

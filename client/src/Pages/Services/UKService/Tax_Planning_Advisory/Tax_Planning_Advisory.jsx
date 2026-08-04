@@ -46,7 +46,7 @@ const Tax_Planning_Advisory = () => {
 
       {/* Corporate Tax Planning */}
       <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img2}
             alt="Corporate Tax Planning & Compliance"
@@ -73,11 +73,11 @@ const Tax_Planning_Advisory = () => {
       </section>
 
       {/* Personal Tax Planning */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#16244b]">
-              Personal <span className="font-light">Tax Planning</span>
+            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
+              Personal <br/> <span className="font-light">Tax Planning</span>
             </h2>
             <p className="mt-5 text-gray-500 font-semibold">
               Reduce your tax burden with proactive planning.
@@ -92,18 +92,18 @@ const Tax_Planning_Advisory = () => {
           <img
             src={img3}
             alt="Personal Tax Planning"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-96 object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
 
       {/* Capital Gains Tax */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img4}
             alt="Capital Gains Tax Advisory"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-96 object-cover rounded-3xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -125,8 +125,8 @@ const Tax_Planning_Advisory = () => {
       </section>
 
       {/* Inheritance Tax */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">Inheritance</span>
@@ -146,18 +146,18 @@ const Tax_Planning_Advisory = () => {
           <img
             src={img5}
             alt="Inheritance Tax Planning"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-96 object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
 
       {/* R&D Tax Credit */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img6}
             alt="R&D Tax Credit Claims"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-96 object-cover rounded-3xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -180,9 +180,9 @@ const Tax_Planning_Advisory = () => {
 
       {/* HMRC Investigation Support */}
       <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+        <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">HMRC Investigation</span>
               <br />
               Support & Dispute Resolution
@@ -200,13 +200,13 @@ const Tax_Planning_Advisory = () => {
           <img
             src={img7}
             alt="HMRC Investigation Support & Dispute Resolution"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-96 object-center object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
+        <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl font-light text-[#16244b]">
               Why Choose Our{" "}

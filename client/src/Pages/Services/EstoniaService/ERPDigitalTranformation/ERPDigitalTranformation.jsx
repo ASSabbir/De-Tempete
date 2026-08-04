@@ -232,7 +232,7 @@ const ERPDigitalTranformation = () => {
             </section>
 
             {/*  Business Functions We Transform */}
-            <section className="py-24 bg-[#F5F6F8]">
+            <section className="pt-24 ">
                 <div className="max-w-[1600px] mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto">
                         <h2 className="text-4xl font-light text-[#16244b]">
@@ -243,9 +243,9 @@ const ERPDigitalTranformation = () => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-x-16 text-5xl gap-y-14 mt-16">
+                    <div className="grid lg:grid-cols-3  text-5xl  mt-16">
                         {sectors.map((item, index) => (
-                            <div key={index}>
+                            <div className="hover:bg-gray-100 p-10" key={index}>
                                 <item.icon className=" bg-light-blue/20 p-2 text-light-blue  rounded-sm mb-3" size={42} strokeWidth={1.5} />
                                 <h3 className="text-base  font-bold text-[#16244b] mb-2">
                                     {item.title}
@@ -294,7 +294,7 @@ const ERPDigitalTranformation = () => {
             
 
             {/* Marketing Strategy Accordion */}
-            <section className="py-20 px-6 bg-white">
+            <section className="pb-20 px-6 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-900 mb-2">

@@ -25,9 +25,17 @@ const Bookkeeping = () => {
         "Scalable solutions for startups and established businesses alike",
         "Save time and resources by outsourcing your bookkeeping to trusted experts",
     ];
+    const commitments = [
+  "Free initial bookkeeping consultation — no obligation",
+  "100% confidential financial data handling",
+  "Accurate, timely, and compliant bookkeeping services",
+  "Tailored bookkeeping solutions to support your business growth",
+];
 
+const title = "Ready to Simplify Your Bookkeeping?";
 
-
+const des =
+  "From recording daily transactions to maintaining accurate financial records, we help keep your books organized, compliant, and ready for smarter business decisions.";
     return (
         <div>
             <VirtualBanner img={img} text={text}></VirtualBanner>
@@ -87,6 +95,7 @@ const Bookkeeping = () => {
                 </div>
             </section>
             <BookFAQ></BookFAQ>
+             <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
             
             <Awards></Awards>
         </div>

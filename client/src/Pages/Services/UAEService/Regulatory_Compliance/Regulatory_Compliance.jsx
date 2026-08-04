@@ -52,7 +52,11 @@ const Regulatory_Compliance = () => {
             <span className="text-light-blue">Operate With Confidence.</span>
           </>
         }
-        description="At de tempête, we help businesses in the UAE navigate complex regulatory frameworks and international standards, ensuring your operations meet every legal and quality requirement. From company governance to ISO certification and AML compliance, our experts provide end-to-end guidance that keeps your business secure, credible, and future-ready."
+        description={
+          <>At <span className="italic font-bold">de tempête</span>, we help businesses in the UAE navigate complex regulatory frameworks and international standards, ensuring your operations meet every legal and quality requirement. From company governance to ISO certification and AML compliance, our experts provide end-to-end guidance that keeps your business secure, credible, and future-ready.
+          
+          </>
+        }
       />
 
       <SecondSection></SecondSection>
@@ -170,21 +174,23 @@ const Regulatory_Compliance = () => {
               ))}
             </div>
           </div>
-          <img
+          <div className="max-h-110 w-full">
+            <img
             src={img3}
             alt="ISO Standards Advisory, Training & Certification Support"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className=" h-full w-full object-cover object-center rounded-2xl shadow-lg"
           />
+          </div>
         </div>
       </section>
 
       {/* Liquidation */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img4}
             alt="Liquidation & Company Closure Support"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -222,12 +228,12 @@ const Regulatory_Compliance = () => {
       
 
       {/* Why Businesses Choose */}
-      <section className="py-24 bg-white">
+      <section className="pb-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl font-light text-[#16244b]">
-              Why Businesses{" "}
-              <span className="font-bold">Choose de tempête</span>
+              Why Businesses Choose{" "}
+              <span className="font-bold italic" > de tempête</span>
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>

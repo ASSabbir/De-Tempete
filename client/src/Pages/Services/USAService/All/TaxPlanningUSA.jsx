@@ -38,7 +38,7 @@ const TaxPlanningUSA = () => {
 
       {/* Federal Tax Preparation (LLC / C-Corp) */}
       <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+        <div className="max-w-[900px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={federalTaxImg}
             alt="Federal Tax Preparation for LLCs and C-Corps"
@@ -64,8 +64,8 @@ const TaxPlanningUSA = () => {
       </section>
 
       {/* State Tax Filings Coordination */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[900px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
               State Tax <span className="font-light">Filings Coordination</span>
@@ -90,8 +90,8 @@ const TaxPlanningUSA = () => {
       </section>
 
       {/* Sales Tax Registration & Filing */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[900px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={salesTaxImg}
             alt="Sales Tax Registration & Filing"
@@ -118,8 +118,8 @@ const TaxPlanningUSA = () => {
       </section>
 
       {/* 1099 Reporting Support */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[900px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">1099</span>
@@ -146,8 +146,8 @@ const TaxPlanningUSA = () => {
       </section>
 
       {/* Tax Planning & Advisory */}
-      <section className="py-12 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+      <section className="pb-12 bg-white">
+        <div className="max-w-[900px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={taxPlanningImg}
             alt="Tax Planning & Advisory"
@@ -174,8 +174,8 @@ const TaxPlanningUSA = () => {
       </section>
 
       {/* Why Choose */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
+      <section className="pb-24 bg-white">
+        <div className="max-w-[900px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl font-light text-[#16244b]">
               Why Choose Our{" "}

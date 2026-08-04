@@ -106,7 +106,7 @@ const Ecommerce = () => {
 
                     {/* Features */}
 
-                    <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
+                    <div className="grid lg:grid-cols-3 gap-5 mt-10">
                         {[
                             {
                                 icon: LuShoppingCart,
@@ -162,7 +162,7 @@ const Ecommerce = () => {
 
 
 
-            <section className="py-24 bg-white">
+            <section className="pb-24 bg-white">
                 <div className="max-w-[1600px] mx-auto px-6 space-y-28">
                     {/* ===================== Bank Account Opening ===================== */}
 
@@ -324,12 +324,12 @@ const Ecommerce = () => {
             {/* ================= Why Choose Us ================= */}
 
             <section className="py-24 bg-white">
-                <div className="max-w-325 mx-auto">
+                <div className="max-w-6xl mx-auto">
 
                     {/* Heading */}
 
                     <div className="text-center">
-                        <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+                        <h2 className="text-5xl 2xl::text-6xl font-light text-[#16244b] leading-tight">
                             Why Choose Our
                             <span className="font-bold"> E-commerce & SaaS Accounting Services</span>
                         </h2>

@@ -49,12 +49,12 @@ const Taxation_UAE = () => {
       <SecondSection></SecondSection>
 
       {/* Corporate Tax Advisory */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img1}
             alt="Corporate Tax Advisory"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover object-bottom rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -122,7 +122,7 @@ const Taxation_UAE = () => {
       </section>
 
       {/* Excise Tax */}
-      <section className="py-12 bg-white">
+      <section className="pb-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img3}

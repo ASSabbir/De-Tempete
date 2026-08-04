@@ -309,7 +309,7 @@ const ComplianceUSA = () => {
       </section>
 
       {/* Multi-State Nexus Analysis */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -344,7 +344,7 @@ const ComplianceUSA = () => {
       </section>
 
       {/* Compliance Calendar Setup */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img3}

@@ -7,6 +7,11 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
+import {
+  FiDollarSign,
+  FiBarChart2,
+  FiShield,
+} from "react-icons/fi";
 
 const whyChoose = [
   { title: "Accurate, timely, and compliant bookkeeping" },
@@ -37,7 +42,7 @@ const Bookkeeping_Financial_Management = () => {
         description="Efficient bookkeeping and financial management are the backbone of every successful business. Whether you're a growing SME or an established company, our services ensure accurate records, clear insights, and data-driven decisions, so you can focus on growth, not paperwork."
       />
 
-     <SecondSection></SecondSection>
+      <SecondSection></SecondSection>
 
       {/* Accurate & Timely Bookkeeping */}
       <section className="py-20 bg-white">
@@ -82,7 +87,7 @@ const Bookkeeping_Financial_Management = () => {
       </section>
 
       {/* Reconcile Accounts */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -117,28 +122,84 @@ const Bookkeeping_Financial_Management = () => {
           <img
             src={img3}
             alt="Reconcile Accounts"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-120 object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
 
       {/* Cash Flow Forecasting */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-light text-[#16244b]">
-            <span className="font-bold">Cash Flow Forecasting</span> & Budgeting
-          </h2>
-          <p className="mt-6 text-base leading-8 text-gray-500">
-            <span className="font-semibold">
-              Predict cash inflows and outflows to make smarter financial
-              decisions.
-            </span>{" "}
-            Cash flow forecasting and budgeting help you anticipate financial
-            needs, optimize spending, and avoid surprises. We create detailed
-            projections, compare actuals against budgets, and provide actionable
-            insights, so you can plan growth strategies and manage liquidity
-            effectively.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-light text-[#16244b]">
+              <span className="font-bold">Cash Flow Forecasting</span> & Budgeting
+            </h2>
+
+            <p className="mt-6 text-base md:text-lg leading-8 text-gray-500">
+              <span className="font-semibold text-gray-700">
+                Predict cash inflows and outflows to make smarter financial
+                decisions.
+              </span>{" "}
+              Cash flow forecasting and budgeting help you anticipate financial
+              needs, optimize spending, and avoid surprises. We create detailed
+              projections, compare actuals against budgets, and provide actionable
+              insights, so you can plan growth strategies and manage liquidity
+              effectively.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
+            {/* Card 1 */}
+            <div className="text-center md:text-left">
+              <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
+                <FiDollarSign className="text-light-blue text-3xl" />
+              </div>
+
+              <h3 className="text-xl font-semibold text-[#16244b]">
+                Cash Flow Forecasting
+              </h3>
+
+              <p className="mt-4 text-gray-500 leading-8">
+                Predict and track your business's cash inflows and outflows to ensure
+                liquidity, avoid shortages, and plan for growth effectively.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="text-center md:text-left">
+              <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
+                <FiBarChart2 className="text-light-blue text-3xl" />
+              </div>
+
+              <h3 className="text-xl font-semibold text-[#16244b]">
+                Budget Creation & Monitoring
+              </h3>
+
+              <p className="mt-4 text-gray-500 leading-8">
+                Set realistic financial targets, allocate resources efficiently, and
+                monitor spending to stay on track and achieve business goals.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="text-center md:text-left">
+              <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
+                <FiShield className="text-light-blue text-3xl" />
+              </div>
+
+              <h3 className="text-xl font-semibold text-[#16244b]">
+                Scenario Analysis & Risk Assessment
+              </h3>
+
+              <p className="mt-4 text-gray-500 leading-8">
+                Evaluate different financial scenarios, identify potential risks, and
+                make informed decisions to safeguard your business against
+                uncertainties.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -188,7 +249,7 @@ const Bookkeeping_Financial_Management = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-4xl 2xl:text-5xl leading-tight text-white font-light">
+            <h2 className="text-4xl 2xl:text-5xl font-bold leading-tight text-white ">
               Accounts Payable &{" "}
               <span className="font-bold">Receivable Management</span>
             </h2>
@@ -196,11 +257,11 @@ const Bookkeeping_Financial_Management = () => {
               <span className="font-semibold text-white">
                 Stay on top of who owes you and who you owe.
               </span>{" "}
-              Efficient accounts payable and receivable management improves cash
+              <p className="mt-2">Efficient accounts payable and receivable management improves cash
               flow and strengthens vendor and client relationships. We handle
               invoice tracking, payment scheduling, debt follow-ups, and
               reconciliation, ensuring smooth financial operations and timely
-              reporting.
+              reporting.</p>
             </p>
             <div className="w-44 h-1 bg-light-blue rounded-full mx-auto mt-10"></div>
           </div>
@@ -266,7 +327,7 @@ const Bookkeeping_Financial_Management = () => {
         highlightText="Talk to Our Financial Experts"
       />
 
-      
+
     </div>
   );
 };

@@ -328,7 +328,7 @@ const EUExpansion = () => {
            
 
             {/* Our Industry-Based Services */}
-            <section className="py-20 px-6 bg-white">
+            <section className="pb-20 px-6 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-light text-gray-900 mb-2">

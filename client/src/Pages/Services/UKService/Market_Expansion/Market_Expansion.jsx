@@ -132,7 +132,7 @@ const Market_Expansion = () => {
             <span className="font-normal">Advisory For Growing Companies</span>
           </>
         }
-        description="The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. de tempête supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion."
+        description={<>The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. <span className="font-bold italic">de tempête</span> supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion.</>}
       />
 
       <SecondSection></SecondSection>
@@ -154,8 +154,8 @@ const Market_Expansion = () => {
 
             <p className="mt-7 text-base text-gray-600 leading-8">
               Starting a business in the UK requires proper structuring, tax
-              registration, and compliance preparation from the beginning. de
-              tempête supports startups, SMEs, and international businesses with
+              registration, and compliance preparation from the beginning. <span className="font-bold italic">de
+              tempête</span> supports startups, SMEs, and international businesses with
               UK company formation and operational setup guidance for smooth
               market entry.
             </p>
@@ -225,7 +225,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/contact'}></SharedFullButton>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/uk'}></SharedFullButton>
           </div>
         </div>
       </section>
@@ -247,7 +247,7 @@ const Market_Expansion = () => {
             <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
               Businesses entering the UK market must align operations, pricing,
               and business structures with local regulations and market
-              expectations. de tempête supports businesses with UK market entry,
+              expectations. <span className="font-bold italic">de tempête</span> supports businesses with UK market entry,
               localisation planning, and operational setup advisory for smoother
               expansion.
             </p>
@@ -325,7 +325,7 @@ const Market_Expansion = () => {
             <p className="text-gray-500 mt-4 max-w-4xl mx-auto text-base">
               Businesses operating in the UK must maintain proper registrations
               and compliance readiness to reduce administrative delays and
-              operational risks. de tempête supports businesses with
+              operational risks. <span className="font-bold italic">de tempête</span> supports businesses with
               registration, compliance coordination, and operational setup
               guidance.
             </p>

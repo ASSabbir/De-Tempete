@@ -11,6 +11,7 @@ import EstoniaBusinessServices from './EstoniaBusinessServices';
 import EstoniaFAQ from './Estoniafaq';
 import EstoniaEResidency from './Estoniaeresidency';
 import { ConsultationCTA } from '../../../../Components/Shared/ConsultationCTA';
+import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
  
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,7 @@ const CompanyFormation = () => {
                 <div className="max-w-[1600px] mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                                 <span className="font-bold">Estonia Company Formation </span>
                                 <br />
                                 <span className="font-bold">(OÜ – Private Limited Company)</span>
@@ -144,7 +145,7 @@ const features = [
           Company Registration
         </p>
  
-        <h2 className="emtak-heading text-3xl md:text-5xl text-slate-800 leading-snug mb-5">
+        <h2 className="emtak-heading text-4xl 2xl:text-5xl text-slate-800 leading-snug mb-5">
           Choosing the Right{" "}
           <span className="font-bold text-dark-blue">
             EMTAK Activity Code
@@ -159,7 +160,7 @@ const features = [
           lookup and filing for you.
         </p>
  
-        <div className="emtak-grid grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+        <div className="emtak-grid grid grid-cols-2 mb-20 md:grid-cols-4 gap-x-6 gap-y-12">
           {features.map(({ icon: Icon, title, description }) => (
             <div key={title} className="emtak-card group flex flex-col text-xl items-center">
               <Icon
@@ -173,6 +174,7 @@ const features = [
             </div>
           ))}
         </div>
+        <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/estonia'}></SharedFullButton>
  
        
       </div>

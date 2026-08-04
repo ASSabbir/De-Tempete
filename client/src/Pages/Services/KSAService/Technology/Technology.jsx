@@ -127,11 +127,10 @@ const Technology = () => {
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold text-[#16244b]">
-              Software <span className="font-normal">Implementation</span>
+              Software <span className="">Implementation</span>
             </h2>
             <p className="mt-4 text-gray-500">
-              We implement and customize accounting and ERP software so you can
-              operate with precision and stay 100% compliant with KSA standards.
+              We implement QuickBooks, Xero, Odoo, Zoho and customize accounting software so you can operate with precision and stay 100% compliant with KSA standards.
             </p>
           </div>
           <div className="space-y-3">
