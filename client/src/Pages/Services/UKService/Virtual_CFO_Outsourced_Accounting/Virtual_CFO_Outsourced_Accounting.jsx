@@ -71,27 +71,27 @@ const cfoServices = [
 const outsourcedItems = [
   {
     title: "Bookkeeping",
-    desc: "Accurate day-to-day recording of all financial transactions, kept up to date and fully reconciled.",
+    desc: "Accurate day-to-day recording of all financial transactions, including sales, purchases, expenses, and bank entries. We keep your books fully reconciled, organized, and up to date so you always have reliable financial records and complete visibility over your business finances.",
   },
   {
     title: "Payroll Coordination",
-    desc: "End-to-end payroll processing, PAYE & NI calculations, and compliant payslip management.",
+    desc: "Comprehensive payroll processing covering employee salaries, PAYE, National Insurance, pensions, and statutory payments. We ensure every payroll run is accurate, compliant with UK regulations, and delivered on time with professionally managed payslips and reporting.",
   },
   {
     title: "VAT Returns",
-    desc: "Timely, accurate VAT preparation and MTD-compliant submissions to HMRC.",
+    desc: "Preparation and review of VAT records, calculations, and supporting documentation with complete attention to accuracy and compliance. We submit your returns under Making Tax Digital (MTD) requirements on time, helping you avoid penalties and maintain smooth HMRC compliance.",
   },
   {
     title: "Management Accounts",
-    desc: "Regular management reporting giving you a clear, real-time view of business performance.",
+    desc: "Monthly or quarterly management accounts providing clear insights into profitability, cash flow, expenses, and overall business performance. Our reports help you make informed decisions, monitor financial health, and identify opportunities for growth and cost control.",
   },
   {
     title: "Year-End Preparation",
-    desc: "Full year-end accounts preparation, ready for filing and audit-ready documentation.",
+    desc: "Complete preparation of year-end accounts, reconciliations, and supporting schedules ready for statutory filing and accountant review. We ensure your financial records are accurate, audit-ready, and prepared efficiently to simplify the year-end reporting process.",
   },
   {
     title: "Liaison with HMRC",
-    desc: "We manage HMRC correspondence, queries, and compliance on your behalf.",
+    desc: "We handle communication with HMRC on your behalf, including correspondence, queries, notices, and compliance matters. Our team ensures timely responses, accurate documentation, and proactive support so you can focus on running your business with confidence.",
   },
 ];
 
@@ -149,7 +149,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
               What Is A <span className="font-bold">Virtual CFO?</span>
             </h2>
             <p className="mt-6 text-base leading-8 text-gray-500">
@@ -178,7 +178,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
           <img
             src={img1}
             alt="What Is A Virtual CFO"
-            className="w-full h-full object-cover rounded-3xl shadow-lg"
+            className="w-full h-120 object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>

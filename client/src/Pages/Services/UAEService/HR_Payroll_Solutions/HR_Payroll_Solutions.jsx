@@ -9,7 +9,7 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
+import img1 from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
 import img4 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
@@ -78,7 +78,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img1}
             alt="About Our HR & Payroll"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -86,8 +86,8 @@ const HR_Payroll_Solutions = () => {
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
               Managing HR and payroll in the UAE can be complex with constantly
-              changing labor laws and compliance requirements. de tempête
-              provides end-to-end HR and payroll solutions that simplify
+              changing labor laws and compliance requirements. <span className="font-bold italic">de tempête </span> 
+               provides end-to-end HR and payroll solutions that simplify
               operations, reduce risks, and ensure your workforce is managed
               efficiently, so you can focus on growing your business.
             </p>
@@ -96,11 +96,11 @@ const HR_Payroll_Solutions = () => {
       </section>
 
       {/* Payroll Processing */}
-      <section className="py-12 bg-white">
+      <section className=" bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#16244b]">
-              Payroll Processing &{" "}
+            <h2 className="text-4xl font-bold text-[#16244b]">
+              Payroll Processing &{" "}<br/>
               <span className="font-light">HR Outsourcing</span>
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
@@ -127,7 +127,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img2}
             alt="Payroll Processing & HR Outsourcing"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-100 object-cover rounded-2xl shadow-lg"
           />
         </div>
       </section>
@@ -138,7 +138,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img3}
             alt="Employer Of Record (EOR) & PEO Services"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-96 object-cover object-center rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -170,7 +170,7 @@ const HR_Payroll_Solutions = () => {
       </section>
 
       {/* Workforce Compliance */}
-      <section className="py-12 bg-white">
+      <section className="pb-12 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -200,7 +200,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img4}
             alt="Workforce Compliance Advisory"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-96 object-cover object-bottom rounded-2xl shadow-lg"
           />
         </div>
       </section>

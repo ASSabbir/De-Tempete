@@ -19,7 +19,7 @@ const steps = [
   },
   {
     title: "Step 05",
-    desc: "Submit your OÜ registration through the e-Business Register, pay the €265 state fee, and digitally sign the incorporation documents.",
+    desc: "Submit your OÜ registration through the e-Business Register, pay the state fee, and digitally sign the incorporation documents.",
   },
   {
     title: "Step 06",

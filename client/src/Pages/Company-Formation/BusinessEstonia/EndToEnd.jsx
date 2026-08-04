@@ -18,7 +18,7 @@ const steps = [
     title: "e-Residency Digital ID Application",
     points: [
       "Prepare the e-Residency application and supporting documents",
-      "Submit the €150 state fee and background check",
+      "Submit the state fee and background check",
       "Approval typically within 3–6 weeks",
       "Collect your digital ID from an Estonian embassy or service point",
     ],
@@ -51,7 +51,7 @@ const steps = [
     title: "e-Business Register Filing",
     points: [
       "Digitally sign and submit the registration package",
-      "Pay the €265 state registration fee",
+      "Pay the state registration fee",
       "Register your company through the e-Business Register",
       "Receive confirmation, typically within one business day",
     ],

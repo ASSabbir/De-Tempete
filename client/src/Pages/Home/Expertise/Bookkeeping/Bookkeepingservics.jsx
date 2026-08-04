@@ -196,12 +196,12 @@ export default function BookkeepingServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
-        <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal text-center mb-14 lg:mb-20">
+        <h2 className="text-3xl lg:text-[2.6rem] text-[#0d1e4a] font-normal text-center mb-14 lg:mb-20">
           Bookkeeping <span className="font-extrabold">Services</span>
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -210,7 +210,7 @@ export default function BookkeepingServices() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-40px" }}
-              className="group flex flex-col gap-3"
+              className="group flex flex-col hover:bg-gray-100 gap-3 p-10 duration-300 rounded-xl"
             >
               <div className="mb-1 w-fit transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                 {s.icon}

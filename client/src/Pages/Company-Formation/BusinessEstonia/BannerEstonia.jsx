@@ -29,16 +29,53 @@ const BannerEstonia = () => {
           </span>
         </h2>
 
-        
+
 
         {/* Categories */}
-        <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 lg:gap-10 mt-8 text-base sm:text-base md:text-2xl font-semibold tracking-wider">
-          
-          
+        <div className="flex mb-10 flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-8 mt-8 text-base 2xl:text-lg  font-semibold tracking-wider">
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            PRIVATE LIMITED COMPANY (OÜ)
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            PUBLIC LIMITED COMPANY (AS)
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            GENERAL PARTNERSHIP (TÜ)
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            LIMITED PARTNERSHIP (UÜ)
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            COMMERCIAL ASSOCIATION
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            SOLE PROPRIETORSHIP (FIE)
+          </span>
+
+          <span className="hidden sm:block text-gray-300">|</span>
+
+          <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
+            BRANCH OF A FOREIGN COMPANY
+          </span>
         </div>
         <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
 
-        
+
       </div>
 
       {/* Custom Animation */}

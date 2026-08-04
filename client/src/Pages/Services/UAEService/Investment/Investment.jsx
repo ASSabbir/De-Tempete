@@ -9,8 +9,8 @@ import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
-import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
+import img1 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
+import img2 from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
@@ -151,7 +151,7 @@ const Investment = () => {
                 key={index}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:-translate-y-2 hover:shadow-2xl duration-300"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-78 overflow-hidden">
                   <img
                     src={item.image}
                     className="w-full h-full object-cover"

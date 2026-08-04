@@ -14,6 +14,7 @@ import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-p
 import logo from '../../../../asstes/img_temp/logo.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import { useState } from "react";
 
 const handleTags = [
   "Brand Positioning Support",
@@ -25,11 +26,26 @@ const handleTags = [
 ];
 
 const marketingItems = [
-  "Brand Strategy & Identity",
-  "Digital Marketing Roadmap",
-  "Social Media Campaigns",
-  "Content Creation & Copywriting",
-  "Website & Funnel Optimization",
+  {
+    title: "Brand Strategy & Identity",
+    desc: "Build a strong, recognizable brand with a clear positioning, compelling messaging, and a consistent visual identity that resonates with your target audience.",
+  },
+  {
+    title: "Digital Marketing Roadmap",
+    desc: "Develop a data-driven marketing strategy that aligns with your business objectives, identifies growth opportunities, and maximizes return on investment.",
+  },
+  {
+    title: "Social Media Campaigns",
+    desc: "Plan, execute, and optimize engaging social media campaigns that increase brand awareness, audience engagement, and lead generation across key platforms.",
+  },
+  {
+    title: "Content Creation & Copywriting",
+    desc: "Create high-quality marketing content, website copy, blogs, and promotional materials designed to educate, engage, and convert your audience.",
+  },
+  {
+    title: "Website & Funnel Optimization",
+    desc: "Improve user experience, conversion rates, and customer journeys through website optimization, landing page enhancements, and high-performing sales funnels.",
+  },
 ];
 
 const photoshootCards = [
@@ -87,6 +103,9 @@ const whyChoose = [
 ];
 
 const Branding_Growth = () => {
+  const [expandedItem, setExpandedItem] = useState(null);
+      const toggleAccordion = (idx) =>
+          setExpandedItem(expandedItem === idx ? null : idx);
   return (
     <div className="w-full">
       <HeroSection
@@ -156,15 +175,15 @@ const Branding_Growth = () => {
         </div>
       </section>
 
-      {/* Marketing Strategy Accordion */}
-      <section className="py-24 bg-[#f8fbff]">
-        <div className="max-w-4xl mx-auto px-6">
+      
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-light text-[#16244b]">
               <span className="font-bold">Marketing Strategy</span>, Digital
               <br />
               Presence & Social Media
-              <br />
+              
               Campaigns
             </h2>
             <p className="mt-6 text-gray-500 font-semibold">
@@ -177,20 +196,35 @@ const Branding_Growth = () => {
             </p>
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
+
           <div className="space-y-4">
             {marketingItems.map((item, idx) => (
               <div
                 key={idx}
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white"
               >
-                <button className="w-full px-6 py-4 flex items-center justify-between text-left">
-                  <span className="flex items-center gap-3 text-[#16244b] font-semibold text-base">
-                    
-                    <img src={logo} className="w-8" alt="" />
-                    {item}
-                  </span>
-                  <ChevronDown size={18} className="text-gray-500" />
+                <button
+                  onClick={() => toggleAccordion(idx)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-md  flex items-center justify-center text-white text-base">
+                      <img src={logo} alt="" />
+                    </div>
+                    <span className="font-semibold text-gray-900">
+                      {item.title}
+                    </span>
+                  </div>
+                  <ChevronDown
+                    size={20}
+                    className={`text-gray-600 transition-transform ${expandedItem === idx ? "rotate-180" : ""}`}
+                  />
                 </button>
+                {expandedItem === idx && (
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <p className="text-gray-600 text-base">{item.desc}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -209,7 +243,8 @@ const Branding_Growth = () => {
               Premium Visual Content That Elevates Your Brand
             </p>
             <p className="mt-2 text-gray-400 text-base max-w-2xl mx-auto">
-              Strong visuals build trust, especially in the UAE's fast-paced,
+              Strong visuals build trust, especially in the Saudi Arabia
+ fast-paced,
               competitive market. We help you plan, execute, and deliver premium
               photoshoots and videos that represent your brand with style and
               clarity.

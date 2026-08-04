@@ -106,9 +106,9 @@ const Taxation = () => {
             <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b] mb-6">
               Our Taxation Services In Bangladesh
             </h2>
-            <p className="text-base text-gray-600 leading-8 mb-4">
+            <p className="text-base text-gray-600 leading-6 mb-4">
               <span className="italic font-bold">de tempête</span> delivers reliable and compliant taxation services in
-              Bangladesh, helping businesses navigate the country's evolving tax
+              Bangladesh,<br/> helping businesses navigate the country's evolving tax
               framework with confidence. Our approach is aligned with the
               regulations of the National Board of Revenue (NBR), ensuring
               accurate tax handling across VAT, corporate tax, and statutory
@@ -116,7 +116,7 @@ const Taxation = () => {
               compliance and reporting, we support businesses in maintaining
               structured, audit-ready financial records.
             </p>
-            <p className="text-base text-gray-600 leading-8">
+            <p className="text-base text-gray-600 leading-6">
               We help reduce tax-related risks, improve reporting accuracy, and
               streamline tax processes so your operations remain smooth and
               fully compliant. With a focus on clarity, efficiency, and

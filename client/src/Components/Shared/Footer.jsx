@@ -176,8 +176,7 @@ const Footer = () => {
           />
 
           <p className="text-gray-300 text-base sm:text-base px-2">
-            Global Accounting Outsourcing and Business Advisory firm with
-            experienced and certified professionals.
+            Global Accounting Outsourcing and Business Growth Advisory firm with experienced and certified professionals.
           </p>
         </div>
 
@@ -245,7 +244,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-gray-300 pt-4 text-base sm:text-base">
-          Copyright © 2026 <span className="italic">de tempête</span>. All
+          Copyright © 2026 <span className="italic font-bold">de tempête</span>. All
           rights reserved.
         </div>
       </div>

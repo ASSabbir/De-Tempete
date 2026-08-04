@@ -147,7 +147,7 @@ const FinanceUSA = () => {
             </h2>
             <p className="text-base text-gray-600 leading-8">
               We provide comprehensive accounting and finance services for
-              USAi businesses, including both standalone and retainer
+              USA businesses, including both standalone and retainer
               engagement models.
             </p>
           </div>
@@ -205,7 +205,7 @@ const FinanceUSA = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl  text-[#16244b]">
+            <h2 className="text-4xl  text-[#16244b]">
               Why Choose <span className="font-bold italic">de tempête</span> Finance & Accounting Services
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>

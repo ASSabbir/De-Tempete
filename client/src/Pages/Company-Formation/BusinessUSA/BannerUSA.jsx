@@ -22,7 +22,7 @@ const BannerUSA = () => {
         {/* Sub Heading */}
         <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-light leading-snug">
           Start Your Company with{" "}
-          <span className="italic transition-all duration-300 hover:text-light-blue">
+          <span className="italic font-bold transition-all duration-300 hover:text-light-blue">
             de tempête
           </span>
         </h2>

@@ -11,9 +11,6 @@ const SharedFullButton = ({ text,path }) => {
             padding: 10px 30px;
             border-radius: 7px;
             // border: 1px solid #4AC4DE;
-            
-            
-            
             font-weight: 600;
             letter-spacing: 2px;
             background: linear-gradient( 90deg,#14497D 0%, #2774A0 50%,#4AC4DE 100%);
@@ -23,6 +20,7 @@ const SharedFullButton = ({ text,path }) => {
             box-shadow: 0 0 0 0 transparent;
             transition: all 0.2s ease-in;
           }
+
 
           .shared-btn2:hover {
           // border: 1px solid #4AC4DE;
@@ -70,7 +68,7 @@ const SharedFullButton = ({ text,path }) => {
 
       <div>
         <Link to={`${path  || '/'}`}>
-          <button className="shared-btn2  text-lg md:text-[1vw]">
+          <button className="shared-btn2  text-lg md:text-xl">
             {text || "Contact Us"}
           </button>
         </Link>

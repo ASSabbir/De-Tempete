@@ -66,6 +66,7 @@ import g from "../../../../asstes/img_temp/New folder/2.webp";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const Technology = () => {
@@ -269,42 +270,7 @@ const Technology = () => {
       </section>
 
       {/* What You Gain Section */}
-      <section className="bg-[#16244B] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-white">
-              Continuous Support
-            </h2>
-            <div className="w-30 h-0.5 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4 w-full">
-            {benefitsData.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-8 h-8 bg-light-blue rounded-lg flex items-center justify-center shrink-0">
-                    <benefit.icon className="text-white text-xl" />
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white">
-                    {benefit.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-300 leading-7 text-base">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">

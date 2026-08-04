@@ -207,7 +207,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Core Advisory Services */}
             <section className="py-24 bg-[#16244B] text-white">
-                <div className="max-w-[1600px] mx-auto px-6">
+                <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center max-w-4xl mx-auto">
                         <h2 className="text-5xl font-bold text-">
                             Core Business{" "}
@@ -242,7 +242,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Strategic Advisory Support */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6">
+                <div className="max-w-[1100px] mx-auto px-6">
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
                             <span className="font-bold">Strategic Advisory</span> Support
@@ -276,8 +276,8 @@ const BusinessAdvisoryUSA = () => {
             </section>
 
             {/* Business Plan & Feasibility Studies */}
-            <section className="py-20 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+            <section className="pb-20 bg-white">
+                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <img
                         src={img1}
                         alt="Business Plan & Feasibility Studies"
@@ -311,8 +311,8 @@ const BusinessAdvisoryUSA = () => {
             </section>
 
             {/* Growth & Expansion Strategy */}
-            <section className="py-20 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+            <section className="pb-20 bg-white">
+                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-4xl leading-tight text-[#16244b] font-light">
                             <span className="font-bold">Growth & Expansion </span>
@@ -347,8 +347,8 @@ const BusinessAdvisoryUSA = () => {
 
 
             {/* Fundraising & Investor Readiness */}
-            <section className="py-20 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+            <section className="pb-20 bg-white">
+                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <img
                         src={img4}
                         alt="Fundraising & Investor Readiness"
@@ -384,7 +384,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Advisory Deliverables */}
             <section className="bg-[#16244B] py-24">
-                <div className="max-w-[1600px] mx-auto px-6">
+                <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center max-w-5xl mx-auto">
                         <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
                             Key Advisory{" "}
@@ -464,9 +464,9 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Why Choose Us */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6">
+                <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center">
-                        <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-light text-[#16244b] leading-tight">
                             Why Choose Our{" "}
                             <span className="font-bold">USA Business Advisory</span>
                         </h2>

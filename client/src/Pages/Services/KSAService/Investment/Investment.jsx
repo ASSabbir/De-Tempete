@@ -80,6 +80,7 @@ const whyChoose = [
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-Bookkeeping-Services-in-Saudi-Arabia.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/445569.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
@@ -191,7 +192,7 @@ const Investment = () => {
             </div>
           </div>
           <img
-            src={img1}
+            src={img3}
             alt="Investment Planning & Market Opportunity Support"
             className="w-full h-96 object-cover rounded-2xl shadow-lg"
           />

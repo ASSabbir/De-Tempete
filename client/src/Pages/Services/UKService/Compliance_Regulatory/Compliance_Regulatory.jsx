@@ -173,11 +173,11 @@ const Compliance_Regulatory = () => {
             payroll compliance, VAT rules, and CIS regulations. Whether you're a
             startup, SME, contractor, or growing business, our Compliance &
             Regulatory Services ensure accuracy, transparency, and full
-            statutory compliance with zero hassle.
+            statutory compliance with zero hassle. 
             
             
-            <span className="text-base md:text-xl text-gray-300">
-              We handle the paperwork, deadlines, and reporting, so you stay
+            <span className="text-base  text-gray-300">
+               We handle the paperwork, deadlines, and reporting, so you stay
               focused on running your business.
             </span>
           </>
@@ -261,13 +261,13 @@ const Compliance_Regulatory = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
             
-            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/contact'}></SharedFullButton>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/uk'}></SharedFullButton>
           </div>
         </div>
       </section>
 
       {/* Corporation Tax CT600 */}
-      <section className="py-24 bg-white">
+      <section className="pb-24 bg-white">
         <div className="max-w-[1300px] mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
@@ -282,13 +282,13 @@ const Compliance_Regulatory = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-24">
+          <div className="grid lg:grid-cols-3  mt-24">
             {ctFeatures.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
-                  className="p-4 hover:bg-white  rounded-3xl duration-300"
+                  className="p-4 hover:bg-gray-100 p-10 rounded-3xl duration-300"
                 >
                   <Icon className="text-4xl text-light-blue bg-light-blue/20  p-2 rounded-sm mb-6" />
                   <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
@@ -308,7 +308,7 @@ const Compliance_Regulatory = () => {
           <img
             src={img1}
             alt="Self-Assessment Tax Returns"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-120 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
@@ -337,7 +337,7 @@ const Compliance_Regulatory = () => {
       </section>
 
       {/* VAT */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
@@ -365,13 +365,13 @@ const Compliance_Regulatory = () => {
           <img
             src={img2}
             alt="VAT Filing"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-120 object-cover rounded-2xl shadow-lg"
           />
         </div>
       </section>
 
       {/* ACSP */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img3}
@@ -406,7 +406,7 @@ const Compliance_Regulatory = () => {
       </section>
 
       {/* Payroll */}
-      <section id="uk-payroll" className="py-20 bg-white">
+      <section id="uk-payroll" className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -441,12 +441,12 @@ const Compliance_Regulatory = () => {
       </section>
 
       {/* Pension Auto-Enrolment */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img5}
             alt="Pension Auto-Enrolment Compliance"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-120 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">

@@ -233,7 +233,7 @@ const Market_Expansion = () => {
               licensing so you can focus on growth, not paperwork.
             </p>
 
-            <SharedFullButton text={'Explore Complete Business Setup Service Guide'}></SharedFullButton>
+            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/bd'}></SharedFullButton>
           </div>
         </div>
       </section>

@@ -170,7 +170,7 @@ export default function DueDiligenceServices() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -179,7 +179,7 @@ export default function DueDiligenceServices() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-40px" }}
-              className="group flex flex-col gap-3"
+              className="group hover:bg-white p-10 rounded-xl duration-200 flex flex-col gap-3"
             >
               <div className="mb-1 w-fit transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                 {s.icon}

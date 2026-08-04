@@ -55,8 +55,8 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
     if (stepIndex === 0) return !!country;
     const fields = visibleFields(currentSection.fields);
     return fields.every((f) => {
-      if (!f.required) return true;
       const val = formData[f.id];
+      if (f.type === "multi") return Array.isArray(val) && val.length > 0;
       return val !== undefined && val !== "" && val !== null;
     });
   };
@@ -289,7 +289,7 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                   <div key={field.id}>
                     <label className="block text-base font-semibold text-gray-700 mb-3">
                       {field.label}
-                      {field.required && <span className="text-red-400 ml-1">*</span>}
+                      <span className="text-red-400 ml-1">*</span>
                     </label>
                     {renderField(field)}
                   </div>

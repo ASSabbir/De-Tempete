@@ -63,7 +63,7 @@ const AccountingSoftwareImplementation = () => {
         {/* Header */}
         <div className="max-w-3xl">
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[#081B57] mt-3 leading-tight">
+          <h2 className="text-4xl 2xl:text-5xl font-bold text-[#081B57] mt-3 leading-tight">
             Accounting Software Implementation Service
           </h2>
           <p className="mt-6 text-base text-gray-600 leading-relaxed">
