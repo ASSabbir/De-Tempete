@@ -129,10 +129,10 @@ export default function VirtualCFOServices() {
 
         {/* Heading */}
         <div className="mb-10 lg:mb-14">
-          <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-3">
+          <h2 className="text-4xl 2xl:text-[3vw] text-[#0d1e4a] font-normal mb-3">
             Virtual CFO <span className="font-extrabold">Services</span>
           </h2>
-          <p className="text-gray-500 text-[1vw] ">
+          <p className="text-gray-500 text-sm 2xl:text-[1vw] ">
             <span className="font-bold italic text-[#0d1e4a]">de tempête</span> provide comprehensive
             financial oversight to help you make confident, data driven decisions.
           </p>
@@ -156,7 +156,7 @@ export default function VirtualCFOServices() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[#0d1e4a] font-bold text-[1.1vw] leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
+              <h3 className="text-[#0d1e4a] font-bold text-xl 2xl:text-[1.1vw] leading-snug group-hover:text-[#1a9fd4] transition-colors duration-200">
                 {service.title}
               </h3>
 

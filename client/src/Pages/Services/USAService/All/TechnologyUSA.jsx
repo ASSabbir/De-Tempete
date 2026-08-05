@@ -67,7 +67,32 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import businessAutomationImg from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 
-
+const usaFeatures = [
+  {
+    title: "Software selection",
+    description: "QuickBooks, Xero, Sage Intacct, or NetSuite based on your business requirements.",
+  },
+  {
+    title: "Chart of accounts setup",
+    description: "Design a structured chart of accounts for accurate financial management.",
+  },
+  {
+    title: "Payroll module setup",
+    description: "Configure payroll processing, employee records, and tax settings.",
+  },
+  {
+    title: "Data migration",
+    description: "Migrate opening balances and historical transactions from legacy accounting systems.",
+  },
+  {
+    title: "User access controls",
+    description: "Establish secure user roles, permissions, and approval workflows.",
+  },
+  {
+    title: "Staff training & handover",
+    description: "Deliver software training and comprehensive handover documentation.",
+  },
+];
 
 const TechnologyUSA = () => {
   const servicesData = [
@@ -257,7 +282,7 @@ const TechnologyUSA = () => {
           </div>
         </div>
       </section>
-      <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
+      <AccountingSoftwareImplementation features={usaFeatures}></AccountingSoftwareImplementation>
 
       
 

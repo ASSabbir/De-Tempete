@@ -23,7 +23,7 @@ const stats = [
     icon: <FaMoneyBillAlt />,
   },
   {
-    value: 20,
+    value: 50,
     suffix: "%",
     label: "Employee Experience",
     desc: "Enhancing transparency, satisfaction, and workforce management systems.",

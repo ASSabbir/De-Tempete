@@ -164,6 +164,32 @@ const benefits = [
     "Scalable ERP solutions tailored to your business growth",
     "Reduced manual work, increased accuracy, and smarter decision-making",
 ];
+const estoniaFeatures = [
+  {
+    title: "Software selection",
+    description: "Tally Prime, QuickBooks, Xero, Odoo, or Zoho selected to match your business operations.",
+  },
+  {
+    title: "Chart of accounts setup",
+    description: "Implement a structured chart of accounts for accurate bookkeeping.",
+  },
+  {
+    title: "Payroll module setup",
+    description: "Configure payroll processing and employee management within the system.",
+  },
+  {
+    title: "Data migration",
+    description: "Transfer opening balances and historical transactions from your previous accounting software.",
+  },
+  {
+    title: "User access controls",
+    description: "Configure user roles, permissions, and approval workflows for secure access.",
+  },
+  {
+    title: "Staff training & handover",
+    description: "Provide end-user training and detailed documentation for ongoing operations.",
+  },
+];
 
 const keyBenefittext = [
     "Key Benefits",
@@ -256,7 +282,7 @@ const ERPDigitalTranformation = () => {
                     </div>
                 </div>
             </section>
-            <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
+            <AccountingSoftwareImplementation features={estoniaFeatures}></AccountingSoftwareImplementation>
 
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
 

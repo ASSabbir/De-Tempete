@@ -1,37 +1,4 @@
-const features = [
-  {
-    title: 'Software selection',
-    description: 'Xero, QuickBooks, Sage, FreeAgent — matched to your business size and workflow.',
-  },
-  {
-    title: 'Chart of accounts setup',
-    description: 'UK GAAP / FRS 102 compliant structure from day one.',
-  },
-  {
-    title: 'MTD VAT configuration',
-    description: 'Making Tax Digital VAT set up and connected correctly.',
-  },
-  {
-    title: 'Bank feed integration',
-    description: 'Live bank feeds plus a proper reconciliation process.',
-  },
-  {
-    title: 'Payroll module setup',
-    description: 'RTI submissions and pension auto-enrolment configured.',
-  },
-  {
-    title: 'Data migration',
-    description: 'Opening balances and historic transactions moved over from your legacy system.',
-  },
-  {
-    title: 'User access controls',
-    description: 'Roles, permissions, and approval workflows set up for your team.',
-  },
-  {
-    title: 'Staff training + handover',
-    description: 'Hands-on training plus documentation your team can keep.',
-  },
-];
+
 
 const complianceChecks = [
   {
@@ -56,7 +23,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-const AccountingSoftwareImplementation = () => {
+const AccountingSoftwareImplementation = ({features}) => {
   return (
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">

@@ -21,7 +21,7 @@ const roleBadgeColor = {
   blog: '#ec4899',
 };
 
-const EMPTY = { name: '', email: '', password: '', role: 'resource' };
+const EMPTY = { name: '', email: '', password: '', role: 'superadmin' };
 
 export default function Users() {
   const [admins, setAdmins] = useState([]);
@@ -165,7 +165,7 @@ export default function Users() {
           style={inputStyle}
         >
           {roles
-            .filter((r) => r !== "superadmin")
+            
             .map((r) => (
               <option key={r} value={r}>
                 {roleLabels[r] || r}

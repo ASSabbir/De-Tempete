@@ -68,7 +68,7 @@ const SharedFullButton = ({ text,path }) => {
 
       <div>
         <Link to={`${path  || '/'}`}>
-          <button className="shared-btn2  text-lg md:text-xl">
+          <button className="shared-btn2  text-sm 2xl:text-xl">
             {text || "Contact Us"}
           </button>
         </Link>

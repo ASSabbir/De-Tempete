@@ -42,7 +42,7 @@ const WhyPValuation = () => {
         </div>
 
       </div>
-      <div className='flex bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
+      <div className='flex flex-col md:flex-row gap-2 bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
                 <h1 className='text-2xl'>Get a Powerful, Investor-Ready Valuation That Accelerates Your Funding Journey</h1>
                 <SharedButton text={'Start Today'} path={'/contact'}></SharedButton>
             </div>

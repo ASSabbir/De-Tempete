@@ -28,10 +28,10 @@ export default function WhatWeDo() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-3xl 2xl:text-[3vw] text-[#0d1e4a] font-normal mb-4">
             What We <span className="font-extrabold">Do?</span>
           </h2>
-          <p className="text-gray-500 text-[1vw] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-500 text-sm 2xl:text-[1vw] max-w-2xl mx-auto leading-relaxed">
             Comprehensive business solutions designed to help you launch,
             manage, and scale your business with confidence across global
             markets.
@@ -54,12 +54,12 @@ export default function WhatWeDo() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[#0d1e4a] font-bold text-[1.3vw] mb-3 leading-snug">
+              <h3 className="text-[#0d1e4a] font-bold text-sm 2xl:text-[1.3vw] mb-3 leading-snug">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 text-[1vw] leading-relaxed">
+              <p className="text-gray-500 text-sm 2xl:text-[1vw] leading-relaxed">
                 {card.description}
               </p>
             </div>

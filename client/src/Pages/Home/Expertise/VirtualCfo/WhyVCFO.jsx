@@ -8,13 +8,13 @@ const WhyVCFO = () => {
         
                   {/* Left — Text */}
                   <div>
-                    <h2 className="text-[3vw] 2xl:text-[2vw] font-normal text-[#0d1e4a] leading-tight mb-6">
+                    <h2 className="text-xl md:text-4xl 2xl:text-[2vw] font-normal text-[#0d1e4a] leading-tight mb-6">
                       Why Your Business Needs a 
                       <br className="hidden sm:block" />
                        <span className="font-extrabold">Virtual CFO / Fractional CFO</span>
                     </h2>
         
-                    <div className="space-y-4 text-[1vw] text-gray-600 leading-relaxed">
+                    <div className="space-y-4 text-sm 2xl:text-[1vw] text-gray-600 leading-relaxed">
                       <p>
                          Building a business from the ground up is rewarding — but managing its finances as it grows can be overwhelming. Most growing companies need experienced financial leadership, yet hiring a full-time CFO can be costly.
                       </p>

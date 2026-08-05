@@ -103,6 +103,7 @@ import USAPublications from "../Pages/Publications/USAPublications";
 import EstoniaPublications from "../Pages/Publications/EstoniaPublications";
 import EstoniaForms from "../Pages/Forms/EstoniaForms";
 import USAForms from "../Pages/Forms/USAForms";
+import Aml from "../Pages/Home/Expertise/Aml/Aml";
 
 
 const Routes = createBrowserRouter([ 
@@ -134,6 +135,7 @@ const Routes = createBrowserRouter([
       {path:"/investment-readiness" , element : <InvestmentReadiness></InvestmentReadiness> },
       {path:"/due-diligence" , element : <Due></Due> },
       {path:"/post-investment-monitoring" , element : <POstInvestment></POstInvestment> },
+      {path:"/aml-compliance" , element : <Aml></Aml> },
 
       // ===== SERVICES: UAE =====
       { path: "/services/uae/market-expansion", element: <Market_Expansion_Setup_Advisory></Market_Expansion_Setup_Advisory> },

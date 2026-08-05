@@ -5,8 +5,10 @@ import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
 import RichTextEditor from '../components/RichTextEditor';
 
+const SHORT_DESC_MAX = 220;
+
 const EMPTY = {
-  title: '', description: '', title2: '', description2: '',
+  title: '', shortDescription: '', description: '', title2: '', description2: '',
   coverImage: '', publishedDate: '', isActive: true,
 };
 
@@ -29,6 +31,7 @@ const columns = [
 
 const inputStyle = { width: '100%', padding: '10px 14px', border: '1px solid #d1d5db', borderRadius: 8, fontSize: 14, boxSizing: 'border-box' };
 const labelStyle = { display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 };
+const textareaStyle = { ...inputStyle, minHeight: 70, resize: 'vertical', fontFamily: 'inherit' };
 
 export default function Blogs() {
   const { admin } = useAuth();
@@ -64,6 +67,7 @@ export default function Blogs() {
   const openEdit = (item) => {
     setForm({
       ...item,
+      shortDescription: item.shortDescription || '',
       publishedDate: item.publishedDate ? new Date(item.publishedDate).toISOString().split('T')[0] : '',
     });
     setEditing(item._id);
@@ -188,6 +192,22 @@ export default function Blogs() {
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Main Title</label>
               <input value={form.title} onChange={e => setForm(p => ({ ...p, title: e.target.value }))} style={inputStyle} />
+            </div>
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>
+                Short Description
+                <span style={{ fontWeight: 400, color: '#9ca3af', marginLeft: 6 }}>
+                  ({form.shortDescription.length}/{SHORT_DESC_MAX}) — shown on blog cards, not the full article
+                </span>
+              </label>
+              <textarea
+                value={form.shortDescription}
+                maxLength={SHORT_DESC_MAX}
+                onChange={e => setForm(p => ({ ...p, shortDescription: e.target.value }))}
+                style={textareaStyle}
+                placeholder="One or two sentences summarizing this post..."
+              />
             </div>
 
             <div style={{ marginBottom: 16 }}>

@@ -57,14 +57,14 @@ const Home = () => {
             </div>
             <Awards></Awards>
             <div className='px-10  pb-30' >
-                <div className='flex max-w-7xl mx-auto bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
-                    <h1 className='text-[1.5vw]'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
+                <div className='flex flex-col md:flex-row gap-3 max-w-7xl mx-auto bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
+                    <h1 className='text-sm 2xl:text-[1.5vw]'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
                     <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
                 </div>
             </div>
             <FAQ></FAQ>
             <EventBlogPartners></EventBlogPartners>
-            {/* <RecentBlogs blogs={blogPosts} /> */}
+            <RecentBlogs  />
 
 
         </div>

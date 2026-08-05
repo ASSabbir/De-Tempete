@@ -174,7 +174,7 @@ export default function CFOAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[3vw] text-white font-normal leading-tight"
+              className="text-3xl 2xl:text-[3vw] text-white font-normal leading-tight"
             >
               A Virtual CFO<br />
               Bridges <span className="font-extrabold">That Gap</span>
@@ -186,7 +186,7 @@ export default function CFOAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white/60 text-[1vw] leading-relaxed max-w-md"
+              className="text-white/60 text-sm 2xl:text-[1vw] leading-relaxed max-w-md"
             >
               Get strategic financial management on a flexible, part-time, or project basis.
               You get the same executive-level expertise at a fraction of the cost.
@@ -201,7 +201,7 @@ export default function CFOAdvantage() {
               className="flex flex-col gap-3"
             >
               {bullets.map((b) => (
-                <li key={b} className="flex items-center gap-3 text-white/70 text-[1vw]">
+                <li key={b} className="flex items-center gap-3 text-white/70 text-sm 2xl:text-[1vw]">
                   <svg className="w-5 h-5 shrink-0 text-[#1a9fd4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>

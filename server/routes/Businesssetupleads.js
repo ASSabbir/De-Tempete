@@ -6,9 +6,14 @@ const { publicLimiter } = require('../middleware/rateLimit');
 const router = express.Router();
 
 const GUIDES = {
-  'uae-guide-2026': 'https://drive.google.com/file/d/1wR0hbrioeHwYQyXwiRgRSygNQ32cIJd0/view',
-  // 'ksa-guide-2026': 'https://drive.google.com/...',
-  // 'usa-guide-2026': 'https://drive.google.com/...',
+  'uae-guide-2026': 'https://drive.google.com/drive/folders/1JWSP27GbI3IH57VEoIRBCEQecJBmujQW',
+  'uk-guide-2026': 'https://drive.google.com/drive/folders/1lWaKDsXRwCJg5AbVDm-ixXyYYQKCsFG8',
+  'bd-guide-2026': 'https://drive.google.com/drive/folders/1-z4BbEEYDg2azVSih8SMIfyoixN2rCSF',
+  'ksa-guide-2026': 'https://drive.google.com/drive/folders/1VljQgR_oc6MubiczmFdM5iAm73GKldPf',
+  'usa-guide-2026': 'https://drive.google.com/drive/folders/1SIcca04SfKWGM7KmLcJyBS_XY0c41kW5',
+  'estonia-guide-2026': 'https://drive.google.com/drive/folders/1HB09Xdl9XNvLf-edFhweCL14bfYmqgSp',
+  'aml-guide-2026': 'https://drive.google.com/drive/folders/1E3j9rAvfLFWGpnuHRl2tZ3zKvOcDnmKG',
+  
 };
 
 // POST /api/business-setup-leads — public, rate-limited to prevent form spam

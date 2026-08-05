@@ -68,7 +68,32 @@ import img1 from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automa
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
-
+const bangladeshFeatures = [
+  {
+    title: "Software selection",
+    description: "Tally Prime, QuickBooks, Xero, Odoo, or Zoho tailored to your business needs.",
+  },
+  {
+    title: "Chart of accounts setup",
+    description: "Customized account structure designed for accurate financial reporting.",
+  },
+  {
+    title: "Payroll module setup",
+    description: "Configure payroll processes, employee records, and salary calculations.",
+  },
+  {
+    title: "Data migration",
+    description: "Transfer opening balances and historical transactions from existing systems.",
+  },
+  {
+    title: "User access controls",
+    description: "Set up secure user roles, permissions, and approval workflows.",
+  },
+  {
+    title: "Staff training & handover",
+    description: "Provide practical training and documentation for smooth adoption.",
+  },
+];
 const Technology = () => {
   const servicesData = [
     {
@@ -270,7 +295,7 @@ const Technology = () => {
       </section>
 
       {/* What You Gain Section */}
-      <AccountingSoftwareImplementation></AccountingSoftwareImplementation>
+      <AccountingSoftwareImplementation features={bangladeshFeatures}></AccountingSoftwareImplementation>
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">

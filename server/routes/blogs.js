@@ -49,12 +49,13 @@ router.get('/', publicLimiter, async (req, res) => {
   }
 });
 
-// GET /api/blogs/recent — public
+// GET /api/blogs/recent — public. Optional ?limit= (default 5, capped at 10)
 router.get('/recent', publicLimiter, async (req, res) => {
   try {
+    const limit = Math.min(10, Math.max(1, parseInt(req.query.limit) || 5));
     const filter = { isActive: true, status: 'published' };
     if (req.query.exclude) filter.slug = { $ne: req.query.exclude };
-    const items = await Blog.find(filter).sort({ publishedDate: -1 }).limit(5).lean();
+    const items = await Blog.find(filter).sort({ publishedDate: -1 }).limit(limit).lean();
     res.set('Cache-Control', 'public, max-age=60');
     res.json(items);
   } catch {
@@ -75,7 +76,7 @@ router.get('/:slug', publicLimiter, async (req, res) => {
 
 router.post('/', protect, authorize('superadmin', 'blog'), async (req, res) => {
   try {
-    const { title, description, title2, description2, coverImage, publishedDate } = req.body;
+    const { title, shortDescription, description, title2, description2, coverImage, publishedDate } = req.body;
     if (!title || !description || !coverImage || !publishedDate) {
       return res.status(400).json({ message: 'title, description, coverImage, publishedDate required' });
     }
@@ -86,7 +87,7 @@ router.post('/', protect, authorize('superadmin', 'blog'), async (req, res) => {
     }
     const status = req.admin.role === 'superadmin' ? 'published' : 'pending';
     const item = await Blog.create({
-      title, description, title2, description2, coverImage, publishedDate, slug, status,
+      title, shortDescription, description, title2, description2, coverImage, publishedDate, slug, status,
     });
     res.status(201).json(item);
   } catch (err) {
@@ -96,8 +97,8 @@ router.post('/', protect, authorize('superadmin', 'blog'), async (req, res) => {
 
 router.put('/:id', protect, authorize('superadmin', 'blog'), async (req, res) => {
   try {
-    const { title, description, title2, description2, coverImage, publishedDate, isActive } = req.body;
-    const update = { title, description, title2, description2, coverImage, publishedDate, isActive };
+    const { title, shortDescription, description, title2, description2, coverImage, publishedDate, isActive } = req.body;
+    const update = { title, shortDescription, description, title2, description2, coverImage, publishedDate, isActive };
     if (req.admin.role !== 'superadmin') update.status = 'pending';
 
     const item = await Blog.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
