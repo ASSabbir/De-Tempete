@@ -7,7 +7,7 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp'
-import img2 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
+import img2 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
 import img3 from '../../../../asstes/img_temp/servics/1775737113368.jpg'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import { ConsultationCTA } from "../../../../Components/Shared/ConsultationCTA";

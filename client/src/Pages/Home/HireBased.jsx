@@ -33,6 +33,13 @@ const services = [
     icon: <FaFileInvoiceDollar  />,
   },
   {
+    title: "UAE AML Compliance Services",
+    path: "/aml-compliance",
+    description:
+      "End-to-end UAE AML compliance solutions, from goAML registration and KYC to risk assessments, audits, and regulatory reporting.",
+    icon: <FaShieldAlt  />,
+  },
+  {
     title: "Bookkeeping",
     path: "/bookkeeping",
     description:
@@ -68,13 +75,7 @@ const services = [
       "Track performance and ensure value creation with continuous post-investment monitoring globally.",
     icon: <FaChartPie  />,
   },
-  {
-    title: "UAE AML Compliance Services",
-    path: "/aml-compliance",
-    description:
-      "End-to-end UAE AML compliance solutions, from goAML registration and KYC to risk assessments, audits, and regulatory reporting.",
-    icon: <FaShieldAlt  />,
-  },
+  
 ];
 
 export default function HireBased() {

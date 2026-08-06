@@ -199,6 +199,22 @@ const Tax = () => {
           />
         </div>
       </section>
+      <ConsultationCTA
+    heading={
+        <>
+            Build Your
+            <br />
+            <span className="font-bold">European Presence</span>
+        </>
+    }
+    subheading="From market entry and international business structuring to finance, compliance, and ongoing advisory, we help businesses expand into Europe with confidence through Estonia."
+    commitmentItems={[
+        "Free strategic consultation",
+        "Cross-border expansion specialists",
+        "International finance & reporting support",
+        "Long-term partnership for sustainable growth",
+    ]}
+/>
 
       
       

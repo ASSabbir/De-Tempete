@@ -87,7 +87,7 @@ const processSteps = [
 ];
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp';
 import img1 from '../../../../asstes/img_temp/servics/Zoho.jpg';
-import img2 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp';
+import img2 from '../../../../asstes/img_temp/456.webp';
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 

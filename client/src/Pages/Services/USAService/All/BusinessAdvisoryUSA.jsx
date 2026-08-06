@@ -172,7 +172,7 @@ const BusinessAdvisoryUSA = () => {
                     <p className="text-light-blue font-semibold">
                         THE ADVISORY GAP
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
+                    <h2 className="text-4xl 2xl:text-5xl font-bold text-[#14224A] mt-2">
                         Growing Without a Plan Is Risky
                     </h2>
                     <p className="mt-4 text-light-blue font-semibold text-base">
@@ -209,7 +209,7 @@ const BusinessAdvisoryUSA = () => {
             <section className="py-24 bg-[#16244B] text-white">
                 <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-5xl font-bold text-">
+                        <h2 className="text-4xl 2xl:text-5xl font-bold text-">
                             Core Business{" "}
                             <span className="font-extrabold">Advisory Services</span>
                         </h2>
@@ -244,7 +244,7 @@ const BusinessAdvisoryUSA = () => {
             <section className="py-24 bg-white">
                 <div className="max-w-[1100px] mx-auto px-6">
                     <div className="max-w-5xl mx-auto text-center">
-                        <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
+                        <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
                             <span className="font-bold">Strategic Advisory</span> Support
                         </h2>
                         <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
@@ -284,12 +284,12 @@ const BusinessAdvisoryUSA = () => {
                         className="w-full h-full  object-cover rounded-2xl shadow-lg"
                     />
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+                        <h2 className="text-4xl 2xl:text-5xl  leading-tight text-[#16244b] font-light">
                             <span className="font-bold">Business Plan</span>
                             <br />
                             & Feasibility Studies
                         </h2>
-                        <p className="mt-8 text-xl leading-7 text-gray-500">
+                        <p className="mt-8 text-lg leading-7 text-gray-500">
                             A Clear, Data-Backed Plan Before You Commit Capital. We build
                             detailed business plans and feasibility studies that validate
                             your idea, model, or expansion against real market conditions
@@ -314,7 +314,7 @@ const BusinessAdvisoryUSA = () => {
             <section className="pb-20 bg-white">
                 <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+                        <h2 className="text-4xl 2xl:text-5xl  leading-tight text-[#16244b] font-light">
                             <span className="font-bold">Growth & Expansion </span>
                             Strategy
                         </h2>
@@ -355,7 +355,7 @@ const BusinessAdvisoryUSA = () => {
                         className="w-full h-full object-cover rounded-2xl shadow-lg"
                     />
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+                        <h2 className="text-4xl 2xl:text-5xl  leading-tight text-[#16244b] font-light">
                             <span className="font-bold">Fundraising</span>
                             <br />
                             & Investor Readiness
@@ -386,7 +386,7 @@ const BusinessAdvisoryUSA = () => {
             <section className="bg-[#16244B] py-24">
                 <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center max-w-5xl mx-auto">
-                        <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+                        <h2 className="text-4xl 2xl:text-5xl  leading-tight text-white font-light">
                             Key Advisory{" "}
                             <span className="font-bold">Deliverables</span>
                         </h2>
@@ -466,7 +466,7 @@ const BusinessAdvisoryUSA = () => {
             <section className="py-24 bg-white">
                 <div className="max-w-[1100px] mx-auto px-6">
                     <div className="text-center">
-                        <h2 className="text-4xl md:text-5xl font-light text-[#16244b] leading-tight">
+                        <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
                             Why Choose Our{" "}
                             <span className="font-bold">USA Business Advisory</span>
                         </h2>
