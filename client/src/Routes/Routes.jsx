@@ -104,38 +104,39 @@ import EstoniaPublications from "../Pages/Publications/EstoniaPublications";
 import EstoniaForms from "../Pages/Forms/EstoniaForms";
 import USAForms from "../Pages/Forms/USAForms";
 import Aml from "../Pages/Home/Expertise/Aml/Aml";
+import AML from "../Pages/Services/UAEService/Technology_UAE/AML";
 
 
-const Routes = createBrowserRouter([ 
+const Routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     errorElement: <NotFound></NotFound>,
-   children:[
+    children: [
       // ===== HOME =====
-      {path:"/" , element :<Home></Home>},
-      {path:"/contact" , element : <ContactUs></ContactUs> },
+      { path: "/", element: <Home></Home> },
+      { path: "/contact", element: <ContactUs></ContactUs> },
 
       // ===== BUSINESS SETUP =====
-      {path:"/business-setup/uae" , element :<BusinessUAE></BusinessUAE>},
-      {path:"/business-setup/ksa" , element :<BusinessKSA></BusinessKSA>},
-      {path:"/business-setup/bd" , element :<BusinessBD></BusinessBD>},
-      {path:"/business-setup/uk" , element :<BusinessUK></BusinessUK>},
-      {path:"/business-setup/usa" , element :<BusinessUSA></BusinessUSA>},
-      {path:"/business-setup/estonia" , element :<BusinessEstonia></BusinessEstonia>},
-      {path:"/contact" , element : <ContactUs></ContactUs> },
-      {path:"/about" , element : <About></About> },
+      { path: "/business-setup/uae", element: <BusinessUAE></BusinessUAE> },
+      { path: "/business-setup/ksa", element: <BusinessKSA></BusinessKSA> },
+      { path: "/business-setup/bd", element: <BusinessBD></BusinessBD> },
+      { path: "/business-setup/uk", element: <BusinessUK></BusinessUK> },
+      { path: "/business-setup/usa", element: <BusinessUSA></BusinessUSA> },
+      { path: "/business-setup/estonia", element: <BusinessEstonia></BusinessEstonia> },
+      { path: "/contact", element: <ContactUs></ContactUs> },
+      { path: "/about", element: <About></About> },
 
       // ===== HIRE BASED ON EXPERTISE =====
-      {path:"/virtual-cfo" , element : <VirtualCFO></VirtualCFO> },
-      {path:"/business-valuation" , element : <BusinessValuation></BusinessValuation> },
-      {path:"/Tax-Advisory" , element : <TaxAdvisory></TaxAdvisory> },
-      {path:"/bookkeeping" , element : <Bookkeeping></Bookkeeping> },
-      {path:"/hr-payroll" , element : <HRandPayroll></HRandPayroll> },
-      {path:"/investment-readiness" , element : <InvestmentReadiness></InvestmentReadiness> },
-      {path:"/due-diligence" , element : <Due></Due> },
-      {path:"/post-investment-monitoring" , element : <POstInvestment></POstInvestment> },
-      {path:"/aml-compliance" , element : <Aml></Aml> },
+      { path: "/virtual-cfo", element: <VirtualCFO></VirtualCFO> },
+      { path: "/business-valuation", element: <BusinessValuation></BusinessValuation> },
+      { path: "/Tax-Advisory", element: <TaxAdvisory></TaxAdvisory> },
+      { path: "/bookkeeping", element: <Bookkeeping></Bookkeeping> },
+      { path: "/hr-payroll", element: <HRandPayroll></HRandPayroll> },
+      { path: "/investment-readiness", element: <InvestmentReadiness></InvestmentReadiness> },
+      { path: "/due-diligence", element: <Due></Due> },
+      { path: "/post-investment-monitoring", element: <POstInvestment></POstInvestment> },
+      { path: "/aml-compliance", element: <Aml></Aml> },
 
       // ===== SERVICES: UAE =====
       { path: "/services/uae/market-expansion", element: <Market_Expansion_Setup_Advisory></Market_Expansion_Setup_Advisory> },
@@ -145,7 +146,9 @@ const Routes = createBrowserRouter([
       { path: "/services/uae/branding", element: <Branding_Growth></Branding_Growth> },
       { path: "/services/uae/e-invoicing", element: <Technology_UAE></Technology_UAE> },
       { path: "/services/uae/investment", element: <UAEInvestment></UAEInvestment> },
-{ path: "/services/uae/regulatory", element: <Regulatory_Compliance></Regulatory_Compliance> },
+      { path: "/services/uae/regulatory", element: <Regulatory_Compliance></Regulatory_Compliance> },
+      { path: "/services/uae/aml-compliance", element: <AML></AML> },
+
       // ===== SERVICES: KSA =====
       { path: "/services/ksa/market-expansion", element: <KSAMarketExpansionSetupAdvisory></KSAMarketExpansionSetupAdvisory> },
       { path: "/services/ksa/regulatory", element: <KSARegulatoryCompliance></KSARegulatoryCompliance> },
@@ -169,7 +172,7 @@ const Routes = createBrowserRouter([
 
       // ===== SERVICES: BD =====
       { path: "/services/bd/market-expansion", element: <Market_Expansion></Market_Expansion> },
-      
+
       { path: "/services/bd/regulatory", element: <Regulatory></Regulatory> },
       { path: "/services/bd/finance", element: <Finance></Finance> },
       { path: "/services/bd/taxation", element: <Taxation></Taxation> },
@@ -188,17 +191,17 @@ const Routes = createBrowserRouter([
       { path: "/services/estonia/erp-digital-transformation", element: <ERPDigitalTranformation></ERPDigitalTranformation> },
       { path: "/services/estonia/ecommerce-saas-accounting", element: <Ecommerce></Ecommerce> },
       { path: "/services/estonia/eu-expansion", element: <EUExpansion></EUExpansion> },
-      
+
       // ===== SERVICES: USA =====
       { path: "/services/usa/market-expansion", element: <MarketExpansionUSA></MarketExpansionUSA> },
       { path: "/services/usa/compliance", element: <ComplianceUSA></ComplianceUSA> },
       { path: "/services/usa/finance-accounting", element: <FinanceUSA></FinanceUSA> },
-      { path: "/services/usa/tax-planning", element: <TaxPlanningUSA></TaxPlanningUSA>},
-      { path: "/services/usa/business-advisory", element: <BusinessAdvisoryUSA></BusinessAdvisoryUSA>},
+      { path: "/services/usa/tax-planning", element: <TaxPlanningUSA></TaxPlanningUSA> },
+      { path: "/services/usa/business-advisory", element: <BusinessAdvisoryUSA></BusinessAdvisoryUSA> },
       { path: "/services/usa/hr-payroll", element: <HRPayrollUSA></HRPayrollUSA> },
       { path: "/services/usa/technology", element: <TechnologyUSA></TechnologyUSA> },
       { path: "/services/usa/industry-accounting", element: <IndustrySpecificUSA></IndustrySpecificUSA> },
-      
+
 
       // ===== LIBRARY =====
       { path: "/library/uae", element: <UAELibrary /> },
@@ -213,7 +216,7 @@ const Routes = createBrowserRouter([
       { path: "/publications/ksa", element: <KSAPublications /> },
       { path: "/publications/uk", element: <UKPublications /> },
       { path: "/publications/bangladesh", element: <BDPublications /> },
-      { path: "/publications/usa", element: <USAPublications></USAPublications>},
+      { path: "/publications/usa", element: <USAPublications></USAPublications> },
       { path: "/publications/estonia", element: <EstoniaPublications></EstoniaPublications> },
 
       // ===== FORMS =====
@@ -234,8 +237,8 @@ const Routes = createBrowserRouter([
 
       { path: "/privacy-policy", element: <PrivacyPolicy></PrivacyPolicy> },
       { path: "/terms-conditions", element: <TermsConditions></TermsConditions> },
-      
-      
+
+
     ]
   }
 ]);

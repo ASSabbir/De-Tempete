@@ -95,7 +95,7 @@ function MarqueeRow({ items, direction, speed = 40 }) {
 
 export default function LogoMarqueeRows() {
   return (
-    <section className="w-full bg-white px-6 py-16 sm:px-10">
+    <section className="w-full bg-white px-6 py- sm:px-10">
       <div className="mx-auto flex max-w-6xl flex-col gap-10">
         {ROWS.map((row, idx) => (
           <MarqueeRow key={idx} items={row.items} direction={row.direction} />

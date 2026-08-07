@@ -86,8 +86,8 @@ const HR_Payroll_Solutions = () => {
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
               Managing HR and payroll in the UAE can be complex with constantly
-              changing labor laws and compliance requirements. <span className="font-bold italic">de tempête </span> 
-               provides end-to-end HR and payroll solutions that simplify
+              changing labor laws and compliance requirements. <span className="font-bold text-gray-700 italic">de tempête </span> 
+               provides <span className="font-bold text-gray-700">end-to-end HR and payroll solutions</span> that simplify
               operations, reduce risks, and ensure your workforce is managed
               efficiently, so you can focus on growing your business.
             </p>

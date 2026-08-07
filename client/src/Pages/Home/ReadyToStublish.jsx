@@ -29,18 +29,14 @@ const Marquee = ({
   return (
     <div className={`overflow-hidden whitespace-nowrap ${className}`}>
       <div
-        className="flex w-max"
-        style={{
-          animation: `marquee ${duration}s linear infinite`,
-          animationPlayState: pauseOnHover ? "running" : undefined,
-        }}
-        onMouseEnter={(e) => {
-          if (pauseOnHover) e.currentTarget.style.animationPlayState = "paused";
-        }}
-        onMouseLeave={(e) => {
-          if (pauseOnHover) e.currentTarget.style.animationPlayState = "running";
-        }}
-      >
+  className={`flex w-max ${pauseOnHover ? "hover:[animation-play-state:paused]" : ""}`}
+  style={{
+    animationName: "marquee",
+    animationDuration: `${duration}s`,
+    animationTimingFunction: "linear",
+    animationIterationCount: "infinite",
+  }}
+>
         <div ref={contentRef} className="flex shrink-0" style={{ paddingRight: gap }}>
           {children}
         </div>
@@ -77,7 +73,7 @@ const ReadyToStublish = () => {
       <div className="relative mt-20 w-full pointer-events-none">
         <Marquee speed={120}>
           <span className="text-[10vw] font-extrabold leading-[0.8] text-white/10">
-            9 YEARS OF EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017 .
+            9 YEARS OF LEGACY & EMPOWERING BUSINESSES SINCE 2017 .
           </span>
         </Marquee>
       </div>

@@ -4,7 +4,7 @@ import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD','Estonia','USA'];
 const EMPTY = { title: '', fileFormat: 'PDF', imageUrl: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const statusBadge = (status) => (

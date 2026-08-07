@@ -74,7 +74,15 @@ const faqs = [
     a: "100%. All financial and business data is handled securely and remains strictly confidential.",
   },
   {
-    q: "10. How do I get started with de tempête?",
+    q: (
+      <>
+        10. How do I get started with {" "}
+        <strong>
+          <em>de tempête</em>
+        </strong>
+        {" "}?
+      </>
+    ),
     a: (
       <>
         Book a Free Startup Valuation Consultation with{" "}

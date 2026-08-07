@@ -1,5 +1,6 @@
 // shared/BlogSidebar.jsx
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 export const BlogSidebar = ({ posts, currentId }) => (
   <div className="space-y-6">
@@ -9,9 +10,9 @@ export const BlogSidebar = ({ posts, currentId }) => (
         <div className="p-6">
           <h3 className="text-base font-bold text-[#16244b] leading-snug mb-3">{post.title}</h3>
           <p className="text-gray-500 text-base leading-6 mb-4 line-clamp-3">{post.desc}</p>
-          <a href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-light-blue text- font-semibold text-base hover:gap-3 duration-300">
+          <Link to={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-light-blue text- font-semibold text-base hover:gap-3 duration-300">
             Read More <FaArrowRight size={12} />
-          </a>
+          </Link>
         </div>
       </div>
     ))}

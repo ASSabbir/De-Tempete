@@ -33,6 +33,13 @@ const services = [
     icon: <FaFileInvoiceDollar  />,
   },
   {
+    title: "UAE AML Compliance Services",
+    path: "/aml-compliance",
+    description:
+      "End-to-end UAE AML compliance solutions, from goAML registration and KYC to risk assessments, audits, and regulatory reporting.",
+    icon: <FaShieldAlt  />,
+  },
+  {
     title: "Bookkeeping",
     path: "/bookkeeping",
     description:
@@ -68,13 +75,7 @@ const services = [
       "Track performance and ensure value creation with continuous post-investment monitoring globally.",
     icon: <FaChartPie  />,
   },
-  {
-    title: "UAE AML Compliance Services",
-    path: "/aml-compliance",
-    description:
-      "End-to-end UAE AML compliance solutions, from goAML registration and KYC to risk assessments, audits, and regulatory reporting.",
-    icon: <FaShieldAlt  />,
-  },
+  
 ];
 
 export default function HireBased() {
@@ -89,8 +90,8 @@ export default function HireBased() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  rounded-2xl ">
           {services.map((s, i) => (
-            <a
-              href={s.path}
+            <Link
+              to={s.path}
               key={s.title}
               className={`group relative flex flex-col gap-4 p-7 hover:shadow-xl lg:p-9 transition-all duration-300 cursor-pointer
                 `}
@@ -116,7 +117,7 @@ export default function HireBased() {
                   {s.description}
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
 
           
