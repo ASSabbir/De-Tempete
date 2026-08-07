@@ -66,18 +66,18 @@ const ForwardSection = () => {
 
         {/* =================== BOTTOM =================== */}
 
-        <div className="grid lg:grid-cols-2 gap-16 mt-28 items-center">
+        <div className=" gap-16 mt-28 items-center">
 
           {/* Left */}
 
-          <div>
+          <div className="flex flex-col  items-center">
 
             <h2 className="text-4xl 2xl:text-5xl font-bold text-dark-blue mb-8">
               Our Key <span className="font-extrabold">Strength</span>
             </h2>
 
-            <p className="text-gray-600 mb-10 leading-8">
-              At <span className="font-semibold italic">de tempête</span>, we
+            <p className="text-gray-600 mb-10 text-center max-w-5xl leading-6">
+              At <span className="font-semibold italic ">de tempête</span>, we
               understand that every business is unique, and so are its
               financial and operational needs. Our mission is to provide
               clarity, precision, and support at every step, helping you focus
@@ -86,14 +86,14 @@ const ForwardSection = () => {
             </p>
 
             
-            <SharedFullButton text={'Discover More'} path={'/contact'}></SharedFullButton>
+            
 
           </div>
 
 
           {/* Right */}
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
             <StrengthCard
               icon={img1}
@@ -120,6 +120,9 @@ const ForwardSection = () => {
             />
 
           </div>
+          {/* <div className="flex justify-center mt-10">
+            <SharedFullButton text={'Discover More'} path={'/contact'}></SharedFullButton>
+          </div> */}
 
         </div>
 

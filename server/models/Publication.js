@@ -7,7 +7,7 @@ const publicationSchema = new mongoose.Schema({
   downloadUrl: { type: String, required: true, trim: true, maxlength: 2048 },
   region: {
     type: String, required: true,
-    enum: ['UAE', 'KSA', 'UK', 'BD'],
+    enum: ['UAE', 'KSA', 'UK', 'BD','Estonia','USA'],
     default: 'UAE',
   },
   isActive: { type: Boolean, default: true },

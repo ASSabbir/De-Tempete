@@ -9,6 +9,8 @@ import { MdEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import img1 from '../../asstes/img_temp/logo1.webp'
 import { Link } from "react-router";
+import { useEffect, useState } from "react";
+import { fetchGuideByKey } from "../../api/guidesApi";
 
 
 
@@ -133,6 +135,83 @@ const Footer = () => {
     phone: "+966 55 949 3954",
     address:
       "Office # 303, Al Mohamdia Tower, Custodian of the Two Holy Mosques Road, Al Aqrabiyah City, Al Khobar, Ash Sharqiyah, Saudi Arabia",
+  },
+];
+const [ebrochureUrl, setEbrochureUrl] = useState(
+    "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7" // fallback = your current hardcoded link
+  );
+
+  useEffect(() => {
+    fetchGuideByKey("ebrochure-guide-2026")
+      .then((data) => {
+        if (data?.downloadUrl) setEbrochureUrl(data.downloadUrl);
+      })
+      .catch(() => {
+        
+      });
+  }, []);
+
+  const footerColumns = [
+  {
+    title: "BUSINESS SETUP",
+    links: [
+      { label: "UAE", path: "/business-setup/uae" },
+      { label: "UK", path: "/business-setup/uk" },
+      { label: "KSA", path: "/business-setup/ksa" },
+      { label: "USA", path: "/business-setup/usa" },
+      { label: "Estonia", path: "/business-setup/estonia" },
+      { label: "Bangladesh", path: "/business-setup/bd" },
+    ],
+  },
+  {
+    title: "PUBLICATIONS",
+    links: [
+      { label: "UAE", path: "/publications/uae" },
+      { label: "UK", path: "/publications/uk" },
+      { label: "KSA", path: "/publications/ksa" },
+      { label: "USA", path: "/publications/usa" },
+      { label: "Estonia", path: "/publications/estonia" },
+      { label: "Bangladesh", path: "/publications/bangladesh" },
+    ],
+  },
+  {
+    title: "LIBRARY",
+    links: [
+      { label: "UAE", path: "/library/uae" },
+      { label: "UK", path: "/library/uk" },
+      { label: "KSA", path: "/library/ksa" },
+      { label: "USA", path: "/library/usa" },
+      { label: "Estonia", path: "/library/estonia" },
+      { label: "Bangladesh", path: "/library/bangladesh" },
+    ],
+  },
+  {
+    title: "FORMS",
+    links: [
+      { label: "UAE", path: "/forms/uae" },
+      { label: "UK", path: "/forms/uk" },
+      { label: "KSA", path: "/forms/ksa" },
+      { label: "USA", path: "/forms/usa" },
+      { label: "Estonia", path: "/forms/estonia" },
+      { label: "Bangladesh", path: "/forms/bangladesh" },
+    ],
+  },
+  {
+    title: "COMPANY",
+    links: [
+      { label: "About", path: "/about" },
+      { label: "E-Brochure", path: ebrochureUrl },
+      { label: "News & Events", path: "/news-events" },
+      { label: "Blog", path: "/blogs" },
+      { label: "Contact", path: "/contact" },
+    ],
+  },
+  {
+    title: "LEGAL",
+    links: [
+      { label: "Privacy Policy", path: "/privacy-policy" },
+      { label: "Terms & Conditions", path: "/terms-conditions" },
+    ],
   },
 ];
 

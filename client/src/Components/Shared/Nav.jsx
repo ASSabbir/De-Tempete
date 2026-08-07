@@ -9,6 +9,7 @@ import ksaImg from "../../asstes/img_temp/New folder/Business-set-up-in-kSA.webp
 import bdImg from "../../asstes/img_temp/New folder/Business-set-up-in-BD.webp";
 import uaeImg from "../../asstes/img_temp/New folder/Dubai-Business-set-up.webp";
 import ESImg from "../../asstes/img_temp/Estonia.webp";
+import { fetchGuideByKey } from "../../api/guidesApi";
 
 const companyFormation = [
   { img: uaeImg, label: "Business Setup in UAE", path: "/business-setup/uae" },
@@ -56,6 +57,10 @@ const services = {
     {
       label: "Investment & Partnership Facilitation",
       path: "/services/uae/investment",
+    },
+    {
+      label: "AML Compliance Services",
+      path: "/services/uae/aml-compliance",
     },
   ],
 
@@ -235,13 +240,45 @@ const services = {
   ],
 };
 
-const resourceSections = {
+
+
+const navLinks = [
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
+
+export default function Nav({ openCalculator }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
+  const [activeServiceRegion, setActiveServiceRegion] = useState("UAE");
+  const [resourceOpen, setResourceOpen] = useState(false);
+  const [mobileResourceOpen, setMobileResourceOpen] = useState(false);
+
+  const [ebrochureUrl, setEbrochureUrl] = useState(
+    "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7" // fallback = your current hardcoded link
+  );
+
+  useEffect(() => {
+    fetchGuideByKey("ebrochure-guide-2026")
+      .then((data) => {
+        if (data?.downloadUrl) setEbrochureUrl(data.downloadUrl);
+      })
+      .catch(() => {
+        // silently keep the fallback link if the fetch fails
+      });
+  }, []);
+
+  const resourceSections = {
   COMPANY: [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     {
       label: "E-brochure",
-      path: "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7",
+      path: ebrochureUrl,
     },
     { label: "News & Events", path: "/news-events" },
     { label: "Contact", path: "/contact" },
@@ -276,21 +313,8 @@ const resourceSections = {
   ],
 };
 
-const navLinks = [
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
-];
 
-export default function Nav({ openCalculator }) {
-  const [scrolled, setScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [companyOpen, setCompanyOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
-  const [activeServiceRegion, setActiveServiceRegion] = useState("UAE");
-  const [resourceOpen, setResourceOpen] = useState(false);
-  const [mobileResourceOpen, setMobileResourceOpen] = useState(false);
+
   const resourceRef = useRef(null);
   const resourceTimeout = useRef(null);
 
@@ -558,8 +582,8 @@ export default function Nav({ openCalculator }) {
 
             {/* CTA */}
             <button
-            onClick={openCalculator}
-              
+              onClick={openCalculator}
+
               className={`ml-3 px-5 py-2 rounded-lg 2xl:text-lg font-semibold border-[1px] transition-all duration-200 ${scrolled ? "border-[#0d1e4a] text-[#0d1e4a] hover:bg-[#0d1e4a] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#0d1e4a]"}`}
             >
               Cost Calculator
@@ -764,7 +788,7 @@ export default function Nav({ openCalculator }) {
 
           <div className="pt-2 pb-2">
             <button
-              
+
               // onClick={() => setMobileOpen(false)}
               onClick={openCalculator}
               className="block w-full py-3 text-center rounded-lg text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-[#0d1e4a] transition-all duration-200"

@@ -3,7 +3,7 @@ import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { useAuth } from '../context/AuthContext';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD'];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD','Estonia','USA'];
 const EMPTY = { title: '', issuingAuthority: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const statusBadge = (status) => (
