@@ -53,7 +53,7 @@ const Home = () => {
             <div className='bg-gray-50 pt-30'>
                 <div >
                 <div className=' max-w-7xl mx-auto'>
-                    <h1 className='text-6xl font-bold text-[#0d1e4a]   text-center mb-10'>Testimonial</h1>
+                    <h1 className='text-4xl md:text-5xl font-bold text-[#0d1e4a]   text-center mb-10'>Feedback Inspire Us </h1>
                     <Reviews></Reviews>
                 </div>
             </div>

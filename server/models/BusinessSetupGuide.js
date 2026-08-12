@@ -8,6 +8,7 @@ const businessSetupGuideSchema = new mongoose.Schema(
     label: { type: String, required: true, trim: true }, // e.g. "UAE Business Setup Guide 2026" — admin panel only
     downloadUrl: { type: String, required: true, trim: true },
     isActive: { type: Boolean, default: true },
+    status: { type: String, enum: ['pending', 'published'], default: 'pending' },
   },
   { timestamps: true }
 );

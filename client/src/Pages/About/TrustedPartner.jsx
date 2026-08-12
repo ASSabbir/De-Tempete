@@ -1,3 +1,10 @@
+import * as MarqueeModule from "react-fast-marquee";
+const MarqueeLib =
+  MarqueeModule.default?.default ||
+  MarqueeModule.default ||
+  MarqueeModule.Marquee ||
+  MarqueeModule;
+
 const TrustedPartner = () => {
   return (
     <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] py-24">
@@ -7,68 +14,38 @@ const TrustedPartner = () => {
           Your Trusted Partner for Global Accounting, Compliance & Business Formation.
         </h2>
 
-        
-
         <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-base font-medium hover:bg-white hover:text-[#081B57] duration-300">
           Get Started Now
         </button>
       </div>
 
       {/* Bottom Marquee */}
-      <div className="absolute bottom-0 mt-5 left-0 w-full overflow-hidden pointer-events-none">
-        <div className="marquee-track">
-          <div className="marquee-content">
-            <span>
-              9 YEARS OF LEGACY & EMPOWERING BUSINESSES SINCE 2017 . 9
-              YEARS OF LEGACY & EMPOWERING BUSINESSES SINCE 2017 9 YEARS OF
-              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017 . 9 YEARS OF
-              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017
-            </span>
-
-            <span>
-              9 YEARS OF LEGACY & EMPOWERING BUSINESSES SINCE 2017 . 9
-              YEARS OF LEGACY & EMPOWERING BUSINESSES SINCE 2017 9 YEARS OF
-              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017 9 YEARS OF
-              EXPERIENCE & EMPOWERING BUSINESSES SINCE 2017
-            </span>
-          </div>
-        </div>
+      <div className="absolute bottom-0 left-0 w-full pointer-events-none">
+        <MarqueeLib
+          speed={80}
+          gradient={false}
+          pauseOnHover={false}
+        >
+          <span className="marquee-text">
+            9 YEARS OF LEGACY &amp; EMPOWERING BUSINESSES SINCE 2017 .&nbsp;
+          </span>
+        </MarqueeLib>
       </div>
 
-      {/* Animation */}
+      {/* Text styling only — no animation logic here */}
       <style>
         {`
-    .marquee-track {
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee-content {
-      display: flex;
-      width: max-content;
-      animation: marquee 100s linear infinite;
-    }
-
-    .marquee-content span {
+    .marquee-text {
       font-size: 120px;
       font-weight: 800;
       line-height: 0.8;
       color: rgba(255,255,255,0.12);
       padding-right: 80px;
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+      white-space: nowrap;
     }
 
     @media (max-width: 768px) {
-      .marquee-content span {
+      .marquee-text {
         font-size: 60px;
       }
     }

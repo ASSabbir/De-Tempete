@@ -4,15 +4,23 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import gsap from "gsap";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaPlay } from "react-icons/fa";
 
-// Just paste video IDs here — the part after "v=" or after "youtu.be/"
+// Import your custom thumbnails here — adjust paths/filenames to match your project
+import thumb1 from "../../asstes/img_temp/review/1r.png";
+import thumb2 from "../../asstes/img_temp/review/2r.png";
+import thumb3 from "../../asstes/img_temp/review/3r.png";
+import thumb4 from "../../asstes/img_temp/review/4r.png";
+import thumb5 from "../../asstes/img_temp/review/5r.png";
+
+
+// Pair each YouTube video ID with its custom thumbnail image
 const videoLinks = [
-  "05aSfaUbqfQ",
-  "rwyywkgYnR0",
-  "4uDcV8azY7o",
-  "1ZK4B_isoJ8",
-  "ufmOhdiHUvE",
+  { id: "05aSfaUbqfQ", thumbnail: thumb1 },
+  { id: "rwyywkgYnR0", thumbnail: thumb2 },
+  { id: "4uDcV8azY7o", thumbnail: thumb3 },
+  { id: "1ZK4B_isoJ8", thumbnail: thumb4 },
+  { id: "OxmOyTkwjOk", thumbnail: thumb5 },
 ];
 
 const VideoModal = ({ videoId, onClose }) => {
@@ -75,7 +83,7 @@ const VideoModal = ({ videoId, onClose }) => {
   );
 };
 
-const VideoCard = ({ videoId, onPlay }) => {
+const VideoCard = ({ videoId, thumbnail, onPlay }) => {
   const cardRef = useRef(null);
 
   const handleEnter = () => {
@@ -92,19 +100,26 @@ const VideoCard = ({ videoId, onPlay }) => {
       onMouseLeave={handleLeave}
       className="relative aspect-video rounded-2xl overflow-hidden shadow-sm border border-black/5 bg-black"
     >
-      <iframe
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&rel=0&modestbranding=1`}
-        title="Client review preview"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
+      {/* Custom thumbnail, imported locally — no YouTube fetch */}
+      <img
+        src={thumbnail}
+        alt="Client review thumbnail"
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      {/* transparent click layer to open the modal (iframe above blocks clicks otherwise) */}
+
+      {/* Darken slightly so the play button reads clearly on any thumbnail */}
+      <div className="absolute inset-0 bg-black/20" />
+
       <button
         onClick={() => onPlay(videoId)}
         aria-label="Play video"
-        className="absolute inset-0 w-full h-full cursor-pointer"
-      />
+        className="absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer group"
+      >
+        <span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+          <FaPlay className="text-dark-blue text-lg sm:text-xl ml-1" />
+        </span>
+      </button>
     </div>
   );
 };
@@ -133,9 +148,9 @@ const VideoReviews = () => {
           modules={[Autoplay, Pagination]}
           className="!pb-14 video-reviews-swiper"
         >
-          {videoLinks.map((id) => (
+          {videoLinks.map(({ id, thumbnail }) => (
             <SwiperSlide key={id} className="h-auto py-2">
-              <VideoCard videoId={id} onPlay={setActiveVideo} />
+              <VideoCard videoId={id} thumbnail={thumbnail} onPlay={setActiveVideo} />
             </SwiperSlide>
           ))}
         </Swiper>

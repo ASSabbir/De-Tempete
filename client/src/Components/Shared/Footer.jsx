@@ -8,22 +8,25 @@ import {
 import { MdEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import img1 from '../../asstes/img_temp/logo1.webp'
-import { Link } from "react-router";
+import { Link, useLocation, useNavigation } from "react-router";
 import { useEffect, useState } from "react";
 import { fetchGuideByKey } from "../../api/guidesApi";
+import { FaTiktok } from "react-icons/fa";
+import Awards from '../../Pages/Home/Awards'
 
 
 
 const socialLinks = [
-  {
-    icon: FaFacebookF,
-    href: "https://www.facebook.com/detempete",
-    label: "Facebook",
-  },
+  
   {
     icon: FaLinkedinIn,
     href: "https://www.linkedin.com/company/14612088/admin/dashboard/",
     label: "LinkedIn",
+  },
+  {
+    icon: FaFacebookF,
+    href: "https://www.facebook.com/detempete",
+    label: "Facebook",
   },
   {
     icon: FaInstagram,
@@ -32,6 +35,11 @@ const socialLinks = [
   },
   {
     icon: FaXTwitter,
+    href: "https://www.tiktok.com/@de_tempete",
+    label: "X",
+  },
+  {
+    icon: FaTiktok,
     href: "https://x.com/DeTempeteHQ",
     label: "X",
   },
@@ -107,11 +115,13 @@ const footerColumns = [
 
 
 const Footer = () => {
+  const nav=useLocation()
+  console.log(nav.pathname)
   const officeCards = [
   {
     title: "UK",
     phone: "+44 7831 848639",
-    address: "115 London Road, Morden, SM4 5HP, UK",
+    address: "",
   },
   {
     title: "BANGLADESH",
@@ -217,7 +227,7 @@ const [ebrochureUrl, setEbrochureUrl] = useState(
 
 
   return (
-    <footer className="bg-dark-blue text-white mt-24 sm:mt-32 lg:mt-40 relative">      {/* Newsletter */}
+    <footer className={`bg-dark-blue text-white   ${nav.pathname =='/about' ? 'mt-10':'mt-24 sm:mt-32 lg:mt-40'} relative`}>      {/* Newsletter */}
       <div className="max-w-7xl mx-auto px-5 pt-25">
         <div className="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:-top-20 w-full max-w-7xl -mt-16 lg:mt-0">
           <div className="bg-linear-to-r from-dark-blue to-light-blue rounded-xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 border border-light-blue transition-all duration-500 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(74,196,222,0.35)]">
@@ -286,24 +296,27 @@ const [ebrochureUrl, setEbrochureUrl] = useState(
           {officeCards.map((office, index) => (
             <div
               key={index}
-              className="bg-[#2D3C75] rounded-xl p-6 transition-all duration-300 hover:bg-[#374a8f] hover:-translate-y-1 hover:shadow-lg hover:shadow-light-blue/10"
+              className="bg-[#2D3C75] rounded-xl flex flex-col  items-center p-6 transition-all duration-300 hover:bg-[#374a8f] hover:-translate-y-1 hover:shadow-lg hover:shadow-light-blue/10"
             >
-              <h3 className="font-bold text-base sm:text-xl mb-4 sm:mb-5">
+              <h3 className="font-bold text-center text-base sm:text-xl mb-4 sm:mb-5">
                 {office.title}
               </h3>
 
-              <div className="flex gap-3 text-gray-300 mb-4 sm:mb-5 text-base sm:text-base">
+              <div className="flex gap-1 text-gray-300 mb-4 sm:mb-5 text-base sm:text-base">
                 <IoCallOutline className="text-light-blue mt-1 shrink-0" />
                 <span>{office.phone}</span>
               </div>
 
-              <div className="flex gap-3 text-gray-300 text-base sm:text-base">
-                {/* <IoLocationOutline className="text-light-blue mt-1 text-3xl sm:text-4xl shrink-0" /> */}
+              {/* <div className="flex gap-3 text-gray-300 text-base sm:text-base">
+           
                 <span>{office.address}</span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
+        <Awards></Awards>
+        
+        
 
         {/* Social Icons */}
         <div className="flex flex-wrap justify-center gap-4 mt-10 border-t border-gray-700 pt-10">

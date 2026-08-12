@@ -113,7 +113,7 @@ const AboutBanner = ({ text }) => {
     }, []);
     return (
         <div ref={sectionRef}>
-            <section className="relative w-full overflow-hidden md:h-[80vh]" >
+            <section className="relative w-full overflow-hidden  h-[80vh]" >
 
                 {/* BG Image — swap div for img when ready */}
                 {/* <img src={cfoBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" /> */}
@@ -133,7 +133,7 @@ const AboutBanner = ({ text }) => {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
+                <div className="relative z-10 max-w-6xl mx-auto px-4 h-full sm:px-6 lg:px-8 flex items-center md:h-[80vh]" >
                     <div className="w-full border-l-3 pl-5 border-gray-500 lg:w-3/4  flex flex-col gap-5">
 
                         
@@ -158,9 +158,9 @@ const AboutBanner = ({ text }) => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             custom={0.3}
-                            className="text-white/75 text-base sm:text-base leading-relaxed max-w-md"
+                            className="text-white/75 text-base sm:text-base leading-relaxed max-w-2xl"
                         >
-                            A finance and accounting outsourcing service provider to meet the growing demand for specialized and professional accounting services
+                            Need to change: Comprehensive finance and business advisory services—from Virtual CFO, accounting and tax to valuation, UAE AML compliance, due diligence and investment advisory—helping businesses stay compliant, make better decisions and grow with confidence.
                         </motion.p>
 
 
@@ -174,7 +174,7 @@ const AboutBanner = ({ text }) => {
                     <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 sm:gap-0">
                         {/* Why Choose Us label */}
                         <div className="sm:pr-8 sm:border-r border-gray-200 shrink-0">
-                            <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Why Choose Us?</h2>
+                            <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Industry We Served 24+</h2>
                         </div>
                         {/* Stats */}
                         <div className="flex flex-wrap gap-6 sm:gap-0 sm:flex-1">

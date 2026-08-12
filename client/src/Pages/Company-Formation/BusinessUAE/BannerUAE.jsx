@@ -17,12 +17,12 @@ const BannerUAE = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-[4vw] font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-4xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in UAE
         </h1>
 
         {/* Sub Heading */}
-        <h2 className="mt-4 text-[2vw]  font-light leading-snug">
+        <h2 className="mt-4 text-xl  font-light leading-snug">
           Start Your Company with{" "}
           <span className="italic transition-all duration-300 font-bold hover:text-light-blue">
             de tempête
@@ -30,7 +30,7 @@ const BannerUAE = () => {
         </h2>
 
         {/* Description */}
-        <p className="max-w-3xl xl:max-w-4xl mx-auto mt-6 text-[1vw]  leading-relaxed text-gray-100">
+        <p className="max-w-3xl xl:max-w-4xl mx-auto mt-6 text-sm  leading-relaxed text-gray-100">
           Launch your business in the UAE with full ownership, tax advantages,
           and expert guidance.
           <span className="italic font-semibold hover:text-light-blue duration-300">

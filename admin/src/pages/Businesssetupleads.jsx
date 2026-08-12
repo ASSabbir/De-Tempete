@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
+import { useAuth } from '../context/AuthContext';
 
 const LIMIT = 20;
 const EMPTY_GUIDE = { guideKey: '', label: '', downloadUrl: '', isActive: true };
@@ -32,7 +33,15 @@ const toCsvCell = (value) => {
   return str;
 };
 
+const statusBadge = (status) => (
+  <span className={`font-semibold text-xs px-2 py-1 rounded-full ${status === 'published' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
+    {status === 'published' ? 'Published' : 'Pending'}
+  </span>
+);
+
 export default function BusinessSetupLeads() {
+  const { admin } = useAuth();
+
   // ── Guide links ──────────────────────────
   const [guides, setGuides] = useState([]);
   const [guidesLoading, setGuidesLoading] = useState(true);
@@ -115,6 +124,15 @@ export default function BusinessSetupLeads() {
     }
   };
 
+  const handlePublishGuide = async (id) => {
+    try {
+      await API.patch(`/business-setup-leads/guides/${id}/status`, { status: 'published' });
+      fetchGuides();
+    } catch {
+      alert('Publish failed');
+    }
+  };
+
   // ── CSV export (unchanged) ───────────────
   const handleExportCSV = async () => {
     setExporting(true);
@@ -181,6 +199,12 @@ export default function BusinessSetupLeads() {
         </button>
       </div>
 
+      {admin?.role !== 'superadmin' && (
+        <div className="bg-blue-50 border border-blue-200 text-blue-800 rounded-lg px-4 py-2.5 mb-5 text-[13px]">
+          New guides and edits go to Super Admin for approval before they're downloadable on the live site.
+        </div>
+      )}
+
       <div className="bg-white rounded-xl p-7 shadow-[0_1px_8px_rgba(0,0,0,0.06)]">
         {guidesError && (
           <div className="bg-red-50 text-red-600 px-[14px] py-[10px] rounded-lg mb-4 text-sm">
@@ -199,6 +223,7 @@ export default function BusinessSetupLeads() {
                 <th className="text-left px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Guide</th>
                 <th className="text-left px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Key</th>
                 <th className="text-left px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Link</th>
+                <th className="text-left px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Approval</th>
                 <th className="text-left px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Status</th>
                 <th className="text-right px-[14px] py-[10px] text-[13px] font-bold text-gray-700 border-b border-gray-200">Actions</th>
               </tr>
@@ -214,9 +239,18 @@ export default function BusinessSetupLeads() {
                     <a href={g.downloadUrl} target="_blank" rel="noopener noreferrer" className="text-[#0f1f3d] underline">Open</a>
                   </td>
                   <td className="px-[14px] py-3 text-sm border-b border-gray-100">
+                    {statusBadge(g.status)}
+                  </td>
+                  <td className="px-[14px] py-3 text-sm border-b border-gray-100">
                     <span className={`font-semibold ${g.isActive ? 'text-emerald-500' : 'text-red-500'}`}>{g.isActive ? 'Active' : 'Inactive'}</span>
                   </td>
-                  <td className="px-[14px] py-3 text-sm border-b border-gray-100 text-right">
+                  <td className="px-[14px] py-3 text-sm border-b border-gray-100 text-right whitespace-nowrap">
+                    {admin?.role === 'superadmin' && g.status === 'pending' && (
+                      <button onClick={() => handlePublishGuide(g._id)}
+                        className="mr-2 px-[14px] py-[6px] bg-emerald-600 text-white border-none rounded-md cursor-pointer text-[13px] hover:opacity-90">
+                        Publish
+                      </button>
+                    )}
                     <button onClick={() => openEditGuide(g)}
                       className="mr-2 px-[14px] py-[6px] bg-[#0f1f3d] text-white border-none rounded-md cursor-pointer text-[13px] hover:opacity-90">
                       Edit

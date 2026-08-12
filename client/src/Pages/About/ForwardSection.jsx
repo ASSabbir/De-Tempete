@@ -36,12 +36,13 @@ const ForwardSection = () => {
 
               <VisionCard
                 title="Our Vision"
-                text="We strive to be the preferred choice for companies seeking expert financial guidance, delivering cutting-edge solutions and consistently exceeding client expectations."
+                text="To be a trusted global partner for businesses seeking growth beyond borders, enabling sustainable expansion through expertise, innovation and integrated business solutions."
               />
 
               <VisionCard
                 title="Our Mission"
-                text="We empower organizations to achieve their objectives by delivering exceptional financial guidance and support through innovative, integrated solutions."
+                text="To empower businesses to establish, operate and grow across markets by delivering integrated advisory, compliance, finance, technology and growth support solutions—combining local expertise with a global perspective.
+"
               />
 
             </div>

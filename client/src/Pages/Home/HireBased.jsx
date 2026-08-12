@@ -15,7 +15,7 @@ const services = [
     title: "Virtual CFO",
     path: "/virtual-cfo",
     description:
-      "Optimize cash flow and strategy with expert virtual CFO services across the UK, UAE, KSA, Estonia, USA and Bangladesh.",
+      "Optimize cash flow and strategy with expert virtual CFO services across the world",
     icon: <FaUserTie  />,
   },
   {

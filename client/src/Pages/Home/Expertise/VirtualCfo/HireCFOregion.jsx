@@ -87,7 +87,7 @@ const regions = [
   description:
     "Estonia's digital-first business environment offers unique opportunities for global entrepreneurs. Our Virtual CFOs help businesses manage financial operations, maintain regulatory compliance, optimize cash flow, and develop scalable strategies to support sustainable growth across Estonia and the European market.",
   focusAreas: [
-    "e-Residency financial support",
+    "e-Residency financial planning",
     "Financial planning & forecasting",
     "EU compliance & reporting",
     "Business growth strategy",

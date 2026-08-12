@@ -7,6 +7,7 @@ import LogoMarqueeRows from './Logomarqueerows';
 import SharedButton from '../../Components/Shared/SharedButton';
 import LastSection from './LastSection';
 import img1 from '../../asstes/img_temp/industry.webp'
+import EventBlogPartners from '../Home/Eventblogpartners';
 
 const About = () => {
     return (
@@ -16,14 +17,10 @@ const About = () => {
             <TrustedPartner></TrustedPartner>
             <GrowthPartners></GrowthPartners>
             <section className="pb-12 bg-white">
-                <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-                    <img
-                        src={img1}
-                        alt="Industries We Serve"
-                        className="w-full h-full object-cover rounded-3xl shadow-lg"
-                    />
+                <div className="max-w-[1200px] mx-auto px-6   items-stretch">
+                    
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-4xl leading-tight text-[#16244b] font-light">
+                        <h2 className="text-3xl lg:text-5xl leading-tight text-[#16244b] font-light">
                             Industries <span className="font-bold">We Serve</span>
                         </h2>
                         <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
@@ -38,6 +35,11 @@ const About = () => {
                             business actually works.
                         </p>
                     </div>
+                    <img
+                        src={img1}
+                        alt="Industries We Serve"
+                        className="w-full h-full mt-10 object-cover rounded-3xl shadow-lg"
+                    />
                 </div>
             </section>
             <div className=' max-w-7xl mx-auto pb-20' >
@@ -46,11 +48,12 @@ const About = () => {
                     <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
                 </div>
             </div>
-            <h2 className="text-3xl text-center  leading-tight text-dark-blue sm:text-5xl">
-                <span className="font-extrabold">Trusted</span> Clients
+            <h2 className="text-3xl text-center mb-10 leading-tight text-dark-blue sm:text-5xl">
+                <span className="font-extrabold ">Growth </span> Partners
             </h2>
             <LogoMarqueeRows></LogoMarqueeRows>
-            <LastSection></LastSection>
+            {/* <LastSection></LastSection> */}
+            <EventBlogPartners></EventBlogPartners>
         </div>
     );
 };
