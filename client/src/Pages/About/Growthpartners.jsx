@@ -117,9 +117,8 @@ export default function GrowthPartners() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
         {/* Left: copy */}
         <div>
-          <h2 className="text-3xl  leading-tight text-dark-blue sm:text-5xl">
-            <span className="font-extrabold">Our Growth</span> Partners Or
-            Strategic Partners
+          <h2 className="text-3xl font-extrabold leading-tight text-dark-blue sm:text-5xl">
+            <span className="font-normal">Our Eco </span>System
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-slate-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -128,10 +127,10 @@ export default function GrowthPartners() {
         </div>
 
         {/* Right: three infinite vertical marquees */}
-        <div className="flex h-[420px] items-center justify-center gap-6 sm:h-[480px]">
+        <div className="flex h-[420px] items-center justify-center md:gap-36 sm:h-[480px]">
           <MarqueeColumn items={COLUMN_1} direction="down" speed={60} className="mt-0" />
           <MarqueeColumn items={COLUMN_1} direction="up" speed={60} className="mt-10" />
-          <MarqueeColumn items={COLUMN_1} direction="down" speed={60} className="mt-0" />
+          
         </div>
       </div>
     </section>

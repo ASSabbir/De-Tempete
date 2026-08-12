@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const inputStyle = {
   width: '100%', padding: '10px 14px', border: '1px solid #d1d5db',
@@ -25,6 +26,7 @@ const EMPTY = { name: '', email: '', password: '', role: 'superadmin' };
 
 export default function Users() {
   const [admins, setAdmins] = useState([]);
+  const [showPassword, setShowPassword] = useState(false);
   const [roles, setRoles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState(EMPTY);
@@ -59,14 +61,17 @@ export default function Users() {
     setCreating(true);
     setMsg('');
     setErrMsg('');
+    
     try {
       await API.post('/auth/create-admin', form);
       setMsg('User created successfully');
       setForm(EMPTY);
+      setShowPassword(false)
       fetchAdmins();
     } catch (err) {
       setErrMsg(err.response?.data?.message || 'Failed to create user');
     } finally {
+      setCreating(false);
       setCreating(false);
     }
   };
@@ -83,177 +88,199 @@ export default function Users() {
 
   return (
     <div>
-  {/* Header */}
-  <div className="mb-6 flex items-center justify-between">
-    <h2 className="text-3xl font-bold text-slate-900">
-      Users ({admins.length})
-    </h2>
+      {/* Header */}
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-3xl font-bold text-slate-900">
+          Users ({admins.length})
+        </h2>
 
-    <button
-      onClick={() => {
-        setShowCreate((p) => !p);
-        setMsg("");
-        setErrMsg("");
-      }}
-      className="rounded-lg bg-slate-900 px-5 py-2.5 font-semibold text-white transition hover:bg-slate-800"
-    >
-      {showCreate ? "Cancel" : "+ Create User"}
-    </button>
-  </div>
-
-  {/* Create User Form */}
-  {showCreate && (
-    <div className="mb-7 max-w-lg rounded-xl border border-gray-200 bg-white p-7 shadow-sm">
-      <h3 className="mb-5 text-lg font-bold text-slate-900">
-        Create New User
-      </h3>
-
-      {msg && (
-        <div className="mb-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-600">
-          {msg}
-        </div>
-      )}
-
-      {errMsg && (
-        <div className="mb-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
-          {errMsg}
-        </div>
-      )}
-
-      <div className="mb-4">
-        <label className={labelStyle}>Name</label>
-        <input 
-          value={form.name}
-          onChange={(e) =>
-            setForm((p) => ({ ...p, name: e.target.value }))
-          }
-          style={inputStyle}
-        />
-      </div>
-
-      <div className="mb-4">
-        <label className={labelStyle}>Email</label>
-        <input
-          type="email"
-          value={form.email}
-          onChange={(e) =>
-            setForm((p) => ({ ...p, email: e.target.value }))
-          }
-          style={inputStyle}
-        />
-      </div>
-
-      <div className="mb-4">
-        <label className={labelStyle}>Password (min 8 chars)</label>
-        <input
-          type="password"
-          value={form.password}
-          onChange={(e) =>
-            setForm((p) => ({ ...p, password: e.target.value }))
-          }
-          style={inputStyle}
-        />
-      </div>
-
-      <div className="mb-5">
-        <label className={labelStyle}>Role</label>
-        <select
-          value={form.role}
-          onChange={(e) =>
-            setForm((p) => ({ ...p, role: e.target.value }))
-          }
-          style={inputStyle}
+        <button
+          onClick={() => {
+            setShowCreate((p) => !p);
+            setMsg("");
+            setErrMsg("");
+             setShowPassword(false); 
+          }}
+          className="rounded-lg bg-slate-900 px-5 py-2.5 font-semibold text-white transition hover:bg-slate-800"
         >
-          {roles
-            
-            .map((r) => (
-              <option key={r} value={r}>
-                {roleLabels[r] || r}
-              </option>
-            ))}
-        </select>
+          {showCreate ? "Cancel" : "+ Create User"}
+        </button>
       </div>
 
-      <button
-        onClick={handleCreate}
-        disabled={creating}
-        className={`rounded-lg px-6 py-2.5 font-semibold text-white transition ${
-          creating
-            ? "cursor-not-allowed bg-slate-400"
-            : "bg-slate-900 hover:bg-slate-800"
-        }`}
-      >
-        {creating ? "Creating..." : "Create User"}
-      </button>
-    </div>
-  )}
+      {/* Create User Form */}
+      {showCreate && (
+        <div className="mb-7 max-w-lg rounded-xl border border-gray-200 bg-white p-7 shadow-sm">
+          <h3 className="mb-5 text-lg font-bold text-slate-900">
+            Create New User
+          </h3>
 
-  {/* Table */}
-  <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-    {loading ? (
-      <div className="py-16 text-center text-gray-400">
-        Loading...
-      </div>
-    ) : (
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead className="border-b-2 border-gray-200 bg-gray-50">
-            <tr>
-              <th className="px-4 py-3 text-left font-semibold text-gray-700">
-                Name
-              </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-700">
-                Email
-              </th>
-              <th className="px-4 py-3 text-left font-semibold text-gray-700">
-                Role
-              </th>
-              <th className="px-4 py-3 text-right font-semibold text-gray-700">
-                Actions
-              </th>
-            </tr>
-          </thead>
+          {msg && (
+            <div className="mb-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-600">
+              {msg}
+            </div>
+          )}
 
-          <tbody>
-            {admins.map((a) => (
-              <tr
-                key={a._id}
-                className="border-b border-gray-100 hover:bg-gray-50"
+          {errMsg && (
+            <div className="mb-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
+              {errMsg}
+            </div>
+          )}
+
+          <div className="mb-4">
+            <label className={labelStyle}>Name</label>
+            <input
+              value={form.name}
+              onChange={(e) =>
+                setForm((p) => ({ ...p, name: e.target.value }))
+              }
+              style={inputStyle}
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className={labelStyle}>Email</label>
+            <input
+              type="email"
+              value={form.email}
+              onChange={(e) =>
+                setForm((p) => ({ ...p, email: e.target.value }))
+              }
+              style={inputStyle}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label className={labelStyle}>Password (min 8 chars)</label>
+            <div style={{ position: 'relative' }}>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                value={form.password}
+                onChange={(e) =>
+                  setForm((p) => ({ ...p, password: e.target.value }))
+                }
+                style={{ ...inputStyle, paddingRight: 42 }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((p) => !p)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                style={{
+                  position: 'absolute',
+                  right: 12,
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  color: '#6b7280',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
               >
-                <td className="px-4 py-3 text-gray-600">
-                  {a.name}
-                </td>
+                {showPassword ? <FaEyeSlash size={16} /> : <FaEye size={16} />}
+              </button>
+            </div>
+          </div>
 
-                <td className="px-4 py-3 text-gray-600">
-                  {a.email}
-                </td>
+          <div className="mb-5">
+            <label className={labelStyle}>Role</label>
+            <select
+              value={form.role}
+              onChange={(e) =>
+                setForm((p) => ({ ...p, role: e.target.value }))
+              }
+              style={inputStyle}
+            >
+              {roles
 
-                <td className="px-4 py-3">
-                  <span
-                    className="rounded-full px-3 py-1 text-xs font-semibold text-white"
-                    style={{
-                      background: roleBadgeColor[a.role] || "#34cf23",
-                    }}
+                .map((r) => (
+                  <option key={r} value={r}>
+                    {roleLabels[r] || r}
+                  </option>
+                ))}
+            </select>
+          </div>
+
+          <button
+            onClick={handleCreate}
+            disabled={creating}
+            className={`rounded-lg px-6 py-2.5 font-semibold text-white transition ${creating
+                ? "cursor-not-allowed bg-slate-400"
+                : "bg-slate-900 hover:bg-slate-800"
+              }`}
+          >
+            {creating ? "Creating..." : "Create User"}
+          </button>
+        </div>
+      )}
+
+      {/* Table */}
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        {loading ? (
+          <div className="py-16 text-center text-gray-400">
+            Loading...
+          </div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead className="border-b-2 border-gray-200 bg-gray-50">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                    Name
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                    Email
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                    Role
+                  </th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-700">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {admins.map((a) => (
+                  <tr
+                    key={a._id}
+                    className="border-b border-gray-100 hover:bg-gray-50"
                   >
-                    {roleLabels[a.role] || a.role}
-                  </span>
-                </td>
+                    <td className="px-4 py-3 text-gray-600">
+                      {a.name}
+                    </td>
 
-                <td className="px-4 py-3 text-right">
-                  <button
-                    onClick={() => handleDelete(a._id)}
-                    className="rounded-md bg-red-600 px-4 py-1.5 text-sm text-white transition hover:bg-red-700"
-                  >
-                    Remove
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                    <td className="px-4 py-3 text-gray-600">
+                      {a.email}
+                    </td>
+
+                    <td className="px-4 py-3">
+                      <span
+                        className="rounded-full px-3 py-1 text-xs font-semibold text-white"
+                        style={{
+                          background: roleBadgeColor[a.role] || "#34cf23",
+                        }}
+                      >
+                        {roleLabels[a.role] || a.role}
+                      </span>
+                    </td>
+
+                    <td className="px-4 py-3 text-right">
+                      <button
+                        onClick={() => handleDelete(a._id)}
+                        className="rounded-md bg-red-600 px-4 py-1.5 text-sm text-white transition hover:bg-red-700"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
-    )}
-  </div>
-</div>
+    </div>
   );
 }

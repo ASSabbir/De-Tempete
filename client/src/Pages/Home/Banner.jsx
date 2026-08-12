@@ -31,6 +31,16 @@ const slides = [
     description:
       "Strategic branding and market expansion services to help you stand out and scale internationally.",
   },
+  {
+    title: "Strategic Virtual CFO for Smarter Growth",
+    description:
+      "Gain financial clarity, control, and strategic insight with expert CFO support — without the cost of a full-time CFO.",
+  },
+  {
+    title: "Build Your Startup in Europe’s Digital Hub",
+    description:
+      "Launch and manage your EU business remotely through Estonia’s e-Residency — your gateway to Europe’s thriving startup ecosystem.",
+  },
 ];
 
 const services = [
@@ -131,7 +141,7 @@ const Banner = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full  bg-[#0d1e4a]">
+    <section className="relative overflow-hidden min-h-screen w-full  bg-[#0d1e4a]">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <video className='object-center object-cover h-full w-full' src={heroVideo} autoPlay muted loop></video>

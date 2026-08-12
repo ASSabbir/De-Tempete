@@ -112,7 +112,7 @@ export default function WhyChoose() {
           <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 sm:gap-0">
             {/* Why Choose Us label */}
             <div className="sm:pr-8 sm:border-r border-gray-200 shrink-0">
-              <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Why Choose Us?</h2>
+              <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Industry We Served 24+</h2>
             </div>
             {/* Stats */}
             <div className="flex flex-wrap gap-6 sm:gap-0 sm:flex-1">
@@ -144,15 +144,14 @@ export default function WhyChoose() {
             <div className="space-y-4 text-sm 2xl:text-[1vw] text-gray-600 leading-relaxed">
               <p>
                 <span className="font-bold italic text-[#0d1e4a]">de tempête</span> is a global accounting and
-                business advisory firm providing end-to-end business solutions — from company formation to finance
-                management, business automation, valuation, and investment guidance.
+                business advisory firm providing end-to-end business solutions —  from company formation to financial compliance and reporting, business automation, valuation, and investment guidance.
               </p>
               <p>
                 With registered presence in the UK, UAE, KSA, Estonia, USA and Bangladesh, we empower companies to operate
                 efficiently, remain compliant, and grow sustainably across borders.
               </p>
               <p>
-                Backed by 9+ years of expertise, 98% client retention, and experience across 15+ industries, our
+                Backed by 9+ years of expertise, 98% client retention, and experience across 24+ industries, our
                 certified professionals blend global insight with technology-driven financial systems to deliver
                 measurable results and lasting impact.
               </p>

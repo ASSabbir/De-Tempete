@@ -11,7 +11,7 @@ import Awards from '../../Awards';
 import GetStarted from '../../../../Components/Shared/GetStarted';
 
 const VirtualCFO = () => {
-    const text = ['Your Strategic Virtual CFO/Fractional CFO Partner', 'Empowering Growth with Expert Financial Leadership — Virtually', 'Get access to professional CFO expertise without the overhead cost of a full-time hire. Our virtual CFO services help you make smarter financial decisions, improve profitability, and scale confidently.', 'Book An Appointment With CFO']
+    const text = ['Your Strategic Virtual CFO/Fractional CFO Partner', 'Empowering Growth with Expert Financial Leadership — Virtually', 'Get access to industry specialized professional CFO expertise without the overhead cost of a full-time hire. Our virtual CFO services help you make smarter financial decisions, improve profitability, and scale confidently.', 'Book An Appointment With CFO']
     const benefits = [
         "Cost-effective access to executive-level financial expertise",
         "Strategic decision-making support without full-time overhead",

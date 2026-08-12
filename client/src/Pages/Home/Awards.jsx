@@ -12,7 +12,7 @@ const imgall = [img1, img2, img3, img4, img5, img6, img7];
 
 const Awards = () => {
     return (
-        <div className='max-w-7xl py-[3vw] mt-[3vw] mx-auto'>
+        <div className='max-w-7xl bg-white py-[3vw] mt-[3vw] mx-auto'>
             <div className='max-w-6xl mx-auto'>
                 <div className='flex flex-col md:flex-row w-full items-center justify-between'>
                     {imgall.map((pic, index) => (
