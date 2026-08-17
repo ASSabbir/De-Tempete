@@ -8,7 +8,7 @@ import Awards from '../../Awards';
 import KeyBenefits from '../VirtualCfo/Keybenefits';
 import TaxFAQ from './TaxFAQ';
 const TaxAdvisory = () => {
-    const text = ['Expert Tax Advisory Services for Smart, Compliant Growth', 'Navigate Tax Complexity with Confidence', 'Stay ahead of changing tax laws and compliance challenges. Our Tax Advisory services help your business minimize tax risks, optimize savings, and remain fully compliant across jurisdictions, ensuring your growth stays strategic and stress-free.', 'Book a Tax Consultation']
+    const text = ['Expert Tax Advisory Services for Smart, Compliant Growth', 'Navigate Tax Complexity with Confidence', 'Stay ahead of changing tax laws and compliance challenges. Our Tax Advisory services help your business minimize tax risks, optimize savings, and remain fully compliant across jurisdictions, ensuring your growth stays strategic and stress-free.', 'Book a Free Tax Consultation']
     const benefits = [
         "Reduce financial costs with expert strategic guidance",
         "Make confident business decisions backed by financial insights",

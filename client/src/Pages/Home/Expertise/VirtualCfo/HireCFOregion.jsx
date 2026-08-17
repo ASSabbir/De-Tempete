@@ -106,7 +106,7 @@ export default function HireCFORegion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-[3vw] text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-4">
             Hire A Virtual CFO <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">

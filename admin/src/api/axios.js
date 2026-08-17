@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://api.detempete.uk/api',
+  baseURL: 'http://localhost:5000/api',
   timeout: 10000,
 });
 
@@ -30,7 +30,7 @@ API.interceptors.response.use(
       original._retry = true;
       if (!refreshing) {
         refreshing = axios
-          .post('https://api.detempete.uk/api/auth/refresh', {
+          .post('http://localhost:5000/api/auth/refresh', {
             refreshToken: localStorage.getItem('refreshToken'),
           })
           .then(({ data }) => {

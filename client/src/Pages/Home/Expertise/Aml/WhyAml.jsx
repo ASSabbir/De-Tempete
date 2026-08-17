@@ -1,6 +1,7 @@
 import React from 'react';
 import img1 from '../../../../asstes/img_temp/al.webp'
 
+
 const WhyAml = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -8,15 +9,15 @@ const WhyAml = () => {
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
+          <h2 className="text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
             Stay Compliant. Build Trust.
             <br className="hidden sm:block" />
             <span className="font-extrabold">Operate With Confidence.</span>
           </h2>
 
-          <div className="space-y-5 text-base font-inter text-gray-600">
+          <div className="space-y-5 text-sm font-inter text-justify text-gray-600">
             <p>
-              At de tempête, we help businesses in the UAE meet their anti-money laundering, counter-terrorist financing, sanctions and regulatory obligations with confidence. From registration and risk assessment to regulatory reporting, independent review and compliance technology, our specialists provide end-to-end support that protects your business and keeps it inspection-ready.
+              At <span className='font-semibold italic'>de tempête</span>, we help businesses in the UAE meet their anti-money laundering, counter-terrorist financing, sanctions and regulatory obligations with confidence. From registration and risk assessment to regulatory reporting, independent review and compliance technology, our specialists provide end-to-end support that protects your business and keeps it inspection-ready.
             </p>
             <p>
               Whether you need goAML and TFS registration, a risk-based AML policy, KYC and screening support, or an outsourced compliance officer, de tempête tailors every engagement to your industry, customer base and regulatory exposure — so you can operate with full confidence.

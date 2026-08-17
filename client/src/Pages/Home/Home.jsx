@@ -17,29 +17,7 @@ import img3 from '../../asstes/img_temp/New folder/Virtual-CFO-2048x1366.webp'
 import EventBlogPartners from './Eventblogpartners';
 import SharedButton from '../../Components/Shared/SharedButton';
 import VideoReviews from './VideoReviews';
-const blogPosts = [
-  {
-    id: 1,
-    slug: "council-tax-arrangement-plan",
-    image: img1,
-    title: "How to Make an Arrangement Plan for Council Tax: A Step-by-Step Guide",
-    desc: "Council tax, a local taxation system in the UK, can sometimes become a financial burden for residents. If you find yourself struggling to meet council tax payments, it's essential to",
-  },
-  {
-    id: 2,
-    slug: "self-assessment-tax-return-process",
-    image: img2,
-    title: "Self-Assessment Tax Return Process for Businesses: Navigating the Complexity",
-    desc: "Welcome to de tempête, where we simplify the intricate world of tax return processes for businesses. In this comprehensive guide, we will walk you through the self-assessment tax return process,",
-  },
-  {
-    id: 3,
-    slug: "virtual-cfo-role-benefits",
-    image: img3,
-    title: "The Role and Benefits of a Virtual CFO in Modern Businesses",
-    desc: "Welcome to de tempête, where we redefine financial management for the modern business landscape. In this blog post, we unravel the vital role and numerous benefits of having a Virtual",
-  },
-];
+
 const Home = () => {
     return (
         <div >
@@ -62,7 +40,7 @@ const Home = () => {
             <Awards></Awards>
             <div className='px-10  pb-30' >
                 <div className='flex flex-col md:flex-row gap-3 max-w-7xl mx-auto bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
-                    <h1 className='text-sm 2xl:text-[1.5vw]'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
+                    <h1 className='text-sm md:text-2xl 2xl:text-[1.5vw]'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
                     <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
                 </div>
             </div>

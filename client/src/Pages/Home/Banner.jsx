@@ -1,4 +1,4 @@
-import heroVideo from '../../asstes/video/Hero-video.mp4'
+import heroVideo from '../../asstes/video/Hero-video.webm'
 import { useState, useEffect, useRef } from "react";
 import SharedFullButton from '../../Components/Shared/SharedFullButton';
 import { gsap } from "gsap";
@@ -160,7 +160,7 @@ const Banner = () => {
                 ref={slideRef}
                 className="will-change-transform"
               >
-                <h1 className=" text-3xl 2xl:text-[3vw] font-extrabold text-white leading-tight mb-5">
+                <h1 className=" text-3xl md:text-4xl 2xl:text-[3vw] font-extrabold text-white leading-tight mb-5">
                   {slides[current].title}
                 </h1>
                 <p className="text-xl 2xl:text-[1vw] text-white/80 leading-relaxed max-w-lg">
@@ -172,7 +172,7 @@ const Banner = () => {
 
 
             {/* CTA */}
-            <div className='mt-15'>
+            <div className='mt-10 md:mt-15'>
               <SharedFullButton text={'Contact Us Now'} path={'/contact'}></SharedFullButton>
             </div>
           </div>

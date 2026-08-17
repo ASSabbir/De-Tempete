@@ -8,7 +8,7 @@ const WhyVCFO = () => {
         
                   {/* Left — Text */}
                   <div>
-                    <h2 className="text-xl md:text-4xl 2xl:text-[2vw] font-normal text-[#0d1e4a] leading-tight mb-6">
+                    <h2 className="text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
                       Why Your Business Needs a 
                       <br className="hidden sm:block" />
                        <span className="font-extrabold">Virtual CFO / Fractional CFO</span>
@@ -22,7 +22,7 @@ const WhyVCFO = () => {
                         A <span className="font-bold italic text-[#0d1e4a]">Virtual CFO </span>bridges that gap — offering strategic financial management on a flexible, part-time, or project basis. You get the same executive-level expertise at a fraction of the cost.
                       </p>
                       <p>
-                        Our experienced CFOs collaborate closely with your leadership team to optimize cash flow, manage risks, enhance profitability, and create long-term value for your business.
+                        Our industry specialized professional CFOs collaborate closely with your leadership team to optimize cash flow, manage risks, enhance profitability, and create long-term value for your business.
                       </p>
                     </div>
                   </div>

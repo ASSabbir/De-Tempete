@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 const faqs = [
   {
-    q: "01. Why does my startup need a professional valuation?",
+    q: "01. Why does my Business need a professional valuation?",
     a: "A valuation helps you understand your true market worth, negotiate confidently with investors, and plan strategic growth based on real data instead of assumptions.",
   },
   {
@@ -24,13 +24,13 @@ const faqs = [
         </strong>{" "}
         delivers investor-ready, data-backed valuations supported by financial
         models, market analysis, risk assessment, and industry benchmarks.
-        Every valuation is tailored to your startup’s unique business model.
+        Every valuation is tailored to your Business’s unique business model.
       </>
     ),
   },
   {
     q: "03. What information do I need to start the valuation process?",
-    a: "You only need basic financials (or estimates), your business model, traction metrics, and market details. Early-stage or pre-revenue startups can also proceed with minimal data.",
+    a: "You only need basic financials (or estimates), your business model, traction metrics, and market details. Early-stage or pre-revenue Businesss can also proceed with minimal data.",
   },
   {
     q: (
@@ -39,7 +39,7 @@ const faqs = [
         <strong>
           <em>de tempête</em>
         </strong>{" "}
-        value pre-revenue or early-stage startups?
+        value pre-revenue or early-stage Businesss?
       </>
     ),
     a: (
@@ -48,14 +48,14 @@ const faqs = [
         <strong>
           <em>de tempête</em>
         </strong>{" "}
-        assesses market size, product potential, comparable startups, and risk
+        assesses market size, product potential, comparable Businesss, and risk
         factors to deliver a realistic, defensible pre-revenue valuation.
       </>
     ),
   },
   {
     q: "05. How long does the valuation take?",
-    a: "Most valuations take 10–12 business days, depending on your startup’s complexity and data availability.",
+    a: "Most valuations take 10–12 business days, depending on your Business complexity and data availability.",
   },
   {
     q: "06. Will the valuation help me negotiate with investors?",
@@ -70,7 +70,7 @@ const faqs = [
     a: "Absolutely. You receive a clear, audit-ready valuation report documenting assumptions, methodology, financial models, and final valuation conclusions.",
   },
   {
-    q: "09. Is my startup’s information kept confidential?",
+    q: "09. Is my Business’s information kept confidential?",
     a: "100%. All financial and business data is handled securely and remains strictly confidential.",
   },
   {
@@ -85,7 +85,7 @@ const faqs = [
     ),
     a: (
       <>
-        Book a Free Startup Valuation Consultation with{" "}
+        Book a Free Business Valuation Consultation with{" "}
         <strong>
           <em>de tempête</em>
         </strong>
@@ -184,7 +184,7 @@ export default function BFAQ() {
     <section className="bg-[#f8f9fc] w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-center text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Frequently Asked <span className="font-extrabold">Questions</span>
         </h2>
 

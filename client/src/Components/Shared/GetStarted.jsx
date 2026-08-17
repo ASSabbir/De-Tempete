@@ -28,7 +28,7 @@ export default function GetStarted({commitments, title,des}) {
             className="flex flex-col gap-6"
           >
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white font-normal leading-tight">
+            <h2 className="text-4xl 2xl:text-5xl text-white font-normal leading-tight">
               Get <span className="font-extrabold">Started</span>
             </h2>
 

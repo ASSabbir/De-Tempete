@@ -16,8 +16,8 @@ export default function BKeyBenefits() {
 
         {/* Heading */}
         <div className="text-center mb-3">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-snug">
-            Key Benefits of Choosing<span className="font-extrabold italic"> de tempête</span> Startup Valuation
+          <h2 className="text-4xl 2xl:text-5xl text-white font-normal leading-snug">
+            Key Benefits of Choosing<span className="font-extrabold italic"> de tempête</span> Business Valuation
           </h2>
         </div>
 

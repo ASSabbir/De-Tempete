@@ -11,6 +11,23 @@ import { motion } from "framer-motion";
 import { Link } from "react-router";
 import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
 import GetStarted from '../../../../Components/Shared/GetStarted';
+import SecondSection from '../../../../Components/Shared/SecondSection';
+
+import {
+  TbUsersGroup,
+  TbChartLine,
+  TbChartBar,
+  TbScale,
+  TbCalculator,
+  TbShieldExclamation,
+  TbAdjustmentsHorizontal,
+  TbRocket,
+  TbReportAnalytics,
+  TbDoorExit,
+  TbFileReport,
+  TbGavel,
+} from "react-icons/tb";
+import ServiceGrid from '../../../../Components/Shared/Servicegrid';
 
 const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
@@ -20,93 +37,118 @@ const fadeLeft = {
         transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay },
     }),
 };
-const stats = [
-    {
-        icon: (
-            <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" stroke="#1a9fd4" strokeWidth="2">
-                <rect x="8" y="6" width="32" height="36" rx="3" strokeLinejoin="round" />
-                <path d="M16 6V4M32 6V4" strokeLinecap="round" />
-                <path d="M8 16h32" />
-                <path d="M17 26l4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-        ),
-        value: 9,
-        suffix: "+",
-        label: "Years of Legacy",
-    },
-    {
-        icon: (
-            <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" stroke="#1a9fd4" strokeWidth="2">
-                <circle cx="24" cy="24" r="18" />
-                <ellipse cx="24" cy="24" rx="8" ry="18" />
-                <path d="M6 24h36M24 6a28 10 0 0 1 0 36M24 6a28 10 0 0 0 0 36" strokeLinejoin="round" />
-            </svg>
-        ),
-        value: 50,
-        suffix: "+",
-        label: "Countries Covered",
-    },
-    {
-        icon: (
-            <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" stroke="#1a9fd4" strokeWidth="2">
-                <path d="M14 20c0-5.523 4.477-10 10-10s10 4.477 10 10c0 3-1.5 6-4 8l-6 8-6-8c-2.5-2-4-5-4-8z" strokeLinejoin="round" />
-                <circle cx="24" cy="20" r="3" />
-                <path d="M10 42c0-4 6.268-7 14-7s14 3 14 7" strokeLinecap="round" />
-            </svg>
-        ),
-        value: 700,
-        suffix: "+",
-        label: "Clients Served",
-    },
-    {
-        icon: (
-            <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" stroke="#1a9fd4" strokeWidth="2">
-                <path d="M24 6l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z" strokeLinejoin="round" />
-                <path d="M14 34l-6 8M34 34l6 8" strokeLinecap="round" />
-                <path d="M10 42h28" strokeLinecap="round" />
-            </svg>
-        ),
-        value: 3000,
-        suffix: "+",
-        label: "Projects Completed",
-    },
+const services = [
+  {
+    title: "Valuation Consulting",
+    description:
+      "Expert guidance to help startups understand value drivers, financial assumptions, and investor expectations.",
+    Icon: TbUsersGroup,
+  },
+  {
+    title: "Financial Modelling",
+    description:
+      "Detailed financial projections covering revenue, expenses, and cash flow — built to evaluate growth and profitability potential.",
+    Icon: 
+      
+        TbChartLine
+      
+    ,
+  },
+  {
+    title: "Market & Industry Analysis",
+    description:
+      "Comprehensive assessment of market size, trends, growth opportunities, and competitive positioning.",
+    Icon: 
+      
+        TbChartBar
+      
+    ,
+  },
+  {
+    title: "Comparable Company Analysis (CCA)",
+    description:
+      "Benchmarking with similar startups to provide realistic and investor-approved valuation insights.",
+    Icon: 
+    
+        TbScale
+      
+    ,
+  },
+  {
+    title: "Valuation Method Analysis",
+    description:
+      "Use of multiple valuation models, revenue multiples, asset-based models, risk-adjusted methods, and more, to ensure accuracy.",
+    Icon: 
+      
+        TbCalculator
+      
+    ,
+  },
+  {
+    title: "Risk Evaluation",
+    description:
+      "Assessment of operational, financial, technological, and regulatory risks that may impact valuation.",
+    Icon: 
+      
+        TbShieldExclamation
+    ,
+  },
+  {
+    title: "Scenario & Sensitivity Analysis",
+    description:
+      "Evaluation of best-case, worst-case, and realistic scenarios to understand how different factors influence valuation outcomes.",
+    Icon: 
+      
+        TbAdjustmentsHorizontal
+      
+    ,
+  },
+  {
+    title: "Pre-Investment Valuation",
+    description:
+      "Helps founders negotiate equity, funding amounts, and investor terms confidently.",
+    Icon: 
+      
+        TbRocket
+      
+    ,
+  },
+  {
+    title: "Post-Funding Assessment",
+    description:
+      "Updated valuation after fundraising to reflect growth, new financials, and market shifts.",
+    Icon: 
+      
+        TbReportAnalytics
+      
+    ,
+  },
+  {
+    title: "Exit Strategy Valuation",
+    description:
+      "Valuation for mergers, acquisitions, IPO planning, or founder exit preparation.",
+    Icon: TbDoorExit
+    ,
+  },
+  {
+    title: "Reporting & Documentation",
+    description:
+      "Clear, transparent, and audit-ready valuation reports with all assumptions, methodologies, and conclusions documented.",
+    Icon: 
+      
+        TbFileReport 
+      
+    ,
+  },
+  {
+    title: "Expert Testimony",
+    description:
+      "Professional representation for disputes, legal processes, or investor-related clarifications.",
+    Icon: TbGavel
+    ,
+  },
 ];
 
-function useCountUp(target, duration = 1800, start = false) {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        if (!start) return;
-        let startTime = null;
-        const step = (timestamp) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * target));
-            if (progress < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-    }, [start, target, duration]);
-    return count;
-}
-
-function StatItem({ icon, value, suffix, label, start }) {
-    const count = useCountUp(value, 1800, start);
-    const display = value >= 1000
-        ? (count >= 1000 ? `${Math.floor(count / 1000) * 1000}` : count).toLocaleString()
-        : count;
-
-    return (
-        <div className="flex items-center gap-3 xl:gap-4">
-            <div className="shrink-0 opacity-80">{icon}</div>
-            <div>
-                <div className="text-sm md:text-2xl 2xl:text-[1.5vw] font-extrabold text-[#0d1e4a] leading-none">
-                    {display}{suffix}
-                </div>
-                <div className="text-xs xl:text-base text-gray-500 mt-0.5 font-medium">{label}</div>
-            </div>
-        </div>
-    );
-}
 const BusinessValuation = () => {
 const commitments = [
   "Free initial business valuation consultation — no obligation",
@@ -120,12 +162,19 @@ const title = "Ready to Discover Your Business’s True Value?";
 const des =
   "Whether you're raising investment, planning a merger or acquisition, preparing for a sale, or making strategic decisions, our business valuation services deliver accurate, reliable, and actionable insights with confidence.";
 
+
    
     return (
         <div>
             <VirtualBanner></VirtualBanner>
             <WhyPValuation></WhyPValuation>
-            <BusinessValuationServices></BusinessValuationServices>
+            <ServiceGrid
+             
+             heading={<>Business Valuation <span className="font-extrabold">Services</span></>} 
+             services={services}></ServiceGrid>
+
+            
+
             <BKeyBenefits></BKeyBenefits>
             <BFAQ></BFAQ>
              <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
@@ -134,19 +183,9 @@ const des =
     );
 };
 const VirtualBanner = () => {
-    const [started, setStarted] = useState(false);
-      const sectionRef = useRef(null);
     
-      useEffect(() => {
-        const observer = new IntersectionObserver(
-          ([entry]) => { if (entry.isIntersecting) setStarted(true); },
-          { threshold: 0.3 }
-        );
-        if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
-      }, []);
     return (
-        <div ref={sectionRef}>
+        <div >
             <section className="relative w-full overflow-hidden md:h-[80vh]" >
 
                 {/* BG Image — swap div for img when ready */}
@@ -179,7 +218,7 @@ const VirtualBanner = () => {
                             custom={0}
                             className="text-4xl 2xl:text-[3vw] font-extrabold text-white leading-tight"
                         >
-                            Accurate. Insightful. Investor-Ready Startup Valuation Services
+                            Accurate. Insightful. Investor-Ready Business Valuation Services
                         </motion.h1>
 
                         {/* Subtitle */}
@@ -215,34 +254,13 @@ const VirtualBanner = () => {
                             custom={0.45}
                         >
                             
-                            <SharedFullButton text={'Get a Free Startup Valuation Consultation'} path={'/contact'}></SharedFullButton>
+                            <SharedFullButton text={'Get a Free Business Valuation Consultation'} path={'/contact'}></SharedFullButton>
                         </motion.div>
 
                     </div>
                 </div>
             </section>
-            {/* ── Stats Bar ── */}
-            <div className="border-b border-gray-100 bg-[#f8f9fc]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 sm:gap-0">
-                        {/* Why Choose Us label */}
-                        <div className="sm:pr-8 sm:border-r border-gray-200 shrink-0">
-                            <h2 className="text-base font-bold text-[#0d1e4a] whitespace-nowrap">Industry We Served 24+</h2>
-                        </div>
-                        {/* Stats */}
-                        <div className="flex flex-wrap gap-6 sm:gap-0 sm:flex-1">
-                            {stats.map((s, i) => (
-                                <div
-                                    key={s.label}
-                                    className={`flex-1 min-w-[140px] sm:px-8 ${i < stats.length - 1 ? "sm:border-r border-gray-200" : ""}`}
-                                >
-                                    <StatItem {...s} start={started} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <SecondSection></SecondSection>
         </div>
     );
 }
