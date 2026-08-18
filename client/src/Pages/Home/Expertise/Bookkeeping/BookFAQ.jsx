@@ -21,6 +21,7 @@ const faqs = [
         q: "05. How often will my books be updated?",
         a: "You can choose daily, weekly, monthly, or custom frequency. Your books will always stay current so you never get last-minute surprises.",
     }
+    
     ,
     {
         q: "06. What accounting software do you support and can you work with the one I’m already using?",
