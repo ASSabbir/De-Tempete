@@ -113,7 +113,7 @@ export default function HireTaxRegion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-4">
             Tax Advisory <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -152,7 +152,7 @@ export default function HireTaxRegion() {
           >
             {/* Flag */}
 
-            <img src={current.flag} alt="" className="w-22" />
+            <img src={current.flag} alt="" className="w-22 " />
 
             {/* Title */}
             <h3 className="text-2xl sm:text-3xl lg:text-4xl text-[#0d1e4a] font-normal">
@@ -168,7 +168,7 @@ export default function HireTaxRegion() {
                 className="w-full rounded-xl flex justify-center p-6 sm:p-8 text-left mt-2"
 
               >
-                <SharedFullButton text={`Get a Free Tax Consultation in ${current.shortName}`} path={current.path}></SharedFullButton>
+                <SharedFullButton text={`Read More About Tax Advisory in ${current.shortName}`} path={current.path}></SharedFullButton>
 
               </div>
 

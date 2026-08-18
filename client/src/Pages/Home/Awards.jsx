@@ -12,9 +12,9 @@ const imgall = [img1, img2, img3, img4, img5, img6, img7];
 
 const Awards = () => {
     return (
-        <div className='max-w-7xl bg-white py-[3vw] mt-[3vw] mx-auto'>
+        <div className='max-w-7xl bg-white py-[3vw] mt-[3vw] px-5  mx-auto'>
             <div className='max-w-6xl mx-auto'>
-                <div className='flex flex-col md:flex-row w-full items-center justify-between'>
+                <div className='flex flex-row flex-wrap  w-full gap-3 items-center justify-between'>
                     {imgall.map((pic, index) => (
                         <div key={index}>
                             <img src={pic} className='h-20' alt={`Award ${index + 1}`} />

@@ -2,12 +2,14 @@
 import { AnimatedCounter } from "./AnimatedCounter";
 
 export const StatsSection = ({ stats, bgColor = "bg-[#F5F6F8]", maxWidth = "max-w-[1600px]" }) => (
+  
   <section className={`${bgColor} py-10`}>
     <div className={`${maxWidth} mx-auto px-6`}>
       <div className="grid lg:grid-cols-5 gap-10 items-center">
         <div>
           <h2 className="text-[#14224A] text-2xl lg:text-3xl font-bold">Industry We Served 24+</h2>
         </div>
+        
         {stats.map((s, i) => {
           const Icon = s.icon;
           return (

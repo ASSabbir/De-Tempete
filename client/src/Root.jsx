@@ -16,12 +16,14 @@ const Root = () => {
     const closeCalculator = () => setIsCalculatorOpen(false);
 
     return (
-        <div className='h-screen font-dmSans'>
+        <div className='h-screen  font-dmSans'>
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
 
             <ScrollManager />
             <Nav openCalculator={openCalculator}></Nav>
-            <Outlet></Outlet>
+            <div className='overflow-x-hidden'>
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
             <CostCalculatorModal
                 isOpen={isCalculatorOpen}

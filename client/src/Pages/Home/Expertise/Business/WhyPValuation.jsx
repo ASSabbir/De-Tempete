@@ -9,15 +9,15 @@ const WhyPValuation = () => {
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-3xl sm:text-[3vw] xl:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
-            Why Your Startup Needs a
+          <h2 className="text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
+            Why Your Business Needs a
             <br className="hidden sm:block" />
             <span className="font-extrabold">Professional Valuation?</span>
           </h2>
 
           <div className="space-y-4 text-[15px] text-gray-600 leading-relaxed">
             <p>
-              Startups operate in uncertainty, fluctuating markets, evolving customer needs, and no guarantee of revenue timelines. That’s exactly why a reliable valuation matters
+              Innovative and highly scalable business operate in uncertainty, fluctuating markets, evolving customer needs, and no guarantee of revenue timelines. That’s exactly why a reliable valuation matters
             </p>
             <p>
               With expert valuation, you get:

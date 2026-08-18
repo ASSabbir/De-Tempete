@@ -1,8 +1,9 @@
-import { HiChartBar } from "react-icons/hi"; 
+import { HiChartBar } from "react-icons/hi";
 import { motion } from "framer-motion";
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 
-export default function KeyBenefits({benefits,keyBenefittext}) {
+export default function KeyBenefits({ benefits, keyBenefittext }) {
   return (
     <section className="w-full py-16 lg:py-24" style={{ background: "#0a1840" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,18 +31,28 @@ export default function KeyBenefits({benefits,keyBenefittext}) {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.45, delay: (i % 3) * 0.1, ease: "easeOut" }}
-              className="group flex items-center justify-center gap-3 px-6 py-7 rounded-xl cursor-default transition-all duration-300 "
+              transition={{
+                duration: 0.45,
+                delay: (i % 3) * 0.1,
+                ease: "easeOut",
+              }}
+              className="group flex items-center gap-5 px-9 py-7 min-h-[150px] rounded-xl cursor-default transition-all duration-300"
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
-              
             >
-              <div className="text-4xl p-2 text-white rounded-xl bg-light-blue">
-                <HiChartBar />
+              {/* Fixed Image Box */}
+              <div className="shrink-0 w- flex items-center rounf justify-center rounded-xl bg-white overflow-hidden">
+                <img
+                  src={logo}
+                  alt=""
+                  className="w-full h-full object-contain p-2"
+                />
               </div>
-              <p className="text-white  font-inter text-sm 2xl:text-[1vw] leading-snug">
+
+              {/* Text */}
+              <p className="flex-1 text-white font-inter text-sm 2xl:text-[1vw] leading-snug">
                 {text}
               </p>
             </motion.div>
