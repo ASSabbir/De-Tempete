@@ -21,6 +21,7 @@ const faqs = [
         q: "05. How often will my books be updated?",
         a: "You can choose daily, weekly, monthly, or custom frequency. Your books will always stay current so you never get last-minute surprises.",
     }
+    
     ,
     {
         q: "06. What accounting software do you support and can you work with the one I’m already using?",
@@ -120,7 +121,7 @@ export default function BookFAQ() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Heading */}
-                <h2 className="text-center text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+                <h2 className="text-center text-3xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
                     Frequently Asked <span className="font-extrabold">Questions</span>
                 </h2>
 
