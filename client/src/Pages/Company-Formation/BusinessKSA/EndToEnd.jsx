@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import SharedButton from "../../../Components/Shared/SharedButton";
 
 const steps = [
   {
@@ -72,21 +73,20 @@ const EndToEnd = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Banner */}
         <div className="bg-[#081B57] rounded-2xl px-6 sm:px-8 lg:px-10 py-6 sm:py-8 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 mb-12 md:mb-16 lg:mb-18">
-          <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-medium max-w-4xl leading-relaxed text-center lg:text-left">
+          <h3 className="text-white text-base sm:text-xl lg:text-2xl  font-medium max-w-4xl leading-relaxed text-center lg:text-left">
             At <span className="italic font-bold">de tempête</span>, we manage
             the full process — ensuring fast approval and full compliance with
             KSA’s <span className="font-bold">business laws.</span>
           </h3>
 
-          <Link to={'/contact'}>
-            <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-medium transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 hover:shadow-xl">
-              Get Started Now
-            </button></Link>
+        
+            
+            <SharedButton text={'Get Started Now'} path={'/business-setup/ksa#bussiness-setup-ksa'}></SharedButton>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-[#081B57] text-5xl 2xl:text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-3xl md:text-4xl 2xl:text-5xlfont-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>

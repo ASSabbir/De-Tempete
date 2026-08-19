@@ -29,9 +29,9 @@ const services = [
     description:
       "We refine your business plan to clearly communicate your value proposition, market opportunity, competitive advantage, and growth strategy.",
     icon: (
-      <IconWrap>
+      
         <TbClipboardText />
-      </IconWrap>
+      
     ),
   },
   {
@@ -39,9 +39,9 @@ const services = [
     description:
       "Create accurate financial projections, including revenue, expenses, cash flow, and ROI, helping investors understand your potential returns and risks.",
     icon: (
-      <IconWrap>
+      
         <TbChartLine />
-      </IconWrap>
+      
     ),
   },
   {
@@ -49,9 +49,9 @@ const services = [
     description:
       "Gain in-depth insights into industry trends, target audience, and competitive landscape to strengthen your investment case.",
     icon: (
-      <IconWrap>
+      
         <TbSearch />
-      </IconWrap>
+      
     ),
   },
   {
@@ -59,9 +59,9 @@ const services = [
     description:
       "Determine your business's fair value using trusted methodologies, ensuring transparency and credibility with investors.",
     icon: (
-      <IconWrap>
+      
         <TbScale />
-      </IconWrap>
+      
     ),
   },
   {
@@ -69,9 +69,9 @@ const services = [
     description:
       "Our experts review contracts, intellectual property, and legal matters to minimize risk and enhance investor confidence.",
     icon: (
-      <IconWrap>
+      
         <TbGavel />
-      </IconWrap>
+      
     ),
   },
   {
@@ -79,9 +79,9 @@ const services = [
     description:
       "Design visually compelling, content-rich pitch decks that highlight your business and investment opportunities.",
     icon: (
-      <IconWrap>
+      
         <TbPresentation />
-      </IconWrap>
+      
     ),
   },
   {
@@ -89,9 +89,9 @@ const services = [
     description:
       "Show potential investors exactly how their capital will be deployed and the expected return on investment.",
     icon: (
-      <IconWrap>
+      
         <TbWallet />
-      </IconWrap>
+      
     ),
   },
   {
@@ -99,9 +99,9 @@ const services = [
     description:
       "Assess your leadership team, recommend improvements, and ensure you have the right talent to execute your vision.",
     icon: (
-      <IconWrap>
+      
         <TbUsersGroup />
-      </IconWrap>
+      
     ),
   },
   {
@@ -109,9 +109,9 @@ const services = [
     description:
       "Leverage our network to connect with potential investors who align with your strategic goals.",
     icon: (
-      <IconWrap>
+      
         <TbNetwork />
-      </IconWrap>
+      
     ),
   },
   {
@@ -119,9 +119,9 @@ const services = [
     description:
       "Prepare all necessary documentation and assist with investor due diligence for a smooth fundraising process.",
     icon: (
-      <IconWrap>
+      
         <TbFileSearch />
-      </IconWrap>
+      
     ),
   },
   {
@@ -129,9 +129,9 @@ const services = [
     description:
       "Ongoing strategic guidance to refine growth plans, identify challenges, and adapt to market changes.",
     icon: (
-      <IconWrap>
+      
         <TbBriefcase />
-      </IconWrap>
+      
     ),
   },
   {
@@ -139,9 +139,9 @@ const services = [
     description:
       "Continuously evaluate your product-market alignment and adjust offerings to maximize investor confidence.",
     icon: (
-      <IconWrap>
+      
         <TbTarget />
-      </IconWrap>
+      
     ),
   },
 ];
@@ -163,7 +163,7 @@ export default function InvestmentReadinessServices() {
 
         {/* Heading */}
         <div className="mb-12 lg:mb-16">
-          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-3">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-3">
             Investment Readiness <span className="font-extrabold">Services</span>
           </h2>
           <p className="text-gray-500 text-base max-w-2xl">

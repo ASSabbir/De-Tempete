@@ -8,7 +8,7 @@ const WhyInvestment = () => {
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
             Why does Business needs
             <br className="hidden sm:block" />
             <span className="font-extrabold">Investment Readiness? </span>

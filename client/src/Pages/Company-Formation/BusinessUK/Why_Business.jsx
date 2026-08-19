@@ -5,7 +5,7 @@ const Why_Business = () => {
 
         {/* Left Content */}
         <div>
-          <h2 className="text-[#14224A] text-5xl font-light leading-tight">
+          <h2 className="text-[#14224A] text-3xl md:text-4xl 2xl:text-5xll font-light leading-tight">
             Why Start A
             <br />
             <span className="font-bold">Business In The UK?</span>

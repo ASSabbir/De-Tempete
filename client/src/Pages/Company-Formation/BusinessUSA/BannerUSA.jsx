@@ -61,7 +61,7 @@ const BannerUSA = () => {
         </div>
 
         {/* Button */}
-        <SharedButton  text={'Start Now →'} path={'/contact'}></SharedButton>
+        <SharedButton  text={'Start Now →'} path={'/business-setup/usa#bussiness-setup-usa'}></SharedButton>
       </div>
 
       {/* Custom Animations */}

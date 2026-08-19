@@ -185,7 +185,7 @@ export default function InvestmentFAQ() {
     <section className="bg-[#f8f9fc] w-full py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
+        <h2 className="text-center text-3xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10 lg:mb-14">
           Frequently Asked <span className="font-extrabold">Questions</span>
         </h2>
 

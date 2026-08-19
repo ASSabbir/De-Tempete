@@ -38,16 +38,16 @@ const Why_BusinessEs = () => {
         {/* Heading */}
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-[#081B57] leading-tight">
-            <span className="block text-5xl 2xl:text-6xl font-light">
+            <span className="block text-3xl md:text-4xl 2xl:text-5xl font-light">
               Why Start A
             </span>
 
-            <span className="block text-5xl 2xl:text-6xl font-bold mt-2">
+            <span className="block text-3xl md:text-4xl 2xl:text-5xl font-bold mt-2">
               Business In The Estonia?
             </span>
           </h2>
 
-          <p className="mt-10 text-[#2B3557] text-base">
+          <p className="mt-10 text-[#2B3557] text-base text-justify">
             Estonia is Europe's most advanced digital economy and one of the world's easiest places to launch and run a company. Through the e-Residency programme, entrepreneurs from 170+ countries can establish a 100% foreign-owned EU company entirely online — no travel, no local sponsor, no layers of paperwork. With 0% corporate tax on retained profits, full access to the EU Single Market, and 99% of public services running digitally, Estonia offers a uniquely founder-friendly environment. Home to the startup ecosystem that produced Wise, Skype, and Bolt, and a member of the EU, Eurozone, NATO, and OECD, the country combines credibility, simplicity, and cash-flow-friendly taxation — making it the ideal EU launchpad for startups, SaaS businesses, e-commerce sellers, and international founders.
           </p>
         </div>

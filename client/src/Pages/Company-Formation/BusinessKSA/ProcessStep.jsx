@@ -43,7 +43,7 @@ const ProcessStep = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="max-w-5xl mb-24">
-          <h2 className="text-[#000000] text-5xl 2xl:text-6xl font-light leading-tight">
+          <h2 className="text-[#000000] text-3xl md:text-4xl 2xl:text-5xl font-light leading-tight">
             Step-By-Step Process For
             <br />
             Saudi Arabia <span className="font-bold">Company Registration</span>

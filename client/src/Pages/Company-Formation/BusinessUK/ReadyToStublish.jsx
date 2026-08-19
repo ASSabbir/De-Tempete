@@ -1,13 +1,15 @@
+import SharedButton from "../../../Components/Shared/SharedButton";
+
 const ReadyToStublish = () => {
   return (
     <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] py-24">
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+        <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold leading-tight">
           Ready To Establish
         </h2>
 
-        <h3 className="text-4xl md:text-5xl font-light mt-2">
+        <h3 className="text-3xl md:text-4xl 2xl:text-5xl font-light mt-2">
           Your Presence In The UK?
         </h3>
 
@@ -17,9 +19,10 @@ const ReadyToStublish = () => {
           ready to grow.
         </p>
 
-        <button className="my-15 border-2 border-white px-10 py-4 rounded-xl text-base font-medium hover:bg-white hover:text-[#081B57] duration-300">
-          Start Your UK Business Today
-        </button>
+        
+        <div className="my-10">
+          <SharedButton text={' Start Your UK Business Today'} path={'/business-setup/uk#bussiness-setup-uk'}></SharedButton>
+        </div>
       </div>
 
       {/* Bottom Marquee */}
@@ -77,7 +80,7 @@ const ReadyToStublish = () => {
 
     @media (max-width: 768px) {
       .marquee-content span {
-        font-size: 60px;
+        font-size: 100px;
       }
     }
   `}

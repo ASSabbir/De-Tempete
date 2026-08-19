@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const companyData = [
   {
@@ -46,7 +47,7 @@ const Types_of_Company = () => {
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl text-[#14224A] font-light">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-[#14224A] font-light">
             Types of Company{" "}
             <span className="font-bold">Structures in USA</span>
           </h2>
@@ -69,7 +70,7 @@ const Types_of_Company = () => {
                   <button
                     key={company.id}
                     onClick={() => setActiveTab(index)}
-                    className={`relative block text-left text-2xl transition duration-300 ${
+                    className={`relative block text-left text-xl transition duration-300 ${
                       activeTab === index ? "text-[#58CDE7]" : "text-[#14224A]"
                     }`}
                   >
@@ -91,14 +92,14 @@ const Types_of_Company = () => {
               <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
                 {/* Number */}
                 <div className="flex justify-center md:block">
-                  <h1 className="text-[#58CDE7] text-6xl sm:text-7xl md:text-8xl lg:text-[110px] xl:text-[130px] font-bold leading-none">
+                  <h1 className="text-[#58CDE7] text-6xl sm:text-7xl md:text-8xl  font-bold leading-none">
                     {companyData[activeTab].number}
                   </h1>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl 2xl::text-5xl font-bold mb-5 md:mb-8 leading-tight">
+                  <h3 className="text-white text-2xl sm:text-3xl  2xl::text-5xl font-bold mb-5 md:mb-8 leading-tight">
                     {companyData[activeTab].title}
                   </h3>
 
@@ -112,9 +113,10 @@ const Types_of_Company = () => {
 
               {/* Button */}
               <div className="mt-8 flex justify-end">
-                <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white transition-all duration-300">
-                  Talk to an Expert
-                </button>
+                
+                
+                <Link className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300" to={'/business-setup/usa#bussiness-setup-usa'}>Talk to an Expert
+                </Link>
               </div>
             </div>
           </div>

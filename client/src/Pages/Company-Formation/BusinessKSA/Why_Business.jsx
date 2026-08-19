@@ -39,11 +39,11 @@ const Why_Business = () => {
         {/* Heading */}
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-[#081B57] leading-tight">
-            <span className="block text-5xl 2xl:text-6xl font-light">
+            <span className="block text-3xl md:text-4xl 2xl:text-5xl font-light">
               Why Start A
             </span>
 
-            <span className="block text-5xl 2xl:text-6xl font-bold mt-2">
+            <span className="block text-3xl md:text-4xl 2xl:text-5xl font-bold mt-2">
               Business In The KSA?
             </span>
           </h2>

@@ -3,18 +3,18 @@ import img1 from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natura
 
 const WhyPost = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-[3vw] 2xl:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
             Why Does Investors Need
             <br className="hidden sm:block" />
             <span className="font-extrabold">Post-Investment Monitoring</span>
           </h2>
 
-          <div className="space-y-5 text-base font-inter text-gray-600 ">
+          <div className="space-y-5 text-justify text-base font-inter text-gray-600 ">
             <p>
               Investing is only the beginning; what happens afterward determines your true returns. Most businesses lose value not because of bad investments, but due to weak oversight, unmanaged risks, unclear reporting, and the absence of strategic adjustments. de tempête ensures your capital is protected and performing by keeping your investments aligned with long-term goals, identifying risks early, and providing transparent performance tracking.
 

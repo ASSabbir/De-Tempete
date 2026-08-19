@@ -6,6 +6,7 @@ import API from "../../api/axios";
 const EMPTY_FORM = { name: "", email: "", message: "" };
 
 export const ConsultationCTA = ({
+  id,
   heading,
   subheading,
   commitmentTitle = "Our Commitment",
@@ -44,7 +45,7 @@ export const ConsultationCTA = ({
   };
 
   return (
-    <section className="bg-[#16244B] py-24">
+    <section id={id} className="bg-[#16244B] py-24">
       <div className="max-w-[1600px] mx-auto px-6 md:px-20 2xl:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

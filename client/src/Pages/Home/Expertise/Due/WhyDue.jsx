@@ -8,13 +8,13 @@ const WhyDue = () => {
 
         {/* Left — Text */}
         <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
             Why Does Investors Need
             <br className="hidden sm:block" />
             <span className="font-extrabold">due diligence</span>
           </h2>
 
-          <div className="space-y-5 text-base font-inter text-gray-600 ">
+          <div className="space-y-5 text-justify text-base font-inter text-gray-600 ">
             <p>
               Prior to an investment due diligence is a process that involves research and analysis to ascertain the financial integrity and compliance of the subject of the due diligence as well as the existence of any significant problem areas or potential issues. Before making an investment, a potential buyer or investor must gather all relevant data. Securing a decent bargain and avoiding mistakes are also crucial.
             </p>

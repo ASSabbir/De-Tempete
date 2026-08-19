@@ -61,7 +61,7 @@ const BannerUK = () => {
 
         {/* Button */}
         
-        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
+        <SharedButton text={'Start Now →'} path={'/business-setup/uk#bussiness-setup-uk'}></SharedButton>
       </div>
 
       {/* Custom Animations */}

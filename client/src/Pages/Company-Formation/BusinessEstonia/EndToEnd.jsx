@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SharedButton from "../../../Components/Shared/SharedButton";
 
 const steps = [
   {
@@ -87,20 +88,19 @@ const EndToEnd = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Top Banner */}
         <div className="bg-[#081B57] rounded-2xl px-6 sm:px-10 py-6 lg:py-4 flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 mb-12 sm:mb-18 transition-shadow duration-300 hover:shadow-xl hover:shadow-cyan-900/20">
-          <h3 className="text-white text-base sm:text-xl lg:text-2xl font-medium max-w-4xl leading-relaxed text-center lg:text-left">
+          <h3 className="text-white text-base sm:text-xl 2xl:text-2xl font-medium max-w-4xl leading-relaxed text-center lg:text-left">
             At <span className="italic font-bold">de tempête</span>, we manage
             the full process — ensuring fast approval and full compliance with
             Estonia’s <span className="font-bold">business laws.</span>
           </h3>
 
-          <button className="border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 active:scale-95 shrink-0">
-            Get Started Now
-          </button>
+          
+          <SharedButton text={'Get Started Now'} path={'/business-setup/estonia#bussiness-setup-estonia'}></SharedButton>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-14 sm:mb-20 lg:mb-24 px-2">
-          <h2 className="text-[#081B57] text-3xl sm:text-5xl 2xl:text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-3xl sm:text-4xl 2xl:text-5xl font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>
@@ -117,7 +117,7 @@ const EndToEnd = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left Steps */}
           <div className="lg:col-span-3">
-            <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible scrollbar-hide pb-2">
+            <div className="flex lg:flex-col  overflow-x-auto lg:overflow-visible scrollbar-hide pb-2">
               {steps.map((item, index) => (
                 <button
                   key={index}
@@ -147,7 +147,7 @@ const EndToEnd = () => {
               >
                 {/* Number */}
                 <div className="flex justify-center sm:block">
-                  <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[140px] leading-none font-bold text-[#58D3EC]">
+                  <h1 className="text-6xl sm:text-8xl   leading-none font-bold text-[#58D3EC]">
                     {steps[activeStep].number}
                   </h1>
                 </div>

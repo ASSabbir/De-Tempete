@@ -19,7 +19,7 @@ const regions = [
   },
   {
     id: "uk",
-    tab: "United Kingdom (UK)",
+    tab: "UK",
     flag: uk,
     shortName: "UK",
     description:
@@ -37,7 +37,7 @@ const regions = [
   },
   {
     id: "ksa",
-    tab: "KSA (Saudi Arabia)",
+    tab: "KSA",
     flag: ksa,
     shortName: "KSA",
     description:
@@ -49,7 +49,7 @@ const regions = [
   
   {
   id: "usa",
-  tab: "USA (United States)",
+  tab: "USA",
   flag: us,
   shortName: "USA",
   description:
@@ -69,7 +69,7 @@ export default function HireHRregion() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-[3vw] 2xl:text-[2.6rem] text-[#0d1e4a] font-normal mb-4">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-4">
            HR & Payroll <span className="font-extrabold">In Your Region</span>
           </h2>
           <p className="text-gray-500 text-base sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -124,7 +124,7 @@ export default function HireHRregion() {
               className="w-full rounded-xl flex justify-center p-6 sm:p-8 text-left mt-2"
              
             >
-              <SharedButton text={`Get a Free HR Consultation in ${current.shortName}`} path={current.path}></SharedButton>
+              <SharedButton text={`Read More About HR & Payroll in ${current.shortName}`} path={current.path}></SharedButton>
               
             </div>
           </motion.div>
