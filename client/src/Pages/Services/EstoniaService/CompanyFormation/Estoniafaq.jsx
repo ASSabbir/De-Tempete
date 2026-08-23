@@ -135,7 +135,7 @@ export default function EstoniaFAQ({
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="dt-faq-heading text-4xl md:text-5xl  text-slate-900 leading-tight mb-4">
+          <h2 className="dt-faq-heading text-4xl 2xl:text-5xl  text-slate-900 leading-tight mb-4">
             Frequently Asked <span className="font-bold">Questions</span>
             
           </h2>
@@ -170,7 +170,7 @@ export default function EstoniaFAQ({
                       <img src={logo} alt="" />
                     </div>
                   </span>
-                  <span className="flex-1 text-base md:text-xl font-semibold text-slate-900">
+                  <span className="flex-1 text-base md:text-base font-semibold text-slate-900">
                     {question}
                   </span>
                   <ChevronDown

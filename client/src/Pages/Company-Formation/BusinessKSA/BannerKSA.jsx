@@ -16,12 +16,12 @@ const BannerKSA = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center px-6 animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-[4vw] font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in KSA
         </h1>
 
         {/* Sub Heading */}
-        <h2 className="mt-4 text-[2vw] font-light leading-snug">
+        <h2 className="mt-4 text-xl font-light leading-snug">
           Start Your Company with{" "}
           <span className="italic transition-all font-bold duration-300 hover:text-light-blue">
             de tempête
@@ -29,7 +29,7 @@ const BannerKSA = () => {
         </h2>
 
         {/* Categories */}
-        <div className=" mb-10 space-y-8 mt-8 text-[1vw] font-semibold">
+        <div className=" mb-10 space-y-8 mt-8 text-base sm:text-[1.5vw] font-semibold">
           <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-5 md:gap-7 lg:gap-8'>
             <span className="transition-all duration-300 hover:text-light-blue hover:-translate-y-1 cursor-pointer">
               LIMITED LIABILITY COMPANY (LLC)
@@ -63,7 +63,7 @@ const BannerKSA = () => {
         </div>
 
         {/* Button */}
-        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
+        <SharedButton text={'Start Now →'} path={'/business-setup/ksa#bussiness-setup-ksa'}></SharedButton>
       </div>
 
       {/* Animations */}

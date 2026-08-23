@@ -15,12 +15,19 @@ const About = () => {
             <AboutBanner></AboutBanner>
             <ForwardSection></ForwardSection>
             <TrustedPartner></TrustedPartner>
+            
             <GrowthPartners></GrowthPartners>
+            <div className=' max-w-7xl mx-auto pb-20' >
+                <div className='flex flex-col md:flex-row text-center md:text-left bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
+                    <h1 className='text-2xl'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
+                    <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
+                </div>
+            </div>
             <section className="pb-12 bg-white">
                 <div className="max-w-[1200px] mx-auto px-6   items-stretch">
                     
-                    <div className="flex flex-col justify-center">
-                        <h2 className="text-3xl lg:text-5xl leading-tight text-[#16244b] font-light">
+                    <div className="flex flex-col items-center text-center justify-center">
+                        <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                             Industries <span className="font-bold">We Serve</span>
                         </h2>
                         <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
@@ -42,13 +49,8 @@ const About = () => {
                     />
                 </div>
             </section>
-            <div className=' max-w-7xl mx-auto pb-20' >
-                <div className='flex bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
-                    <h1 className='text-3xl'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
-                    <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
-                </div>
-            </div>
-            <h2 className="text-3xl text-center mb-10 leading-tight text-dark-blue sm:text-5xl">
+            
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl mt-10 text-center mb-10 leading-tight text-dark-blue ">
                 <span className="font-extrabold ">Growth </span> Partners
             </h2>
             <LogoMarqueeRows></LogoMarqueeRows>

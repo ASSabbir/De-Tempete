@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SharedButton from "../../../Components/Shared/SharedButton";
 
 const steps = [
   {
@@ -93,14 +94,13 @@ const EndToEnd = () => {
             UAE’s <span className="font-bold">business laws.</span>
           </h3>
 
-          <button className="border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl transition-all duration-300 hover:bg-white hover:text-[#081B57] hover:scale-105 active:scale-95 shrink-0">
-            Get Started Now
-          </button>
+          
+          <SharedButton text={'Get Started Now'} path={'/business-setup/uae#bussiness-setup-uae'}></SharedButton>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-14 sm:mb-20 lg:mb-24 px-2">
-          <h2 className="text-[#081B57] text-[3vw] 2xl:text-[2.6rem] font-light leading-tight">
+          <h2 className="text-[#081B57] text-3xl md:text-4xl 2xl:text-5xl font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>

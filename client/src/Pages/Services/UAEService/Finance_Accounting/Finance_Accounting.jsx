@@ -51,7 +51,7 @@ const coreCards = [
   {
     title: "Accounting",
     image:
-     img1,
+      img1,
     items: [
       "VAT-compliant accounting",
       "Chart of accounts setup",
@@ -157,10 +157,12 @@ const Finance_Accounting = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
+  const id = 'services-uae-finance'
 
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bgimg}
         alt="Finance & Accounting"
         heading="Reliable. Compliant. Strategic."
@@ -168,8 +170,6 @@ const Finance_Accounting = () => {
           <>
             We Help UAE Businesses Simplify Their Financial Operations With
             End-To-End Accounting, Reporting, And Advisory Solutions.
-            <br />
-            <br />
             Whether you're a startup, SME, or fast-growing company, our team
             ensures full compliance, clean books, and data-driven financial
             clarity — so you can focus on scaling your business.
@@ -325,7 +325,7 @@ const Finance_Accounting = () => {
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
               Our Virtual CFO service gives you access to executive-level
-              financial leadership — without the full-time cost. From strategic
+              financial leadership — without the cost of a full-time CFO. From strategic
               planning to financial governance, we guide your business toward
               profitability and long-term stability.
             </p>
@@ -401,8 +401,7 @@ const Finance_Accounting = () => {
               <span className="font-light">Vendor Management</span>
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
-              Optimize your operations with structured procurement systems and
-              effective vendor management.
+              We help businesses build efficient, transparent and cost-effective procurement processes—from vendor selection and negotiation to contract management and supplier performance. Our approach helps control costs, reduce procurement risks and strengthen operational efficiency.
             </p>
             <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
               Key areas:
@@ -445,8 +444,8 @@ const Finance_Accounting = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuTrendingUp className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -457,9 +456,9 @@ const Finance_Accounting = () => {
         </div>
       </section>
 
-      
 
-     
+
+
       {/* Why Trust */}
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
@@ -471,44 +470,73 @@ const Finance_Accounting = () => {
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuBriefcase className="text-light-blue text-2xl shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+  {whyChoose.map((item, index) => {
+    const isDark = index === 0 || index === 3;
+
+    return (
+      <div
+        key={index}
+        className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+          isDark
+            ? "bg-light-blue"
+            : "bg-white border border-gray-200"
+        }`}
+      >
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            alt=""
+            className={`w-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+          />
+        </div>
+
+        <div>
+          <h3 className="text-base font-bold text-[#16244b] mb-2">
+            {item.title}
+          </h3>
+
+          <p
+            className={`text-base leading-6 ${
+              isDark ? "text-gray-700" : "text-gray-500"
+            }`}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
- <ConsultationCTA
-        heading={
-          <>
-            Procurement Advisory &{" "}
-            <span className="font-bold">
-              Vendor
-              <br />
-              Management
-            </span>
-          </>
-        }
-        subheading="Optimize your operations with structured procurement systems and effective vendor management."
-        commitmentItems={[
-          "Vendor evaluation & negotiation support",
-          "Procurement process setup & optimization",
-          "Contract & supplier performance management",
-          "Day-to-day procurement & operational support",
-        ]}
-      />
-      
+      <ConsultationCTA
+      id={id}
+  heading={
+    <>
+      Start Building Your{" "}
+      <span className="font-bold">
+        Business Compliance
+        <br />
+        Framework Today
+      </span>
+    </>
+  }
+  subheading="Improve regulatory compliance, reduce risks, and strengthen business operations across UAE."
+  commitmentItems={[
+    "Stronger compliance controls",
+    "Reduced operational risks",
+    "Better internal processes",
+    "Higher business credibility",
+  ]}
+/>
+
     </div>
   );
 };

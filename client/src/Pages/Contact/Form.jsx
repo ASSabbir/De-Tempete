@@ -9,17 +9,24 @@ import ee from '../../asstes/img_temp/Contact/ee-circle-01.webp';
 import sa from '../../asstes/img_temp/Contact/5111777.webp';
 const offices = [
   {
-    flag: uk,
-    name: "UK ",
-    phone: "+447831848639",
-    address: "115 London Road, Morden, SM4 5HP, UK",
-  },
-  {
     flag: uae,
     name: "UAE ",
     phone: "+971566994282",
-    address: "Office 601/31, Business Village Block B - Port Saeed - Deira - Dubai - United Arab Emirates",
+    address: "Office 601/31, Business Village, Block B, Port Saeed, Deira, Dubai, United Arab Emirates",
   },
+  {
+    flag: uk,
+    name: "UK ",
+    phone: "+447831848639",
+    address: " 115 London Road, Morden, SM4 5HP, United Kingdom",
+  },
+  {
+    flag: sa,
+    name: "KSA ",
+    phone: "+966 55 949 3954",
+    address: "Office # 303, Al Mohamdia Tower, Al Aqrabiyah City Al Khobar, Ash Sharqiyah, Saudia Arabia",
+  },
+  
   {
     flag: bd,
     name: "Bangladesh ",
@@ -32,12 +39,7 @@ const offices = [
     phone: "+372 5781 8653",
     address: "Volume 20/3, Tallinn 13516, Estonia",
   },
-  {
-    flag: sa,
-    name: "KSA ",
-    phone: "+966 55 949 3954",
-    address: "Office # 303, Al Mohamdia Tower, Custodian of the two Holy Mosques Road, Al Aqrabiyah City Al Khobar, Ash Sharqiyah, Saudia Arabia",
-  },
+  
 ];
 
 const socials = [

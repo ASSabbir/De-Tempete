@@ -17,17 +17,21 @@ const whyChoose = [
 ];
 
 import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img2 from '../../../../asstes/img_temp/servics/UK/freepik__corporate-tax-planning-compliance-image-unique-con__88847.webp'
+import img2 from '../../../../asstes/img_temp/0652f824-1c9b-4dd5-b267-c07aab27ec1d.webp'
 import img3 from '../../../../asstes/img_temp/servics/UK/freepik__personal-tax-planningimage-for-website-section-no-__88846.webp'
 import img4 from '../../../../asstes/img_temp/servics/UK/freepik__capital-gains-tax-cgt-advisory-image-unique-concep__88848.webp'
 import img5 from '../../../../asstes/img_temp/servics/UK/freepik__inheritance-tax-planning-image-unique-but-clear-co__88850.webp'
 import img6 from '../../../../asstes/img_temp/servics/UK/freepik__rd-tax-credit-claims-image-unique-but-clear-concep__88851.webp'
 import img7 from '../../../../asstes/img_temp/servics/UK/freepik__hmrc-investigation-support-dispute-resolution-imag__88852.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const Tax_Planning_Advisory = () => {
+  const id = 'servics-uk-tax'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={img1}
         alt="Tax Planning & Advisory"
         heading={
@@ -39,7 +43,7 @@ const Tax_Planning_Advisory = () => {
             </span>
           </>
         }
-        description="From corporate tax strategy to personal tax optimisation, our Tax Planning & Advisory services ensure full compliance, reduced liabilities, and a clear roadmap for long-term financial efficiency. Whether you're a business, investor, or individual, we help you navigate complex tax regulations with clarity and confidence."
+        description="From corporate Tax strategy to personal Tax optimisation, our Tax Planning & Advisory services ensure full compliance, reduced liabilities, and a clear roadmap for long-term financial efficiency. Whether you're a business, investor, or individual, we help you navigate complex Tax regulations with clarity and confidence."
       />
 
       <SecondSection></SecondSection>
@@ -59,14 +63,14 @@ const Tax_Planning_Advisory = () => {
             </h2>
             <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Minimise liabilities, stay compliant, and optimise your overall
-              tax position.
+              Tax position.
             </p>
-            <p className="mt-3 text-base leading-8 text-gray-500">
-              We design efficient corporate tax strategies tailored to your
+            <p className="mt-3 text-base text-justify leading-8 text-gray-500">
+              We design efficient corporate Tax strategies tailored to your
               business structure, industry, and long-term goals. From compliance
               and filing to strategic planning and risk reduction, our experts
               ensure your business meets all regulatory requirements while
-              maximising tax efficiency.
+              maximising Tax efficiency.
             </p>
           </div>
         </div>
@@ -80,11 +84,11 @@ const Tax_Planning_Advisory = () => {
               Personal <br/> <span className="font-light">Tax Planning</span>
             </h2>
             <p className="mt-5 text-gray-500 font-semibold">
-              Reduce your tax burden with proactive planning.
+              Reduce your Tax burden with proactive planning.
             </p>
-            <p className="mt-3 text-gray-500 leading-7">
-              Our personal tax advisory helps you manage income, investments,
-              and assets more efficiently. We build tailored tax plans that
+            <p className="mt-3 text-justify text-gray-500 leading-7">
+              Our personal Tax advisory helps you manage income, investments,
+              and assets more efficiently. We build tailored Tax plans that
               ensure compliance while reducing unnecessary liabilities, giving
               you clarity and peace of mind throughout the financial year.
             </p>
@@ -114,7 +118,7 @@ const Tax_Planning_Advisory = () => {
             <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Keep more of what you earn.
             </p>
-            <p className="mt-3 text-base leading-8 text-gray-500">
+            <p className="mt-3 text-justify text-base leading-8 text-gray-500">
               We help you understand your CGT obligations and implement
               strategies to reduce your overall liability. Whether you're
               selling property, shares, or business assets, our advisors ensure
@@ -136,10 +140,10 @@ const Tax_Planning_Advisory = () => {
             <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Secure your assets for the next generation.
             </p>
-            <p className="mt-3 text-base leading-8 text-gray-500">
-              Our inheritance tax planning ensures your wealth is transferred
-              efficiently and tax-effectively. We create structured plans that
-              minimise tax exposure, protect your beneficiaries, and align with
+            <p className="mt-3 text-justify text-base leading-8 text-gray-500">
+              Our inheritance Tax planning ensures your wealth is transferred
+              efficiently and Tax-effectively. We create structured plans that
+              minimise Tax exposure, protect your beneficiaries, and align with
               your long-term family goals.
             </p>
           </div>
@@ -170,7 +174,7 @@ const Tax_Planning_Advisory = () => {
             </p>
             <p className="mt-3 text-base leading-8 text-gray-500">
               We help innovative businesses reclaim a portion of their R&D
-              expenditure through eligible tax credits. Our team manages the
+              expenditure through eligible Tax credits. Our team manages the
               full claim process, documentation, technical justification, and
               submission, ensuring accuracy, compliance, and maximum benefit.
             </p>
@@ -204,6 +208,9 @@ const Tax_Planning_Advisory = () => {
           />
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uk'}></SharedFullButton>
+      </div>
       {/* Why Choose */}
       <section className="py-24 bg-white">
         <div className="max-w-[1100px] mx-auto px-6">
@@ -217,13 +224,15 @@ const Tax_Planning_Advisory = () => {
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-6 mt-20">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 mt-20">
             {whyChoose.map((item, index) => (
               <div
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartColumnBig className="text-light-blue text-3xl mx-auto mb-4" />
+                <div className="flex justify-center mb-3">
+                  <img src={logo} alt="" />
+                </div>
                 <p className="text-gray-700 font-semibold">{item}</p>
               </div>
             ))}
@@ -232,6 +241,7 @@ const Tax_Planning_Advisory = () => {
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Plan Smarter. Save
@@ -239,7 +249,7 @@ const Tax_Planning_Advisory = () => {
             More. <span className="font-bold">Stay Compliant.</span>
           </>
         }
-        bodyText="Get expert tax guidance designed to protect your income, assets, and long-term financial goals."
+        bodyText="Get expert Tax guidance designed to protect your income, assets, and long-term financial goals."
         highlightText="Speak to Our Tax Experts"
       />
 

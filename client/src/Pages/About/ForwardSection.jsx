@@ -28,7 +28,7 @@ const ForwardSection = () => {
 
           <div>
 
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-dark-blue mb-10">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-dark-blue mb-10">
               What Drives Us <span className="text-dark-blue">Forward</span>
             </h2>
 
@@ -73,7 +73,7 @@ const ForwardSection = () => {
 
           <div className="flex flex-col  items-center">
 
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-dark-blue mb-8">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-dark-blue mb-8">
               Our Key <span className="font-extrabold">Strength</span>
             </h2>
 

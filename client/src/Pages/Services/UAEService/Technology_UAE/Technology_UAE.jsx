@@ -21,16 +21,6 @@ const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 
 
-const industries = [
-  "Retail & E-commerce",
-  "Real Estate & Construction",
-  "Logistics & Trading",
-  "Manufacturing & Distribution",
-  "Healthcare & Clinics",
-  "Hospitality & F&B",
-  "Professional Services & Consulting",
-  "Education & Training Providers",
-];
 
 const whyChoose = [
   {
@@ -86,19 +76,49 @@ const processSteps = [
   },
 ];
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp';
-import img1 from '../../../../asstes/img_temp/servics/Zoho.jpg';
+import img1 from '../../../../asstes/img_temp/servics/Zoho.webp';
 import img2 from '../../../../asstes/img_temp/456.webp';
+import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 
+import { motion } from "framer-motion";
+
 const Technology_UAE = () => {
+  const id = 'services-uae-einvocing'
   return (
     <div className="w-full">
-       <HeroSection
+      <HeroSection
+        id={id}
+
         bgImage={bgimg}
         alt="UAE E-Invoicing Solutions"
-        heading={<>UAE E-Invoicing Solutions With<br /><span className="text-light-blue">Zoho & Odoo</span></>}
-        description={<>Stay compliant with upcoming UAE e-invoicing regulations with <span className="font-bold italic">de tempête</span>'s certified Zoho and Odoo implementation services. We help businesses automate invoicing, configure VAT-ready systems, integrate with the Peppol-based framework, and meet FTA compliance requirements through bilingual invoice templates, secure workflows, and ongoing support tailored for SMEs, startups, and enterprise businesses.</>}
+        heading={<>UAE E-Invoicing Solutions With FTA-accredited Service Provider</>}
+        description={
+          <>
+            Prepare your business for the UAE’s evolving e-Invoicing requirements with{" "}
+            <span className="font-bold">
+              de tempête’s end-to-end UAE E-Invoicing Solutions.
+            </span>{" "}
+            We support businesses in connecting with{" "}
+            <span className="font-bold">
+              MoF-accredited Service Providers (ASPs),
+            </span>{" "}
+            integrating{" "}
+            <span className="font-bold">
+              Peppol-based e-Invoicing
+            </span>{" "}
+            with Odoo, Zoho and other ERP or accounting systems, configuring
+            VAT-compliant digital invoicing workflows aligned with{" "}
+            <span className="font-bold">
+              UAE Ministry of Finance (MoF) and Federal Tax Authority (FTA)
+              requirements.
+            </span>{" "}
+            From readiness assessment and ASP onboarding to system integration,
+            testing, automation and ongoing compliance support, we help SMEs,
+            startups and enterprises transition smoothly to UAE e-Invoicing.
+          </>
+        }
       />
 
       <SecondSection></SecondSection>
@@ -236,10 +256,10 @@ const Technology_UAE = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
+          <div className="grid lg:grid-cols-3 gap-6 mt-16">
             {processSteps.map((item, index) => (
-              <div key={index}>
-                
+              <div className="border-[1px] p-10 hover:shadow-2xl duration-300 rounded-2xl border-gray-300" key={index}>
+
                 <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -250,31 +270,7 @@ const Technology_UAE = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
-      {/* <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Industries <span className="font-bold">We Serve</span>
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-16">
-            {industries.map((item, index) => (
-              <div
-                key={index}
-                className="relative h-40 bg- rounded-2xl overflow-hidden group"
-              >
-                
-                
-                <h3 className=" bottom-4 left-4  font-bold text-base">
-                  {item}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
@@ -287,20 +283,59 @@ const Technology_UAE = () => {
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6 mt-16">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
+  {whyChoose.map((item, index) => {
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+    const isDark = (row + col) % 2 === 0;
+
+    return (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{
+          duration: 0.5,
+          delay: (index % 3) * 0.12,
+          ease: "easeOut",
+        }}
+        className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white"
+        }`}
+      >
+        {/* Logo */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            alt=""
+            className={`w-8 h-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+          />
+        </div>
+
+        {/* Title */}
+        <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+          {item.title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className={`text-sm leading-relaxed text-justify ${
+            isDark ? "text-gray-700" : "text-gray-500"
+          }`}
+        >
+          {item.desc}
+        </p>
+      </motion.div>
+    );
+  })}
+</div>
         </div>
       </section>
       {/* Technological Partner */}
@@ -314,7 +349,7 @@ const Technology_UAE = () => {
             <div
               className="flex items-center"
               style={{
-                animation: "scrollLeft 35s linear infinite",
+                animation: "scrollLeftfs 15s linear infinite",
               }}
             >
               {[...logos, ...logos].map((logo, index) => (
@@ -330,7 +365,7 @@ const Technology_UAE = () => {
           </div>
 
           <style>{`
-      @keyframes scrollLeft {
+      @keyframes scrollLeftfs {
         from {
           transform: translateX(0);
         }
@@ -343,12 +378,13 @@ const Technology_UAE = () => {
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={<>Get UAE E-Invoicing<br />Ready <span className="font-bold">Today</span></>}
         subheading="Serving Dubai - Abu Dhabi - Sharjah - Ajman - Ras Al Khaimah - Fujairah - Umm Al Quwain"
         commitmentItems={["Free initial consultation — no obligation", "100% confidentiality and secure handling of FTA data", "Region-specific tax experts", "Transparent and practical advice tailored to your needs"]}
       />
 
-      
+
     </div>
   );
 };

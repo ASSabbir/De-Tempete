@@ -15,6 +15,7 @@ import img5 from '../../../../asstes/img_temp/Home/freepik__candid-i-with-natura
 import img6 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
 import img7 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-procurement-adviso__80766.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+import { motion } from "framer-motion";
 
 const handleTags = [
   "Accounting & bookkeeping support",
@@ -100,17 +101,19 @@ const whyChoose = [
 ];
 
 const Accounting = () => {
+  const id = 'services-estonia-booking'
   return (
     <div className="w-full">
-      
-      <SevicsBanner bgImage={bg} alt="Bangladesh Business Setup"
-                description="Estonia is one of Europe's most advanced digital economies, making it easier than ever to establish and manage your business remotely. Whether you're a startup, entrepreneur, or growing international company, our Estonia Company Formation services guide you through every stage—from e-Residency and registration to accounting, taxation, and ongoing compliance—with efficiency, transparency, and confidence."
-                title1={' Build Stronger Financial'}
-                title2={'Operations In Estonia'}
 
-            ></SevicsBanner>
+      <SevicsBanner
+        id={id} bgImage={bg} alt="Bangladesh Business Setup"
+        description="Estonia is one of Europe's most advanced digital economies, making it easier than ever to establish and manage your business remotely. Whether you're a startup, entrepreneur, or growing international company, our Estonia Company Formation services guide you through every stage—from e-Residency and registration to accounting, taxation, and ongoing compliance—with efficiency, transparency, and confidence."
+        title1={' Build Stronger Financial'}
+        title2={'Operations In Estonia'}
 
-      
+      ></SevicsBanner>
+
+
 
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -128,15 +131,15 @@ const Accounting = () => {
                 Businesses In Estonia
               </span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 text-justify leading-7">
               Strong financial management is essential for maintaining business
               visibility, operational control, and organized day-to-day
               activities. Businesses across Estonia require structured
               accounting systems and reliable financial processes to support
               sustainable growth and smoother operations.
             </p>
-            <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-light-blue italic">de tempête</span>{" "}
+            <p className="mt-3 text-gray-500 text-justify leading-7">
+              <span className="font-semibold text-light-blue text-justify italic">de tempête</span>{" "}
               supports companies in Estonia with finance and accounting
               solutions designed to improve financial organization, maintain
               reporting accuracy, and strengthen operational workflows.
@@ -181,7 +184,7 @@ const Accounting = () => {
               <br />
               <span className="font-normal">Services In Estonia</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-justify text-gray-500">
               <span className="font-semibold text-dark-blue italic">de tempête</span>{" "}
               helps businesses maintain organized accounting systems and
               accurate financial records to support daily business operations
@@ -206,7 +209,7 @@ const Accounting = () => {
               Financial Reporting &<br />
               <span className="font-normal">Business Documentation</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-gray-500 text-justify">
               Clear financial reporting helps businesses improve visibility,
               maintain organized documentation, and support operational
               decision-making processes.{" "}
@@ -241,14 +244,14 @@ const Accounting = () => {
           />
           <div>
             <h2 className="text-3xl font-bold text-[#16244b]">
-              Accounting Systems &<br />
+              Accounting Systems &
               <span className="font-normal">
                 Financial Process
                 <br />
                 Management
               </span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-gray-500 text-justify">
               Efficient accounting systems help businesses improve workflow
               management, maintain financial accuracy, and support smoother
               operational processes.{" "}
@@ -277,7 +280,7 @@ const Accounting = () => {
               <br />
               <span className="font-normal">Support</span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 leading-7 text-justify">
               Well-maintained accounting records are essential for supporting
               VAT documentation and maintaining organized financial operations.{" "}
               <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
@@ -307,7 +310,7 @@ const Accounting = () => {
               <br />
               <span className="font-normal">Operations Support</span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 leading-7 text-justify">
               Reliable finance operations help businesses maintain better
               financial control, improve reporting consistency, and reduce
               operational inefficiencies.{" "}
@@ -339,50 +342,93 @@ const Accounting = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-normal text-[#16244b]">
-              Why Choose <span className="font-bold italic">de tempête</span>{" "}
-              for Finance & Accounting
-            </h2>
-            <div className="w-16 h-0.5 bg-linear-to-br from-light-blue to-light-blue mx-auto mt-6" />
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {whyChoose.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <div className="w-10 h-10  rounded-lg flex items-center justify-center mb-4">
-                  <img src={logo} alt="" />
-                </div>
-                <h3 className="text-base font-bold text-[#16244b] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-normal text-[#16244b]">
+        Why Choose <span className="font-bold italic">de tempête</span>{" "}
+        for Finance & Accounting
+      </h2>
+
+      <div className="w-16 h-0.5 bg-linear-to-br from-light-blue to-light-blue mx-auto mt-6" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((f, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {f.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {f.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
       <ConsultationCTA
-  heading={
-    <>
-      Simplify Your
-      <br />
-      <span className="font-bold">Accounting in Estonia</span>
-    </>
-  }
-  subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
-  commitmentItems={[
-    "Free initial consultation — no obligation",
-    "Confidential & GDPR-compliant financial handling",
-    "Experienced Estonia accounting professionals",
-    "Tailored bookkeeping and reporting solutions",
-  ]}
-/>
+      id={id}
+        heading={
+          <>
+            Simplify Your
+            <br />
+            <span className="font-bold">Accounting in Estonia</span>
+          </>
+        }
+        subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Confidential & GDPR-compliant financial handling",
+          "Experienced Estonia accounting professionals",
+          "Tailored bookkeeping and reporting solutions",
+        ]}
+      />
 
 
-      
 
-      
+
+
     </div>
   );
 };

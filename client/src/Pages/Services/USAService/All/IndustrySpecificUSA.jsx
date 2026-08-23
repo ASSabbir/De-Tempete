@@ -26,9 +26,11 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import industryExpertiseImg from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
+import industryExpertiseImg from '../../../../asstes/img_temp/servics/UK/usa1.webp'
 import { LuHeartPulse } from "react-icons/lu";
 import logo from '../../../../asstes/img_temp/logo.webp'
+import { motion } from "framer-motion";
+
 
 const industries = [
   {
@@ -36,7 +38,7 @@ const industries = [
     title: "E-commerce & Amazon Sellers",
     items: [
       "Multi-channel sales reconciliation",
-      "Sales tax nexus tracking by state",
+      "Sales Tax nexus tracking by state",
       "Amazon FBA & marketplace fee accounting",
       "Inventory and COGS management",
     ],
@@ -100,11 +102,11 @@ const servicesItems = [
   },
   {
     title: "Compliance & Regulatory Management",
-    desc: "Every industry operates under specific US federal and state regulations and reporting standards. We ensure your business remains fully compliant with IRS requirements, sales tax obligations, and industry-specific reporting rules. Our proactive compliance management reduces risk, avoids penalties, and protects your company's reputation.",
+    desc: "Every industry operates under specific US federal and state regulations and reporting standards. We ensure your business remains fully compliant with IRS requirements, sales Tax obligations, and industry-specific reporting rules. Our proactive compliance management reduces risk, avoids penalties, and protects your company's reputation.",
   },
   {
     title: "Tax-Efficient Structuring",
-    desc: "Tax rules vary significantly across industries. We structure your business finances to maximize allowable deductions, optimize sales tax positioning, and legally minimize federal and state tax exposure. Our goal is to enhance profitability while ensuring full compliance with US tax legislation.",
+    desc: "Tax rules vary significantly across industries. We structure your business finances to maximize allowable deductions, optimize sales Tax positioning, and legally minimize federal and state Tax exposure. Our goal is to enhance profitability while ensuring full compliance with US Tax legislation.",
   },
   {
     title: "Cash Flow Forecasting",
@@ -133,8 +135,8 @@ const benefits = [
     desc: "Stay aligned with US federal and state regulations and industry standards while minimizing legal and financial risks.",
   },
   {
-    title: "Reduced tax exposure",
-    desc: "Optimize your federal and state tax position through efficient structuring and strategic planning.",
+    title: "Reduced Tax exposure",
+    desc: "Optimize your federal and state Tax position through efficient structuring and strategic planning.",
   },
   {
     title: "Better financial forecasting",
@@ -152,10 +154,11 @@ const IndustrySpecificUSA = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+  const id = 'services-usa-industry'
   return (
     <div className="w-full">
       <SevicsBanner
+        id={id}
         bgImage={bgimg}
         alt="USA Industry-Specific Accounting Solutions"
         description="Get accounting support built around how your business actually operates. From e-commerce and SaaS to real estate, consulting, and import/export, we provide industry-specific accounting solutions that address the unique revenue models, compliance requirements, and cost structures of your sector."
@@ -175,11 +178,11 @@ const IndustrySpecificUSA = () => {
                 Matters
               </span>
             </h2>
-            <p className="mt-6 text-base leading-8 text-gray-500">
+            <p className="mt-6 text-base leading-8 text-justify text-gray-500">
               Every industry has its own financial structure, compliance
-              requirements, tax considerations, and operational challenges.
+              requirements, Tax considerations, and operational challenges.
               Generic accounting often misses these details, which can lead to
-              reporting errors, missed tax opportunities, and poor financial
+              reporting errors, missed Tax opportunities, and poor financial
               visibility. Our team understands the unique needs of each sector
               and provides accounting support tailored to how your business
               actually operates.
@@ -190,9 +193,9 @@ const IndustrySpecificUSA = () => {
             <div className="space-y-3">
               {[
                 "Unique regulatory requirements",
-                "Different sales tax structures",
+                "Different sales Tax structures",
                 "Specific cost models",
-                "Sector-based tax planning opportunities",
+                "Sector-based Tax planning opportunities",
                 "Industry benchmarks for performance",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -213,29 +216,62 @@ const IndustrySpecificUSA = () => {
       {/* Industries We Support */}
       <section className="py-24 bg-[#F5F6F8]">
         <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-light text-[#16244b]">
               Industries We <span className="font-bold">Support</span>
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {industries.map((item, index) => {
               const Icon = item.icon;
+
+              const row = Math.floor(index / 3);
+              const col = index % 3;
+              const isDark = (row + col) % 2 === 0;
+
               return (
-                <div key={index}>
-                  <Icon className="text-5xl text-light-blue rounded-sm bg-light-blue/20 p-2 mb-5" />
-                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (index % 3) * 0.12,
+                    ease: "easeOut",
+                  }}
+                  className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
+                >
+                  {/* Icon */}
+                  <div
+                    className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                        ? "bg-white/15 text-white"
+                        : "bg-light-blue/20 text-light-blue"
+                      }`}
+                  >
+                    <Icon className="text-2xl" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                     {item.title}
                   </h3>
+
+                  {/* Items */}
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
-                      <li key={i} className="text-gray-500 text-base leading-6">
+                      <li
+                        key={i}
+                        className={`text-sm leading-relaxed ${isDark ? "text-gray-700" : "text-gray-500"
+                          }`}
+                      >
                         - {li}
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -311,8 +347,8 @@ const IndustrySpecificUSA = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -325,35 +361,64 @@ const IndustrySpecificUSA = () => {
 
       {/* Benefits */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Benefits Of{" "}
-              <span className="font-bold">Industry-Focused Accounting</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Benefits Of{" "}
+        <span className="font-bold">Industry-Focused Accounting</span>
+      </h2>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {benefits.map((item, index) => (
+    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+      {benefits.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`p-8 transition-all rounded-2xl duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div className="flex items-center gap-3 mb-3">
               <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className={`w-10 h-10 rounded-sm flex items-center justify-center ${
+                  isDark ? "bg-white/15" : "bg-light-blue/20"
+                }`}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-base font-bold text-[#16244b]">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
+                <img
+                  src={logo}
+                  className={`w-8 object-contain ${
+                    isDark ? "brightness-0 invert" : ""
+                  }`}
+                  alt=""
+                />
               </div>
-            ))}
+
+              <h3 className="text-base font-bold text-[#16244b]">
+                {item.title}
+              </h3>
+            </div>
+
+            <p
+              className={`text-base leading-6 ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Get Accounting That
@@ -370,7 +435,7 @@ const IndustrySpecificUSA = () => {
         highlightText="Your business deserves financial expertise designed for your sector — not generic solutions."
       />
 
-      
+
     </div>
   );
 };

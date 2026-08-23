@@ -48,7 +48,7 @@ const ProcessStep = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="max-w-5xl mb-24">
-          <h2 className="text-[#000000] text-4xl 2xl:text-6xl font-light leading-tight">
+          <h2 className="text-[#000000] text-4xl 2xl:text-5xl font-light leading-tight">
             Step-By-Step Process For
             
             USA <br/> <span className="font-bold">Company Registration</span>
@@ -85,7 +85,7 @@ const ProcessStep = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`absolute w-[250px] text-center ${positions[index]}`}
+              className={`absolute w-[240px] text-center ${positions[index]}`}
             >
               {/* Icon */}
               <div className="w-20 h-20 hover:border-[1px] hover:border-light-blue hover:shadow-[0_10px_50px_rgba(0,0,0,0.2)] hover:shadow-light-blue hover:scale-115 duration-300 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center mx-auto relative z-10">

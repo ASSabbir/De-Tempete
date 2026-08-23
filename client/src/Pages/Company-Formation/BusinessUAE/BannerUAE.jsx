@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import img1 from '../../../asstes/img_temp/New folder/uae.webp'
 import SharedButton from '../../../Components/Shared/SharedButton';
-const BannerUAE = () => {
+const BannerUAE = ({id}) => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-white overflow-hidden py-24 md:pt-32">
       {/* Background Image */}
@@ -17,7 +17,7 @@ const BannerUAE = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center animate-[fadeUp_1s_ease-out]">
         {/* Heading */}
-        <h1 className="text-4xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight transition-all duration-500 hover:tracking-wide">
           Business Setup in UAE
         </h1>
 
@@ -62,7 +62,7 @@ const BannerUAE = () => {
 
         {/* Button */}
         
-          <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
+          <SharedButton text={'Start Now →'} path={`/business-setup/uae#${id}`}></SharedButton>
       </div>
 
       {/* Custom Animation */}

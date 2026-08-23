@@ -29,9 +29,9 @@ const services = [
     description:
       "We track market movements, evaluate performance indicators, and identify opportunities to optimize your portfolio's growth.",
     icon: (
-      <IconWrap>
+      
         <TbChartLine />
-      </IconWrap>
+      
     ),
   },
   {
@@ -39,9 +39,9 @@ const services = [
     description:
       "Our team identifies risk exposure and implements mitigation strategies to safeguard your investments without compromising growth.",
     icon: (
-      <IconWrap>
+      
         <TbShieldCheck />
-      </IconWrap>
+      
     ),
   },
   {
@@ -49,9 +49,9 @@ const services = [
     description:
       "Reduce concentration risk through smart, data-driven asset diversification and portfolio balancing.",
     icon: (
-      <IconWrap>
+      
         <TbChartPie />
-      </IconWrap>
+      
     ),
   },
   {
@@ -59,9 +59,9 @@ const services = [
     description:
       "We help structure your investments tax-efficiently, increasing your net returns and long-term gains.",
     icon: (
-      <IconWrap>
+      
         <TbReceiptTax />
-      </IconWrap>
+      
     ),
   },
   {
@@ -69,9 +69,9 @@ const services = [
     description:
       "We systematically rebalance your portfolio to maintain alignment with your financial goals and risk appetite.",
     icon: (
-      <IconWrap>
+      
         <TbArrowsExchange />
-      </IconWrap>
+      
     ),
   },
   {
@@ -79,9 +79,9 @@ const services = [
     description:
       "Receive transparent, easy-to-understand performance reports tracking returns, growth, risks, and overall portfolio health.",
     icon: (
-      <IconWrap>
+      
         <TbChartBar />
-      </IconWrap>
+      
     ),
   },
   {
@@ -89,9 +89,9 @@ const services = [
     description:
       "Your financial objectives evolve — and so should your investments. We refine your strategy regularly to keep it on track.",
     icon: (
-      <IconWrap>
+      
         <TbChecklist />
-      </IconWrap>
+      
     ),
   },
   {
@@ -99,9 +99,9 @@ const services = [
     description:
       "Our financial specialists are always available to discuss concerns, strategies, or new opportunities.",
     icon: (
-      <IconWrap>
+      
         <TbHeadset />
-      </IconWrap>
+      
     ),
   },
   {
@@ -109,9 +109,9 @@ const services = [
     description:
       "Stay informed with market insights, trends, and expert commentary to make smarter financial decisions.",
     icon: (
-      <IconWrap>
+      
         <TbNews />
-      </IconWrap>
+      
     ),
   },
   {
@@ -119,9 +119,9 @@ const services = [
     description:
       "We manage distribution cycles for income-generating assets with precision and transparency.",
     icon: (
-      <IconWrap>
+      
         <TbPercentage />
-      </IconWrap>
+      
     ),
   },
   {
@@ -129,9 +129,9 @@ const services = [
     description:
       "When it's time to exit, we ensure a smooth process that minimizes disruption, protects value, and considers all tax implications.",
     icon: (
-      <IconWrap>
+      
         <TbDoorExit />
-      </IconWrap>
+      
     ),
   },
 ];

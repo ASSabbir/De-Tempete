@@ -1,21 +1,6 @@
 // File: AML.jsx
-import { useState, useEffect } from "react";
-import {
-  ChevronDown,
-  FileCheck2,
-  ShieldCheck,
-  ClipboardList,
-  UserSearch,
-  GraduationCap,
-  UserCog,
-  ClipboardCheck,
-  SearchCheck,
-  ScanSearch,
-  BarChart3,
-  FileBarChart2,
-  Users2,
-  Building2,
-} from "lucide-react";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
@@ -27,63 +12,208 @@ import SecondSection from "../../../../Components/Shared/SecondSection";
 
 // TODO: replace with real AML-specific photography
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/al.webp'
-import img2 from '../../../../asstes/img_temp/al2.webp'
-import img3 from '../../../../asstes/img_temp/aml.webp'
-import img4 from '../../../../asstes/img_temp/al3.webp'
-import logo from '../../../../asstes/img_temp/logo.webp'
+import img1 from '../../../../asstes/img_temp/aml/1.webp'
+import img2 from '../../../../asstes/img_temp/aml/2.webp'
+import img3 from '../../../../asstes/img_temp/aml/3.webp'
+import img4 from '../../../../asstes/img_temp/aml/4.webp'
+import img5 from '../../../../asstes/img_temp/aml/5.webp'
+import img6 from '../../../../asstes/img_temp/aml/6.webp'
+import img7 from '../../../../asstes/img_temp/aml/7.webp'
+import img8 from '../../../../asstes/img_temp/aml/8.webp'
+import img9 from '../../../../asstes/img_temp/aml/9.webp'
+import img10 from '../../../../asstes/img_temp/aml/10.webp'
+import img11 from '../../../../asstes/img_temp/aml/11.webp'
+import img12 from '../../../../asstes/img_temp/aml/12.webp'
+import img13 from '../../../../asstes/img_temp/aml/13.webp'
 
-// Full remaining service list — everything not covered by the 3 image highlights below
-const serviceSuite = [
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+
+// All 13 AML services, each rendered as a full image + checklist card
+// (images cycle through the 4 available photos until real photography
+// exists for every service)
+const services = [
   {
-    icon: ShieldCheck,
-    title: "TFS Registration",
-    desc: "Registration and setup for UAE Targeted Financial Sanctions, including portal activation and initial sanctions-compliance guidance.",
+    title: "Complete Your ",
+    highlight: "goAML Registration Correctly & Efficiently",
+    desc: "We support regulated businesses and DNFBPs with the complete goAML registration process, ensuring the required entity, user and compliance information is submitted accurately and portal access is activated without delay.",
+    bullets: [
+      "Eligibility & Registration Review",
+      "Preparation of Required Information & Documents",
+      "Compliance Officer & User Account Setup",
+      "Portal Activation & Access Support",
+      "Guidance on Post-Registration Obligations",
+    ],
+    image: img1,
+    alt: "goAML Registration",
   },
   {
-    icon: ClipboardList,
-    title: "AML Policy & Procedures",
-    desc: "Risk-based AML/CFT policy manuals covering onboarding controls, CDD, escalation procedures and governance requirements.",
+    title: "Meet UAE ",
+    highlight: "Targeted Financial Sanctions Requirements",
+    desc: "We assist businesses with TFS registration and initial setup so they can receive sanctions updates and establish the required compliance process.",
+    bullets: [
+      "TFS Registration & Account Setup",
+      "Required User & Entity Information",
+      "Portal Activation Support",
+      "Initial Sanctions-Compliance Guidance",
+      "Record of Registration & Responsible Personnel",
+    ],
+    image: img2,
+    alt: "TFS Registration",
   },
   {
-    icon: GraduationCap,
-    title: "Staff AML Training",
-    desc: "Role-based induction and refresher training so your team recognises red flags and understands reporting responsibilities.",
+    title: "Build A Practical ",
+    highlight: "AML Framework Tailored To Your Business",
+    desc: "Our team prepares risk-based AML/CFT policies and procedures that reflect your industry, customers, services and regulatory exposure.",
+    bullets: [
+      "AML/CFT Policy & Procedure Manual",
+      "Customer Onboarding & Acceptance Controls",
+      "CDD & Escalation Procedures",
+      "Suspicious Activity Reporting Process",
+      "Record-Keeping & Governance Requirements",
+    ],
+    image: img3,
+    alt: "AML Policy and Procedures",
   },
   {
-    icon: UserCog,
-    title: "Outsourced MLRO / Compliance Officer",
-    desc: "Ongoing compliance oversight, customer-risk review, escalation handling and management/board reporting.",
+    title: "Verify Customers & ",
+    highlight: "Beneficial Owners With Confidence",
+    desc: "We provide structured KYC verification support for individual and corporate customers, helping your business maintain complete and reliable due-diligence records at every stage of the customer lifecycle.",
+    bullets: [
+      "Individual & Corporate Identity Verification",
+      "Corporate-Document Review",
+      "Ultimate Beneficial Owner Verification",
+      "Source-of-Funds Document Review",
+      "KYC File Preparation & Periodic Updates",
+    ],
+    image: img4,
+    alt: "KYC Verification",
   },
   {
-    icon: SearchCheck,
-    title: "Independent AML Audit",
-    desc: "Objective review of your AML/CFT programme — control testing, KYC file sampling, and a formal findings report.",
+    title: "Equip Your Team To ",
+    highlight: "Recognise & Respond To Financial-Crime Risks",
+    desc: "Our practical training programmes help employees understand UAE AML obligations and apply the correct controls in their daily roles.",
+    bullets: [
+      "Induction & Refresher Training",
+      "Role-Based AML Awareness",
+      "KYC & Suspicious-Activity Red Flags",
+      "Sanctions & Reporting Responsibilities",
+      "Attendance Records & Training Assessments",
+    ],
+    image: img5,
+    alt: "Staff AML Training",
   },
   {
-    icon: ScanSearch,
-    title: "Sanctions-Screening Software",
-    desc: "Vendor selection, implementation, watchlist rule setup and false-positive tuning for sanctions/PEP screening tools.",
+    title: "Access Experienced ",
+    highlight: "Compliance Oversight Without Building A Full Team",
+    desc: "We provide outsourced MLRO and compliance officer support to help businesses manage ongoing AML obligations, escalations and management reporting.",
+    bullets: [
+      "Ongoing Compliance Oversight",
+      "Customer-Risk Review & Escalation",
+      "Suspicious Activity Assessment",
+      "Management & Board Reporting",
+      "Regulatory Coordination & Compliance Calendar Support",
+    ],
+    image: img6,
+    alt: "Outsourced MLRO / Compliance Officer",
   },
   {
-    icon: BarChart3,
-    title: "Enterprise-Wide Risk Assessment",
-    desc: "Documented risk assessment across products, delivery channels, jurisdictions and customer base.",
+    title: "Prepare For The ",
+    highlight: "Ministry of Economy Inspection With Confidence",
+    desc: "Our specialists review your compliance framework, organise required evidence and support your business before, during and after an MoE inspection — so nothing is left to chance.",
+    bullets: [
+      "Pre-Inspection Readiness Review",
+      "Policy, Risk Assessment & KYC File Review",
+      "Evidence & Document Preparation",
+      "Mock Inspection & Staff Preparation",
+      "Response to Findings & Corrective Actions",
+    ],
+    image: img7,
+    alt: "MoE Inspection Support",
   },
   {
-    icon: FileBarChart2,
-    title: "Regulatory Reporting (DPMSR/REAR)",
-    desc: "Preparation and submission of DPMSR and REAR reports through goAML, with full supporting documentation.",
+    title: "Test The Effectiveness Of ",
+    highlight: "Your AML Framework Independently",
+    desc: "We conduct objective reviews of your AML/CFT programme to identify control weaknesses, documentation gaps and areas requiring improvement.",
+    bullets: [
+      "Independent Policy & Control Review",
+      "Sample Testing of KYC Files",
+      "Risk-Assessment & Reporting Review",
+      "Audit Findings & Recommendations",
+      "Management Report & Follow-Up Review",
+    ],
+    image: img8,
+    alt: "Independent AML Audit",
   },
   {
-    icon: Users2,
-    title: "PEP & Adverse-Media Screening",
-    desc: "Identification of politically exposed and reputationally high-risk customers, with escalation support.",
+    title: "Automate Screening & ",
+    highlight: "Strengthen Ongoing Compliance",
+    desc: "de tempête helps businesses select, implement and optimize software for sanctions, PEP and adverse-media screening.",
+    bullets: [
+      "Software Needs Assessment",
+      "Vendor Selection & Implementation Support",
+      "Watchlist & Screening-Rule Setup",
+      "User Onboarding & Training",
+      "Testing, Validation & False-Positive Tuning",
+    ],
+    image: img9,
+    alt: "Sanctions-Screening Software",
   },
   {
-    icon: Building2,
-    title: "Internal AML Department Setup",
-    desc: "Full compliance function design — governance, MLRO role structure, registers, and a training roadmap.",
+    title: "Understand Your ",
+    highlight: "Overall AML Exposure & Prioritise The Right Controls",
+    desc: "We prepare a documented enterprise-wide risk assessment aligned with your business model, customer base and operating environment.",
+    bullets: [
+      "Product & Service Risk Assessment",
+      "Delivery-Channel Risk Assessment",
+      "Jurisdiction & Geographical Risk Assessment",
+      "Customer & Counterparty Risk Assessment",
+      "Inherent & Residual Risk Evaluation",
+    ],
+    image: img10,
+    alt: "Business / Enterprise-Wide Risk Assessment",
+  },
+  {
+    title: "Prepare & Submit ",
+    highlight: "Required UAE FIU Reports Accurately",
+    desc: "We assist with the review, preparation and submission of DPMSR and REAR reports through goAML, including supporting documentation and internal records.",
+    bullets: [
+      "DPMSR Preparation & Submission Support",
+      "REAR Preparation & Submission Support",
+      "Transaction & Document Review",
+      "Narrative & Supporting-Evidence Preparation",
+      "Internal Approval & Filing Records",
+    ],
+    image: img11,
+    alt: "Regulatory Reporting Through goAML (DPMSR/REAR)",
+  },
+  {
+    title: "Identify Politically Exposed & ",
+    highlight: "Reputationally High-Risk Customers",
+    desc: "We conduct PEP and adverse-media screening to support customer onboarding, periodic review and risk escalation decisions.",
+    bullets: [
+      "PEP & Related-Party Screening",
+      "Adverse-Media & Reputational-Risk Checks",
+      "Potential-Match Review & Resolution",
+      "Risk Classification & Escalation Support",
+      "Screening Evidence & Audit Trail",
+    ],
+    image: img12,
+    alt: "PEP and Adverse-Media Screening",
+  },
+  {
+    title: "Build A Structured ",
+    highlight: "Compliance Function For Long-Term Growth",
+    desc: "For larger and growing businesses, we design and establish an internal AML department with clear governance, reporting lines and operating procedures.",
+    bullets: [
+      "Compliance Function Structure & Governance",
+      "MLRO & Compliance Officer Role Design",
+      "Internal Forms, Registers & Templates",
+      "Compliance Calendar & Reporting Framework",
+      "Technology, Staffing & Training Roadmap",
+    ],
+    image: img13,
+    alt: "Internal AML Department Setup",
   },
 ];
 
@@ -161,10 +291,12 @@ const AML = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
+  const id ='uae-services-aml'
 
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bgimg}
         alt="UAE AML Compliance Services"
         heading={
@@ -181,160 +313,86 @@ const AML = () => {
 
       <SecondSection></SecondSection>
 
-      {/* goAML Registration — highlight */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#16244b]">
-              Complete Your{" "}
-              <span className="font-light">
-                goAML Registration Correctly & Efficiently
-              </span>
-            </h2>
-            <p className="mt-5 text-gray-500 leading-7">
-              We support regulated businesses and DNFBPs with the complete
-              goAML registration process, ensuring the required entity, user
-              and compliance information is submitted accurately and portal
-              access is activated without delay.
-            </p>
-            <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
-              Our support covers:
-            </h4>
-            <div className="space-y-3">
-              {[
-                "Eligibility & Registration Review",
-                "Preparation of Required Information & Documents",
-                "Compliance Officer & User Account Setup",
-                "Portal Activation & Access Support",
-                "Guidance on Post-Registration Obligations",
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
-                  <span className="text-gray-600">{item}</span>
+      {/* All 13 AML services — full image + checklist card, alternating sides/backgrounds */}
+      {services.map((service, index) => {
+        const imageFirst = index % 2 === 1; // alternate which side the image sits on
+        const bgClass = index % 2 === 0 ? "bg-white" : "bg-[#F5F6F8]";
+        return (
+          <section key={index} className={`py-20 ${bgClass}`}>
+            <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+              {imageFirst && (
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-full h-full object-cover rounded-2xl shadow-lg order-2 lg:order-1"
+                />
+              )}
+              <div
+                className={`flex flex-col justify-center ${
+                  imageFirst ? "order-1 lg:order-2" : ""
+                }`}
+              >
+                <h2 className="text-3xl font-bold text-[#16244b]">
+                  {service.title}
+                  <span className="font-light">{service.highlight}</span>
+                </h2>
+                <p className="mt-5 text-gray-500 leading-7">{service.desc}</p>
+                <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
+                  Our support covers:
+                </h4>
+                <div className="space-y-3">
+                  {service.bullets.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <FaCheckCircle className="text-light-blue text-base shrink-0" />
+                      <span className="text-gray-600">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              {!imageFirst && (
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                />
+              )}
             </div>
-          </div>
-          <img
-            src={img1}
-            alt="goAML Registration"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
-          />
-        </div>
-      </section>
-
-      {/* KYC Verification — highlight */}
-      <section className="py-20 bg-[#F5F6F8]">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-          <img
-            src={img2}
-            alt="KYC Verification"
-            className="w-full h-full object-cover rounded-2xl shadow-lg order-2 lg:order-1"
-          />
-          <div className="flex flex-col justify-center order-1 lg:order-2">
-            <h2 className="text-3xl font-bold text-[#16244b]">
-              Verify Customers &{" "}
-              <span className="font-light">
-                Beneficial Owners With Confidence
-              </span>
-            </h2>
-            <p className="mt-5 text-gray-500 leading-7">
-              We provide structured KYC verification support for individual
-              and corporate customers, helping your business maintain
-              complete and reliable due-diligence records at every stage of
-              the customer lifecycle.
-            </p>
-            <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
-              Our support covers:
-            </h4>
-            <div className="space-y-3">
-              {[
-                "Individual & Corporate Identity Verification",
-                "Corporate-Document Review",
-                "Ultimate Beneficial Owner Verification",
-                "Source-of-Funds Document Review",
-                "KYC File Preparation & Periodic Updates",
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
-                  <span className="text-gray-600">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MoE Inspection Support — highlight */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#16244b]">
-              Prepare For The{" "}
-              <span className="font-light">
-                Ministry of Economy Inspection With Confidence
-              </span>
-            </h2>
-            <p className="mt-5 text-gray-500 leading-7">
-              Our specialists review your compliance framework, organise
-              required evidence, and support your business before, during
-              and after an MoE inspection — so nothing is left to chance.
-            </p>
-            <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
-              Our support covers:
-            </h4>
-            <div className="space-y-3">
-              {[
-                "Pre-Inspection Readiness Review",
-                "Policy, Risk Assessment & KYC File Review",
-                "Evidence & Document Preparation",
-                "Mock Inspection & Staff Preparation",
-                "Response to Findings & Corrective Actions",
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <FaCheckCircle className="text-light-blue text-base shrink-0" />
-                  <span className="text-gray-600">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <img
-            src={img3}
-            alt="MoE Inspection Support"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
-          />
-        </div>
-      </section>
-
-      {/* Complete AML Service Suite — remaining 10 services */}
-      <section className="py-24 bg-[#F5F6F8]">
+          </section>
+        );
+      })}
+      <div className="mb-30 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uae'}></SharedFullButton>
+      </div>
+      {/* Why Choose */}
+      <section className="py-24 bg-[#16244B]">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Our Complete <span className="font-bold">AML Service Suite</span>
+            <h2 className="text-4xl font-bold text-white">
+              Why Choose Our{" "}
+              <span className="font-normal">AML Compliance Services</span>
             </h2>
-            <p className="mt-4 text-gray-500">
-              Every Compliance Obligation, Covered Under One Roof
-            </p>
+            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:gap-6 mt-16">
-            {serviceSuite.map((item, index) => (
-              <div key={index} className="hover:bg-white p-7 rounded-xl transition-all duration-300">
-                <item.icon
-                  className="bg-light-blue/20 text-light-blue p-1 rounded-sm mb-3"
-                  size={32}
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
+          <div className="grid lg:grid-cols-3 gap-6 mt-16">
+            {whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#39446B] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
+              >
+                <div className="w-12 h-12 bg-white p-2 rounded-xl flex items-center justify-center mb-5">
+                  <img src={logo} alt="" />
+                </div>
+                <h3 className="text-base font-medium text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
+                <p className="text-slate-300 text-base leading-6">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      
 
       {/* FAQ Accordion */}
       <section className="py-20 px-6 bg-white">
@@ -380,37 +438,10 @@ const AML = () => {
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="py-24 bg-[#16244B]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-white">
-              Why Choose Our{" "}
-              <span className="font-normal">AML Compliance Services</span>
-            </h2>
-            <div className="w-20 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-6 mt-16">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#39446B] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
-              >
-                <div className="w-12 h-12 bg-light-blue rounded-xl flex items-center justify-center mb-5">
-                  <LuChartNoAxesCombined className="text-white text-2xl" />
-                </div>
-                <h3 className="text-base font-medium text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-slate-300 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Stay Ahead of

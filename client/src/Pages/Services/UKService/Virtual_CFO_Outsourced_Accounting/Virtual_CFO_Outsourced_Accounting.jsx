@@ -125,10 +125,11 @@ const Virtual_CFO_Outsourced_Accounting = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+const id = 'servics-uk-cfo'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Virtual CFO & Outsourced Accounting"
         heading={
@@ -149,7 +150,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
-            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+            <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
               What Is A <span className="font-bold">Virtual CFO?</span>
             </h2>
             <p className="mt-6 text-base leading-8 text-gray-500">
@@ -204,7 +205,7 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
                       <li key={i} className="text-gray-500 text-base leading-6">
-                        - {li}
+                         {li}
                       </li>
                     ))}
                   </ul>
@@ -281,8 +282,8 @@ const Virtual_CFO_Outsourced_Accounting = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -295,40 +296,70 @@ const Virtual_CFO_Outsourced_Accounting = () => {
 
       {/* Why Choose Outsourced Accounting */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Why Choose{" "}
-              <span className="font-bold">Outsourced Accounting?</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Choose{" "}
+        <span className="font-bold">Outsourced Accounting?</span>
+      </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyOutsourced.map((item, index) => (
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+      {whyOutsourced.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`p-8 transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div className="flex items-center gap-3 mb-3">
               <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+                  isDark ? "bg-white/15" : "bg-light-blue/20"
+                }`}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-base font-bold text-[#16244b]">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
+                <img
+                  src={logo}
+                  className={`w-8 object-contain ${
+                    isDark ? "brightness-0 invert" : ""
+                  }`}
+                  alt=""
+                />
               </div>
-            ))}
+
+              <h3 className="text-base font-bold text-[#16244b]">
+                {item.title}
+              </h3>
+            </div>
+
+            <p
+              className={`text-base leading-6 ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
-            Start Your UK{" "}
+            Onboard Your 
             <span className="font-bold">
-              Virtual
+               {" "}Virtual
               <br />
               CFO Today
             </span>

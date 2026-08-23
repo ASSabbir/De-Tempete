@@ -8,10 +8,10 @@ const WhyHr = () => {
         
                   
                   <div className='order-1 md:order-2 '>
-                    <h2 className="text-[3vw] 2xl:text-[2.6rem] font-normal text-[#0d1e4a] leading-tight mb-6">
-                      Why Your Business 
+                    <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-normal text-[#0d1e4a] leading-tight mb-6">
+                      Why Does Your Business 
                       <br className="hidden sm:block" />
-                       <span className="font-extrabold">Needs Professional HR & Payroll?</span>
+                       <span className="font-extrabold">Need Professional HR & Payroll Service</span>
                     </h2>
         
                     <div className="space-y-5 text-[15px] text-gray-600 leading-relaxed">

@@ -26,6 +26,7 @@ import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
 
 const logos = [tableau, sage, a, b, c, d, e, f, g];
+import { motion } from "framer-motion";
 
 const cloudCards = [
   {
@@ -62,9 +63,11 @@ const whyChoose = [
 ];
 
 const Technology = () => {
+  const id = 'services-ksa-technology'
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bg}
         alt="Automation and Digital Transformation KSA"
         heading={
@@ -79,7 +82,7 @@ const Technology = () => {
             Empowering KSA businesses with smarter, faster, and fully automated
             financial systems
             <br />
-            
+
             At <span className="italic font-bold">de tempête</span>, we help businesses move beyond manual work and
             embrace technology that saves time, reduces errors, and brings
             complete clarity to financial operations. Whether you're a startup
@@ -100,6 +103,7 @@ const Technology = () => {
               <br />
               <span className="font-normal">Advisory</span>
             </h2>
+
             <p className="mt-5 text-gray-500">
               We help businesses shift from manual work to fully automated,
               cloud-powered financial systems. Our advisory ensures you choose
@@ -107,18 +111,55 @@ const Technology = () => {
               that supports accuracy, speed, and long-term scalability.
             </p>
           </div>
-          <div className="grid lg:grid-cols-3 gap-10">
-            {cloudCards.map((c, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16  rounded-xl flex items-center justify-center mx-auto mb-5">
-                  <img src={logo} alt="" />
-                </div>
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                  {c.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{c.desc}</p>
-              </div>
-            ))}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {cloudCards.map((c, i) => {
+              const row = Math.floor(i / 3);
+              const col = i % 3;
+              const isDark = (row + col) % 2 === 0;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (i % 3) * 0.12,
+                    ease: "easeOut",
+                  }}
+                  className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
+                >
+                  {/* Logo */}
+                  <div
+                    className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                      }`}
+                  >
+                    <img
+                      src={logo}
+                      alt=""
+                      className={`w-8 h-8 object-contain ${isDark ? "brightness-0 invert" : ""
+                        }`}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+                    {c.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
+                    {c.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -158,22 +199,61 @@ const Technology = () => {
               Why Choose Our{" "}
               <span className="font-normal">Technolgy Services</span>
             </h2>
+
             <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {whyChoose.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-base font-bold text-[#16244b] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-              </div>
-            ))}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {whyChoose.map((f, i) => {
+              const isDark = i === 0 || i === 3;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (i % 3) * 0.12,
+                    ease: "easeOut",
+                  }}
+                  className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
+                >
+                  {/* Logo */}
+                  <div
+                    className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                      }`}
+                  >
+                    <img
+                      src={logo}
+                      alt=""
+                      className={`w-8 h-8 object-contain ${isDark ? "brightness-0 invert" : ""
+                        }`}
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+                    {f.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
+                    {f.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      
+
       {/* Technological Partner Section */}
 
       <section className="pt-15 bg-white overflow-hidden">
@@ -186,7 +266,7 @@ const Technology = () => {
             <div
               className="flex items-center"
               style={{
-                animation: "scrollLeft 35s linear infinite",
+                animation: "scrollLefts 15s linear infinite",
               }}
             >
               {[...logos, ...logos].map((logo, index) => (
@@ -202,7 +282,7 @@ const Technology = () => {
           </div>
 
           <style>{`
-      @keyframes scrollLeft {
+      @keyframes scrollLefts {
         from {
           transform: translateX(0);
         }
@@ -214,6 +294,7 @@ const Technology = () => {
         </div>
       </section>
       <ConsultationCTA
+        id={id}
         heading={
           <>
             Start Your KSA
@@ -230,7 +311,7 @@ const Technology = () => {
         ]}
       />
 
-      
+
     </div>
   );
 };

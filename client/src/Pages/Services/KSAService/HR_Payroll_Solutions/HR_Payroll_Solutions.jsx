@@ -8,10 +8,12 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/freepik__hr-and-payroll-image-for-website-section-no-text__26468.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__hr-outsourcing-image-for-website-section__98146.webp'
-import img3 from '../../../../asstes/img_temp/servics/KSA/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
+import img3 from '../../../../asstes/img_temp/servics/KSA/image1.webp'
 import img4 from '../../../../asstes/img_temp/servics/KSA/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 
+import { motion } from "framer-motion";
 const payrollPoints = [
   "Salary processing support",
   "Payroll record organization",
@@ -76,9 +78,11 @@ const whyChoose = [
 ];
 
 const HR_Payroll_Solutions = () => {
+const id = 'services-ksa-hr'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="HR & Payroll Solutions KSA"
         heading={
@@ -106,15 +110,15 @@ const HR_Payroll_Solutions = () => {
               <br />
               <span className="font-normal">Support For Businesses</span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 text-sm text-justify leading-7">
               Managing employees, payroll operations, and workforce compliance
               requires organized systems and efficient operational processes.
               Businesses in Saudi Arabia must maintain accurate payroll records,
               salary coordination, and workforce documentation to support smooth
               day-to-day operations.
             </p>
-            <p className="mt-3 text-gray-500 leading-7">
-              <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
+            <p className="mt-3 text-gray-500 text-sm text-justify leading-7">
+              <span className="font-semibold  text-gray-700 italic">de tempête</span>{" "}
               supports businesses across Saudi Arabia with HR and payroll
               services designed to improve operational efficiency, workforce
               organization, and compliance management.
@@ -130,7 +134,7 @@ const HR_Payroll_Solutions = () => {
               Payroll Processing &<br />
               <span className="font-normal">Employee Management</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-sm text-justify text-gray-500">
               Accurate payroll management helps businesses maintain operational
               consistency and improve employee management processes.{" "}
               <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
@@ -143,7 +147,7 @@ const HR_Payroll_Solutions = () => {
             </p>
             <div className="space-y-3 mt-6">
               {payrollPoints.map((p, i) => (
-                <div key={i} className="flex items-center gap-3">
+                <div key={i} className="flex text-sm text-justify items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
@@ -163,7 +167,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img3}
             alt="Qiwa, GOSI & Workforce Compliance Coordination"
-            className="w-full h-96 object-cover rounded-2xl shadow-lg"
+            className="w-full  object-cover rounded-2xl shadow-lg"
           />
           <div>
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -171,7 +175,7 @@ const HR_Payroll_Solutions = () => {
               <br />
               <span className="font-normal">Compliance Coordination</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-sm text-justify text-gray-500">
               Businesses in Saudi Arabia must maintain workforce compliance
               through proper coordination with platforms such as Qiwa and GOSI.{" "}
               <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
@@ -184,7 +188,7 @@ const HR_Payroll_Solutions = () => {
             </p>
             <div className="space-y-3 mt-6">
               {qiwaPoints.map((p, i) => (
-                <div key={i} className="flex items-center gap-3">
+                <div key={i} className="flex text-sm text-justify items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
@@ -201,7 +205,7 @@ const HR_Payroll_Solutions = () => {
               Employee Documentation &<br />
               <span className="font-normal">HR Administration</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-sm text-justify text-gray-500">
               Organized HR documentation helps businesses improve workforce
               visibility and maintain structured employee management systems.{" "}
               <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
@@ -214,7 +218,7 @@ const HR_Payroll_Solutions = () => {
             </p>
             <div className="space-y-3 mt-6">
               {empDocPoints.map((p, i) => (
-                <div key={i} className="flex items-center gap-3">
+                <div key={i} className="flex text-sm text-justify items-center gap-3">
                   <FaCheckCircle className="text-light-blue shrink-0" />
                   <span className="text-gray-600">{p}</span>
                 </div>
@@ -236,7 +240,7 @@ const HR_Payroll_Solutions = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className="bg-[#37456B] rounded-lg py-12 px-4 text-white font-medium"
+                className="bg-[#37456B] rounded-lg flex justify-center items-center h-20 px-4 text-white font-medium"
               >
                 {g}
               </div>
@@ -246,28 +250,57 @@ const HR_Payroll_Solutions = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl  text-[#16244b]">
-              Why Choose <span className="font-bold italic">de tempête</span>{" "}
-              for HR & Payroll Solutions?
-            </h2>
-            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {whyChoose.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-base font-bold text-[#16244b] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl text-[#16244b]">
+        Why Choose <span className="font-bold italic">de tempête</span>{" "}
+        for HR & Payroll Solutions?
+      </h2>
+
+      <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((f, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {f.title}
+            </h3>
+
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {f.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Build A More Organized

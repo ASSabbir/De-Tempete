@@ -49,7 +49,7 @@ const BannerBD = () => {
         </div>
 
         {/* Button */}
-        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
+        <SharedButton text={'Start Now →'} path={'/business-setup/bd#bussiness-setup-bd'}></SharedButton>
         
       </div>
 

@@ -73,7 +73,7 @@ const BannerEstonia = () => {
             BRANCH OF A FOREIGN COMPANY
           </span>
         </div>
-        <SharedButton text={'Start Now →'} path={'/contact'}></SharedButton>
+        <SharedButton text={'Start Now →'} path={'/business-setup/estonia#bussiness-setup-estonia'}></SharedButton>
 
 
       </div>

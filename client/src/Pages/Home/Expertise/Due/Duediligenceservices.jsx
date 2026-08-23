@@ -28,9 +28,9 @@ const services = [
     description:
       "Evaluating the target company's financial statements, including balance sheets, income statements, and cash flow statements, to assess its financial health, profitability, and sustainability.",
     icon: (
-      <IconWrap>
+      
         <TbChartBar />
-      </IconWrap>
+      
     ),
   },
   {
@@ -38,9 +38,9 @@ const services = [
     description:
       "Reviewing the target company's operational processes, management structure, and overall business strategy to identify any operational inefficiencies or areas of improvement.",
     icon: (
-      <IconWrap>
+      
         <TbSettings />
-      </IconWrap>
+      
     ),
   },
   {
@@ -48,9 +48,9 @@ const services = [
     description:
       "Analyzing the target company's position within its industry and market trends to gauge its competitiveness and growth potential.",
     icon: (
-      <IconWrap>
+      
         <TbSearch />
-      </IconWrap>
+      
     ),
   },
   {
@@ -58,9 +58,9 @@ const services = [
     description:
       "Ensuring that the target company adheres to all applicable laws, regulations, permits, licenses, and contracts. This helps identify any potential legal liabilities or risks.",
     icon: (
-      <IconWrap>
+      
         <TbGavel />
-      </IconWrap>
+      
     ),
   },
   {
@@ -68,9 +68,9 @@ const services = [
     description:
       "This service concentrates on the business's ability by using different model such as multiplier methods, asset-based valuation, time revenue method, risk analysis.",
     icon: (
-      <IconWrap>
+      
         <TbCalculator />
-      </IconWrap>
+      
     ),
   },
   {
@@ -78,9 +78,9 @@ const services = [
     description:
       "Assessing the target company's intellectual property portfolio, such as patents, trademarks, copyrights, and trade secrets, to determine their value and protection.",
     icon: (
-      <IconWrap>
+      
         <TbCopyright />
-      </IconWrap>
+      
     ),
   },
   {
@@ -88,9 +88,9 @@ const services = [
     description:
       "Understanding the target company's customer base and supplier relationships to assess the stability of its revenue streams and potential dependencies.",
     icon: (
-      <IconWrap>
+      
         <TbUsersGroup />
-      </IconWrap>
+      
     ),
   },
   {
@@ -98,9 +98,9 @@ const services = [
     description:
       "Examining the target company's workforce, employee contracts, and overall human resources practices to identify any potential labour-related issues or challenges.",
     icon: (
-      <IconWrap>
+      
         <TbUserCheck />
-      </IconWrap>
+      
     ),
   },
   {
@@ -108,9 +108,9 @@ const services = [
     description:
       "Reviewing the target company's technology assets and IT infrastructure to assess their reliability, security, and potential for future growth.",
     icon: (
-      <IconWrap>
+      
         <TbServer />
-      </IconWrap>
+      
     ),
   },
   {
@@ -118,9 +118,9 @@ const services = [
     description:
       "Evaluating the target company's environmental impact, sustainability practices, and compliance with environmental regulations.",
     icon: (
-      <IconWrap>
+      
         <TbLeaf />
-      </IconWrap>
+      
     ),
   },
   {
@@ -128,9 +128,9 @@ const services = [
     description:
       "If the investment involves a merger or acquisition, evaluating how well the target company's operations and culture align with those of the acquiring company.",
     icon: (
-      <IconWrap>
+      
         <TbPlugConnected />
-      </IconWrap>
+      
     ),
   },
   {
@@ -138,9 +138,9 @@ const services = [
     description:
       "Creating financial projections based on various scenarios and methodologies to estimate the potential returns and valuation of the investment.",
     icon: (
-      <IconWrap>
+      
         <TbTrendingUp />
-      </IconWrap>
+      
     ),
   },
 ];

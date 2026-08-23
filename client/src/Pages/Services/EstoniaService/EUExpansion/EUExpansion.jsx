@@ -30,8 +30,13 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/e7c8ed65-eeab-4119-888a-9a61c52b052c.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+
+
+
+import { motion } from "framer-motion";
+
 const industries = [
     {
         icon: LuGlobe,
@@ -162,10 +167,11 @@ const EUExpansion = () => {
     const [expandedItem, setExpandedItem] = useState(null);
     const toggleAccordion = (idx) =>
         setExpandedItem(expandedItem === idx ? null : idx);
-
+    const id = 'services-estonia-eu'
     return (
         <div className="w-full">
             <SevicsBanner
+                id={id}
                 bgImage={bgimg}
                 title1={"Strategic EU Expansion"}
                 title2={"Starts In Estonia"}
@@ -187,7 +193,7 @@ const EUExpansion = () => {
                                 Through Estonia?
                             </span>
                         </h2>
-                        <p className="mt-6 text-base leading-8 text-gray-500">
+                        <p className="mt-6 text-base leading-8 text-justify text-gray-500">
                             Estonia offers one of Europe's most business-friendly environments,
                             making it an ideal gateway for companies looking to expand across the
                             European Union. From cross-border business structuring to international
@@ -234,23 +240,56 @@ const EUExpansion = () => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
                         {industries.map((item, index) => {
                             const Icon = item.icon;
+
+                            const row = Math.floor(index / 3);
+                            const col = index % 3;
+                            const isDark = (row + col) % 2 === 0;
+
                             return (
-                                <div key={index} className="flex hover:bg-white p-5 rounded-xl hover:shadow-2xl flex-col items-center text-center">
-                                    <Icon className="text-4xl text-light-blue bg-light-blue/20 rounded-sm p-2 mb-5" />
-                                    <h3 className="text-xl font-bold text-[#16244b] mb-4">
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (index % 3) * 0.12,
+                                        ease: "easeOut",
+                                    }}
+                                    className={`flex p-10 flex-col items-center text-center gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                                        }`}
+                                >
+                                    {/* Icon */}
+                                    <div
+                                        className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                                            ? "bg-white/15 text-white"
+                                            : "bg-light-blue/20 text-light-blue"
+                                            }`}
+                                    >
+                                        <Icon className="text-2xl" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                                         {item.title}
                                     </h3>
+
+                                    {/* Items */}
                                     <ul className="space-y-2">
                                         {item.items.map((li, i) => (
-                                            <li key={i} className="text-gray-500 text-base leading-6">
+                                            <li
+                                                key={i}
+                                                className={`text-sm leading-relaxed ${isDark ? "text-gray-700" : "text-gray-500"
+                                                    }`}
+                                            >
                                                 - {li}
                                             </li>
                                         ))}
                                     </ul>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>
@@ -279,8 +318,8 @@ const EUExpansion = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                                    <LuChartNoAxesCombined className="text-white text-4xl" />
+                                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                                    <img src={logo} alt="" />
                                 </div>
                                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                                     {item}
@@ -306,26 +345,48 @@ const EUExpansion = () => {
                         <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-                        {benefits.map((item, index) => (
-                            <div
-                                key={index}
-                                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                            >
-                                <div className="flex items-center gap-3 mb-3">
-                                    <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                                    <h3 className="text-base font-bold text-[#16244b]">
-                                        {item.title}
-                                    </h3>
+                    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+                        {benefits.map((item, index) => {
+                            const isDark = index === 0 || index === 3;
+
+                            return (
+                                <div
+                                    key={index}
+                                    className={`p-8 transition-all duration-300 hover:shadow-2xl ${isDark
+                                            ? "bg-light-blue"
+                                            : "bg-white border border-gray-200"
+                                        }`}
+                                >
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <div
+                                            className={`w-10 h-10 rounded-sm flex items-center justify-center ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                                                }`}
+                                        >
+                                            <LuChartNoAxesCombined
+                                                className={`text-2xl shrink-0 ${isDark ? "text-white" : "text-light-blue"
+                                                    }`}
+                                            />
+                                        </div>
+
+                                        <h3 className="text-base font-bold text-[#16244b]">
+                                            {item.title}
+                                        </h3>
+                                    </div>
+
+                                    <p
+                                        className={`text-base leading-6 ${isDark ? "text-gray-700" : "text-gray-500"
+                                            }`}
+                                    >
+                                        {item.desc}
+                                    </p>
                                 </div>
-                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-           
+
 
             {/* Our Industry-Based Services */}
             <section className="pb-20 px-6 bg-white">
@@ -377,22 +438,23 @@ const EUExpansion = () => {
                     </div>
                 </div>
             </section>
-             <ConsultationCTA
-    heading={
-        <>
-            Build Your
-            <br />
-            <span className="font-bold">European Presence</span>
-        </>
-    }
-    subheading="From market entry and international business structuring to finance, compliance, and ongoing advisory, we help businesses expand into Europe with confidence through Estonia."
-    commitmentItems={[
-        "Free strategic consultation",
-        "Cross-border expansion specialists",
-        "International finance & reporting support",
-        "Long-term partnership for sustainable growth",
-    ]}
-/>
+            <ConsultationCTA
+            id={id}
+                heading={
+                    <>
+                        Build Your
+                        <br />
+                        <span className="font-bold">European Presence</span>
+                    </>
+                }
+                subheading="From market entry and international business structuring to finance, compliance, and ongoing advisory, we help businesses expand into Europe with confidence through Estonia."
+                commitmentItems={[
+                    "Free strategic consultation",
+                    "Cross-border expansion specialists",
+                    "International finance & reporting support",
+                    "Long-term partnership for sustainable growth",
+                ]}
+            />
         </div>
     );
 };

@@ -1,35 +1,19 @@
 // File: Investment.jsx
 import { useState, useEffect } from "react";
-import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
+
 
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
 import img2 from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [end, duration]);
-  return count;
-};
 
 const dueDiligenceCards = [
   {
@@ -102,9 +86,11 @@ const whyChoose = [
 ];
 
 const Investment = () => {
+  const id = 'services-uae-investment'
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bgimg}
         alt="Investment Advisory UAE"
         heading="Invest With Confidence."
@@ -163,7 +149,7 @@ const Investment = () => {
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
+                  <p className="text-gray-500 text-base leading-6 text-justify">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -181,7 +167,7 @@ const Investment = () => {
             <p className="mt-4 text-gray-600 font-semibold">
               Streamline Operations. Boost Efficiency.
             </p>
-            <p className="mt-4 text-gray-500 leading-7">
+            <p className="mt-4 text-gray-500  text-center leading-7">
               We help portfolio companies optimize processes, reduce costs, and
               enhance productivity. Through operational audits and business
               process reengineering, we ensure that businesses perform at peak
@@ -189,10 +175,12 @@ const Investment = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-10 mt-16">
+          <div className="grid lg:grid-cols-3 gap-x-5 mt-16">
             {bprItems.map((item, index) => (
-              <div key={index} className="text-center">
-                <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
+              <div key={index} className="text-center border-[1px] p-10 rounded-2xl hover:shadow-2xl duration-300 border-gray-300 flex flex-col items-center justify-center">
+                <div >
+                  <img src={logo} className="w-14 mb-4" alt="" />
+                </div>
                 <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -203,7 +191,7 @@ const Investment = () => {
         </div>
       </section>
 
-       {/* Corporate Finance Advisory */}
+      {/* Corporate Finance Advisory */}
       <section className="py-20 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
@@ -220,8 +208,8 @@ const Investment = () => {
 
           <div className="grid lg:grid-cols-3 gap-x-16 gap-y-10 mt-16">
             {financeAdvisoryItems.map((item, index) => (
-              <div key={index} className="text-center">
-                <LuChartNoAxesCombined className="text-4xl text-slate-500 mx-auto mb-4" />
+              <div key={index} className="flex justify-center items-center flex-col text-center">
+                <img src={logo} className="mb-5" alt="" />
                 <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
@@ -234,35 +222,65 @@ const Investment = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Why Choose Our{" "}
-              <span className="font-bold">Investment Advisory</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Choose Our{" "}
+        <span className="font-bold">Investment Advisory</span>
+      </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+      {whyChoose.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                className={`w-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+                alt=""
+              />
+            </div>
+
+            <div>
+              <h3 className="text-base font-bold text-[#16244b] mb-2">
+                {item.title}
+              </h3>
+
+              <p
+                className={`text-base leading-6 ${
+                  isDark ? "text-gray-700" : "text-gray-500"
+                }`}
               >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+                {item.desc}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your UAE
@@ -279,7 +297,7 @@ const Investment = () => {
         ]}
       />
 
-      
+
     </div>
   );
 };

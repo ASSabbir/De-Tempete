@@ -2,7 +2,7 @@ import img1 from '../../../asstes/img_temp/estoniabook.webp'
 import DownloadButtonGuide from '../../../Components/Shared/DownloadbuttonGuide';
 const BusinessSetupBook = () => {
   return (
-    <section className="bg-[#ffffff] pt-24">
+    <section className="bg-[#ffffff] py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 

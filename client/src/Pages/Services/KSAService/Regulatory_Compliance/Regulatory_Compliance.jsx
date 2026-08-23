@@ -1,10 +1,9 @@
-import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
+
 import { FaCheckCircle } from "react-icons/fa";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+import { motion } from "framer-motion";
 import bg from '../../../../asstes/img_temp/servics/KSA/Trusted-Compliance-Support-for-Businesses-in-Saudi-Arabia.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/Regulatory-Compliance-Services-in-Saudi-Arabia.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
@@ -14,15 +13,17 @@ import img5 from '../../../../asstes/img_temp/servics/KSA/Modern-office-with-aud
 import img6 from '../../../../asstes/img_temp/servics/KSA/Government-Platforms-Regulatory-Coordination.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import logo from '../../../../asstes/img_temp/logo.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const handleTags = [
-  "Regulatory Compliance Coordination",
-  "ISO Documentation Support",
-  "Internal Process Structuring",
-  "Operational Compliance Reviews",
-  "Policy & SOP Development",
-  "Compliance Risk Monitoring",
-  "Government Platform Assistance",
-  "Audit Preparation Support",
+  "MISA Investment License Renewal",
+  "Commercial Registration Renewal",
+  "COC Certificate Renewal",
+  "National Address Renewal",
+  "Qiwa and Muqeem Portal Renewal",
+  "Annual Income Tax Filing",
+  "Quarterly VAT Return Filing",
+ 
+  "Audit Report Submission",
 ];
 
 const isoPoints = [
@@ -86,12 +87,22 @@ const whyChoose = [
     title: "Long-Term Operational Compliance Approach",
     desc: "Focused on sustainable compliance management instead of short-term fixes.",
   },
+  {
+    title: "Reliable Regulatory & Filing Support",
+    desc: "Ensuring essential licenses, registrations, tax filings, and compliance requirements are handled accurately and on time.",
+  },
+  {
+    title: "End-to-End Business Compliance Assistance",
+    desc: "Providing coordinated support across government portals, renewals, documentation, and ongoing regulatory requirements.",
+  },
 ];
 
 const Regulatory_Compliance = () => {
+  const id ='services-ksa-regulatory'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         heading={
           <>
@@ -141,6 +152,10 @@ const Regulatory_Compliance = () => {
           </div>
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/ksa'}></SharedFullButton>
+      </div>
+
 
       {/* What We Handle For You */}
       <section className="py-20 bg-[#16244B]">
@@ -337,36 +352,75 @@ const Regulatory_Compliance = () => {
 
       {/* Why Businesses Choose de tempête */}
       <section className="py-24 bg-[#f8fbff]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#16244b]">
-              Why Businesses <span className="font-normal">Choose</span>{" "}
-              <span className="italic font-bold">de tempête</span>
-            </h2>
-            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
-          </div>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {whyChoose.map((f, i) => (
-              <div
-                key={i}
-                className="bg-white border border-gray-200 rounded-2xl p-8 flex gap-4"
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-[#16244b]">
+        Why Businesses <span className="font-normal">Choose</span>{" "}
+        <span className="italic font-bold">de tempête</span>
+      </h2>
+
+      <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((f, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b] mb-2">
+                {f.title}
+              </h3>
+
+              <p
+                className={`text-sm leading-relaxed text-justify ${
+                  isDark ? "text-gray-700" : "text-gray-500"
+                }`}
               >
-                <div className="w-10 h-10  rounded-lg flex items-center justify-center shrink-0">
-                  <img src={logo} alt="" />
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {f.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                {f.desc}
+              </p>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Building Your Business

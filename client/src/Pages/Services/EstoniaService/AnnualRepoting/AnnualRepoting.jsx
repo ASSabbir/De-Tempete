@@ -13,6 +13,9 @@ import {
   LuBriefcase,
 } from "react-icons/lu";
 import { ConsultationCTA } from '../../../../Components/Shared/ConsultationCTA';
+import { motion } from "framer-motion";
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
 
 const whyChoose = [
   {
@@ -79,10 +82,12 @@ const AnnualRepoting = () => {
       image: img3,
     },
   ];
+  const id = 'services-estonia-annualrepoting'
 
   return (
     <div>
-      <SevicsBanner bgImage={bgimg} alt="Bangladesh Business Setup"
+      <SevicsBanner
+      id={id} bgImage={bgimg} alt="Bangladesh Business Setup"
         description="Stay compliant with Estonia's ongoing corporate requirements through expert annual reporting and regulatory support. We help your business meet statutory obligations by managing annual report preparation, Commercial Register filings, beneficial ownership compliance, corporate record maintenance, and ongoing regulatory monitoring—ensuring your company remains fully compliant and in good standing throughout the year."
         title1={' Maintain Full Corporate Compliance '}
         title2={'Throughout Your Business Journey In Estonia'}
@@ -182,8 +187,8 @@ const AnnualRepoting = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuTrendingUp className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -193,36 +198,71 @@ const AnnualRepoting = () => {
           </div>
         </div>
       </section>
+      <div className="mt-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/estonia'}></SharedFullButton>
+      </div>
+
       {/* Why Trust */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Why Businesses Choose{" "}
-              <span className="font-bold italic">de tempête </span>Estonia Experts
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Businesses Choose{" "}
+        <span className="font-bold italic">de tempête </span>
+        Estonia Experts
+      </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+      {whyChoose.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                className={`w-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+                alt=""
+              />
+            </div>
+
+            <div>
+              <h3 className="text-base font-bold text-[#16244b] mb-2">
+                {item.title}
+              </h3>
+
+              <p
+                className={`text-base leading-6 ${
+                  isDark ? "text-gray-700" : "text-gray-500"
+                }`}
               >
-                <LuBriefcase className="text-light-blue text-2xl shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+                {item.desc}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Simplify Your

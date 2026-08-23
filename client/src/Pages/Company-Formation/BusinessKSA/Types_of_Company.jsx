@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const companyData = [
   {
@@ -65,12 +66,12 @@ const Types_of_Company = () => {
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl text-[#14224A] font-light">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-[#14224A] font-light">
             Types of Company{" "}
             <span className="font-bold">Business Entities in Saudi Arabia</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-base max-w-4xl mx-auto leading-8">
+          <p className="mt-5 text-gray-600 text-base max-w-4xl mx-auto leading-7">
             Saudi Arabia offers multiple company structures to suit different
             investment goals and ownership models. Each entity type is regulated
             under the <span className="font-bold">Saudi Companies Law</span> and approved through the <span className="font-bold">
@@ -135,9 +136,9 @@ const Types_of_Company = () => {
 
               {/* Button */}
               <div className="mt-8 flex justify-end">
-                <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300 hover:bg-[#58CDE7] hover:text-white hover:scale-105">
-                  Talk to an Expert
-                </button>
+                
+                <Link className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300" to={'/business-setup/ksa#bussiness-setup-ksa'}>Talk to an Expert
+                </Link>
               </div>
             </div>
           </div>

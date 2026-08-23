@@ -22,9 +22,9 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import img1 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
-import img4 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import img4 from '../../../../asstes/img_temp/servics/usa1.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
-
+import logo from '../../../../asstes/img_temp/logo.webp'
 const accountsCards = [
   {
     title: "Annual Report Preparation & Filing",
@@ -143,24 +143,30 @@ const whyChoose = [
   "Centralized compliance calendar across every jurisdiction",
   "Transparent, fixed-fee compliance packages",
   "Zero missed deadlines, zero avoidable penalties",
+  "Automated data syncing that eliminates manual entry errors"
 ];
+import { motion } from "framer-motion";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+
 const LuShieldCheck = FaShieldAlt;
 
 const ComplianceUSA = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+  const id = 'services-usa-compliance'
   return (
     <div className="w-full">
-      <SevicsBanner bgImage={bgimg} alt="USA Compliance Services"
+      <SevicsBanner
+        id={id}
+        bgImage={bgimg} alt="USA Compliance Services"
         description="Stay ahead of US regulatory compliance requirements with expert annual filings and ongoing compliance support. We help your business meet its obligations by managing annual state filings, multi-state compliance tracking, IRS compliance coordination, multi-state nexus analysis, and compliance calendar setup — ensuring your company stays fully compliant across every state you operate in."
         title1={'Stay Ahead of '}
         title2={'US Regulatory Compliance Requirements'}
 
       ></SevicsBanner>
 
-      
+
 
       {/* Problem Statement */}
       <section className="py-24 bg-white">
@@ -168,7 +174,7 @@ const ComplianceUSA = () => {
           <p className="text-light-blue font-semibold">
             THE COMPLIANCE CHALLENGE
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#14224A] mt-2">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-[#14224A] mt-2">
             US Compliance Burden
           </h2>
           <p className="mt-4 text-light-blue font-semibold text-base">
@@ -205,7 +211,7 @@ const ComplianceUSA = () => {
       <section className="py-24 bg-[#16244B] text-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-">
               Annual State Compliance{" "}
               <span className="font-extrabold">& Filings</span>
             </h2>
@@ -240,11 +246,12 @@ const ComplianceUSA = () => {
       {/* IRS Compliance Coordination */}
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl  leading-tight font-light text-[#16244b]">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight font-light text-[#16244b]">
               <span className="font-bold">IRS Compliance</span> Coordination
             </h2>
-            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
+
+            <p className="mt-8 text-base text-gray-500 leading-7 text-justify max-w-4xl mx-auto">
               Coordinated IRS compliance that keeps your federal obligations
               on track. Managing IRS correspondence and federal deadlines
               alongside state compliance can be complex, and missed notices
@@ -253,60 +260,58 @@ const ComplianceUSA = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3  mt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {ctFeatures.map((item, index) => {
               const Icon = item.icon;
+
+              const row = Math.floor(index / 3);
+              const col = index % 3;
+              const isDark = (row + col) % 2 === 0;
+
               return (
-                <div
+                <motion.div
                   key={index}
-                  className="2xl:p-16 p-6 hover:bg-gray-200  rounded-3xl duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (index % 3) * 0.12,
+                    ease: "easeOut",
+                  }}
+                  className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
                 >
-                  <Icon className="text-5xl text-light-blue rounded-sm bg-light-blue/20 p-2 mb-6" />
-                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
+                  {/* Icon */}
+                  <div
+                    className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                        ? "bg-white/15 text-white"
+                        : "bg-light-blue/20 text-light-blue"
+                      }`}
+                  >
+                    <Icon className="text-2xl" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-base leading-8">{item.desc}</p>
-                </div>
+
+                  {/* Description */}
+                  <p
+                    className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
+                    {item.desc}
+                  </p>
+                </motion.div>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Multi-State Compliance Tracking */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
-          <img
-            src={img1}
-            alt="Multi-State Compliance Tracking"
-            className="w-full h-full  object-cover rounded-2xl shadow-lg"
-          />
-          <div className="flex flex-col justify-center">
-            <h2 className="text-5xl leading-tight text-[#16244b] font-light">
-              <span className="font-bold">Multi-State</span>
-              <br />
-              Compliance Tracking
-            </h2>
-            <p className="mt-8 text-xl leading-7 text-gray-500">
-              Coordinated Compliance Tracking for Businesses Operating Across
-              State Lines. We monitor filing requirements, deadlines, and
-              obligations in every state where you do business — so nothing
-              falls through the cracks.
-            </p>
-            <h4 className="mt-8 mb-5 italic font-bold text-[#16244b] text-base">
-              Perfect for:
-            </h4>
-            <div className="space-y-4">
-              {selfAssessment.map((item, i) => (
-                <div key={i} className="flex items-center gap-4">
-                  <FaCheckCircle className="text-light-blue text-2xl shrink-0" />
-                  <span className="text-gray-600 text-base">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Multi-State Nexus Analysis */}
       <section className="pb-20 bg-white">
@@ -419,7 +424,7 @@ const ComplianceUSA = () => {
           <img
             src={img5}
             alt="IRS Notice & Deadline Monitoring"
-            className="w-full h-full object-cover rounded-2xl shadow-lg"
+            className="w-full h-110 object-cover rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
@@ -452,18 +457,22 @@ const ComplianceUSA = () => {
           </div>
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/usa'}></SharedFullButton>
+      </div>
 
-      
+
+
 
       {/* Compliance Calendar Deadline Categories */}
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl md:text-6xl leading-tight text-white font-light">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight text-white font-light">
               Compliance Calendar{" "}
               <span className="font-bold">Deadline Categories</span>
             </h2>
-            <p className="mt-8 text-xl text-slate-300 leading-7 max-w-4xl mx-auto">
+            <p className="mt-8 text-lg text-slate-300 leading-7 max-w-4xl mx-auto">
               Every Deadline, Tracked and Categorized. We organize your
               compliance calendar around the deadline types that matter most
               — so your team always knows what's due, and when.
@@ -477,8 +486,8 @@ const ComplianceUSA = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-5xl" />
+                <div className="w-14 h-14 p-2 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
                   {item}
@@ -488,8 +497,8 @@ const ComplianceUSA = () => {
           </div>
         </div>
       </section>
-      
-{/* Nexus Determination Accordion */}
+
+      {/* Nexus Determination Accordion */}
       <section className="py-20 px-6 bg-[#F5F6F8]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -535,32 +544,71 @@ const ComplianceUSA = () => {
       </section>
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-5xl md:text-6xl font-light text-[#16244b] leading-tight">
-              Why Choose Our{" "}
-              <span className="font-bold">USA Compliance Advisory</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
+        Why Choose Our{" "}
+        <span className="font-bold">USA Compliance Advisory</span>
+      </h2>
 
-          <div className="grid lg:grid-cols-5 gap-6 mt-20">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
-                <p className="text-gray-700 font-semibold">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
 
-      
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((item, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col items-center justify-center text-center gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Content */}
+            <p
+              className={`text-base font-semibold leading-6 ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your USA Compliance
@@ -576,9 +624,9 @@ const ComplianceUSA = () => {
           "Transparent and practical advice tailored to your needs",
         ]}
       />
-      
 
-      
+
+
     </div>
   );
 };

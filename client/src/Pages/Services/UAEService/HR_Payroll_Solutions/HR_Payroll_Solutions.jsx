@@ -1,35 +1,18 @@
-// File: HR_Payroll_Solutions.jsx
-import { useState, useEffect } from "react";
-import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
+
 import { FaCheckCircle } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/Bd/financial-governance.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__employe-recorder-peo-services-for-website-section-__98148.webp'
 import img4 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [end, duration]);
-  return count;
-};
+import logo from '../../../../asstes/img_temp/logo.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 
 const whyChoose = [
   {
@@ -55,9 +38,12 @@ const whyChoose = [
 ];
 
 const HR_Payroll_Solutions = () => {
+  const id='services-uae-hr'
   return (
     <div className="w-full">
+      
       <HeroSection
+      id={id}
         bgImage={bgimg}
         alt="HR & Payroll Solutions"
         heading={
@@ -138,7 +124,7 @@ const HR_Payroll_Solutions = () => {
           <img
             src={img3}
             alt="Employer Of Record (EOR) & PEO Services"
-            className="w-full h-96 object-cover object-center rounded-2xl shadow-lg"
+            className="w-full h-120 object-cover object-center rounded-2xl shadow-lg"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
@@ -146,18 +132,19 @@ const HR_Payroll_Solutions = () => {
               <span className="font-light">(EOR) & PEO Services</span>
             </h2>
             <p className="mt-5 text-gray-500 leading-7">
-              Hire employees in the UAE or globally without establishing a local
-              entity. We manage contracts, visas, and benefits so you can expand
-              effortlessly.
+              Build and manage your workforce without the complexity of setting up and managing a local employment infrastructure. From compliant onboarding and employment administration to payroll, benefits and HR support, we help businesses expand their teams efficiently.
             </p>
             <h4 className="mt-6 mb-4 italic font-bold text-[#16244b]">
               Benefits:
             </h4>
             <div className="space-y-3">
               {[
-                "Hire locally or globally without a company setup",
-                "Full management of contracts, visas, and benefits",
-                "Quick and compliant onboarding process",
+                "Hire and onboard employees across supported markets",
+                "Employment contracts & HR administration",
+                "Payroll, benefits & statutory compliance support",
+                "Visa & immigration coordination, where applicable",
+                "Faster, compliant employee onboarding",
+                "Ongoing workforce & HR support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue text-base shrink-0" />
@@ -222,26 +209,26 @@ const HR_Payroll_Solutions = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
+                <img src={logo} alt="" className="w-10 mb-3" />
                 <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
             ))}
-            <div className="bg-[#16244B] rounded-2xl p-8 flex flex-col justify-center">
+            <div className="bg-[#16244B] rounded-2xl p-8 flex flex-col items-center justify-center">
               <h3 className="text-xl font-bold text-white mb-4">
                 Get Started Now
               </h3>
-              <button className="bg-light-blue hover:bg-light-blue text-white font-semibold py-3 rounded-lg transition duration-300">
-                Book a Consultation
-              </button>
+              
+              <SharedFullButton text={'Book a Consultation'} path={`#${id}`}></SharedFullButton>
             </div>
           </div>
         </div>
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Ready To Simplify Your

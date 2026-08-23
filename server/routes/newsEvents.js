@@ -51,12 +51,13 @@ router.get('/', publicLimiter, async (req, res) => {
   }
 });
 
-// GET /api/news-events/recent — public
+// GET /api/news-events/recent — public. Optional ?limit= (default 5, capped at 10)
 router.get('/recent', publicLimiter, async (req, res) => {
   try {
+    const limit = Math.min(10, Math.max(1, parseInt(req.query.limit) || 5));
     const filter = { isActive: true, status: 'published' };
     if (req.query.exclude) filter.slug = { $ne: req.query.exclude };
-    const items = await NewsEvent.find(filter).sort({ eventDate: -1 }).limit(5).lean();
+    const items = await NewsEvent.find(filter).sort({ eventDate: -1 }).limit(limit).lean();
     res.set('Cache-Control', 'public, max-age=60');
     res.json(items);
   } catch {

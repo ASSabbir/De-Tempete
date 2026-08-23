@@ -98,13 +98,13 @@ const Types_of_Company = () => {
       <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl text-[#14224A] font-light">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-[#14224A] font-light">
             Types of Company{" "}
             <span className="font-bold">Structures in Estonia</span>
           </h2>
 
           <p className="mt-5 text-gray-600 text-base max-w-4xl mx-auto leading-8">
-            There are three main options for company formation in the Estonia,
+            There are six main options for company formation in the Estonia,
             depending on your business goals and target markets.
           </p>
         </div>
@@ -164,10 +164,10 @@ const Types_of_Company = () => {
 
               {/* Button */}
               <div className="mt-8 flex justify-end ">
-                <Link to={'/contact'}>
-                <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white transition-all duration-300">
-                  Talk to an Expert
-                </button></Link>
+                
+                
+                <Link className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300" to={'/business-setup/estonia#bussiness-setup-estonia'}>Talk to an Expert
+                </Link>
               </div>
             </div>
           </div>

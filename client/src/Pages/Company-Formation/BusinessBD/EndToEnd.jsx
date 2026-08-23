@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SharedButton from "../../../Components/Shared/SharedButton";
 
 const steps = [
   {
@@ -37,7 +38,7 @@ const steps = [
     title: "Accounting & Tax Compliance",
     points: [
       "Bookkeeping and financial reporting (IFRS-based)",
-      "Corporate tax, VAT, and withholding compliance",
+      "Corporate Tax, VAT, and withholding compliance",
       "Monthly and annual filing management",
     ],
   },
@@ -46,7 +47,7 @@ const steps = [
     step: "Step 05",
     title: "Payroll & HR Compliance",
     points: [
-      "Payroll processing and tax deductions",
+      "Payroll processing and Tax deductions",
       "Employee documentation and compliance",
       "Local and expatriate payroll handling",
     ],
@@ -77,20 +78,19 @@ const EndToEnd = () => {
             Bangladesh <span className="font-bold">regulations.</span>
           </h3>
 
-          <button className="border-2 border-white text-white px-10 py-4 rounded-2xl hover:bg-white hover:text-[#081B57] duration-300">
-            Get Started Now
-          </button>
+          
+           <SharedButton text={'Get Started Now'} path={'/business-setup/bd#bussiness-setup-bd'}></SharedButton>
         </div>
 
         {/* Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-[#081B57] text-5xl 2xk:text-6xl font-light leading-tight">
+          <h2 className="text-[#081B57] text-3xl md:text-4xl 2xl:text-5xl font-light leading-tight">
             Our End-To-End
             <br />
             Company <span className="font-bold">Formation Support</span>
           </h2>
 
-          <p className="mt-2 text-[#1f2a50] text-xl">
+          <p className="mt-5 text-[#1f2a50] text-xl">
             <span className="font-bold italic">de tempête</span> provides
             complete business setup and compliance support tailored for
             Bangladesh operations.

@@ -1,15 +1,12 @@
 import {
-  CalendarDays,
-  Globe,
-  Handshake,
-  Medal,
   ChevronDown,
 } from "lucide-react";
+import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-
+import { motion } from "framer-motion";
 import img1 from '../../../../asstes/img_temp/servics/KSA/Tax-Compliance-Regulatory-Support.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/Financial-Reporting-Document-KSA.webp'
 import img3 from '../../../../asstes/img_temp/servics/KSA/Branch-of-Foreign-Company-1.webp'
@@ -166,21 +163,29 @@ const whyChooseUs = [
 ];
 
 const Market_Expansion_Setup_Advisory = () => {
+  const id = 'services-ksa-market'
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (idx) => {
+    setOpenIndex((prev) => (prev === idx ? null : idx));
+  };
+
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Business Setup KSA"
         heading={
           <>
-            Establish Your Business Presence
+            Build Your Business Presence 
             <br />
             <span className="text-light-blue">
-              In Saudi Arabia The Right Way
+              in Saudi Arabia
             </span>
           </>
         }
-        description={<>Expanding into Saudi Arabia requires strategic alignment with regulatory frameworks, local compliance, and market dynamics. At <span className="font-bold italic">de tempête</span>, we guide you through the complete Saudi market entry process, from MISA licensing to operational setup, ensuring a smooth, compliant, and scalable business presence.</>}
+        description={<>Saudi Arabia’s economic transformation under Vision 2030 is creating significant opportunities for local and international businesses. <span className="font-bold italic">de tempête</span> provides end-to-end <span className="font-bold">Saudi Arabia business setup, company formation and market entry advisory services</span>, supporting businesses with investment licensing, company registration, regulatory requirements, tax and Zakat compliance, workforce setup and ongoing business operations in the Kingdom.</>}
         ctaText="Enter Saudi with confidence"
       />
 
@@ -240,17 +245,45 @@ const Market_Expansion_Setup_Advisory = () => {
 
       {/* Market Position Cards (icon only style) */}
       <section className="py-20 bg-[#F5F6F8]">
-        <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-3 gap-12 text-center">
-          {marketPositionCards.map((c, i) => (
-            <div className="border-[1px] border-gray-300 rounded-xl p-5" key={i}>
-              <h3 className="text-base font-bold text-[#16244b] mb-3">
-                {c.title}
-              </h3>
-              <p className="text-gray-500 text-base leading-6">{c.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {marketPositionCards.map((c, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {c.title}
+            </h3>
+
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {c.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* Export Readiness Accordion */}
       <section className="py-24 bg-[#16244B]">
@@ -268,22 +301,47 @@ const Market_Expansion_Setup_Advisory = () => {
             </p>
           </div>
           <div className="space-y-4">
-            {exportReadinessItems.map((item, idx) => (
-              <div
-                key={idx}
-                className="border border-white/10 rounded-lg overflow-hidden bg-[#1c2c5c]"
-              >
-                <button className="w-full px-6 py-4 flex items-center justify-between text-left">
-                  <span className="flex items-center gap-3 text-white font-semibold text-base">
-                    <div className="w-10">
-                      <img src={logo} alt="" />
+            {exportReadinessItems.map((item, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="border border-white/10 rounded-lg overflow-hidden bg-[#1c2c5c]"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleAccordion(idx)}
+                    aria-expanded={isOpen}
+                    className="w-full px-6 py-4 flex items-center justify-between text-left"
+                  >
+                    <span className="flex items-center gap-3 text-white font-semibold text-base">
+                      <div className="w-7 bg-white p-1 rounded-full">
+                        <img src={logo} alt="" />
+                      </div>
+                      {item.title}
+                    </span>
+                    <ChevronDown
+                      size={18}
+                      className={`text-gray-300 transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="px-6 pb-5 pl-[76px] text-gray-300 text-sm leading-6">
+                        {item.desc}
+                      </p>
                     </div>
-                    {item.title}
-                  </span>
-                  <ChevronDown size={18} className="text-gray-300" />
-                </button>
-              </div>
-            ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -412,7 +470,7 @@ const Market_Expansion_Setup_Advisory = () => {
       KSA Vision <span className="font-bold">2030 Business Expansion</span>
     </h2>
 
-    <p className="mt-5 text-lg text-gray-300 max-w-4xl mx-auto leading-8">
+    <p className="mt-5 text-lg text-gray-300 max-w-4xl text-justify mx-auto leading-8">
       Unlock Saudi Arabia's Vision 2030 opportunities with strategic advisory
       services designed to support market entry, regulatory compliance, workforce
       planning, and sustainable business growth across high-potential sectors.
@@ -426,15 +484,15 @@ const Market_Expansion_Setup_Advisory = () => {
           key={i}
           className="bg-[#37456B] rounded-2xl p-8 text-left hover:-translate-y-2 transition-all duration-300"
         >
-          <div className="w-14 h-14 rounded-xl bg-light-blue/15 flex items-center justify-center mb-6">
-            <item.icon className="text-light-blue text-2xl" />
+          <div className="w-14 h-14 rounded-xl bg-white p-2 flex items-center justify-center mb-6">
+            <img src={logo} alt="" />
           </div>
 
           <h3 className="text-xl font-semibold text-white leading-snug">
             {item.title}
           </h3>
 
-          <p className="mt-4 text-gray-300 leading-7 text-sm">
+          <p className="mt-4 text-justif text-gray-300 leading-7 text-sm">
             {item.desc}
           </p>
         </div>
@@ -445,27 +503,56 @@ const Market_Expansion_Setup_Advisory = () => {
 
       {/* Why Choose Our Saudi Market Expansion Advisory */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl  text-[#16244b]">
-              Why Choose <span className="italic font-bold">de tempête</span> Saudi Market{" "}
-              <span className="font-normal">Expansion Advisory</span>
-            </h2>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <h3 className="text-base font-bold text-[#16244b] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl text-[#16244b]">
+        Why Choose <span className="italic font-bold">de tempête</span>{" "}
+        Saudi Market{" "}
+        <span className="font-normal">Expansion Advisory</span>
+      </h2>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChooseUs.map((f, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {f.title}
+            </h3>
+
+            <p
+              className={`text-sm  leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {f.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your KSA

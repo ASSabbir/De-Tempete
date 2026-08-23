@@ -1,14 +1,11 @@
 // File: Branding_Growth.jsx
 import { useState, useEffect } from "react";
 import {
-  CalendarDays,
-  Globe,
-  Handshake,
-  Medal,
+
   ChevronDown,
   Building2,
   LineChart,
-  
+
   Blocks,
   BookOpenText,
   Megaphone,
@@ -20,77 +17,73 @@ import {
 import { FaCheckCircle } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+
+import { motion } from "framer-motion";
+
 
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
 import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [end, duration]);
-  return count;
-};
+import ServiceGrid from "../../../../Components/Shared/Servicegrid";
+
 
 const sectors = [
   {
-    icon: Building2,
+    Icon: Building2,
     title: "Real Estate",
-    desc: "Brand positioning and marketing strategies tailored to UAE property developers and agencies.",
+    description:
+      "Brand positioning and marketing strategies tailored to UAE property developers and agencies.",
   },
   {
-    icon: LineChart,
+    Icon: LineChart,
     title: "Fintech",
-    desc: "Trust-driven branding and market positioning for finance, payments, and digital banking solutions.",
+    description:
+      "Trust-driven branding and market positioning for finance, payments, and digital banking solutions.",
   },
   {
-    icon: Blocks,
+    Icon: Blocks,
     title: "Web3 & Blockchain",
-    desc: "Clear narrative building and growth strategy for blockchain, tokenized assets, and Web3 platforms.",
+    description:
+      "Clear narrative building and growth strategy for blockchain, tokenized assets, and Web3 platforms.",
   },
   {
-    icon: BookOpenText,
-    title: "Modest Fashion Id",
-    desc: "Entity development, product positioning, and campaign direction for modestwear brands.",
+    Icon: BookOpenText,
+    title: "Modest Fashion",
+    description:
+      "Entity development, product positioning, and campaign direction for modestwear brands.",
   },
   {
-    icon: Megaphone,
+    Icon: Megaphone,
     title: "Lifestyle & Consumer Brands",
-    desc: "Market-fit insights, digital presence planning, and expansion strategies for lifestyle products.",
+    description:
+      "Market-fit insights, digital presence planning, and expansion strategies for lifestyle products.",
   },
   {
-    icon: HandCoins,
+    Icon: HandCoins,
     title: "Hospitality & F&B",
-    desc: "Brand identity, menu storytelling, and launch marketing for restaurants, cafes, and hotels.",
+    description:
+      "Brand identity, menu storytelling, and launch marketing for restaurants, cafes, and hotels.",
   },
   {
-    icon: ShoppingBag,
+    Icon: ShoppingBag,
     title: "E-commerce & D2C",
-    desc: "Conversion-focused online branding and digital optimization for scalable D2C businesses.",
+    description:
+      "Conversion-focused online branding and digital optimization for scalable D2C businesses.",
   },
   {
-    icon: Sparkles,
+    Icon: Sparkles,
     title: "Beauty & Wellness",
-    desc: "Brand differentiation, creator partnerships, and content guidance for clinics and beauty brands.",
+    description:
+      "Brand differentiation, creator partnerships, and content guidance for clinics and beauty brands.",
   },
   {
-    icon: Briefcase,
+    Icon: Briefcase,
     title: "Professional Services",
-    desc: "Strong brand positioning and digital visibility strategies for consultants and service-led businesses.",
+    description:
+      "Strong brand positioning and digital visibility strategies for consultants and service-led businesses.",
   },
 ];
 
@@ -175,10 +168,13 @@ const Branding_Growth = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
+  const id = 'services-uae-branding'
 
   return (
     <div className="w-full">
+     
       <HeroSection
+       id={id}
         bgImage={bgimg}
         alt="Branding & Growth"
         heading={
@@ -236,32 +232,10 @@ const Branding_Growth = () => {
           />
         </div>
       </section>
+      <ServiceGrid description={<div className="text-center">Industry-Specific Expertise That Drives Brand Success</div>} heading={<div className="text-center">Sector-Focused <span className="font-bold">Advisory</span></div>} services={sectors}></ServiceGrid>
 
       {/* Sector-Focused Advisory */}
-      <section className="py-24 bg-[#F5F6F8]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Sector-Focused <span className="font-bold">Advisory</span>
-            </h2>
-            <p className="mt-4 text-gray-500">
-              Industry-Specific Expertise That Drives Brand Success
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 2xl:gap-6 mt-16">
-            {sectors.map((item, index) => (
-              <div key={index} className="hover:bg-white p-7">
-                <item.icon className="bg-light-blue/20 text-light-blue p-1 rounded-sm mb-3" size={32} strokeWidth={1.5} />
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Marketing Strategy Accordion */}
       <section className="py-20 px-6 bg-white">
@@ -338,8 +312,8 @@ const Branding_Growth = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-12 h-12 bg-light-blue rounded-xl flex items-center justify-center mb-5">
-                  <LuChartNoAxesCombined className="text-white text-2xl" />
+                <div className="w-12 h-12 bg-white p-2 rounded-xl flex items-center justify-center mb-5">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="text-base font-medium text-white mb-2">
                   {item.title}
@@ -353,33 +327,74 @@ const Branding_Growth = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Why Choose Our{" "}
-              <span className="font-bold">Branding & Growth Services?</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Choose Our{" "}
+        <span className="font-bold">Branding & Growth Services?</span>
+      </h2>
 
-          <div className="grid lg:grid-cols-3 gap-6 mt-16">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((item, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Expanding Your
@@ -396,7 +411,7 @@ const Branding_Growth = () => {
         ]}
       />
 
-      
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+        <section className="relative h-[60vh] md:h-[100vh] flex items-center justify-center text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
               <video className='object-center object-cover h-full w-full' src={heroVideo} autoPlay muted loop></video>
@@ -16,7 +16,7 @@ const Banner = () => {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center px-5">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Contact Us
+          Connect With Us
         </h1>
 
         <h2 className="text-xl md:text-xl font-light mb-8">

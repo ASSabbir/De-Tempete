@@ -21,9 +21,9 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
-import img1 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
-import img2 from '../../../../asstes/img_temp/servics/freepik__hr-outsourcing-image-for-website-section__98146.webp'
-import img3 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-workspace-concept.webp'
+import img1 from '../../../../asstes/img_temp/servics/uae1.webp'
+import img2 from '../../../../asstes/img_temp/servics/uae3.webp'
+import img3 from '../../../../asstes/img_temp/servics/uae2.webp'
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import logo from '../../../../asstes/img_temp/logo.webp'
@@ -34,7 +34,7 @@ import { Link } from "react-router";
 import SharedButton from "../../../../Components/Shared/SharedButton";
 import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 
-
+import { motion } from "framer-motion";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -73,14 +73,14 @@ const setupTypes = [
     image:
       img2,
     items: [
-      "0% corporate tax",
-      "Full foreign ownership",
-      "Zone-restricted activities",
-      "Office space required",
-      "Annual audit required",
-      "Residence visa eligibility",
-      "VAT conditional rules",
-    ],
+  "100% Foreign Ownership",
+  "Wide Range of Licensed Activities",
+  "Flexible Workspace Options",
+  "Annual audit required as per Freezone guideline",
+  "0% Corporate Tax on Qualifying Income*/9% corporate tax",
+  "UAE Residence Visa Eligibility",
+  "Access to UAE & Global Markets",
+],
   },
   {
     title: "Offshore",
@@ -164,19 +164,19 @@ const visaCards = [
 const whyChoose = [
   {
     title: "Accurate and up-to-date financial records",
-    desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
+    desc: " Keep your finances accurate, organized and up to date—so you can make informed business decisions with confidence",
   },
   {
     title: "End-to-end support — from setup to residency",
-    desc: "Deep knowledge of UAE business, legal & banking landscape.",
+    desc: " Expert guidance across company formation, licensing, banking and UAE residency.",
   },
   {
     title: "Tailored solutions for startups, SMEs & global investors",
-    desc: "Deep knowledge of UAE business, legal & banking landscape.",
+    desc: " Flexible business setup solutions designed around your goals, structure and growth plans.",
   },
   {
     title: "Transparent processes and ongoing compliance focus",
-    desc: "Deep knowledge of UAE business, legal & banking landscape.",
+    desc: " Clear guidance and ongoing support to keep your business compliant and on track.",
   },
 ];
 
@@ -184,10 +184,12 @@ const Market_Expansion_Setup_Advisory = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
+  const id ='services-uae-market'
 
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bgimg}
         alt="Market Expansion & Setup Advisory UAE"
         heading={
@@ -201,7 +203,7 @@ const Market_Expansion_Setup_Advisory = () => {
             In The UAE The Right Way
           </>
         }
-        description="The UAE continues to stand as the region's most attractive hub for global trade, investment, and innovation. Whether you're an international company entering the GCC market or a local business ready to scale, our Market Expansion & Setup Advisory services help you navigate every step — from strategy to execution, with clarity, compliance and confidence."
+        description={<><span className="italic font-bold">de tempête</span> provides end-to-end <span className="font-bold">UAE business setup, company formation and market entry advisory services</span> for entrepreneurs, startups and international companies. From choosing the right Mainland or Free Zone structure to licensing, regulatory compliance, tax registration, banking support and ongoing business advisory, we help you establish and grow your UAE presence with clarity and confidence.</>}
       />
 
       <SecondSection></SecondSection>
@@ -291,20 +293,57 @@ const Market_Expansion_Setup_Advisory = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3  mt-16">
-            {goToMarket.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div key={index} className="hover:bg-gray-100 p-5">
-                  <Icon className="text-4xl  text-light-blue bg-light-blue/20 p-2 rounded-sm mb-4" />
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
+  {goToMarket.map((item, index) => {
+    const Icon = item.icon;
+
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+    const isDark = (row + col) % 2 === 0;
+
+    return (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{
+          duration: 0.5,
+          delay: (index % 3) * 0.12,
+          ease: "easeOut",
+        }}
+        className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white"
+        }`}
+      >
+        {/* Icon */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+            isDark
+              ? "bg-white/15 text-white"
+              : "bg-light-blue/20 text-light-blue"
+          }`}
+        >
+          <Icon className="text-2xl" />
+        </div>
+
+        {/* Title */}
+        <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+          {item.title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className={`text-sm leading-relaxed text-justify ${
+            isDark ? "text-gray-700" : "text-gray-500"
+          }`}
+        >
+          {item.desc}
+        </p>
+      </motion.div>
+    );
+  })}
+</div>
         </div>
       </section>
 
@@ -452,8 +491,8 @@ const Market_Expansion_Setup_Advisory = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartLine className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -468,35 +507,62 @@ const Market_Expansion_Setup_Advisory = () => {
       <section className="py-24 bg-white">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
+            <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b]">
               Why Choose Our{" "}
               <span className="font-bold">UAE Market Expansion Advisory</span>
             </h2>
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                  <LuChartLine className="text-light-blue text-2xl" />
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid lg:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+  {whyChoose.map((item, index) => {
+    const isDark = index === 0 || index === 3;
+
+    return (
+      <div
+        key={index}
+        className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+          isDark
+            ? "bg-light-blue"
+            : "bg-white border border-gray-200"
+        }`}
+      >
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            alt=""
+            className={`w-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+          />
+        </div>
+
+        <div>
+          <h3 className="text-base font-bold text-[#16244b] mb-2">
+            {item.title}
+          </h3>
+
+          <p
+            className={`text-base leading-6 ${
+              isDark ? "text-gray-700" : "text-gray-500"
+            }`}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your UAE

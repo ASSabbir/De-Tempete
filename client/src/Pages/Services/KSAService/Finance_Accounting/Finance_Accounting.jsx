@@ -1,10 +1,9 @@
-import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
+
 import { FaCheckCircle } from "react-icons/fa";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+import { motion } from "framer-motion";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/KSA/Accounting-in-KSA.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/freepik__create-image-for-wesite-section-business-valuation__80765.webp'
@@ -99,9 +98,11 @@ const whyChoose = [
 ];
 
 const Finance_Accounting = () => {
+  const id ='services-ksa-finance'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Finance & Accounting KSA"
         heading={
@@ -132,7 +133,7 @@ const Finance_Accounting = () => {
                 Businesses In Saudi Arabia
               </span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 text-justify leading-7">
               Strong financial management is essential for maintaining business
               visibility, operational control, and organized day-to-day
               activities. Businesses across Saudi Arabia require structured
@@ -210,7 +211,7 @@ const Finance_Accounting = () => {
               Financial Reporting &<br />
               <span className="font-normal">Business Documentation</span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-gray-500 text-justify">
               Clear financial reporting helps businesses improve visibility,
               maintain organized documentation, and support operational
               decision-making processes.{" "}
@@ -252,7 +253,7 @@ const Finance_Accounting = () => {
                 Management
               </span>
             </h2>
-            <p className="mt-5 text-gray-500">
+            <p className="mt-5 text-justify text-gray-500">
               Efficient accounting systems help businesses improve workflow
               management, maintain financial accuracy, and support smoother
               operational processes.{" "}
@@ -281,7 +282,7 @@ const Finance_Accounting = () => {
               <br />
               <span className="font-normal">Support</span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 text-justify leading-7">
               Well-maintained accounting records are essential for supporting
               VAT documentation and maintaining organized financial operations.{" "}
               <span className="font-semibold text-gray-700 italic">de tempête</span>{" "}
@@ -311,7 +312,7 @@ const Finance_Accounting = () => {
               <br />
               <span className="font-normal">Operations Support</span>
             </h2>
-            <p className="mt-5 text-gray-500 leading-7">
+            <p className="mt-5 text-gray-500 text-justify leading-7">
               Reliable finance operations help businesses maintain better
               financial control, improve reporting consistency, and reduce
               operational inefficiencies.{" "}
@@ -333,7 +334,7 @@ const Finance_Accounting = () => {
             {gains.map((g, i) => (
               <div
                 key={i}
-                className={`rounded-lg py-6 px-4 text-white font-medium bg-[#37456B]`}
+                className={`rounded-lg py-6 px-4 flex justify-center items-center h-20 text-white font-medium bg-[#37456B]`}
               >
                 {g}
               </div>
@@ -343,29 +344,71 @@ const Finance_Accounting = () => {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl  text-[#16244b]">
-              Why Choose <span className="font-bold italic">de tempête</span>{" "}
-              for Finance & Accounting
-            </h2>
-            <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {whyChoose.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-2xl p-8">
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4">
-                  <img src={logo} alt="" />
-                </div>
-                <h3 className="text-base font-bold text-[#16244b] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl text-[#16244b]">
+        Why Choose <span className="font-bold italic">de tempête</span>{" "}
+        for Finance & Accounting
+      </h2>
+
+      <div className="w-16 h-0.5 bg-light-blue mx-auto mt-6" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((f, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {f.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {f.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
         heading={

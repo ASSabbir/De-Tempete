@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 const companyData = [
   {
     id: 1,
@@ -52,12 +53,12 @@ const Types_of_Company = () => {
             viewport={{ once: true, amount: 0.3 }} className="text-center mb-20">
           <h2
             
-            className="text-[3vw] 2xl:text-[2.6rem] text-[#14224A] font-light"
+            className="text-3xl md:text-4xl 2xl:text-5xl text-[#14224A] font-light"
           >
             Types of Company <span className="font-bold">Structures in UAE</span>
           </h2>
 
-          <p className="mt-5 text-gray-600 text-base max-w-3xl mx-auto">
+          <p className="mt-5 text-gray-600 text-base md:text-xl max-w-3xl mx-auto">
             There are three main options for company formation in the UAE,
             depending on your business goals and target markets.
           </p>
@@ -117,9 +118,9 @@ const Types_of_Company = () => {
 
               {/* Button */}
               <div className="mt-8 sm:mt-10  flex justify-end">
-                <button className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300">
-                  Talk to an Expert
-                </button>
+                
+                <Link className="w-full sm:w-auto bg-white text-[#14224A] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium hover:bg-[#58CDE7] hover:text-white duration-300" to={'/business-setup/uae#bussiness-setup-uae'}>Talk to an Expert
+                </Link>
               </div>
             </div>
           </div>

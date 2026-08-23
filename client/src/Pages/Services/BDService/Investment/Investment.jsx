@@ -6,44 +6,11 @@ import { ShieldCheck, DollarSign } from "lucide-react";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
 
-import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
-import sage from "../../../../asstes/img_temp/New folder/3-2.webp";
-import a from "../../../../asstes/img_temp/New folder/11-1.webp";
-import b from "../../../../asstes/img_temp/New folder/12-1-934x1024.webp";
-import c from "../../../../asstes/img_temp/New folder/7-2.webp";
-import d from "../../../../asstes/img_temp/New folder/8.webp";
-import e from "../../../../asstes/img_temp/New folder/13-1.webp";
-import f from "../../../../asstes/img_temp/New folder/6-1.webp";
-import g from "../../../../asstes/img_temp/New folder/2.webp";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
-const logos = [tableau, sage, a, b, c, d, e, f, g];
+import logo from '../../../../asstes/img_temp/logo.webp'
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return count;
-};
 
 const Investment = () => {
   const servicesData = [
@@ -89,10 +56,11 @@ const Investment = () => {
       icon: FaCheckCircle,
     },
   ];
-
+const id = 'services-bd-investment'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
@@ -151,7 +119,7 @@ const Investment = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 text-base leading-7">
+                  <p className="text-gray-600 text-justify text-base leading-7">
                     {service.description}
                   </p>
                 </div>
@@ -177,8 +145,8 @@ const Investment = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <img src={logo} alt="" />
                 </div>
 
                 <h3 className="text-xl font-semibold text-white leading-snug">
@@ -192,63 +160,95 @@ const Investment = () => {
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
-              Why Choose us for Investment in Bangladesh?
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
+        Why Choose us for Investment in Bangladesh?
+      </h2>
+
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "In-Depth Market Expertise",
+          desc: "Extensive knowledge of Bangladesh's investment landscape, regulations, and sector-specific opportunities.",
+        },
+        {
+          title: "Trusted Local Network",
+          desc: "Access to verified government authorities, investors, financial institutions, and strategic partners.",
+        },
+        {
+          title: "End-to-End Investment Support",
+          desc: "Comprehensive assistance from market research and company formation to operational setup and expansion.",
+        },
+        {
+          title: "Regulatory & Compliance Guidance",
+          desc: "Expert support to navigate legal requirements, licensing, tax regulations, and corporate compliance.",
+        },
+        {
+          title: "Risk Assessment & Due Diligence",
+          desc: "Thorough evaluation of investment opportunities to minimise risks and support informed decisions.",
+        },
+        {
+          title: "Tailored Growth Strategies",
+          desc: "Custom investment solutions designed to align with your business objectives and long-term success.",
+        },
+      ].map((feature, index) => {
+        // Signature chessboard pattern:
+        // Blue → White → Blue
+        // White → Blue → White
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "In-Depth Market Expertise",
-                desc: "Extensive knowledge of Bangladesh's investment landscape, regulations, and sector-specific opportunities.",
-              },
-              {
-                title: "Trusted Local Network",
-                desc: "Access to verified government authorities, investors, financial institutions, and strategic partners.",
-              },
-              {
-                title: "End-to-End Investment Support",
-                desc: "Comprehensive assistance from market research and company formation to operational setup and expansion.",
-              },
-              {
-                title: "Regulatory & Compliance Guidance",
-                desc: "Expert support to navigate legal requirements, licensing, tax regulations, and corporate compliance.",
-              },
-              {
-                title: "Risk Assessment & Due Diligence",
-                desc: "Thorough evaluation of investment opportunities to minimise risks and support informed decisions.",
-              },
-              {
-                title: "Tailored Growth Strategies",
-                desc: "Custom investment solutions designed to align with your business objectives and long-term success.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center mb-6">
-                  <FaCheckCircle className="text-white text-xl" />
-                </div>
-
-                <h3 className="text-xl font-bold text-[#16244b] mb-3">
-                  {feature.title}
-                </h3>
-
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Grow Your Business In

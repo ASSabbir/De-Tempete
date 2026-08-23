@@ -122,7 +122,7 @@ function StatCard({ stat, index, start }) {
       </div>
 
       {/* Desc */}
-      <p className="relative z-10 text-white/50 text-xs sm:text-base leading-relaxed transition-colors duration-500 group-hover:text-white/70">
+      <p className="relative z-10 text-white/50 text-ju text-xs sm:text-base leading-relaxed transition-colors duration-500 group-hover:text-white/70">
         {stat.desc}
       </p>
 
@@ -179,7 +179,7 @@ export default function HrAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[3vw] 2xl:text-[2.6rem] text-white font-normal leading-tight"
+              className="text-3xl md:text-4xl 2xl:text-5xl text-white font-normal leading-tight"
             >
               What We
               <br />
@@ -192,7 +192,7 @@ export default function HrAdvantage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-white/60 text-base sm:text-base leading-relaxed max-w-md"
+              className="text-white/60 text-base text-justify sm:text-base leading-relaxed max-w-md"
             >
               We manage the essential HR functions that keep your workforce structured, compliant, and efficient. From employee lifecycle management to policy and performance support, our approach ensures smooth day-to-day operations without adding administrative burden to your business.
             </motion.p>

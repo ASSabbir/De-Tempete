@@ -9,9 +9,11 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import logo from '../../../../asstes/img_temp/logo.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__corporate-secretarial-services-statutory-complianc__58647.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__creat-image-for-wesite-section-iso-standards-advis__80760.webp'
 import img4 from '../../../../asstes/img_temp/servics/freepik__create-image-for-wesite-section-liquidation-compan__80761.webp'
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const amlItems = [
   "Risk Assessment And AML Policy Development",
   "KYC (Know Your Customer) Framework Setup",
@@ -40,9 +42,11 @@ const whyChoose = [
 ];
 
 const Regulatory_Compliance = () => {
+  const id = 'services-uae-regulatory'
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={img1}
         alt="Regulatory & ISO Compliance"
         heading={
@@ -54,7 +58,7 @@ const Regulatory_Compliance = () => {
         }
         description={
           <>At <span className="italic font-bold">de tempête</span>, we help businesses in the UAE navigate complex regulatory frameworks and international standards, ensuring your operations meet every legal and quality requirement. From company governance to ISO certification and AML compliance, our experts provide end-to-end guidance that keeps your business secure, credible, and future-ready.
-          
+
           </>
         }
       />
@@ -69,6 +73,7 @@ const Regulatory_Compliance = () => {
             alt="Corporate Secretarial Services & Statutory Compliance"
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
+
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#16244b]">
               Corporate Secretarial{" "}
@@ -76,21 +81,27 @@ const Regulatory_Compliance = () => {
                 Services & Statutory Compliance
               </span>
             </h2>
+
             <p className="mt-5 text-gray-500 font-semibold">
-              Ensure your business meets every corporate governance requirement.
+              Keep your business compliant, organized and aligned with UAE
+              corporate governance requirements.
             </p>
+
             <p className="mt-3 text-gray-500 leading-7">
-              Our corporate secretarial and compliance services cover all
-              mandatory filings, documentation, and updates required by UAE
-              authorities, giving you peace of mind and operational clarity.
+              Our corporate secretarial and compliance services help businesses
+              maintain statutory records, manage corporate documentation and meet
+              applicable regulatory obligations—providing greater control,
+              transparency and peace of mind.
             </p>
+
             <div className="space-y-3 mt-6">
               {[
-                "Maintenance of statutory registers and records",
-                "Preparation and filing of annual returns",
-                "Drafting of board resolutions and meeting minutes",
-                "Corporate governance and reporting compliance",
-                "Regulatory updates and proactive reminders",
+                "Maintenance of statutory registers & corporate records",
+                "Preparation of resolutions & corporate documentation",
+                "Board and shareholder meeting minutes",
+                "Support with statutory and regulatory filings",
+                "Corporate governance & compliance support",
+                "Regulatory updates & compliance reminders",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <FaCheckCircle className="text-light-blue text-base shrink-0" />
@@ -176,10 +187,10 @@ const Regulatory_Compliance = () => {
           </div>
           <div className="max-h-110 w-full">
             <img
-            src={img3}
-            alt="ISO Standards Advisory, Training & Certification Support"
-            className=" h-full w-full object-cover object-center rounded-2xl shadow-lg"
-          />
+              src={img3}
+              alt="ISO Standards Advisory, Training & Certification Support"
+              className=" h-full w-full object-cover object-center rounded-2xl shadow-lg"
+            />
           </div>
         </div>
       </section>
@@ -225,7 +236,10 @@ const Regulatory_Compliance = () => {
           </div>
         </div>
       </section>
-      
+      <div className="mb-30 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uae'}></SharedFullButton>
+      </div>
+
 
       {/* Why Businesses Choose */}
       <section className="pb-24 bg-white">
@@ -238,25 +252,54 @@ const Regulatory_Compliance = () => {
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+  {whyChoose.map((item, index) => {
+    const isDark = index === 0 || index === 3;
+
+    return (
+      <div
+        key={index}
+        className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+          isDark
+            ? "bg-light-blue"
+            : "bg-white border border-gray-200"
+        }`}
+      >
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            className={`w-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+            alt=""
+          />
+        </div>
+
+        <div>
+          <h3 className="text-base font-bold text-[#16244b] mb-2">
+            {item.title}
+          </h3>
+
+          <p
+            className={`text-base leading-6 ${
+              isDark ? "text-gray-700" : "text-gray-500"
+            }`}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Building Your
@@ -274,9 +317,9 @@ const Regulatory_Compliance = () => {
         ]}
       />
 
-      
 
-     
+
+
     </div>
   );
 };

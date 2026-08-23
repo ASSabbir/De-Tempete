@@ -84,7 +84,7 @@ const EstoniaEResidency = () => {
           Company Formation
         </p>
 
-        <h2 className="ee-heading text-3xl md:text-5xl font-bold text-white leading-snug mb-5">
+        <h2 className="ee-heading text-3xl md:text-4xl font-bold text-white leading-snug mb-5">
           Establish Your Business in Estonia{" "}
           <span className="text-light-blue">with e-Residency</span>
         </h2>

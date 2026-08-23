@@ -44,7 +44,7 @@ const ProcessStep = () => {
         {/* Heading */}
         {/* Heading */}
         <div className="max-w-5xl mb-24">
-          <h2 className="text-[#000000] text-5xl 2xl:text-6xl font-light leading-tight mt-20">
+          <h2 className="text-[#000000] text-3xl md:text-4xl 2xl:text-5xl font-light leading-tight mt-20">
             Step-By-Step Process For
             
             Bangladesh <br/> <span className="font-bold">Company Registration</span>
