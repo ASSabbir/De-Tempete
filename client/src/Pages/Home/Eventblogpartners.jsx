@@ -138,7 +138,7 @@ export default function EventBlogPartners() {
 
         {/* ── Technological Partner ── */}
         <div>
-          <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl text-[#0d1e4a] font-normal mb-10">
+          <h2 className="text-center text-3xl md:text-4xl 2xl:text-5xl text-[#0d1e4a] font-normal mb-10">
             Technological <span className="font-extrabold">Partner</span>
           </h2>
 

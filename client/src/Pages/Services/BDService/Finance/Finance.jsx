@@ -13,59 +13,60 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import img1 from '../../../../asstes/img_temp/servics/Bd/freepik__financial-governance-controls-investor-readiness-b__1408.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+import ServiceGrid from "../../../../Components/Shared/Servicegrid";
 
 const servicesData = [
   {
     title: "Accounting & Bookkeeping",
-    icon: BarChart3,
+    Icon: BarChart3,
     description:
       "We manage day-to-day bookkeeping, ledger updates, and financial record-keeping to ensure accurate, organized, and compliant accounts.",
   },
   {
     title: "Financial Reporting & Compliance",
-    icon: ShieldCheck,
+    Icon: ShieldCheck,
     description:
       "Preparation of monthly, quarterly, and annual financial statements with IFRS alignment, regulatory reporting, and audit-ready documentation.",
   },
   {
     title: "Budgeting, Forecasting & Cash Flow",
-    icon: DollarSign,
+    Icon: DollarSign,
     description:
       "We develop budgets, cash flow projections, and financial forecasts to support better planning and informed decision-making.",
   },
   {
     title: "Accounts Payable & Receivable",
-    icon: Users,
+    Icon: Users,
     description:
       "Efficient management of invoices, vendor payments, receivables tracking, and reconciliations to maintain healthy cash flow.",
   },
   {
     title: "Financial Analysis & Management Insights",
-    icon: PieChart,
+    Icon: PieChart,
     description:
       "Clear profitability analysis, KPI tracking, and performance reviews that provide actionable financial insights for sustainable growth.",
   },
   {
     title: "Internal Controls & Process Optimization",
-    icon: TrendingUp,
+    Icon: TrendingUp,
     description:
       "We design and strengthen internal controls, approval workflows, and reporting structures to minimize risk and improve accuracy and efficiency.",
   },
   {
     title: "Cash Flow Management",
-    icon: BarChart3,
+    Icon: BarChart3,
     description:
       "We design and strengthen financial controls, approval workflows, and operating structures to minimize risk, improve accuracy, and enhance operational efficiency.",
   },
   {
     title: "Audit Support & Preparation",
-    icon: ShieldCheck,
+    Icon: ShieldCheck,
     description:
       "We support internal and external audits by preparing schedules, organizing documentation, and ensuring smooth audit completion.",
   },
   {
     title: "Accounting Software & ERP Guidance",
-    icon: TrendingUp,
+    Icon: TrendingUp,
     description:
       "Digital accounting set up and support. We help you choose, implement, and optimize systems like QuickBooks, Xero, SAP, Tally, or customized ERP solutions based on your business size and needs.",
   },
@@ -80,9 +81,11 @@ const benefitsData = [
 ];
 
 const Finance = () => {
+  const id = 'services-bd-finance'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bgimg}
         alt="Bangladesh Business Setup"
         heading={
@@ -113,7 +116,7 @@ const Finance = () => {
                 <br />
                 Readiness
               </h2>
-              <p className="mt-8 text-xl leading-7 text-gray-600 text-justify">
+              <p className="mt-8 text-base leading-7 text-gray-600 text-justify">
                 A strong financial structure is essential for regulatory
                 compliance, audit transparency, and investor confidence. We
                 establish robust accounting frameworks aligned with IFRS, tax
@@ -149,96 +152,23 @@ const Finance = () => {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-24 bg-[#f8fbff]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d] mb-4">
-              What We Do
-            </h2>
-            <p className="text-base text-gray-600 leading-8">
+      
+      <ServiceGrid
+        description={<p className="text-base text-center text-gray-600 leading-8">
               We provide comprehensive accounting and finance services for
               Bangladeshi businesses, including both standalone and retainer
               engagement models.
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {servicesData.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
-                    <Icon className="text-light-blue text-4xl" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-base leading-7">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+            </p>}
+          
+        heading={<h2 className="text-4xl text-center 2xl:text-5xl font-bold text-[#13264d] mb-4">
+              What We Do
+            </h2>}
 
-      {/* Why Choose Our Services Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
-              Why Choose Our Finance & Accounting Services
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Expert Bangladesh Financial Knowledge",
-                desc: "Deep understanding of local regulations, taxation, and reporting expectations across Bangladesh's business landscape.",
-              },
-              {
-                title: "Accurate & Timely Records",
-                desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data.",
-              },
-              {
-                title: "Strategic Financial Insights",
-                desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making.",
-              },
-              {
-                title: "Scalable Accounting Solutions",
-                desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function.",
-              },
-              {
-                title: "Seamless Tech Integration",
-                desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works.",
-              },
-              {
-                title: "Trusted Long-Term Partner",
-                desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg  flex items-center justify-center mb-6">
-                  <img src={logo} alt="" />
-                </div>
-                <h3 className="text-xl font-bold text-[#16244b] mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        services={servicesData}>
 
-      {/* What You Gain Section */}
+
+      </ServiceGrid>
+       {/* What You Gain Section */}
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
@@ -251,10 +181,10 @@ const Finance = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <img src={logo} alt="" />
                 </div>
-                <h3 className="text-xl font-semibold text-white leading-snug">
+                <h3 className="text-lg font-semibold text-white leading-snug">
                   {benefit.title}
                 </h3>
               </div>
@@ -263,7 +193,94 @@ const Finance = () => {
         </div>
       </section>
 
+
+      {/* Why Choose Our Services Section */}
+     <section className="py-24 bg-white">
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
+        Why Choose Our Finance & Accounting Services
+      </h2>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Expert Bangladesh Financial Knowledge",
+          desc: "Deep understanding of local regulations, taxation, and reporting expectations across Bangladesh's business landscape.",
+        },
+        {
+          title: "Accurate & Timely Records",
+          desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data.",
+        },
+        {
+          title: "Strategic Financial Insights",
+          desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making.",
+        },
+        {
+          title: "Scalable Accounting Solutions",
+          desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function.",
+        },
+        {
+          title: "Seamless Tech Integration",
+          desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works.",
+        },
+        {
+          title: "Trusted Long-Term Partner",
+          desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business.",
+        },
+      ].map((feature, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+     
+
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Get Started

@@ -6,7 +6,7 @@ import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.png'
 import img2 from '../../../../asstes/img_temp/logo.webp'
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 import tableau from "../../../../asstes/img_temp/New folder/9-1.webp";
@@ -18,6 +18,7 @@ import d from "../../../../asstes/img_temp/New folder/8.webp";
 import e from "../../../../asstes/img_temp/New folder/13-1.webp";
 import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 const ukFeatures = [
@@ -91,9 +92,11 @@ const whyChoose = [
 const partners = ["QuickBooks", "Tableau", "Sage", "Zoho Books", "TallyPrime", "Taxcalc"];
 
 const Technology = () => {
+  const id ="services-uk-mtd"
   return (
     <div className="w-full">
        <HeroSection
+       id={id}
         bgImage={bgimg}
         alt="Technology"
         heading={<>Making Tax Digital & Cloud<br /><span className="text-light-blue">Accounting For UK Businesses</span></>}
@@ -129,6 +132,7 @@ const Technology = () => {
         </div>
       </section>
       
+      
 
       {/* Business Process Automation */}
       <section className="py-20 bg-white">
@@ -155,6 +159,9 @@ const Technology = () => {
           />
         </div>
       </section>
+      <div className=" flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uk'}></SharedFullButton>
+      </div>
        <AccountingSoftwareImplementation features={ukFeatures}></AccountingSoftwareImplementation>
       
 
@@ -170,7 +177,10 @@ const Technology = () => {
 
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-16">
             {benefits.map((item, index) => (
-              <div key={index} className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl">
+              <div key={index} className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-6 text-center transition-all duration-300 flex flex-col justify-center items-center hover:bg-[#43507d] hover:shadow-2xl">
+                <div className="bg-white rounded-xl p-2 mb-3 w-fit">
+                  <img src={img2} alt="" />
+                </div>
                 <h3 className="text-base font-medium text-white leading-relaxed whitespace-pre-line">{item}</h3>
               </div>
             ))}
@@ -191,7 +201,7 @@ const Technology = () => {
           <div className="grid lg:grid-cols-4 gap-6 mt-16">
             {whyChoose.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-4" />
+                <img src={img2} className="mb-3 mx-auto" alt="" />
                 <h3 className="font-bold text-[#16244b] mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-base leading-6">{item.desc}</p>
               </div>
@@ -209,7 +219,7 @@ const Technology = () => {
                         <div
                             className="flex items-center"
                             style={{
-                                animation: "scrollLeft 35s linear infinite",
+                                animation: "scrollLeft 15s linear infinite",
                             }}
                         >
                             {[...logos, ...logos].map((logo, index) => (
@@ -238,12 +248,13 @@ const Technology = () => {
             </section>
 
        <ConsultationCTA
+       id={id}
         heading={<>Start Simplifying Your<br />Accounting With <span className="font-bold">Modern Digital Solutions</span></>}
         commitmentItems={[
           "Free initial consultation — no obligation",
           "Tailored digital & technology solutions",
           "Scalable and automation-ready systems",
-          "Expert support and strategic guidance Transparent and efficient process",
+          "Expert support and strategic guidance",
         ]}
       />
 

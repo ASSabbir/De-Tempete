@@ -10,7 +10,7 @@ const TrustedPartner = () => {
     <section className="relative overflow-hidden bg-linear-to-r from-[#081B57] to-[#57D3EB] py-24">
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <h2 className="text-5xl 2xl:text-6xl font-bold leading-tight">
+        <h2 className="text-4xl md:text-5xl 2xl:text-6xl font-bold leading-tight">
           Your Trusted Partner for Global Accounting, Compliance & Business Formation.
         </h2>
 
@@ -46,7 +46,7 @@ const TrustedPartner = () => {
 
     @media (max-width: 768px) {
       .marquee-text {
-        font-size: 60px;
+        font-size: 80px;
       }
     }
   `}

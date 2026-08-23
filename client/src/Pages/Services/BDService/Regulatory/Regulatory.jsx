@@ -110,6 +110,8 @@ const Regulatory = () => {
   const toggleAccordion = (index) => {
     setExpandedItem(expandedItem === index ? null : index);
   };
+  const id = 'services-bd-regulatory'
+
 
   const servicesData = [
     {
@@ -194,6 +196,7 @@ const Regulatory = () => {
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bgimg}
         alt="Bangladesh Business Setup"
         heading={
@@ -231,7 +234,7 @@ Matters Section */}
                 Matters
               </h2>
 
-              <p className="mt-3 text-xl text-gray-600 text-justify">
+              <p className="mt-3 text-base text-gray-600 text-justify">
                 Non-compliance can lead to fines, operational delays, and
                 reputational damage. Whether you’re a local startup, an
                 international investor, or a multinational enterprise, we help
@@ -332,7 +335,7 @@ Matters Section */}
           <div className="text-center mt-16">
             <p className="text-gray-500 text-base mb-10">
               Stay ahead of changes impacting business operations in Bangladesh
-              — from tax law updates to labour regulations and environmental
+              — from Tax law updates to labour regulations and environmental
               requirements.
             </p>
 
@@ -470,7 +473,7 @@ Matters Section */}
                 className="bg-[#39446B]/80 border  border-white/10 rounded-2xl py-10 px-3 hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="flex flex-col p-2 text-center items-center gap-4">
-                  <div className="w-12 h-12  rounded-xl flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-white p-1 rounded-xl flex items-center justify-center shrink-0">
                     <img src={logo} alt="" />
                   </div>
 
@@ -486,67 +489,91 @@ Matters Section */}
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
-              Why Choose Our Regulatory & ISO compliance Services
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
+        Why Choose Our Regulatory & ISO compliance Services
+      </h2>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Deep Regulatory Expertise",
+          desc: "Strong understanding of Bangladesh regulatory frameworks across multiple industries.",
+        },
+        {
+          title: "Business-Focused Compliance",
+          desc: "Practical solutions designed to support operations, not just meet legal requirements.",
+        },
+        {
+          title: "Complete ISO Implementation Support",
+          desc: "End-to-end guidance from gap analysis to audit readiness and final certification.",
+        },
+        {
+          title: "Direct Authority Coordination",
+          desc: "Active liaison with government bodies and accredited certification agencies.",
+        },
+        {
+          title: "Structured & Transparent Process",
+          desc: "Clear timelines, compliance calendars, and documented workflows for full visibility.",
+        },
+        {
+          title: "Long-Term Advisory Partnership",
+          desc: "Ongoing strategic support beyond one-time filings or certifications.",
+        },
+      ].map((feature, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Deep Regulatory Expertise",
-                desc: "Strong understanding of Bangladesh regulatory frameworks across multiple industries.",
-              },
-              {
-                title: "Business-Focused Compliance",
-                desc: "Practical solutions designed to support operations, not just meet legal requirements.",
-              },
-              {
-                title: "Complete ISO Implementation Support",
-                desc: "End-to-end guidance from gap analysis to audit readiness and final certification.",
-              },
-              {
-                title: "Direct Authority Coordination",
-                desc: "Active liaison with government bodies and accredited certification agencies.",
-              },
-              {
-                title: "Structured & Transparent Process",
-                desc: "Clear timelines, compliance calendars, and documented workflows for full visibility.",
-              },
-              {
-                title: "Long-Term Advisory Partnership",
-                desc: "Ongoing strategic support beyond one-time filings or certifications.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                {/* Icon + Title */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
-                    <img src={logo} alt="" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-[#16244b]">
-                    {feature.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Get Started

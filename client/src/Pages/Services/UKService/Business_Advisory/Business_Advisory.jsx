@@ -15,10 +15,9 @@ import {
   LuWallet,
   LuFileSearch,
 } from "react-icons/lu";
-import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
+
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
+
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
@@ -98,13 +97,14 @@ const Business_Advisory = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+const id = 'servics-uk-advisory'
   return (
     <div className="w-full">
       <SevicsBanner
+      id={id}
         bgImage={bgimg}
         alt="USA Business Advisory & Strategy Services"
-        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help UK business navigate major decisions with clarity, data, and expert guidance at every stage."
+        description="Make confident, informed business decisions with our comprehensive advisory and strategy services. From business valuation and investment advisory to mergers and acquisitions, exit planning, and financial growth strategy, we help UK businesses navigate major decisions with clarity, data, and expert guidance at every stage."
         title1={"Strategic Advisory"}
         title2={"For Every Stage Of Your UK Business"}
       ></SevicsBanner>
@@ -119,9 +119,9 @@ const Business_Advisory = () => {
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
-              <span className="font-bold">Strategic Business</span>
+              Strategic<span className="font-bold"> Business</span>
               <br />
-              <span className="font-bold">Advisory</span> & Consultancy
+              <span className="font-bold">Growth</span> Advisory
             </h2>
             <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Guidance Built Around the Decisions That Matter Most
@@ -174,7 +174,7 @@ const Business_Advisory = () => {
           {valuationCards.map((c, i) => {
             const Icon = c.icon;
             return (
-              <div key={i} className="text-center">
+              <div key={i} className="text-center border-[1px] p-4 rounded-2xl border-gray-300 hover:shadow-2xl duration-300">
                 <Icon className="text-4xl text-slate-500 mx-auto mb-4" />
                 <h3 className="text-base font-bold text-[#16244b] mb-2">
                   {c.title}
@@ -306,8 +306,8 @@ const Business_Advisory = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-6 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                 <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-bold text-white leading-relaxed">
                   {item.title}
@@ -323,32 +323,57 @@ const Business_Advisory = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b] leading-tight">
-              Why Choose Our{" "}
-              <span className="font-bold">
-                Business Advisory & Consultancy Services
-              </span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b] leading-tight">
+        Why Choose Our{" "}
+        <span className="font-bold">
+          Business Growth Advisory Services
+        </span>
+      </h2>
 
-          <div className="grid lg:grid-cols-4 gap-6 mt-20">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuChartNoAxesCombined className="text-light-blue text-3xl mx-auto mb-4" />
-                <p className="text-gray-700 font-semibold text-base">{item}</p>
-              </div>
-            ))}
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-5 mt-20">
+      {whyChoose.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`p-6 py-10 text-center transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div
+              className={`w-12 h-12 mx-auto rounded-sm flex items-center justify-center mb-4 ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            <p className="text-[#16244b] font-semibold text-base">
+              {item}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={<>Make Smarter Business<br />Decisions <span className="font-bold">Today</span></>}
         bodyText="Get expert guidance to value, grow, restructure, or exit your UK business with confidence."
         highlightText="Talk to Our Business Advisors"

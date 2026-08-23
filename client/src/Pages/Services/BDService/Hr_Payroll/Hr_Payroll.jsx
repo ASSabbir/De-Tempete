@@ -83,10 +83,12 @@ const Hr_Payroll = () => {
       icon: FaCheckCircle,
     },
   ];
+  const id = 'services-bd-hr'
 
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
@@ -99,7 +101,7 @@ const Hr_Payroll = () => {
         description={
           <>
             Managing HR and payroll in Bangladesh involves dealing with evolving
-            labor laws, tax regulations, and administrative complexities.{" "}
+            labor laws, Tax regulations, and administrative complexities.{" "}
             <strong><i>de tempête</i></strong> provides{" "}
             <strong>end-to-end HR and payroll services</strong> that simplify
             workforce management, ensure compliance with Bangladesh labor laws,
@@ -173,8 +175,8 @@ const Hr_Payroll = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <img src={logo} alt="" />
                 </div>
 
                 <h3 className="text-xl font-semibold text-white leading-snug">
@@ -188,63 +190,92 @@ const Hr_Payroll = () => {
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
-              Why Choose Our HR & Payroll
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl font-bold text-[#16244b]">
+        Why Choose Our HR & Payroll
+      </h2>
+
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Local Compliance Expertise",
+          desc: "Strong understanding of Bangladesh labor laws, payroll regulations, and tax requirements.",
+        },
+        {
+          title: "Accurate & Timely Payroll",
+          desc: "Error-free salary processing with proper deductions and reporting.",
+        },
+        {
+          title: "Cost-Effective HR Solutions",
+          desc: "Reduce overhead by outsourcing HR and payroll operations.",
+        },
+        {
+          title: "Scalable Support",
+          desc: "Flexible solutions for startups, SMEs, and growing companies.",
+        },
+        {
+          title: "End-to-End Service",
+          desc: "From hiring and onboarding to payroll and compliance.",
+        },
+        {
+          title: "Reliable & Transparent",
+          desc: "Clear processes, consistent support, and full visibility.",
+        },
+      ].map((feature, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Local Compliance Expertise",
-                desc: "Strong understanding of Bangladesh labor laws, payroll regulations, and tax requirements.",
-              },
-              {
-                title: "Accurate & Timely Payroll",
-                desc: "Error-free salary processing with proper deductions and reporting.",
-              },
-              {
-                title: "Cost-Effective HR Solutions",
-                desc: "Reduce overhead by outsourcing HR and payroll operations.",
-              },
-              {
-                title: "Scalable Support",
-                desc: "Flexible solutions for startups, SMEs, and growing companies.",
-              },
-              {
-                title: "End-to-End Service",
-                desc: "From hiring and onboarding to payroll and compliance.",
-              },
-              {
-                title: "Reliable & Transparent",
-                desc: "Clear processes, consistent support, and full visibility.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg  flex items-center justify-center mb-6">
-                  <img src={logo} alt="" />
-                </div>
-
-                <h3 className="text-xl font-bold text-[#16244b] mb-3">
-                  {feature.title}
-                </h3>
-
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Streamline Your HR &<br />

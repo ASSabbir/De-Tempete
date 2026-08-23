@@ -1,10 +1,7 @@
 // File: MarketExpansionUSA.jsx
 import { useState, useEffect } from "react";
 import {
-    CalendarDays,
-    Globe,
-    Handshake,
-    Medal,
+
     ChevronDown,
 } from "lucide-react";
 import { FaCheckCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
@@ -25,27 +22,13 @@ import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
-import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import img1 from '../../../../asstes/img_temp/servics/usa1.webp'
 import img4 from '../../../../asstes/img_temp/servics/usa.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
-import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import img5 from '../../../../asstes/img_temp/servics/usa2.webp'
 import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        let start = 0;
-        const increment = end / (duration / 16);
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= end) {
-                setCount(end);
-                clearInterval(timer);
-            } else setCount(Math.floor(start));
-        }, 16);
-        return () => clearInterval(timer);
-    }, [end, duration]);
-    return count;
-};
+import { motion } from "framer-motion";
+
 
 const setupTypes = [
     {
@@ -178,15 +161,16 @@ const MarketExpansionUSA = () => {
     const [expandedItem, setExpandedItem] = useState(null);
     const toggleAccordion = (idx) =>
         setExpandedItem(expandedItem === idx ? null : idx);
-
+    const id = 'services-usa-market_expansion'
     return (
         <div className="w-full">
             <SevicsBanner
+                id={id}
                 bgImage={bgimg}
                 alt="USA Market Expansion & Business Setup"
-                description="Launch and expand your business in the United States with confidence through our end-to-end market expansion and business setup advisory services. From selecting the right business structure and state of incorporation to obtaining an EIN, setting up US banking and payment solutions, and developing a go-to-market strategy, we help entrepreneurs and global businesses establish a strong, compliant, and scalable presence in the US market."
-                title1={"Expand Your Business"}
-                title2={"Into The United States With Confidence"}
+                description={<>The United States provides access to one of the world’s largest and most dynamic business markets. de tempête supports entrepreneurs and international companies with <span className="font-bold">USA business setup, company formation and market entry services</span>, including LLC and corporation formation, EIN registration, state compliance, accounting, federal and state tax support, payroll and ongoing business advisory.</>}
+                title1={"ACCESS A WORLD OF OPPORTUNITY"}
+                title2={"Build Your Business Presence in the United States"}
             ></SevicsBanner>
 
 
@@ -254,13 +238,13 @@ const MarketExpansionUSA = () => {
 
 
                 </div>
-                
+
             </section>
 
             {/* Go-To-Market Strategy */}
             <section className="py-24 bg-white">
                 <div className="max-w-[1600px] mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-4xl font-light text-[#16244b]">
                             <span className="font-bold">US Market Expansion</span> Strategy &
                             Business Growth
@@ -275,28 +259,58 @@ const MarketExpansionUSA = () => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-x-16 gap-y-14 mt-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {goToMarket.map((item, index) => {
                             const Icon = item.icon;
-                            return (
-                                <div key={index}>
-                                    <Icon className="text-4xl bg-light-blue/20 text-light-blue p-2 rounded-sm mb-4" />
 
-                                    <h3 className="text-base font-bold text-[#16244b] mb-2">
+                            const row = Math.floor(index / 3);
+                            const col = index % 3;
+                            const isDark = (row + col) % 2 === 0;
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (index % 3) * 0.12,
+                                        ease: "easeOut",
+                                    }}
+                                    className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                                        }`}
+                                >
+                                    {/* Icon */}
+                                    <div
+                                        className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                                                ? "bg-white/15 text-white"
+                                                : "bg-light-blue/20 text-light-blue"
+                                            }`}
+                                    >
+                                        <Icon className="text-2xl" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-base leading-6">
+                                    {/* Description */}
+                                    <p
+                                        className={`text-sm  leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                                            }`}
+                                    >
                                         {item.desc}
                                     </p>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>
                 </div>
             </section>
 
-            
+
 
             {/* Bank Account & Trademark */}
             <section className="py-24 bg-white">
@@ -413,8 +427,8 @@ const MarketExpansionUSA = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                                    <LuChartLine className="text-white text-4xl" />
+                                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                                    <img src={logo} alt="" />
                                 </div>
 
                                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
@@ -428,40 +442,68 @@ const MarketExpansionUSA = () => {
 
             {/* Why Choose */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6">
-                    <div className="text-center">
-                        <h2 className="text-4xl font-light text-[#16244b]">
-                            Why Choose Our{" "}
-                            <span className="font-bold">US Market Expansion & Setup Advisory</span>
-                        </h2>
+    <div className="max-w-[1600px] mx-auto px-6">
+        <div className="text-center">
+            <h2 className="text-4xl font-light text-[#16244b]">
+                Why Choose Our{" "}
+                <span className="font-bold">
+                    US Market Expansion & Setup Advisory
+                </span>
+            </h2>
 
-                        <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-                    </div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+        </div>
 
-                    <div className="grid lg:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-                        {whyChoose.map((item, index) => (
-                            <div
-                                key={index}
-                                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        <div className="grid lg:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+            {whyChoose.map((item, index) => {
+                const isDark = index === 0 || index === 3;
+
+                return (
+                    <div
+                        key={index}
+                        className={`flex items-start rounded-2xl gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+                            isDark
+                                ? "bg-light-blue"
+                                : "bg-white border border-gray-200"
+                        }`}
+                    >
+                        <div
+                            className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+                                isDark
+                                    ? "bg-white/15"
+                                    : "bg-light-blue/20"
+                            }`}
+                        >
+                            <img
+                                src={logo}
+                                alt=""
+                                className={`w-8 h-8 object-contain ${
+                                    isDark ? "brightness-0 invert" : ""
+                                }`}
+                            />
+                        </div>
+
+                        <div>
+                            <h3 className="text-base font-bold text-[#16244b] mb-2">
+                                {item.title}
+                            </h3>
+
+                            <p
+                                className={`text-base leading-6 ${
+                                    isDark
+                                        ? "text-gray-700"
+                                        : "text-gray-500"
+                                }`}
                             >
-                                <div className="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                                    <LuChartLine className="text-light-blue text-2xl" />
-                                </div>
-
-                                <div>
-                                    <h3 className="text-base font-bold text-[#16244b] mb-2">
-                                        {item.title}
-                                    </h3>
-
-                                    <p className="text-gray-500 text-base leading-6">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                                {item.desc}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                );
+            })}
+        </div>
+    </div>
+</section>
             <section className="py-20 px-6 bg-[#F5F6F8]">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
@@ -515,6 +557,7 @@ const MarketExpansionUSA = () => {
             </section>
 
             <ConsultationCTA
+            id={id}
                 heading={
                     <>
                         Expand Into the
@@ -530,7 +573,7 @@ const MarketExpansionUSA = () => {
                     "Tailored strategies for sustainable business growth",
                 ]}
             />
-            
+
 
 
         </div>

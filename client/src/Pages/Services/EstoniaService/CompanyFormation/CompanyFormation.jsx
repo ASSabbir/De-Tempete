@@ -2,7 +2,7 @@ import React from 'react';
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import { FaCircleCheck } from 'react-icons/fa6';
-import img2 from '../../../../asstes/img_temp/servics/usabanner.webp'
+import img2 from '../../../../asstes/img_temp/servics/e1.webp'
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,15 +14,21 @@ import { ConsultationCTA } from '../../../../Components/Shared/ConsultationCTA';
 import SharedFullButton from '../../../../Components/Shared/SharedFullButton';
  
 gsap.registerPlugin(ScrollTrigger);
-
+import { motion } from "framer-motion";
 
 const CompanyFormation = () => {
+  const id = 'services-estonia-companyformation'
+
+
+
+
     return (
         <div>
-            <SevicsBanner bgImage={img1} alt="Bangladesh Business Setup"
-                description="Estonia is one of Europe's most advanced digital economies, making it easier than ever to establish and manage your business remotely. Whether you're a startup, entrepreneur, or growing international company, our Estonia Company Formation services guide you through every stage—from e-Residency and registration to accounting, taxation, and ongoing compliance—with efficiency, transparency, and confidence."
-                title1={'Establish Your Business Presence'}
-                title2={'In Estonia The Smart Way'}
+            <SevicsBanner
+            id={id} bgImage={img1} alt="Bangladesh Business Setup"
+                description="Estonia offers a highly digital business environment for entrepreneurs and international founders seeking access to the European market. de tempête provides Estonia company formation, e-Residency and business setup services, supporting you with OÜ registration, legal address and contact-person requirements, accounting, VAT and tax compliance, annual reporting and ongoing business administration. "
+                title1={'Build and Manage Your '}
+                title2={'European Business from Anywhere'}
 
             ></SevicsBanner>
             <section className="py-24 bg-white">
@@ -36,7 +42,7 @@ const CompanyFormation = () => {
                                 <br />
                                 Readiness
                             </h2>
-                            <p className="mt-8 text-xl leading-7 text-gray-600 text-justify">
+                            <p className="mt-8 text-base leading-7 text-gray-600 text-justify">
                                 The OÜ (Private Limited Company) is Estonia's most popular business structure for international entrepreneurs, offering 100% foreign ownership, limited liability, and the flexibility to operate entirely online. With no local sponsor required, minimal capital requirements, and access to the EU Single Market, an OÜ provides a secure, scalable, and tax-efficient foundation for startups, SMEs, and global businesses looking to expand into Europe
                             </p>
                             
@@ -56,6 +62,7 @@ const CompanyFormation = () => {
             <EstoniaBusinessServices></EstoniaBusinessServices>
             <EstoniaFAQ></EstoniaFAQ>
             <ConsultationCTA
+            id={id}
                     heading={
                       <>
                         Get Started

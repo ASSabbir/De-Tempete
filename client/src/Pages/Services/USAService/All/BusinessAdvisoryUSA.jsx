@@ -16,19 +16,17 @@ import {
     LuPuzzle,
 } from "react-icons/lu";
 import { FaLightbulb, FaChartLine, FaBalanceScale, FaFileSignature } from "react-icons/fa";
-import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/freepik__tax-return-image-for-website-section-no-text__26470.webp'
 import img2 from '../../../../asstes/img_temp/servics/freepik__vat-registration-mtdcompliant-filing-image-for-web__26471.webp'
 import img3 from '../../../../asstes/img_temp/servics/freepik__workforce-compliance-advisory-for-website-section-__26469.webp'
-import img4 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import img4 from '../../../../asstes/img_temp/servics/usa36.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+import { motion } from "framer-motion";
+
 const advisoryCards = [
     {
         title: "Business Plan Development",
@@ -155,10 +153,11 @@ const BusinessAdvisoryUSA = () => {
     const [expandedItem, setExpandedItem] = useState(null);
     const toggleAccordion = (idx) =>
         setExpandedItem(expandedItem === idx ? null : idx);
-
+    const id = 'services-usa-business_advisory'
     return (
         <div className="w-full">
             <SevicsBanner
+                id={id}
                 bgImage={bgimg}
                 alt="USA Business Advisory Services"
                 description="Make confident, well-informed business decisions with expert advisory support built for US businesses. We help you plan, grow, and structure your business the right way — from business plans and feasibility studies to growth strategy, M&A advisory, fundraising support, and restructuring — so every decision is backed by clear thinking and solid numbers."
@@ -207,7 +206,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Core Advisory Services */}
             <section className="py-24 bg-[#16244B] text-white">
-                <div className="max-w-[1100px] mx-auto px-6">
+                <div className="max-w-[1300px] mx-auto px-6">
                     <div className="text-center max-w-4xl mx-auto">
                         <h2 className="text-4xl 2xl:text-5xl font-bold text-">
                             Core Business{" "}
@@ -233,7 +232,7 @@ const BusinessAdvisoryUSA = () => {
                                 <h3 className="text-xl font-bold text-white mb-3">
                                     {c.title}
                                 </h3>
-                                <p className="text-gray-400 leading-7">{c.desc}</p>
+                                <p className="text-gray-400 leading-7 text-justify">{c.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -242,11 +241,12 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Strategic Advisory Support */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1100px] mx-auto px-6">
-                    <div className="max-w-5xl mx-auto text-center">
-                        <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
+                <div className="max-w-[1300px] mx-auto px-6">
+                    <div className="max-w-5xl mx-auto text-center mb-16">
+                        <h2 className="text-4xl 2xl:text-5xl leading-tight font-light text-[#16244b]">
                             <span className="font-bold">Strategic Advisory</span> Support
                         </h2>
+
                         <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
                             Strategic guidance that goes beyond generic advice. From
                             day-to-day planning to major transactions, our advisors work
@@ -255,20 +255,51 @@ const BusinessAdvisoryUSA = () => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3  mt-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {ctFeatures.map((item, index) => {
                             const Icon = item.icon;
+
+                            const row = Math.floor(index / 3);
+                            const col = index % 3;
+                            const isDark = (row + col) % 2 === 0;
+
                             return (
-                                <div
+                                <motion.div
                                     key={index}
-                                    className="2xl:p-16 p-6 hover:bg-gray-200  rounded-3xl duration-300"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (index % 3) * 0.12,
+                                        ease: "easeOut",
+                                    }}
+                                    className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                                        }`}
                                 >
-                                    <Icon className="text-5xl text-light-blue rounded-sm bg-light-blue/20 p-2 mb-6" />
-                                    <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
+                                    {/* Icon */}
+                                    <div
+                                        className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                                                ? "bg-white/15 text-white"
+                                                : "bg-light-blue/20 text-light-blue"
+                                            }`}
+                                    >
+                                        <Icon className="text-2xl" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-500 text-base leading-8">{item.desc}</p>
-                                </div>
+
+                                    {/* Description */}
+                                    <p
+                                        className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                                            }`}
+                                    >
+                                        {item.desc}
+                                    </p>
+                                </motion.div>
                             );
                         })}
                     </div>
@@ -277,7 +308,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Business Plan & Feasibility Studies */}
             <section className="pb-20 bg-white">
-                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+                <div className="max-w-[1300px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <img
                         src={img1}
                         alt="Business Plan & Feasibility Studies"
@@ -289,7 +320,7 @@ const BusinessAdvisoryUSA = () => {
                             <br />
                             & Feasibility Studies
                         </h2>
-                        <p className="mt-8 text-lg leading-7 text-gray-500">
+                        <p className="mt-8 text-lg leading-7 text-justify text-gray-500">
                             A Clear, Data-Backed Plan Before You Commit Capital. We build
                             detailed business plans and feasibility studies that validate
                             your idea, model, or expansion against real market conditions
@@ -312,13 +343,13 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Growth & Expansion Strategy */}
             <section className="pb-20 bg-white">
-                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+                <div className="max-w-[1300px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-4xl 2xl:text-5xl  leading-tight text-[#16244b] font-light">
                             <span className="font-bold">Growth & Expansion </span>
                             Strategy
                         </h2>
-                        <p className="mt-6 text-base leading-8 text-gray-500">
+                        <p className="mt-6 text-base text-justify leading-8 text-gray-500">
                             A Practical Roadmap For Scaling With Confidence. Growth without
                             structure leads to strain on cash flow and operations. We
                             build growth strategies grounded in your numbers, market
@@ -348,7 +379,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Fundraising & Investor Readiness */}
             <section className="pb-20 bg-white">
-                <div className="max-w-[1100px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
+                <div className="max-w-[1300px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <img
                         src={img4}
                         alt="Fundraising & Investor Readiness"
@@ -384,7 +415,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Advisory Deliverables */}
             <section className="bg-[#16244B] py-24">
-                <div className="max-w-[1100px] mx-auto px-6">
+                <div className="max-w-[1300px] mx-auto px-6">
                     <div className="text-center max-w-5xl mx-auto">
                         <h2 className="text-4xl 2xl:text-5xl  leading-tight text-white font-light">
                             Key Advisory{" "}
@@ -404,8 +435,8 @@ const BusinessAdvisoryUSA = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                                    <LuChartNoAxesCombined className="text-white text-5xl" />
+                                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto">
+                                    <img src={logo} alt="" />
                                 </div>
                                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
                                     {item}
@@ -441,7 +472,7 @@ const BusinessAdvisoryUSA = () => {
                                     onClick={() => toggleAccordion(idx)}
                                     className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                                 ><div className="flex items-center gap-2">
-                                        <img src={logo} alt="" className="w-10"/>
+                                        <img src={logo} alt="" className="w-10" />
                                         <span className="font-semibold text-gray-900">
                                             {item.title}
                                         </span>
@@ -464,7 +495,7 @@ const BusinessAdvisoryUSA = () => {
 
             {/* Why Choose Us */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1100px] mx-auto px-6">
+                <div className="max-w-[1300px] mx-auto px-6">
                     <div className="text-center">
                         <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
                             Why Choose Our{" "}
@@ -479,7 +510,7 @@ const BusinessAdvisoryUSA = () => {
                                 key={index}
                                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
-                                <FaBalanceScale className="text-light-blue text-3xl mx-auto mb-4" />
+                                <div className="flex justify-center mb-4"><img src={logo} alt="" /></div>
                                 <p className="text-gray-700 font-semibold">{item}</p>
                             </div>
                         ))}
@@ -488,6 +519,7 @@ const BusinessAdvisoryUSA = () => {
             </section>
 
             <ConsultationCTA
+            id={id}
                 heading={
                     <>
                         Start Your Business

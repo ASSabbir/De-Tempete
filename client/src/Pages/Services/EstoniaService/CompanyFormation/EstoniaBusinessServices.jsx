@@ -11,6 +11,7 @@ import {
   Wallet,
   Globe2,
   ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,91 +26,70 @@ gsap.registerPlugin(ScrollTrigger);
  *
  * <EstoniaBusinessServices colors={{ light: "#3C9FC2", dark: "#0e2a47" }} />
  */
-
+import { motion } from "framer-motion";
 const services = [
   {
     icon: Building2,
-    title: "Business Structure Advisory",
+    title: "Company Formation & Registration",
     description:
-      "We help you choose the right structure — OÜ, AS, or branch — based on your ownership plans and growth stage.",
+      "Complete support for establishing your Estonian company with the right structure, documentation, and registration requirements.",
   },
   {
     icon: FileCheck2,
-    title: "Commercial Register Registration",
+    title: "Corporate Documentation Support",
     description:
-      "Full application handled through Estonia's e-Business Register, EMTAK activity code included.",
+      "Preparation and coordination of essential company documents, registrations, and statutory records.",
   },
   {
     icon: MapPin,
-    title: "Legal Address Service",
+    title: "Registered Office Services",
     description:
-      "A registered Estonian legal address that satisfies the Commercial Code — no physical office needed.",
+      "Professional registered office solutions that help your company maintain a compliant presence in Estonia.",
   },
   {
     icon: UserCheck,
-    title: "Contact Person Service",
+    title: "Management & UBO Compliance",
     description:
-      "A licensed local contact person, arranged whenever your entire management board resides outside Estonia.",
+      "Support with management board requirements, beneficial ownership declarations, and related corporate compliance matters.",
   },
   {
     icon: Receipt,
-    title: "VAT Registration Support",
+    title: "Tax Registration & Advisory",
     description:
-      "We register your company for VAT the moment your turnover, or business activity, requires it.",
+      "Guidance on Estonian tax registrations and obligations based on your company's activities and business model.",
   },
   {
     icon: Ship,
-    title: "EORI Registration Support",
+    title: "Import & Export Compliance",
     description:
-      "For companies importing or exporting goods, we secure your EORI number for customs clearance across the EU.",
+      "Assistance with customs-related registrations and documentation for businesses trading goods within and outside the EU.",
   },
   {
     icon: Wallet,
-    title: "Bank Account & Fintech Setup",
+    title: "Business Banking Assistance",
     description:
-      "Guided account opening with Wise Business, Revolut Business, Paysera, or traditional Estonian banks.",
+      "Practical support for selecting and setting up suitable business banking and payment solutions for your company.",
   },
   {
     icon: Globe2,
-    title: "EU Market Entry Advisory",
+    title: "Cross-Border Business Support",
     description:
-      "Strategic guidance on trading across the EU Single Market, from your first invoice onward.",
+      "Helping Estonian companies manage regulatory and operational requirements when expanding into international markets.",
   },
+  {
+    icon: ShieldCheck,
+    title: "Ongoing Corporate Compliance",
+    description:
+      "Continuous support for maintaining statutory obligations, regulatory filings, company records, and compliance requirements.",
+  },
+  
 ];
 
 export default function EstoniaBusinessServices() {
   const sectionRef = useRef(null);
   
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".dt-eyebrow, .dt-heading, .dt-subtitle", {
-        y: 24,
-        opacity: 0,
-        duration: 0.7,
-        ease: "power3.out",
-        stagger: 0.08,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 78%",
-        },
-      });
-
-      gsap.from(".dt-service-card", {
-        y: 36,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".dt-service-grid",
-          start: "top 85%",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  
 
   return (
     <section
@@ -123,7 +103,7 @@ export default function EstoniaBusinessServices() {
           <p className="dt-eyebrow text-xl  font-semibold tracking-widest uppercase mb-4 text-gray-500">
             Estonia Company Formation
           </p>
-          <h2 className="dt-heading text-3xl md:text-5xl font-bold text-slate-900 leading-snug mb-5">
+          <h2 className="dt-heading text-3xl md:text-4xl font-bold text-slate-900 leading-snug mb-5">
             Business Setup Services for{" "}
             <span className="text-dark-blue">Foreign Founders</span>
           </h2>
@@ -135,24 +115,55 @@ export default function EstoniaBusinessServices() {
         </div>
 
         {/* Service grid */}
-        <div className="dt-service-grid relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="dt-service-card group  text-xl rounded-2xl p-7 hover:bg-gray-100  transition-transform duration-500  hover:shadow-lg hover:shadow-slate-200/70"
-            >
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-light-blue/30 transition-transform duration-300 group-hover:scale-105">
-                <Icon className="w-5 h-5 text-light-blue" strokeWidth={1.75} />
-              </div>
-              <h3 className="font-semibold text-slate-900 mb-2.5">{title}</h3>
-              <p className="text-base text-slate-500 leading-relaxed">
-                {description}
-              </p>
-            </div>
-          ))}
+        <div className="dt-service-grid relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  {services.map(({ icon: Icon, title, description }, index) => {
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+    const isDark = (row + col) % 2 === 0;
 
-          
+    return (
+      <motion.div
+        key={title}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{
+          duration: 0.5,
+          delay: (index % 3) * 0.12,
+          ease: "easeOut",
+        }}
+        className={`dt-service-card group flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white"
+        }`}
+      >
+        {/* Icon */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${
+            isDark
+              ? "bg-white/15 text-white"
+              : "bg-light-blue/20 text-light-blue"
+          }`}
+        >
+          <Icon className="text-2xl" strokeWidth={1.75} />
         </div>
+
+        {/* Title */}
+        <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className={`text-sm leading-relaxed text-justify ${
+            isDark ? "text-gray-700" : "text-gray-500"
+          }`}
+        >
+          {description}
+        </p>
+      </motion.div> 
+    );
+  })}
+</div>
       </div>
     </section>
   );

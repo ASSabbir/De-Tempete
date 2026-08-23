@@ -21,6 +21,8 @@ import e from "../../../../asstes/img_temp/New folder/13-1.webp";
 import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
+import { motion } from "framer-motion";
+import logo from '../../../../asstes/img_temp/logo.webp'
 
 const automationFeatures = [
   {
@@ -64,7 +66,7 @@ import {
 } from "react-icons/fa";
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import businessAutomationImg from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
+import businessAutomationImg from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.png'
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 
 const usaFeatures = [
@@ -150,10 +152,11 @@ const TechnologyUSA = () => {
       icon: FaCheckCircle,
     },
   ];
-
+const id = 'services-usa-technology'
   return (
     <div className="w-full">
       <SevicsBanner
+      id={id}
         bgImage={bgimg}
         alt="USA Cloud Accounting & Technology Advisory"
         description="Modernize your business operations with our cloud accounting, ERP, and digital operations advisory services. From platform selection to full software implementation across QuickBooks Online, Odoo, Xero, and Zoho Books, we help US businesses reduce manual work, automate operations, and run on systems built for growth."
@@ -169,12 +172,12 @@ const TechnologyUSA = () => {
           {/* Heading */}
 
           <div className="max-w-5xl mx-auto text-center mb-16">
-            <h2 className="text-5xl leading-tight text-[#16244b]">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight text-[#16244b]">
               <span className="font-light">Software Solutions For</span>{" "}
               <span className="font-bold">Businesses</span>
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-gray-600 max-w-4xl mx-auto">
+            <p className="mt-6 text-base text-jus leading-8 text-gray-600 max-w-4xl mx-auto">
               We help businesses implement and optimize modern software
               solutions, including cloud accounting platforms, ERP systems,
               and operational tools that improve efficiency and reduce
@@ -198,12 +201,12 @@ const TechnologyUSA = () => {
                   {/* Icon */}
 
                   <div className="mb-8">
-                    <Icon className="text-light-blue text-5xl" />
+                    <Icon className="text-light-blue text-3xl md:text-4xl 2xl:text-5xl" />
                   </div>
 
                   {/* Title */}
 
-                  <h3 className="text-[28px] font-bold leading-snug text-[#16244b] mb-5">
+                  <h3 className="text-xl font-bold leading-snug text-[#16244b] mb-5">
                     {service.title}
                   </h3>
 
@@ -227,7 +230,7 @@ const TechnologyUSA = () => {
             {/* Left Content */}
 
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] mb-4">
+              <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight text-[#16244b] mb-4">
                 <span className="font-light">Business Process</span>
                 <br />
                 <span className="font-bold">Automation</span>
@@ -256,7 +259,7 @@ const TechnologyUSA = () => {
                       {/* Text */}
 
                       <div>
-                        <h3 className="text-2xl font-bold text-[#16244b] ">
+                        <h3 className="text-xl font-bold text-[#16244b] ">
                           {item.title}
                         </h3>
 
@@ -291,7 +294,7 @@ const TechnologyUSA = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl text-white">
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-white">
               Why choose our{" "}
               <span className="text-light-blue font-extrabold">
                 technology services?
@@ -333,8 +336,8 @@ const TechnologyUSA = () => {
                 className="bg-gray-700/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-light-blue flex items-center justify-center shrink-0">
-                    <FaCheckCircle className="text-white text-xl" />
+                  <div className="w-12 h-12 rounded-lg bg-white p-2 flex items-center justify-center shrink-0">
+                   <img src={logo} alt="" />
                   </div>
 
                   <h3 className="text-xl font-bold text-white">
@@ -355,7 +358,7 @@ const TechnologyUSA = () => {
 
       <section className="pt-15 bg-white overflow-hidden">
         <div className=" mx-auto max-w-7xl px-6">
-          <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+          <h2 className="text-center text-3xl md:text-4xl 2xl:text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
           </h2>
 
@@ -363,7 +366,7 @@ const TechnologyUSA = () => {
             <div
               className="flex items-center"
               style={{
-                animation: "scrollLeft 35s linear infinite",
+                animation: "scrollLefta 15s linear infinite",
               }}
             >
               {[...logos, ...logos].map((logo, index) => (
@@ -379,7 +382,7 @@ const TechnologyUSA = () => {
           </div>
 
           <style>{`
-      @keyframes scrollLeft {
+      @keyframes scrollLefta {
         from {
           transform: translateX(0);
         }
@@ -391,6 +394,7 @@ const TechnologyUSA = () => {
         </div>
       </section>
 <ConsultationCTA
+id={id}
         heading={
           <>
             Transform Your Business with

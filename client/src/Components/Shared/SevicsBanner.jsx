@@ -13,7 +13,7 @@ const SevicsBanner = ({
    alt,
     title2,
     description,
-    buttonText,
+    id,
 }) => {
    
     return (
@@ -40,7 +40,7 @@ const SevicsBanner = ({
                     </p>
 
                     
-                        <SharedButton text={'Book a Consultation →'} path={'/contact'}></SharedButton>
+                        <SharedButton text={'Book a Consultation →'} path={`#${id}`}></SharedButton>
                 </div>
             </section>
             <SecondSection></SecondSection>

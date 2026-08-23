@@ -24,12 +24,15 @@ import img1 from '../../../../asstes/img_temp/freepik__the-style-is-candid-image
 import img2 from '../../../../asstes/img_temp/New folder/Bookkeeping-for-Nonprofits.webp'
 import img3 from '../../../../asstes/img_temp/New folder/Reconcile Accounts.webp'
 import img4 from '../../../../asstes/img_temp/New folder/Management Accounts Preparation.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 
 const Bookkeeping_Financial_Management = () => {
+  const id = 'servics-uk-booking'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={img1}
         alt="Bookkeeping & Financial Management"
         heading={
@@ -132,14 +135,15 @@ const Bookkeeping_Financial_Management = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-light text-[#16244b]">
+            <h2 className="text-3xl md:text-4xl font-light text-[#16244b]">
               <span className="font-bold">Cash Flow Forecasting</span> & Budgeting
             </h2>
+            <p className="font-semibold text-gray-500 my-3 text-xl">Predict cash inflows and outflows to make smarter financial
+                decisions.</p>
 
             <p className="mt-6 text-base md:text-lg leading-8 text-gray-500">
-              <span className="font-semibold text-gray-700">
-                Predict cash inflows and outflows to make smarter financial
-                decisions.
+              <span className="">
+                
               </span>{" "}
               Cash flow forecasting and budgeting help you anticipate financial
               needs, optimize spending, and avoid surprises. We create detailed
@@ -150,9 +154,9 @@ const Bookkeeping_Financial_Management = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
             {/* Card 1 */}
-            <div className="text-center md:text-left">
+            <div className="text-center border-[1px] rounded-2xl border-gray-200 p-6 hover:shadow-2xl duration-300 md:text-left">
               <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
                 <FiDollarSign className="text-light-blue text-3xl" />
               </div>
@@ -168,7 +172,7 @@ const Bookkeeping_Financial_Management = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="text-center md:text-left">
+            <div className="text-center border-[1px] rounded-2xl border-gray-200 p-6 hover:shadow-2xl duration-300 md:text-left">
               <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
                 <FiBarChart2 className="text-light-blue text-3xl" />
               </div>
@@ -184,7 +188,7 @@ const Bookkeeping_Financial_Management = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="text-center md:text-left">
+            <div className="text-center border-[1px] rounded-2xl border-gray-200 p-6 hover:shadow-2xl duration-300 md:text-left">
               <div className="w-14 h-14  bg-light-blue/20 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
                 <FiShield className="text-light-blue text-3xl" />
               </div>
@@ -257,7 +261,7 @@ const Bookkeeping_Financial_Management = () => {
               <span className="font-semibold text-white">
                 Stay on top of who owes you and who you owe.
               </span>{" "}
-              <p className="mt-2">Efficient accounts payable and receivable management improves cash
+              <p className="mt-2 text-lg">Efficient accounts payable and receivable management improves cash
               flow and strengthens vendor and client relationships. We handle
               invoice tracking, payment scheduling, debt follow-ups, and
               reconciliation, ensuring smooth financial operations and timely
@@ -276,10 +280,10 @@ const Bookkeeping_Financial_Management = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-5xl" />
+                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
-                <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
+                <h3 className="mt-10 font-medium text-lg text-white leading-relaxed">
                   {item}
                 </h3>
               </div>
@@ -307,7 +311,7 @@ const Bookkeeping_Financial_Management = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuChartNoAxesCombined className="text-light-blue text-3xl mx-auto mb-4" />
+                <div className="flex justify-center"><img src={logo} className="w-12 mb-3"  alt="" /></div>
                 <p className="text-gray-700 font-semibold">{item.title}</p>
               </div>
             ))}
@@ -316,6 +320,7 @@ const Bookkeeping_Financial_Management = () => {
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Take Control Of Your

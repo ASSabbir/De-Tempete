@@ -156,8 +156,8 @@ const services = {
       path: "/services/ksa/hr-payroll",
     },
     {
-      label: "Training, Mentorship & Capacity Building",
-      path: "/services/ksa/training",
+      label: "Branding & Growth",
+      path: "/services/ksa/branding_growth",
     },
     {
       label: "Technology and Automation",

@@ -47,7 +47,7 @@ const businessData = [
   {
     title: "Representative Office",
     image:
-     img3,
+      img3,
     items: [
       "Non-commercial operations only",
       "No local revenue generation",
@@ -69,30 +69,10 @@ import {
   LuHandCoins,
 } from "react-icons/lu";
 import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+import ServiceGrid from "../../../../Components/Shared/Servicegrid";
 
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return count;
-};
 
 const Market_Expansion = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -100,6 +80,45 @@ const Market_Expansion = () => {
   const toggleAccordion = (index) => {
     setExpandedItem(expandedItem === index ? null : index);
   };
+  const services=[
+  {
+    Icon: LuBadgeDollarSign,
+    title: "Target Market & Competitive Analysis",
+    description:
+      "Evaluate market size, trends, demand potential and competitive positioning.",
+  },
+  {
+    Icon: LuChartColumnBig,
+    title: "Financial & ROI Modelling",
+    description:
+      "Detailed financial projections, pricing models and investment return analysis.",
+  },
+  {
+    Icon: LuScale,
+    title: "Regulatory & Operational Readiness",
+    description:
+      "Ensure compliance with Bangladesh regulations and operational requirements.",
+    highlight: true,
+  },
+  {
+    Icon: LuBookOpen,
+    title: "Risk & Sensitivity Assessment",
+    description:
+      "Identify potential business risks, mitigation strategies and scenario planning.",
+  },
+  {
+    Icon: LuMegaphone,
+    title: "Business Model Localisation",
+    description:
+      "Adapt products, pricing and business structure for Bangladesh market behavior.",
+  },
+  {
+    Icon: LuHandCoins,
+    title: "Launch Roadmap",
+    description:
+      "Define launch phases, KPIs, milestones and sustainable market rollout strategy.",
+  },
+]
 
   const exportReadinessItems = [
     {
@@ -124,23 +143,25 @@ const Market_Expansion = () => {
       description: "Build scalable, compliant trade operations",
     },
   ];
+  const id = 'services-bd-market'
 
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
-            Expand With Confidence
+            Bangladesh Business Setup & Market Entry Services
+
             <br />
-            Establish Your Business Presence
-            <br />
-            <span className="text-light-blue">In Bangladesh The Right Way</span>
+            <span className="text-light-blue">Establish and Grow Your Business in Bangladesh</span>
           </>
         }
-        description="Bangladesh is one of the world's fastest-growing economies. Our expert team helps international companies establish their business presence in Bangladesh with confidence, supporting every step from registration to market entry."
-        ctaText="Get a Consultation"
+        description={<>Bangladesh offers growing opportunities for local entrepreneurs, foreign investors and international companies across a diverse range of industries. de tempête provides comprehensive <span className="font-bold">Bangladesh business setup, company formation and market entry advisory services</span>, supporting businesses with registration, regulatory approvals, tax and VAT, accounting, payroll, compliance and ongoing operational support.
+        </>}
+        ctaText="Book a Consultation"
       />
 
       <SecondSection></SecondSection>
@@ -240,81 +261,23 @@ const Market_Expansion = () => {
 
       {/* ================= Go-To-Market Strategy ================= */}
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className=" text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
+      
+      <ServiceGrid
+        description={<p className="mt-8 text-center  text-lg text-gray-500 leading-7 max-w-4xl mx-auto">
+              Success in Bangladesh requires more than just registration. We
+              help tailor your business model, pricing and operations to align
+              with local culture, consumer behavior and regulatory requirements.
+            </p>}
+        heading={<h2 className=" text-4xl text-center 2xl:text-5xl  leading-tight font-light text-[#16244b]">
               <span className="font-bold">Go-To-Market</span> Strategy &
               <span className="font-semibold">
                 {" "}
                 Business Model Localisation
               </span>
-            </h2>
+            </h2>}
+        services={services}>
 
-            <p className="mt-8 text-xl text-gray-500 leading-7 max-w-4xl mx-auto">
-              Success in Bangladesh requires more than just registration. We
-              help tailor your business model, pricing and operations to align
-              with local culture, consumer behavior and regulatory requirements.
-            </p>
-          </div>
-
-          {/* Features */}
-
-          <div className="grid lg:grid-cols-3 gap-20 mt-24">
-            {[
-              {
-                icon: LuBadgeDollarSign,
-                title: "Target Market & Competitive Analysis",
-                desc: "Evaluate market size, trends, demand potential and competitive positioning.",
-              },
-              {
-                icon: LuChartColumnBig,
-                title: "Financial & ROI Modelling",
-                desc: "Detailed financial projections, pricing models and investment return analysis.",
-              },
-              {
-                icon: LuScale,
-                title: "Regulatory & Operational Readiness",
-                desc: "Ensure compliance with Bangladesh regulations and operational requirements.",
-                highlight: true,
-              },
-              {
-                icon: LuBookOpen,
-                title: "Risk & Sensitivity Assessment",
-                desc: "Identify potential business risks, mitigation strategies and scenario planning.",
-              },
-              {
-                icon: LuMegaphone,
-                title: "Business Model Localisation",
-                desc: "Adapt products, pricing and business structure for Bangladesh market behavior.",
-              },
-              {
-                icon: LuHandCoins,
-                title: "Launch Roadmap",
-                desc: "Define launch phases, KPIs, milestones and sustainable market rollout strategy.",
-              },
-            ].map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={index}
-                  className={`rounded-3xl  flex  flex-col  items-center text-center transition-all duration-300 `}
-                >
-                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm mb-6" />
-
-                  <h3 className="text-2xl font-bold text-[#16244b] leading-snug mb-5">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      </ServiceGrid>
 
       {/* Export Readiness */}
       <section className="py-20 px-6 bg-white">
@@ -395,7 +358,7 @@ const Market_Expansion = () => {
                 <span className="font-bold">Opening</span> Assistance
               </h2>
 
-              <p className="mt-8 text-xl leading-7 text-gray-500">
+              <p className="mt-8 text-base leading-7 text-gray-500">
                 Coordinate with leading local and international banks for
                 account opening, compliance documentation, and end-to-end
                 activation support.
@@ -435,7 +398,7 @@ const Market_Expansion = () => {
                 Protection
               </h2>
 
-              <p className="mt-8 text-xl leading-7 text-gray-500">
+              <p className="mt-8 text-base leading-7 text-gray-500">
                 Secure your brand, logo and products with trademark and
                 intellectual property registration in Bangladesh. Our experts
                 assist with searches, filing, copyright advisory and renewal
@@ -479,74 +442,97 @@ const Market_Expansion = () => {
 
       {/* ================= Investor Visa ================= */}
 
-      
+
 
       {/* Why Choose Us */}
       {/* ================= Why Choose Us ================= */}
 
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
 
-          <div className="text-center">
-            <h2 className="text-4xl 2xl: text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
-              Why Choose Our
-              <span className="font-bold"> Expansion Advisory Service?</span>
-            </h2>
+    <div className="text-center">
+      <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
+        Why Choose Our
+        <span className="font-bold"> Expansion Advisory Service?</span>
+      </h2>
 
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
 
-          {/* Cards */}
+    {/* Cards */}
 
-          <div className="grid lg:grid-cols-2 gap-6 mt-20">
-            {[
-              {
-                title: "Proven Multi-Market Experience",
-                desc: "Leverage our years of experience helping businesses successfully enter and operate in multiple countries, including Bangladesh.",
-              },
-              {
-                title: "Global & Local Expertise",
-                desc: "Benefit from our combined knowledge of international best practices and deep understanding of the Bangladesh business environment.",
-              },
-              {
-                title: "Complete Setup Support",
-                desc: "From company registration to operational launch, we manage every step so you can focus on business growth.",
-              },
-              {
-                title: "In-Depth Bangladesh Insights",
-                desc: "Access valuable insights into local regulations, banking, taxation and market dynamics for confident decision-making.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-6 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+    <div className="grid lg:grid-cols-2 gap-5 mt-20">
+      {[
+        {
+          title: "Proven Multi-Market Experience",
+          desc: "Leverage our years of experience helping businesses successfully enter and operate in multiple countries, including Bangladesh.",
+        },
+        {
+          title: "Global & Local Expertise",
+          desc: "Benefit from our combined knowledge of international best practices and deep understanding of the Bangladesh business environment.",
+        },
+        {
+          title: "Complete Setup Support",
+          desc: "From company registration to operational launch, we manage every step so you can focus on business growth.",
+        },
+        {
+          title: "In-Depth Bangladesh Insights",
+          desc: "Access valuable insights into local regulations, banking, taxation and market dynamics for confident decision-making.",
+        },
+      ].map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`flex items-start gap-6 p-8 transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            {/* Icon */}
+            <div
+              className={`w-14 h-14 rounded-sm flex items-center justify-center shrink-0 ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-9 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <h3 className="text-xl font-bold text-[#16244b] mb-4">
+                {item.title}
+              </h3>
+
+              <p
+                className={`text-base leading-8 ${
+                  isDark ? "text-gray-700" : "text-gray-500"
+                }`}
               >
-                {/* Icon */}
-
-                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                  <LuChartNoAxesCombined className="text-light-blue text-3xl" />
-                </div>
-
-                {/* Content */}
-
-                <div>
-                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-500 text-base leading-8">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+                {item.desc}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       {/* ================= CTA Section ================= */}
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your Bangladesh
@@ -566,7 +552,7 @@ const Market_Expansion = () => {
       {/* Blog Section */}
       {/* ================= Recent Blogs ================= */}
 
-      
+
     </div>
   );
 };

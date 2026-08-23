@@ -117,17 +117,16 @@ export default function GrowthPartners() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
         {/* Left: copy */}
         <div>
-          <h2 className="text-3xl font-extrabold leading-tight text-dark-blue sm:text-5xl">
+          <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-extrabold leading-tight text-dark-blue ">
             <span className="font-normal">Our Eco </span>System
           </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-slate-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
+          <p className="mt-5 max-w-md text-base text-justify leading-relaxed text-slate-500">
+            At <span className="italic font-bold text-gray-700">de tempête</span>, we believe sustainable business growth is built through strong connections and trusted collaboration. Our business ecosystem brings together trusted partners, professional associations, industry networks, and business communities collaboration to create opportunities and connect businesses across markets.
           </p>
         </div>
 
         {/* Right: three infinite vertical marquees */}
-        <div className="flex h-[420px] items-center justify-center md:gap-36 sm:h-[480px]">
+        <div className="flex h-[420px] items-center justify-center md:gap-20 sm:h-[480px]">
           <MarqueeColumn items={COLUMN_1} direction="down" speed={60} className="mt-0" />
           <MarqueeColumn items={COLUMN_1} direction="up" speed={60} className="mt-10" />
           

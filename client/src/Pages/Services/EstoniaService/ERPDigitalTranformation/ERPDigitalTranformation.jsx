@@ -27,7 +27,7 @@ import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
 import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/BG-Build-Strong-Strategic-Alliances-Partnerships-Networking-Support_-1.webp'
+import img1 from '../../../../asstes/img_temp/servics/usa1.webp'
 import KeyBenefits from "../../../Home/Expertise/VirtualCfo/Keybenefits";
 import logo from '../../../../asstes/img_temp/logo.webp'
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
@@ -40,25 +40,11 @@ import d from "../../../../asstes/img_temp/New folder/8.webp";
 import e from "../../../../asstes/img_temp/New folder/13-1.webp";
 import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
+import { motion } from "framer-motion";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
 
 
-const AnimatedCounter = ({ end, duration = 2000 }) => {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        let start = 0;
-        const increment = end / (duration / 16);
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= end) {
-                setCount(end);
-                clearInterval(timer);
-            } else setCount(Math.floor(start));
-        }, 16);
-        return () => clearInterval(timer);
-    }, [end, duration]);
-    return count;
-};
+
 
 const sectors = [
     {
@@ -165,30 +151,30 @@ const benefits = [
     "Reduced manual work, increased accuracy, and smarter decision-making",
 ];
 const estoniaFeatures = [
-  {
-    title: "Software selection",
-    description: "Tally Prime, QuickBooks, Xero, Odoo, or Zoho selected to match your business operations.",
-  },
-  {
-    title: "Chart of accounts setup",
-    description: "Implement a structured chart of accounts for accurate bookkeeping.",
-  },
-  {
-    title: "Payroll module setup",
-    description: "Configure payroll processing and employee management within the system.",
-  },
-  {
-    title: "Data migration",
-    description: "Transfer opening balances and historical transactions from your previous accounting software.",
-  },
-  {
-    title: "User access controls",
-    description: "Configure user roles, permissions, and approval workflows for secure access.",
-  },
-  {
-    title: "Staff training & handover",
-    description: "Provide end-user training and detailed documentation for ongoing operations.",
-  },
+    {
+        title: "Software selection",
+        description: "Tally Prime, QuickBooks, Xero, Odoo, or Zoho selected to match your business operations.",
+    },
+    {
+        title: "Chart of accounts setup",
+        description: "Implement a structured chart of accounts for accurate bookkeeping.",
+    },
+    {
+        title: "Payroll module setup",
+        description: "Configure payroll processing and employee management within the system.",
+    },
+    {
+        title: "Data migration",
+        description: "Transfer opening balances and historical transactions from your previous accounting software.",
+    },
+    {
+        title: "User access controls",
+        description: "Configure user roles, permissions, and approval workflows for secure access.",
+    },
+    {
+        title: "Staff training & handover",
+        description: "Provide end-user training and detailed documentation for ongoing operations.",
+    },
 ];
 
 const keyBenefittext = [
@@ -200,11 +186,12 @@ const ERPDigitalTranformation = () => {
     const [expandedItem, setExpandedItem] = useState(null);
     const toggleAccordion = (idx) =>
         setExpandedItem(expandedItem === idx ? null : idx);
-
+    const id = 'services-estonia-erp'
     return (
         <div className="w-full">
 
-            <SevicsBanner bgImage={bgimg} alt="Bangladesh Business Setup"
+            <SevicsBanner
+                id={id} bgImage={bgimg} alt="Bangladesh Business Setup"
                 description="Modernize your business with integrated ERP and digital transformation solutions designed to improve efficiency, automate workflows, and deliver real-time insights. We help organizations streamline operations, enhance collaboration, and build a scalable digital foundation for sustainable growth."
                 title1={'Transform Business Operations'}
                 title2={'With Smart ERP Solutions'}
@@ -213,7 +200,7 @@ const ERPDigitalTranformation = () => {
 
 
             {/* Strategic Alliances */}
-            <section className="py-20 bg-white">
+            <section className="pt-20 bg-white">
                 <div className="max-w-[1600px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-3xl font-bold text-[#16244b]">
@@ -223,7 +210,7 @@ const ERPDigitalTranformation = () => {
                             </span>
                         </h2>
 
-                        <p className="mt-5 text-gray-500 leading-7">
+                        <p className="mt-5 text-gray-500 text-justify leading-7">
                             Modern businesses need connected systems to stay competitive. We help
                             organizations implement ERP solutions, automate business processes, and
                             integrate digital technologies that improve efficiency, enhance
@@ -258,66 +245,148 @@ const ERPDigitalTranformation = () => {
             </section>
 
             {/*  Business Functions We Transform */}
-            <section className="pt-24 ">
+            <section className="py-24">
                 <div className="max-w-[1600px] mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-4xl font-light text-[#16244b]">
                             Business Functions We <span className="font-bold">Transform</span>
                         </h2>
+
                         <p className="mt-4 text-gray-500">
-                            Integrated ERP solutions designed to streamline operations, improve collaboration, and accelerate digital transformation across your organization.
+                            Integrated ERP solutions designed to streamline operations, improve
+                            collaboration, and accelerate digital transformation across your organization.
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3  text-5xl  mt-16">
-                        {sectors.map((item, index) => (
-                            <div className="hover:bg-gray-100 p-10" key={index}>
-                                <item.icon className=" bg-light-blue/20 p-2 text-light-blue  rounded-sm mb-3" size={42} strokeWidth={1.5} />
-                                <h3 className="text-base  font-bold text-[#16244b] mb-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                            </div>
-                        ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {sectors.map((item, index) => {
+                            const Icon = item.icon;
+
+                            const row = Math.floor(index / 3);
+                            const col = index % 3;
+                            const isDark = (row + col) % 2 === 0;
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (index % 3) * 0.12,
+                                        ease: "easeOut",
+                                    }}
+                                    className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                                        }`}
+                                >
+                                    {/* Icon */}
+                                    <div
+                                        className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                                                ? "bg-white/15 text-white"
+                                                : "bg-light-blue/20 text-light-blue"
+                                            }`}
+                                    >
+                                        <Icon size={24} strokeWidth={1.5} />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+                                        {item.title}
+                                    </h3>
+
+                                    {/* Description */}
+                                    <p
+                                        className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                                            }`}
+                                    >
+                                        {item.desc}
+                                    </p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
+            <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <AccountingSoftwareImplementation features={estoniaFeatures}></AccountingSoftwareImplementation>
 
-            <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
+            
 
 
 
 
             {/* Why Choose */}
             <section className="py-24 bg-white">
-                <div className="max-w-[1600px] mx-auto px-6">
-                    <div className="text-center">
-                        <h2 className="text-4xl font-light text-[#16244b]">
-                            Why Choose Our{" "}
-                            <span className="font-bold">ERP & Digital Transformation Services?</span>
-                        </h2>
-                        <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-                    </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Choose Our{" "}
+        <span className="font-bold">
+          ERP & Digital Transformation Services?
+        </span>
+      </h2>
 
-                    <div className="grid lg:grid-cols-3 gap-6 mt-16">
-                        {whyChoose.map((item, index) => (
-                            <div
-                                key={index}
-                                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                            >
-                                <LuChartNoAxesCombined className="text-light-blue text-2xl mb-3" />
-                                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
 
-            
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {whyChoose.map((item, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
 
             {/* Marketing Strategy Accordion */}
             <section className="pb-20 px-6 bg-white">
@@ -375,7 +444,7 @@ const ERPDigitalTranformation = () => {
             </section>
             <section className="pt-15 bg-white overflow-hidden">
                 <div className=" mx-auto max-w-7xl px-6">
-                    <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">
+                    <h2 className="text-center text-4xl font-light text-[#16244B] mb-20">
                         Technological <span className="font-bold">Partner</span>
                     </h2>
 
@@ -383,7 +452,7 @@ const ERPDigitalTranformation = () => {
                         <div
                             className="flex items-center"
                             style={{
-                                animation: "scrollLeft 35s linear infinite",
+                                animation: "scrollLeftq 15s linear infinite",
                             }}
                         >
                             {[...logos, ...logos].map((logo, index) => (
@@ -399,7 +468,7 @@ const ERPDigitalTranformation = () => {
                     </div>
 
                     <style>{`
-      @keyframes scrollLeft {
+      @keyframes scrollLeftq {
         from {
           transform: translateX(0);
         }
@@ -411,6 +480,7 @@ const ERPDigitalTranformation = () => {
                 </div>
             </section>
             <ConsultationCTA
+            id={id}
                 heading={
                     <>
                         Ready To Build A
@@ -428,7 +498,7 @@ const ERPDigitalTranformation = () => {
             />
             {/* Technological Partner Section */}
 
-            
+
         </div>
     );
 };

@@ -155,7 +155,7 @@ const Routes = createBrowserRouter([
       { path: "/services/ksa/finance", element: <KSAFinanceAccounting></KSAFinanceAccounting> },
       { path: "/services/ksa/taxation", element: <KSATaxation></KSATaxation> },
       { path: "/services/ksa/hr-payroll", element: <KSAHRPayrollSolutions></KSAHRPayrollSolutions> },
-      { path: "/services/ksa/training", element: <KSABrandingGrowth></KSABrandingGrowth> },
+      { path: "/services/ksa/branding_growth", element: <KSABrandingGrowth></KSABrandingGrowth> },
       { path: "/services/ksa/technology", element: <KSATechnology></KSATechnology> },
       { path: "/services/ksa/investment", element: <KSAInvestment></KSAInvestment> },
 

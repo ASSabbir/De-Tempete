@@ -19,6 +19,8 @@ import img2 from '../../../../asstes/img_temp/servics/UK/UK-tax-compliance-works
 import img3 from '../../../../asstes/img_temp/servics/UK/Global-business-strategy-in-focus.webp'
 import img4 from '../../../../asstes/img_temp/servics/ukbank.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__plain-blank-closeup-of-trademark-certificate-gold-__58646.webp'
+import img7 from '../../../../asstes/img_temp/uk-over.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 import img6 from '../../../../asstes/img_temp/New folder/imgi_7_admin-ajax.webp'
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 
@@ -80,6 +82,7 @@ import {
 } from "react-icons/lu";
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+import ServiceGrid from "../../../../Components/Shared/Servicegrid";
 
 const Market_Expansion = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -87,6 +90,45 @@ const Market_Expansion = () => {
   const toggleAccordion = (index) => {
     setExpandedItem(expandedItem === index ? null : index);
   };
+  const servics = [
+    {
+      Icon: LuBadgeDollarSign,
+      title: "Business Activity & SIC Code Advisory",
+      description:
+        "Guidance for selecting suitable SIC codes aligned with business activities and operational objectives.",
+    },
+    {
+      Icon: LuChartColumnBig,
+      title: "Financial & Operational Planning",
+      description:
+        "Evaluate startup requirements, operational readiness, and long-term business sustainability.",
+    },
+    {
+      Icon: LuScale,
+      title: "Compliance & Operational Readiness",
+      description:
+        "Prepare business operations while understanding UK compliance obligations and reporting expectations.",
+      highlight: true,
+    },
+    {
+      Icon: LuBookOpen,
+      title: "Risk & Administrative Assessment",
+      description:
+        "Identify operational risks, documentation gaps, and structural considerations before business expansion.",
+    },
+    {
+      Icon: LuMegaphone,
+      title: "Business Model Localisation",
+      description:
+        "Adapt services, communication strategies, and operational structures to UK market standards.",
+    },
+    {
+      Icon: LuHandCoins,
+      title: "Partnership & Commercial Planning",
+      description:
+        "Explore supplier coordination, strategic partnerships, and commercial collaboration opportunities.",
+    },
+  ]
 
   const exportReadinessItems = [
     {
@@ -115,24 +157,32 @@ const Market_Expansion = () => {
         "Guidance regarding Companies House identity verification requirements for directors and PSCs.",
     },
   ];
-
+  const id = 'servics-uk-market'
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bgimg}
-        alt="Bangladesh Business Setup"
-        minHeight="h-screen"
-        overlay="bg-[#0E1937]/80"
+        alt="UK Business Setup"
+        
         heading={
           <>
-            Enter UK Business Market
+            UK Business Setup & Market Entry Services
             <br />
-            <span className="text-light-blue">Strategic Setup & Expansion</span>
-            <br />
-            <span className="font-normal">Advisory For Growing Companies</span>
+            <span className="font-normal text-light-blue">
+              Establish and Grow Your Business in the UK
+            </span>
           </>
         }
-        description={<>The UK is one of the world's leading destinations for startups, investors, consultants, and international businesses due to its strong economy, transparent regulations, and global business connectivity. <span className="font-bold italic">de tempête</span> supports businesses with UK company formation, market entry planning, compliance guidance, and operational setup support for smooth business expansion.</>}
+        description={
+          <>
+            The UK offers a globally connected business environment for entrepreneurs, startups and international companies.{" "}
+            <span className="font-bold italic">de tempête</span> provides comprehensive{" "}
+            <span className="font-bold">UK business setup</span>,{" "}
+            <span className="font-bold">company formation</span> and{" "}
+            <span className="font-bold">market entry services</span>, including company registration, Companies House compliance, HMRC and tax registration, accounting, VAT, payroll and ongoing business advisory—helping you establish and manage your UK operations efficiently.
+          </>
+        }
       />
 
       <SecondSection></SecondSection>
@@ -155,7 +205,7 @@ const Market_Expansion = () => {
             <p className="mt-7 text-base text-gray-600 leading-8">
               Starting a business in the UK requires proper structuring, tax
               registration, and compliance preparation from the beginning. <span className="font-bold italic">de
-              tempête</span> supports startups, SMEs, and international businesses with
+                tempête</span> supports startups, SMEs, and international businesses with
               UK company formation and operational setup guidance for smooth
               market entry.
             </p>
@@ -232,85 +282,16 @@ const Market_Expansion = () => {
 
       {/* ================= Go-To-Market Strategy ================= */}
 
-      <section className="py-24 bg-white">
-        <div className="max-w-[1300px] mx-auto px-6">
-          {/* Heading */}
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
-              <span className="font-bold">Go-To-Market</span> Strategy &
-              <span className="font-semibold">
-                {" "}
-                Business Model Localisation
-              </span>
-            </h2>
 
-            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
-              Businesses entering the UK market must align operations, pricing,
-              and business structures with local regulations and market
-              expectations. <span className="font-bold italic">de tempête</span> supports businesses with UK market entry,
-              localisation planning, and operational setup advisory for smoother
-              expansion.
-            </p>
-          </div>
-
-          {/* Features */}
-
-          <div className="grid lg:grid-cols-3  mt-24">
-            {[
-              {
-                icon: LuBadgeDollarSign,
-                title: "Business Activity & SIC Code Advisory",
-                desc: "Guidance for selecting suitable SIC codes aligned with business activities and operational objectives.",
-              },
-              {
-                icon: LuChartColumnBig,
-                title: "Financial & Operational Planning",
-                desc: "Evaluate startup requirements, operational readiness, and long-term business sustainability.",
-              },
-              {
-                icon: LuScale,
-                title: "Compliance & Operational Readiness",
-                desc: "Prepare business operations while understanding UK compliance obligations and reporting expectations.",
-                highlight: true,
-              },
-              {
-                icon: LuBookOpen,
-                title: "Risk & Administrative Assessment",
-                desc: "Identify operational risks, documentation gaps, and structural considerations before business expansion.",
-              },
-              {
-                icon: LuMegaphone,
-                title: "Business Model Localisation",
-                desc: "Adapt services, communication strategies, and operational structures to UK market standards.",
-              },
-              {
-                icon: LuHandCoins,
-                title: "Partnership & Commercial Planning",
-                desc: "Explore supplier coordination, strategic partnerships, and commercial collaboration opportunities.",
-              },
-            ].map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  className={`rounded-3xl transition-all duration-300 bg-white p-10 ${item.highlight
-                      ? "hover:-translate-y-2 hover:shadow-2xl"
-                      : "hover:-translate-y-1 hover:shadow-lg"
-                    }`}
-                >
-                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm mb-6" />
-
-                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-500 text-base l">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <ServiceGrid description={<>Businesses entering the UK market must align operations, pricing,
+        and business structures with local regulations and market
+        expectations. <span className="font-bold italic">de tempête</span> supports businesses with UK market entry,
+        localisation planning, and operational setup advisory for smoother
+        expansion.</>} heading={<><span className="font-bold">Go-To-Market</span> Strategy &
+          <span className="font-semibold">
+            {" "}
+            Business Model Localisation
+          </span></>} services={servics}></ServiceGrid>
 
       {/* Export Readiness */}
       <section className="py-20 px-6 bg-white">
@@ -467,6 +448,49 @@ const Market_Expansion = () => {
               />
             </div>
           </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            {/* Image */}
+
+            <div className="h-full">
+              <img
+                src={img7}
+                alt="Bank Account Opening"
+                className="w-full h-full object-cover rounded-3xl shadow-lg"
+              />
+            </div>
+
+            {/* Content */}
+
+            <div className="flex flex-col justify-center">
+              <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
+                <span className="font-bold">Overseas </span>Entity  Registration
+                
+               
+              </h2>
+
+              <p className="mt-8 mb-10 text-xl leading-7 text-gray-500">
+                Registering an overseas entity's UK property interests with Companies House, fully compliant with Register requirements.
+              </p>
+
+
+              <div className="space-y-5">
+                {[
+                  "Register of Overseas Entities (ROE) Registration",
+                  "Overseas Entity ID Application",
+                  "Beneficial Owner Identification & Verification",
+                  "Annual Update Statement Filing",
+                  "Ongoing Companies House Compliance",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <FaCircleCheck className="text-light-blue text-2xl shrink-0" />
+
+                    <span className="text-gray-600 text-base">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -537,51 +561,74 @@ const Market_Expansion = () => {
 
           {/* Cards */}
 
-          <div className="max-w-7xl grid lg:grid-cols-2 gap-6 mt-20">
-            {[
-              {
-                title: "Strategic UK market entry planning",
-                desc: "Develop a structured market entry strategy aligned with your industry, target audience, and business goals.",
-              },
-              {
-                title: "Local market research & competitor analysis",
-                desc: "Gain valuable insights into customer demand, competitors, and market opportunities across the UK.",
-              },
-              {
-                title: "Sales, partnership & distribution support",
-                desc: "Identify trusted distributors, strategic partners, and sales channels to accelerate business growth.",
-              },
-              {
-                title: "Ongoing expansion & compliance guidance",
-                desc: "Receive continuous support with regulatory requirements, operational scaling, and long-term market success.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-6 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                {/* Icon */}
+          <div className="max-w-7xl grid lg:grid-cols-2 gap-5 mt-20">
+  {[
+    {
+      title: "Strategic UK market entry planning",
+      desc: "Develop a structured market entry strategy aligned with your industry, target audience, and business goals.",
+    },
+    {
+      title: "Local market research & competitor analysis",
+      desc: "Gain valuable insights into customer demand, competitors, and market opportunities across the UK.",
+    },
+    {
+      title: "Sales, partnership & distribution support",
+      desc: "Identify trusted distributors, strategic partners, and sales channels to accelerate business growth.",
+    },
+    {
+      title: "Ongoing expansion & compliance guidance",
+      desc: "Receive continuous support with regulatory requirements, operational scaling, and long-term market success.",
+    },
+  ].map((item, index) => {
+    const isDark = index === 0 || index === 3;
 
-                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                  <LuChartNoAxesCombined className="text-light-blue text-3xl" />
-                </div>
+    return (
+      <div
+        key={index}
+        className={`flex items-start gap-6 p-8 transition-all duration-300 hover:shadow-2xl ${
+          isDark
+            ? "bg-light-blue"
+            : "bg-white border border-gray-200"
+        }`}
+      >
+        {/* Icon */}
+        <div
+          className={`w-14 h-14 rounded-sm flex items-center justify-center shrink-0 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            className={`w-9 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+            alt=""
+          />
+        </div>
 
-                {/* Content */}
+        {/* Content */}
+        <div>
+          <h3 className="text-xl font-bold text-[#16244b] mb-4">
+            {item.title}
+          </h3>
 
-                <div>
-                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-500 text-base leading-7">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p
+            className={`text-base leading-7 ${
+              isDark ? "text-gray-700" : "text-gray-500"
+            }`}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Start Your UK
@@ -591,11 +638,11 @@ const Market_Expansion = () => {
         }
         subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
         commitmentItems={[
-  "Free initial UK market expansion consultation — no obligation",
-  "100% confidential handling of your business and market information",
-  "Expert guidance on UK market entry and growth strategies",
-  "Practical, tailored support to help your business expand with confidence",
-]}
+          "Free initial UK market expansion consultation — no obligation",
+          "100% confidential handling of your business and market information",
+          "Expert guidance on UK market entry and growth strategies",
+          "Practical, tailored support to help your business expand with confidence",
+        ]}
       />
 
 

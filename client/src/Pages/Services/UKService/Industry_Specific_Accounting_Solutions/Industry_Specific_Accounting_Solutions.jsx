@@ -26,7 +26,7 @@ import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-p
 import img1 from '../../../../asstes/img_temp/servics/UK/Whether-expanding-into.webp'
 import lgo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
-
+import { motion } from "framer-motion";
 const industries = [
   {
     icon: LuBuilding,
@@ -149,10 +149,11 @@ const Industry_Specific_Accounting_Solutions = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+const id = 'services-uk-industry'
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Industry-Specific Accounting Solutions"
         heading={
@@ -216,35 +217,72 @@ const Industry_Specific_Accounting_Solutions = () => {
 
       {/* Industries We Support */}
       <section className="py-24 bg-[#F5F6F8]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Industries We <span className="font-bold">Support</span>
-            </h2>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center max-w-3xl mx-auto">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Industries We <span className="font-bold">Support</span>
+      </h2>
+    </div>
 
-          <div className="grid lg:grid-cols-3 gap-x-16 gap-y-16 mt-16">
-            {industries.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div key={index}>
-                  <Icon className="text-4xl text-light-blue bg-light-blue/20 p-2 rounded-sm  mb-5" />
-                  <h3 className="text-xl font-bold text-[#16244b] mb-4">
-                    {item.title}
-                  </h3>
-                  <ul className="space-y-2">
-                    {item.items.map((li, i) => (
-                      <li key={i} className="text-gray-500 text-base leading-6">
-                        - {li}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
+      {industries.map((item, index) => {
+        const Icon = item.icon;
+
+        // Chessboard pattern
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Icon */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark
+                  ? "bg-white/15 text-white"
+                  : "bg-light-blue/20 text-light-blue"
+              }`}
+            >
+              <Icon className="text-2xl" />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {item.title}
+            </h3>
+
+            {/* Items */}
+            <ul className="space-y-2">
+              {item.items.map((li, i) => (
+                <li
+                  key={i}
+                  className={`text-sm leading-relaxed ${
+                    isDark ? "text-gray-700" : "text-gray-500"
+                  }`}
+                >
+                  - {li}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* Our Industry-Based Services */}
       <section className="py-20 px-6 bg-white">
@@ -255,10 +293,7 @@ const Industry_Specific_Accounting_Solutions = () => {
               <br />
               Include
             </h2>
-            <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-base">
-              Here are professional, UK-market aligned descriptions you can
-              place under each heading
-            </p>
+            
           </div>
 
           <div className="space-y-4">
@@ -315,8 +350,8 @@ const Industry_Specific_Accounting_Solutions = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={lgo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -329,35 +364,65 @@ const Industry_Specific_Accounting_Solutions = () => {
 
       {/* Benefits */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Benefits Of{" "}
-              <span className="font-bold">Industry-Focused Accounting</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Benefits Of{" "}
+        <span className="font-bold">Industry-Focused Accounting</span>
+      </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {benefits.map((item, index) => (
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+      {benefits.map((item, index) => {
+        const isDark = index === 0 || index === 3;
+
+        return (
+          <div
+            key={index}
+            className={`p-8 transition-all duration-300 hover:shadow-2xl ${
+              isDark
+                ? "bg-light-blue"
+                : "bg-white border border-gray-200"
+            }`}
+          >
+            <div className="flex items-center gap-3 mb-3">
               <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+                  isDark ? "bg-white/15" : "bg-light-blue/20"
+                }`}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-base font-bold text-[#16244b]">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
+                <img
+                  src={lgo}
+                  className={`w-8 object-contain ${
+                    isDark ? "brightness-0 invert" : ""
+                  }`}
+                  alt=""
+                />
               </div>
-            ))}
+
+              <h3 className="text-base font-bold text-[#16244b]">
+                {item.title}
+              </h3>
+            </div>
+
+            <p
+              className={`text-base leading-6 ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Get Accounting That

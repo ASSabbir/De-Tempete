@@ -20,6 +20,10 @@ import logo from '../../../../asstes/img_temp/logo.webp'
 
 
 
+import { motion } from "framer-motion";
+
+
+
 {
     /* Go-To-Market Strategy */
 }
@@ -69,11 +73,12 @@ const Ecommerce = () => {
                 "Stay compliant with year-end reporting, statutory obligations, and ongoing accounting advisory designed for digital businesses in Estonia.",
         },
     ];
-
+    const id = 'services-estonia-ecommerce'
     return (
         <div className="w-full">
 
-            <SevicsBanner bgImage={bgimg}
+            <SevicsBanner
+                id={id} bgImage={bgimg}
                 title1={"Simplify Accounting For"}
                 title2={"E-commerce & SaaS Businesses"}
 
@@ -106,7 +111,7 @@ const Ecommerce = () => {
 
                     {/* Features */}
 
-                    <div className="grid lg:grid-cols-3 gap-5 mt-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
                         {[
                             {
                                 icon: LuShoppingCart,
@@ -142,18 +147,47 @@ const Ecommerce = () => {
                         ].map((item, index) => {
                             const Icon = item.icon;
 
-                            return (
-                                <div
-                                    className={`rounded-3xl transition-all duration-300 bg-white p-10  hover:shadow-2xl`}
-                                >
-                                    <Icon className="bg-light-blue/20 p-2 text-light-blue text-4xl rounded-sm mb-6" />
+                            const row = Math.floor(index / 3);
+                            const col = index % 3;
+                            const isDark = (row + col) % 2 === 0;
 
-                                    <h3 className="text-xl font-bold text-[#16244b]  mb-5">
+                            return (
+                                <motion.div
+                                    key={item.title}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (index % 3) * 0.12,
+                                        ease: "easeOut",
+                                    }}
+                                    className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                                        }`}
+                                >
+                                    {/* Icon */}
+                                    <div
+                                        className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
+                                                ? "bg-white/15 text-white"
+                                                : "bg-light-blue/20 text-light-blue"
+                                            }`}
+                                    >
+                                        <Icon className="text-2xl" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-base ">{item.desc}</p>
-                                </div>
+                                    {/* Description */}
+                                    <p
+                                        className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                                            }`}
+                                    >
+                                        {item.desc}
+                                    </p>
+                                </motion.div>
                             );
                         })}
                     </div>
@@ -186,7 +220,7 @@ const Ecommerce = () => {
                                 Accounting Solutions
                             </h2>
 
-                            <p className="mt-8 text-base leading-7 text-gray-500">
+                            <p className="mt-8 text-base leading-7 text-justify text-gray-500">
                                 Running an online business requires accurate financial management across
                                 multiple sales channels and payment platforms. We provide specialized
                                 accounting services for e-commerce businesses, helping you maintain accurate
@@ -229,7 +263,7 @@ const Ecommerce = () => {
                                 Reporting
                             </h2>
 
-                            <p className="mt-8 text-xlg leading-7 text-gray-500">
+                            <p className="mt-8 text-xlg  text-justify leading-7 text-gray-500">
                                 SaaS businesses require accounting that reflects recurring revenue models,
                                 subscription billing, and performance metrics. We deliver accounting and
                                 financial reporting solutions that help you manage subscriptions, maintain
@@ -307,11 +341,11 @@ const Ecommerce = () => {
                                 key={index}
                                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
                             >
-                                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                                    <LuChartNoAxesCombined className="text-white text-5xl" />
+                                <div className="w-14 h-14 p-2 bg-white rounded-xl flex items-center justify-center mx-auto">
+                                    <img src={logo} alt="" />
                                 </div>
 
-                                <h3 className="mt-10 text-2xl font-medium text-white leading-relaxed">
+                                <h3 className="mt-10 text-base font-medium text-white leading-relaxed">
                                     {item}
                                 </h3>
                             </div>
@@ -329,7 +363,7 @@ const Ecommerce = () => {
                     {/* Heading */}
 
                     <div className="text-center">
-                        <h2 className="text-5xl 2xl::text-6xl font-light text-[#16244b] leading-tight">
+                        <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
                             Why Choose Our
                             <span className="font-bold"> E-commerce & SaaS Accounting Services</span>
                         </h2>
@@ -339,7 +373,7 @@ const Ecommerce = () => {
 
                     {/* Cards */}
 
-                    <div className="max-w-7xl grid lg:grid-cols-2 gap-6 mt-20">
+                    <div className="max-w-7xl grid lg:grid-cols-2 gap-5 mt-20">
                         {[
                             {
                                 title: "Accounting Built for Digital Businesses",
@@ -357,37 +391,55 @@ const Ecommerce = () => {
                                 title: "Scalable Long-Term Support",
                                 desc: "As your business grows, we continue to support your accounting, compliance, subscription revenue management, and financial advisory needs.",
                             },
-                        ].map((item, index) => (
-                            <div
-                                key={index}
-                                className="flex items-start gap-6 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                            >
-                                <div className="w-14 h-14 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0">
-                                    <LuChartNoAxesCombined className="text-light-blue text-3xl" />
-                                </div>
+                        ].map((item, index) => {
+                            const isDark = index === 0 || index === 3;
 
-                                <div>
-                                    <h3 className="text-2xl font-bold text-[#16244b] mb-4">
-                                        {item.title}
-                                    </h3>
+                            return (
+                                <div
+                                    key={index}
+                                    className={`flex items-start gap-6 p-8 transition-all duration-300 hover:shadow-2xl ${isDark
+                                            ? "bg-light-blue"
+                                            : "bg-white border border-gray-200"
+                                        }`}
+                                >
+                                    <div
+                                        className={`w-14 h-14 rounded-sm flex items-center justify-center shrink-0 ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                                            }`}
+                                    >
+                                        <img
+                                            src={logo}
+                                            alt=""
+                                            className={`w-9 object-contain ${isDark ? "brightness-0 invert" : ""
+                                                }`}
+                                        />
+                                    </div>
 
-                                    <p className="text-gray-500 text-base leading-8">
-                                        {item.desc}
-                                    </p>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-[#16244b] mb-4">
+                                            {item.title}
+                                        </h3>
+
+                                        <p
+                                            className={`text-base leading-8 ${isDark ? "text-gray-700" : "text-gray-500"
+                                                }`}
+                                        >
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                 </div>
             </section>
 
-            
+
             {/* Export Readiness */}
             <section className="py-20 px-6 bg-white">
                 <div className="max-w-9xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl leading-tight font-light text-[#16244b]">
+                        <h2 className="text-4xl 2xl:text-5xl leading-tight font-light text-[#16244b]">
                             <span className="font-bold">End-to-End</span> Financial
                             <span className="font-semibold"> Management For Digital Businesses</span>
                         </h2>
@@ -438,7 +490,8 @@ const Ecommerce = () => {
                     </div>
                 </div>
             </section>
-<ConsultationCTA
+            <ConsultationCTA
+            id={id}
                 heading={
                     <>
                         Ready To Scale Your

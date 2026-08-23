@@ -7,6 +7,9 @@ import {
   Medal,
   ChevronDown,
 } from "lucide-react";
+
+import { motion } from "framer-motion";
+
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import {
   LuChartNoAxesCombined,
@@ -26,6 +29,7 @@ import img3 from '../../../../asstes/img_temp/servics/ACSP-Identity.webp'
 import img4 from '../../../../asstes/img_temp/servics/Payroll-Services.webp'
 import img5 from '../../../../asstes/img_temp/servics/freepik__pension-autoenrolment-mtdcompliance-realistic-imag__5367.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
+import ServiceGrid from "../../../../Components/Shared/Servicegrid";
 
 const accountsCards = [
   {
@@ -56,34 +60,40 @@ const accountsCards = [
 
 const ctFeatures = [
   {
-    icon: FaCalculator,
+    Icon: FaCalculator,
     title: "Accurate Tax Calculation & Adjustments",
-    desc: "We compute your corporation tax liability and apply all allowable deductions to minimise tax due.",
+    description:
+      "We compute your corporation tax liability and apply all allowable deductions to minimise tax due.",
   },
   {
-    icon: LuChartNoAxesCombined,
+    Icon: LuChartNoAxesCombined,
     title: "Capital Allowances Optimisation",
-    desc: "Claim eligible asset allowances to reduce taxable profits and maximise savings.",
+    description:
+      "Claim eligible asset allowances to reduce taxable profits and maximise savings.",
   },
   {
-    icon: FaFileInvoice,
+    Icon: FaFileInvoice,
     title: "Digital Submission to HMRC",
-    desc: "End-to-end online filing of your CT600 submission, error-free and on time.",
+    description:
+      "End-to-end online filing of your CT600 submission, error-free and on time.",
   },
   {
-    icon: FaShieldAlt,
+    Icon: FaShieldAlt,
     title: "Clear Review to Avoid Tax Risks",
-    desc: "Every submission is carefully reviewed to prevent errors, penalties, or HMRC queries.",
+    description:
+      "Every submission is carefully reviewed to prevent errors, penalties, or HMRC queries.",
   },
   {
-    icon: FaFileInvoice,
+    Icon: FaFileInvoice,
     title: "Expert Advisory on Tax Planning",
-    desc: "Practical guidance on tax-saving strategies and future planning to keep your business compliant.",
+    description:
+      "Practical guidance on tax-saving strategies and future planning to keep your business compliant.",
   },
   {
-    icon: FaShieldAlt,
+    Icon: FaShieldAlt,
     title: "Handling HMRC Queries & Notices",
-    desc: "We liaise with HMRC on your behalf to resolve queries or notices effectively.",
+    description:
+      "We liaise with HMRC on your behalf to resolve queries or notices effectively.",
   },
 ];
 
@@ -133,7 +143,7 @@ const cisItems = [
 ];
 
 const niCards = [
-  "Investor & Partner Visa Processing",
+  "Accurate NIC Calculations",
   "Director-Specific NIC Assessment",
   "Annual Reviews & Adjustments",
   "Compliance With Payroll & Self-Assessment",
@@ -152,10 +162,11 @@ const Compliance_Regulatory = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+  const id = 'servics-uk-compliance'
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bgimg}
         alt="UK Compliance"
         heading={
@@ -173,11 +184,11 @@ const Compliance_Regulatory = () => {
             payroll compliance, VAT rules, and CIS regulations. Whether you're a
             startup, SME, contractor, or growing business, our Compliance &
             Regulatory Services ensure accuracy, transparency, and full
-            statutory compliance with zero hassle. 
-            
-            
+            statutory compliance with zero hassle.
+
+
             <span className="text-base  text-gray-300">
-               We handle the paperwork, deadlines, and reporting, so you stay
+              We handle the paperwork, deadlines, and reporting, so you stay
               focused on running your business.
             </span>
           </>
@@ -189,7 +200,7 @@ const Compliance_Regulatory = () => {
       {/* Problem Statement */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          
+
           <h2 className="text-4xl 2xl:text-5xl font-bold text-[#14224A] mt-2">
             UK Compliance Burden
           </h2>
@@ -221,86 +232,105 @@ const Compliance_Regulatory = () => {
           </div>
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uk'}></SharedFullButton>
+      </div>
 
       {/* Company Accounts */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
-              Company Accounts{" "}
-              <span className="font-extrabold">Preparation & Filing</span>
-            </h2>
-            <div className="inline-block mt-5 px-5 py-1 rounded bg-light-blue text-white font-semibold text-base">
-              HMRC-Approved Annual Accounts
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center max-w-4xl mx-auto mb-16">
+      <h2 className="text-4xl 2xl:text-5xl font-bold text-[#13264d]">
+        Company Accounts{" "}
+        <span className="font-extrabold">Preparation & Filing</span>
+      </h2>
+
+      <p className="mt-7 text-base text-gray-600 leading-8">
+        Preparing and filing annual accounts can be stressful, especially
+        when managing UK reporting standards. We handle everything from
+        bookkeeping to submissions, so your accounts are accurate,
+        compliant, and audit ready.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {accountsCards.map((c, i) => {
+        const row = Math.floor(i / 3);
+        const col = i % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (i % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
             </div>
-            <p className="mt-7 text-base text-gray-600 leading-8">
-              Preparing and filing annual accounts can be stressful, especially
-              when managing UK reporting standards. We handle everything from
-              bookkeeping to submissions, so your accounts are accurate,
-              compliant, and audit ready.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {accountsCards.map((c, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300"
-              >
-                <h3 className="text-xl font-bold text-[#14224A] mb-3">
-                  {c.title}
-                </h3>
-                <p className="text-gray-500 leading-7">{c.desc}</p>
-              </div>
-            ))}
-          </div>
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {c.title}
+            </h3>
 
-          <div className="text-center mt-16">
-            <p className="text-gray-500 text-base mb-20">
-              We manage end-to-end documentation, government coordination, and
-              licensing so you can focus on growth, not paperwork.
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {c.desc}
             </p>
-            
-            <SharedFullButton text={'Explore Complete Business Setup Service Guide'} path={'/business-setup/uk'}></SharedFullButton>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        );
+      })}
+    </div>
+
+    <div className="text-center mt-16">
+      <p className="text-gray-500 text-base mb-20">
+        We manage end-to-end documentation, government coordination, and
+        licensing so you can focus on growth, not paperwork.
+      </p>
+
+      <SharedFullButton
+        text={"Explore Complete Business Setup Service Guide"}
+        path={"/business-setup/uk"}
+      />
+    </div>
+  </div>
+</section>
 
       {/* Corporation Tax CT600 */}
-      <section className="pb-24 bg-white">
-        <div className="max-w-[1300px] mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl 2xl:text-5xl  leading-tight font-light text-[#16244b]">
-              <span className="font-bold">Corporation Tax</span> (CT600) Filing
-            </h2>
-            <p className="mt-8 text-base text-gray-500 leading-7 max-w-4xl mx-auto">
-              Optimised CT600 filing that minimises tax liability and ensures
-              compliance. Corporation Tax filing can be complex and missing
-              deadlines can lead to penalties. Our expert team handles your
-              CT600 submissions accurately, helping you stay fully compliant
-              while optimising your tax position.
-            </p>
-          </div>
 
-          <div className="grid lg:grid-cols-3  mt-24">
-            {ctFeatures.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-4 hover:bg-gray-100 p-10 rounded-3xl duration-300"
-                >
-                  <Icon className="text-4xl text-light-blue bg-light-blue/20  p-2 rounded-sm mb-6" />
-                  <h3 className="text-xl font-bold text-[#16244b] leading-snug mb-5">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+
+      <ServiceGrid description={<div className="text-center max-w-5xl mx-auto">Optimised CT600 filing that minimises tax liability and ensures
+        compliance. Corporation Tax filing can be complex and missing
+        deadlines can lead to penalties. Our expert team handles your
+        CT600 submissions accurately, helping you stay fully compliant
+        while optimising your tax position.</div>}
+        heading={<div className="text-center"><span className="font-bold">Corporation Tax</span> (CT600) Filing</div>}
+        services={ctFeatures}></ServiceGrid>
 
       {/* Self Assessment */}
       <section className="py-20 bg-white">
@@ -316,7 +346,7 @@ const Compliance_Regulatory = () => {
               <br />
               Tax Returns
             </h2>
-            <p className="mt-8 text-xl leading-7 text-gray-500">
+            <p className="mt-8 text-base leading-7 text-gray-500">
               Stress-free Self-Assessment Filing for Directors, Self-Employed,
               and High Earners. We handle your filing accurately and meet HMRC
               deadlines without hassle.
@@ -505,10 +535,12 @@ const Compliance_Regulatory = () => {
                   onClick={() => toggleAccordion(idx)}
                   className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition text-left"
                 >
-                  <img src={logo} className="w-8" alt="" />
-                  <span className="font-semibold text-gray-900">
-                    {item.title}
-                  </span>
+                  <div className="flex items-center gap-5">
+                    <img src={logo} className="w-8" alt="" />
+                    <span className="font-semibold text-gray-900">
+                      {item.title}
+                    </span>
+                  </div>
                   <ChevronDown
                     size={20}
                     className={`text-gray-600 transition-transform ${expandedItem === idx ? "rotate-180" : ""}`}
@@ -529,7 +561,7 @@ const Compliance_Regulatory = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center max-w-5xl mx-auto">
-            <h2 className="text-5xl m leading-tight text-white font-light">
+            <h2 className="text-4xl 2xl:text-5xl m leading-tight text-white font-light">
               National Insurance{" "}
               <span className="font-bold">Contributions Assessment</span>
             </h2>
@@ -548,8 +580,8 @@ const Compliance_Regulatory = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-20 h-20 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-5xl" />
+                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-10 text-xl font-medium text-white leading-relaxed">
                   {item}
@@ -577,7 +609,9 @@ const Compliance_Regulatory = () => {
                 key={index}
                 className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <LuShieldCheck className="text-light-blue text-3xl mx-auto mb-4" />
+                <div className="w-full flex justify-center mb-5">
+                  <img src={logo} alt="" />
+                </div>
                 <p className="text-gray-700 text-base font-semibold">{item}</p>
               </div>
             ))}
@@ -586,6 +620,7 @@ const Compliance_Regulatory = () => {
       </section>
 
       <ConsultationCTA
+        id={id}
         heading={
           <>
             Start Your UK
@@ -595,14 +630,14 @@ const Compliance_Regulatory = () => {
         }
         subheading="Get expert guidance, avoid costly delays, and build your UK presence with confidence."
         commitmentItems={[
-  "Free initial UK compliance consultation — no obligation",
-  "100% confidential handling of your business and regulatory information",
-  "Expert guidance on UK regulatory and statutory compliance",
-  "Practical, transparent support to keep your business fully compliant",
-]}
+          "Free initial UK compliance consultation — no obligation",
+          "100% confidential handling of your business and regulatory information",
+          "Expert guidance on UK regulatory and statutory compliance",
+          "Practical, transparent support to keep your business fully compliant",
+        ]}
       />
 
-     
+
     </div>
   );
 };

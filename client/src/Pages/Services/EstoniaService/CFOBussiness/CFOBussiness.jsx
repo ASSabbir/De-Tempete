@@ -23,7 +23,7 @@ import { blogPosts } from "@/Components/Shared/blogPosts";
 import SevicsBanner from "../../../../Components/Shared/SevicsBanner";
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import logo from '../../../../asstes/img_temp/logo.webp'
-
+import { motion } from "framer-motion";
 const cfoServices = [
   {
     icon: LuTarget,
@@ -124,96 +124,97 @@ const CFOBussiness = () => {
   const [expandedItem, setExpandedItem] = useState(null);
   const toggleAccordion = (idx) =>
     setExpandedItem(expandedItem === idx ? null : idx);
-
+  const id = 'services-estonia-cfo'
   return (
     <div className="w-full">
-      <SevicsBanner bgImage={bgimg} alt="Bangladesh Business Setup"
+      <SevicsBanner
+        id={id} bgImage={bgimg} alt="Bangladesh Business Setup"
         description="Support your Estonian company with strategic financial leadership and expert business advisory services. From budgeting, forecasting, and cash flow management to financial planning and performance analysis, we help you make informed decisions, improve profitability, and build a strong foundation for sustainable growth."
         title1={'Strengthen Financial Performance'}
         title2={'For  Estonia Business'}
 
       ></SevicsBanner>
 
-     {/* CFO & Business Advisory */}
-<section className="py-20 bg-white">
-  <div className="max-w-[1600px] mx-auto px-6">
+      {/* CFO & Business Advisory */}
+      <section className="py-20 bg-white">
+        <div className="max-w-[1600px] mx-auto px-6">
 
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-4xl font-light text-[#16244b]">
-        Strategic <span className="font-bold">Financial Leadership</span>
-      </h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-light text-[#16244b]">
+              Strategic <span className="font-bold">Financial Leadership</span>
+            </h2>
 
-      <p className="mt-5 text-gray-500 leading-8">
-        Our Virtual CFO and Business Advisory services help businesses in
-        Estonia strengthen financial performance, improve decision-making,
-        and develop long-term strategies for sustainable growth.
-      </p>
-    </div>
+            <p className="mt-5 text-gray-500 leading-8">
+              Our Virtual CFO and Business Advisory services help businesses in
+              Estonia strengthen financial performance, improve decision-making,
+              and develop long-term strategies for sustainable growth.
+            </p>
+          </div>
 
-    <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
 
-      {/* Virtual CFO */}
-      <div className="bg-[#F5F6F8] rounded-3xl p-10">
-        <h3 className="text-3xl font-light text-[#16244b]">
-          Virtual <span className="font-bold">CFO</span>
-        </h3>
+            {/* Virtual CFO */}
+            <div className="bg-[#F5F6F8] rounded-3xl p-10">
+              <h3 className="text-3xl font-light text-[#16244b]">
+                Virtual <span className="font-bold">CFO</span>
+              </h3>
 
-        <p className="mt-5 text-gray-500 leading-8">
-          Gain executive-level financial expertise without the cost of hiring
-          a full-time Chief Financial Officer. We provide strategic financial
-          planning, forecasting, budgeting, and performance monitoring to help
-          your business make informed financial decisions.
-        </p>
+              <p className="mt-5 text-gray-500 text-justify leading-8">
+                Gain executive-level financial expertise without the cost of hiring
+                a full-time Chief Financial Officer. We provide strategic financial
+                planning, forecasting, budgeting, and performance monitoring to help
+                your business make informed financial decisions.
+              </p>
 
-        <div className="mt-8 space-y-4">
-          {[
-            "Financial planning & budgeting",
-            "Cash flow forecasting",
-            "Financial reporting & KPI analysis",
-            "Profitability improvement",
-            "Investor & lender reporting",
-          ].map((item) => (
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-light-blue shrink-0" />
-              <span className="text-gray-600">{item}</span>
+              <div className="mt-8 space-y-4">
+                {[
+                  "Financial planning & budgeting",
+                  "Cash flow forecasting",
+                  "Financial reporting & KPI analysis",
+                  "Profitability improvement",
+                  "Investor & lender reporting",
+                ].map((item) => (
+                  <div className="flex items-center gap-3">
+                    <FaCheckCircle className="text-light-blue shrink-0" />
+                    <span className="text-gray-600">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Business Advisory */}
-      <div className="bg-[#16244B] rounded-3xl p-10 text-white">
-        <h3 className="text-3xl font-light">
-          Business <span className="font-bold">Advisory</span>
-        </h3>
+            {/* Business Advisory */}
+            <div className="bg-[#16244B] rounded-3xl p-10 text-white">
+              <h3 className="text-3xl font-light">
+                Business <span className="font-bold">Advisory</span>
+              </h3>
 
-        <p className="mt-5 text-slate-300 leading-8">
-          We help businesses identify opportunities, overcome operational
-          challenges, and build strategies for sustainable growth. Our advisors
-          provide practical insights that improve efficiency, manage risk, and
-          support confident business decisions.
-        </p>
+              <p className="mt-5 text-slate-300 text-justify leading-8">
+                We help businesses identify opportunities, overcome operational
+                challenges, and build strategies for sustainable growth. Our advisors
+                provide practical insights that improve efficiency, manage risk, and
+                support confident business decisions.
+              </p>
 
-        <div className="mt-8 space-y-4">
-          {[
-            "Business growth strategy",
-            "Operational performance improvement",
-            "Risk assessment & mitigation",
-            "Financial decision support",
-            "Long-term strategic planning",
-          ].map((item) => (
-            <div className="flex items-center gap-3">
-              <FaCheckCircle className="text-light-blue shrink-0" />
-              <span className="text-slate-200">{item}</span>
+              <div className="mt-8 space-y-4">
+                {[
+                  "Business growth strategy",
+                  "Operational performance improvement",
+                  "Risk assessment & mitigation",
+                  "Financial decision support",
+                  "Long-term strategic planning",
+                ].map((item) => (
+                  <div className="flex items-center gap-3">
+                    <FaCheckCircle className="text-light-blue shrink-0" />
+                    <span className="text-slate-200">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+
+          </div>
+
         </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+      </section>
 
 
       {/* Our Virtual CFO Services */}
@@ -230,14 +231,14 @@ const CFOBussiness = () => {
               const Icon = item.icon;
               return (
                 <div key={index}>
-                  <Icon className="text-4xl text-slate-500 mb-5" />
+                  <img src={logo} className="mb-3" alt="" />
                   <h3 className="text-xl font-bold text-[#16244b] mb-4">
                     {item.title}
                   </h3>
                   <ul className="space-y-2">
                     {item.items.map((li, i) => (
                       <li key={i} className="text-gray-500 text-base leading-6">
-                        - {li}
+                        {li}
                       </li>
                     ))}
                   </ul>
@@ -266,8 +267,8 @@ const CFOBussiness = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -278,9 +279,9 @@ const CFOBussiness = () => {
         </div>
       </section>
 
-      
 
-      
+
+
 
       {/* Why Choose Outsourced Accounting */}
       <section className="py-24 bg-white">
@@ -290,43 +291,54 @@ const CFOBussiness = () => {
               Why Choose{" "}
               <span className="font-bold">Outsourced Accounting?</span>
             </h2>
+
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyOutsourced.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                  <h3 className="text-base font-bold text-[#16244b]">
-                    {item.title}
-                  </h3>
+          <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+            {whyOutsourced.map((item, index) => {
+              const isDark = index === 0 || index === 3;
+
+              return (
+                <div
+                  key={index}
+                  className={`p-8 transition-all duration-300 hover:shadow-2xl ${isDark
+                      ? "bg-light-blue"
+                      : "bg-white border border-gray-200"
+                    }`}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div
+                      className={`w-10 h-10 rounded-sm flex items-center justify-center ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                        }`}
+                    >
+                      <img
+                        src={logo}
+                        className={`w-8 object-contain ${isDark ? "brightness-0 invert" : ""
+                          }`}
+                        alt=""
+                      />
+                    </div>
+
+                    <h3 className="text-base font-bold text-[#16244b]">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p
+                    className={`text-base leading-6 ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <ConsultationCTA
-        heading={
-          <>
-            Start Your Estonia{" "}
-            <span className="font-bold">
-              Virtual
-              <br />
-              CFO Today
-            </span>
-          </>
-        }
-        subheading="Get expert guidance, avoid costly delays, and build your Estonia presence with confidence."
-        commitmentTitle="Let's Strengthen Your Financial Leadership"
-        bodyText="Gain strategic clarity, financial control, and expert insight, without the cost of a full-time CFO."
-      />
+     
       {/* Outsourced Accounting Services */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -374,23 +386,24 @@ const CFOBussiness = () => {
         </div>
       </section>
       <ConsultationCTA
-  heading={
-    <>
-      Simplify Your
-      <br />
-      <span className="font-bold">Accounting in Estonia</span>
-    </>
-  }
-  subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
-  commitmentItems={[
-    "Free initial consultation — no obligation",
-    "Confidential & GDPR-compliant financial handling",
-    "Experienced Estonia accounting professionals",
-    "Tailored bookkeeping and reporting solutions",
-  ]}
-/>
+       id={id}
+        heading={
+          <>
+            Simplify Your
+            <br />
+            <span className="font-bold">Accounting in Estonia</span>
+          </>
+        }
+        subheading="Whether you're launching a startup, managing an established company, or expanding into Estonia, our accounting and bookkeeping services keep your finances accurate, compliant, and business-ready."
+        commitmentItems={[
+          "Free initial consultation — no obligation",
+          "Confidential & GDPR-compliant financial handling",
+          "Experienced Estonia accounting professionals",
+          "Tailored bookkeeping and reporting solutions",
+        ]}
+      />
 
-      
+
     </div>
   );
 };

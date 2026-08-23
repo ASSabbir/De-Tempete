@@ -1,6 +1,6 @@
 // File: Taxation_UAE.jsx
 import { CalendarDays, Globe, Handshake, Medal } from "lucide-react";
-import { FaCheckCircle,FaArrowRight } from "react-icons/fa";
+import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { HeroSection } from "@/Components/Shared/HeroSection";
 import { StatsSection } from "@/Components/Shared/StatsSection";
@@ -9,8 +9,10 @@ import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-imag
 import img1 from '../../../../asstes/img_temp/servics/freepik__create-image-for-wesite-section-corporate-tax-advi__80768.webp'
 import img2 from '../../../../asstes/img_temp/servics/KSA/VAT.webp'
 import img3 from '../../../../asstes/img_temp/servics/1775737113368.jpg'
+import logo from '../../../../asstes/img_temp/logo.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import { ConsultationCTA } from "../../../../Components/Shared/ConsultationCTA";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
 const whyChoose = [
   {
     title: "UAE-Focused Expertise",
@@ -37,9 +39,11 @@ const transferPricing = [
 ];
 
 const Taxation_UAE = () => {
+  const id = 'services-uae-tax'
   return (
     <div className="w-full">
-       <HeroSection
+      <HeroSection
+        id={id}
         bgImage={bgimg}
         alt="Taxation UAE"
         heading={<>Simplify Your Business<br /><span className="text-light-blue">Taxes In The UAE</span></>}
@@ -157,6 +161,9 @@ const Taxation_UAE = () => {
           </div>
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/uae'}></SharedFullButton>
+      </div>
 
       {/* Transfer Pricing */}
       <section className="bg-[#16244B] py-24">
@@ -182,8 +189,8 @@ const Taxation_UAE = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-12 px-8 text-center transition-all duration-300 hover:-translate-y-2 hover:bg-[#43507d] hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto">
-                  <LuChartNoAxesCombined className="text-white text-4xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto">
+                  <img src={logo} alt="" />
                 </div>
                 <h3 className="mt-8 text-base font-medium text-white leading-relaxed">
                   {item}
@@ -205,25 +212,54 @@ const Taxation_UAE = () => {
             <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16 max-w-5xl mx-auto">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-5 border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <LuChartNoAxesCombined className="text-light-blue text-2xl shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold text-[#16244b] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 gap-5 mt-16 max-w-5xl mx-auto">
+  {whyChoose.map((item, index) => {
+    const isDark = index === 0 || index === 3;
+
+    return (
+      <div
+        key={index}
+        className={`flex items-start gap-5 p-8 transition-all duration-300 hover:shadow-2xl ${
+          isDark
+            ? "bg-light-blue"
+            : "bg-white border border-gray-200"
+        }`}
+      >
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center shrink-0 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            className={`w-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+            alt=""
+          />
+        </div>
+
+        <div>
+          <h3 className="text-base font-bold text-[#16244b] mb-2">
+            {item.title}
+          </h3>
+
+          <p
+            className={`text-base leading-6 ${
+              isDark ? "text-gray-700" : "text-gray-500"
+            }`}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
-       <ConsultationCTA
+      <ConsultationCTA
+      id={id}
         heading={
           <>
             Ready To Simplify Your{" "}
@@ -235,16 +271,17 @@ const Taxation_UAE = () => {
         subheading="Partner with de tempête and take control of your corporate, VAT,
                 excise, and cross-border tax obligations with confidence."
         commitmentItems={[
-          "Vendor evaluation & negotiation support",
-          "Procurement process setup & optimization",
-          "Contract & supplier performance management",
-          "Day-to-day procurement & operational support",
+          "Accurate & compliant tax filings",
+          "Proactive tax planning & deadline management",
+          "End-to-end support from registration to filing",
+          "Transparent advice & ongoing support",
+          "FTA-ready compliance with confidence",
         ]}
       />
 
-      
 
-      
+
+
     </div>
   );
 };

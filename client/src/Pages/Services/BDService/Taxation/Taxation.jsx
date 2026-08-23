@@ -10,6 +10,8 @@ import img3 from '../../../../asstes/img_temp/servics/Bd/Tax-planning-support.we
 import logo from '../../../../asstes/img_temp/logo.webp'
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import SecondSection from "../../../../Components/Shared/SecondSection";
+import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
@@ -78,11 +80,12 @@ const Taxation = () => {
       title: "Improved User Experience",
       icon: FaCheckCircle,
     },
-  ];
+  ];const id = 'services-bd-Tax'
 
   return (
     <div className="w-full">
       <HeroSection
+      id={id}
         bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
@@ -93,8 +96,8 @@ const Taxation = () => {
             </span>
           </>
         }
-        description={<><span className="font-bold italic">de tempête</span> provides taxation and compliance support services in Bangladesh, helping businesses manage tax obligations, maintain accurate financial records, and reduce regulatory risks through structured tax solutions.</>}
-        ctaText="Request Consultation"
+        description={<><span className="font-bold italic">de tempête</span> provides taxation and compliance support services in Bangladesh, helping businesses manage Tax obligations, maintain accurate financial records, and reduce regulatory risks through structured Tax solutions.</>}
+        ctaText="Book a Consultation"
       />
 
       <SecondSection></SecondSection>
@@ -108,17 +111,17 @@ const Taxation = () => {
             </h2>
             <p className="text-base text-gray-600 leading-6 mb-4">
               <span className="italic font-bold">de tempête</span> delivers reliable and compliant taxation services in
-              Bangladesh,<br/> helping businesses navigate the country's evolving tax
+              Bangladesh,<br/> helping businesses navigate the country's evolving Tax
               framework with confidence. Our approach is aligned with the
               regulations of the National Board of Revenue (NBR), ensuring
-              accurate tax handling across VAT, corporate tax, and statutory
-              filings. From tax registration and documentation to ongoing
+              accurate Tax handling across VAT, corporate Tax, and statutory
+              filings. From Tax registration and documentation to ongoing
               compliance and reporting, we support businesses in maintaining
               structured, audit-ready financial records.
             </p>
             <p className="text-base text-gray-600 leading-6">
-              We help reduce tax-related risks, improve reporting accuracy, and
-              streamline tax processes so your operations remain smooth and
+              We help reduce Tax-related risks, improve reporting accuracy, and
+              streamline Tax processes so your operations remain smooth and
               fully compliant. With a focus on clarity, efficiency, and
               long-term financial stability, <span className="italic font-bold">de tempête</span> ensures your business
               stays aligned with Bangladesh's regulatory requirements while
@@ -181,6 +184,9 @@ const Taxation = () => {
           </div>
         </div>
       </section>
+      <div className="mb-20 flex justify-center">
+        <SharedFullButton text={'Legal & Regulatory Update'} path={'/library/bangladesh'}></SharedFullButton>
+      </div>
       {/* What You Gain Section */}
       <section className="bg-[#16244B] py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -197,8 +203,8 @@ const Taxation = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <img src={logo} alt="" />
                 </div>
 
                 <h3 className="text-xl font-semibold text-white leading-snug">
@@ -212,71 +218,95 @@ const Taxation = () => {
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-5xl text-[#16244b]">
-              Why Choose Our{" "}
-              <span className="text-light-blue font-extrabold">Taxation</span>{" "}
-              Service?
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl text-[#16244b]">
+        Why Choose Our{" "}
+        <span className="text-light-blue font-extrabold">Taxation</span>{" "}
+        Service?
+      </h2>
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Local Tax Compliance Expertise",
+          desc: "Support aligned with Bangladesh Taxation laws, filing requirements, and business regulations.",
+        },
+        {
+          title: "Accurate Tax Documentation",
+          desc: "Structured tax records and reporting processes to reduce errors and compliance risks.",
+        },
+        {
+          title: "Business-Focused Tax Support",
+          desc: "Practical Taxation solutions designed to support operational efficiency and financial clarity.",
+        },
+        {
+          title: "End-to-End Coordination",
+          desc: "From Tax preparation to submission support, we help manage the complete taxation process.",
+        },
+        {
+          title: "Efficient Financial Organization",
+          desc: "Improved financial tracking and Tax management systems for smoother business operations.",
+        },
+        {
+          title: "Reliable Ongoing Assistance",
+          desc: "Continuous support to help businesses stay updated with changing Tax requirements.",
+        },
+      ].map((feature, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Local Tax Compliance Expertise",
-                desc: "Support aligned with Bangladesh taxation laws, filing requirements, and business regulations.",
-              },
-              {
-                title: "Accurate Tax Documentation",
-                desc: "Structured tax records and reporting processes to reduce errors and compliance risks.",
-              },
-              {
-                title: "Business-Focused Tax Support",
-                desc: "Practical taxation solutions designed to support operational efficiency and financial clarity.",
-              },
-              {
-                title: "End-to-End Coordination",
-                desc: "From tax preparation to submission support, we help manage the complete taxation process.",
-              },
-              {
-                title: "Efficient Financial Organization",
-                desc: "Improved financial tracking and tax management systems for smoother business operations.",
-              },
-              {
-                title: "Reliable Ongoing Assistance",
-                desc: "Continuous support to help businesses stay updated with changing tax requirements.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                {/* Icon + Title */}
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg  flex items-center justify-center shrink-0">
-                    <img src={logo} alt="" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-[#16244b]">
-                    {feature.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Build Smarter VAT & Tax Systems in Bangladesh
@@ -284,7 +314,7 @@ const Taxation = () => {
             <span className="font-bold">Today</span>
           </>
         }
-        commitmentTitle="Get expert guidance on NBR VAT compliance and digital tax solutions tailored to your business"
+        commitmentTitle="Get expert guidance on NBR VAT compliance and digital Tax solutions tailored to your business"
         commitmentTitleOnly
       />
 

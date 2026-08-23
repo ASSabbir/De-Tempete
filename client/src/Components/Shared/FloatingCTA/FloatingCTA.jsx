@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { FaPhoneAlt, FaWhatsapp, FaTimes, FaCommentDots } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaFacebookMessenger, FaTimes, FaCommentDots } from 'react-icons/fa';
 
 const PHONE_NUMBER = '+971503919790';       // <-- replace with real number
 const WHATSAPP_NUMBER = '+971566994282';     // <-- replace, no + or spaces
+const MESSENGER_USERNAME = 'detempete';      // links to m.me/detempete
 
 const FloatingCTA = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -82,6 +83,21 @@ const FloatingCTA = () => {
                 <div className="flex flex-col items-end gap-3">
                     <a
                         ref={(el) => (optionsRef.current[0] = el)}
+                        href={`https://m.me/${MESSENGER_USERNAME}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group"
+                    >
+                        <span className="bg-white text-[#16244b] text-sm font-semibold px-3 py-1.5 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline-block">
+                            Messenger
+                        </span>
+                        <span className="w-12 h-12 rounded-full bg-[#0084FF] flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                            <FaFacebookMessenger className="text-white text-xl" />
+                        </span>
+                    </a>
+
+                    <a
+                        ref={(el) => (optionsRef.current[1] = el)}
                         href={`https://wa.me/${WHATSAPP_NUMBER}`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -96,7 +112,7 @@ const FloatingCTA = () => {
                     </a>
 
                     <a
-                        ref={(el) => (optionsRef.current[1] = el)}
+                        ref={(el) => (optionsRef.current[2] = el)}
                         href={`tel:${PHONE_NUMBER}`}
                         className="flex items-center gap-3 group"
                     >

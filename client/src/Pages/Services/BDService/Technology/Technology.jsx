@@ -1,6 +1,4 @@
-import { BarChart3, PieChart, TrendingUp, Award } from "lucide-react";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaCircleCheck } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import {
   FiFileText,
   FiGitPullRequest,
@@ -9,9 +7,9 @@ import {
   FiRepeat,
 } from "react-icons/fi";
 import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
-import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
+import { FaBoxes } from "react-icons/fa";
 import logo from '../../../../asstes/img_temp/logo.webp'
 const automationFeatures = [
   {
@@ -64,7 +62,7 @@ import e from "../../../../asstes/img_temp/New folder/13-1.webp";
 import f from "../../../../asstes/img_temp/New folder/6-1.webp";
 import g from "../../../../asstes/img_temp/New folder/2.webp";
 import bg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
-import img1 from '../../../../asstes/img_temp/servics/Bd/Business-Process-Automation.webp'
+import img1 from '../../../../asstes/img_temp/servics/UK/Business-Process-Automation.png'
 import SecondSection from "../../../../Components/Shared/SecondSection";
 import AccountingSoftwareImplementation from "../../../../Components/Shared/Accountingsoftwareimplementation";
 const logos = [tableau, sage, a, b, c, d, e, f, g];
@@ -81,9 +79,14 @@ const bangladeshFeatures = [
     title: "Payroll module setup",
     description: "Configure payroll processes, employee records, and salary calculations.",
   },
+
   {
     title: "Data migration",
     description: "Transfer opening balances and historical transactions from existing systems.",
+  },
+  {
+    title: "Automated Reporting & Dashboards",
+    description: "Set up real-time financial reports and dashboards for faster, data-driven decisions.",
   },
   {
     title: "User access controls",
@@ -93,6 +96,11 @@ const bangladeshFeatures = [
     title: "Staff training & handover",
     description: "Provide practical training and documentation for smooth adoption.",
   },
+  {
+    title: "Customized Software Solutions",
+    description: "Tailored accounting software features, workflows, and integrations designed around your specific business needs.",
+  },
+
 ];
 const Technology = () => {
   const servicesData = [
@@ -126,49 +134,54 @@ const Technology = () => {
         "Automated reporting systems that provide accurate real-time business insights.",
       icon: FaChartBar,
     },
+    {
+      title: "Inventory Management Software",
+      description:
+        "Smart inventory management solutions for tracking stock, orders, and business operations efficiently.",
+      icon: FaBoxes,
+    },
   ];
 
-  const benefitsData = [
-    {
-      title: "System Monitoring",
-      description: "Real-time monitoring for stable business operations.",
-      icon: FaCheckCircle,
-    },
-    {
-      title: "Software Updates",
-      description: "Keeping systems optimized, secure, and up to date.",
-      icon: FaCheckCircle,
-    },
-    {
-      title: "Issue Troubleshooting",
-      description: "Quick resolution of technical and operational issues.",
-      icon: FaCheckCircle,
-    },
-    {
-      title: "Technical Assistance",
-      description: "Continuous support for day-to-day system needs.",
-      icon: FaCheckCircle,
-    },
-  ];
+  const IconWrap = ({ children, isDark }) => (
+    <div
+      className={`w-12 h-12 rounded-sm flex items-center justify-center text-2xl ${isDark
+          ? "bg-white/15 text-white"
+          : "bg-light-blue/20 text-light-blue"
+        }`}
+    >
+      {children}
+    </div>
+  );
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: (i % 3) * 0.12,
+        ease: "easeOut",
+      },
+    }),
+  };
+  const id = 'services-bd-tech'
 
   return (
     <div className="w-full">
       <HeroSection
+        id={id}
         bgImage={bg}
         alt="Bangladesh Business Setup"
         heading={
           <>
-            Expand Through Strategic <br />
-            <span className="text-light-blue">Partnerships in Bangladesh</span>
+            Transform Your Business with  <br />
+            <span className="text-light-blue">Smarter Technology</span>
           </>
         }
         description={
           <>
-            Unlock growth opportunities with investment and partnership
-            facilitation services in Bangladesh. <strong><i>de tempête</i></strong>{" "}
-            connects businesses with the right investors, partners, and market
-            opportunities, helping you expand, collaborate, and scale with
-            confidence in Bangladesh's growing economy.
+            <strong><i>de tempête</i></strong>{" "} provides <strong>digital transformation and business technology solutions in Bangladesh,</strong> helping startups, SMEs and growing businesses streamline operations, automate processes and improve decision-making. From <strong>ERP and accounting software implementation to cloud solutions, workflow automation and system integration,</strong> we combine technology with business expertise to build efficient, scalable and future-ready operations.
           </>
         }
         ctaText="Request Consultation"
@@ -180,14 +193,13 @@ const Technology = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
-
           <div className="max-w-5xl mx-auto text-center mb-16">
             <h2 className="text-4xl 2xl:text-5xl leading-tight text-[#16244b]">
               <span className="font-light">Software Solutions For</span>{" "}
               <span className="font-bold">Businesses</span>
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-gray-600 max-w-4xl mx-auto">
+            <p className="mt-6 text-base leading-8 text-gray-600 text-justify max-w-4xl mx-auto">
               We help businesses implement and optimize modern software
               solutions, including cloud accounting platforms, workflow systems,
               and operational tools that improve efficiency and reduce manual
@@ -195,35 +207,48 @@ const Technology = () => {
             </p>
           </div>
 
-          {/* Cards */}
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-0 border border-gray-200 rounded-xl overflow-hidden">
+          {/* Signature Chessboard Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {servicesData.map((service, index) => {
               const Icon = service.icon;
 
+              const row = Math.floor(index / 3);
+              const col = index % 3;
+
+              // Blue / White chessboard pattern
+              const isDark = (row + col) % 2 === 0;
+
               return (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white p-8 border-r border-b lg:border-b-0 last:border-r-0 border-gray-200 hover:bg-[#f8fbff] duration-300"
+                  custom={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-60px" }}
+                  className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
                 >
                   {/* Icon */}
-
-                  <div className="mb-8">
-                    <Icon className="text-light-blue text-4xl 2xl:text-5xl" />
+                  <div className="w-fit">
+                    <IconWrap isDark={isDark}>
+                      <Icon />
+                    </IconWrap>
                   </div>
 
                   {/* Title */}
-
-                  <h3 className="text-[28px] font-bold leading-snug text-[#16244b] mb-5">
+                  <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-
-                  <p className="text-gray-600 text-base leading-8">
+                  <p
+                    className={`text-sm leading-relaxed text-justify ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
                     {service.description}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -244,10 +269,10 @@ const Technology = () => {
                 <span className="font-bold">Automation</span>
               </h2>
 
-              <p className="text-base leading-8 text-gray-600 mb-6 max-w-xl">
+              <p className="text-base text-justify leading-8 text-gray-600 mb-6 max-w-xl">
                 We help businesses eliminate repetitive work, automate everyday
                 operations, and improve productivity through intelligent digital
-                workflows and cloud-based business solutions.
+                workflows and cloud based business solutions.
               </p>
 
               {/* Features */}
@@ -299,68 +324,96 @@ const Technology = () => {
 
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl 2xl:text-6xl text-[#16244b]">
-              Why choose our{" "}
-              <span className="text-dark-blue font-extrabold">
-                technology services?
-              </span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-6xl text-[#16244b]">
+        Why choose our{" "}
+        <span className="text-dark-blue font-extrabold">
+          technology services?
+        </span>
+      </h2>
+
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Practical Business Automation",
+          desc: "Helping businesses reduce manual work and improve daily operations.",
+        },
+        {
+          title: "Reliable Software Implementation",
+          desc: "Smooth setup and support for modern business and accounting software.",
+        },
+        {
+          title: "Improved Operational Efficiency",
+          desc: "Technology solutions designed to save time and increase accuracy.",
+        },
+        {
+          title: "Cloud Accounting Expertise",
+          desc: "Experience with leading cloud accounting and financial software platforms.",
+        },
+        {
+          title: "Ongoing Technical Support",
+          desc: "Continuous assistance to ensure systems run smoothly and efficiently.",
+        },
+        {
+          title: "Business-Centered Approach",
+          desc: "Technology solutions tailored to real operational and business needs.",
+        },
+      ].map((feature, index) => {
+        // Chessboard pattern:
+        // Row 1 → Blue, White, Blue
+        // Row 2 → White, Blue, White
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Practical Business Automation",
-                desc: "Helping businesses reduce manual work and improve daily operations.",
-              },
-              {
-                title: "Reliable Software Implementation",
-                desc: "Smooth setup and support for modern business and accounting software.",
-              },
-              {
-                title: "Improved Operational Efficiency",
-                desc: "Technology solutions designed to save time and increase accuracy.",
-              },
-              {
-                title: "Cloud Accounting Expertise",
-                desc: "Experience with leading cloud accounting and financial software platforms.",
-              },
-              {
-                title: "Ongoing Technical Support",
-                desc: "Continuous assistance to ensure systems run smoothly and efficiently.",
-              },
-              {
-                title: "Business-Centered Approach",
-                desc: "Technology solutions tailored to real operational and business needs.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg  flex items-center justify-center shrink-0">
-                    <img src={logo} alt="" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-[#16244b]">
-                    {feature.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="pt-15 bg-white overflow-hidden">
+        );
+      })}
+    </div>
+  </div>
+</section>
+      <section className="pt-5 bg-white overflow-hidden">
         <div className=" mx-auto max-w-7xl px-6">
           <h2 className="text-center text-4xl 2xl:text-5xl font-light text-[#16244B] mb-20">
             Technological <span className="font-bold">Partner</span>
@@ -370,7 +423,7 @@ const Technology = () => {
             <div
               className="flex items-center"
               style={{
-                animation: "scrollLeft 35s linear infinite",
+                animation: "scrollLeft1 10s linear infinite",
               }}
             >
               {[...logos, ...logos].map((logo, index) => (
@@ -386,7 +439,7 @@ const Technology = () => {
           </div>
 
           <style>{`
-      @keyframes scrollLeft {
+      @keyframes scrollLeft1 {
         from {
           transform: translateX(0);
         }
@@ -399,6 +452,7 @@ const Technology = () => {
       </section>
 
       <ConsultationCTA
+        id={id}
         heading={
           <>
             Transform Your Business with
@@ -417,7 +471,7 @@ const Technology = () => {
 
       {/* Technological Partner Section */}
 
-      
+
     </div>
   );
 };

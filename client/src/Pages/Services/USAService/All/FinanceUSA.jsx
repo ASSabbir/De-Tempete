@@ -4,14 +4,12 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { ShieldCheck, Users, DollarSign } from "lucide-react";
 
-import { HeroSection } from "@/Components/Shared/HeroSection";
-import { StatsSection } from "@/Components/Shared/StatsSection";
 import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
-import { RecentBlogs } from "@/Components/Shared/RecentBlogs";
-import { blogPosts } from "@/Components/Shared/blogPosts";
+
 import SevicsBanner from '../../../../Components/Shared/SevicsBanner';
 import bgimg from '../../../../asstes/img_temp/freepik__the-style-is-candid-image-photography-with-natural__92079.webp'
 import img1 from '../../../../asstes/img_temp/servics/usabanner.webp'
+import logo from '../../../../asstes/img_temp/logo.webp'
 const servicesData = [
   {
     title: "Accounting & Bookkeeping",
@@ -68,7 +66,7 @@ const servicesData = [
       "Digital accounting set up and support. We help you choose, implement, and optimize systems like QuickBooks, Xero, SAP, Tally, or customized ERP solutions based on your business size and needs.",
   },
 ];
-
+import { motion } from "framer-motion";
 const benefitsData = [
   { title: "Confidence In Your Financials", icon: FaCheckCircle },
   { title: "Better Budgeting And Cash Management", icon: FaCheckCircle },
@@ -78,10 +76,12 @@ const benefitsData = [
 ];
 
 const FinanceUSA = () => {
+  const id = 'services-usa-finance'
   return (
     <div className="w-full">
       
       <SevicsBanner
+      id={id}
                 bgImage={bgimg}
                 alt="USA Market Expansion & Business Setup"
                 description="Managing finance and accounting in USA requires local expertise, global standards, and precision. Whether you're a startup, SME, or multinational, our Finance & Accounting services give you reliable records, compliance assurance, and strategic financial visibility, so you can focus on growth."
@@ -96,14 +96,14 @@ const FinanceUSA = () => {
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl leading-tight text-[#16244b] font-light">
+              <h2 className="text-3xl md:text-4xl 2xl:text-5xl leading-tight text-[#16244b] font-light">
                 <span className="font-bold">Financial Governance,</span>
                 <br />
                 <span className="font-bold">Controls & Investor</span>
                 <br />
                 Readiness
               </h2>
-              <p className="mt-8 text-xl leading-7 text-gray-600 text-justify">
+              <p className="mt-8 text-base leading-7 text-gray-600 text-justify">
                 A strong financial structure is essential for regulatory
                 compliance, audit transparency, and investor confidence. We
                 establish robust accounting frameworks aligned with IFRS, tax
@@ -140,40 +140,72 @@ const FinanceUSA = () => {
 
       {/* What We Do Section */}
       <section className="py-24 bg-[#f8fbff]">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-5xl font-bold text-[#13264d] mb-4">
-              What We Do
-            </h2>
-            <p className="text-base text-gray-600 leading-8">
-              We provide comprehensive accounting and finance services for
-              USA businesses, including both standalone and retainer
-              engagement models.
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center max-w-4xl mx-auto mb-20">
+      <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-[#13264d] mb-4">
+        What We Do
+      </h2>
+
+      <p className="text-base text-gray-600 leading-8">
+        We provide comprehensive accounting and finance services for
+        USA businesses, including both standalone and retainer
+        engagement models.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {servicesData.map((service, index) => {
+        const Icon = service.icon;
+
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Icon */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark
+                  ? "bg-white/15 text-white"
+                  : "bg-light-blue/20 text-light-blue"
+              }`}
+            >
+              <Icon className="text-2xl" />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {service.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {service.description}
             </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {servicesData.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 duration-300 border border-gray-100"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-[#e0f4ff] flex items-center justify-center mb-6">
-                    <Icon className="text-light-blue text-4xl" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#16244b] mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-base leading-7">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       
 
@@ -181,7 +213,7 @@ const FinanceUSA = () => {
       <section className="bg-[#16244B] py-24">
         <div className="max-w-[1600px] mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white">What You Gain</h2>
+            <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-white">What You Gain</h2>
             <div className="w-24 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
           </div>
           <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
@@ -190,10 +222,10 @@ const FinanceUSA = () => {
                 key={index}
                 className="bg-[#39446B] border border-white/10 rounded-2xl py-10 px-8 text-center hover:bg-[#43507d] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-light-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="text-white text-3xl" />
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <img src={logo} alt="" />
                 </div>
-                <h3 className="text-xl font-semibold text-white leading-snug">
+                <h3 className="text-base font-semibold text-white leading-snug">
                   {benefit.title}
                 </h3>
               </div>
@@ -203,58 +235,100 @@ const FinanceUSA = () => {
       </section>
       {/* Why Choose Our Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl  text-[#16244b]">
-              Why Choose <span className="font-bold italic">de tempête</span> Finance & Accounting Services
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Expert USA Financial Knowledge",
-                desc: "Deep understanding of local regulations, taxation, and reporting expectations across USA's business landscape.",
-              },
-              {
-                title: "Accurate & Timely Records",
-                desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data.",
-              },
-              {
-                title: "Strategic Financial Insights",
-                desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making.",
-              },
-              {
-                title: "Scalable Accounting Solutions",
-                desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function.",
-              },
-              {
-                title: "Seamless Tech Integration",
-                desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works.",
-              },
-              {
-                title: "Trusted Long-Term Partner",
-                desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-linear-to-br from-[#f8fbff] to-white rounded-2xl p-8 border border-[#e0f4ff] hover:shadow-xl transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-light-blue/20 flex items-center justify-center mb-6">
-                  <FaCheckCircle className="text-light-blue text-xl" />
-                </div>
-                <h3 className="text-xl font-bold text-[#16244b] mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-7">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-20">
+      <h2 className="text-4xl text-[#16244b]">
+        Why Choose{" "}
+        <span className="font-bold italic">de tempête</span> Finance &
+        Accounting Services
+      </h2>
+
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        {
+          title: "Expert USA Financial Knowledge",
+          desc: "Deep understanding of local regulations, taxation, and reporting expectations across USA's business landscape.",
+        },
+        {
+          title: "Accurate & Timely Records",
+          desc: "Reliable bookkeeping and closing cycles that eliminate backlogs and discrepancies in your financial data.",
+        },
+        {
+          title: "Strategic Financial Insights",
+          desc: "Actionable reporting and dashboards that support smarter, faster executive decision-making.",
+        },
+        {
+          title: "Scalable Accounting Solutions",
+          desc: "Processes built for growth, from startups to multi-entity expansion, without rebuilding your finance function.",
+        },
+        {
+          title: "Seamless Tech Integration",
+          desc: "Support with selection, setup, and optimization of accounting systems that fit how your team actually works.",
+        },
+        {
+          title: "Trusted Long-Term Partner",
+          desc: "Not just numbers, ongoing advisory support and financial planning that grows with your business.",
+        },
+      ].map((feature, index) => {
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.5,
+              delay: (index % 3) * 0.12,
+              ease: "easeOut",
+            }}
+            className={`flex p-10 flex-col gap-4 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-xl 2xl:text-[1.1vw] leading-snug text-[#16244b]">
+              {feature.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-sm leading-relaxed text-justify ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {feature.desc}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
+      id={id}
         heading={
           <>
             Get Started
