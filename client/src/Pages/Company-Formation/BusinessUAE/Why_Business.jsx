@@ -59,7 +59,7 @@ const Why_Business = () => {
 
           <div className="group bg-white hover:bg-[#f0fafd] rounded-bl-3xl p-10 h-56 flex items-center justify-center text-center shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default">
             <h3 className="text-[#14224A] text-base md:text-xl font-medium leading-relaxed transition-transform duration-500 group-hover:scale-105">
-              Simple digital registration and business bank accoun
+              Simple digital registration and business bank account
             </h3>
           </div>
 

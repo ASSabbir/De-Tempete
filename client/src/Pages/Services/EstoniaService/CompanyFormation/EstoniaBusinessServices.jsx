@@ -13,6 +13,7 @@ import {
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
+import { GrLocation } from "react-icons/gr";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,59 +31,58 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: Building2,
-    title: "Company Formation & Registration",
+    title: "Business Structure Advisory",
     description:
-      "Complete support for establishing your Estonian company with the right structure, documentation, and registration requirements.",
+      "We help you choose the right structure — OÜ, AS, or branch — based on your ownership plans and growth stage.",
   },
   {
     icon: FileCheck2,
-    title: "Corporate Documentation Support",
+    title: "Commercial Register Registration",
     description:
-      "Preparation and coordination of essential company documents, registrations, and statutory records.",
+      "Full application support through Estonia's e-Business Register, including the required EMTAK activity code.",
   },
   {
     icon: MapPin,
-    title: "Registered Office Services",
+    title: "Legal Address Service",
     description:
-      "Professional registered office solutions that help your company maintain a compliant presence in Estonia.",
+      "A registered Estonian legal address that satisfies the Commercial Code requirements without the need for a physical office.",
   },
   {
     icon: UserCheck,
-    title: "Management & UBO Compliance",
+    title: "Contact Person Service",
     description:
-      "Support with management board requirements, beneficial ownership declarations, and related corporate compliance matters.",
+      "A licensed local contact person arranged whenever your entire management board resides outside Estonia.",
   },
   {
     icon: Receipt,
-    title: "Tax Registration & Advisory",
+    title: "VAT Registration Support",
     description:
-      "Guidance on Estonian tax registrations and obligations based on your company's activities and business model.",
+      "We register your company for VAT when your turnover or business activity requires it.",
   },
   {
     icon: Ship,
-    title: "Import & Export Compliance",
+    title: "EORI Registration Support",
     description:
-      "Assistance with customs-related registrations and documentation for businesses trading goods within and outside the EU.",
+      "For companies importing or exporting goods, we secure your EORI number for customs clearance across the EU.",
   },
   {
     icon: Wallet,
-    title: "Business Banking Assistance",
+    title: "Bank Account & Fintech Setup",
     description:
-      "Practical support for selecting and setting up suitable business banking and payment solutions for your company.",
+      "Guided account opening with Wise Business, Revolut Business, Paysera, or traditional Estonian banks.",
   },
   {
     icon: Globe2,
+    title: "EU Market Entry Advisory",
+    description:
+      "Strategic guidance on trading across the EU Single Market, from your first invoice onward.",
+  },
+  {
+    icon: GrLocation,
     title: "Cross-Border Business Support",
     description:
       "Helping Estonian companies manage regulatory and operational requirements when expanding into international markets.",
   },
-  {
-    icon: ShieldCheck,
-    title: "Ongoing Corporate Compliance",
-    description:
-      "Continuous support for maintaining statutory obligations, regulatory filings, company records, and compliance requirements.",
-  },
-  
 ];
 
 export default function EstoniaBusinessServices() {

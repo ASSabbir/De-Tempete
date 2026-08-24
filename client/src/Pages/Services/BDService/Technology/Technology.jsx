@@ -100,6 +100,11 @@ const bangladeshFeatures = [
     title: "Customized Software Solutions",
     description: "Tailored accounting software features, workflows, and integrations designed around your specific business needs.",
   },
+   {
+    title: "Third-Party Software Integration",
+    description:
+      "Connect accounting systems with CRM, ERP, e-commerce, payment, and other business platforms.",
+  },
 
 ];
 const Technology = () => {
