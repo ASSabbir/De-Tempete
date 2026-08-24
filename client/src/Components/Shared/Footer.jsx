@@ -118,27 +118,16 @@ const Footer = () => {
   const nav=useLocation()
   console.log(nav.pathname)
   const officeCards = [
-  {
-    title: "UK",
-    phone: "+44 7831 848639",
-    address: "",
-  },
-  {
-    title: "BANGLADESH",
-    phone: "+88 0195 333 5155",
-    address:
-      "Bashati Xclusive, Flat - B4, House - 06, Road - 07, Niketon, Dhaka 1212, Bangladesh",
-  },
-  {
+    {
     title: "UAE",
     phone: "+971 56 699 4282",
     address:
       "Office 601/31, Business Village Block B - Port Saeed - Deira - Dubai - United Arab Emirates",
   },
   {
-    title: "ESTONIA",
-    phone: "+372 5781 8653",
-    address: "Volume 20/3, Tallinn 13516, Estonia",
+    title: "UK",
+    phone: "+44 7831 848639",
+    address: "",
   },
   {
     title: "KSA",
@@ -146,6 +135,24 @@ const Footer = () => {
     address:
       "Office # 303, Al Mohamdia Tower, Custodian of the Two Holy Mosques Road, Al Aqrabiyah City, Al Khobar, Ash Sharqiyah, Saudi Arabia",
   },
+  {
+    title: "BANGLADESH",
+    phone: "+88 0195 333 5155",
+    address:
+      "Bashati Xclusive, Flat - B4, House - 06, Road - 07, Niketon, Dhaka 1212, Bangladesh",
+  },
+  
+  {
+    title: "ESTONIA",
+    phone: "+372 5781 8653",
+    address: "Volume 20/3, Tallinn 13516, Estonia",
+  },
+  {
+    title: "USA",
+    phone: "+971 50 391 9790",
+    address: "Volume 20/3, Tallinn 13516, Estonia",
+  },
+  
 ];
 const [ebrochureUrl, setEbrochureUrl] = useState(
     "https://drive.google.com/drive/folders/1FC48R1L1bhjZkKGacmNNtkZczmHbjoQ7" // fallback = your current hardcoded link
@@ -292,7 +299,7 @@ const [ebrochureUrl, setEbrochureUrl] = useState(
         </div>
 
         {/* Office Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-14 sm:mt-20">
+        <div className="grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-6 gap-5 mt-14 sm:mt-20">
           {officeCards.map((office, index) => (
             <div
               key={index}

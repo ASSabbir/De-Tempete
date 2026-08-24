@@ -280,8 +280,8 @@ const BusinessAdvisoryUSA = () => {
                                     {/* Icon */}
                                     <div
                                         className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark
-                                                ? "bg-white/15 text-white"
-                                                : "bg-light-blue/20 text-light-blue"
+                                            ? "bg-white/15 text-white"
+                                            : "bg-light-blue/20 text-light-blue"
                                             }`}
                                     >
                                         <Icon className="text-2xl" />
@@ -519,7 +519,7 @@ const BusinessAdvisoryUSA = () => {
             </section>
 
             <ConsultationCTA
-            id={id}
+                id={id}
                 heading={
                     <>
                         Start Your Business
