@@ -594,30 +594,70 @@ const Compliance_Regulatory = () => {
 
       {/* Why Choose Us */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl 2xl:text-5xl  font-light text-[#16244b] leading-tight">
-              Why Choose Our{" "}
-              <span className="font-bold">UK Compliance Advisory</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl 2xl:text-5xl font-light text-[#16244b] leading-tight">
+        Why Choose Our{" "}
+        <span className="font-bold">UK Compliance Advisory</span>
+      </h2>
 
-          <div className="grid lg:grid-cols-5 gap-6 mt-20">
-            {whyChoose.map((item, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-full flex justify-center mb-5">
-                  <img src={logo} alt="" />
-                </div>
-                <p className="text-gray-700 text-base font-semibold">{item}</p>
-              </div>
-            ))}
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {[
+        "Expert knowledge of HMRC, Companies House & UK regulatory frameworks",
+        "End-to-end compliance services under one roof",
+        "Dedicated accounting & tax specialists",
+        "Transparent and fixed pricing",
+        "Zero missed deadlines, zero penalties",
+        "Proactive compliance support for long-term business stability",
+      ].map((item, index) => {
+        // Signature chessboard pattern:
+        // Blue → White → Blue
+        // White → Blue → White
+        const row = Math.floor(index / 3);
+        const col = index % 3;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 min-h-[220px] flex-col justify-center gap-5 duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Logo */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={logo}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Text */}
+            <p
+              className={`text-base 2xl:text-[1vw] font-semibold leading-7 ${
+                isDark ? "text-[#16244b]" : "text-gray-600"
+              }`}
+            >
+              {item}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <ConsultationCTA
         id={id}

@@ -59,7 +59,7 @@ const setupTypes = [
     image:
       img1,
     items: [
-      "100% foreign ownership",
+      "100% foreign ownership (most of the activity)",
       "Full UAE market access",
       "Physical office required",
       "Local sponsor required",
@@ -217,8 +217,8 @@ const Market_Expansion_Setup_Advisory = () => {
               <span className="font-extrabold">Registration</span>
             </h2>
             <p className="mt-5 text-base  2xl:text-base text-gray-500 font-semibold">
-              From entry formation to licensing, we simplify every stage of your
-              UAE business setup.
+              From business formation to licensing, we simplify every step of your UAE business setup journey—ensuring a seamless, compliant, and efficient market entry.
+
             </p>
             <p className="mt-7 text-base  2xl:text-base text-gray-600 leading-8">
               Our experts help you choose the right jurisdiction — Mainland,

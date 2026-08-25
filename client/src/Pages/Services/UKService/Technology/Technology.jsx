@@ -118,17 +118,51 @@ const Technology = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 mt-16">
-            {softwareSolutions.map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 duration-300 flex flex-col items-center">
-                <div>
-                  <img src={img2} alt="" />
-                </div>
-                <h3 className="text-base text-center font-bold text-[#14224A] mb-3 mt-2">{item.title}</h3>
-                <p className="text-gray-500 text-base leading-6 text-center">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 gap-5 mt-16">
+  {softwareSolutions.map((item, i) => {
+    const row = Math.floor(i / 2);
+    const col = i % 2;
+    const isDark = (row + col) % 2 === 0;
+
+    return (
+      <div
+        key={i}
+        className={`flex p-7 flex-col items-center justify-center gap-4 min-h-[200px] duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white"
+        }`}
+      >
+        {/* Image */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={img2}
+            alt=""
+            className={`w-10 h-10 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+          />
+        </div>
+
+        {/* Title */}
+        <h3 className="text-xl 2xl:text-[1.1vw] text-center font-bold text-[#14224A] leading-snug">
+          {item.title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className={`text-base leading-7 text-center max-w-xl ${
+            isDark ? "text-gray-700" : "text-gray-500"
+          }`}
+        >
+          {item.desc}
+        </p>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
       
@@ -190,25 +224,63 @@ const Technology = () => {
 
       {/* Why Choose */}
       <section className="py-24 bg-white">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-light text-[#16244b]">
-              Why Choose Our <span className="font-bold">Technology Services?</span>
-            </h2>
-            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
-          </div>
+  <div className="max-w-[1600px] mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-light text-[#16244b]">
+        Why Choose Our{" "}
+        <span className="font-bold">Technology Services?</span>
+      </h2>
 
-          <div className="grid lg:grid-cols-4 gap-6 mt-16">
-            {whyChoose.map((item, index) => (
-              <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <img src={img2} className="mb-3 mx-auto" alt="" />
-                <h3 className="font-bold text-[#16244b] mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-base leading-6">{item.desc}</p>
-              </div>
-            ))}
+      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
+      {whyChoose.map((item, index) => {
+        const row = Math.floor(index / 2);
+        const col = index % 2;
+        const isDark = (row + col) % 2 === 0;
+
+        return (
+          <div
+            key={index}
+            className={`flex p-10 flex-col gap-4 min-h-[240px] duration-300 hover:shadow-2xl ${
+              isDark ? "bg-light-blue" : "bg-white"
+            }`}
+          >
+            {/* Image */}
+            <div
+              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+                isDark ? "bg-white/15" : "bg-light-blue/20"
+              }`}
+            >
+              <img
+                src={img2}
+                alt=""
+                className={`w-8 h-8 object-contain ${
+                  isDark ? "brightness-0 invert" : ""
+                }`}
+              />
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl 2xl:text-[1.1vw] font-bold text-[#16244b] leading-snug">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className={`text-base leading-7 ${
+                isDark ? "text-gray-700" : "text-gray-500"
+              }`}
+            >
+              {item.desc}
+            </p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
       <section className="pt-15 bg-white overflow-hidden">
                 <div className=" mx-auto max-w-7xl px-6">
                     <h2 className="text-center text-5xl font-light text-[#16244B] mb-20">

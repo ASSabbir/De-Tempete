@@ -69,7 +69,7 @@ export default function PageHero({ tag, title, subtitle, cta }) {
               marginBottom: 16,
               letterSpacing: '0.02em',
             }}>
-              // {tag}
+               {tag}
             </div>
             <h1 style={{
               fontSize: 44,

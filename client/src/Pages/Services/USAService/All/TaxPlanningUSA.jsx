@@ -192,17 +192,82 @@ const TaxPlanningUSA = () => {
             </h2>
 
             <p className="mt-3 text-base leading-8 text-gray-500">
-              The <span className="font-bold">One Big Beautiful Bill Act (OBBBA)</span> introduces significant changes to U.S. federal tax rules affecting businesses, investors, and employers. We help you understand the new provisions, identify available tax-saving opportunities, and keep your tax strategy and compliance aligned with the latest requirements.
+              The{" "}
+              <span className="font-bold">
+                One Big Beautiful Bill Act (OBBBA)
+              </span>{" "}
+              introduces significant changes to U.S. federal tax rules affecting
+              businesses, investors, and employers. We help you understand the new
+              provisions, identify available tax-saving opportunities, and keep your
+              tax strategy and compliance aligned with the latest requirements.
             </p>
+
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-[#16244b] mb-4">
+                Perfect for:
+              </h3>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Businesses assessing{" "}
+                    <strong className="text-gray-700">
+                      100% bonus depreciation and capital investment deductions
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Companies evaluating{" "}
+                    <strong className="text-gray-700">
+                      domestic R&amp;D expensing and tax incentives
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    LLCs, partnerships &amp; S corporations reviewing{" "}
+                    <strong className="text-gray-700">
+                      Section 199A/QBI deductions
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Employers adapting to{" "}
+                    <strong className="text-gray-700">
+                      new payroll, tips and overtime tax provisions
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Businesses planning investments under the{" "}
+                    <strong className="text-gray-700">
+                      new OBBBA tax framework
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
           <img
             src={img33}
             alt="1099 Reporting Support"
-            className="w-full h-88 object-cover rounded-3xl shadow-lg"
+            className="w-full h object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
-      <section className="pb-12 bg-white">
+      <section className="pb-12 pt-10 bg-white">
         <div className="max-w-[1300px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <img
             src={img34}
@@ -215,34 +280,160 @@ const TaxPlanningUSA = () => {
               <br />
               Cross-Border Reporting
             </h2>
-            
-            <p className="mt-3 text-base leading-8 text-gray-500">
-              U.S. taxpayers with foreign bank accounts, financial assets, or international interests may face multiple reporting obligations. We help individuals and businesses navigate <span className="font-bold">FBAR, FATCA and other U.S. cross-border reporting requirements</span>, reducing compliance risks and avoiding costly reporting errors.
 
+            <p className="mt-3 text-base leading-8 text-gray-500">
+              U.S. taxpayers with foreign bank accounts, financial assets, or
+              international interests may face multiple reporting obligations. We help
+              individuals and businesses navigate{" "}
+              <span className="font-bold">
+                FBAR, FATCA and other U.S. cross-border reporting requirements
+              </span>
+              , reducing compliance risks and avoiding costly reporting errors.
             </p>
+
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-[#16244b] mb-4">
+                Perfect for:
+              </h3>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    U.S. persons with{" "}
+                    <strong className="text-gray-700">
+                      foreign bank or financial accounts
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Individuals required to file{" "}
+                    <strong className="text-gray-700">
+                      FBAR (FinCEN Form 114)
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Taxpayers reporting foreign financial assets under{" "}
+                    <strong className="text-gray-700">
+                      FATCA / Form 8938
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Business owners with{" "}
+                    <strong className="text-gray-700">
+                      international financial interests or signature authority
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Individuals and businesses managing{" "}
+                    <strong className="text-gray-700">
+                      complex cross-border reporting obligations
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section className="pb-12 bg-white">
+      <section className="pb-12 pt-10 bg-white">
         <div className="max-w-[1300px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-stretch">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl leading-tight text-[#16244b] font-light">
               <span className="font-bold">State BOI Reporting</span>
-              
             </h2>
+
             <p className="mt-6 text-base leading-8 text-gray-500 font-semibold">
               Stay Compliant with State-Level Ownership Rules
             </p>
 
             <p className="mt-3 text-base leading-8 text-gray-500">
-              Beneficial Ownership Information (BOI) obligations can extend beyond federal requirements, with certain U.S. states introducing their own ownership disclosure rules. We help businesses identify applicable <span className="font-bold">state BOI requirements, filing deadlines and exemptions</span> to maintain accurate and timely compliance.
-
+              Beneficial Ownership Information (BOI) obligations can extend beyond
+              federal requirements, with certain U.S. states introducing their own
+              ownership disclosure rules. We help businesses identify applicable{" "}
+              <span className="font-bold">
+                state BOI requirements, filing deadlines and exemptions
+              </span>{" "}
+              to maintain accurate and timely compliance.
             </p>
+
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-[#16244b] mb-4">
+                Perfect for:
+              </h3>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Businesses assessing{" "}
+                    <strong className="text-gray-700">
+                      state-level beneficial ownership requirements
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Foreign entities registered to{" "}
+                    <strong className="text-gray-700">
+                      do business in applicable U.S. states
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Companies identifying{" "}
+                    <strong className="text-gray-700">
+                      beneficial owners and substantial control
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Businesses reviewing{" "}
+                    <strong className="text-gray-700">
+                      BOI exemptions and disclosure obligations
+                    </strong>
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3 text-gray-500">
+                  <span className="w-2.5 h-2.5 mt-2 rounded-full bg-light-blue shrink-0"></span>
+                  <span>
+                    Companies managing{" "}
+                    <strong className="text-gray-700">
+                      initial, annual and updated state BOI filings
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
           <img
             src={img35}
             alt="1099 Reporting Support"
-            className="w-full h-88 object-cover rounded-3xl shadow-lg"
+            className="w-full  object-cover rounded-3xl shadow-lg"
           />
         </div>
       </section>
@@ -253,69 +444,65 @@ const TaxPlanningUSA = () => {
 
 
       {/* Why Choose */}
-     <section className="pb-24 bg-white">
-  <div className="max-w-[1300px] mx-auto px-6">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-light text-[#16244b]">
-        Why Choose Our{" "}
-        <span className="font-bold">
-          Tax Planning & Advisory Services
-        </span>
-      </h2>
+      <section className="pb-24 bg-white">
+        <div className="max-w-[1300px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-[#16244b]">
+              Why Choose Our{" "}
+              <span className="font-bold">
+                Tax Planning & Advisory Services
+              </span>
+            </h2>
 
-      <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
-    </div>
+            <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8" />
+          </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {whyChoose.map((item, index) => {
-        const row = Math.floor(index / 3);
-        const col = index % 3;
-        const isDark = (row + col) % 2 === 0;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {whyChoose.map((item, index) => {
+              const row = Math.floor(index / 3);
+              const col = index % 3;
+              const isDark = (row + col) % 2 === 0;
 
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{
-              duration: 0.5,
-              delay: (index % 3) * 0.12,
-              ease: "easeOut",
-            }}
-            className={`flex p-10 flex-col items-center text-center gap-4 duration-300 hover:shadow-2xl ${
-              isDark ? "bg-light-blue" : "bg-white"
-            }`}
-          >
-            {/* Logo */}
-            <div
-              className={`w-12 h-12 rounded-sm flex items-center justify-center ${
-                isDark ? "bg-white/15" : "bg-light-blue/20"
-              }`}
-            >
-              <img
-                src={logo}
-                alt=""
-                className={`w-8 h-8 object-contain ${
-                  isDark ? "brightness-0 invert" : ""
-                }`}
-              />
-            </div>
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: (index % 3) * 0.12,
+                    ease: "easeOut",
+                  }}
+                  className={`flex p-10 flex-col items-center text-center gap-4 duration-300 hover:shadow-2xl ${isDark ? "bg-light-blue" : "bg-white"
+                    }`}
+                >
+                  {/* Logo */}
+                  <div
+                    className={`w-12 h-12 rounded-sm flex items-center justify-center ${isDark ? "bg-white/15" : "bg-light-blue/20"
+                      }`}
+                  >
+                    <img
+                      src={logo}
+                      alt=""
+                      className={`w-8 h-8 object-contain ${isDark ? "brightness-0 invert" : ""
+                        }`}
+                    />
+                  </div>
 
-            {/* Content */}
-            <p
-              className={`text-base font-semibold leading-6 ${
-                isDark ? "text-gray-700" : "text-gray-500"
-              }`}
-            >
-              {item}
-            </p>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+                  {/* Content */}
+                  <p
+                    className={`text-base font-semibold leading-6 ${isDark ? "text-gray-700" : "text-gray-500"
+                      }`}
+                  >
+                    {item}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
 
       <ConsultationCTA

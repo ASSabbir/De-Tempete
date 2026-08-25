@@ -170,20 +170,51 @@ const id = 'servics-uk-advisory'
           </p>
         </div>
 
-        <div className="max-w-[1600px] mx-auto px-6 grid md:grid-cols-4 gap-10 mt-16">
-          {valuationCards.map((c, i) => {
-            const Icon = c.icon;
-            return (
-              <div key={i} className="text-center border-[1px] p-4 rounded-2xl border-gray-300 hover:shadow-2xl duration-300">
-                <Icon className="text-4xl text-slate-500 mx-auto mb-4" />
-                <h3 className="text-base font-bold text-[#16244b] mb-2">
-                  {c.title}
-                </h3>
-                <p className="text-gray-500 text-base leading-6">{c.desc}</p>
-              </div>
-            );
-          })}
+        <div className="max-w-[1600px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
+  {valuationCards.map((c, i) => {
+    const Icon = c.icon;
+
+    const row = Math.floor(i / 2);
+    const col = i % 2;
+    const isDark = (row + col) % 2 === 0;
+
+    return (
+      <div
+        key={i}
+        className={`flex flex-col items-center text-center p-10 min-h-[260px] justify-center gap-4 duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white border border-gray-200"
+        }`}
+      >
+        {/* Icon */}
+        <div
+          className={`w-14 h-14 rounded-sm flex items-center justify-center mb-2 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <Icon
+            className={`text-4xl ${
+              isDark ? "text-white" : "text-light-blue"
+            }`}
+          />
         </div>
+
+        {/* Title */}
+        <h3 className="text-xl font-bold text-[#16244b] leading-snug">
+          {c.title}
+        </h3>
+
+        {/* Description */}
+        <p
+          className={`text-base leading-7 max-w-2xl ${
+            isDark ? "text-gray-700" : "text-gray-500"
+          }`}
+        >
+          {c.desc}
+        </p>
+      </div>
+    );
+  })}
+</div>
       </section>
 
       {/* M&A Accordion */}

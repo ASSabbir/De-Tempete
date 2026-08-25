@@ -189,36 +189,50 @@ const id = 'services-usa-technology'
 
           {/* Cards */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-0 border border-gray-200 rounded-xl overflow-hidden">
-            {servicesData.map((service, index) => {
-              const Icon = service.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+  {servicesData.map((service, index) => {
+    const Icon = service.icon;
 
-              return (
-                <div
-                  key={index}
-                  className="bg-white p-8 border-r border-b lg:border-b-0 last:border-r-0 border-gray-200 hover:bg-[#f8fbff] duration-300"
-                >
-                  {/* Icon */}
+    // 5-column chessboard pattern on desktop
+    const isDark = index % 2 === 0;
 
-                  <div className="mb-8">
-                    <Icon className="text-light-blue text-3xl md:text-4xl 2xl:text-5xl" />
-                  </div>
+    return (
+      <div
+        key={index}
+        className={`flex flex-col p-8 min-h-[280px] duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white border border-gray-200"
+        }`}
+      >
+        {/* Icon */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center mb-8 ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <Icon
+            className={`text-3xl md:text-4xl ${
+              isDark ? "text-white" : "text-light-blue"
+            }`}
+          />
+        </div>
 
-                  {/* Title */}
+        {/* Title */}
+        <h3 className="text-xl font-bold leading-snug text-[#16244b] mb-5">
+          {service.title}
+        </h3>
 
-                  <h3 className="text-xl font-bold leading-snug text-[#16244b] mb-5">
-                    {service.title}
-                  </h3>
-
-                  {/* Description */}
-
-                  <p className="text-gray-600 text-base leading-8">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+        {/* Description */}
+        <p
+          className={`text-base leading-7 ${
+            isDark ? "text-gray-700" : "text-gray-600"
+          }`}
+        >
+          {service.description}
+        </p>
+      </div>
+    );
+  })}
+</div>
         </div>
       </section>
 
