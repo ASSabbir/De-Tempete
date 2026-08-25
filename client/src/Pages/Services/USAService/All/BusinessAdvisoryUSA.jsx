@@ -504,17 +504,53 @@ const BusinessAdvisoryUSA = () => {
                         <div className="w-28 h-1 bg-light-blue rounded-full mx-auto mt-8"></div>
                     </div>
 
-                    <div className="grid lg:grid-cols-5 gap-6 mt-20">
-                        {whyChoose.map((item, index) => (
-                            <div
-                                key={index}
-                                className="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                            >
-                                <div className="flex justify-center mb-4"><img src={logo} alt="" /></div>
-                                <p className="text-gray-700 font-semibold">{item}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-20">
+  {[
+    "Practical strategy grounded in financial reality",
+    "Hands-on support from discovery through execution",
+    "Experience across startups, SMEs, and growth-stage companies",
+    "Transparent, fixed-fee advisory engagements",
+    "Objective guidance focused on long-term value",
+    "Actionable insights designed to support sustainable growth",
+  ].map((item, index) => {
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+    const isDark = (row + col) % 2 === 0;
+
+    return (
+      <div
+        key={index}
+        className={`flex p-10 min-h-[220px] flex-col justify-center gap-5 duration-300 hover:shadow-2xl ${
+          isDark ? "bg-light-blue" : "bg-white"
+        }`}
+      >
+        {/* Logo */}
+        <div
+          className={`w-12 h-12 rounded-sm flex items-center justify-center ${
+            isDark ? "bg-white/15" : "bg-light-blue/20"
+          }`}
+        >
+          <img
+            src={logo}
+            alt=""
+            className={`w-8 h-8 object-contain ${
+              isDark ? "brightness-0 invert" : ""
+            }`}
+          />
+        </div>
+
+        {/* Text */}
+        <p
+          className={`text-base 2xl:text-[1vw] font-semibold leading-7 ${
+            isDark ? "text-[#16244b]" : "text-gray-600"
+          }`}
+        >
+          {item}
+        </p>
+      </div>
+    );
+  })}
+</div>
                 </div>
             </section>
 
