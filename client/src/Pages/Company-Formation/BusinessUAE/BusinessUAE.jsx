@@ -28,7 +28,7 @@ const BusinessUAE = () => {
                         <span className="font-bold">Today</span>
                     </>
                 }
-                subheading="Whether you are setting up a new company, expanding into the UAE, or restructuring your business, de tempête provides practical support to make the setup process simple and efficient."
+                subheading={<>Whether you are setting up a new company, expanding into the UAE, or restructuring your business, <span className='font-bold italic'>de tempête</span> provides practical support to make the setup process simple and efficient.</>}
                 commitmentItems={[
                     "Free initial consultation — no obligation",
                     "Complete confidentiality & secure handling",

@@ -11,6 +11,9 @@ import NewsEvents from './pages/NewsEvents';
 import Blogs from './pages/Blogs';
 import BusinessSetupLeads from './pages/Businesssetupleads';
 import Users from './pages/Users';
+import ClientEnquiries from './pages/ClientEnquiries';
+import PartnershipEnquiries from './pages/PartnershipEnquiries';
+import CareerApplications from './pages/CareerApplications';
 
 // Guards a single route by role. If the logged-in admin's role isn't in `roles`,
 // bounce back to the dashboard instead of showing the page.
@@ -37,6 +40,9 @@ function ProtectedLayout() {
           <Route path="/news-events" element={<RoleRoute roles={['superadmin', 'news']}><NewsEvents /></RoleRoute>} />
           <Route path="/blogs" element={<RoleRoute roles={['superadmin', 'blog']}><Blogs /></RoleRoute>} />
           <Route path="/users" element={<RoleRoute roles={['superadmin']}><Users /></RoleRoute>} />
+          <Route path="/client-enquiries" element={<RoleRoute roles={['superadmin', 'resource']}><ClientEnquiries /></RoleRoute>} />
+<Route path="/partnership-enquiries" element={<RoleRoute roles={['superadmin', 'resource']}><PartnershipEnquiries /></RoleRoute>} />
+<Route path="/career-applications" element={<RoleRoute roles={['superadmin', 'resource']}><CareerApplications /></RoleRoute>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

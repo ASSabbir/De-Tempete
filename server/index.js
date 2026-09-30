@@ -13,10 +13,10 @@ const autoSeedAdmin = async () => {
       await Admin.create({
         name: 'Super Admin',
         email: 'admin@detempete.com',
-        password: 'Admin@123',
+        password: 'admin@detempete.com',
         role:'superadmin'
       });
-      console.log('✓ Default admin created: admin@detempete.com / Admin@123');
+      // console.log('✓ Default admin created: admin@detempete.com / Admin@123');
     }
   } catch (err) {
     console.error('Auto seed failed:', err.message);
@@ -41,7 +41,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: '50kb' }));
 
 // manual mongo injection sanitize — no package needed
 app.use((req, _res, next) => {
@@ -73,6 +73,7 @@ app.use('/api/news-events', require('./routes/newsEvents'));
 app.use('/api/blogs', require('./routes/blogs'));
 app.use('/api/business-setup-leads', require('./routes/Businesssetupleads'));
 app.use('/api/contact', require('./routes/contact'));
+app.use('/api/contact-forms', require('./routes/contactForms'));
 app.use('/api/business-setup-calculator', require('./routes/BusinessSetupCalculator'));
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));

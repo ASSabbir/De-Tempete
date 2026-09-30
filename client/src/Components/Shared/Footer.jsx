@@ -20,7 +20,7 @@ const socialLinks = [
   
   {
     icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/company/14612088/admin/dashboard/",
+    href: "https://www.linkedin.com/company/de-tempete/",
     label: "LinkedIn",
   },
   {
