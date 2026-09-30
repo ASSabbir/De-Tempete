@@ -18,12 +18,13 @@ import img7 from '../../asstes/img_temp/about/up/7.png'
 import img8 from '../../asstes/img_temp/about/up/8.png'
 import img9 from '../../asstes/img_temp/about/up/9.png'
 import img10 from '../../asstes/img_temp/about/up/10.png'
-import img12 from '../../asstes/img_temp/about/up/12.JPG'
 import img11 from '../../asstes/img_temp/about/up/11.JPG'
+import img12 from '../../asstes/img_temp/about/up/12.JPG'
 import img13 from '../../asstes/img_temp/about/up/13.png'
 import img14 from '../../asstes/img_temp/about/up/14.png'
 import img15 from '../../asstes/img_temp/about/up/15.png'
 import img16 from '../../asstes/img_temp/about/up/16.png'
+import img17 from '../../asstes/img_temp/about/up/17.png'
 import img18 from '../../asstes/img_temp/about/up/18.png'
 import img19 from '../../asstes/img_temp/about/up/19.png'
 import img20 from '../../asstes/img_temp/about/up/20.png'
@@ -40,6 +41,18 @@ import img30 from '../../asstes/img_temp/about/up/30.jpg'
 import img31 from '../../asstes/img_temp/about/up/31.jpg'
 import img32 from '../../asstes/img_temp/about/up/32.png'
 import img33 from '../../asstes/img_temp/about/up/33.png'
+import img34 from '../../asstes/img_temp/about/up/34.png'
+import img35 from '../../asstes/img_temp/about/up/35.png'
+import img36 from '../../asstes/img_temp/about/up/36.png'
+import img37 from '../../asstes/img_temp/about/up/37.jpg'
+import img38 from '../../asstes/img_temp/about/up/38.png'
+import img39 from '../../asstes/img_temp/about/up/39.png'
+import img40 from '../../asstes/img_temp/about/up/40.jpeg'
+import img41 from '../../asstes/img_temp/about/up/41.jpg'
+import img42 from '../../asstes/img_temp/about/up/42.jpg'
+import img43 from '../../asstes/img_temp/about/up/43.jpg'
+import img44 from '../../asstes/img_temp/about/up/44.jpg'
+import img45 from '../../asstes/img_temp/about/up/45.jpg'
 
 /**
  * ---------------------------------------------------------------------------
@@ -49,7 +62,7 @@ import img33 from '../../asstes/img_temp/about/up/33.png'
  * seamless loop is handled automatically inside <MarqueeColumn />.
  * ---------------------------------------------------------------------------
  */
-const COLUMN_1 = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img31,img32,img33]
+const COLUMN_1 = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30,img31,img32,img33,img34,img35,img36,img37,img38,img39,img40,img41,img42,img43,img44,img45]
 
 
 function PartnerCard({ icon }) {
