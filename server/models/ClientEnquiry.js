@@ -20,10 +20,14 @@ const clientEnquirySchema = new mongoose.Schema({
   otherHelp: { type: String, trim: true, maxlength: 150 },
   message: { type: String, required: true, trim: true, maxlength: 2000 },
   preferredContactMethod: { type: String, enum: [...CONTACT_METHODS, ''], default: '' },
+  // Which page/form this came from — the main Contact page's Client form,
+  // or one of the "Book a Free Consultation" CTAs scattered across the site.
+  source: { type: String, trim: true, maxlength: 150, default: 'Contact Page' },
   consent: { type: Boolean, required: true },
 }, { timestamps: true });
 
 clientEnquirySchema.index({ createdAt: -1 });
+clientEnquirySchema.index({ source: 1 });
 Object.assign(clientEnquirySchema.statics, { MARKET_OPTIONS, HELP_OPTIONS, CONTACT_METHODS });
 
 module.exports = mongoose.model('ClientEnquiry', clientEnquirySchema);

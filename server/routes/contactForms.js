@@ -39,7 +39,7 @@ router.post('/client', publicLimiter, async (req, res) => {
     const {
       fullName, companyName, workEmail, phone, countryOfResidence,
       marketInterest, otherMarket, helpNeeded, otherHelp, message,
-      preferredContactMethod, consent,
+      preferredContactMethod, source, consent,
     } = req.body;
 
     if (!fullName || !workEmail || !phone || !message || !consent) {
@@ -49,6 +49,7 @@ router.post('/client', publicLimiter, async (req, res) => {
       fullName, companyName, workEmail, phone, countryOfResidence,
       marketInterest, otherMarket, helpNeeded, otherHelp, message,
       preferredContactMethod, consent,
+      ...(source && { source }), // falls back to the schema default ('Contact Page') if omitted
     });
     res.status(201).json({ message: 'Thank you for reaching out.' });
   } catch (err) {
@@ -87,6 +88,36 @@ router.post('/partnership', publicLimiter, async (req, res) => {
 router.get('/partnership/admin/all', protect, authorize('superadmin', 'resource'), (req, res) =>
   paginate(PartnershipEnquiry, req, res)
 );
+
+
+//  delete
+router.delete('/client/:id', protect, authorize('superadmin', 'resource'), async (req, res) => {
+  try {
+    const item = await ClientEnquiry.findByIdAndDelete(req.params.id);
+    if (!item) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+  } catch {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+router.delete('/partnership/:id', protect, authorize('superadmin', 'resource'), async (req, res) => {
+  try {
+    const item = await PartnershipEnquiry.findByIdAndDelete(req.params.id);
+    if (!item) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+  } catch {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+router.delete('/career/:id', protect, authorize('superadmin', 'resource'), async (req, res) => {
+  try {
+    const item = await CareerApplication.findByIdAndDelete(req.params.id);
+    if (!item) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+  } catch {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 // ── Career applications ──────────────────────
 router.post('/career', publicLimiter, async (req, res) => {

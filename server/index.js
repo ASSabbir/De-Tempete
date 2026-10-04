@@ -16,7 +16,7 @@ const autoSeedAdmin = async () => {
         password: 'admin@detempete.com',
         role:'superadmin'
       });
-      // console.log('✓ Default admin created: admin@detempete.com / Admin@123');
+      // ('✓ Default admin created: admin@detempete.com / Admin@123');
     }
   } catch (err) {
     console.error('Auto seed failed:', err.message);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import API from '../api/axios';
 
 const LIMIT = 20;
@@ -23,7 +23,6 @@ const TABLE_COLUMNS = [
   { key: 'createdAt', label: 'Applied' },
 ];
 
-// Full field set for the CSV / CV database export
 const CSV_COLUMNS = [
   ...TABLE_COLUMNS.filter((c) => c.key !== 'cvLink'),
   { key: 'currentLocationCity', label: 'City' },
@@ -64,12 +63,28 @@ export default function CareerApplications() {
   const [loading, setLoading] = useState(true);
   const [exporting, setExporting] = useState(false);
 
-  useEffect(() => {
+  const fetchItems = useCallback(async (pg = page) => {
     setLoading(true);
-    API.get(`/contact-forms/career/admin/all?page=${page}&limit=${LIMIT}`)
-      .then(({ data }) => { setItems(data.items); setTotal(data.total); setPages(data.pages); })
-      .finally(() => setLoading(false));
+    try {
+      const { data } = await API.get(`/contact-forms/career/admin/all?page=${pg}&limit=${LIMIT}`);
+      setItems(data.items); setTotal(data.total); setPages(data.pages);
+    } finally {
+      setLoading(false);
+    }
   }, [page]);
+
+  useEffect(() => { fetchItems(page); }, [page]);
+
+  const handleDelete = async (id) => {
+    if (!window.confirm('Delete this application? This cannot be undone.')) return;
+    try {
+      await API.delete(`/contact-forms/career/${id}`);
+      if (items.length === 1 && page > 1) setPage(page - 1);
+      else fetchItems(page);
+    } catch {
+      alert('Delete failed');
+    }
+  };
 
   const handleExportCSV = async () => {
     setExporting(true);
@@ -120,6 +135,7 @@ export default function CareerApplications() {
                   {TABLE_COLUMNS.map((c) => (
                     <th key={c.key} className="text-left px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">{c.label}</th>
                   ))}
+                  <th className="text-right px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -132,6 +148,12 @@ export default function CareerApplications() {
                           : fmt(row, c.key)}
                       </td>
                     ))}
+                    <td className="px-4 py-3 text-right whitespace-nowrap">
+                      <button onClick={() => handleDelete(row._id)}
+                        className="px-3 py-1.5 bg-red-600 text-white rounded-md text-xs font-semibold hover:opacity-90">
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
