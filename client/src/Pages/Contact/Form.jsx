@@ -5,6 +5,7 @@ import uae from '../../asstes/img_temp/Contact/323301.webp';
 import bd from '../../asstes/img_temp/Contact/8362826.webp';
 import ee from '../../asstes/img_temp/Contact/ee-circle-01.webp';
 import sa from '../../asstes/img_temp/Contact/5111777.webp';
+import Worldmap from '../../asstes/img_temp/Map.webp';
 
 const offices = [
   { flag: uae, name: "UAE ", phone: "+971566994282", address: "Office 601/31, Business Village, Block B, Port Saeed, Deira, Dubai, United Arab Emirates" },
@@ -55,27 +56,21 @@ export default function Form() {
   return (
     <section className="bg-white w-full py-16 lg:py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* ── Office Cards ── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-16 lg:mb-20">
-          {offices.map((office) => (
-            <div key={office.name} className="flex p-[3vw] duration-300 hover:shadow-xl flex-col gap-3">
-              <img className="w-30 rounded-full" src={office.flag} alt="" />
-              <h3 className="text-[#0d1e4a] font-bold text-base">{office.name}</h3>
-              <a href={`tel:${office.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-gray-500 text-xs hover:text-[#1a9fd4] transition-colors">
-                <PhoneIcon />
-                {office.phone}
-              </a>
-              <div className="flex items-start gap-1.5 text-gray-500 text-xs leading-relaxed">
-                <PinIcon />
-                <span>{office.address}</span>
-              </div>
+        {/* ── Forms panel — full width ── */}
+        <div className="max-w-7xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ background: "#0d1e4a" }}>
+            <div className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ backgroundImage: `radial-gradient(circle at 70% 60%, #1a9fd4 0%, transparent 60%)` }} />
+            <div className="relative z-10 p-6 sm:p-10">
+              <ContactFormsTabs />
             </div>
-          ))}
+          </div>
         </div>
 
+        
+
         {/* ── Get In Touch — compact strip at the top ── */}
-        <div className="max-w-4xl mx-auto text-center mb-14">
+        <div className="max-w-4xl mx-auto text-center my-14 mt-24">
           <h2 className="text-3xl sm:text-4xl font-normal text-[#0d1e4a] mb-2">Get In Touch</h2>
           <p className="text-gray-500 text-base mb-6">We simplify business growth</p>
 
@@ -107,17 +102,29 @@ export default function Form() {
             </div>
           </div>
         </div>
-
-        {/* ── Forms panel — full width ── */}
-        <div className="max-w-5xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ background: "#0d1e4a" }}>
-            <div className="absolute inset-0 opacity-10 pointer-events-none"
-              style={{ backgroundImage: `radial-gradient(circle at 70% 60%, #1a9fd4 0%, transparent 60%)` }} />
-            <div className="relative z-10 p-6 sm:p-10">
-              <ContactFormsTabs />
+        <div className='max-w-7xl py-16 mx-auto'> 
+                <img src={Worldmap} alt="" />
             </div>
-          </div>
+           
+        {/* ── Office Cards ── */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 ">
+          {offices.map((office) => (
+            <div key={office.name} className="flex p-[3vw] duration-300 hover:shadow-xl flex-col gap-3">
+              <img className="w-30 rounded-full" src={office.flag} alt="" />
+              <h3 className="text-[#0d1e4a] font-bold text-base">{office.name}</h3>
+              <a href={`tel:${office.phone.replace(/\s/g, "")}`} className="flex items-center gap-1.5 text-gray-500 text-xs hover:text-[#1a9fd4] transition-colors">
+                <PhoneIcon />
+                {office.phone}
+              </a>
+              <div className="flex items-start gap-1.5 text-gray-500 text-xs leading-relaxed">
+                <PinIcon />
+                <span>{office.address}</span>
+              </div>
+            </div>
+          ))}
         </div>
+
+        
 
       </div>
     </section>
