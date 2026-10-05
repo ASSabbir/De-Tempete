@@ -20,35 +20,29 @@ const reviews = [
   },
   {
     name: "Ahmed Gouda",
-    role: "Director & Secretary, FURSANMEDIA LTD, Egypt",
+    role: "Director & Secretary, Fursanmedia Ltd, Egypt",
     img: img2,
     quote:
       "De Tempete handled my requirements in a highly professional manner and ensured everything was properly prepared before submission. Their attention to detail was impressive, and I would gladly hire them again in the future.",
   },
-  {
-    name: "Hamza Zegriri",
-    role: "Founder & CEO, HV Inc., Canada",
-    img: img4,
-    quote:
-      "Mohsena did a fantastic job as our Virtual CFO. She was professional, efficient, and delivered excellent results. I will definitely work with her again and highly recommend her services.",
-  },
+ 
   {
     name: "Sarmad Khan",
-    role: "Director, Sarmad Global Accountancy Services Ltd, UK",
+    role: "Director, Sarmad Global Accountancy Services Ltd, United Kingdom",
     img: img5,
     quote:
-      "I've been working with De Tempete for quite some time, and I genuinely couldn't manage without them. They expertly handle our back office operations across both the UK and UAE with accuracy and reliability, giving me complete peace of mind so I can focus on growing my business.",
+      "I've been working with De Tempete for quite some time, and I genuinely couldn't manage without them. They expertly handle our back office operations across both the United Kingdom and UAE with accuracy and reliability, giving me complete peace of mind so I can focus on growing my business.",
   },
   {
     name: "Minh Nguyen (Viet)",
-    role: "Director, Rabitan Limited",
+    role: "Director, Rabitan Limited, New Zealand",
     img: img6,
     quote:
       "I've worked with Mohsena and the De Tempete team on multiple Companies House identity verifications, and every experience has been outstanding. Their professionalism, responsiveness, and attention to detail have been exceptional. I've already referred friends and will continue to do so.",
   },
   {
     name: "Dr. Hafsa Al Idrissi",
-    role: "Director, Health Pillar LLC",
+    role: "Director, Health Pillar LLC, United Kingdom",
     img: img3,
     quote:
       "De Tempete has managed our accounts with outstanding professionalism, accuracy, and efficiency for the past two years. Their prompt communication, attention to detail, and commitment to excellence have given us complete confidence and peace of mind.",
@@ -62,7 +56,7 @@ const reviews = [
   },
   {
     name: "Hamza Zegriri",
-    role: "CEO, HealV Inc.",
+    role: "CEO, HealV Inc, Canada",
     img: "https://www.albalaghacademy.org/wp-content/uploads/2024/07/Ustadh-Hamza-Andreas-Tzortzis.jpg",
     quote:
       "Working with De Tempete Accounts Company has been an excellent experience. Their team is responsive, organized, and genuinely committed to getting everything right. They've helped us stay on top of our financial operations, allowing us to focus on growing our company. I highly recommend them to other founders and businesses.",
@@ -111,13 +105,13 @@ const ReviewCard = ({ name, role, quote,img }) => (
 
 const Reviews = () => {
   return (
-    <section className="pb-24  bg-gray-50">
+    <section className="pb-24  bg-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
          
-          <h2 className="text-2xl 2xl:text-[2.5vw] 2xl:text-3xl font-bold text-dark-blue mt-3">
+          {/* <h2 className="text-2xl 2xl:text-[2.5vw] 2xl:text-3xl font-bold text-dark-blue mt-3">
             What our clients say
-          </h2>
+          </h2> */}
         </div>
 
         <Swiper

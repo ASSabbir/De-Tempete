@@ -128,7 +128,7 @@ const VideoReviews = () => {
   const [activeVideo, setActiveVideo] = useState(null);
 
   return (
-    <section className="pb-24 bg-gray-50">
+    <section className="pb-24 pt-10 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <h2 className="text-2xl 2xl:text-[2.5vw] 2xl:text-3xl font-bold text-dark-blue mt-3">

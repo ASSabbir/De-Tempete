@@ -57,7 +57,7 @@ export default function Form() {
     <section className="bg-white w-full py-16 lg:py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Forms panel — full width ── */}
-        <div className="max-w-7xl mx-auto">
+        <div id="careerforms" className="max-w-7xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden shadow-xl" style={{ background: "#0d1e4a" }}>
             <div className="absolute inset-0 opacity-10 pointer-events-none"
               style={{ backgroundImage: `radial-gradient(circle at 70% 60%, #1a9fd4 0%, transparent 60%)` }} />

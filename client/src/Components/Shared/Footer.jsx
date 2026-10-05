@@ -102,6 +102,7 @@ const footerColumns = [
       { label: "News & Events", path: "/news-events" },
       { label: "Blog", path: "/blogs" },
       { label: "Contact", path: "/contact" },
+      { label: "career", path: "/contact" },
     ],
   },
   {
@@ -221,6 +222,7 @@ const [ebrochureUrl, setEbrochureUrl] = useState(
       { label: "News & Events", path: "/news-events" },
       { label: "Blog", path: "/blogs" },
       { label: "Contact", path: "/contact" },
+      { label: "Career", path: "/contact#careerforms" },
     ],
   },
   {
