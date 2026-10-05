@@ -46,7 +46,7 @@ router.post('/', publicLimiter, async (req, res) => {
     }
 
     const submission = await BusinessSetupCalculatorSubmission.create({
-      country, name, email, phone, answers,
+      country, name, email, phone, answers, readableAnswers,
     });
 
     try {
@@ -68,6 +68,17 @@ router.post('/', publicLimiter, async (req, res) => {
     res.status(400).json({ message: err.message || 'Something went wrong' });
   }
 });
+// DELETE /api/business-setup-calculator/admin/:id — protected, never rate-limited
+router.delete('/admin/:id', protect, authorize('superadmin', 'resource'), async (req, res) => {
+  try {
+    const item = await BusinessSetupCalculatorSubmission.findByIdAndDelete(req.params.id);
+    if (!item) return res.status(404).json({ message: 'Not found' });
+    res.json({ message: 'Deleted' });
+  } catch {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 // GET /api/business-setup-calculator/admin/all — protected, for the admin panel later
 router.get('/admin/all', protect, authorize('superadmin', 'resource'), async (req, res) => {

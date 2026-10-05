@@ -2,18 +2,19 @@ import { NavLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const links = [
-  { to: '/', label: '📊 Dashboard', roles: ['superadmin', 'resource', 'news', 'blog'] },
-  { to: '/library', label: '📚 Library', roles: ['superadmin', 'resource'] },
-  { to: '/publications', label: '📄 Publications', roles: ['superadmin', 'resource'] },
-  { to: '/forms', label: '📋 Forms', roles: ['superadmin', 'resource'] },
-  { to: '/leads', label: '📥 Downloads', roles: ['superadmin', 'resource'] },
-  { to: '/business-setup-leads', label: '📥 Business Setup Downloads', roles: ['superadmin', 'resource'] },
-  { to: '/client-enquiries', label: '📩 Client Enquiries', roles: ['superadmin', 'resource'] },
-{ to: '/partnership-enquiries', label: '🤝 Partnership Enquiries', roles: ['superadmin', 'resource'] },
-{ to: '/career-applications', label: '🎓 Career Applications', roles: ['superadmin', 'resource'] },
-  { to: '/news-events', label: '📰 News & Events', roles: ['superadmin', 'news'] },
-  { to: '/blogs', label: '📰 Blogs', roles: ['superadmin', 'blog'] },
-  { to: '/users', label: '👤 Users', roles: ['superadmin'] },
+  { to: '/', label: 'Dashboard', roles: ['superadmin', 'resource', 'news', 'blog'] },
+  { to: '/library', label: 'Library', roles: ['superadmin', 'resource'] },
+  { to: '/publications', label: 'Publications', roles: ['superadmin', 'resource'] },
+  { to: '/forms', label: 'Forms', roles: ['superadmin', 'resource'] },
+  { to: '/leads', label: 'Resource Downloads', roles: ['superadmin', 'resource'] },
+  { to: '/cost-calculator-submissions', label: 'Cost Calculator', roles: ['superadmin', 'resource'] },
+  { to: '/business-setup-leads', label: 'Business Setup Downloads', roles: ['superadmin', 'resource'] },
+  { to: '/client-enquiries', label: 'Client Enquiries', roles: ['superadmin', 'resource'] },
+{ to: '/partnership-enquiries', label: 'Partnership Enquiries', roles: ['superadmin', 'resource'] },
+{ to: '/career-applications', label: 'Career Applications', roles: ['superadmin', 'resource'] },
+  { to: '/news-events', label: 'News & Events', roles: ['superadmin', 'news'] },
+  { to: '/blogs', label: 'Blogs', roles: ['superadmin', 'blog'] },
+  { to: '/users', label: 'Users', roles: ['superadmin'] },
 ];
 
 const roleLabels = {

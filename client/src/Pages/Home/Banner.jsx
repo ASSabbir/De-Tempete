@@ -173,7 +173,7 @@ const Banner = () => {
 
             {/* CTA */}
             <div className='mt-10 md:mt-15'>
-              <SharedFullButton text={'Contact Us Now'} path={'/contact'}></SharedFullButton>
+              <SharedFullButton text={'Connect Us'} path={'/contact#careerforms'}></SharedFullButton>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ import {
 import VisionCard from "./VisionCard";
 import StrengthCard from "./StrengthCard";
 
-import aboutImg from "../../asstes/img_temp/de-tempete.webp"; 
+import aboutImg from "../../asstes/img_temp/5.webp"; 
 import img1 from '../../asstes/img_temp/about/datadualtone.webp'
 import img2 from '../../asstes/img_temp/about/email-2dualtone.webp'
 import img3 from '../../asstes/img_temp/about/connectdualtone.webp'
