@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import { useAuth } from '../context/AuthContext';
-
+import DocumentUploadField, { openDocument } from '../components/DocumentUploadField';
 const LIMIT = 20;
 const EMPTY_GUIDE = { guideKey: '', label: '', downloadUrl: '', isActive: true };
 
@@ -236,7 +236,7 @@ export default function BusinessSetupLeads() {
                     <code className="text-xs bg-slate-100 px-[6px] py-[2px] rounded">{g.guideKey}</code>
                   </td>
                   <td className="px-[14px] py-3 text-sm text-gray-900 border-b border-gray-100">
-                    <a href={g.downloadUrl} target="_blank" rel="noopener noreferrer" className="text-[#0f1f3d] underline">Open</a>
+                    <button onClick={() => openDocument(g.downloadUrl)} className="text-[#0f1f3d] underline">Open</button>
                   </td>
                   <td className="px-[14px] py-3 text-sm border-b border-gray-100">
                     {statusBadge(g.status)}
@@ -280,9 +280,8 @@ export default function BusinessSetupLeads() {
         <button
           onClick={handleExportCSV}
           disabled={exporting || total === 0}
-          className={`px-5 py-[10px] bg-[#0f1f3d] text-white border-none rounded-lg font-semibold text-sm ${
-            (exporting || total === 0) ? 'cursor-not-allowed opacity-60' : 'cursor-pointer opacity-100 hover:opacity-90'
-          }`}
+          className={`px-5 py-[10px] bg-[#0f1f3d] text-white border-none rounded-lg font-semibold text-sm ${(exporting || total === 0) ? 'cursor-not-allowed opacity-60' : 'cursor-pointer opacity-100 hover:opacity-90'
+            }`}
         >
           {exporting ? 'Preparing CSV...' : '⬇ Export CSV'}
         </button>
@@ -330,18 +329,16 @@ export default function BusinessSetupLeads() {
               </span>
               <div className="flex gap-2">
                 <button
-                  className={`px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-semibold ${
-                    page <= 1 ? 'text-gray-400 cursor-not-allowed' : 'text-[#0f1f3d] cursor-pointer hover:bg-gray-50'
-                  }`}
+                  className={`px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-semibold ${page <= 1 ? 'text-gray-400 cursor-not-allowed' : 'text-[#0f1f3d] cursor-pointer hover:bg-gray-50'
+                    }`}
                   disabled={page <= 1}
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                 >
                   Previous
                 </button>
                 <button
-                  className={`px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-semibold ${
-                    page >= pages ? 'text-gray-400 cursor-not-allowed' : 'text-[#0f1f3d] cursor-pointer hover:bg-gray-50'
-                  }`}
+                  className={`px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-semibold ${page >= pages ? 'text-gray-400 cursor-not-allowed' : 'text-[#0f1f3d] cursor-pointer hover:bg-gray-50'
+                    }`}
                   disabled={page >= pages}
                   onClick={() => setPage((p) => Math.min(pages, p + 1))}
                 >
@@ -389,12 +386,11 @@ export default function BusinessSetupLeads() {
             </div>
 
             <div className="mb-4">
-              <label className="block text-[13px] font-semibold text-gray-700 mb-[6px]">Download Link</label>
-              <input
+              <label className="block text-[13px] font-semibold text-gray-700 mb-[6px]">Guide File</label>
+              <DocumentUploadField
                 value={guideForm.downloadUrl}
-                onChange={e => setGuideForm(p => ({ ...p, downloadUrl: e.target.value }))}
-                placeholder="https://drive.google.com/..."
-                className="w-full px-[14px] py-[10px] border border-gray-300 rounded-lg text-sm box-border"
+                onChange={(v) => setGuideForm(p => ({ ...p, downloadUrl: v }))}
+                onError={setGuidesError}
               />
             </div>
 

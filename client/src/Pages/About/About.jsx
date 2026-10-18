@@ -19,7 +19,7 @@ const About = () => {
             <GrowthPartners></GrowthPartners>
             <div className=' max-w-7xl mx-auto pb-20' >
                 <div className='flex flex-col md:flex-row text-center md:text-left bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
-                    <h1 className='text-2xl'>We’re a Global Accounting Outsourcing & Business Advisory Firm.</h1>
+                    <h1 className='text-2xl'>We’re a Global Accounting Outsourcing & Business Growth Advisory Firm.</h1>
                     <SharedButton text={'Get Started Now'} path={'/contact'}></SharedButton>
                 </div>
             </div>

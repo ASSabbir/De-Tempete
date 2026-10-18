@@ -1,4 +1,5 @@
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useSearchParams } from "react-router";
 import { LuBriefcase, LuUsers, LuGraduationCap, LuArrowRight } from "react-icons/lu";
 import Modal from "./Modal";
 import ClientForm from "./ClientForm";
@@ -39,9 +40,29 @@ const TABS = [
   },
 ];
 
+const VALID_KEYS = TABS.map((t) => t.key);
+
 export default function ContactFormsTabs() {
-  const [active, setActive] = useState(null); // null | 'client' | 'partnership' | 'career'
-  const close = useCallback(() => setActive(null), []);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const formParam = searchParams.get("form");
+
+  // opens straight away if the URL has ?form=client|partnership|career
+  const [active, setActive] = useState(VALID_KEYS.includes(formParam) ? formParam : null);
+
+  // also handles clicking a ?form= link while already on /contact
+  useEffect(() => {
+    if (VALID_KEYS.includes(formParam)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setActive(formParam);
+    }
+  }, [formParam]);
+
+  const close = useCallback(() => {
+    setActive(null);
+    // clear the param so clicking the same link again reopens the form
+    setSearchParams({}, { replace: true });
+  }, [setSearchParams]);
+
   const activeTab = TABS.find((t) => t.key === active);
 
   return (
@@ -58,62 +79,61 @@ export default function ContactFormsTabs() {
       {/* Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {TABS.map(({ key, Icon, eyebrow, title, copy, cta }, index) => {
-  const isDark = index % 2 === 0;
+          const isDark = index % 2 === 0;
 
-  return (
-    <div
-      key={key}
-      className={`flex flex-col rounded-2xl border p-6 transition-all duration-300  hover:shadow-xl ${
-        isDark
-          ? "bg-white/[0.04] backdrop-blur-md border-white/10 text-white"
-          : "bg-white border-white text-[#16244b]"
-      }`}
-    >
-      <Icon
-        className={`w-9 h-9 mb-5 ${
-          isDark ? "text-white" : "text-[#1a9fd4]"
-        }`}
-        strokeWidth={1.5}
-      />
+          return (
+            <div
+              key={key}
+              className={`flex flex-col rounded-2xl border p-6 transition-all duration-300  hover:shadow-xl ${
+                isDark
+                  ? "bg-white/[0.04] backdrop-blur-md border-white/10 text-white"
+                  : "bg-white border-white text-[#16244b]"
+              }`}
+            >
+              <Icon
+                className={`w-9 h-9 mb-5 ${
+                  isDark ? "text-white" : "text-[#1a9fd4]"
+                }`}
+                strokeWidth={1.5}
+              />
 
-      <p
-        className={`text-[11px] font-semibold tracking-[0.2em] uppercase mb-3 ${
-          isDark ? "text-white/80" : "text-[#1a9fd4]"
-        }`}
-      >
-        {eyebrow}
-      </p>
+              <p
+                className={`text-[11px] font-semibold tracking-[0.2em] uppercase mb-3 ${
+                  isDark ? "text-white/80" : "text-[#1a9fd4]"
+                }`}
+              >
+                {eyebrow}
+              </p>
 
-      <h3 className="font-bold text-xl sm:text-2xl leading-snug mb-3">
-        {title[0]}
-        <br />
-        {title[1]}
-      </h3>
+              <h3 className="font-bold text-xl sm:text-2xl leading-snug mb-3">
+                {title[0]}
+                <br />
+                {title[1]}
+              </h3>
 
-      <p
-        className={`text-sm leading-relaxed mb-6 flex-1 ${
-          isDark ? "text-white/70" : "text-gray-500"
-        }`}
-      >
-        {copy}
-      </p>
+              <p
+                className={`text-sm leading-relaxed mb-6 flex-1 ${
+                  isDark ? "text-white/70" : "text-gray-500"
+                }`}
+              >
+                {copy}
+              </p>
 
-      <button
-        type="button"
-        onClick={() => setActive(key)}
-        className={`w-full flex items-center cursor-pointer justify-between gap-3 rounded-xl px-5 py-3.5 text-sm font-semibold transition-colors duration-200 ${
-          isDark
-            ? "bg-[#1a6ff0] hover:bg-[#2b7bf5] text-white"
-            : "bg-[#16244b] hover:bg-[#243665] text-white"
-        }`}
-      >
-        {cta}
-        <LuArrowRight className="w-5 h-5 shrink-0" />
-      </button>
-       
-    </div>
-  );
-})}
+              <button
+                type="button"
+                onClick={() => setActive(key)}
+                className={`w-full flex items-center cursor-pointer justify-between gap-3 rounded-xl px-5 py-3.5 text-sm font-semibold transition-colors duration-200 ${
+                  isDark
+                    ? "bg-[#1a6ff0] hover:bg-[#2b7bf5] text-white"
+                    : "bg-[#16244b] hover:bg-[#243665] text-white"
+                }`}
+              >
+                {cta}
+                <LuArrowRight className="w-5 h-5 shrink-0" />
+              </button>
+            </div>
+          );
+        })}
       </div>
 
       {/* Modal with the selected form */}

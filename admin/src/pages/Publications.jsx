@@ -3,8 +3,9 @@ import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
+import DocumentUploadField from '../components/DocumentUploadField';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD','Estonia','USA'];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'Estonia', 'USA'];
 const EMPTY = { title: '', fileFormat: 'PDF', imageUrl: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const statusBadge = (status) => (
@@ -181,8 +182,12 @@ export default function Publications() {
             </div>
 
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>Download URL</label>
-              <input value={form.downloadUrl} onChange={e => setForm(p => ({ ...p, downloadUrl: e.target.value }))} style={inputStyle} />
+              <label style={labelStyle}>Document</label>
+              <DocumentUploadField
+                value={form.downloadUrl}
+                onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
+                onError={setError}
+              />
             </div>
 
             <div style={{ marginBottom: 16 }}>
