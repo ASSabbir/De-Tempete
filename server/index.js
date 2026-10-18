@@ -75,6 +75,8 @@ app.use('/api/business-setup-leads', require('./routes/Businesssetupleads'));
 app.use('/api/contact', require('./routes/contact'));
 app.use('/api/contact-forms', require('./routes/contactForms'));
 app.use('/api/business-setup-calculator', require('./routes/BusinessSetupCalculator'));
+app.use('/api/uploads', require('./routes/uploads'));
+app.use('/api/files', require('./routes/files'));
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 

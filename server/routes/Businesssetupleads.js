@@ -1,6 +1,7 @@
 const express = require('express');
 const BusinessSetupLead = require('../models/businessSetupLeads');
 const BusinessSetupGuide = require('../models/BusinessSetupGuide');
+const { resolveDownloadUrl } = require('../utils/files');
 const { protect, authorize } = require('../middleware/auth');
 const { publicLimiter } = require('../middleware/rateLimit');
 
@@ -28,7 +29,7 @@ router.post('/', publicLimiter, async (req, res) => {
 
     await BusinessSetupLead.create({ name, email, phone, guide });
 
-    res.status(201).json({ downloadUrl: guideDoc.downloadUrl });
+    res.status(201).json({ downloadUrl: resolveDownloadUrl(guideDoc.downloadUrl) });
   } catch (err) {
     res.status(400).json({ message: err.message || 'Internal server error' });
   }
@@ -150,7 +151,7 @@ router.get('/guides/:guideKey', publicLimiter, async (req, res) => {
       return res.status(404).json({ message: 'Guide not found' });
     }
 
-    res.json({ guideKey: guide.guideKey, label: guide.label, downloadUrl: guide.downloadUrl });
+    res.json({ guideKey: guide.guideKey, label: guide.label, downloadUrl: resolveDownloadUrl(guide.downloadUrl) });
   } catch {
     res.status(500).json({ message: 'Internal server error' });
   }

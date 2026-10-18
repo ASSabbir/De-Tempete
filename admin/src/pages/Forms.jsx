@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import API from '../api/axios';
 import DataTable from '../components/DataTable';
 import { useAuth } from '../context/AuthContext';
+import DocumentUploadField from '../components/DocumentUploadField';
 
-const REGIONS = ['UAE', 'KSA', 'UK', 'BD','Estonia','USA'];
+const REGIONS = ['UAE', 'KSA', 'UK', 'BD', 'Estonia', 'USA'];
 const EMPTY = { title: '', issuingAuthority: '', downloadUrl: '', region: 'UAE', isActive: true };
 
 const statusBadge = (status) => (
@@ -138,11 +139,15 @@ export default function Forms() {
             {[
               { key: 'title', label: 'Title' },
               { key: 'issuingAuthority', label: 'Issuing Authority' },
-              { key: 'downloadUrl', label: 'Download URL' },
+
             ].map(({ key, label }) => (
-              <div key={key} style={{ marginBottom: 16 }}>
-                <label style={labelStyle}>{label}</label>
-                <input value={form[key]} onChange={e => setForm(p => ({ ...p, [key]: e.target.value }))} style={inputStyle} />
+              <div style={{ marginBottom: 16 }}>
+                <label style={labelStyle}>Document</label>
+                <DocumentUploadField
+                  value={form.downloadUrl}
+                  onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
+                  onError={setError}
+                />
               </div>
             ))}
 

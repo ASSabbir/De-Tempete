@@ -2,6 +2,7 @@ const express = require('express');
 const Lead = require('../models/Lead');
 const LibraryItem = require('../models/LibraryItem');
 const Publication = require('../models/Publication');
+const { resolveDownloadUrl } = require('../utils/files');
 const Form = require('../models/Form');
 const { protect, authorize } = require('../middleware/auth');
 const { publicLimiter } = require('../middleware/rateLimit');
@@ -33,7 +34,7 @@ router.post('/', publicLimiter, async (req, res) => {
       downloadUrl: resource.downloadUrl,
     });
 
-    res.status(201).json({ downloadUrl: resource.downloadUrl });
+    res.status(201).json({ downloadUrl: resolveDownloadUrl(resource.downloadUrl) });
   } catch (err) {
     res.status(400).json({ message: err.message });
   }

@@ -1,24 +1,16 @@
 // File: src/utils/imgbbUpload.js
-const IMGBB_API_KEY = '8cd18d4e8318e322a92f4b4f87d8469b';
+// Same function name as before, so Blogs / NewsEvents / Publications need NO changes.
+// It now uploads to our own server instead of ImgBB, and no API key lives in this file anymore.
+import API from '../api/axios';
 
 export async function uploadToImgBB(file) {
-  if (!IMGBB_API_KEY) {
-    throw new Error('Missing VITE_IMGBB_API_KEY in your .env file');
-  }
-
   const formData = new FormData();
-  formData.append('image', file);
+  formData.append('file', file);
 
-  const res = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
-    method: 'POST',
-    body: formData,
-  });
-
-  const data = await res.json();
-
-  if (!data.success) {
-    throw new Error(data.error?.message || 'Image upload failed');
+  try {
+    const { data } = await API.post('/uploads/image', formData, { timeout: 120000 });
+    return data.url; // e.g. https://files.yourdomain.com/img/ab12cd34__cover.jpg
+  } catch (err) {
+    throw new Error(err.response?.data?.message || 'Image upload failed');
   }
-
-  return data.data.url; // hosted image URL
 }

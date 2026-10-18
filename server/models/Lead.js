@@ -9,7 +9,7 @@ const leadSchema = new mongoose.Schema({
   resourceType: { type: String, required: true, enum: ['library', 'publication', 'form'] },
   resourceId: { type: mongoose.Schema.Types.ObjectId, required: true },
   resourceTitle: { type: String, required: true, trim: true },
-  region: { type: String, required: true, enum: ['UAE', 'KSA', 'UK', 'BD'] },
+ region: { type: String, required: true, enum: ['UAE', 'KSA', 'UK', 'BD', 'Estonia', 'USA'] },
   downloadUrl: { type: String, required: true },
 }, { timestamps: true });
 
