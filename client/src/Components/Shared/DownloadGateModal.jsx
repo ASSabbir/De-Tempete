@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 import API from '../../api/axios';
 import logo from '../../asstes/img_temp/logo1.webp';
 
@@ -126,7 +127,7 @@ export default function DownloadGateModal({ resource, onClose }) {
             style={{ width: 16, height: 16, marginTop: 2, flexShrink: 0 }}
           />
           <span>
-            I agree to the <a href="/terms-conditions" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Terms & Conditions</a> and <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Privacy Policy</a>
+            I agree to the <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Terms & Conditions</Link> and <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Privacy Policy</Link>
           </span>
         </label>
 

@@ -15,7 +15,7 @@ const fadeLeft = {
 
 
 
-const VirtualBanner = ({img,text}) => {
+const VirtualBanner = ({img,id,text}) => {
     
     return (
         <div >
@@ -88,7 +88,7 @@ const VirtualBanner = ({img,text}) => {
                             className='mt-5'
                         >
                             
-                            <SharedFullButton text={text[3]} path={'/contact'}></SharedFullButton>
+                            <SharedFullButton text={text[3]} path={`#${id}`}></SharedFullButton>
                         </motion.div>
 
                     </div>

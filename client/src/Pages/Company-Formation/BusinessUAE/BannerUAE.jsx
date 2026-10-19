@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import img1 from '../../../asstes/img_temp/New folder/uae.webp'
+import img1 from '../../../asstes/img_temp/New folder/Dubai-Business-set-up.webp'
 import SharedButton from '../../../Components/Shared/SharedButton';
 const BannerUAE = ({id}) => {
   return (

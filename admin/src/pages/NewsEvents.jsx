@@ -4,12 +4,13 @@ import DataTable from '../components/DataTable';
 import { uploadToImgBB } from '../utils/imgbbUpload';
 import { useAuth } from '../context/AuthContext';
 import RichTextEditor from '../components/RichTextEditor';
+import { parseYouTubeId } from '../utils/youtube';
 
-const MAX_IMAGES = 5;
+const MAX_IMAGES = 7;
 
 const EMPTY = {
   title: '', description: '', description2: '', description3: '',
-  images: [], eventDate: '', eventTime: '', isActive: true,
+  images: [], videoUrl: '', isActive: true,
 };
 
 const statusBadge = (status) => (
@@ -31,8 +32,8 @@ const columns = [
       </span>
     ),
   },
+  { key: 'videoUrl', label: 'Video', render: v => v ? 'Yes' : '-' },
   { key: 'eventDate', label: 'Date', render: v => v ? new Date(v).toLocaleDateString() : '-' },
-  { key: 'eventTime', label: 'Time' },
   { key: 'slug', label: 'Slug' },
   { key: 'status', label: 'Approval', render: statusBadge },
   { key: 'isActive', label: 'Status', render: v => <span style={{ color: v ? '#10b981' : '#ef4444', fontWeight: 600 }}>{v ? 'Active' : 'Inactive'}</span> },
@@ -79,7 +80,7 @@ export default function NewsEvents() {
     setForm({
       ...item,
       images: Array.isArray(item.images) ? item.images : (item.coverImage ? [item.coverImage] : []),
-      eventDate: item.eventDate ? new Date(item.eventDate).toISOString().split('T')[0] : '',
+      videoUrl: item.videoUrl || '',
     });
     setEditing(item._id);
     setError('');
@@ -135,12 +136,22 @@ export default function NewsEvents() {
       setError('Please upload at least one image before saving');
       return;
     }
+    if (form.videoUrl && !parseYouTubeId(form.videoUrl)) {
+      setError('Please enter a valid YouTube link, or leave the video field empty');
+      return;
+    }
     setSaving(true);
     setError('');
-    
+
+    // Date and time are no longer entered here. Existing items keep the ones they already have.
+    const payload = { ...form, videoUrl: (form.videoUrl || '').trim() };
+    delete payload.eventDate;
+    delete payload.eventTime;
+    delete payload.showDate;
+
     try {
-      if (editing) await API.put(`/news-events/${editing}`, form);
-      else await API.post('/news-events', form);
+      if (editing) await API.put(`/news-events/${editing}`, payload);
+      else await API.post('/news-events', payload);
       closeModal();
       fetchItems(editing ? page : 1);
       if (!editing) setPage(1);
@@ -296,15 +307,23 @@ export default function NewsEvents() {
               />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
-              <div>
-                <label style={labelStyle}>Event Date</label>
-                <input type="date" value={form.eventDate} onChange={e => setForm(p => ({ ...p, eventDate: e.target.value }))} style={inputStyle} />
-              </div>
-              <div>
-                <label style={labelStyle}>Event Time</label>
-                <input type="time" value={form.eventTime} onChange={e => setForm(p => ({ ...p, eventTime: e.target.value }))} style={inputStyle} />
-              </div>
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>YouTube Video (optional)</label>
+              <input
+                value={form.videoUrl || ''}
+                onChange={e => setForm(p => ({ ...p, videoUrl: e.target.value }))}
+                placeholder="Paste a YouTube link or the embed (iframe) code"
+                style={inputStyle}
+              />
+              {form.videoUrl ? (
+                parseYouTubeId(form.videoUrl) ? (
+                  <p style={{ fontSize: 12, color: '#16a34a', marginTop: 6 }}>Video found. It will show in the Gallery section.</p>
+                ) : (
+                  <p style={{ fontSize: 12, color: '#dc2626', marginTop: 6 }}>This does not look like a YouTube link. Check it, or clear the field.</p>
+                )
+              ) : (
+                <p style={{ fontSize: 12, color: '#9ca3af', marginTop: 6 }}>Leave empty if there is no video.</p>
+              )}
             </div>
 
             <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 8 }}>

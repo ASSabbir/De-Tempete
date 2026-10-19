@@ -198,17 +198,23 @@ export default function Library() {
             {[
               { key: 'category', label: 'Category', type: 'text' },
               { key: 'issueDate', label: 'Issue Date', type: 'date' },
-
             ].map(({ key, label, type }) => (
-              <div  style={{ marginBottom: 16 }}>
-                <label style={labelStyle}>Document</label>
-                <DocumentUploadField
-                  value={form.downloadUrl}
-                  onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
-                  onError={setError}
-                />
+              <div key={key} style={{ marginBottom: 16 }}>
+                <label style={labelStyle}>{label}</label>
+                <input type={type} value={form[key] || ''}
+                  onChange={e => setForm(p => ({ ...p, [key]: e.target.value }))}
+                  style={inputStyle} />
               </div>
             ))}
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Document</label>
+              <DocumentUploadField
+                value={form.downloadUrl}
+                onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
+                onError={setError}
+              />
+            </div>
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Region</label>

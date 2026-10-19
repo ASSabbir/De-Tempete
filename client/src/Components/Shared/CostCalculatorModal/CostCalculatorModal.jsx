@@ -1,5 +1,6 @@
 // File: src/Components/Shared/CostCalculatorModal/CostCalculatorModal.jsx
 import { useState } from "react";
+import { Link } from "react-router";
 import { X, ChevronLeft, ChevronRight, Loader2, CheckCircle2 } from "lucide-react";
 import {
   countryOptions,
@@ -10,6 +11,25 @@ import {
 } from "./countryQuestions";
 import API from "../../../api/axios";
 
+// Same country-code list used on the consultation form.
+const DIAL_CODES = [
+  // your current ones first
+  "+971", "+966", "+44", "+1", "+372", "+880", "+91", "+92", "+20",
+  // Middle East
+  "+973", "+968", "+974", "+965", "+962", "+961", "+964", "+972", "+90", "+98",
+  // South Asia
+  "+94", "+977", "+975", "+960", "+93",
+  // Asia-Pacific
+  "+60", "+65", "+62", "+63", "+66", "+84", "+86", "+852", "+81", "+82", "+61", "+64",
+  // Africa
+  "+27", "+234", "+254", "+255", "+256", "+233", "+212", "+213", "+216", "+249", "+251",
+  // Europe
+  "+33", "+49", "+39", "+34", "+351", "+31", "+32", "+41", "+43", "+46", "+47", "+45",
+  "+358", "+353", "+48", "+30", "+371", "+370", "+7", "+380", "+420", "+36", "+40",
+  // Americas
+  "+52", "+55", "+54", "+57", "+56", "+51",
+];
+
 const CostCalculatorModal = ({ isOpen, onClose }) => {
   const [country, setCountry] = useState(null);
   const [stepIndex, setStepIndex] = useState(0); // 0 = country select
@@ -17,6 +37,9 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+  const [dialCode, setDialCode] = useState("+971");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   if (!isOpen) return null;
 
@@ -38,6 +61,14 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
+  // Keeps contact_phone as the full number, e.g. "+971 501234567", so the
+  // email, the admin panel and the saved submission all show the country code.
+  const updatePhone = (code, number) => {
+    setDialCode(code);
+    setPhoneNumber(number);
+    updateField("contact_phone", number.trim() ? `${code} ${number.trim()}` : "");
+  };
+
   const toggleMulti = (id, option) => {
     setFormData((prev) => {
       const current = prev[id] || [];
@@ -54,11 +85,13 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
   const canGoNext = () => {
     if (stepIndex === 0) return !!country;
     const fields = visibleFields(currentSection.fields);
-    return fields.every((f) => {
+    const allFilled = fields.every((f) => {
       const val = formData[f.id];
       if (f.type === "multi") return Array.isArray(val) && val.length > 0;
       return val !== undefined && val !== "" && val !== null;
     });
+    // On the last (contact) step the terms checkbox must be ticked too.
+    return stepIndex === allSteps.length ? allFilled && agreed : allFilled;
   };
 
   const handleNext = () => {
@@ -90,6 +123,10 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
   };
 
   const handleSubmit = async () => {
+    if (!agreed) {
+      setSubmitError("Please agree to the Terms & Conditions and Privacy Policy to continue");
+      return;
+    }
     setSubmitting(true);
     setSubmitError(null);
     try {
@@ -122,6 +159,9 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
       setFormData({});
       setSubmitted(false);
       setSubmitError(null);
+      setAgreed(false);
+      setDialCode("+971");
+      setPhoneNumber("");
     }, 200);
   };
 
@@ -180,6 +220,31 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
           onChange={(e) => updateField(field.id, e.target.value)}
           className="w-full max-w-xs px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none text-gray-700"
         />
+      );
+    }
+
+    if (field.id === "contact_phone") {
+      return (
+        <div className="flex gap-2">
+          <select
+            value={dialCode}
+            onChange={(e) => updatePhone(e.target.value, phoneNumber)}
+            className="px-2 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none bg-white text-gray-700 w-24 shrink-0"
+            aria-label="Country code"
+          >
+            {DIAL_CODES.map((code) => (
+              <option key={code} value={code}>{code}</option>
+            ))}
+          </select>
+          <input
+            type="tel"
+            inputMode="tel"
+            value={phoneNumber}
+            placeholder={field.placeholder || "501234567"}
+            onChange={(e) => updatePhone(dialCode, e.target.value)}
+            className="flex-1 min-w-0 px-4 py-3 rounded-lg border border-gray-200 focus:border-light-blue focus:outline-none text-gray-700"
+          />
+        </div>
       );
     }
 
@@ -296,6 +361,28 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                 ))}
               </div>
             </div>
+          )}
+
+          {/* Terms agreement, shown on the last (contact) step */}
+          {!submitted && stepIndex > 0 && stepIndex === allSteps.length && (
+            <label className="mt-8 flex items-start gap-3 text-sm text-gray-600 leading-6 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={(e) => { setAgreed(e.target.checked); if (submitError) setSubmitError(null); }}
+                className="mt-1 w-4 h-4 shrink-0 cursor-pointer accent-light-blue"
+              />
+              <span>
+                I agree to the{" "}
+                <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                  Terms &amp; Conditions
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                  Privacy Policy
+                </Link>
+              </span>
+            </label>
           )}
 
           {/* Submission error */}

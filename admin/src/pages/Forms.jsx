@@ -139,17 +139,21 @@ export default function Forms() {
             {[
               { key: 'title', label: 'Title' },
               { key: 'issuingAuthority', label: 'Issuing Authority' },
-
             ].map(({ key, label }) => (
-              <div style={{ marginBottom: 16 }}>
-                <label style={labelStyle}>Document</label>
-                <DocumentUploadField
-                  value={form.downloadUrl}
-                  onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
-                  onError={setError}
-                />
+              <div key={key} style={{ marginBottom: 16 }}>
+                <label style={labelStyle}>{label}</label>
+                <input value={form[key] || ''} onChange={e => setForm(p => ({ ...p, [key]: e.target.value }))} style={inputStyle} />
               </div>
             ))}
+
+            <div style={{ marginBottom: 16 }}>
+              <label style={labelStyle}>Document</label>
+              <DocumentUploadField
+                value={form.downloadUrl}
+                onChange={(v) => setForm(p => ({ ...p, downloadUrl: v }))}
+                onError={setError}
+              />
+            </div>
 
             <div style={{ marginBottom: 16 }}>
               <label style={labelStyle}>Region</label>

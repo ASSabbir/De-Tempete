@@ -11,6 +11,7 @@ import Awards from '../../Awards';
 import { HiChartBar } from "react-icons/hi";
 import { motion } from "framer-motion";
 import ServiceGrid from '../../../../Components/Shared/Servicegrid';
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 import {
   TbChartLine,
   TbShieldCheck,
@@ -157,12 +158,12 @@ const POstInvestment = () => {
     ),
   },
 ];
-
+const id = 'hirebase-post'
   const des =
     "Our post-investment monitoring services provide continuous performance tracking, risk assessment, and strategic guidance to help your investment achieve sustainable growth and long-term success.";
   return (
     <div>
-      <VirtualBanner img={img} text={text}></VirtualBanner>
+      <VirtualBanner img={img} id={id} text={text}></VirtualBanner>
       <WhyPost></WhyPost>
       <div className=' max-w-7xl mx-auto ' >
         <div className='flex bg-dark-blue font-semibold rounded-2xl mt-20 text-white justify-between items-center p-10'>
@@ -178,8 +179,14 @@ const POstInvestment = () => {
       
       <KeyBenefits benefits={benefits} keyBenefittext={['',<><span className="">Key Benefits of <span className='italic font-bold'>de tempête</span></span> Post Investment Monitoring Service</>]}></KeyBenefits>
       <PostFaq></PostFaq>
-      <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
+     
       <Awards></Awards>
+      <ConsultationCTA
+        id={id}
+        heading={title}
+        subheading={des}
+        commitmentItems={commitments}
+      />
 
     </div>
   );
