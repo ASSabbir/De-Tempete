@@ -8,30 +8,39 @@ import KeyBenefits from '../VirtualCfo/Keybenefits';
 import HRFaq from './HRFaq';
 import GetStarted from '../../../../Components/Shared/GetStarted'
 import Awards from '../../Awards'
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
+
 const HRandPayroll = () => {
-    const text =['Reliable, Compliant, Hassle-Free HR & Payroll Management Services','Empowering Growth with Expert Financial Leadership — Virtually','Simplify workforce management with structured HR processes and accurate payroll systems, ensuring compliance, employee satisfaction, and operational efficiency. ','Get a Free HR Consultation']
-    const benefits=['Accurate and error-free payroll processing','Full compliance with local labor laws','Improved employee satisfaction and trust','Reduced administrative workload','Streamlined HR operations and processes','Better workforce management and control']
-    const keyBenefittext=['Key Benefits ','Of Choosing Professional HR & Payroll']
+    const text = ['Reliable, Compliant, Hassle-Free HR & Payroll Management Services', 'Empowering Growth with Expert Financial Leadership — Virtually', 'Simplify workforce management with structured HR processes and accurate payroll systems, ensuring compliance, employee satisfaction, and operational efficiency. ', 'Get a Free HR Consultation']
+    const benefits = ['Accurate and error-free payroll processing', 'Full compliance with local labor laws', 'Improved employee satisfaction and trust', 'Reduced administrative workload', 'Streamlined HR operations and processes', 'Better workforce management and control']
+    const keyBenefittext = ['Key Benefits ', 'Of Choosing Professional HR & Payroll']
     const commitments = [
-  "Free initial HR & payroll consultation — no obligation",
-  "100% confidential employee and payroll data handling",
-  "Accurate, timely, and fully compliant payroll processing",
-  "Practical HR support tailored to your business needs",
-];
-const title ='Ready to Streamline Your HR & Payroll Operations?'
-const des='From payroll processing to employee compliance, we help you manage your workforce efficiently and with confidence.'
+        "Free initial HR & payroll consultation — no obligation",
+        "100% confidential employee and payroll data handling",
+        "Accurate, timely, and fully compliant payroll processing",
+        "Practical HR support tailored to your business needs",
+    ];
+    const title = 'Ready to Streamline Your HR & Payroll Operations?'
+    const des = 'From payroll processing to employee compliance, we help you manage your workforce efficiently and with confidence.'
+    const id = 'hirebase-hr&payroll'
 
     return (
         <div>
-            <VirtualBanner img={img} text={text}></VirtualBanner>
+            <VirtualBanner img={img} id={id} text={text}></VirtualBanner>
             <WhyHr></WhyHr>
             <HrAdvantage></HrAdvantage>
             <HireHRregion></HireHRregion>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <HRFaq></HRFaq>
-            <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
+
             <Awards></Awards>
-            
+            <ConsultationCTA
+                id={id}
+                heading={title}
+                subheading={des}
+                commitmentItems={commitments}
+            />
+
         </div>
     );
 };

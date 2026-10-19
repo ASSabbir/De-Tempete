@@ -51,7 +51,7 @@ const ForwardSection = () => {
 
           {/* Right */}
 
-          <div>
+          <div className="relative md:mt-19">
 
             <img
               src={aboutImg}

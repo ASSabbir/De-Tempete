@@ -7,6 +7,7 @@ import GetStarted from '../../../../Components/Shared/GetStarted';
 import Awards from '../../Awards';
 import KeyBenefits from '../VirtualCfo/Keybenefits';
 import TaxFAQ from './TaxFAQ';
+import { ConsultationCTA } from "@/Components/Shared/ConsultationCTA";
 const TaxAdvisory = () => {
     const text = ['Expert Tax Advisory Services for Smart, Compliant Growth', 'Navigate Tax Complexity with Confidence', 'Stay ahead of changing tax laws and compliance challenges. Our Tax Advisory services help your business minimize tax risks, optimize savings, and remain fully compliant across jurisdictions, ensuring your growth stays strategic and stress-free.', 'Book a Free Tax Consultation']
     const benefits = [
@@ -19,25 +20,31 @@ const TaxAdvisory = () => {
     ];
     const keyBenefittext = ['Key Benefits', 'Of Professional Tax Advisor']
     const commitments = [
-  "Free initial tax advisory consultation — no obligation",
-  "100% confidential handling of your financial and tax information",
-  "Proactive tax planning to minimize liabilities and maximize savings",
-  "Expert guidance tailored to your business and personal tax needs",
-];
+        "Free initial tax advisory consultation — no obligation",
+        "100% confidential handling of your financial and tax information",
+        "Proactive tax planning to minimize liabilities and maximize savings",
+        "Expert guidance tailored to your business and personal tax needs",
+    ];
 
-const title = "Ready to Optimize Your Tax Strategy?";
-
-const des =
-  "From strategic tax planning to ongoing compliance, we help you reduce tax risks, maximize efficiency, and make informed financial decisions with confidence.";
+    const title = "Ready to Optimize Your Tax Strategy?";
+    const id = 'hirebase-tax'
+    const des =
+        "From strategic tax planning to ongoing compliance, we help you reduce tax risks, maximize efficiency, and make informed financial decisions with confidence.";
     return (
         <div>
-            <VirtualBanner img={img} text={text}></VirtualBanner>
+            <VirtualBanner img={img} id={id} text={text}></VirtualBanner>
             <WhyTCFO></WhyTCFO>
             <HireTaxRegion></HireTaxRegion>
             <KeyBenefits benefits={benefits} keyBenefittext={keyBenefittext}></KeyBenefits>
             <TaxFAQ></TaxFAQ>
-            <GetStarted commitments={commitments} title={title} des={des}></GetStarted>
+            
             <Awards></Awards>
+            <ConsultationCTA
+                id={id}
+                heading={title}
+                subheading={des}
+                commitmentItems={commitments}
+            />
 
         </div>
     );

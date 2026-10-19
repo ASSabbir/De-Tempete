@@ -1,5 +1,6 @@
 // shared/ConsultationCTA.jsx
 import { useState } from "react";
+import { Link } from "react-router";
 import { FaCheckCircle } from "react-icons/fa";
 import API from "../../api/axios";
 
@@ -13,7 +14,23 @@ const HELP_OPTIONS = [
   "Company Formation & Market Entry", "Accounting & Finance", "Tax & Compliance", "Regulatory & AML",
   "HR & Payroll", "Technology & Automation", "Business & Growth Advisory", "Investment & Partnership", "Other",
 ];
-const DIAL_CODES = ["+971", "+966", "+44", "+1", "+372", "+880", "+91", "+92", "+20"];
+const DIAL_CODES = [
+  // your current ones first
+  "+971", "+966", "+44", "+1", "+372", "+880", "+91", "+92", "+20",
+  // Middle East
+  "+973", "+968", "+974", "+965", "+962", "+961", "+964", "+972", "+90", "+98",
+  // South Asia
+  "+94", "+977", "+975", "+960", "+93",
+  // Asia-Pacific
+  "+60", "+65", "+62", "+63", "+66", "+84", "+86", "+852", "+81", "+82", "+61", "+64",
+  // Africa
+  "+27", "+234", "+254", "+255", "+256", "+233", "+212", "+213", "+216", "+249", "+251",
+  // Europe
+  "+33", "+49", "+39", "+34", "+351", "+31", "+32", "+41", "+43", "+46", "+47", "+45",
+  "+358", "+353", "+48", "+30", "+371", "+370", "+7", "+380", "+420", "+36", "+40",
+  // Americas
+  "+52", "+55", "+54", "+57", "+56", "+51",
+];
 
 const inputClass =
   "w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-light-blue bg-white";
@@ -40,6 +57,7 @@ export const ConsultationCTA = ({
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [agreed, setAgreed] = useState(false);
 
   // Lightweight, no-key spam guard — mirrors the one used on the Contact page forms.
   const [formLoadedAt] = useState(() => Date.now());
@@ -53,6 +71,10 @@ export const ConsultationCTA = ({
     e.preventDefault();
     if (!form.fullName || !form.workEmail || !phoneNumber) {
       setError("Name, email and phone number are required");
+      return;
+    }
+    if (!agreed) {
+      setError("Please agree to the Terms & Conditions and Privacy Policy to continue");
       return;
     }
     setSubmitting(true);
@@ -69,12 +91,13 @@ export const ConsultationCTA = ({
         helpNeeded: form.helpNeeded ? [form.helpNeeded] : [],
         message: form.message,
         source,
-        consent: true, // no visible consent checkbox on this CTA — implied by submitting the form
+        consent: agreed, // set by the Terms & Conditions checkbox below
         formLoadedAt, _gotcha: gotcha,
       });
       setSubmitted(true);
       setForm(EMPTY_FORM);
       setPhoneNumber("");
+      setAgreed(false);
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong. Please try again.");
     } finally {
@@ -153,7 +176,7 @@ export const ConsultationCTA = ({
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Name</label>
+                      <label className="block mb-2 font-medium text-gray-700">Name<span className="text-red-400 ml-1">*</span></label>
                       <input
                         type="text" name="fullName" placeholder="Name"
                         value={form.fullName} onChange={handleChange} required
@@ -162,7 +185,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Email</label>
+                      <label className="block mb-2 font-medium text-gray-700">Email<span className="text-red-400 ml-1">*</span></label>
                       <input
                         type="email" name="workEmail" placeholder="Email"
                         value={form.workEmail} onChange={handleChange} required
@@ -171,7 +194,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Company Name</label>
+                      <label className="block mb-2 font-medium text-gray-700">Company Name<span className="text-red-400 ml-1">*</span></label>
                       <input
                         type="text" name="companyName" placeholder="Company Name"
                         value={form.companyName} onChange={handleChange}
@@ -199,7 +222,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Country of Residence</label>
+                      <label className="block mb-2 font-medium text-gray-700">Country of Residence<span className="text-red-400 ml-1">*</span></label>
                       <select
                         name="countryOfResidence"
                         value={form.countryOfResidence} onChange={handleChange}
@@ -211,7 +234,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Preferred Contact Method</label>
+                      <label className="block mb-2 font-medium text-gray-700">Preferred Contact Method<span className="text-red-400 ml-1">*</span></label>
                       <select
                         name="preferredContactMethod"
                         value={form.preferredContactMethod} onChange={handleChange}
@@ -223,7 +246,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">Market You're Interested In</label>
+                      <label className="block mb-2 font-medium text-gray-700">Market You're Interested In<span className="text-red-400 ml-1">*</span></label>
                       <select
                         name="marketInterest"
                         value={form.marketInterest} onChange={handleChange}
@@ -235,7 +258,7 @@ export const ConsultationCTA = ({
                     </div>
 
                     <div>
-                      <label className="block mb-2 font-medium text-gray-700">How Can We Help?</label>
+                      <label className="block mb-2 font-medium text-gray-700">How Can We Help?<span className="text-red-400 ml-1">*</span></label>
                       <select
                         name="helpNeeded"
                         value={form.helpNeeded} onChange={handleChange}
@@ -248,7 +271,7 @@ export const ConsultationCTA = ({
                   </div>
 
                   <div>
-                    <label className="block mb-2 font-medium text-gray-700">Message</label>
+                    <label className="block mb-2 font-medium text-gray-700">Message<span className="text-red-400 ml-1">*</span></label>
                     <textarea
                       name="message" rows={4} placeholder="Write your message..."
                       value={form.message} onChange={handleChange}
@@ -256,9 +279,28 @@ export const ConsultationCTA = ({
                     />
                   </div>
 
+                  <label className="flex items-start gap-3 text-sm text-gray-600 leading-6 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={agreed}
+                      onChange={(e) => { setAgreed(e.target.checked); if (error) setError(""); }}
+                      className="mt-1 w-4 h-4 shrink-0 cursor-pointer accent-light-blue"
+                    />
+                    <span>
+                      I agree to the{" "}
+                      <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Privacy Policy
+                      </Link>
+                    </span>
+                  </label>
+
                   <button
                     type="submit"
-                    disabled={submitting}
+                    disabled={submitting || !agreed}
                     className="w-full bg-light-blue hover:bg-light-blue text-white font-semibold py-4 rounded-lg transition duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {submitting ? "Sending..." : "Send"}

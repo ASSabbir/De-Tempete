@@ -58,6 +58,25 @@ const INTERVAL = 3000;
 
 const EMPTY_FORM = { name: "", email: "", phone: "", company: "", designation: "", service: "" };
 
+// Same country-code list used on the consultation form.
+const DIAL_CODES = [
+  // your current ones first
+  "+971", "+966", "+44", "+1", "+372", "+880", "+91", "+92", "+20",
+  // Middle East
+  "+973", "+968", "+974", "+965", "+962", "+961", "+964", "+972", "+90", "+98",
+  // South Asia
+  "+94", "+977", "+975", "+960", "+93",
+  // Asia-Pacific
+  "+60", "+65", "+62", "+63", "+66", "+84", "+86", "+852", "+81", "+82", "+61", "+64",
+  // Africa
+  "+27", "+234", "+254", "+255", "+256", "+233", "+212", "+213", "+216", "+249", "+251",
+  // Europe
+  "+33", "+49", "+39", "+34", "+351", "+31", "+32", "+41", "+43", "+46", "+47", "+45",
+  "+358", "+353", "+48", "+30", "+371", "+370", "+7", "+380", "+420", "+36", "+40",
+  // Americas
+  "+52", "+55", "+54", "+57", "+56", "+51",
+];
+
 const Banner = () => {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef(null);
@@ -67,6 +86,9 @@ const Banner = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [agreed, setAgreed] = useState(false);
+  const [dialCode, setDialCode] = useState("+971");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   useEffect(() => {
     startInterval();
@@ -121,10 +143,21 @@ const Banner = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // Keeps formData.phone as the full number, e.g. "+971 501234567".
+  const updatePhone = (code, number) => {
+    setDialCode(code);
+    setPhoneNumber(number);
+    setFormData((prev) => ({ ...prev, phone: number.trim() ? `${code} ${number.trim()}` : "" }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.phone) {
       setError("Name, email and phone are required");
+      return;
+    }
+    if (!agreed) {
+      setError("Please agree to the Terms & Conditions and Privacy Policy to continue");
       return;
     }
     setSubmitting(true);
@@ -133,6 +166,8 @@ const Banner = () => {
       await API.post('/contact', { ...formData, source: 'Homepage Hero — Free Consultation' });
       setSubmitted(true);
       setFormData(EMPTY_FORM);
+      setPhoneNumber("");
+      setAgreed(false);
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong. Please try again.');
     } finally {
@@ -212,7 +247,34 @@ const Banner = () => {
                     { name: "phone", placeholder: "Phone", type: "tel" },
                     { name: "company", placeholder: "Company", type: "text" },
                     { name: "designation", placeholder: "Designation", type: "text" },
-                  ].map((field) => (
+                  ].map((field) => field.name === "phone" ? (
+                    <div key="phone" className="flex gap-2">
+                      <select
+                        value={dialCode}
+                        onChange={(e) => updatePhone(e.target.value, phoneNumber)}
+                        aria-label="Country code"
+                        className="px-2 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200 cursor-pointer w-24 shrink-0"
+                        style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
+                      >
+                        {DIAL_CODES.map((code) => (
+                          <option key={code} value={code} style={{ background: "#0d1e4a", color: "white" }}>
+                            {code}
+                          </option>
+                        ))}
+                      </select>
+                      <input
+                        type="tel"
+                        inputMode="tel"
+                        name="phone"
+                        placeholder={field.placeholder}
+                        value={phoneNumber}
+                        onChange={(e) => updatePhone(dialCode, e.target.value)}
+                        required
+                        className="flex-1 min-w-0 px-4 py-3 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#1a9fd4] transition-all duration-200"
+                        style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}
+                      />
+                    </div>
+                  ) : (
                     <input
                       key={field.name}
                       type={field.type}
@@ -253,9 +315,28 @@ const Banner = () => {
                     </svg>
                   </div>
 
+                  <label className="flex items-start gap-3 text-white/70 text-sm leading-6 cursor-pointer pt-1">
+                    <input
+                      type="checkbox"
+                      checked={agreed}
+                      onChange={(e) => { setAgreed(e.target.checked); if (error) setError(""); }}
+                      className="mt-1 w-4 h-4 shrink-0 cursor-pointer accent-[#1a9fd4]"
+                    />
+                    <span>
+                      I agree to the{" "}
+                      <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-[#1a9fd4] underline font-medium">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#1a9fd4] underline font-medium">
+                        Privacy Policy
+                      </Link>
+                    </span>
+                  </label>
+
                   <button
                     type="submit"
-                    disabled={submitting}
+                    disabled={submitting || !agreed}
                     className="w-full py-2 xl:py-3.5 rounded-lg  font-bold text-white transition-all duration-200 mt-2 shadow-lg hover:shadow-[#1a9fd4]/40 hover:shadow-xl hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed"
                     style={{ background: "linear-gradient(135deg, #1a9fd4, #0d7faa)" }}
                   >

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router';
 import API from '../../api/axios';
 import { stripHtml } from '../../utils/stripHtml';
+import { parseYouTubeId } from '../../utils/youtube';
 
 const CalendarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -37,7 +38,10 @@ export default function NewsEventDetail() {
 
   const heroImage = item.images?.[0];
   const galleryImages = item.images?.slice(1) || [];
+  const videoId = parseYouTubeId(item.videoUrl);
   const excerpt = stripHtml(item.description, 180);
+
+  console.log(item)
 
   return (
     <div>
@@ -59,7 +63,7 @@ export default function NewsEventDetail() {
           <div className="ned-eyebrow">Details</div>
           <h2 className="ned-heading">About the Event</h2>
 
-          <div className="rich-content" dangerouslySetInnerHTML={{ __html: item.description || '' }} />
+          <div className="rich-content text-justify" dangerouslySetInnerHTML={{ __html: item.description || '' }} />
           {item.description2 && (
             <div className="rich-content" style={{ marginTop: 8 }} dangerouslySetInnerHTML={{ __html: item.description2 }} />
           )}
@@ -67,11 +71,24 @@ export default function NewsEventDetail() {
             <div className="rich-content" style={{ marginTop: 8 }} dangerouslySetInnerHTML={{ __html: item.description3 }} />
           )}
 
-          {galleryImages.length > 0 && (
+          {(galleryImages.length > 0 || videoId) && (
             <div className="ned-gallery-wrap">
               <div className="ned-eyebrow" style={{ marginBottom: 16 }}>
                 Gallery
               </div>
+              {videoId && (
+                <div className="ned-video">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                    title={`${item.title} video`}
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              )}
+              {galleryImages.length > 0 && (
               <div className="ned-gallery-grid">
                 {galleryImages.map((img, i) => (
                   <img
@@ -83,6 +100,7 @@ export default function NewsEventDetail() {
                   />
                 ))}
               </div>
+              )}
             </div>
           )}
         </div>
@@ -95,10 +113,12 @@ export default function NewsEventDetail() {
                 <div className="ned-card">
                   <img src={r.images?.[0]} alt={r.title} loading="lazy" className="ned-card-img" />
                   <div className="ned-card-body">
-                    <div className="ned-card-date">
-                      <CalendarIcon />
-                      {new Date(r.eventDate).toLocaleDateString('en-GB')}
-                    </div>
+                    {r.showDate !== false && r.eventDate && (
+                      <div className="ned-card-date">
+                        <CalendarIcon />
+                        {new Date(r.eventDate).toLocaleDateString('en-GB')}
+                      </div>
+                    )}
                     <div className="ned-card-title">{r.title}</div>
                     <div className="ned-card-desc">{stripHtml(r.description, 90)}</div>
                     <span className="ned-card-btn">Read →</span>
@@ -182,6 +202,23 @@ export default function NewsEventDetail() {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
           gap: 12px;
+        }
+        .ned-video {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          margin-bottom: 16px;
+          border-radius: 10px;
+          overflow: hidden;
+          background: #000;
+          box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+        }
+        .ned-video iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
         }
         .ned-gallery-img {
           width: 100%;

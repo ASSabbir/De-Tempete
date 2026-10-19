@@ -28,6 +28,7 @@ import img13 from '../../../../asstes/img_temp/aml/13.webp'
 
 import logo from '../../../../asstes/img_temp/logo.webp'
 import SharedFullButton from "../../../../Components/Shared/SharedFullButton";
+import BusinessSetupBook from "../../../Home/Expertise/Aml/BusinessSetupBook";
 
 // All 13 AML services, each rendered as a full image + checklist card
 // (images cycle through the 4 available photos until real photography
@@ -437,6 +438,10 @@ const AML = () => {
           </div>
         </div>
       </section>
+      <BusinessSetupBook></BusinessSetupBook>
+      <div className="h-15">
+
+      </div>
 
       
 

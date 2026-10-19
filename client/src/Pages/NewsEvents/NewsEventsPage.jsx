@@ -68,10 +68,12 @@ export default function NewsEventsPage() {
                 <img src={item.images?.[0]} alt={item.title} loading="lazy"
                   style={{ width: '100%', height: 190, objectFit: 'cover', background: '#f3f4f6' }} />
                 <div style={{ padding: '20px 22px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#0f1f3d', fontSize: 13, marginBottom: 10 }}>
-                    <CalendarIcon />
-                    {new Date(item.eventDate).toLocaleDateString('en-GB')}
-                  </div>
+                  {item.showDate !== false && item.eventDate && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#0f1f3d', fontSize: 13, marginBottom: 10 }}>
+                      <CalendarIcon />
+                      {new Date(item.eventDate).toLocaleDateString('en-GB')}
+                    </div>
+                  )}
                   <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0f1f3d', marginBottom: 10, lineHeight: 1.3 }}>{item.title}</h3>
                   <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 18, lineHeight: 1.5, flex: 1 }}>{stripHtml(item.description, 110)}</p>
                   <Link to={`/news-events/${item.slug}`} style={{

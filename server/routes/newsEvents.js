@@ -2,10 +2,11 @@ const express = require('express');
 const NewsEvent = require('../models/NewsEvent');
 const { protect, authorize } = require('../middleware/auth');
 const { publicLimiter } = require('../middleware/rateLimit');
+const { cleanVideoUrl } = require('../utils/youtube');
 
 const router = express.Router();
 
-const MAX_IMAGES = 5;
+const MAX_IMAGES = 7;
 
 const slugify = (str) =>
   str.toLowerCase().trim()
@@ -80,11 +81,15 @@ router.post('/', protect, authorize('superadmin', 'news'), async (req, res) => {
   try {
     const { title, description, description2, description3, images, eventDate, eventTime } = req.body;
 
-    if (!title || !description || !Array.isArray(images) || images.length === 0 || !eventDate) {
-      return res.status(400).json({ message: 'title, description, images, eventDate required' });
+    if (!title || !description || !Array.isArray(images) || images.length === 0) {
+      return res.status(400).json({ message: 'title, description and images required' });
     }
     if (images.length > MAX_IMAGES) {
       return res.status(400).json({ message: `Maximum ${MAX_IMAGES} images allowed` });
+    }
+    const videoUrl = cleanVideoUrl(req.body.videoUrl);
+    if (videoUrl === null) {
+      return res.status(400).json({ message: 'Please enter a valid YouTube link, or leave the video empty' });
     }
 
     let slug = slugify(title);
@@ -94,7 +99,11 @@ router.post('/', protect, authorize('superadmin', 'news'), async (req, res) => {
     }
     const status = req.admin.role === 'superadmin' ? 'published' : 'pending';
     const item = await NewsEvent.create({
-      title, description, description2, description3, images, eventDate, eventTime, slug, status,
+      title, description, description2, description3, images, videoUrl,
+      eventDate: eventDate || undefined, // no date sent -> today's date is used for ordering
+      eventTime,
+      showDate: !!eventDate, // false when no date was entered, so the site hides it
+      slug, status,
     });
     res.status(201).json(item);
   } catch (err) {
@@ -113,7 +122,16 @@ router.put('/:id', protect, authorize('superadmin', 'news'), async (req, res) =>
       return res.status(400).json({ message: `Maximum ${MAX_IMAGES} images allowed` });
     }
 
-    const update = { title, description, description2, description3, images, eventDate, eventTime, isActive };
+    // undefined = field not sent (leave as is), '' = remove the video
+    let videoUrl;
+    if (req.body.videoUrl !== undefined) {
+      videoUrl = cleanVideoUrl(req.body.videoUrl);
+      if (videoUrl === null) {
+        return res.status(400).json({ message: 'Please enter a valid YouTube link, or leave the video empty' });
+      }
+    }
+
+    const update = { title, description, description2, description3, images, videoUrl, eventDate, eventTime, isActive };
     if (req.admin.role !== 'superadmin') update.status = 'pending';
 
     const item = await NewsEvent.findByIdAndUpdate(req.params.id, update, { new: true, runValidators: true });
