@@ -127,8 +127,16 @@ export default function DownloadGateModal({ resource, onClose }) {
             style={{ width: 16, height: 16, marginTop: 2, flexShrink: 0 }}
           />
           <span>
-            I agree to the <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Terms & Conditions</Link> and <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#38d1e8', textDecoration: 'underline' }}>Privacy Policy</Link>
-          </span>
+                      I agree to <span className="font-bold italic">de tempête</span>'s{" "}
+                      <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Privacy Policy
+                      </Link>
+                      {" "}and consent to enquiry-related and marketing communications.
+                    </span>
         </label>
 
         <button onClick={handleSubmit} disabled={loading || !agreed} style={{

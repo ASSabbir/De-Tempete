@@ -41,7 +41,7 @@ export default function NewsEventDetail() {
   const videoId = parseYouTubeId(item.videoUrl);
   const excerpt = stripHtml(item.description, 180);
 
-  console.log(item)
+  // console.log(item)
 
   return (
     <div>

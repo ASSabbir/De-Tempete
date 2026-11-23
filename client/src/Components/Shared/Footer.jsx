@@ -117,7 +117,7 @@ const footerColumns = [
 
 const Footer = () => {
   const nav=useLocation()
-  console.log(nav.pathname)
+  // console.log(nav.pathname)
   const officeCards = [
     {
     title: "UAE",

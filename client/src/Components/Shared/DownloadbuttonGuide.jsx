@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import API from '../../api/axios';
 import logo from '../../asstes/img_temp/logo1.webp';
+import { Link } from 'react-router';
 
 export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }) {
   const [open, setOpen] = useState(false);
@@ -99,14 +100,15 @@ export default function DownloadButtonGuide({ guideKey, label = 'Download Now' }
                 className="mt-0.5 accent-[#22b8e0] cursor-pointer"
               />
               <span>
-                I agree to the{' '}
-                <a href="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-[#38d1e8] underline">
-                  Terms & Conditions
-                </a>{' '}
-                and{' '}
-                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#38d1e8] underline">
+                I agree to <span className="font-bold italic">de tempête</span>'s{" "}
+                <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                  Terms &amp; Conditions
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
                   Privacy Policy
-                </a>
+                </Link>
+                {" "}and consent to enquiry-related and marketing communications.
               </span>
             </label>
 

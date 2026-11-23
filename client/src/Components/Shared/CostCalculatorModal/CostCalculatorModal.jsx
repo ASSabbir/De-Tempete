@@ -373,15 +373,16 @@ const CostCalculatorModal = ({ isOpen, onClose }) => {
                 className="mt-1 w-4 h-4 shrink-0 cursor-pointer accent-light-blue"
               />
               <span>
-                I agree to the{" "}
-                <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
-                  Terms &amp; Conditions
-                </Link>{" "}
-                and{" "}
-                <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
-                  Privacy Policy
-                </Link>
-              </span>
+                      I agree to <span className="font-bold italic">de tempête</span>'s{" "}
+                      <Link to="/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-light-blue underline font-medium">
+                        Privacy Policy
+                      </Link>
+                      {" "}and consent to enquiry-related and marketing communications.
+                    </span>
             </label>
           )}
 

@@ -92,7 +92,7 @@ export function ConsentCheckbox({ checked, onChange, variant = "enquiry", classN
         <a href="/terms-conditions" target="_blank" rel="noreferrer" className="text-[#1a9fd4] underline">Terms & Conditions</a>
         {" "}and{" "}
         <a href="/privacy-policy" target="_blank" rel="noreferrer" className="text-[#1a9fd4] underline">Privacy Policy</a>
-        {" "}{closing} *
+        {" "}{closing} 
       </span>
     </label>
   );

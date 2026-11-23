@@ -11,7 +11,7 @@ export default function GetStarted({commitments, title,des}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted:", form);
+    // console.log("Submitted:", form);
   };
 
   return (
